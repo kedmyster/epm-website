@@ -1,7 +1,15 @@
 import Image from "next/image";
 
 export function SliderCustomPreviousArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, color } = props;
+  let path;
+
+  if (color === "light") {
+    path = "/img/icons/arrow_left.svg";
+  } else if (color === "dark") {
+    path = "/img/icons/arrow_left_dark.svg";
+  }
+
   return (
     <div
       className={`${className} block z-10`}
@@ -9,7 +17,7 @@ export function SliderCustomPreviousArrow(props) {
       onClick={onClick}
     >
       <Image
-        src="/img/icons/arrow_left.svg"
+        src={path}
         width="16"
         height="28"
         alt="Previous"
@@ -19,7 +27,15 @@ export function SliderCustomPreviousArrow(props) {
 }
 
 export function SliderCustomNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, color } = props;
+  let path;
+
+  if (color === "light") {
+    path = "/img/icons/arrow_right.svg";
+  } else if (color === "dark") {
+    path = "/img/icons/arrow_right_dark.svg";
+  }
+
   return (
     <div
       className={`${className} block z-10`}
@@ -27,7 +43,7 @@ export function SliderCustomNextArrow(props) {
       onClick={onClick}
     >
       <Image
-        src="/img/icons/arrow_right.svg"
+        src={path}
         width="16"
         height="28"
         alt="Previous"

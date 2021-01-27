@@ -60,11 +60,22 @@ module.exports = {
         101: "31rem",
         103: "33rem",
         105: "35rem",
+        "container": "58.125rem",
+        "3/4-screen": "75vw",
+        "1/4-screen": "25vw",
       },
       height: {
+        101 : "31.25rem",
         "2/3-screen": "66.66666vh",
         "1/3-screen": "33.33333vh",
+        "1/2-screen": "50vh",
       },
+      margin: {
+        '15': '3.875rem',
+        '-15': '-3.875rem',
+        '22': '5.625rem',
+        '-22': '-5.625rem',
+      }
     },
   },
   variants: {
