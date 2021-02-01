@@ -49,6 +49,7 @@ module.exports = {
         "8.5xl": "7.5rem",
       },
       colors: {
+        "epm-lighter-gray": "#EEEEEF",
         "epm-light-gray": "#A9ACB0",
         "epm-dark-gray": "#636466",
         "epm-yellow": "#FFD534",

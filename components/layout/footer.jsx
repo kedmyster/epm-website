@@ -9,7 +9,7 @@ function Footer({}) {
       <div className="container mx-auto px-8 pt-12 pb-4 lg:py-8">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <div className="flex-grow lg:flex-grow-0">
-            <div className="mb-8 lg:w-101">
+            <div className="mb-4 lg:mb-8 lg:w-101">
               <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-epm-dark-gray">
                 Join Our Journey
               </h2>

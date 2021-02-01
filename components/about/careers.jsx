@@ -29,14 +29,14 @@ function Careers({ positions = [] }) {
       <>
         <section
           id="careers"
-          className="section careers bg-white relative w-full bg-cover text-center flex flex-wrap content-center lg:h-screen"
+          className="section careers bg-white relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen lolza"
           data-side-menu-color="light"
           data-side-menu-visibility="visible"
         >
           <div className="absolute w-full h-full">
             {isMobile && (
               <Image
-                src="/img/mobile/about-careers@3x.jpg"
+                src="/img/mobile/about-careers@3x.png"
                 alt=""
                 layout="fill"
                 objectFit="cover"
@@ -75,7 +75,7 @@ function Careers({ positions = [] }) {
               </p>
             </div>
             <div className="font-bold lg:text-2xl lg:w-container lg:mx-auto mt-4 lg:mt-8">
-              <p className="mb-4 lg:mb-8">
+              <p className="text-white mb-4 lg:mb-8">
                 Looking to join a dynamic company and be part of a team where
                 you can make a difference? We’d love to learn more about you.
               </p>
@@ -94,8 +94,8 @@ function Careers({ positions = [] }) {
           data-side-menu-color="dark"
           data-side-menu-visibility="visible"
         >
-          <div className="lg:flex-shrink-0 lg:pl-60">
-            <div className="container mx-auto px-8 py-8 lg:max-w-none lg:w-96 ">
+          <div className="lg:flex-shrink-0 lg:pl-60 lg:w-5/12">
+            <div className="container mx-auto px-8 lg:pr-0 lg:ml-0 py-8 lg:max-w-none lg:w-96 ">
               <div className="font-title text-xs uppercase section-name">
                 Our story
               </div>
@@ -125,17 +125,17 @@ function Careers({ positions = [] }) {
                   <table className="w-full table-auto">
                     <tbody className="border-b-1 border-epm-dark-gray">
                       <tr className="border-t-1 border-epm-dark-gray h-12">
-                        <td className="font-bold transition-all duration-150 hover:text-epm-yellow">R&D Director</td>
+                        <td className="font-bold transition-all duration-150 hover:text-epm-yellow cursor-pointer">R&D Director</td>
                         <td>Full-Time</td>
                         <td className="text-right">Tel Aviv</td>
                       </tr>
                       <tr className="border-t-1 border-epm-dark-gray h-12">
-                        <td className="font-bold transition-all duration-150 hover:text-epm-yellow">R&D Director</td>
+                        <td className="font-bold transition-all duration-150 hover:text-epm-yellow cursor-pointer">R&D Director</td>
                         <td>Full-Time</td>
                         <td className="text-right">Tel Aviv</td>
                       </tr>
                       <tr className="border-t-1 border-epm-dark-gray h-12">
-                        <td className="font-bold transition-all duration-150 hover:text-epm-yellow">R&D Director</td>
+                        <td className="font-bold transition-all duration-150 hover:text-epm-yellow cursor-pointer">R&D Director</td>
                         <td>Full-Time</td>
                         <td className="text-right">Tel Aviv</td>
                       </tr>
@@ -146,7 +146,7 @@ function Careers({ positions = [] }) {
             </div>
           </div>
 
-          <div className="relative w-full lg:w-auto lg:flex-grow">
+          <div className="relative w-full lg:w-7/12 lg:flex-grow hidden lg:block ">
             <div className="absolute w-full h-full">
               {isMobile && (
                 <Image
@@ -178,7 +178,7 @@ function Careers({ positions = [] }) {
               </div>
           </div>
 
-          <div className="relative w-full lg:flex-grow lg:w-container hidden">
+          <div className="relative w-full lg:w-7/12 lg:flex-grow hidden">
             <div className="container px-8 lg:px-36 py-8">
               <div className="job-title font-title lg:text-2xl text-epm-yellow">R&D Director</div>
               <div className="job-details text-lg">
@@ -211,8 +211,6 @@ function Careers({ positions = [] }) {
               </div>
             </div>
           </div>
-
-          
         </section>
       </>
     );

@@ -16,6 +16,13 @@ export default function about() {
     people: [{
       name: "Professor Joseph Tam",
       role: "Head of Metabolic Disorder Research",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -23,6 +30,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Head of Metabolic Disorder Research",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -30,6 +44,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Head of Metabolic Disorder Research",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -37,6 +58,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Head of Metabolic Disorder Research",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -44,6 +72,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Head of Metabolic Disorder Research",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -54,6 +89,13 @@ export default function about() {
     people: [{
       name: "Reshef Swisa",
       role: "Co-Founder & CEO",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/reshef-swisa@2x.jpg"
@@ -61,6 +103,13 @@ export default function about() {
     }, {
       name: "Reshef Swisa",
       role: "Co-Founder & CEO",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/reshef-swisa@2x.jpg"
@@ -68,6 +117,13 @@ export default function about() {
     }, {
       name: "Reshef Swisa",
       role: "Co-Founder & CEO",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/reshef-swisa@2x.jpg"
@@ -78,6 +134,26 @@ export default function about() {
     people: [{
       name: "Professor Joseph Tam",
       role: "Senior",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),      image: {
+        mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
+        desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
+      }
+    }, {
+      name: "Professor Joseph Tam",
+      role: "Senior",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -85,6 +161,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Senior",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -92,6 +175,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Senior",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -99,6 +189,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Senior",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
@@ -106,13 +203,13 @@ export default function about() {
     }, {
       name: "Professor Joseph Tam",
       role: "Senior",
-      image: {
-        mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
-        desktop: "/img/desktop/prof-joseph-tam@2x.jpg"
-      }
-    }, {
-      name: "Professor Joseph Tam",
-      role: "Senior",
+      text:(
+        <div>
+          <p class="mb-4">Previously the Co-founder and GM of NPG, China’s first antibiotic-free poultry producer.</p>
+          <p class="mb-4"> Over 20 years of experience in global business development and operations. </p>
+          <p>In 2017, Mr. Swisa conceived the idea of uniting a team of leading researchers to establish EPM– the world’s first drug development company using synthetic cannabinoid acid molecules.</p>
+        </div>
+      ),
       image: {
         mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
         desktop: "/img/desktop/prof-joseph-tam@2x.jpg"

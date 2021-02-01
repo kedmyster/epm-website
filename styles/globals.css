@@ -201,3 +201,26 @@ a {
     transform: translateY(-50%);
   }
 }
+
+/* =================== */
+
+.media .slick-arrow {
+  top: auto;
+  bottom: 35px;
+
+  @media (min-width: 1024px) {
+    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* .leadership .items-group:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -160px;
+  width: 160px;
+  height: 1px;
+  @apply bg-epm-light-gray;
+} */

@@ -9,14 +9,14 @@ import {
   SliderCustomNextArrow,
 } from "../shared/carousel";
 
-function Community() {
+function MediaComponent() {
   const windowWidth = useWindowWidth();
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  const SLIDER_COMMUNITY_CONFIG = {
+  const SLIDER_MEDIA_CONFIG = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
@@ -97,75 +97,51 @@ function Community() {
     }, "-=0.125");
   }, []);
 
-  const community = [
+  const media = [
     {
       images: {
-        mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
-        desktop: "/img/desktop/prof-joseph-tam@2x.jpg",
+        mobile: "/img/mobile/media-1@3x.png",
+        desktop: "/img/desktop/media-1@2x.png",
       },
-      quote: (
-        <p>
-          No matter the type of testimonial, use images, videos and social
-          media.
-        </p>
-      ),
-      name: "Prof.Joseph (Yossi) Tam",
-      role: "Head of Metabolic Disorders Research",
+      name: "Discover",
+      date: "Nov 21,2019",
     },
     {
       images: {
-        mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
-        desktop: "/img/desktop/prof-joseph-tam@2x.jpg",
+        mobile: "/img/mobile/media-2@3x.png",
+        desktop: "/img/desktop/media-2@2x.png",
       },
-      quote: (
-        <p>
-          No matter the type of testimonial, use images, videos and social
-          media.
-        </p>
-      ),
-      name: "Prof.Joseph (Yossi) Tam",
-      role: "Head of Metabolic Disorders Research",
+      name: "NBC News",
+      date: "Sep 26, 2019",
     },
     {
       images: {
-        mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
-        desktop: "/img/desktop/prof-joseph-tam@2x.jpg",
+        mobile: "/img/mobile/media-3@3x.png",
+        desktop: "/img/desktop/media-3@2x.png",
       },
-      quote: (
-        <p>
-          No matter the type of testimonial, use images, videos and social
-          media.
-        </p>
-      ),
-      name: "Prof.Joseph (Yossi) Tam",
-      role: "Head of Metabolic Disorders Research",
+      name: "Forbes",
+      date: "Jul 12, 2020",
     },
     {
       images: {
-        mobile: "/img/mobile/prof-joseph-tam@3x.jpg",
-        desktop: "/img/desktop/prof-joseph-tam@2x.jpg",
+        mobile: "/img/mobile/media-4@3x.png",
+        desktop: "/img/desktop/media-4@2x.png",
       },
-      quote: (
-        <p>
-          No matter the type of testimonial, use images, videos and social
-          media.
-        </p>
-      ),
-      name: "Prof.Joseph (Yossi) Tam",
-      role: "Head of Metabolic Disorders Research",
+      name: "Forbes",
+      date: "Jul 12, 2020",
     },
   ];
 
   return (
     <section
-      id="community"
-      className="section community bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen"
+      id="media"
+      className="section media bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
     >
-      <div className="items animate-5 text-white bg-gray-900 text-center lg:w-7/12">
-        <Slider {...SLIDER_COMMUNITY_CONFIG}>
-          {community.map((item, index) => {
+      <div className="items animate-5 text-white bg-gray-900 text-center lg:w-8/12">
+        <Slider {...SLIDER_MEDIA_CONFIG}>
+          {media.map((item, index) => {
             return (
               <div
                 className={classNames("item", "cursor-pointer", {
@@ -173,7 +149,7 @@ function Community() {
                 })}
                 onClick={() => setActive(index)}
               >
-                <div className="relative text-center w-full flex flex-wrap content-end h-101 lg:h-screen">
+                <div className="group relative text-center w-full flex flex-wrap content-end h-101 lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
                   <div className="absolute w-full h-full">
                     {isMobile && (
                       <Image
@@ -191,40 +167,26 @@ function Community() {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
-                        className="grayscale"
                       />
                     )}
                   </div>
                   <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-                  <div className="container mx-auto px-8 lg:py-8 relative lg:opacity-0 lg:transition-all lg:duration-500 lg:ease-in-out">
-                    <div className="icon-quote text-left pl-8 lg:pl-0 relative lg:absolute lg:-top-10 lg:left-16">
-                      {isMobile && (
-                        <Image
-                          src="/img/icons/quote.svg"
-                          width="46.5"
-                          height="55.5"
-                          alt=""
-                        />
-                      )}
-                      {isDesktop && (
-                        <Image
-                          src="/img/icons/quote.svg"
-                          width="93"
-                          height="111"
-                          alt=""
-                        />
-                      )}
+                  <div className="container mx-auto px-8 pb-8 lg:py-8 relative lg:absolute lg:top-0 lg:transition-all lg:duration-500 lg:ease-in-out">
+                    <div className="item-name text-lg lg:text-5xl lg:mb-2">
+                      {item.name}
                     </div>
-                    <div className="lg:border-3 lg:border-white">
-                      <div className="quote text-2xl font-light italic px-6 pb-6 lg:pt-6 lg:text-left">
-                        {item.quote}
-                      </div>
+                    <div className="item__title font-light text-center text-sm lg:text-base font-title">
+                      {item.date}
                     </div>
                   </div>
-                  <div className="container mx-auto px-8 pb-8 lg:py-8 relative lg:absolute lg:top-0 lg:opacity-0 lg:transition-all lg:duration-500 lg:ease-in-out">
-                    <div className="item-name text-lg">{item.name}</div>
-                    <div className="item__title font-light text-center text-xs font-title">
-                      {item.role}
+                  <div className="container mx-auto px-8 py-8 hidden lg:block lg:opacity-0 lg:group-hover:opacity-100">
+                    <div className="button animate-4 pt-10">
+                      <a
+                        href=""
+                        className="inline-block w-full lg:w-auto text-white text-center uppercase border-3 border-white rounded-3xl select-none lg:px-10 py-2 transition-opacity duration-150 hover:opacity-70"
+                      >
+                        Learn More
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -233,10 +195,10 @@ function Community() {
           })}
         </Slider>
       </div>
-      <div className=" lg:w-5/12 lg:pl-60">
-        <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-96">
+      <div className=" lg:w-4/12 lg:pl-60">
+        <div className="container mx-auto px-8 lg:pl-0 py-8">
           <div className="section-name animate-1 font-title text-xs uppercase">
-            Our Community
+            Media
           </div>
           <div className="section-title animate-2 pb-6">
             <h2 className="font-title text-2xl">Healthier People</h2>
@@ -262,4 +224,4 @@ function Community() {
   );
 }
 
-export default Community;
+export default MediaComponent;

@@ -47,7 +47,7 @@ function OurStory() {
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
     >
-      <div className="video relative lg:flex-grow">
+      <div className="video relative lg:flex-grow lg:w-7/12">
         {isMobile && (
           <Image
             loading="eager"
@@ -71,8 +71,8 @@ function OurStory() {
         )}
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-60">
-        <div className="container mx-auto px-8 py-8 lg:max-w-none lg:w-96 ">
+      <div className="lg:flex-shrink-0 lg:pl-60 lg:w-5/12">
+        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
           <div className="section-name font-title text-xs uppercase">
             Our story
           </div>

@@ -219,7 +219,7 @@ function Header() {
 
       <div
         id="menu"
-        className="menu mobile-menu absolute inset-x-0 z-10 bg-white bg-opacity-85 hidden mt-15"
+        className="menu mobile-menu fixed inset-x-0 z-10 bg-white bg-opacity-85 hidden mt-15"
       >
         <div div className="container mx-auto p-8 relative">
           <nav role="navigation">
