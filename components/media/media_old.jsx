@@ -50,53 +50,6 @@ function MediaComponent() {
     }
   }, [windowWidth]);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-
-    tl.fromTo(".animate-1", {
-      y: "-=5px",
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 0.25
-    });
-
-    tl.fromTo(".animate-2", {
-      y: "-=5px",
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 0.25
-    }, "-=0.125");
-
-    tl.fromTo(".animate-3", {
-      y: "-=5px",
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 0.25
-    }, "-=0.125");
-
-    tl.fromTo(".animate-4", {
-      y: "-=5px",
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 0.25
-    }, "-=0.125");
-
-    tl.fromTo(".animate-5", {
-      opacity: 0,
-    }, {
-      opacity: 1,
-      duration: 0.25
-    }, "-=0.125");
-  }, []);
-
   const media = [
     {
       images: {
@@ -137,9 +90,8 @@ function MediaComponent() {
       id="media"
       className="section media bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
       data-side-menu-color="dark"
-      data-side-menu-visibility="visible"
     >
-      <div className="items animate-5 text-white bg-gray-900 text-center lg:w-8/12">
+      <div className="items animate text-white bg-gray-900 text-center lg:w-8/12">
         <Slider {...SLIDER_MEDIA_CONFIG}>
           {media.map((item, index) => {
             return (
@@ -180,7 +132,7 @@ function MediaComponent() {
                     </div>
                   </div>
                   <div className="container mx-auto px-8 py-8 hidden lg:block lg:opacity-0 lg:group-hover:opacity-100">
-                    <div className="button animate-4 pt-10">
+                    <div className="button animate pt-10">
                       <a
                         href=""
                         className="inline-block w-full lg:w-auto text-white text-center uppercase border-3 border-white rounded-3xl select-none lg:px-10 py-2 transition-opacity duration-150 hover:opacity-70"
@@ -195,25 +147,25 @@ function MediaComponent() {
           })}
         </Slider>
       </div>
-      <div className=" lg:w-4/12 lg:pl-60">
+      <div className=" lg:w-4/12 lg:pl-56">
         <div className="container mx-auto px-8 lg:pl-0 py-8">
-          <div className="section-name animate-1 font-title text-xs uppercase">
+          <div className="section-name animate font-title text-xs uppercase">
             Media
           </div>
-          <div className="section-title animate-2 pb-6">
+          <div className="section-title animate pb-6">
             <h2 className="font-title text-2xl">Healthier People</h2>
           </div>
-          <div className="text animate-3">
+          <div className="text animate">
             <p>
               EPM are committed to developing a series of new therapeutic
               solutions based on cannabinoid acids providing alternative
               treatments for patients.
             </p>
           </div>
-          <div className="button animate-4 pt-10">
+          <div className="button animate pt-10">
             <a
               href=""
-              className="inline-block w-full lg:w-auto text-center uppercase border-3 border-epm-dark-gray rounded-3xl select-none lg:px-10 py-2 transition-opacity duration-150 hover:opacity-70"
+              className="inline-block w-full lg:w-auto text-center uppercase border-3 border-epm-gray-700 rounded-3xl select-none lg:px-10 py-2 transition-opacity duration-150 hover:opacity-70"
             >
               Learn More
             </a>

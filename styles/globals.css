@@ -29,17 +29,13 @@ section {
 }
 
 @media (min-width: 1024px) {
-  #__next {
-    max-height: 100vh;
-    overflow-y: scroll;
+  html {
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
   }
 
-  section,
-  footer {
-    min-height: auto;
+  .section {
     scroll-snap-align: start;
   }
 }
@@ -59,27 +55,11 @@ a {
   width: 9px;
   height: 9px;
   border-radius: 50px;
-  @apply block absolute top-1/2 left-0 transform -translate-y-1/2 transition-all ease-in-out duration-150;
+  @apply block absolute top-1/2 left-0 transform -translate-y-1/2 transition-all ease-in-out duration-150 bg-white;
 }
 
 .side-menu .slide .slide__label {
-  @apply ml-10 opacity-0;
-}
-
-.side-menu--dark .side-menu .slide .slide__pill {
-  @apply bg-epm-dark-gray;
-}
-
-.side-menu--dark .side-menu .slide .slide__label {
-  @apply text-epm-dark-gray;
-}
-
-.side-menu--light .side-menu .slide .slide__pill {
-  @apply bg-white;
-}
-
-.side-menu--light .side-menu .slide .slide__label {
-  @apply text-white;
+  @apply ml-10 opacity-0 text-white;
 }
 
 /* =================== */
@@ -90,6 +70,11 @@ a {
 
 .slick-next {
   right: 2rem !important;
+}
+
+.slick-arrow {
+  width: 16px !important;
+  height: 28px !important;
 }
 
 .slick-arrow:before {
@@ -107,7 +92,7 @@ a {
   width: 9px;
   height: 9px;
   border-radius: 50px;
-  @apply block absolute bg-epm-dark-gray top-1/2 right-0 transform -translate-y-1/2 transition-all ease-in-out duration-150;
+  @apply block absolute bg-epm-gray-700 top-1/2 right-0 transform -translate-y-1/2 transition-all ease-in-out duration-150;
 }
 
 .menu li.menu-item.menu-item--open > a:after {
@@ -126,11 +111,12 @@ a {
 @media (min-width: 1024px) {
   header .desktop-menu .sub-menu {
     opacity: 0;
+    z-index: -1;
     @apply transition-all ease-in-out duration-150;
   }
 
   header .desktop-menu li.menu-item {
-    @apply text-epm-light-gray;
+    @apply text-epm-gray-500;
   }
 
   header .desktop-menu li.menu-item:hover {
@@ -167,28 +153,23 @@ a {
 
 .treatments .slick-arrow {
   top: auto;
-  bottom: 10px;
+  bottom: 0px;
 }
 
-/* =================== */
+.solution .slick-arrow {
+  top: auto;
+  @apply bottom-8;
 
-.essence .items {
-  height: 462px;
-  @apply lg:h-screen;
+  @media (min-width: 1024px) {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
-/* =================== */
-
-@media (min-width: 1024px) {
-  .community .item.item--active .container,
-  .community .item:hover .container {
-    opacity: 1;
-  }
-
-  .community .item.item--active img,
-  .community .item:hover img {
-    filter: none;
-  }
+.research-papers .slick-arrow {
+  top: auto;
+  bottom: 162.5px;
 }
 
 .community .slick-arrow {
@@ -202,7 +183,25 @@ a {
   }
 }
 
-/* =================== */
+.raphael-mechoulam .slick-arrow {
+  top: auto;
+  bottom: -55px !important;
+}
+
+@media (min-width: 1024px) {
+  .raphael-mechoulam .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+  .raphael-mechoulam .slick-prev{
+    left: 4.5rem !important;
+  }
+
+  .raphael-mechoulam .slick-next{
+    right: 4.5rem !important;
+  }
+}
 
 .media .slick-arrow {
   top: auto;
@@ -215,6 +214,31 @@ a {
   }
 }
 
+/* =================== */
+
+.essence .items {
+  height: 462px;
+  @apply lg:h-screen;
+}
+
+/* =================== */
+
+@media (min-width: 1024px) {
+  .community .item.item--active .overlay {
+    @apply bg-black bg-opacity-50;
+  }
+
+  .community .item.item--active .container,
+  .community .item:hover .container {
+    opacity: 1;
+  }
+
+  .community .item.item--active img,
+  .community .item:hover img {
+    filter: none;
+  }
+}
+
 /* .leadership .items-group:after {
   content: "";
   position: absolute;
@@ -222,5 +246,5 @@ a {
   left: -160px;
   width: 160px;
   height: 1px;
-  @apply bg-epm-light-gray;
+  @apply bg-epm-gray-500;
 } */

@@ -8,8 +8,9 @@ import {
   SliderCustomPreviousArrow,
   SliderCustomNextArrow,
 } from "../shared/carousel";
+import Button from "../shared/Button";
 
-function MediaComponent() {
+function MediaComponent({ data }) {
   const windowWidth = useWindowWidth();
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -32,166 +33,54 @@ function MediaComponent() {
     }
   }, [windowWidth]);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-
-    tl.fromTo(
-      ".animate-1",
-      {
-        y: "-=5px",
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.25,
-      }
-    );
-
-    tl.fromTo(
-      ".animate-2",
-      {
-        y: "-=5px",
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.25,
-      },
-      "-=0.125"
-    );
-
-    tl.fromTo(
-      ".animate-3",
-      {
-        y: "-=5px",
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.25,
-      },
-      "-=0.125"
-    );
-
-    tl.fromTo(
-      ".animate-4",
-      {
-        y: "-=5px",
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.25,
-      },
-      "-=0.125"
-    );
-
-    tl.fromTo(
-      ".animate-5",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 0.25,
-      },
-      "-=0.125"
-    );
-  }, []);
-
-  const media = [
-    {
-      images: {
-        src: "/img/icons/forbes.svg",
-        width: "213",
-        height: "55",
-      },
-      name: "Forbes",
-      quote:
-        "More Potent Than CBD, THC: Dr. Raphael Mechoulam Explains His Latest Discovery",
-      date: "July 12, 2020",
-    },
-    {
-      images: {
-        src: "/img/icons/nbc.svg",
-        width: "255",
-        height: "57",
-      },
-      name: "NBC News",
-      quote:
-        "Cannabis research pioneer hopes latest discovery is not overlooked — again",
-      date: "Sep 26, 2019",
-    },
-    {
-      images: {
-        src: "/img/icons/discover.svg",
-        width: "224",
-        height: "64",
-      },
-      name: "Discover",
-      quote:
-        "The 'Father of Cannabis Research' on the Untapped Potential of Marijuana as Medicine",
-      date: "November 21, 2019",
-    },
-    {
-      images: {
-        src: "/img/icons/endpoints.svg",
-        width: "247",
-        height: "23",
-      },
-      name: "EndpoiontsNews",
-      quote: "Startup EPM launches, high off cannabinoid acid innovation",
-      date: "Jul 12, 2020",
-    },
-  ];
-
   return (
     <section
       id="media"
-      className="section media bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden"
+      className="section media bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden lg:min-h-screen"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
     >
-      <div className="container mx-auto lg:px-8 pt-16 lg:py-8">
-        <div className="items border-t lg:border-0 border-epm-dark-gray pt-12 lg:pt-0">
-          {media.map((item, index) => {
+      <div className="container lg:w-lg-container mx-auto lg:px-8 pt-16 lg:pt-16">
+        <div className="items lg:pt-8">
+          {data.slides.map((slide, index) => {
             return (
-              <div className="item cursor-pointer border-b border-epm-dark-gray mb-12 pb-12">
-                <div className="flex flex-col lg:flex-row lg:items-center mx-8 lg:mx-0 ">
-                  <div className="item-image lg:w-1/4 mb-4 lg:mb-0 ">
-                    <div className="w-auto lg:w-72 mx-auto lg:mx-0 relative">
-                      <Image
-                        src={item.images.src}
-                        alt=""
-                        width={item.images.width}
-                        height={item.images.height}
-                        layout="responsive"
-                        quality={100}
-                      />
+              <div className="item group cursor-pointer border-t last:border-b border-epm-gray-300 h-96 lg:h-auto min-h-full lg:min-h-0 flex lg:block flex-wrap content-center lg:py-8 lg:px-4 transition-colors duration-150 hover:bg-epm-gray-100">
+                <a href="#">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mx-8 lg:mx-0">
+                    <div className="item-image lg:w-64 mb-4 lg:mb-0">
+                      <div className="w-auto mx-auto lg:mx-0 relative">
+                        <Image
+                          src={slide.images.src}
+                          alt=""
+                          width={slide.images.width}
+                          height={slide.images.height}
+                          layout="responsive"
+                          quality={100}
+                          className="max-w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                    <div className="item-name mb-4 lg:mb-2 text-lg lg:text-5xl hidden">
+                      {slide.name}
+                    </div>
+                    <div className="text-center lg:text-left lg:inline-block lg:w-105">
+                      <div className="quote lg:text-2xl mb-4">{slide.quote}</div>
+                      <div className="item__date lg:text-center text-sm text-epm-gray-500 lg:text-base font-title lg:inline-block">
+                        {slide.date}
+                      </div>
+                    </div>
+                    <div className="button animate pt-10 lg:pt-0 lg:inline-block text-center">
+                      <Button
+                        style="dark"
+                        href={slide.url}
+                        extendedClassNames="group-hover:bg-epm-yellow group-hover:border-epm-yellow"
+                        target="_blank"
+                      >
+                        Read More
+                      </Button>
                     </div>
                   </div>
-                  <div className="item-name lg:w-1/4 mb-4 lg:mb-2 text-lg lg:text-5xl  hidden">
-                    {item.name}
-                  </div>
-                  <div className="text-center lg:text-left lg:inline-block lg:w-1/2">
-                    <div className="quote lg:text-3xl mb-4">{item.quote}</div>
-                    <div className="item__date lg:text-center text-sm text-epm-light-gray lg:text-base font-title lg:inline-block">
-                      {item.date}
-                    </div>
-                  </div>
-                  <div className="button animate-4 pt-10 lg:pt-0 lg:inline-block lg:w-1/4 text-center">
-                    <a
-                      href=""
-                      className="inline-block w-full lg:w-auto text-emp-dark-gray text-center uppercase border-3 border-emp-dark-gray rounded-3xl select-none lg:px-10 py-2 transition-opacity duration-150 hover:opacity-70"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </div>
+                </a>
               </div>
             );
           })}

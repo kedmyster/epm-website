@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
+import SectionHeader from "../shared/SectionHeader";
+import Button from "../shared/Button";
 
 function OurStory() {
   const windowWidth = useWindowWidth();
@@ -43,7 +45,8 @@ function OurStory() {
   return (
     <section
       id="story"
-      className="section story bg-white relative w-full flex flex-wrap border-b-1 border-emp-dark-gray lg:flex-row-reverse lg:h-screen"
+      className="section story bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-700 lg:flex-row-reverse lg:h-screen"
+      data-side-menu-label="Our Story"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
     >
@@ -51,7 +54,7 @@ function OurStory() {
         {isMobile && (
           <Image
             loading="eager"
-            src="/img/mobile/about-our_story@3x.jpg"
+            src="/img/mobile/about/mechoulam-thumbnail@2x.jpg"
             alt=""
             width={375}
             height={500}
@@ -62,26 +65,29 @@ function OurStory() {
         {isDesktop && (
           <Image
             loading="eager"
-            src="/img/desktop/about-our_story@2x.jpg"
+            src="/img/desktop/about/mechoulam-thumbnail@2x.jpg"
             alt=""
             layout="fill"
             objectFit="cover"
             quality={100}
           />
         )}
+        <div className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
+          <Button href="/about/#story" style="light">
+            Play Video
+          </Button>
+        </div>
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-60 lg:w-5/12">
-        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
-          <div className="section-name font-title text-xs uppercase">
-            Our story
+      <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
+        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 ">
+          <div className="lg:mb-0">
+            <SectionHeader
+              name="Our story"
+              title={<h2>Patient-Focused Pharmaceutical Group</h2>}
+            />
           </div>
-          <div className="section-title pb-6">
-            <h2 className="font-title text-2xl">
-              Patient-Focused Pharmaceutical Group
-            </h2>
-          </div>
-          <div className="text lg:text-lg">
+          <div className="text mt-6 lg:text-lg lg:w-96">
             <p>
               EPM develops prescription medicines derived from synthetic
               cannabinoid acids to address unmet patient needs. Our mission is

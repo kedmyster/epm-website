@@ -1,21 +1,51 @@
 import Image from "next/image";
+import { gsap } from "gsap";
 
 function Footer({}) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const tl = gsap.timeline();
+
+    tl.add("layout");
+    tl.fromTo(".contact__form", {
+      opacity: 1,
+    }, {
+      opacity: 0,
+      duration: 0.25
+    }, "layout");
+    tl.fromTo(".contact__thanks", {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      duration: 0.25,
+      zIndex: 11,
+    }, "layout");
+  };
+
+  const scrollToHome = (event) => {
+    event.preventDefault();
+    document.querySelector("#main").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer
+      id="footer"
       className="section bg-epm-yellow h-screen lg:flex lg:flex-wrap lg:content-center"
       data-side-menu-visibility="hidden"
     >
       <div className="container mx-auto px-8 pt-12 pb-4 lg:py-8">
-        <div className="lg:flex lg:flex-row lg:justify-between">
-          <div className="flex-grow lg:flex-grow-0">
+        <div className="lg:flex lg:flex-row lg:justify-between relative">
+          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10">
             <div className="mb-4 lg:mb-8 lg:w-101">
-              <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-epm-dark-gray">
+              <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-epm-gray-700">
                 Join Our Journey
               </h2>
             </div>
             <div className="mb-8 lg:mb-0 lg:w-101">
-              <form>
+              <form onSubmit={(event) => handleSubmit(event)}>
                 <div className="mb-6 leading-8">
                   <input
                     type="email"
@@ -26,7 +56,7 @@ function Footer({}) {
                 <div className="">
                   <button
                     type="submit"
-                    className="w-full lg:w-auto text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-dark-gray text-xl border-3 border-epm-dark-gray text-white font-light rounded-3xl lg:px-16 py-1"
+                    className="w-full lg:w-auto text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
                   >
                     Submit
                   </button>
@@ -34,7 +64,7 @@ function Footer({}) {
               </form>
             </div>
           </div>
-          <div className="mb-12 hidden">
+          <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">
             <div className="mb-8">
               <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-white">
                 Great :)
@@ -43,7 +73,7 @@ function Footer({}) {
               </h2>
             </div>
             <div>
-             <a href="/" className="font-title text-md text-epm-dark-gray underline uppercase">Back home</a>
+             <a href="#main" onClick={(event) => scrollToHome(event)} className="font-title text-md text-epm-gray-700 underline uppercase">Back home</a>
             </div>
           </div>
           <div className="flex flex-row">
@@ -151,7 +181,7 @@ function Footer({}) {
               <div div className="container mx-auto px-8 lg:px-0 relative">
                 <nav role="navigation">
                   <ul className="leading-8">
-                    <li className="font-title text-epm-dark-gray tracking-wide pb-4">
+                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
                       <a
                         href="/about"
                         className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
@@ -159,7 +189,7 @@ function Footer({}) {
                         About
                       </a>
                     </li>
-                    <li className="font-title text-epm-dark-gray tracking-wide pb-4">
+                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
                       <a
                         href="/science"
                         className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
@@ -167,7 +197,7 @@ function Footer({}) {
                         Science
                       </a>
                     </li>
-                    <li className="font-title text-epm-dark-gray tracking-wide pb-4">
+                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
                       <a
                         href="/treatments"
                         className="block uppercase underline"
@@ -175,7 +205,7 @@ function Footer({}) {
                         Treatments
                       </a>
                     </li>
-                    <li className="font-title text-epm-dark-gray tracking-wide pb-4">
+                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
                       <a
                         href="/media"
                         className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
@@ -183,7 +213,7 @@ function Footer({}) {
                         Media
                       </a>
                     </li>
-                    <li className="font-title text-epm-dark-gray tracking-wide pb-4">
+                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
                       <a
                         href="/careers"
                         className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
@@ -196,17 +226,17 @@ function Footer({}) {
               </div>
             </div>
         </div>
-        <div className="copyright text-xs lg:text-sm font-title text-epm-dark-gray lg:pt-48 ">
+        <div className="copyright text-xs lg:text-sm font-title text-epm-gray-700 lg:pt-48 ">
           <a
             href="/privacy-policy"
-            className="underline pointer transition-opacity duration-150 hover:opacity-70"
+            className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
           >
             Privacy Policy
           </a>
           <span> | </span>
           <a
             href="/term"
-            className="underline pointer transition-opacity duration-150 hover:opacity-70"
+            className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
           >
             Terms of Use
           </a>

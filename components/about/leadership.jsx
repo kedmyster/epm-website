@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
+import SectionHeader from "../shared/SectionHeader";
 
 function Leadership({ leaders = [] }) {
   const windowWidth = useWindowWidth();
@@ -43,19 +44,20 @@ function Leadership({ leaders = [] }) {
   return (
     <section
       id="leadership"
-      className="section leadership bg-white relative w-full flex flex-wrap border-b-1 border-emp-dark-gray  lg:flex-row"
+      className="section leadership bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-700 lg:flex-row"
+      data-side-menu-label="Leadership"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
     >
-      <div className="lg:flex-grow lg:pl-60">
-        <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:sticky lg:top-0">
-          <div className="font-title text-xs uppercase section-name">
-            Our story
+      <div className="lg:flex-grow lg:pl-56">
+        <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:sticky lg:top-0">
+          <div className="mb-6 lg:mb-0">
+            <SectionHeader
+              name="Our story"
+              title={<h2>Leadership</h2>}
+            />
           </div>
-          <div className="pb-6 section-title">
-            <h2 className="font-title text-2xl">Leadership</h2>
-          </div>
-          <div className="text lg:text-lg">
+          <div className="text lg:text-lg lg:w-96">
             <p>
               We are grateful to have an experienced team with specialties in
               different fields and unique backgrounds. We all share a common
@@ -70,15 +72,14 @@ function Leadership({ leaders = [] }) {
         </div>
       </div>
 
-      <div className="items lg:w-1/2 lg:flex-shrink-0">
+      <div className="items lg:w-7/12 lg:flex-shrink-0">
         {leaders.map(group => {
           return (
             <div className="items-group lg:flex lg:flex-wrap relative">
-              <div className="font-title uppercase text-lg lg:text-2xl w-full text-center bg-epm-lighter-gray py-1.5 lg:pr-8">{group.group}</div>
+              <div className="font-title uppercase text-lg lg:text-2xl w-full text-center bg-epm-gray-300 py-1.5 lg:pr-8 lg:absolute lg:top-0 lg:z-20">{group.group}</div>
               {group.people.map(leader => {
                 return (
                   <>
-                    
                     <div className="item relative lg:w-1/3 lg:h-1/2-screen">
                       <div className="hidden lg:block absolute w-full h-full inset-0 bg-black bg-opacity-25 z-10"></div>
                       <div className="relative h-52 lg:h-full overflow-y-hidden lg:overflow-y-auto">

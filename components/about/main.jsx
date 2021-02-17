@@ -50,7 +50,7 @@ function Main() {
   return (
     <section
       id="main"
-      className="section main w-full bg-cover text-center text-white relative lg:h-screen lg:-mt-20"
+      className="section main w-full bg-cover text-center text-white relative lg:h-screen"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
     >
@@ -58,7 +58,7 @@ function Main() {
         {isMobile && (
           <Image
             loading="eager"
-            src="/img/mobile/hero@3x.jpg"
+            src="/img/mobile/about/hero@3x.jpg"
             alt=""
             layout="fill"
             objectFit="cover"
@@ -68,7 +68,7 @@ function Main() {
         {isDesktop && (
           <Image
             loading="eager"
-            src="/img/desktop/hero@2x.jpg"
+            src="/img/desktop/about/hero@2x.jpg"
             alt=""
             layout="fill"
             objectFit="cover"
@@ -77,42 +77,79 @@ function Main() {
         )}
       </div>
       <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
-      <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:bottom-24 lg:w-full">
+      <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-full">
         <div className="container mx-auto px-8 py-8 absolute bottom-36 lg:bottom-10 lg:relative lg:z-10">
           <p className="text-xs uppercase font-title mb-4 lg:hidden">
             Our Story
           </p>
-          <h1 className="font-title text-4xl lg:text-8xl tracking-wide">
-            Patient-focused Pharmaceutical Group
+          <h1 className="font-title text-4xl lg:text-7.5xl lg:leading-tight tracking-wide">
+            Patient-focused
+            <br />
+            Pharmaceutical Group
           </h1>
-          
         </div>
-        <div className="container w-container mx-auto px-8 py-8 hidden relative z-10 lg:flex lg:flex-row ">
-        <div className="w-1/3">
-          <div className="icon w-16 mx-auto mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="68" height="68" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        {/*<div className="container w-container mx-auto px-8 py-8 hidden relative z-10 lg:flex lg:flex-row ">
+          <div className="w-1/3">
+            <div className="icon w-16 mx-auto mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                width="68"
+                height="68"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div className="text font-title text-2xl">Alternative</div>
           </div>
-          <div className="text font-title text-2xl">Alternative</div>
-        </div>
-        <div className="w-1/3">
-          <div className="icon w-16 mx-auto mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="68" height="68" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+          <div className="w-1/3">
+            <div className="icon w-16 mx-auto mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                width="68"
+                height="68"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div className="text font-title text-2xl">Affordable</div>
           </div>
-          <div className="text font-title text-2xl">Affordable</div>
-        </div>
-        <div className="w-1/3">
-          <div className="icon w-16 mx-auto mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="68" height="68" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+          <div className="w-1/3">
+            <div className="icon w-16 mx-auto mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                width="68"
+                height="68"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div className="text font-title text-2xl">No side effects</div>
           </div>
-          <div className="text font-title text-2xl">No side effects</div>
-        </div>
-      </div>
+        </div>*/}
       </div>
       <div className="scroll-to-content absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <a

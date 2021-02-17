@@ -47,11 +47,13 @@ module.exports = {
     extend: {
       fontSize: {
         "8.5xl": "7.5rem",
+        "7.5xl": "5.25rem",
       },
       colors: {
-        "epm-lighter-gray": "#EEEEEF",
-        "epm-light-gray": "#A9ACB0",
-        "epm-dark-gray": "#636466",
+        "epm-gray-100": "#f8f8f8",
+        "epm-gray-300": "#EEEEEF",
+        "epm-gray-500": "#A9ACB0",
+        "epm-gray-700": "#636466",
         "epm-yellow": "#FFD534",
       },
       opacity: {
@@ -62,11 +64,13 @@ module.exports = {
         103: "33rem",
         105: "35rem",
         "container": "58.125rem",
+        "lg-container": "73.75rem",
         "3/4-screen": "75vw",
         "1/4-screen": "25vw",
       },
       height: {
         101 : "31.25rem",
+        110 : "56.375rem",
         "2/3-screen": "66.66666vh",
         "1/3-screen": "33.33333vh",
         "1/2-screen": "50vh",
@@ -80,7 +84,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['last'],
+      margin: ['last'],
+    },
   },
   plugins: [],
 };

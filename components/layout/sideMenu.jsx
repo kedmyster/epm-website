@@ -1,195 +1,298 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { gsap } from "gsap";
+import { GSDevTools } from "gsap/dist/GSDevTools";
+
+const THEME_LIGHT = "light";
+const THEME_DARK = "dark";
+const VISIBILITY_VISIBLE = "visible";
+const VISIBILITY_HIDDEN = "hidden";
 
 function SideMenu() {
-  useEffect(() => {
-    const sideMenu = document
-      .querySelector(".side-menu");
-
-    document.querySelector("body").classList.add("side-menu--light");
-
-    sideMenu
-      .querySelectorAll(".menu-item")
-      .forEach((item) => {
-        if (!item) {
-          return;
-        }
-
-        const tl = gsap.timeline({ paused: true });
-        const pill = item.querySelector(".slide__pill");
-        const label = item.querySelector(".slide__label");
-
-        tl.to(pill, {
-          width: 31,
-          backgroundColor: "#FFD534",
-          duration: 0.25,
-          onStart: () => pill.classList.add("animating"),
-          onComplete: () => pill.classList.remove("animating"),
-        });
-        tl.to(label, {
-          opacity: 1,
-          duration: 0.25,
-          onStart: () => label.classList.add("animating"),
-          onComplete: () => pill.classList.remove("animating"),
-        });
-
-        item.animation = tl;
-        item.addEventListener("mouseenter", function () {
-          this.animation.play();
-        });
-        item.addEventListener("mouseleave", function () {
-          this.animation.reverse();
-        });
-      });
-
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.intersectionRatio === 1) {
-            if (sideMenu) {
-              sideMenu
-                .querySelectorAll(".menu-item")
-                .forEach((item) => {
-                  item.animation.reverse();
-                });
-            }
-  
-            const anchor = document.querySelector(
-              `.slide a[href="#${entry.target.id}"]`
-            );
-  
-            // const sideMenuColor = entry.target.getAttribute("data-side-menu-color");
-            // const sideMenuVisibility = entry.target.getAttribute("data-side-menu-visibility");
-            // document.querySelector("body").classList.remove("side-menu--light", "side-menu--dark");
-            // document.querySelector("body").classList.add(`side-menu--${sideMenuColor}`);
-  
-            if (anchor) {
-              const menuItem = anchor.closest(".menu-item");
-              
-              if (!menuItem) {
-                return;
-              }
-  
-              if (entry.isIntersecting) {
-                menuItem.animation.play();
-              }
-            }
-  
-            console.log(entry);
-          }
-        });
+  const animateSideMenuActiveState = (
+    sideMenu,
+    section,
+    menuItem,
+    pill,
+    label
+  ) => {
+    const tlSideMenu = gsap.timeline({
+      paused: true,
+      onStart: () => menuItem.closest("li").classList.add("active"),
+      onReverseComplete: () =>
+        menuItem.closest("li").classList.remove("active"),
+      scrollTrigger: {
+        trigger: `#${section.id}`,
+        start: "top-=50%",
+        end: "bottom-=50%",
+        toggleActions: "play reverse play reverse",
       },
-      { threshold: [0.01, 1] }
+    });
+
+    tlSideMenu.add("side-menu");
+
+    tlSideMenu.to(
+      pill,
+      {
+        width: 31,
+        backgroundColor: "#FFD534",
+        duration: 0.1,
+      },
+      "side-menu"
+    );
+    tlSideMenu.to(
+      label,
+      {
+        opacity: 1,
+        delay: 0.15,
+        duration: 0.1,
+      },
+      "side-menu"
     );
 
-    document
-      .querySelectorAll(".section")
-      .forEach((section) => observer.observe(section));
-  }, []);
+    menuItem.animation = tlSideMenu;
 
-  const onClick = (event) => {
-    event.preventDefault();
+    menuItem.addEventListener("mouseenter", function (event) {
+      const active = document.querySelector(".side-menu li.active");
+      const current = this.closest("li");
 
-    let slide;
+      if (active !== current) {
+        this.animation.play();
+      }
+    });
 
-    if (event.target.classList.contains("slide")) {
-      slide = event.target;
-    } else {
-      slide = event.target.closest(".slide");
-    }
+    menuItem.addEventListener("mouseleave", function (event) {
+      const active = document.querySelector(".side-menu li.active");
+      const current = this.closest("li");
 
-    const anchor = slide.querySelector("a").getAttribute("href").substr(1);
-    const section = document.querySelector(`#${anchor}`);
-
-    section.scrollIntoView({
-      behavior: "smooth",
+      if (active !== current) {
+        this.animation.reverse();
+      }
     });
   };
 
-  return (
-    <>
-      <div
-        id="side-menu"
-        className="side-menu fixed left-8 top-1/2 transform -translate-y-1/2 z-10"
-      >
-        <nav role="navigation">
-          <ul>
-            <li className="menu-item my-8 font-title text-xs tracking-wide">
-              <div
-                className={classNames("slide", "cursor-pointer", "relative")}
-              >
-                <a
-                  href="#story"
-                  className="block uppercase pointer relative"
-                  onClick={onClick}
-                >
-                  <div className="slide__pill" />
-                  <div className="slide__label">Our Story</div>
-                </a>
-              </div>
-            </li>
-            <li className="menu-item my-8 font-title text-xs tracking-wide">
-              <div
-                className={classNames("slide", " cursor-pointer", "relative")}
-              >
-                <a
-                  href="#innovation"
-                  className="block uppercase pointer relative"
-                  onClick={onClick}
-                >
-                  <div className="slide__pill" />
-                  <div className="slide__label">Our Innovation</div>
-                </a>
-              </div>
-            </li>
-            <li className="menu-item my-8 font-title text-xs tracking-wide">
-              <div
-                className={classNames("slide", " cursor-pointer", "relative")}
-              >
-                <a
-                  href="#treatments"
-                  className="block uppercase pointer relative"
-                  onClick={onClick}
-                >
-                  <div className="slide__pill" />
-                  <div className="slide__label">Treatments</div>
-                </a>
-              </div>
-            </li>
-            <li className="menu-item my-8 font-title text-xs tracking-wide">
-              <div
-                className={classNames("slide", " cursor-pointer", "relative")}
-              >
-                <a
-                  href="#essence"
-                  className="block uppercase pointer relative"
-                  onClick={onClick}
-                >
-                  <div className="slide__pill" />
-                  <div className="slide__label">Our Essence</div>
-                </a>
-              </div>
-            </li>
-            <li className="menu-item my-8 font-title text-xs tracking-wide">
-              <div
-                className={classNames("slide", " cursor-pointer", "relative")}
-              >
-                <a
-                  href="#community"
-                  className="block uppercase pointer relative"
-                  onClick={onClick}
-                >
-                  <div className="slide__pill" />
-                  <div className="slide__label">Our Community</div>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </>
-  );
+  const animateSideMenuVisibility = (
+    sideMenu,
+    section,
+    menuItem,
+    pill,
+    label
+  ) => {
+    if (section.dataset.sideMenuVisibility == "hidden") {
+      const tlSideMenuVisibility = gsap.timeline({
+        scrollTrigger: {
+          trigger: `#${section.id}`,
+          start: "top-=50%",
+          end: "bottom-=50%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+
+      tlSideMenuVisibility.to(sideMenu, {
+        opacity: 0,
+        duration: 0.1,
+      });
+    }
+  };
+
+  const animateSideMenuColor = (sideMenu, section, activeMenuItem, activePill, activeLabel) => {
+    const theme = section.dataset.sideMenuColor;
+    const menuItems = sideMenu.querySelectorAll(".menu-item");
+    const tlSideMenuColor = gsap.timeline({
+      scrollTrigger: {
+        trigger: `#${section.id}`,
+        start: "top-=50%",
+        end: "bottom-=50%",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
+    tlSideMenuColor.add("side-menu-color");
+
+    menuItems.forEach((item) => {
+      const pill = item.querySelector(".slide__pill");
+      const label = item.querySelector(".slide__label");
+
+      if (activeMenuItem !== item.querySelector("a")) {
+        if (theme === THEME_LIGHT) {
+          tlSideMenuColor.to(pill, {
+            backgroundColor: "#FFFFFF",
+            duration: 0.1,
+          }, "side-menu-color");
+        } else if (theme === THEME_DARK) {
+          tlSideMenuColor.to(pill, {
+            backgroundColor: "#000000",
+            duration: 0.1,
+          }, "side-menu-color");
+        }
+      }
+    });
+  };
+
+  const animateSectionContent = (section) => {
+    if (section) {
+      const tlAnimateContent = gsap.timeline({
+        scrollTrigger: {
+          trigger: `#${section.id}`,
+          start: "top-=50%",
+        },
+      });
+
+      tlAnimateContent.fromTo(
+        `#${section.id} .animate`,
+        {
+          y: "-=5px",
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+        }
+      );
+    }
+  };
+
+  const utils = {
+    animateSideMenuActiveState,
+    animateSideMenuVisibility,
+    animateSideMenuColor,
+    animateSectionContent,
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      const sideMenu = document.querySelector(".side-menu");
+
+      if (sideMenu) {
+        const sections = Array.from(document.querySelectorAll(".section"));
+        const menuItems = Array.from(sideMenu.querySelectorAll(".menu-item"));
+  
+        sections.forEach((section) => {
+          const menuItem = document.querySelector(
+            `.side-menu li a[href='#${section.id}']`
+          );
+          const pill = menuItem.querySelector(".slide__pill");
+          const label = menuItem.querySelector(".slide__label");
+  
+          utils.animateSideMenuActiveState(
+            sideMenu,
+            section,
+            menuItem,
+            pill,
+            label
+          );
+          utils.animateSideMenuVisibility(
+            sideMenu,
+            section,
+            menuItem,
+            pill,
+            label
+          );
+          // utils.animateSideMenuColor(sideMenu, section, menuItem, pill, label);
+          utils.animateSectionContent(section);
+  
+          // menuItems.forEach(menuItem => {
+          //   const currentPill = menuItem.querySelector(".slide__pill");
+          //   const currentLabel = menuItem.querySelector(".slide__label");
+  
+          //   const tlSideMenuColor = gsap.timeline({
+          //     scrollTrigger: {
+          //       trigger: `#${section.id}`,
+          //       start: "top-=50%",
+          //       end: "bottom-=50%",
+          //       toggleActions: "play reverse play reverse",
+          //     },
+          //   });
+  
+          //   tlSideMenuColor.from(
+          //     currentPill,
+          //     {
+          //       backgroundColor: () => {
+          //         if (section.dataset.sideMenuColor === THEME_LIGHT) {
+          //           return "#FFFFFF";
+          //         } else if (section.dataset.sideMenuColor === THEME_DARK) {
+          //           return "#000000";
+          //         }
+          //       }
+          //     }
+          //   );
+          //   tlSideMenuColor.from(
+          //     currentLabel,
+          //     {
+          //       color: () => {
+          //         if (section.dataset.sideMenuColor === THEME_LIGHT) {
+          //           return "#FFFFFF";
+          //         } else if (section.dataset.sideMenuColor === THEME_DARK) {
+          //           return "#000000";
+          //         }
+          //       }
+          //     }
+          //   );
+          // });
+        });
+      }
+
+      // GSDevTools.create();
+    });
+  }, []);
+
+  const sections = Array.from(document.querySelectorAll(".section"));
+
+  if (sections.length === 0) {
+    return null;
+  } else {
+    return (
+      <>
+        <div
+          id="side-menu"
+          className="side-menu fixed left-8 top-1/2 transform -translate-y-1/2 z-10"
+        >
+          <nav role="navigation">
+            <ul>
+              {sections.map((section, index) => {
+                const label = section.getAttribute("data-side-menu-label");
+
+                if (label) {
+                  return (
+                    <li
+                      key={section.id}
+                      className={classNames(
+                        "menu-item my-8 font-title text-xs tracking-wide",
+                        { active: index === 0 }
+                      )}
+                    >
+                      <div className="slide cursor-pointer relative">
+                        <a
+                          href={`#${section.id}`}
+                          className="block uppercase cursor-pointer relative"
+                        >
+                          <div className="slide__pill" />
+                          <div className="slide__label">{label}</div>
+                        </a>
+                      </div>
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li
+                      className={classNames("menu-item hidden", {
+                        active: index === 0,
+                      })}
+                    >
+                      <div className="slide">
+                        <a href={`#${section.id}`}></a>
+                      </div>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
+          </nav>
+        </div>
+      </>
+    );
+  }
 }
 
 export default SideMenu;
