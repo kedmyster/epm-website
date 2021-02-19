@@ -53,11 +53,12 @@ function Main() {
       className="section main w-full bg-cover text-center text-white relative lg:h-screen"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="hidden"
     >
       <div className="absolute w-full h-full">
         {isMobile && (
           <Image
-            loading="eager"
+            priority={true}
             src="/img/mobile/about/hero@3x.jpg"
             alt=""
             layout="fill"

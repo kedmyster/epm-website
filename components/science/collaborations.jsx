@@ -56,6 +56,7 @@ function Collaborations({ data }) {
       data-side-menu-label="Key Collaborations"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       {isMobile && (
         <div>

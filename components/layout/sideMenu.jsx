@@ -49,6 +49,7 @@ function SideMenu() {
       },
       "side-menu"
     );
+    
 
     menuItem.animation = tlSideMenu;
 

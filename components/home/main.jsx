@@ -52,6 +52,7 @@ function Main() {
       className="section main w-full bg-cover text-center text-white relative lg:h-screen"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="hidden"
     >
       <div>
         <div className="absolute w-full h-full">

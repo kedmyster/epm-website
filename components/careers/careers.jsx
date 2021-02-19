@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
 
-function Careers({ positions = [] }) {
+function CareersComponent({ positions = [] }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -32,12 +32,13 @@ function Careers({ positions = [] }) {
         className="section careers bg-white relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
         data-side-menu-label="Careers"
         data-side-menu-color="light"
-        data-side-menu-visibility="visible"
+        data-side-menu-visibility="hidden"
+        data-header-menu-visibility="visible"
       >
         <div className="absolute w-full h-full">
           {isMobile && (
             <Image
-              src="/img/mobile/homepage/our-story@2x.jpg"
+              src="/img/mobile/careers/careers@2x.jpg"
               alt=""
               layout="fill"
               objectFit="cover"
@@ -54,30 +55,30 @@ function Careers({ positions = [] }) {
             />
           )}
         </div>
-        <div className="relative container mx-auto py-8 px-8 ">
+        <div className="relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
           <div className="mb-6 lg:mb-0">
             <SectionHeader name="Our story" title={<h2>Careers</h2>} />
           </div>
-          <div className="text lg:text-lg lg:w-container lg:mx-auto">
-            <p className="mb-4 lg:mb-8">
+          <div className="text lg:text-lg lg:w-container lg:mx-auto lg:mt-6">
+            <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
               medicines and to enable safer treatments for patients, by
               collaborating with leading pharmaceutical companies. We believe
               in making a difference and helping people live a life of higher
               quality.
             </p>
-            <p className="">
+            <p className="lg:mx-20">
               We are looking for enthusiastic and talented individuals who
               thrive on challenges and a dynamic work environment, and are
               passionate to make a difference through the delivery of results.
             </p>
           </div>
-          <div className="font-bold lg:text-2xl lg:w-container lg:mx-auto mt-4 lg:mt-8">
-            <p className="text-white mb-4 lg:mb-8">
+          <div className="font-bold text-lg lg:text-2xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
+            <p className="mb-4 lg:mb-8">
               Looking to join a dynamic company and be part of a team where
               you can make a difference? We’d love to learn more about you.
             </p>
-            <a href="mailto:jobs@epmip.com">jobs@epmip.com</a>
+            <a href="mailto:jobs@epmip.com" className="underline lg:no-underline inline-block lg:pb-8">jobs@epmip.com</a>
           </div>
         </div>
       </section>
@@ -258,4 +259,4 @@ function Careers({ positions = [] }) {
   }
 }
 
-export default Careers;
+export default CareersComponent;

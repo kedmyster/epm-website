@@ -49,6 +49,7 @@ function OurStory() {
       data-side-menu-label="Our Story"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="video relative lg:flex-grow lg:w-7/12">
         {isMobile && (
@@ -87,7 +88,7 @@ function OurStory() {
               title={<h2>Patient-Focused Pharmaceutical Group</h2>}
             />
           </div>
-          <div className="text mt-6 lg:text-lg lg:w-96">
+          <div className="animate text mt-6 lg:text-lg lg:w-96">
             <p>
               EPM develops prescription medicines derived from synthetic
               cannabinoid acids to address unmet patient needs. Our mission is

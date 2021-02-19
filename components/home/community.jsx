@@ -59,11 +59,12 @@ function Community({ data }) {
       data-side-menu-label="Our Community"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen">
         <div className="items animate text-white bg-gray-900 text-center lg:w-7/12">
           <Slider {...SLIDER_COMMUNITY_CONFIG}>
-          {data.slides.map((slide,index) => {
+            {data.slides.map((slide, index) => {
               return (
                 <div
                   className={classNames("item", "cursor-pointer", {
@@ -136,19 +137,20 @@ function Community({ data }) {
             <div className="mb-6 lg:mb-0">
               <SectionHeader
                 name="Our Community"
-                title={<h2>Healthier People</h2>}
+                title={<h2>Curing and Treating Patients Worldwide </h2>}
               />
             </div>
             <div className="text animate lg:mt-6">
               <p>
-                EPM are committed to developing a series of new therapeutic
-                solutions based on cannabinoid acids providing alternative
-                treatments for patients.
+                EPM’s vision is to reach patients worldwide and improve their
+                quality of life. Partnering with leading pharmaceutical
+                companies and conducting groundbreaking research, we will turn
+                this vision into a reality.
               </p>
             </div>
             <div className="button animate pt-10">
               <Button href="/treatments/#treatments" style="dark">
-                Learn More
+                Join Us
               </Button>
             </div>
           </div>

@@ -63,6 +63,7 @@ function Solution({ data }) {
       data-side-menu-label="Our Solution"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="w-full lg:w-7/12">
         <Slider {...SLIDER_SOLUTION_CONFIG}>

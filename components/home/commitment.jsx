@@ -34,6 +34,7 @@ function Commitment() {
       data-side-menu-label="Our commitment"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       {isMobile && (
         <div>

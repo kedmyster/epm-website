@@ -96,17 +96,17 @@ function Innovation({ data }) {
       data-side-menu-label="Our Innovation"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       {isMobile && (
-        <div>
-          <div className="items text-white bg-gray-800 text-center">
+        <div className="">
+          <div className="items text-white bg-gray-800 text-center h-2/3-screen">
             <Slider {...SLIDER_INNOVATION_CONFIG_MOBILE}>
               {data.slides.map((slide) => {
                 return (
                   <div className="item">
                     <div
-                      className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end"
-                      style={{ height: "462px" }}
+                      className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen"
                     >
                       <div className="absolute w-full h-full">
                         <Image
@@ -119,7 +119,7 @@ function Innovation({ data }) {
                       </div>
                       <div className="absolute w-full h-full inset-0 bg-black bg-opacity-20"></div>
                       <div className="container mx-auto px-16 py-8 lg:flex lg:flex-row lg:space-x-20 z-10">
-                        <div className="item__title font-light text-2xl uppercase pb-5">
+                        <div className="item__title font-light font-title text-2xl uppercase pb-5">
                           {slide.title}
                         </div>
                         <div className="item__text font-light text-sm h-14">
@@ -198,7 +198,7 @@ function Innovation({ data }) {
                         <div className="item__box__bottom absolute bottom-0 left-0 bg-white w-full h-px transform scale-0"></div>
                         <div className="item__box__right absolute bottom-0 right-0 bg-white w-px h-full transform scale-0"></div>
                         <div className="item__content">
-                          <div className="item__title font-light text-2xl uppercase mb-5">
+                          <div className="item__title font-light font-title text-2xl uppercase mb-5">
                             {slide.title}
                           </div>
                           <div className="item__text font-light text-sm">

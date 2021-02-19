@@ -61,6 +61,7 @@ function Treatments({ data }) {
       data-side-menu-label="Our Treatments"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       {isMobile && (
         <div>
@@ -118,7 +119,7 @@ function Treatments({ data }) {
 
       {isDesktop && (
         <div>
-          <div className="lg:relative lg:h-screen lg:flex lg:flex-col lg:justify-between">
+          <div className="lg:relative lg:h-screen lg:flex lg:flex-col lg:justify-between bg-epm-gray-100">
             <div className="container mx-auto px-8 py-8">
               <div className="text-center mb-6">
                 <SectionHeader
@@ -134,32 +135,60 @@ function Treatments({ data }) {
                 </p>
               </div>
             </div>
-            <div className="animate container mx-auto px-8">
-              <div className="image text-center pb-5">
-                <Image
-                  src="/img/desktop/homepage/our-treatments@2x.png"
-                  alt=""
-                  width="802"
-                  height="435"
-                />
-              </div>
-              <div className="flex flex-row flex-wrap justify-center space-x-10">
-                <div className="item__title text-center text-base font-title uppercase py-3">
-                  Oral for IBD{" "}
-                  <span className="block normal-case text-epm-gray-500">
-                    (Crohn’s & Colitis)
-                  </span>
+            <div className="animate container max-w-4xl mx-auto px-8">
+              <div className="flex flex-row justify-center">
+                <div className="flex flex-col w-1/3 items-center justify-between">
+                  <div className="item__image flex justify-center items-end flex-grow">
+                    <Image
+                      loading="eager"
+                      src="/img/desktop/treatments/treatments-pills@2x.png"
+                      alt=""
+                      width="281"
+                      height="326"
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  </div>
+                  <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
+                    Oral for IBD{" "}
+                    <span className="block normal-case text-epm-gray-500">
+                      (Crohn’s & Colitis)
+                    </span>
+                  </div>
                 </div>
-                <div className="item__title text-center text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 px-20 py-3">
-                  Topical for
-                  <br />
-                  Psoriasis
+                <div className="flex flex-col w-1/3 items-center justify-between">
+                  <div className="item__image flex justify-center items-end flex-grow">
+                    <Image
+                      loading="eager"
+                      src="/img/desktop/treatments/treatments-tube@2x.png"
+                      alt=""
+                      width="113"
+                      height="386"
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  </div>
+                  <div className="item__title text-center text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 px-20 py-3 mt-6 h-20">
+                    Topical for
+                    <br />
+                    Psoriasis
+                  </div>
                 </div>
-                <div className="item__title text-center text-base font-title uppercase py-3">
-                  Oral for IBD{" "}
-                  <span className="block normal-case text-epm-gray-500">
-                    (Crohn’s & Colitis)
-                  </span>
+                <div className="flex flex-col w-1/3 items-center justify-between">
+                  <div className="item__image flex justify-center items-end flex-grow">
+                    <Image
+                      loading="eager"
+                      src="/img/desktop/treatments/treatments-iv@2x.png"
+                      alt=""
+                      width="249"
+                      height="327"
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  </div>
+                  <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
+                    IV for ARDS
+                  </div>
                 </div>
               </div>
             </div>

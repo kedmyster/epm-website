@@ -34,6 +34,7 @@ function Story() {
       data-side-menu-label="Our Story"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="flex flex-wrap content-end h-screen">
         <div className="absolute w-full h-full">

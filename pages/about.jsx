@@ -4,14 +4,11 @@ import Main from "../components/about/main";
 import OurStory from "../components/about/ourStory"
 import FoundingEPM from "../components/about/foundingEPM"
 import Leadership from "../components/about/leadership"
-import Careers from "../components/about/careers"
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
-  const [positions, setPositions] = useState([{}]);
-
   const [leaders, setLeaders] = useState([{
     group: "Senior",
     people: [{
@@ -251,7 +248,6 @@ export default function About() {
       <OurStory/>
       <FoundingEPM/>
       <Leadership leaders={leaders}/>
-      <Careers positions={positions}/>
     </>
   );
 }

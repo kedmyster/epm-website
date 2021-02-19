@@ -11,7 +11,7 @@ export default function Treatments() {
     treatments: {
       slides: [
         {
-          name: "Inflammatory Bowel Disease",
+          name: "Our Treatments",
           id: getId("Inflammatory Bowel Disease"),
           title: "Inflammatory Bowel Disease",
           formulation: "Oral",
@@ -105,13 +105,13 @@ export default function Treatments() {
           images: {
             mobile: {
               url: "/img/mobile/treatments/treatment-pills@3x.png",
-              width: 312,
-              height: 260,
+              width: 223,
+              height: 280,
             },
             desktop: {
               url: "/img/desktop/treatments/treatments-pills@2x.png",
-              width: 590,
-              height: 490,
+              width: 438,
+              height: 508,
             },
           },
           icons: {
@@ -140,26 +140,26 @@ export default function Treatments() {
                 width: 42,
                 height: 42,
               },
-              label: "Phase I: clinical trial in 2022",
+              label: <span>Phase I: clinical <br/>trial in 2022</span>,
               subLabel: "",
             },
             icon3: {
               mobile: {
-                url: "/img/icons/treatments/clock-icon.svg",
+                url: "/img/icons/treatments/32m-ibd.svg",
                 width: 30,
                 height: 30,
               },
               desktop: {
-                url: "/img/icons/treatments/clock-icon.svg",
-                width: 42,
-                height: 42,
+                url: "/img/icons/treatments/32m-ibd.svg",
+                width: 90,
+                height: 43,
               },
-              label: "Patients in Europe",
+              label: <span>Patients in<br/>Europe</span>,
             },
           },
         },
         {
-          name: "Psoriasis",
+          name: "Our Treatments",
           id: getId("Psoriasis"),
           title: "Psoriasis",
           formulation: "Oral",
@@ -170,21 +170,21 @@ export default function Treatments() {
           images: {
             mobile: {
               url: "/img/mobile/treatments/treatment-tube@3x.png",
-              width: 327,
+              width: 79,
               height: 272,
             },
             desktop: {
               url: "/img/desktop/treatments/treatments-tube@2x.png",
-              width: 238,
-              height: 579,
+              width: 141,
+              height: 482,
             },
           },
           icons: {
             icon1: {
               mobile: {
                 url: "/img/icons/treatments/tube-icon.svg",
-                width: 45,
-                height: 53,
+                width: 30,
+                height: 31,
               },
               desktop: {
                 url: "/img/icons/treatments/tube-icon.svg",
@@ -205,26 +205,26 @@ export default function Treatments() {
                 width: 42,
                 height: 42,
               },
-              label: "Phase I: clinical trial in 2022",
+              label: <span>Phase I: clinical<br/>trial in 2022</span>,
               subLabel: "",
             },
             icon3: {
               mobile: {
-                url: "/img/icons/treatments/clock-icon.svg",
+                url: "/img/icons/treatments/125m-psoriasis.svg",
                 width: 30,
                 height: 30,
               },
               desktop: {
-                url: "/img/icons/treatments/clock-icon.svg",
-                width: 42,
-                height: 42,
+                url: "/img/icons/treatments/125m-psoriasis.svg",
+                width: 102,
+                height: 43,
               },
-              label: "Patients Worldwide",
+              label: <span>Patients<br/>Worldwide</span>,
             },
           },
         },
         {
-          name: "Acute Respiratory Distress Syndrome",
+          name: "Our Treatments",
           id: getId("Acute Respiratory Distress Syndrome"),
           title: "Acute Respiratory Distress Syndrome",
           formulation: "Oral",
@@ -235,13 +235,13 @@ export default function Treatments() {
           images: {
             mobile: {
               url: "/img/mobile/treatments/treatment-iv@3x.png",
-              width: 230,
+              width: 192,
               height: 253,
             },
             desktop: {
               url: "/img/desktop/treatments/treatments-iv@2x.png",
-              width: 450,
-              height: 491,
+              width: 388,
+              height: 510,
             },
           },
           icons: {
@@ -270,21 +270,21 @@ export default function Treatments() {
                 width: 42,
                 height: 42,
               },
-              label: "Phase I: clinical trial in 2021",
+              label: <span>Phase I: clinical <br/>trial in 2021</span>,
               subLabel: "",
             },
             icon3: {
               mobile: {
-                url: "/img/icons/treatments/clock-icon.svg",
+                url: "/img/icons/treatments/3m-ards.svg",
                 width: 30,
                 height: 30,
               },
               desktop: {
-                url: "/img/icons/treatments/clock-icon.svg",
-                width: 42,
-                height: 42,
+                url: "/img/icons/treatments/3m-ards.svg",
+                width: 58,
+                height: 43,
               },
-              label: "People affected annually",
+              label: <span>People affected<br/>annually</span>,
             },
           },
         },

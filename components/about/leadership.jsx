@@ -48,6 +48,7 @@ function Leadership({ leaders = [] }) {
       data-side-menu-label="Leadership"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="lg:flex-grow lg:pl-56">
         <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:sticky lg:top-0">
@@ -57,7 +58,7 @@ function Leadership({ leaders = [] }) {
               title={<h2>Leadership</h2>}
             />
           </div>
-          <div className="text lg:text-lg lg:w-96">
+          <div className="animate text lg:text-lg lg:w-96 lg:mt-6">
             <p>
               We are grateful to have an experienced team with specialties in
               different fields and unique backgrounds. We all share a common

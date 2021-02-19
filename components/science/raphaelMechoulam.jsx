@@ -163,6 +163,7 @@ function RaphaelMechoulam() {
       data-side-menu-label="Prof. Mechoulam Biography"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="items animate text-white text-center lg:w-7/12">
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
@@ -210,7 +211,7 @@ function RaphaelMechoulam() {
               </h2>
             }
           />
-          <div className="text animate mt-6">
+          <div className="text lg:text-lg animate mt-6">
             <p>
               Read on about the inspiring life of the godfather
               <br />

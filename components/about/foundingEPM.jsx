@@ -49,6 +49,7 @@ function FoundingEPM() {
       data-side-menu-label="Founding EPM"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="relative lg:flex-grow lg:w-7/12">
         {isMobile && (
@@ -82,7 +83,7 @@ function FoundingEPM() {
               title={<h2>Patient-Focused Pharmaceutical Group</h2>}
             />
           </div>
-          <div className="text mt-6 lg:text-lg lg:w-96">
+          <div className="animate text mt-6 lg:text-lg lg:w-96">
             <p>
               The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in
               an intergenerational collaboration with Prof. Raphael Mechoulam,

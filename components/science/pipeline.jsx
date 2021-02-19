@@ -35,6 +35,7 @@ function Pipeline() {
       data-side-menu-label="Pipeline"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       <div className="flex flex-wrap lg:flex-row-reverse lg:h-screen">
         <div className="relative mx-auto lg:flex-grow lg:h-full lg:w-7/12">

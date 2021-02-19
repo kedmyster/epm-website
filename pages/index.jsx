@@ -81,6 +81,8 @@ export default function Home() {
     community: {
       slides: [
         {
+          name: "Maria, 32",
+          role: "Crohn's",
           images: {
             mobile: "/img/mobile/homepage/our-community/maria@2x.jpg",
             desktop: "/img/desktop/homepage/our-community/maria@2x.jpg",
@@ -91,69 +93,76 @@ export default function Home() {
               solution gave me hope for a better future.
             </p>
           ),
-          name: "Maria, 32",
-          role: "Crohn's",
         },
         {
-          images: {
-            mobile: "/img/mobile/homepage/our-community/mechoulam@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/mechoulam@2x.jpg",
-          },
-          quote: (
-            <p>
-              No matter the type of testimonial, use images, videos and social
-              media.
-            </p>
-          ),
-          name: "Prof.Raphael Mechoulam",
-          role: (
-            <span>
-              Head of Discovery Chemistry,
-              <br /> Hebrew University of Jerusalem
-            </span>
-          ),
-        },
-        {
-          images: {
-            mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
-          },
-          quote: (
-            <p>
-              No matter the type of testimonial, use images, videos and social
-              media.
-            </p>
-          ),
-          name: "Ryan",
-          role: "Head of Metabolic Disorders Research",
-        },
-        {
+          name: "Linda, 45",
+          role: "Ulcerative Colitis",
           images: {
             mobile: "/img/mobile/homepage/our-community/lory@2x.jpg",
             desktop: "/img/desktop/homepage/our-community/lory@2x.jpg",
           },
           quote: (
             <p>
-              No matter the type of testimonial, use images, videos and social
-              media.
+              I’ve been living with my Colitis for over 6 years, EPM’s discovery
+              can be a real life-changer.
             </p>
           ),
-          name: "Lory",
-          role: "Head of Metabolic Disorders Research",
         },
         {
+          name: "George, 73",
+          role: "Psoriasis",
+          images: {
+            mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
+            desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
+          },
+          quote: (
+            <p>
+              You constantly wish for health. I hope for medicine with fewer
+              side effects than those I’ve had!
+            </p>
+          ),
+        },
+        {
+          name: "Prof.Raphael Mechoulam",
+          role: "",
+          images: {
+            mobile: "/img/mobile/homepage/our-community/mechoulam@2x.jpg",
+            desktop: "/img/desktop/homepage/our-community/mechoulam@2x.jpg",
+          },
+          quote: (
+            <p>
+              “Cannabinoid acids are compounds that are much more potent than
+              cannabinoids and have an outstanding therapeutic potential”
+            </p>
+          ),
+        },
+        {
+          name: "Ryan, 25",
+          role: "Ulcerative Colitis",
+          images: {
+            mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
+            desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
+          },
+          quote: (
+            <p>
+              “I’ve been living with my Colitis for over 6 years, EPM’s
+              discovery can be a real life-changer. “
+            </p>
+          ),
+        },
+        {
+          name: "Julian Gangolli",
+          role: "Head of Advisory Board",
           images: {
             mobile: "/img/mobile/homepage/our-community/julian@2x.jpg",
             desktop: "/img/desktop/homepage/our-community/julian@2x.jpg",
           },
           quote: (
             <p>
-              No matter the type of testimonial, use images, videos and social
-              media.
+              The significant clinical values of CBD and cannabinoids has
+              already been demonstrated… a very exciting therapeutic development
             </p>
           ),
-          name: "Julian",
-          role: "Head of Metabolic Disorders Research",
         },
       ],
     },

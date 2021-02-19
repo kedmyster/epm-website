@@ -2,12 +2,14 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
+import { throttle } from "lodash";
 
 function Header() {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  let scrollY = 0;
 
   useEffect(() => {
     if (windowWidth > 1024) {
@@ -25,21 +27,96 @@ function Header() {
     }
   }, [windowWidth]);
 
-  const toggleMenu = (event, menu = null) => {
-    const menuItem = event.target.closest(".menu-item");
+  useEffect(() => {
+    if (isMobile) {
+      document.body.addEventListener("click", (event) => {
+        if (!event.target.closest(".mobile-menu")) {
+          const menu = document.querySelector("#menu");
 
-    event.preventDefault();
+          if (!menu.classList.contains("hidden")) {
+            toggleMenu(event);
+          }
+        }
+      });
 
-    if (!menu) {
-      menu = document.querySelector("#menu");
+      const header = document.querySelector(".header.header--fixed");
+      const main = document.querySelector(
+        ".section[data-header-menu-visibility='hidden']"
+      );
+
+      if (main) {
+        const rect = main.getBoundingClientRect();
+        const menu = document.querySelector("#menu");
+
+        window.addEventListener(
+          "scroll",
+          throttle((event) => {
+            if (!menu.classList.contains("hidden")) {
+              toggleMenu(event);
+            }
+
+            if (scrollY > window.scrollY) {
+              if (window.scrollY > rect.bottom / 2) {
+                if (!header.classList.contains("menu--shown")) {
+                  openFixedMenu(event);
+                }
+              } else {
+                closeFixedMenu(event);
+              }
+            } else {
+              closeFixedMenu(event);
+            }
+
+            scrollY = window.scrollY;
+          }, 250)
+        );
+      }
     }
+  }, [isMobile]);
+
+  const openFixedMenu = (event) => {
+    const header = document.querySelector(".header.header--fixed");
+
+    header.classList.add("menu--shown");
+
+    gsap.fromTo(
+      header,
+      {
+        opacity: "0",
+        zIndex: "0",
+        translateY: "-100%",
+      },
+      {
+        opacity: "1",
+        zIndex: "10",
+        translateY: "0",
+        duration: 0.15,
+      }
+    );
+  };
+
+  const closeFixedMenu = (event) => {
+    const header = document.querySelector(".header.header--fixed");
+
+    if (header) {
+      header.classList.remove("menu--shown");
+  
+      gsap.to(header, {
+        opacity: "0",
+        zIndex: "0",
+        translateY: "-100%",
+        duration: 0.15,
+      });
+    }
+  };
+
+  const toggleMenu = (event) => {
+    event.stopPropagation();
+
+    const menu = document.querySelector("#menu");
 
     if (menu.classList.contains("hidden")) {
       menu.classList.remove("hidden");
-
-      if (menuItem) {
-        menuItem.classList.add("menu-item--open");
-      }
 
       gsap.to(".middle", {
         opacity: 0,
@@ -49,7 +126,6 @@ function Header() {
       gsap.to(".top", {
         rotation: 45,
         duration: 0.3,
-        // stroke: "red",
         ease: "back.inOut(1)",
         x: "+=2",
         scaleX: 1.05,
@@ -58,17 +134,12 @@ function Header() {
       gsap.to(".bottom", {
         rotation: -45,
         duration: 0.3,
-        // stroke: "red",
         ease: "back.inOut(1)",
         x: "+=2",
         scaleX: 1.05,
       });
     } else {
       menu.classList.add("hidden");
-
-      if (menuItem) {
-        menuItem.classList.remove("menu-item--open");
-      }
 
       gsap.to(".middle", {
         opacity: 1,
@@ -91,10 +162,55 @@ function Header() {
         x: "-=2",
         scaleX: 1,
       });
+
+      closeFixedMenu(event);
+    }
+  };
+
+  const toggleSubMenu = (event, menu) => {
+    event.preventDefault();
+
+    const activeMenuMenu = event.target.closest(".menu-item");
+    const subMenus = document.querySelectorAll(".mobile-menu .sub-menu");
+
+    subMenus.forEach((subMenu) => {
+      if (activeMenuMenu.querySelector(".sub-menu") === subMenu) {
+        subMenu.parentElement.classList.toggle("menu-item--open");
+        subMenu.classList.toggle("hidden");
+      } else {
+        subMenu.parentElement.classList.remove("menu-item--open");
+        subMenu.classList.add("hidden");
+      }
+    });
+  };
+
+  const goToSection = (event) => {
+    if (
+      event.target.nodeName === "A" &&
+      event.target.href.indexOf("#") !== -1
+    ) {
+      const anchorId = event.target.href.split("#")[1];
+      const anchorElement = document.querySelector(`#${anchorId}`);
+
+      if (anchorElement) {
+        event.preventDefault();
+
+        document.location.hash = `#${anchorId}`;
+
+        anchorElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
+
+    if (isMobile) {
+      toggleMenu(event);
     }
   };
 
   const scrollToFooter = (event) => {
+    toggleMenu(event, null, true);
+
     event.preventDefault();
     document.querySelector("#footer").scrollIntoView({
       behavior: "smooth",
@@ -103,7 +219,7 @@ function Header() {
 
   return (
     <>
-      <header className="header bg-transparent py-4 lg:py-6 z-20 fixed top-0 lg:absolute w-full">
+      <header className="header bg-transparent py-4 lg:py-6 z-50 top-0 absolute w-full">
         <div div className="mx-auto px-8 flex flex-row items-center relative ">
           <div className="logo flex-grow lg:flex-grow-0 lg:fixed">
             <a
@@ -168,22 +284,24 @@ function Header() {
             <nav role="navigation">
               <ul>
                 <li className="menu-item inline-block pr-12 py-1 relative">
-                  <a href="/about" className="uppercase">
+                  <a href="/about" className="uppercase font-title">
                     About
                   </a>
-                  <ul className="sub-menu font-light text-white text-left absolute top-8 left-0 w-36">
-                    <li className="border-b border-white pb-3 mb-3">
+                  <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
+                    <li className="mb-4">
                       <a
                         href="/about/#story"
                         className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
                       >
                         Our story
                       </a>
                     </li>
-                    <li className="pb-3 mb-3">
+                    <li className="mb-4">
                       <a
                         href="/about/#leadership"
                         className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
                       >
                         Leadership
                       </a>
@@ -191,88 +309,96 @@ function Header() {
                   </ul>
                 </li>
                 <li className="menu-item inline-block pr-12 py-1 relative">
-                  <a href="/science" className="uppercase">
-                    Science
-                  </a>
-                  <ul className="sub-menu font-light text-white text-left absolute top-8 left-0 w-36">
-                    <li className="border-b border-white pb-3 mb-3">
-                      <a
-                        href="/science/#cannabinoids"
-                        className="transition-opacity duration-150 hover:opacity-70"
-                      >
-                        About Cannabiniod Acids
-                      </a>
-                    </li>
-                    <li className="border-b border-white pb-3 mb-3">
-                      <a
-                        href="/science/#pipeline"
-                        className="transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Pipline
-                      </a>
-                    </li>
-                    <li className="border-b border-white pb-3 mb-3">
-                      <a
-                        href="/science/#collaborations"
-                        className="transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Key Collaborations
-                      </a>
-                    </li>
-                    <li className="border-b border-white pb-3 mb-3">
-                      <a
-                        href="/science/#research-papers"
-                        className="transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Research Papers
-                      </a>
-                    </li>
-                    <li className="pb-3 mb-3">
-                      <a
-                        href="/science/#raphael-mechoulam"
-                        className="transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Prof. Mechoulam Biography
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item inline-block pr-12 py-1 relative">
-                  <a href="/treatments" className="uppercase">
+                  <a href="/treatments" className="uppercase font-title">
                     Treatments
                   </a>
-                  <ul className="sub-menu font-light text-white text-left absolute top-8 left-0 w-36">
-                    <li className="border-b border-white pb-3 mb-3">
+                  <ul className="sub-menu font-light leading-tight	text-white text-left absolute top-8 left-0 w-36">
+                    <li className="mb-4">
                       <a
                         href="/treatments/#inflammatory-bowel-disease"
                         className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
                       >
                         Inflammatory Bowel Disease
                       </a>
                     </li>
-                    <li className="border-b border-white pb-3 mb-3">
+                    <li className="mb-4">
                       <a
                         href="/treatments/#psoriasis"
                         className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
                       >
                         Psoriasis
                       </a>
                     </li>
-                    <li className="pb-3 mb-3">
+                    <li className="mb-4">
                       <a
                         href="/treatments/#acute-respiratory-distress-syndrome"
                         className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
                       >
                         Acute Respiratory Distress Syndrome
                       </a>
                     </li>
                   </ul>
                 </li>
-                <li className="menu-item inline-block relative">
+                <li className="menu-item inline-block pr-12 py-1 relative">
+                  <a href="/science" className="uppercase font-title">
+                    Science
+                  </a>
+                  <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
+                    <li className="mb-3">
+                      <a
+                        href="/science/#cannabinoids"
+                        className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
+                      >
+                        About Cannabiniod Acids
+                      </a>
+                    </li>
+                    <li className="mb-3">
+                      <a
+                        href="/science/#pipeline"
+                        className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Pipeline
+                      </a>
+                    </li>
+                    <li className="mb-3">
+                      <a
+                        href="/science/#collaborations"
+                        className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Key Collaborations
+                      </a>
+                    </li>
+                    <li className="mb-3">
+                      <a
+                        href="/science/#research-papers"
+                        className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Research Papers
+                      </a>
+                    </li>
+                    <li className="mb-3">
+                      <a
+                        href="/science/#raphael-mechoulam"
+                        className="transition-opacity duration-150 hover:opacity-70"
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Prof. Mechoulam Biography
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="menu-item inline-block py-1 relative">
                   <a
                     href="/contact"
                     onClick={(event) => scrollToFooter(event)}
-                    className="uppercase"
+                    className="uppercase font-title"
                   >
                     Contact
                   </a>
@@ -282,14 +408,14 @@ function Header() {
           </div>
           <div className="desktop-menu hidden lg:block">
             <nav role="navigation">
-              <ul>
+              <ul className="font-title">
                 <li className="menu-item inline-block pr-12 py-1 relative">
-                  <a href="/about/careers" className="uppercase">
+                  <a href="/careers" className="uppercase font-title">
                     Careers
                   </a>
                 </li>
                 <li className="menu-item inline-block py-1 relative">
-                  <a href="/media" className="uppercase">
+                  <a href="/media" className="uppercase font-title">
                     Media
                   </a>
                 </li>
@@ -337,9 +463,67 @@ function Header() {
         </div>
       </header>
 
+      {isMobile && (
+        <div className="header header--fixed bg-white py-4 lg:py-6 top-0 fixed w-full opacity-0 z-0 shadow-md">
+          <div div className="mx-auto px-8 flex flex-row items-center relative">
+            <div className="logo flex-grow lg:flex-grow-0 lg:fixed">
+              <a
+                href="/"
+                className="transition-opacity duration-150 hover:opacity-70"
+              >
+                <Image
+                  src="/img/icons/logo.svg"
+                  width="66.051"
+                  height="20.674"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div className="menu-button lg:hidden">
+              <button
+                type="button"
+                onClick={(event) => toggleMenu(event)}
+                className="transition-opacity duration-150 hover:opacity-70"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  stroke="#636466"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    className="top"
+                    d="M4 6h16M4"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    className="middle"
+                    d="M4 12h16M4"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    className="bottom"
+                    d="M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div
         id="menu"
-        className="menu mobile-menu fixed inset-x-0 z-10 bg-white bg-opacity-100 shadow-md hidden mt-15"
+        className="menu mobile-menu fixed inset-x-0 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15"
       >
         <div div className="container mx-auto p-8 relative">
           <nav role="navigation">
@@ -347,31 +531,41 @@ function Header() {
               <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/about"
-                  className="block uppercase cursor-pointer relative"
+                  className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) =>
-                    toggleMenu(event, document.querySelector(".menu--about"))
+                  toggleSubMenu(event, document.querySelector(".menu--about"))
                   }
                 >
                   About
                 </a>
-                <ul className="menu--about hidden">
+                <ul className="sub-menu menu--about hidden">
                   <li className="text-sm my-2">
-                    <a href="/about/#story">Our story</a>
+                    <a
+                      href="/about/#story"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Our story
+                    </a>
                   </li>
                   <li className="text-sm my-2">
-                    <a href="/about/#leadership">Leadership</a>
-                  </li>
-                  <li className="text-sm my-2">
-                    <a href="/about/#careers">Careers</a>
+                    <a
+                      href="/about/#leadership"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Leadership
+                    </a>
                   </li>
                 </ul>
               </li>
               <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/science"
-                  className="block uppercase cursor-pointer relative"
+                  className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) =>
-                    toggleMenu(event, document.querySelector(".menu--science"))
+                    toggleSubMenu(
+                      event,
+                      document.querySelector(".menu--science")
+                    )
                   }
                 >
                   Science
@@ -381,6 +575,7 @@ function Header() {
                     <a
                       href="/science/#cannabinoids"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       About Cannabiniod Acids
                     </a>
@@ -389,14 +584,16 @@ function Header() {
                     <a
                       href="/science/#pipeline"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
-                      Pipline
+                      Pipeline
                     </a>
                   </li>
                   <li className="text-sm my-2">
                     <a
                       href="/science/#collaborations"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       Key Collaborations
                     </a>
@@ -405,6 +602,7 @@ function Header() {
                     <a
                       href="/science/#research-papers"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       Research Papers
                     </a>
@@ -413,6 +611,7 @@ function Header() {
                     <a
                       href="/science/#raphael-mechoulam"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       Prof. Mechoulam Biography
                     </a>
@@ -422,9 +621,12 @@ function Header() {
               <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/treatments"
-                  className="block uppercase cursor-pointer relative"
+                  className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) =>
-                    toggleMenu(event, document.querySelector(".menu--treatments"))
+                    toggleSubMenu(
+                      event,
+                      document.querySelector(".menu--treatments")
+                    )
                   }
                 >
                   Treatments
@@ -434,6 +636,7 @@ function Header() {
                     <a
                       href="/treatments/#inflammatory-bowel-disease"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       Inflammatory Bowel Disease
                     </a>
@@ -442,6 +645,7 @@ function Header() {
                     <a
                       href="/treatments/#psoriasis"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       Psoriasis
                     </a>
@@ -450,23 +654,37 @@ function Header() {
                     <a
                       href="/treatments/#acute-respiratory-distress-syndrome"
                       className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
                     >
                       Acute Respiratory Distress Syndrome
                     </a>
                   </li>
                 </ul>
               </li>
-              <li className="font-title text-epm-gray-700 tracking-wide  border-b-1 border-epm-gray-500 mb-3 pb-3">
+              <li className="font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/contact"
+                  className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) => scrollToFooter(event)}
-                  className="block uppercase cursor-pointer relative"
                 >
                   Contact
                 </a>
               </li>
+              <li className="font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
+                <a
+                  href="/careers"
+                  className="block uppercase cursor-pointer relative"
+                  onClick={(event) => goToSection(event)}
+                >
+                  Careers
+                </a>
+              </li>
               <li className="font-title text-epm-gray-700 tracking-wide">
-                <a href="/media" className="block uppercase cursor-pointer relative">
+                <a
+                  href="/media"
+                  className="block uppercase cursor-pointer relative font-title"
+                  onClick={(event) => goToSection(event)}
+                >
                   Media
                 </a>
               </li>

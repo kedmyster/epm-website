@@ -41,7 +41,7 @@ function Footer({}) {
           <div className="contact__form flex-grow lg:flex-grow-0 relative z-10">
             <div className="mb-4 lg:mb-8 lg:w-101">
               <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-epm-gray-700">
-                Join Our Journey
+                Make a Change with Us
               </h2>
             </div>
             <div className="mb-8 lg:mb-0 lg:w-101">
@@ -49,7 +49,7 @@ function Footer({}) {
                 <div className="mb-6 leading-8">
                   <input
                     type="email"
-                    placeholder="Latest updates directly to your inbox"
+                    placeholder="The latest updates directly to your inbox"
                     className="w-full font-light rounded-3xl px-5 py-2"
                   />
                 </div>
@@ -80,7 +80,7 @@ function Footer({}) {
             <div className="flex-grow">
               <div className="mb-4 leading-8">
                 <div className="text-white uppercase">Information</div>
-                <div className="font-light">
+                <div className="">
                   <a
                     href="mailto:info@epmip.com"
                     className="underline transition-opacity duration-150 hover:opacity-70"
@@ -88,7 +88,7 @@ function Footer({}) {
                     info@epmip.com
                   </a>
                 </div>
-                <div className="font-light">
+                <div className="">
                   Investor Relations:{" "}
                   <a
                     href="mailto:ir@epmip.com"
@@ -97,7 +97,7 @@ function Footer({}) {
                     ir@epmip.com
                   </a>
                 </div>
-                <div className="font-light">
+                <div className="">
                   Media:{" "}
                   <a
                     href="mailto:media@epmip.com"
@@ -110,10 +110,10 @@ function Footer({}) {
               <div>
                 <div className="mb-4 leading-8">
                   <div className="text-white uppercase">US Headquarters</div>
-                  <div className="font-light">
+                  <div className="">
                     1347 19th St.
                     <br />
-                    Los Angeles, CA 90404
+                    Los Angeles, Santa Monica, 90404
                     <br />
                     <a href="tel:1 323 307 2111"> Tel: +1 (323) 307-2111</a>
                   </div>
@@ -121,7 +121,7 @@ function Footer({}) {
 
                 <div className="mb-4 leading-8">
                   <div className="text-white uppercase">Israel Office</div>
-                  <div className="font-light">
+                  <div className="">
                     121 Menachem Begin Rd.
                     <br />
                     Tel Aviv 6701203

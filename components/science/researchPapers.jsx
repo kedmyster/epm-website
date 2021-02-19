@@ -142,6 +142,7 @@ function ResearchPapers({ data }) {
       data-side-menu-label="Research Papers"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
+      data-header-menu-visibility="visible"
     >
       {isMobile && (
         <div>
@@ -162,7 +163,7 @@ function ResearchPapers({ data }) {
                   <div className="item">
                     <div className="relative text-center w-full h-2/3-screen lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
                       <div className="container mx-auto px-16 py-8 lg:flex lg:flex-row lg:space-x-20 z-10">
-                        <div className="item__title font-light text-2xl uppercase pb-5">
+                        <div className="item__title font-title text-2xl uppercase pb-5">
                           {slide.title}
                         </div>
                         <div className="item__text font-light text-sm h-14">
@@ -206,7 +207,7 @@ function ResearchPapers({ data }) {
                 name="Our Innovation"
                 title={<h2>Research Papers</h2>}
               />
-              <div className="text lg:w-103">
+              <div className="text lg:text-lg lg:w-103">
                 <p>
                   Here are EPM-supported publications that provide further
                   pharmacologic background to the current paths of research in
@@ -250,7 +251,7 @@ function ResearchPapers({ data }) {
                       <div className="item__box__bottom absolute bottom-0 left-0 bg-white w-full h-px transform scale-0"></div>
                       <div className="item__box__right absolute bottom-0 right-0 bg-white w-px h-full transform scale-0"></div>
                       <div className="item__content">
-                        <div className="item__title font-light text-2xl uppercase mb-5">
+                        <div className="item__title font-title text-2xl uppercase mb-5">
                           {slide.title}
                         </div>
                         <div className="item__text font-light text-sm">
