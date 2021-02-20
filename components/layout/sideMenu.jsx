@@ -16,6 +16,10 @@ function SideMenu() {
     pill,
     label
   ) => {
+    if (!section.id) {
+      return;
+    }
+
     const tlSideMenu = gsap.timeline({
       paused: true,
       onStart: () => menuItem.closest("li").classList.add("active"),
@@ -79,6 +83,10 @@ function SideMenu() {
     pill,
     label
   ) => {
+    if (!section.id) {
+      return;
+    }
+
     if (section.dataset.sideMenuVisibility == "hidden") {
       const tlSideMenuVisibility = gsap.timeline({
         scrollTrigger: {
@@ -97,6 +105,10 @@ function SideMenu() {
   };
 
   const animateSideMenuColor = (sideMenu, section, activeMenuItem, activePill, activeLabel) => {
+    if (!section.id) {
+      return;
+    }
+
     const theme = section.dataset.sideMenuColor;
     const menuItems = sideMenu.querySelectorAll(".menu-item");
     const tlSideMenuColor = gsap.timeline({
@@ -132,6 +144,10 @@ function SideMenu() {
 
   const animateSectionContent = (section) => {
     if (section) {
+      if (!section.id) {
+        return;
+      }
+
       const tlAnimateContent = gsap.timeline({
         scrollTrigger: {
           trigger: `#${section.id}`,

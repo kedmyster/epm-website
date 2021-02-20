@@ -56,7 +56,7 @@ function Pipeline() {
                 {isDesktop && (
                   <Image
                     loading="eager"
-                    src="/img/desktop/science/cannabinoids-acids@2x.jpg"
+                    src="/img/desktop/science/pipeline@2x.jpg"
                     alt=""
                     layout="fill"
                     objectFit="cover"

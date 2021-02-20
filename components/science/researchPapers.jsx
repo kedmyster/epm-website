@@ -72,6 +72,7 @@ function ResearchPapers({ data }) {
 
     const moreInfoPanel = document.querySelector("#research-read-more");
     const paperDocumentElement = document.querySelector("#paper-document");
+    paperDocumentElement.src = "";
 
     if (isMobile) {
       if (slide) {
@@ -258,9 +259,9 @@ function ResearchPapers({ data }) {
                           {slide.text}
                         </div>
                         <div className="button pt-5 inline-block">
-                          <Button className="cursor-pointer inline-block uppercase select-none transition-opacity duration-150 hover:opacity-70 text-white">
+                          <div className="cursor-pointer inline-block text-white uppercase select-none transition-opacity duration-150 hover:opacity-75">
                             Read
-                          </Button>
+                          </div>
                         </div>
                       </div>
                     </div>

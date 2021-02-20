@@ -38,12 +38,11 @@ function Collaborations({ data }) {
     if (isDesktop) {
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         moreInfoPanel.setAttribute("aria-expanded", "true");
-        gsap.set(moreInfoPanel, { zIndex: 11 });
-        gsap.to(moreInfoPanel, { opacity: 1, duration: 0.25 });
+        gsap.to(moreInfoPanel, { opacity: 1, zIndex: 11, duration: 0.25 });
         event.target.innerText = "Close";
       } else {
         moreInfoPanel.setAttribute("aria-expanded", "false");
-        gsap.to(moreInfoPanel, { opacity: 0, duration: 0.25, zIndex: 0 });
+        gsap.to(moreInfoPanel, { opacity: 0, zIndex: 0, duration: 0.25 });
         event.target.innerText = "Learn More";
       }
     }
@@ -204,10 +203,10 @@ function Collaborations({ data }) {
                     <div className="font-title uppercase text-2xl mb-16">
                       Commercial
                     </div>
-                    <div className="logos flex flex-wrap">
+                    <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.commercial.slides.map((slide, index) => {
                         return(
-                          <div className="logo relative ml-6 mr-6 mt-6 mb-6">
+                          <div className="logo flex items-center justify-center">
                             <a href={slide.url} target="_blank" rel="noopener noreferrer">
                               <Image
                                 src={slide.image.desktop.url}
@@ -223,7 +222,7 @@ function Collaborations({ data }) {
                     <div className="button pt-5 lg:inline-block text-center mt-16">
                       <Button
                         href="#"
-                        className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-colors duration-150 lg:px-10 py-2 border-white text-white hover:bg-epm-yellow hover:border-epm-yellow"
+                        style="light"
                         onClick={(event) => toggleLearnMore(event, "commercial")}
                       >
                         Learn More
@@ -237,10 +236,10 @@ function Collaborations({ data }) {
                     <div className="font-title uppercase lg:text-2xl mb-16">
                       Academia
                     </div>
-                    <div className="logos flex flex-wrap lg:justify-center">
+                    <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.academy.slides.map((slide, index) => {
                         return(
-                          <div className="logo relative ml-6 mr-6 mt-6 mb-6">
+                          <div className="logo flex items-center justify-center">
                             <a href={slide.url} target="_blank" rel="noopener noreferrer">
                               <Image
                                 src={slide.image.desktop.url}
@@ -256,7 +255,7 @@ function Collaborations({ data }) {
                     <div className="button pt-5 lg:inline-block text-center mt-16">
                       <Button
                         href="#"
-                        className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-colors duration-150 lg:px-10 py-2 border-white text-white hover:bg-epm-yellow hover:border-epm-yellow"
+                        style="light"
                         onClick={(event) => toggleLearnMore(event, "academy")}
                       >
                         Learn More
@@ -267,7 +266,7 @@ function Collaborations({ data }) {
               </div>
 
               <div
-                  className="more-info commercial-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:z-10 lg:flex lg:flex-col justify-center text-left lg:bg-white lg:px-36 py-8"
+                  className="more-info commercial-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col justify-center text-left lg:bg-white lg:px-36 py-8"
                   data-collaboration-panel="commercial"
                   aria-expanded="false"
                 >

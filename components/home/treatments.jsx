@@ -137,17 +137,19 @@ function Treatments({ data }) {
             </div>
             <div className="animate container max-w-4xl mx-auto px-8">
               <div className="flex flex-row justify-center">
-                <div className="flex flex-col w-1/3 items-center justify-between">
+                <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <Image
-                      loading="eager"
-                      src="/img/desktop/treatments/treatments-pills@2x.png"
-                      alt=""
-                      width="281"
-                      height="326"
-                      layout="intrinsic"
-                      quality={100}
-                    />
+                    <a href="/treatments/#inflammatory-bowel-disease" className="leading-none">
+                      <Image
+                        loading="eager"
+                        src="/img/desktop/treatments/treatments-pills@2x.png"
+                        alt=""
+                        width="281"
+                        height="326"
+                        layout="intrinsic"
+                        quality={100}
+                      />
+                    </a>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
                     Oral for IBD{" "}
@@ -156,17 +158,19 @@ function Treatments({ data }) {
                     </span>
                   </div>
                 </div>
-                <div className="flex flex-col w-1/3 items-center justify-between">
+                <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <Image
-                      loading="eager"
-                      src="/img/desktop/treatments/treatments-tube@2x.png"
-                      alt=""
-                      width="113"
-                      height="386"
-                      layout="intrinsic"
-                      quality={100}
-                    />
+                    <a href="/treatments/#psoriasis" className="leading-none">
+                      <Image
+                        loading="eager"
+                        src="/img/desktop/treatments/treatments-tube@2x.png"
+                        alt=""
+                        width="113"
+                        height="386"
+                        layout="intrinsic"
+                        quality={100}
+                      />
+                    </a>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 px-20 py-3 mt-6 h-20">
                     Topical for
@@ -174,17 +178,19 @@ function Treatments({ data }) {
                     Psoriasis
                   </div>
                 </div>
-                <div className="flex flex-col w-1/3 items-center justify-between">
+                <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <Image
-                      loading="eager"
-                      src="/img/desktop/treatments/treatments-iv@2x.png"
-                      alt=""
-                      width="249"
-                      height="327"
-                      layout="intrinsic"
-                      quality={100}
-                    />
+                    <a href="/treatments/#psoriasis" className="leading-none">
+                      <Image
+                        loading="eager"
+                        src="/img/desktop/treatments/treatments-iv@2x.png"
+                        alt=""
+                        width="249"
+                        height="327"
+                        layout="intrinsic"
+                        quality={100}
+                      />
+                    </a>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
                     IV for ARDS

@@ -39,7 +39,7 @@ export default function science() {
       commercial: {
         slides: [
           {
-            url: "#",
+            url: "https://www.criver.com/",
             title: "Charles River",
             image: {
               mobile: {
@@ -54,7 +54,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www.recipharm.com/",
             title: "Recipharm",
             image: {
               mobile: {
@@ -69,7 +69,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www.medpharm.com/en/",
             title: "Medpharm",
             image: {
               mobile: {
@@ -84,7 +84,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "http://www.nck.dk/",
             title: "NCK",
             image: {
               mobile: {
@@ -99,7 +99,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www.cambrex.com/",
             title: "Cambrex",
             image: {
               mobile: {
@@ -119,7 +119,7 @@ export default function science() {
       academy: {
         slides: [
           {
-            url: "#",
+            url: "https://en.huji.ac.il/en",
             title: "The Hebrew University of Jerusalem",
             image: {
               mobile: {
@@ -134,7 +134,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www1.biu.ac.il/indexE.php",
             title: "Bar Ilan University",
             image: {
               mobile: {
@@ -149,7 +149,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://english.tau.ac.il/",
             title: "Tel-Aviv University",
             image: {
               mobile: {
@@ -164,7 +164,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www.uoguelph.ca/",
             title: "University of Guelph",
             image: {
               mobile: {
@@ -179,7 +179,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www.abdn.ac.uk/",
             title: "University of Aberdeen",
             image: {
               mobile: {
@@ -194,7 +194,7 @@ export default function science() {
               }
             }
           }, {
-            url: "#",
+            url: "https://www.mcmaster.ca/",
             title: "McMaster University",
             image: {
               mobile: {
@@ -237,8 +237,8 @@ export default function science() {
   return (
     <>
       <Head>
-        <title>EPM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Science - EPM</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <Main />

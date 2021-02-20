@@ -93,11 +93,10 @@ function Solution({ data }) {
                 )}
                 <div className="button absolute left-1/2 transform -translate-x-1/2  bottom-8">
                   <Button
-                    className="cursor-pointer inline-block w-48 text-center uppercase border-3 rounded-3xl select-none transition-colors duration-150 lg:px-10 py-2 border-white text-white hover:bg-epm-yellow hover:border-epm-yellow"
+                    style="light"
                     href="#"
-                    onClick={(event) => toggleLearnMore(event)}
                   >
-                    Learn More
+                    Play Video
                   </Button>
                 </div>
               </div>

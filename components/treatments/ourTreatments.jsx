@@ -418,7 +418,7 @@ function OurTreatments({ data }) {
                       </div>
                       <div className="button pt-10 lg:inline-block text-center">
                         <Button
-                          className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-colors duration-150 hover:opacity-70 lg:px-10 py-2 border-epm-gray-700 text-epm-gray-700 hover:bg-epm-yellow hover:border-epm-yellow"
+                          style="dark"
                           href="#"
                           onClick={(event) => toggleLearnMore(event)}
                         >

@@ -63,8 +63,8 @@ export default function Careers() {
   return (
     <>
       <Head>
-        <title>EPM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Careers - EPM</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <CareersComponent data={page.careers} positions={positions}/>

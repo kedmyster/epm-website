@@ -56,7 +56,7 @@ function Footer({}) {
                 <div className="">
                   <button
                     type="submit"
-                    className="w-full lg:w-auto text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
+                    className="w-full lg:w-auto font-title text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
                   >
                     Submit
                   </button>
@@ -235,7 +235,7 @@ function Footer({}) {
           </a>
           <span> | </span>
           <a
-            href="/term"
+            href="/terms-of-use"
             className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
           >
             Terms of Use

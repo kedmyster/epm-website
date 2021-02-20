@@ -171,8 +171,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>EPM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>EPM - Medicine to All.</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <Main />

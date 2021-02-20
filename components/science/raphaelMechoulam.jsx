@@ -44,112 +44,112 @@ function RaphaelMechoulam() {
   const mechoulam = [
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-01.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-01@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-01.jpg",
       },
       label: "Label 1",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-02.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-02@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-02.jpg",
       },
       label: "Label 2",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-03.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-03@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-03.jpg",
       },
       label: "Label 3",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-04.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-04@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-04.jpg",
       },
       label: "Label 4",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-05.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-05@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-05.jpg",
       },
       label: "Label 5",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-06.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-06@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-06.jpg",
       },
       label: "Label 6",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-07.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-07@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-07.jpg",
       },
       label: "Label 7",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-08.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-08@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-08.jpg",
       },
       label: "Label 8",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-09.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-09@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-09.jpg",
       },
       label: "Label 9",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-10.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-10@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-10.jpg",
       },
       label: "Label 10",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-11.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-11@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-11.jpg",
       },
       label: "Label 11",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-12.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-12@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-12.jpg",
       },
       label: "Label 12",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-13.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-13@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-13.jpg",
       },
       label: "Label 13",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-14.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-14@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-14.jpg",
       },
       label: "Label 14",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-15.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-15@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-15.jpg",
       },
       label: "Label 15",
     },
     {
       images: {
-        mobile: "/img/desktop/science/mechoulam/mechoulam-16.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-16@3x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-16.jpg",
       },
       label: "Label 16",
@@ -170,20 +170,22 @@ function RaphaelMechoulam() {
           {mechoulam.map((item, index) => {
             return (
               <div className="item cursor-pointer">
-                <div className="group relative text-center w-full flex flex-wrap content-end h-96 lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
+                <div className="group relative text-center w-full flex flex-wrap content-end lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
                   <div className="w-full h-full flex items-end justify-center">
                     {isMobile && (
                       <Image
+                        priority={true}
                         src={item.images.mobile}
                         alt=""
-                        width={375}
-                        height={375}
+                        width={452}
+                        height={601}
                         objectFit="cover"
                         quality={100}
                       />
                     )}
                     {isDesktop && (
                       <Image
+                        priority={true}
                         src={item.images.desktop}
                         alt=""
                         width={902}

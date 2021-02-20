@@ -240,8 +240,8 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>EPM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>About - EPM</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <Main/>

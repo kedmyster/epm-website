@@ -77,22 +77,24 @@ function Header() {
   const openFixedMenu = (event) => {
     const header = document.querySelector(".header.header--fixed");
 
-    header.classList.add("menu--shown");
-
-    gsap.fromTo(
-      header,
-      {
-        opacity: "0",
-        zIndex: "0",
-        translateY: "-100%",
-      },
-      {
-        opacity: "1",
-        zIndex: "10",
-        translateY: "0",
-        duration: 0.15,
-      }
-    );
+    if (header) {
+      header.classList.add("menu--shown");
+  
+      gsap.fromTo(
+        header,
+        {
+          opacity: "0",
+          zIndex: "0",
+          translateY: "-100%",
+        },
+        {
+          opacity: "1",
+          zIndex: "10",
+          translateY: "0",
+          duration: 0.15,
+        }
+      );
+    }
   };
 
   const closeFixedMenu = (event) => {

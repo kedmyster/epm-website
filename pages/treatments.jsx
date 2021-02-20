@@ -295,8 +295,8 @@ export default function Treatments() {
   return (
     <>
       <Head>
-        <title>EPM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Treatments - EPM</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <Main />

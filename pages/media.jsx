@@ -61,8 +61,8 @@ export default function Media() {
   return (
     <>
       <Head>
-        <title>EPM</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Media - EPM</title>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <MediaComponent data={page.media}/>
