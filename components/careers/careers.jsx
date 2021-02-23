@@ -25,6 +25,10 @@ function CareersComponent({ positions = [] }) {
     }
   }, [windowWidth]);
 
+  useEffect(() => {
+    document.body.dataset.headerTheme = "dark";
+  }, []);
+
   if (positions && positions.length === 1) {
     return (
       <section
@@ -57,28 +61,40 @@ function CareersComponent({ positions = [] }) {
         </div>
         <div className="relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
           <div className="mb-6 lg:mb-0">
-            <SectionHeader name="Our story" title={<h2>Careers</h2>} />
+            <SectionHeader
+              name="Our Opportunities"
+              title={<h2>Shape the Future of Healthcare </h2>}
+            />
           </div>
           <div className="text lg:text-lg lg:w-container lg:mx-auto lg:mt-6">
             <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
-              medicines and to enable safer treatments for patients, by
-              collaborating with leading pharmaceutical companies. We believe
-              in making a difference and helping people live a life of higher
-              quality.
+              medicine and create safer treatments for patients by collaborating
+              with leading pharmaceutical companies.
             </p>
             <p className="lg:mx-20">
+              We believe in helping people live a higher quality of life.
+            </p>
+            <p>
               We are looking for enthusiastic and talented individuals who
-              thrive on challenges and a dynamic work environment, and are
-              passionate to make a difference through the delivery of results.
+              thrive on challenges and a dynamic work environment as well as
+              people who are passionate to impact through actual results.
             </p>
           </div>
           <div className="font-bold text-lg lg:text-2xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
             <p className="mb-4 lg:mb-8">
-              Looking to join a dynamic company and be part of a team where
-              you can make a difference? We’d love to learn more about you.
+              Looking to join a dynamic company, and be part of a team that
+              shapes the future of healthcare?
             </p>
-            <a href="mailto:jobs@epmip.com" className="underline lg:no-underline inline-block lg:pb-8">jobs@epmip.com</a>
+            <p className="mb-4 lg:mb-8">
+              We’d love to hear from you.
+            </p>
+            <a
+              href="mailto:jobs@epmip.com"
+              className="underline lg:no-underline inline-block lg:pb-8"
+            >
+              jobs@epmip.com
+            </a>
           </div>
         </div>
       </section>
@@ -95,26 +111,22 @@ function CareersComponent({ positions = [] }) {
         <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
           <div className="container mx-auto px-8 lg:pr-0 lg:ml-0 py-8 lg:max-w-none lg:w-101 ">
             <div className="mb-6 lg:mb-0">
-              <SectionHeader 
-                name="Our story" 
-                title={<h2>Leadership</h2>} 
-              />
+              <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
             </div>
             <div className="text lg:text-lg lg:w-96">
               <p className="mb-4">
-                We are a fast-paced and dynamic company, striving to develop
-                new medicines and to enable safer treatments for patients, by
+                We are a fast-paced and dynamic company, striving to develop new
+                medicines and to enable safer treatments for patients, by
                 collaborating with leading pharmaceutical companies.
               </p>
               <p className="mb-4">
-                We believe in making a difference and helping people live a
-                life of higher quality.
+                We believe in making a difference and helping people live a life
+                of higher quality.
               </p>
               <p>
                 We are looking for enthusiastic and talented individuals who
                 thrive on challenges and a dynamic work environment, and are
-                passionate to make a difference through the delivery of
-                results.
+                passionate to make a difference through the delivery of results.
               </p>
             </div>
             <div className="job-openings lg:text-lg mt-4 lg:mt-8 lg:w-96">
@@ -175,8 +187,8 @@ function CareersComponent({ positions = [] }) {
           </div>
           <div className="container px-8 py-8 lg:text-2xl font-bold z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:w-101 text-center">
             <p className="mb-4 lg:mb-8">
-              Looking to join a dynamic company and be part of a team where
-              you can make a difference? We’d love to learn more about you.
+              Looking to join a dynamic company and be part of a team where you
+              can make a difference? We’d love to learn more about you.
             </p>
             <a href="mailto:jobs@epmip.com">jobs@epmip.com</a>
           </div>
@@ -198,14 +210,14 @@ function CareersComponent({ positions = [] }) {
               <div className="font-bold mt-4 lg:mt-8">Job Description</div>
               The Ecosystem Engagement team is responsible for the largest
               customer facing web application at EPM. Building features that
-              support merchants across the ecosystem and throughout their
-              entire lifecycle; as well as acting as role models and setting
-              guidelines with impact across the company.
+              support merchants across the ecosystem and throughout their entire
+              lifecycle; as well as acting as role models and setting guidelines
+              with impact across the company.
               <div className="font-bold mt-4 lg:mt-8">
-                As a Senior Engineer on the Ecosystem Engagement team, you
-                will help build products that help merchants gain insights
-                into both their business and EPM as a set of tools to help
-                them grow their dreams. You will:
+                As a Senior Engineer on the Ecosystem Engagement team, you will
+                help build products that help merchants gain insights into both
+                their business and EPM as a set of tools to help them grow their
+                dreams. You will:
               </div>
               <ul>
                 <li>
@@ -214,14 +226,14 @@ function CareersComponent({ positions = [] }) {
                   roll-out{" "}
                 </li>
                 <li>
-                  WorkWork with other engineers, designers, and product
-                  managers to develop excellent product experiences
+                  WorkWork with other engineers, designers, and product managers
+                  to develop excellent product experiences
                 </li>
                 <li>
-                  Hold yourself, and your teammates accountable to the
-                  standards of engineering that enables Square to safely move
-                  billions of dollars in payments and allow our customers to
-                  trust us with their sensitive data
+                  Hold yourself, and your teammates accountable to the standards
+                  of engineering that enables Square to safely move billions of
+                  dollars in payments and allow our customers to trust us with
+                  their sensitive data
                 </li>
                 <li>
                   Work with and influence the larger Frontend community within
@@ -231,26 +243,22 @@ function CareersComponent({ positions = [] }) {
               <div className="font-bold mt-4 lg:mt-8">You have:</div>
               <ul>
                 <li>
-                  Natural curiosity and desire to build products that
-                  merchants depend on
+                  Natural curiosity and desire to build products that merchants
+                  depend on
                 </li>
-                <li>
-                  Desire to solve hard and engaging engineering problems
-                </li>
+                <li>Desire to solve hard and engaging engineering problems</li>
                 <li>A deep understanding of frontend technologies</li>
-                <li>
-                  Interest and fulfillment in mentoring those around you
-                </li>
+                <li>Interest and fulfillment in mentoring those around you</li>
                 <li>5+ years professional experience</li>
               </ul>
               <div className="font-bold mt-4 lg:mt-8">
                 Additional Information
               </div>
-              At EPM, we value diversity and always treat all employees and
-              job applicants based on merit, qualifications, competence, and
-              talent. We do not discriminate on the basis of race, religion,
-              color, national origin, gender, sexual orientation, age, marital
-              status, veteran status, or disability status.
+              At EPM, we value diversity and always treat all employees and job
+              applicants based on merit, qualifications, competence, and talent.
+              We do not discriminate on the basis of race, religion, color,
+              national origin, gender, sexual orientation, age, marital status,
+              veteran status, or disability status.
             </div>
           </div>
         </div>

@@ -186,6 +186,15 @@ function Header() {
     });
   };
 
+  const closeSubMenus = (event) => {
+    const subMenus = document.querySelectorAll(".mobile-menu .sub-menu");
+
+    subMenus.forEach((subMenu) => {
+      subMenu.parentElement.classList.remove("menu-item--open");
+      subMenu.classList.add("hidden");
+    });
+  };
+
   const goToSection = (event) => {
     if (
       event.target.nodeName === "A" &&
@@ -207,11 +216,14 @@ function Header() {
 
     if (isMobile) {
       toggleMenu(event);
+      closeSubMenus(event);
     }
   };
 
   const scrollToFooter = (event) => {
-    toggleMenu(event, null, true);
+    if (isMobile) {
+      toggleMenu(event, null, true);
+    }
 
     event.preventDefault();
     document.querySelector("#footer").scrollIntoView({
@@ -292,8 +304,8 @@ function Header() {
                   <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
                     <li className="mb-4">
                       <a
-                        href="/about/#story"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        href="/about/#our-story"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Our story
@@ -301,11 +313,29 @@ function Header() {
                     </li>
                     <li className="mb-4">
                       <a
-                        href="/about/#leadership"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        href="/about/#board-of-directors"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
-                        Leadership
+                        Board of Directors
+                      </a>
+                    </li>
+                    <li className="mb-4">
+                      <a
+                        href="/about/#executive-leadership"
+                        className=""
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Executive Leadership
+                      </a>
+                    </li>
+                    <li className="">
+                      <a
+                        href="/about/#scientific-advisory-board"
+                        className=""
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Scientific Advisory Board
                       </a>
                     </li>
                   </ul>
@@ -318,7 +348,7 @@ function Header() {
                     <li className="mb-4">
                       <a
                         href="/treatments/#inflammatory-bowel-disease"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Inflammatory Bowel Disease
@@ -327,7 +357,7 @@ function Header() {
                     <li className="mb-4">
                       <a
                         href="/treatments/#psoriasis"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Psoriasis
@@ -336,7 +366,7 @@ function Header() {
                     <li className="mb-4">
                       <a
                         href="/treatments/#acute-respiratory-distress-syndrome"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Acute Respiratory Distress Syndrome
@@ -352,7 +382,7 @@ function Header() {
                     <li className="mb-3">
                       <a
                         href="/science/#cannabinoids"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         About Cannabiniod Acids
@@ -361,7 +391,7 @@ function Header() {
                     <li className="mb-3">
                       <a
                         href="/science/#pipeline"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Pipeline
@@ -370,7 +400,7 @@ function Header() {
                     <li className="mb-3">
                       <a
                         href="/science/#collaborations"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Key Collaborations
@@ -379,7 +409,7 @@ function Header() {
                     <li className="mb-3">
                       <a
                         href="/science/#research-papers"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Research Papers
@@ -388,7 +418,7 @@ function Header() {
                     <li className="mb-3">
                       <a
                         href="/science/#raphael-mechoulam"
-                        className="transition-opacity duration-150 hover:opacity-70"
+                        className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Prof. Mechoulam Biography
@@ -543,7 +573,7 @@ function Header() {
                 <ul className="sub-menu menu--about hidden">
                   <li className="text-sm my-2">
                     <a
-                      href="/about/#story"
+                      href="/about/#our-story"
                       onClick={(event) => goToSection(event)}
                     >
                       Our story
@@ -551,10 +581,26 @@ function Header() {
                   </li>
                   <li className="text-sm my-2">
                     <a
-                      href="/about/#leadership"
+                      href="/about/#board-of-directors"
                       onClick={(event) => goToSection(event)}
                     >
-                      Leadership
+                      Board of Directors
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href="/about/#executive-leadership"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Executive Leadership
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href="/about/#scientific-advisory-board"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Scientific Advisory Board
                     </a>
                   </li>
                 </ul>

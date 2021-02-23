@@ -78,20 +78,19 @@ function Cannabinoids() {
             <div className="animate text lg:text-lg lg:w-96 mt-6">
               <p className="mb-4">
                 In the plant, cannabinoid acids are the source of all known
-                cannabinoids. There is little known about the therapeutic
-                effects of the cannabinoid acids in comparison to the
-                cannabinoids, but some of the acids were found to be more potent
-                than the cannabinoids in areas such as anti-inflammatory and
-                anti-anxiety activity.
+                cannabinoids. The therapeutic effects of cannabinoid acids are
+                less well known compared to cannabinoids. However, some of the
+                acids were found to be more potent than the cannabinoids in
+                areas such as anti-inflammatory and anti-anxiety activity.
               </p>
               <p>
-                At EPM we are synthesizing and developing cannabinoid
-                Methyl-Esters products, which are fully synthetic, stable, and
-                IP protected derivatives of the original cannabinoid acids.
-                These solutions constitute endless therapeutic potential and
-                have already been tested and shown to be effective in animal
-                models of IBD, obesity and metabolic related syndromes,
-                inflammatory skin conditions and more.
+                At EPM we synthesize and develop cannabinoid methyl-esters
+                products, which are fully synthetic, stable, and IP protected
+                derivatives of the original cannabinoid acids. These solutions
+                constitute endless therapeutic potential and have already been
+                tested and shown to be effective in animal models of IBD,
+                obesity and metabolic related syndromes, inflammatory skin
+                conditions and more.
               </p>
             </div>
           </div>

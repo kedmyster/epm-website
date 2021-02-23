@@ -31,7 +31,7 @@ function Main() {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -57,31 +57,53 @@ function Main() {
     >
       <div className="absolute w-full h-full">
         {isMobile && (
-          <Image
-            loading="eager"
-            src="/img/mobile/science/hero@3x.jpg"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+          <video
+            width="375"
+            height="812"
+            poster="/img/mobile/science/hero@2x.jpg"
+            className="inset-0"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/videos/mobile/science.mp4" type="video/mp4" />
+            <Image
+              priority="true"
+              src="/img/mobile/science/hero@2x.jpg"
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </video>
         )}
         {isDesktop && (
-          <Image
-            loading="eager"
-            src="/img/desktop/science/hero@2x.jpg"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+          <video
+            width="1920"
+            height="1080"
+            poster="/img/desktop/science/hero@2x.jpg"
+            className="inset-0"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/videos/desktop/science.mp4" type="video/mp4" />
+            <Image
+              priority="true"
+              src="/img/desktop/science/hero@2x.jpg"
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </video>
         )}
       </div>
       <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
       <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-full lg:w-full">
         <div className="container mx-auto px-8 py-8 absolute bottom-36 lg:bottom-10 lg:relative lg:z-10">
           <h1 className="font-title text-4xl lg:text-7.5xl lg:leading-tight tracking-wide">
-            Creation of New<br/>Treatments
+            Unlock the medical potential of synthetic cannabinoid acids
           </h1>
         </div>
         {/*<div className="container w-container mx-auto px-8 py-8 hidden relative z-10 lg:flex lg:flex-row ">

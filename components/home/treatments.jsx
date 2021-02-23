@@ -102,9 +102,13 @@ function Treatments({ data }) {
 
               <div className="text lg:w-103">
                 <p>
-                  EPM are committed to developing a series of new therapeutic
-                  solutions based on cannabinoid acids providing alternative
-                  treatments for patients.
+                  EPM is developing cannabinoid acid-based therapeutic solutions
+                  providing alternative treatments for patients. This is the
+                  driving force behind EPM’s research program, which is based on
+                  14 IP protected APIs. Although cannabinoid acids are potential
+                  treatments for a wide range of diseases, currently EPM’s focus
+                  is on three main therapeutic conditions: inflammatory bowel
+                  diseases, skin conditions and respiratory concerns.
                 </p>
               </div>
               <div className="button pt-10">
@@ -127,11 +131,15 @@ function Treatments({ data }) {
                   title={<h2>Medicines We Develop</h2>}
                 />
               </div>
-              <div className="text mx-auto animate text-center w-101">
+              <div className="text mx-auto animate text-center w-105">
                 <p>
-                  EPM are committed to developing a series of new therapeutic
-                  solutions based on cannabinoid acids providing alternative
-                  treatments for patients.
+                  EPM is developing cannabinoid acid-based therapeutic solutions
+                  providing alternative treatments for patients. This is the
+                  driving force behind EPM’s research program, which is based on
+                  14 IP protected APIs. Although cannabinoid acids are potential
+                  treatments for a wide range of diseases, currently EPM’s focus
+                  is on three main therapeutic conditions: inflammatory bowel
+                  diseases, skin conditions and respiratory concerns.
                 </p>
               </div>
             </div>
@@ -139,7 +147,10 @@ function Treatments({ data }) {
               <div className="flex flex-row justify-center">
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#inflammatory-bowel-disease" className="leading-none">
+                    <a
+                      href="/treatments/#inflammatory-bowel-disease"
+                      className="leading-0"
+                    >
                       <Image
                         loading="eager"
                         src="/img/desktop/treatments/treatments-pills@2x.png"
@@ -160,7 +171,7 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#psoriasis" className="leading-none">
+                    <a href="/treatments/#psoriasis" className="leading-0">
                       <Image
                         loading="eager"
                         src="/img/desktop/treatments/treatments-tube@2x.png"
@@ -180,7 +191,7 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#psoriasis" className="leading-none">
+                    <a href="/treatments/#psoriasis" className="leading-0">
                       <Image
                         loading="eager"
                         src="/img/desktop/treatments/treatments-iv@2x.png"
@@ -194,6 +205,9 @@ function Treatments({ data }) {
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
                     IV for ARDS
+                    <span className="block normal-case text-epm-gray-500">
+                      (Acute Respiratory Distress Syndrome)
+                    </span>
                   </div>
                 </div>
               </div>

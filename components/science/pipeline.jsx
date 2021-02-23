@@ -74,9 +74,9 @@ function Pipeline() {
                 name={<span className="animate">Our Innovation</span>}
                 title={
                   <h2 className="animate">
-                    Products and Future
+                    Our Pipeline
                     <br />
-                    Development Pipeline
+                    Future Products and Development
                   </h2>
                 }
               />

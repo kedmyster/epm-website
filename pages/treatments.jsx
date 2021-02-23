@@ -18,11 +18,11 @@ export default function Treatments() {
           timeline:
             "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
           solution:
-            "The treatment which is based on EPM301, has been evaluated in both acute (DSS induced mouse colitis) and chronic (IL-10 knock-out mouse) animal models of IBD and has shown similar activity to prednisone (acute model) and anti-TNFa mAb (chronic model) when administered by gavage.",
+            "The treatment is based on EPM301 and has been evaluated in both acute (DSS induced mouse colitis) and chronic (IL-10 knock-out mouse) animal models of IBD and has shown similar activity to prednisone (acute model) and anti-TNFa mAb (chronic model) when administered by gavage.",
           moreInfo: (
             <div>
               <div className="text base lg:text-lg mb-4 lg:mb-8">
-                <p className="mb-4">
+                <p className="mb-4 lg:mb-8">
                   Crohn’s disease and ulcerative colitis, collectively known as
                   inflammatory bowel disease (IBD), are characterized by chronic
                   inflammation of the gastrointestinal tract.<sup>1</sup> The
@@ -32,7 +32,7 @@ export default function Treatments() {
                   organs to function properly, leading to severe symptoms.
                   <sup>2</sup>
                 </p>
-                <p className="mb-4">
+                <p className="mb-4 lg:mb-8">
                   IBD is considered as one of the major public health concerns
                   worldwide<sup>3</sup>, and currently these chronic, life-long
                   conditions can be treated but not cured.<sup>3</sup> IBD has
@@ -41,7 +41,7 @@ export default function Treatments() {
                   requiring hospitalizations and surgical procedures.
                   <sup>4-6</sup>
                 </p>
-                <p className="mb-4">
+                <p className="mb-4 lg:mb-8">
                   Crohn’s disease and ulcerative colitis affect over 2 million
                   individuals in North America, 3.2 million in Europe, and
                   millions more worldwide.<sup>7</sup> As many as 70,000 new
@@ -55,7 +55,7 @@ export default function Treatments() {
                   are equally likely to develop IBD.<sup>2</sup>
                 </p>
               </div>
-              <div className="text-xs mb-4 lg:mb-8">
+              <div className="text-xs">
                 References
                 <ol className="list-decimal pt-1 pl-3">
                   <li>
@@ -126,7 +126,7 @@ export default function Treatments() {
                 width: 45,
                 height: 61,
               },
-              label: "Oral for IBD",
+              label: "Oral Formulation",
               subLabel: "(Crohn's & Colitis)",
             },
             icon2: {
@@ -140,7 +140,12 @@ export default function Treatments() {
                 width: 42,
                 height: 42,
               },
-              label: <span>Phase I: clinical <br/>trial in 2022</span>,
+              label: (
+                <span>
+                  Phase I: clinical <br />
+                  trial in 2022
+                </span>
+              ),
               subLabel: "",
             },
             icon3: {
@@ -154,7 +159,13 @@ export default function Treatments() {
                 width: 90,
                 height: 43,
               },
-              label: <span>Patients in<br/>Europe</span>,
+              label: (
+                <span>
+                  Patients in
+                  <br />
+                  Europe
+                </span>
+              ),
             },
           },
         },
@@ -162,11 +173,73 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Psoriasis"),
           title: "Psoriasis",
-          formulation: "Oral",
+          formulation: "Topical",
           timeline:
             "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
           solution:
-            "The treatment which is based on EPM301, has been evaluated in both acute (DSS induced mouse colitis) and chronic (IL-10 knock-out mouse) animal models of IBD and has shown similar activity to prednisone (acute model) and anti-TNFa mAb (chronic model) when administered by gavage.",
+            "The treatment is based on EPM301 and has been evaluated in an ex vivo model of inflammatory skin disease. When applied topically, it displayed similar activity to hydrocortisone",
+          moreInfo: (
+            <div>
+              <div className="text base lg:text-lg mb-4 lg:mb-8">
+                <p className="mb-4 lg:mb-8">
+                  Psoriasis is a chronic, systemic, inflammatory skin disease
+                  associated with a significant physical and psychological
+                  burden. The disease manifests in the skin or joints or both.
+                  <sup>1</sup>
+                </p>
+                <p className="mb-4 lg:mb-8">
+                  Psoriasis affects up to 7.5 million people in the US.
+                  <sup>2</sup>
+                  Worldwide, 125 million people, 2–3% of the total population,
+                  have psoriasis.<sup>2</sup> Plaque psoriasis, also called
+                  psoriasis vulgaris, is the most common form and affects about
+                  80–90% of people with psoriasis.<sup>1,3,4</sup>
+                </p>
+                <p className="mb-4 lg:mb-8">
+                  The typical age of onset is 15–25 years, but psoriasis can
+                  develop at any age.<sup>2</sup> People with psoriasis are at
+                  an increased risk of developing other chronic and serious
+                  health conditions. Comorbidities include psoriatic arthritis,
+                  inflammatory bowel disease, hypertension, diabetes, obesity,
+                  and depression.<sup>3</sup> Psoriasis has a significant impact
+                  on life quality and mental health.<sup>1,3</sup> Nearly 60% of
+                  psoriasis patients consider the disease to be a large problem
+                  in their everyday lives.<sup>5</sup>
+                </p>
+              </div>
+              <div className="text-xs">
+                References
+                <ol className="list-decimal pt-1 pl-3">
+                  <li>
+                    Boehncke WH, Schon MP. Psoriasis. Lancet.
+                    2015;386(9997):983–994.
+                  </li>
+                  <li>
+                    National Psoriasis Foundation. Statistics.
+                    https://www.psoriasis.org/content/statistics{" "}
+                  </li>
+                  <li>
+                    Menter A, Gottlieb A, Feldman SR, et al. Guidelines of care
+                    for the management of psoriasis and psoriatic arthritis:
+                    Section 1. Overview of psoriasis and guidelines of care for
+                    the treatment of psoriasis with biologics. Journal of the
+                    American Academy of Dermatology. 2008;58(5):826–850.{" "}
+                  </li>
+                  <li>
+                    Mease PJ, Gladman DD, Papp KA, et al. Prevalence of
+                    rheumatologist-diagnosed psoriatic arthritis in patients
+                    with psoriasis in European/North American dermatology
+                    clinics. Journal of the American Academy of Dermatology.
+                    2013;69(5):729–735.{" "}
+                  </li>
+                  <li>
+                    Keating GM. Apremilast: A Review in psoriasis and psoriatic
+                    arthritis. Drugs. 2017;77(4):459–472.{" "}
+                  </li>
+                </ol>
+              </div>
+            </div>
+          ),
           images: {
             mobile: {
               url: "/img/mobile/treatments/treatment-tube@3x.png",
@@ -205,7 +278,13 @@ export default function Treatments() {
                 width: 42,
                 height: 42,
               },
-              label: <span>Phase I: clinical<br/>trial in 2022</span>,
+              label: (
+                <span>
+                  Phase I: clinical
+                  <br />
+                  trial in 2022
+                </span>
+              ),
               subLabel: "",
             },
             icon3: {
@@ -219,7 +298,13 @@ export default function Treatments() {
                 width: 102,
                 height: 43,
               },
-              label: <span>Patients<br/>Worldwide</span>,
+              label: (
+                <span>
+                  Patients
+                  <br />
+                  Worldwide
+                </span>
+              ),
             },
           },
         },
@@ -227,11 +312,98 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Acute Respiratory Distress Syndrome"),
           title: "Acute Respiratory Distress Syndrome",
-          formulation: "Oral",
+          formulation: "IV",
           timeline:
-            "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
+            "IND approval to treat COVID-19 patients with poor prognosis under compassionate usage grounds is anticipated in Q4 2021",
           solution:
-            "The treatment which is based on EPM301, has been evaluated in both acute (DSS induced mouse colitis) and chronic (IL-10 knock-out mouse) animal models of IBD and has shown similar activity to prednisone (acute model) and anti-TNFa mAb (chronic model) when administered by gavage.",
+            "The treatment is based on EPM301 and has demonstrated anti-inflammatory activity in a number of models of inflammatory disease (acute and chronic colitis, inflammatory skin diseases) when administered both orally and topically. EPM301 was also well tolerated in a 7-day IV toxicity study in rats.",
+          moreInfo: (
+            <div>
+              <div className="text base lg:text-lg mb-4 lg:mb-8">
+                <p className="mb-4 lg:mb-8">
+                  Coronavirus disease 2019 (COVID-19) is a disease caused by a
+                  new virus – severe acute respiratory syndrome coronavirus 2
+                  (SARS-CoV-2).<sup>1</sup>
+                </p>
+                <p className="">
+                  The mainstay of management of patients with COVID‐19 is
+                  supportive therapy, including fluid management, oxygen
+                  therapy, and mechanical ventilation.<sup>5</sup> Cytokine
+                  storm and inflammation induced by the uncontrolled immunologic
+                  response to the virus underlies the fatal pneumonia that can
+                  follow infection with human coronaviruses.<sup>6,7</sup> The
+                  inhibition of this inflammation has been demonstrated to
+                  improve outcome in animals infected with SARS and MERS
+                  viruses.<sup>8,9</sup>
+                  Corticosteroids are also typically used to treat severe acute
+                  respiratory infections of viral aetiology because of their
+                  anti‐inflammatory effect.<sup>10</sup>
+                </p>
+              </div>
+              <div className="text-xs">
+                References
+                <ol className="list-decimal pt-1 pl-3">
+                  <li>
+                    Zhou P, Yang XL, Wang XG, et al. A pneumonia outbreak
+                    associated with a new coronavirus of probable bat origin.
+                    Nature 2020; 579: 270–273{""}
+                  </li>
+                  <li>
+                    Yang X, Yu Y, Xu J, et al. Clinical course and outcomes of
+                    critically ill patients with SARS‐CoV‐2 pneumonia in Wuhan,
+                    China: a single‐centered, retrospective, observational
+                    study. Lancet Respir Med 2020;
+                    https://doi.org/10.1016/s2213-2600(20)30079-5[Epub ahead of
+                    print].{""}
+                  </li>
+                  <li>
+                    Wang D, Hu B, Hu C, et al. Clinical characteristics of 138
+                    hospitalized patients with 2019 novel coronavirus‐infected
+                    pneumonia in Wuhan, China. JAMA 2020; 323: 1061–1069.{" "}
+                  </li>
+                  <li>
+                    Chen N, Zhou M, Dong X, et al. Epidemiological and clinical
+                    characteristics of 99 cases of 2019 novel coronavirus
+                    pneumonia in Wuhan, China: a descriptive study. Lancet 2020;
+                    395: 507–513.{" "}
+                  </li>
+                  <li>
+                    Jin YH, Cai L, Cheng ZS, et al. A rapid advice guideline for
+                    the diagnosis and treatment of 2019 novel coronavirus
+                    (2019‐nCoV) infected pneumonia (standard version). Mil Med
+                    Res 2020; 7:{""}
+                  </li>
+                  <li>
+                    Channappanavar R, Perlman S. Pathogenic human coronavirus
+                    infections: causes and consequences of cytokine storm and
+                    immunopathology. Semin Immunopathol 2017; 39: 529–539.{""}
+                  </li>
+                  <li>
+                    Zhou J, Chu H, Li C, et al. Active MERS‐CoV replication and
+                    aberrant induction of inflammatory cytokines and chemokines
+                    in human macrophages: implications for pathogenesis. J
+                    Infect Dis 2014; 209: 1331–1342.{""}
+                  </li>
+                  <li>
+                    Chan JF, Yao Y, Yeung ML, et al. Treatment with
+                    lopinavir/ritonavir or interferon‐β1b improves outcome of
+                    MERS‐CoV infection in a nonhuman primate model of common
+                    marmoset. J Infect Dis 2015; 212: 1904–1913.{""}
+                  </li>
+                  <li>
+                    DeDiego ML, Nieto‐Torres JL, Regla‐Nava JA, et al.
+                    Inhibition of NF‐κB‐mediated inflammation in severe acute
+                    respiratory syndrome coronavirus‐infected mice increases
+                    survival. J Virol 2014; 88: 913–924.{""}
+                  </li>
+                  <li>
+                    Sibila O, Agusti C, Torres A. Corticosteroids in severe
+                    pneumonia. Eur Respir J 2008; 32: 259–264.{""}
+                  </li>
+                </ol>
+              </div>
+            </div>
+          ),
           images: {
             mobile: {
               url: "/img/mobile/treatments/treatment-iv@3x.png",
@@ -270,7 +442,12 @@ export default function Treatments() {
                 width: 42,
                 height: 42,
               },
-              label: <span>Phase I: clinical <br/>trial in 2021</span>,
+              label: (
+                <span>
+                  Phase I: clinical <br />
+                  trial in 2021
+                </span>
+              ),
               subLabel: "",
             },
             icon3: {
@@ -284,7 +461,13 @@ export default function Treatments() {
                 width: 58,
                 height: 43,
               },
-              label: <span>People affected<br/>annually</span>,
+              label: (
+                <span>
+                  People affected
+                  <br />
+                  annually
+                </span>
+              ),
             },
           },
         },

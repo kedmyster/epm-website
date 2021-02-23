@@ -33,6 +33,10 @@ function MediaComponent({ data }) {
     }
   }, [windowWidth]);
 
+  useEffect(() => {
+    document.body.dataset.headerTheme = "dark";
+  }, []);
+
   return (
     <section
       id="media"

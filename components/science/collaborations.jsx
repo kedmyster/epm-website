@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-import classNames from 'classnames';
+import classNames from "classnames";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
@@ -33,7 +33,9 @@ function Collaborations({ data }) {
     event.preventDefault();
 
     const section = event.target.closest(".collaborations__panel");
-    const moreInfoPanel = document.querySelector(`.more-info[data-collaboration-panel='${panel}']`);
+    const moreInfoPanel = document.querySelector(
+      `.more-info[data-collaboration-panel='${panel}']`
+    );
 
     if (isDesktop) {
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
@@ -72,14 +74,18 @@ function Collaborations({ data }) {
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
             <div className="animate container mx-auto text-center px-8 py-8 h-full lg:h-auto flex lg:block flex-wrap content-center">
               <div className="commercial lg:w-1/2">
-                <div className="font-title text-epm-gray-500 uppercase text-2xl mb-16 relative">
+                <div className="font-title text-white uppercase text-2xl mb-16 relative">
                   Commercial
                 </div>
                 <div className="logos flex flex-wrap">
                   {data.commercial.slides.map((slide, index) => {
-                    return(
+                    return (
                       <div className="logo relative w-1/2 mb-12">
-                        <a href={slide.url} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={slide.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image
                             src={slide.image.mobile.url}
                             width={slide.image.mobile.width}
@@ -88,7 +94,7 @@ function Collaborations({ data }) {
                           />
                         </a>
                       </div>
-                    )  
+                    );
                   })}
                 </div>
               </div>
@@ -97,10 +103,8 @@ function Collaborations({ data }) {
           <div className="container px-8 py-8">
             <div className="mb-6">
               <SectionHeader
-                name={<span className="animate">Our Innovation</span>}
-                title={
-                  <h2 className="animate">Commercial Collaborations</h2>
-                }
+                name={<span className="animate">Our Development Quality</span>}
+                title={<h2 className="animate">Commercial Collaborations</h2>}
               />
             </div>
             <div>
@@ -108,10 +112,9 @@ function Collaborations({ data }) {
                 EPM’s proprietary technology enables the fully synthetic
                 production of both novel and known structures for pre-clinical
                 and clinical development. Laboratory scale synthesis, scale-up
-                production and formulation development are being done by
-                leading global pharmaceutical contract research organisations
-                (CROs) such as Recipharm (Israel), Cambrex (US) and MedPharm
-                (UK).
+                production and formulation development are being done by leading
+                global pharmaceutical contract research organisations (CROs)
+                such as Recipharm (Israel), Cambrex (US) and MedPharm (UK).
               </p>
               <p className="lg:text-lg mb-4">
                 Charles River Laboratories (UK) are conducting the toxicology
@@ -119,9 +122,8 @@ function Collaborations({ data }) {
               </p>
               <p className="lg:text-lg">
                 By producing pharmaceutically reproducible treatments based on
-                cannabinoid acids, we have demonstrated significantly
-                increased potency and established a consistent production
-                process.
+                cannabinoid acids, we have demonstrated significantly increased
+                potency and established a consistent production process.
               </p>
             </div>
           </div>
@@ -138,14 +140,18 @@ function Collaborations({ data }) {
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
             <div className="animate container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
               <div className="academy lg:w-1/2">
-                <div className="font-title text-epm-gray-500 uppercase text-2xl mb-16 relative">
+                <div className="font-title text-white uppercase text-2xl mb-16 relative">
                   Academy
                 </div>
                 <div className="logos flex flex-wrap">
                   {data.academy.slides.map((slide, index) => {
-                    return(
+                    return (
                       <div className="logo relative w-1/2 mb-12">
-                        <a href={slide.url} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={slide.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Image
                             src={slide.image.mobile.url}
                             width={slide.image.mobile.width}
@@ -154,7 +160,7 @@ function Collaborations({ data }) {
                           />
                         </a>
                       </div>
-                    )  
+                    );
                   })}
                 </div>
               </div>
@@ -163,20 +169,16 @@ function Collaborations({ data }) {
           <div className="container px-8 py-8">
             <div className="mb-6">
               <SectionHeader
-                name={<span className="animate">Our Innovation</span>}
+                name={<span className="animate">Our Development Quality</span>}
                 title={<h2 className="animate">Academy Collaborations</h2>}
               />
             </div>
             <div>
               <p className="">
-                EPM’s pre-clinical pharmacology studies are being conducted by
-                top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
-                Yossi Tam (Hebrew University), and Prof. Mark Brown
-                (MedPharm), amongst others. The animal studies cover a wide
-                range of disease areas, including: Inflammatory Skin Diseases,
-                Metabolic Diseases, Osteoarthritis and joint pain, and
-                Inflammatory Bowel Diseases. Results at this early stage of
-                development are extremely positive.
+                EPM has brought together top researchers from around the world
+                and contracted with leading Contract Research Organizations to
+                assure of the most reliable and highest-quality development and
+                results.
               </p>
             </div>
           </div>
@@ -205,9 +207,13 @@ function Collaborations({ data }) {
                     </div>
                     <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.commercial.slides.map((slide, index) => {
-                        return(
+                        return (
                           <div className="logo flex items-center justify-center">
-                            <a href={slide.url} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={slide.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image
                                 src={slide.image.desktop.url}
                                 width={slide.image.desktop.width}
@@ -216,14 +222,16 @@ function Collaborations({ data }) {
                               />
                             </a>
                           </div>
-                        )  
+                        );
                       })}
                     </div>
                     <div className="button pt-5 lg:inline-block text-center mt-16">
                       <Button
                         href="#"
                         style="light"
-                        onClick={(event) => toggleLearnMore(event, "commercial")}
+                        onClick={(event) =>
+                          toggleLearnMore(event, "commercial")
+                        }
                       >
                         Learn More
                       </Button>
@@ -238,9 +246,13 @@ function Collaborations({ data }) {
                     </div>
                     <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.academy.slides.map((slide, index) => {
-                        return(
+                        return (
                           <div className="logo flex items-center justify-center">
-                            <a href={slide.url} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={slide.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Image
                                 src={slide.image.desktop.url}
                                 width={slide.image.desktop.width}
@@ -249,7 +261,7 @@ function Collaborations({ data }) {
                               />
                             </a>
                           </div>
-                        )  
+                        );
                       })}
                     </div>
                     <div className="button pt-5 lg:inline-block text-center mt-16">
@@ -266,67 +278,66 @@ function Collaborations({ data }) {
               </div>
 
               <div
-                  className="more-info commercial-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col justify-center text-left lg:bg-white lg:px-36 py-8"
-                  data-collaboration-panel="commercial"
-                  aria-expanded="false"
-                >
-                  <p className="lg:text-lg mb-4">
-                    EPM’s proprietary technology enables the fully synthetic
-                    production of both novel and known structures for pre-clinical
-                    and clinical development. Laboratory scale synthesis, scale-up
-                    production and formulation development are being done by leading
-                    global pharmaceutical contract research organisations (CROs)
-                    such as Recipharm (Israel), Cambrex (US) and MedPharm (UK).
-                  </p>
-                  <p className="lg:text-lg mb-4">
-                    Charles River Laboratories (UK) are conducting the toxicology
-                    studies while NCK (Denmark) is manufacturing the GMP batches
-                  </p>
-                  <p className="lg:text-lg">
-                    By producing pharmaceutically reproducible treatments based on
-                    cannabinoid acids, we have demonstrated significantly increased
-                    potency and established a consistent production process.
-                  </p>
-                </div>
-                <div
-                  className="more-info academy-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 left-0 hidden lg:flex flex-wrap content-center text-left lg:bg-white lg:px-36 py-8"
-                  data-collaboration-panel="academy"
-                  aria-expanded="false"
-                >
-                  <p className="lg:text-lg">
-                    EPM’s pre-clinical pharmacology studies are being conducted by
-                    top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
-                    Yossi Tam (Hebrew University), and Prof. Mark Brown (MedPharm),
-                    amongst others. The animal studies cover a wide range of disease
-                    areas, including: Inflammatory Skin Diseases, Metabolic
-                    Diseases, Osteoarthritis and joint pain, and Inflammatory Bowel
-                    Diseases. Results at this early stage of development are
-                    extremely positive.
-                  </p>
-                </div>
+                className="more-info commercial-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col justify-center text-left lg:bg-white lg:px-36 py-8"
+                data-collaboration-panel="commercial"
+                aria-expanded="false"
+              >
+                <p className="lg:text-lg mb-4">
+                  EPM’s proprietary technology enables the fully synthetic
+                  production of both novel and known structures for pre-clinical
+                  and clinical development. Laboratory scale synthesis, scale-up
+                  production and formulation development are being done by
+                  leading global pharmaceutical contract research organisations
+                  (CROs) such as Recipharm (Israel), Cambrex (US) and MedPharm
+                  (UK).
+                </p>
+                <p className="lg:text-lg mb-4">
+                  Charles River Laboratories (UK) are conducting the toxicology
+                  studies while NCK (Denmark) is manufacturing the GMP batches
+                </p>
+                <p className="lg:text-lg">
+                  By producing pharmaceutically reproducible treatments based on
+                  cannabinoid acids, we have demonstrated significantly
+                  increased potency and established a consistent production
+                  process.
+                </p>
+              </div>
+              <div
+                className="more-info academy-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 left-0 hidden lg:flex flex-wrap content-center text-left lg:bg-white lg:px-36 py-8"
+                data-collaboration-panel="academy"
+                aria-expanded="false"
+              >
+                <p className="lg:text-lg">
+                  EPM’s pre-clinical pharmacology studies are being conducted by
+                  top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
+                  Yossi Tam (Hebrew University), and Prof. Mark Brown
+                  (MedPharm), amongst others. The animal studies cover a wide
+                  range of disease areas, including: Inflammatory Skin Diseases,
+                  Metabolic Diseases, Osteoarthritis and joint pain, and
+                  Inflammatory Bowel Diseases. Results at this early stage of
+                  development are extremely positive.
+                </p>
+              </div>
             </div>
           </div>
-          
+
           <div className="lg:h-1/3-screen">
             <div className="container mx-auto px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
-                  name={<span className="animate">Our Innovation</span>}
-                  title={
-                    <h2 className="animate">Commercial Collaborations</h2>
+                  name={
+                    <span className="animate">Our Development Quality</span>
                   }
+                  title={<h2 className="animate">Key Collaborations</h2>}
                 />
               </div>
 
               <div className="animate text lg:w-103 mt-6">
                 <p>
-                  EPM’s proprietary technology enables the fully synthetic
-                  production of both novel and known structures for
-                  pre-clinical and clinical development. Laboratory scale
-                  synthesis, scale-up production and formulation development
-                  are being done by leading global pharmaceutical contract
-                  research organisations (CROs) such as Recipharm (Israel),
-                  Cambrex (US) and MedPharm (UK).
+                  EPM has brought together top researchers from around the world
+                  and contracted with leading Contract Research Organizations to
+                  assure of the most reliable and highest-quality development
+                  and results.
                 </p>
               </div>
             </div>
@@ -334,14 +345,14 @@ function Collaborations({ data }) {
         </div>
       )}
     </section>
-  )
+  );
 
   return (
     <>
       {isMobile && (
         <>
-          <section 
-            id="collaborations" 
+          <section
+            id="collaborations"
             className="section commercials bg-white"
             data-side-menu-label="Key Collaborations"
             data-side-menu-color="dark"
@@ -411,10 +422,10 @@ function Collaborations({ data }) {
             <div className="container px-8 py-8">
               <div className="mb-6">
                 <SectionHeader
-                  name={<span className="animate">Our Innovation</span>}
-                  title={
-                    <h2 className="animate">Commercial Collaborations</h2>
+                  name={
+                    <span className="animate">Our Development Quality</span>
                   }
+                  title={<h2 className="animate">Commercial Collaborations</h2>}
                 />
               </div>
               <div>
@@ -440,8 +451,8 @@ function Collaborations({ data }) {
               </div>
             </div>
           </section>
-          <section 
-            id="academy" 
+          <section
+            id="academy"
             className="section academy bg-white"
             data-side-menu-label="Academy"
             data-side-menu-color="dark"
@@ -519,20 +530,22 @@ function Collaborations({ data }) {
             <div className="container px-8 py-8">
               <div className="mb-6">
                 <SectionHeader
-                  name={<span className="animate">Our Innovation</span>}
+                  name={
+                    <span className="animate">Our Development Quality</span>
+                  }
                   title={<h2 className="animate">Academy Collaborations</h2>}
                 />
               </div>
               <div>
                 <p className="">
-                  EPM’s pre-clinical pharmacology studies are being conducted by
-                  top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
-                  Yossi Tam (Hebrew University), and Prof. Mark Brown
-                  (MedPharm), amongst others. The animal studies cover a wide
-                  range of disease areas, including: Inflammatory Skin Diseases,
-                  Metabolic Diseases, Osteoarthritis and joint pain, and
-                  Inflammatory Bowel Diseases. Results at this early stage of
-                  development are extremely positive.
+                  EPM’s preclinical pharmacology studies are being conducted by
+                  top researchers, including Prof. Dan Peer (Tel Aviv
+                  University), Prof. Yossi Tam (Hebrew University), and Prof.
+                  Mark Brown (MedPharm). The animal studies cover a wide range
+                  of disease areas such as ng: inflammatory skin diseases,
+                  metabolic diseases, osteoarthritis and inflammatory bowel
+                  diseases. Results at the preclinical studies are extremely
+                  positive.
                 </p>
               </div>
             </div>
@@ -612,7 +625,9 @@ function Collaborations({ data }) {
                         <Button
                           href="#"
                           className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-colors duration-150 lg:px-10 py-2 border-white text-white hover:bg-epm-yellow hover:border-epm-yellow"
-                          onClick={(event) => toggleLearnMore(event, "commercial")}
+                          onClick={(event) =>
+                            toggleLearnMore(event, "commercial")
+                          }
                         >
                           Learn More
                         </Button>
@@ -624,21 +639,19 @@ function Collaborations({ data }) {
                       aria-expanded="false"
                     >
                       <p className="lg:text-lg mb-4">
-                        EPM’s proprietary technology enables the fully synthetic
-                        production of both novel and known structures for pre-clinical
-                        and clinical development. Laboratory scale synthesis, scale-up
-                        production and formulation development are being done by leading
-                        global pharmaceutical contract research organisations (CROs)
-                        such as Recipharm (Israel), Cambrex (US) and MedPharm (UK).
-                      </p>
-                      <p className="lg:text-lg mb-4">
-                        Charles River Laboratories (UK) are conducting the toxicology
-                        studies while NCK (Denmark) is manufacturing the GMP batches
+                        Laboratory scale synthesis, scaleup production and
+                        formulation development are performed by leading global
+                        pharmaceutical contract research organisations (CROs)
+                        such as Recipharm (Israel), Cambrex (US) and MedPharm
+                        (UK). Charles River Laboratories (UK) conducts the
+                        toxicology studies while NCK (Denmark) manufactures the
+                        GMP batches.
                       </p>
                       <p className="lg:text-lg">
-                        By producing pharmaceutically reproducible treatments based on
-                        cannabinoid acids, we have demonstrated significantly increased
-                        potency and established a consistent production process.
+                        By producing pharmaceutically reproducible treatments
+                        based on cannabinoid acids, we have demonstrated
+                        significantly increased potency and established a
+                        consistent production process.
                       </p>
                     </div>
                   </div>
@@ -714,41 +727,40 @@ function Collaborations({ data }) {
                       aria-expanded="false"
                     >
                       <p className="lg:text-lg">
-                        EPM’s pre-clinical pharmacology studies are being conducted by
-                        top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
-                        Yossi Tam (Hebrew University), and Prof. Mark Brown (MedPharm),
-                        amongst others. The animal studies cover a wide range of disease
-                        areas, including: Inflammatory Skin Diseases, Metabolic
-                        Diseases, Osteoarthritis and joint pain, and Inflammatory Bowel
-                        Diseases. Results at this early stage of development are
-                        extremely positive.
+                        EPM’s preclinical pharmacology studies are being
+                        conducted by top researchers, including Prof. Dan Peer
+                        (Tel Aviv University), Prof. Yossi Tam (Hebrew
+                        University), and Prof. Mark Brown (MedPharm). The animal
+                        studies cover a wide range of disease areas such as ng:
+                        inflammatory skin diseases, metabolic diseases,
+                        osteoarthritis and inflammatory bowel diseases. Results
+                        at the preclinical studies are extremely positive.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="lg:h-1/3-screen">
               <div className="container mx-auto px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
-                    name={<span className="animate">Our Innovation</span>}
+                    name={
+                      <span className="animate">Our Development Quality</span>
+                    }
                     title={
-                      <h2 className="animate">Commercial Collaborations</h2>
+                      <h2 className="animate">Key Collaborations</h2>
                     }
                   />
                 </div>
 
                 <div className="animate text lg:w-103">
                   <p>
-                    EPM’s proprietary technology enables the fully synthetic
-                    production of both novel and known structures for
-                    pre-clinical and clinical development. Laboratory scale
-                    synthesis, scale-up production and formulation development
-                    are being done by leading global pharmaceutical contract
-                    research organisations (CROs) such as Recipharm (Israel),
-                    Cambrex (US) and MedPharm (UK).
+                    EPM has brought together top researchers from around the
+                    world and contracted with leading Contract Research
+                    Organizations to assure of the most reliable and
+                    highest-quality development and results.
                   </p>
                 </div>
               </div>

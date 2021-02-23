@@ -28,9 +28,9 @@ function Main() {
   useEffect(() => {
     setTimeout(() => {
       const tl = gsap.timeline();
-  
+
       tl.to(".scroll-to-content", {
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -57,10 +57,46 @@ function Main() {
       <div>
         <div className="absolute w-full h-full">
           {isMobile && (
-            <img src="/img/mobile/homepage/hero@3x.jpg" alt="" className="inset-0" />
+            <video
+              width="375"
+              height="812"
+              poster="/img/mobile/homepage/hero@2x.jpg"
+              className="inset-0"
+              autoPlay
+              muted
+              loop
+            >
+              <source src="/videos/mobile/home.mp4" type="video/mp4" />
+              <Image
+                priority={true}
+                src="/img/mobile/homepage/hero@2x.jpg"
+                alt=""
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+              />
+            </video>
           )}
           {isDesktop && (
-            <img src="/img/desktop/homepage/hero@2x.jpg" alt="" className="inset-0" />
+            <video
+              width="1920"
+              height="1080"
+              poster="/img/desktop/homepage/hero@2x.jpg"
+              className="inset-0"
+              autoPlay
+              muted
+              loop
+            >
+              <source src="/videos/desktop/home.mp4" type="video/mp4" />
+              <Image
+                priority={true}
+                src="/img/desktop/homepage/hero@2x.jpg"
+                alt=""
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+              />
+            </video>
           )}
         </div>
         <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
@@ -69,7 +105,9 @@ function Main() {
             Medicines to All.
           </h1>
           <p className="main__tagline animate lg:text-3xl lg:font-light">
-            New generation of prescription medications
+            Novel therapeutics from synthetic cannabinoid acids
+            <br />
+            for a healthier and brighter future
           </p>
           <Image src="/img/mobile/1.jpg" alt="" width="1" height="1" />
         </div>

@@ -31,7 +31,7 @@ function Main() {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -42,7 +42,7 @@ function Main() {
 
   const scrollToContent = (event) => {
     event.preventDefault();
-    document.querySelector("#story").scrollIntoView({
+    document.querySelector("#our-story").scrollIntoView({
       behavior: "smooth",
     });
   };
@@ -57,24 +57,46 @@ function Main() {
     >
       <div className="absolute w-full h-full">
         {isMobile && (
-          <Image
-            priority={true}
-            src="/img/mobile/about/hero@3x.jpg"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+          <video
+            width="375"
+            height="812"
+            poster="/img/mobile/about/hero@2x.jpg"
+            className="inset-0"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/videos/mobile/our-story.mp4" type="video/mp4" />
+            <Image
+              priority={true}
+              src="/img/mobile/about/hero@3x.jpg"
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </video>
         )}
         {isDesktop && (
-          <Image
-            loading="eager"
-            src="/img/desktop/about/hero@2x.jpg"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+          <video
+            width="1920"
+            height="1080"
+            poster="/img/desktop/about/hero@2x.jpg"
+            className="inset-0"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/videos/desktop/our-story.mp4" type="video/mp4" />
+            <Image
+              priority={true}
+              src="/img/desktop/about/hero@2x.jpg"
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </video>
         )}
       </div>
       <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
@@ -154,7 +176,7 @@ function Main() {
       </div>
       <div className="scroll-to-content absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <a
-          href="#story"
+          href="#our-story"
           onClick={scrollToContent}
           className="transition-opacity duration-150 hover:opacity-70"
         >

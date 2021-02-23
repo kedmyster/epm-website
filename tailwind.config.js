@@ -50,6 +50,9 @@ module.exports = {
         "8.5xl": "7.5rem",
         "7.5xl": "5.25rem",
       },
+      lineHeight: {
+        '0': '0',
+      },
       colors: {
         "epm-gray-100": "#f8f8f8",
         "epm-gray-300": "#EEEEEF",

@@ -105,9 +105,7 @@ function Innovation({ data }) {
               {data.slides.map((slide) => {
                 return (
                   <div className="item">
-                    <div
-                      className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen"
-                    >
+                    <div className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
                       <div className="absolute w-full h-full">
                         <Image
                           src={slide.images.mobile}
@@ -137,14 +135,14 @@ function Innovation({ data }) {
               <div className="mb-6">
                 <SectionHeader
                   name="Our Innovation"
-                  title={<h2>Creation of New Treatments</h2>}
+                  title={<h2>Creating Treatments</h2>}
                 />
               </div>
               <div className="text lg:w-103">
                 <p>
-                  EPM are committed to developing a series of new therapeutic
-                  solutions based on cannabinoid acids providing alternative
-                  treatments for patients.
+                  EPM’s mission is to develop a wide array of therapeutic
+                  treatments based on synthetic cannabinoid acids, producing
+                  medicinal solutions and treatments like never before.
                 </p>
               </div>
               <div className="button pt-10">
@@ -217,17 +215,15 @@ function Innovation({ data }) {
                 <div>
                   <SectionHeader
                     name={<span className="animate">Our Innovation</span>}
-                    title={
-                      <h2 className="animate">Creation of New Treatments</h2>
-                    }
+                    title={<h2 className="animate">Creating New Treatments</h2>}
                   />
                 </div>
 
                 <div className="animate text lg:w-103">
                   <p>
-                    EPM are committed to developing a series of new therapeutic
-                    solutions based on cannabinoid acids providing alternative
-                    treatments for patients.
+                    EPM’s mission is to develop a wide array of therapeutic
+                    treatments based on synthetic cannabinoid acids, producing
+                    medicinal solutions and treatments like never before.
                   </p>
                 </div>
                 <div className="button animate">

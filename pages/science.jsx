@@ -20,18 +20,21 @@ export default function science() {
             mobile: "/img/mobile/science/solution/thumb-01@2x.jpg",
             desktop: "/img/desktop/science/solution/thumb-01@2x.jpg",
           },
+          video: "https://www.youtube.com/embed/cWShfI5tCUs",
         }, 
         {
           images: {
             mobile: "/img/mobile/science/solution/thumb-02@2x.jpg",
             desktop: "/img/desktop/science/solution/thumb-02@2x.jpg",
-          }
+          },
+          video: "https://www.youtube.com/embed/1qrPwiifufo",
         },
         {
           images: {
             mobile: "/img/mobile/science/solution/thumb-03@2x.jpg",
             desktop: "/img/desktop/science/solution/thumb-03@2x.jpg",
-          }
+          },
+          video: "https://www.youtube.com/embed/KVKuov_GbZo",
         },
       ],
     },
@@ -221,13 +224,13 @@ export default function science() {
           
         },
         {
-          title: "Anxiety",
+          title: "Nausea and Anxiety",
           text: "Pertwee.R.G, et.al.,British Journal of pharmacology, 2018",
           url: "/papers/nausea-and-anxiety.pdf",
           
         },
         {
-          title: "Neuropathic",
+          title: "Neuropathic Pain",
           text: "Zho.Y.F, et.al., British Journal of pharmacology, 2020",
           url: "/papers/neuropathic-pain.pdf",
         },

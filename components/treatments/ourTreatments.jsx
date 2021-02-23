@@ -33,7 +33,7 @@ function OurTreatments({ data }) {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -75,14 +75,16 @@ function OurTreatments({ data }) {
     const moreInfoPanel = section.querySelector(".more-info");
 
     if (isMobile) {
+      const button = section.querySelector(".button");
+
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         moreInfoPanel.setAttribute("aria-expanded", "true");
         moreInfoPanel.style.display = "block";
-        event.target.innerText = "Close";
+        button.classList.add("hidden");
       } else {
         moreInfoPanel.setAttribute("aria-expanded", "false");
         moreInfoPanel.style.display = "none";
-        event.target.innerText = "Learn More";
+        button.classList.remove("hidden");
       }
     }
 
@@ -116,7 +118,10 @@ function OurTreatments({ data }) {
                 <div className="flex flex-row justify-center">
                   <div className="item flex flex-col w-1/3 items-center justify-between">
                     <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a href="#inflammatory-bowel-disease" className="leading-none">
+                      <a
+                        href="#inflammatory-bowel-disease"
+                        className="leading-0"
+                      >
                         {isMobile && (
                           <Image
                             loading="eager"
@@ -150,7 +155,10 @@ function OurTreatments({ data }) {
                   </div>
                   <div className="item flex flex-col w-1/3 items-center justify-between">
                     <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a href="#acute-respiratory-distress-syndrome" className="leading-none">
+                      <a
+                        href="#acute-respiratory-distress-syndrome"
+                        className="leading-0"
+                      >
                         {isMobile && (
                           <Image
                             loading="eager"
@@ -183,7 +191,7 @@ function OurTreatments({ data }) {
                   </div>
                   <div className="item flex flex-col w-1/3 items-center justify-between">
                     <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a href="#psoriasis" className="leading-none">
+                      <a href="#psoriasis" className="leading-0">
                         {isMobile && (
                           <Image
                             loading="eager"
@@ -209,7 +217,7 @@ function OurTreatments({ data }) {
                       </a>
                     </div>
                     <div className="item__title text-center text-xxs lg:text-base font-title uppercase py-3 px-3 h-14 lg:h-20">
-                      IV for ARDS
+                      Acute Respiratory Distress Syndrome
                     </div>
                   </div>
                 </div>
@@ -221,20 +229,20 @@ function OurTreatments({ data }) {
               <div className="mb-6 lg:mb-0">
                 <SectionHeader
                   name="Our treatments"
-                  title={<h2>Medicines We Develop Today</h2>}
+                  title={<h2>Creating Better Treatments and Changing Lives</h2>}
                 />
               </div>
               <div className="animate text lg:text-lg lg:w-96 lg:mt-6 lg:flex-grow">
                 <p>
-                  EPM are committed to developing a series of new therapeutic
-                  solutions based on cannabinoid acids providing alternative
+                  EPM is committed to developing a series of new therapeutic
+                  solutions based on cannabinoid acids which provide alternative
                   treatments for patients. This is the driving force behind
                   EPM’s research program. Although cannabinoid acids are
-                  potential treatments for a wide range of diseases, currently
-                  EPM’s focus on three main therapeutic conditions based on its
-                  lead molecule EPM301 : Inflammatory Bowel Disease,
-                  Inflammatory skin disease (psoriasis) and Acute Respiratory
-                  Distress Syndrome in COVID-19 patients.
+                  potential treatments for a wide range of diseases, currently,
+                  EPM focuses on three main therapeutic conditions based on its
+                  lead molecule EPM301: Inflammatory Bowel Disease, inflammatory
+                  skin disease (psoriasis) and Acute Respiratory Distress
+                  Syndrome in COVID-19 patients.
                 </p>
               </div>
               {isDesktop && (
@@ -263,12 +271,10 @@ function OurTreatments({ data }) {
               <div className="item flex flex-wrap flex-col lg:flex-row-reverse lg:h-screen">
                 <div className="container relative mx-auto px-4 lg:px-8 lg:flex-grow h-2/3-screen lg:h-full lg:w-7/12 bg-epm-gray-100 flex justify-center items-center">
                   <div className="flex lg:flex-col content-center justify-center lg:w-full lg:max-w-4xl lg:justify-end lg:h-full lg:pb-24">
-                    <div className="animate container mx-auto lg:px-8 relative z-10">
+                    <div className="animate container mx-auto lg:px-8 relative z-0">
                       <div className="flex flex-row justify-center">
                         <div className="item flex flex-col w-1/3 items-center justify-between">
-                          <div className="item__image flex justify-center items-end flex-grow">
-                            
-                          </div>
+                          <div className="item__image flex justify-center items-end flex-grow"></div>
                           <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
                             {isMobile && (
                               <Image
@@ -349,9 +355,7 @@ function OurTreatments({ data }) {
                           </div>
                         </div>
                         <div className="item flex flex-col w-1/3 items-center justify-between">
-                          <div className="item__image flex justify-center items-end flex-grow">
-                            
-                          </div>
+                          <div className="item__image flex justify-center items-end flex-grow"></div>
                           <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
                             {isMobile && (
                               <Image
@@ -381,23 +385,25 @@ function OurTreatments({ data }) {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap content-center lg:bg-epm-gray-300 lg:px-36  py-8"
-                      aria-expanded="false"
-                    >
-                      {slide.moreInfo}
-                    </div>
+                    {isDesktop && (
+                      <div
+                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap content-center lg:bg-epm-gray-300 lg:px-36  py-8"
+                        aria-expanded="false"
+                      >
+                        {slide.moreInfo}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-                  <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:flex lg:flex-col lg:justify-between lg:h-screen">
-                    <div className="mb-6 lg:mb-0">
+                  <div className="container lg:px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+                    <div className="px-8 lg:px-0 mb-6 lg:mb-0">
                       <SectionHeader
                         name={slide.name}
                         title={<h2>{slide.title}</h2>}
                       />
                     </div>
-                    <div className="animate lg:w-96  lg:mt-6 lg:flex-grow">
+                    <div className="animate lg:w-96 px-8 lg:px-0 lg:mt-6 lg:flex-grow">
                       <div className="formulation lg:text-lg flex-grow pb-4 lg:pb-8">
                         <p className="lg:text-lg font-bold">
                           Selected formulation
@@ -426,6 +432,34 @@ function OurTreatments({ data }) {
                         </Button>
                       </div>
                     </div>
+                    {isMobile && (
+                      <div
+                        className="more-info animate container lg:opacity-0 hidden bg-epm-gray-300 mt-8 px-8 py-8"
+                        aria-expanded="false"
+                      >
+                        <div className="pb-8">
+                          <Button
+                            style="dark"
+                            href="#"
+                            onClick={(event) => toggleLearnMore(event)}
+                          >
+                            Close
+                          </Button>
+                        </div>
+
+                        {slide.moreInfo}
+
+                        <div className="pt-8">
+                          <Button
+                            style="dark"
+                            href="#"
+                            onClick={(event) => toggleLearnMore(event)}
+                          >
+                            Close
+                          </Button>
+                        </div>
+                      </div>
+                    )}
                     {isDesktop && (
                       <div>
                         <span className="normal-case text-epm-gray-500 font-light">

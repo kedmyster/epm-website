@@ -28,6 +28,7 @@ function Button({
       "transition-all",
       "duration-150",
       "lg:px-10",
+      "px-8",
       "py-2",
       "hover:bg-epm-yellow",
       "hover:border-epm-yellow",

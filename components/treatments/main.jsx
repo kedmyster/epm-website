@@ -31,7 +31,7 @@ function Main() {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -57,24 +57,46 @@ function Main() {
     >
       <div className="absolute w-full h-full">
         {isMobile && (
-          <Image
-            loading="eager"
-            src="/img/mobile/treatments/hero@3x.jpg"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+          <video
+            width="375"
+            height="812"
+            poster="/img/mobile/treatments/hero@2x.jpg"
+            className="inset-0"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/videos/mobile/treatments.mp4" type="video/mp4" />
+            <Image
+              priority="true"
+              src="/img/mobile/treatments/hero@2x.jpg"
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </video>
         )}
         {isDesktop && (
-          <Image
-            loading="eager"
-            src="/img/desktop/treatments/hero@2x.jpg"
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
+          <video
+            width="1920"
+            height="1080"
+            poster="/img/desktop/treatments/hero@2x.jpg"
+            className="inset-0"
+            autoPlay
+            muted
+            loop
+          >
+            <source src="/videos/desktop/treatments.mp4" type="video/mp4" />
+            <Image
+              priority="true"
+              src="/img/desktop/treatments/hero@2x.jpg"
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </video>
         )}
       </div>
       <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
@@ -84,10 +106,9 @@ function Main() {
             Our Treatments
           </p>
           <h1 className="animate font-title text-4xl lg:text-7.5xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
-            Medicines We Develop Today
+            Medicines We Develop
           </h1>
         </div>
-        
       </div>
       <div className="scroll-to-content absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <a

@@ -14,18 +14,18 @@ export default function Home() {
     innovation: {
       slides: [
         {
-          title: "Made in labs",
+          title: "Lab-Made",
           text:
-            "We are synthesizing and developing cannabinoid Methyl-Esters products, which are fully synthetic",
+            "Synthesizing and creating consistent cannabinoid methyl-ester based treatments.",
           images: {
             mobile: "/img/mobile/homepage/our-innovation/made-in-labs@2x.jpg",
             desktop: "/img/desktop/homepage/our-innovation/made-in-labs@2x.jpg",
           },
         },
         {
-          title: "US FDA",
+          title: "FDA Guidelines",
           text:
-            "Treatments are developed following the guidelines and approval of the US FDA",
+            "Developing prescription medicine under guidelines and FDA approval.",
           images: {
             mobile: "/img/mobile/homepage/our-innovation/fda@2x.jpg",
             desktop: "/img/desktop/homepage/our-innovation/fda@2x.jpg",
@@ -34,7 +34,7 @@ export default function Home() {
         {
           title: "Collaboration",
           text:
-            "Development are being done by leading global pharmaceutical contract research organizations",
+            "Researching and developing with leading pharmaceutical contract research organizations around the world.",
           images: {
             mobile: "/img/mobile/homepage/our-innovation/collaboration@2x.jpg",
             desktop:
@@ -68,6 +68,7 @@ export default function Home() {
         },
         {
           title: "IV for ARDS",
+          tagline: "(Acute Respiratory Distress Syndrome)",
           images: {
             mobile: {
               url: "/img/mobile/homepage/our-treatments/treatment-iv@3x.png",
@@ -82,7 +83,7 @@ export default function Home() {
       slides: [
         {
           name: "Maria, 32",
-          role: "Crohn's",
+          role: "Crohn's Disease",
           images: {
             mobile: "/img/mobile/homepage/our-community/maria@2x.jpg",
             desktop: "/img/desktop/homepage/our-community/maria@2x.jpg",
@@ -112,8 +113,8 @@ export default function Home() {
           name: "George, 73",
           role: "Psoriasis",
           images: {
-            mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
+            mobile: "/img/mobile/homepage/our-community/george@2x.jpg",
+            desktop: "/img/desktop/homepage/our-community/george@2x.jpg",
           },
           quote: (
             <p>
@@ -131,25 +132,25 @@ export default function Home() {
           },
           quote: (
             <p>
-              “Cannabinoid acids are compounds that are much more potent than
-              cannabinoids and have an outstanding therapeutic potential”
+              Cannabinoid acids are compounds that are much more potent than
+              cannabinoids and have an outstanding therapeutic potential.
             </p>
           ),
         },
-        {
-          name: "Ryan, 25",
-          role: "Ulcerative Colitis",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
-          },
-          quote: (
-            <p>
-              “I’ve been living with my Colitis for over 6 years, EPM’s
-              discovery can be a real life-changer. “
-            </p>
-          ),
-        },
+        // {
+        //   name: "Ryan, 25",
+        //   role: "Ulcerative Colitis",
+        //   images: {
+        //     mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
+        //     desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
+        //   },
+        //   quote: (
+        //     <p>
+        //       “I’ve been living with my Colitis for over 6 years, EPM’s
+        //       discovery can be a real life-changer. “
+        //     </p>
+        //   ),
+        // },
         {
           name: "Julian Gangolli",
           role: "Head of Advisory Board",
@@ -160,7 +161,7 @@ export default function Home() {
           quote: (
             <p>
               The significant clinical values of CBD and cannabinoids has
-              already been demonstrated… a very exciting therapeutic development
+              already been demonstrated a very exciting therapeutic development.
             </p>
           ),
         },

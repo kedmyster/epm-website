@@ -116,15 +116,15 @@ function Community({ data }) {
                           />
                         )}
                       </div>
-                      <div className="lg:border-3 lg:border-white">
-                        <div className="quote text-2xl font-light italic px-6 pb-6 lg:pt-6 lg:text-left">
+                      <div className="lg:border-3 lg:border-white lg:h-60">
+                        <div className="quote text-xl lg:text-2xl font-light italic px-6 pb-6 lg:pt-6 text-left">
                           {slide.quote}
                         </div>
                       </div>
                     </div>
-                    <div className="container mx-auto px-8 pb-8 lg:py-8 relative lg:absolute lg:top-0 lg:opacity-0 lg:transition-all lg:duration-250 lg:ease-in-out">
+                    <div className="container mx-auto px-8 pb-8 lg:py-8 h-20 lg:h-auto relative lg:absolute lg:top-0 lg:opacity-0 lg:transition-all lg:duration-250 lg:ease-in-out ">
                       <div className="item-name text-lg">{slide.name}</div>
-                      <div className="item__title font-light text-center text-xs font-title">
+                      <div className="item__title font-light text-center text-xxs font-title">
                         {slide.role}
                       </div>
                     </div>

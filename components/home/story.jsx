@@ -60,14 +60,19 @@ function Story() {
         <div className="relative container mx-auto py-8 px-8">
           <SectionHeader
             name={<span className="animate">Our Story</span>}
-            title={<h2 className="animate pb-52 lg:pb-0">Patient-focused Pharmaceutical Group</h2>}
+            title={
+              <h2 className="animate pb-52 lg:pb-0">
+                Patient-focused Pharmaceutical Group
+              </h2>
+            }
           />
           <div className="animate text lg:w-105 lg:mx-auto">
             <p className="lg:text-lg lg:mt-6">
-              EPM is developing prescription medicines, based on novel discoveries
-              of synthetic cannabinoid acids to address unmet patient needs in a
-              wide range of therapeutic conditions. These innovations represent
-              new treatment options for the pharmaceutical industry.
+              EPM is developing prescription medicine based on novel discoveries
+              of synthetic cannabinoid acids to address unmet patient needs.
+              These innovations represent new treatment options and aim at
+              alleviating a wide range of therapeutic conditions for millions of
+              patients worldwide.
             </p>
           </div>
           <div className="animate button pt-10 lg:pt-96">

@@ -33,7 +33,7 @@ function OurStory() {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -44,14 +44,14 @@ function OurStory() {
 
   return (
     <section
-      id="story"
-      className="section story bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-700 lg:flex-row-reverse lg:h-screen"
+      id="our-story"
+      className="section story bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
       data-side-menu-label="Our Story"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="video relative lg:flex-grow lg:w-7/12">
+      <div className="video animate relative lg:flex-grow lg:w-7/12">
         {isMobile && (
           <Image
             loading="eager"
@@ -74,7 +74,7 @@ function OurStory() {
           />
         )}
         <div className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
-          <Button href="/about/#story" style="light">
+          <Button href="#" style="light">
             Play Video
           </Button>
         </div>
@@ -89,22 +89,35 @@ function OurStory() {
             />
           </div>
           <div className="animate text mt-6 lg:text-lg lg:w-96">
-            <p>
-              EPM develops prescription medicines derived from synthetic
-              cannabinoid acids to address unmet patient needs. Our mission is
-              to develop safer treatment options for people. Our focus is to
-              bring cannabinoid acid based medicines to patients in a wide range
-              of therapeutic conditions, current treatment developments include
-              Psoriasis, IBD and ARDS. At EPM we care to make a real difference
-              by helping people live a life of higher quality. EPM created a
-              pipeline which includes the discovery of 14 protected synthetic
-              molecules, including 8 novel structures and the development of
-              various processes. EPM maintains control over all aspects of the
-              product development process – research and discovery, formulation,
-              toxicology, scaleup manufacturing, clinical trial and regulatory
-              affairs. EPM is leading the way in realizing the untapped
-              potential of cannabinoids acids as new pharmaceutical treatments.
-            </p>
+          <p className="mb-4">
+          EPM develops prescription medicine derived from synthetic
+          cannabinoid acids to address unmet patient needs.
+        </p>
+        <p className="mb-4">
+          Our mission is to enable safe, effective and accessible treatments
+          for patients in a wide range of therapeutic areas.
+        </p>
+        <p className="mb-4">
+          We have created a pipeline which includes the discovery of 14
+          protected synthetic molecules, including 8 novel structures and
+          production processes IP. Currently EPM is advancing 3 treatments
+          to human trials following the guidance of the U.S. FDA: Psoriasis,
+          IBD and ARDS.
+        </p>
+        <p className="mb-4">
+          At EPM, we are committed to continue the novel discovery of
+          cannabinoid acid molecules for research and drug development
+          purposes
+        </p>
+        <p className="mb-4">
+          EPM maintains control over all aspects of the product development
+          process – research and discovery, formulation, toxicology, scaleup
+          manufacturing, clinical trials and regulatory affairs.
+        </p>
+        <p className="">
+          EPM is leading the way in realizing the untapped potential of
+          cannabinoid acids as new pharmaceutical treatments.
+        </p>
           </div>
         </div>
       </div>

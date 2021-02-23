@@ -73,7 +73,7 @@ function Commitment() {
                   />
                 </div>
                 <div className="item__title text-center text-sm font-title mt-1">
-                  Affordable
+                  Affordable Drugs
                 </div>
               </div>
               <div className="item text-center w-1/3">
@@ -86,7 +86,7 @@ function Commitment() {
                   />
                 </div>
                 <div className="item__title text-center text-sm font-title mt-1 px-4 lg:px-0">
-                  No Side Effects
+                  Minimal Side Effects
                 </div>
               </div>
             </div>
@@ -96,14 +96,17 @@ function Commitment() {
               <div className="mb-6">
                 <SectionHeader
                   name="Our Commitment"
-                  title={<h2>We Believe in Developing Safer Treatments</h2>}
+                  title={<h2>Developing Safer Treatments</h2>}
                 />
               </div>
               <div className="text lg:w-103">
                 <p>
-                  EPM are committed to developing a series of new therapeutic
-                  solutions based on cannabinoid acids providing alternative
-                  treatments for patients.
+                  EPM is committed to developing a series of new medicinal
+                  solutions based on cannabinoid acids. We believe that
+                  providing alternative and better treatments to a wide range of
+                  patients is our mission, and that cannabinoid acid-based
+                  treatments are the healthful alternative to existing products
+                  in the market.
                 </p>
               </div>
               <div className="button pt-10">
@@ -131,7 +134,7 @@ function Commitment() {
           <div className="container relative mx-auto px-8 pt-8 text-center">
             <SectionHeader
               name="Our Commitment"
-              title={<h2>We Believe in Developing Safer Treatments</h2>}
+              title={<h2>Developing Safer Treatments</h2>}
             />
           </div>
           <div className="animate container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto space-x-10">
@@ -149,30 +152,10 @@ function Commitment() {
               </div>
               <div className="item-text text-center text-sm font-light mt-1">
                 <p>
-                  We are synthesizing and developing cannabinoid Methyl-Esters
-                  products, which are fully synthetic.
+                  EPM’s responsibility and mission is to offer valid and quality
+                  alternatives to existing solutions in the market for a wide
+                  range of medical conditions.
                 </p>
-              </div>
-            </div>
-            <div className="item w-1/3 text-center">
-              <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
-                <Image
-                  src="/img/icons/homepage/our-commitment/affordable.svg"
-                  alt=""
-                  width="93"
-                  height="93"
-                />
-              </div>
-              <div className="border-l-0.5 border-r-0.5 border-white border-box">
-                <div className="item__title text-center text-2xl font-title mt-6 px-10 h-16">
-                  Affordable
-                </div>
-                <div className="item-text text-center text-sm font-light px-10 mt-1">
-                  <p>
-                    We are synthesizing and developing cannabinoid Methyl-Esters
-                    products, which are fully synthetic.
-                  </p>
-                </div>
               </div>
             </div>
             <div className="item w-1/3 text-center">
@@ -184,24 +167,48 @@ function Commitment() {
                   height="67"
                 />
               </div>
-              <div className="item__title text-center text-2xl font-title mt-6 px-10 h-16 ">
-                Minimal side
-                <br /> effects
+              <div className="border-l-0.5 border-r-0.5 border-white border-box">
+                <div className="item__title text-center text-2xl font-title mt-6 px-10 h-16 ">
+                  Minimal side
+                  <br /> effects
+                </div>
+                <div className="item-text text-center text-sm font-light px-10 mt-1">
+                  <p>
+                    We are committed to creating safe solutions ensuring minimal
+                    side effects with maximal benefits.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="item w-1/3 text-center">
+              <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
+                <Image
+                  src="/img/icons/homepage/our-commitment/affordable.svg"
+                  alt=""
+                  width="93"
+                  height="93"
+                />
+              </div>
+              <div className="item__title text-center text-2xl font-title mt-6 px-10 h-16">
+                Affordable Drugs
               </div>
               <div className="item-text text-center text-sm font-light mt-1">
                 <p>
-                  We are synthesizing and developing cannabinoid Methyl-Esters
-                  products, which are fully synthetic.
+                  The low production cost will allow us to offer a competitive
+                  price that will generate affordable medicine reaching
+                  countless patients.
                 </p>
               </div>
             </div>
           </div>
           <div className="container relative mx-auto text-center px-8 py-8">
-            <div className="text animate font-light mx-auto lg:w-103">
+            <div className="text animate font-light mx-auto lg:w-105">
               <p>
-                EPM are committed to developing a series of new therapeutic
-                solutions based on cannabinoid acids providing alternative
-                treatments for patients.
+                EPM is committed to developing a series of new medicinal
+                solutions based on cannabinoid acids. We believe that providing
+                alternative and better treatments to a wide range of patients is
+                our mission, and that cannabinoid acid-based treatments are the
+                healthful alternative to existing products in the market.
               </p>
             </div>
             <div className="button animate pt-10">

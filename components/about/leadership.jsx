@@ -32,7 +32,7 @@ function Leadership({ leaders = [] }) {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -41,93 +41,159 @@ function Leadership({ leaders = [] }) {
     );
   }, []);
 
-  return (
-    <section
-      id="leadership"
-      className="section leadership bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-700 lg:flex-row"
-      data-side-menu-label="Leadership"
-      data-side-menu-color="dark"
-      data-side-menu-visibility="visible"
-      data-header-menu-visibility="visible"
-    >
-      <div className="lg:flex-grow lg:pl-56">
-        <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:sticky lg:top-0">
-          <div className="mb-6 lg:mb-0">
-            <SectionHeader
-              name="Our story"
-              title={<h2>Leadership</h2>}
-            />
-          </div>
-          <div className="animate text lg:text-lg lg:w-96 lg:mt-6">
-            <p>
-              We are grateful to have an experienced team with specialties in
-              different fields and unique backgrounds. We all share a common
-              vision and values. We all strive to “help people live a life of
-              higher quality” and want to make sure our efforts reach as many
-              people as possible. Our elite research team is one of the most
-              recognized in the industry, spearheaded by the fundamental work of
-              Professor Raphael Mecholuam, known as the father of cannabinoid
-              research, since 1963.
-            </p>
-          </div>
-        </div>
-      </div>
+  const toggleLeader = (event) => {
+    event.preventDefault();
 
-      <div className="items lg:w-7/12 lg:flex-shrink-0">
-        {leaders.map(group => {
-          return (
-            <div className="items-group lg:flex lg:flex-wrap relative">
-              <div className="font-title uppercase text-lg lg:text-2xl w-full text-center bg-epm-gray-300 py-1.5 lg:pr-8 lg:absolute lg:top-0 lg:z-20">{group.group}</div>
-              {group.people.map(leader => {
-                return (
-                  <>
-                    <div className="item relative lg:w-1/3 lg:h-1/2-screen">
-                      <div className="hidden lg:block absolute w-full h-full inset-0 bg-black bg-opacity-25 z-10"></div>
-                      <div className="relative h-52 lg:h-full overflow-y-hidden lg:overflow-y-auto">
+    const leaders = document.querySelectorAll(".leader");
+    const currentLeader = event.target.closest(".leader");
+
+    leaders.forEach((leader) => {
+      const leaderText = leader.querySelector(".leader__text");
+
+      if (leader === currentLeader) {
+        const arrow = leader.querySelector(".arrow");
+        
+        if (currentLeader.getAttribute("aria-expanded") === "false") {
+          leader.setAttribute("aria-expanded", "true");
+          leaderText.classList.remove("hidden");
+          gsap.to(arrow, { rotation: 180, duration: 0.25 });
+        } else {
+          leader.setAttribute("aria-expanded", "false");
+          leaderText.classList.add("hidden");
+          gsap.to(arrow, { rotation: 0, duration: 0.25 });
+        }
+      } else {
+        leader.setAttribute("aria-expanded", "false");
+        leaderText.classList.add("hidden");
+      }
+    });
+  };
+
+  return (
+    <>
+      {leaders.map((group) => {
+        return (
+          <section
+            id={group.id}
+            key={group.id}
+            className="section leadership bg-white relative w-full flex flex-col lg:flex-row border-b-1 border-epm-gray-300 lg:h-screen"
+            data-side-menu-label="Leadership"
+            data-side-menu-color="dark"
+            data-side-menu-visibility="visible"
+            data-header-menu-visibility="visible"
+          >
+            <div className="lg:flex-grow lg:pl-56">
+              <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:top-0">
+                <div className="">
+                  <SectionHeader
+                    name="Our Team"
+                    title={<h2>{group.group}</h2>}
+                  />
+                </div>
+                {isDesktop && (
+                  <div className="animate text lg:text-lg lg:w-96 lg:mt-6">
+                    <p>{group.text}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="leaders lg:w-7/12 lg:flex-shrink-0 lg:h-full">
+              <div className="leaders-group relative lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+                {group.people.map((leader) => {
+                  return (
+                    <>
+                      <div
+                        className="leader animate relative cursor-pointer lg:w-full bg-white transition-colors duration-150 hover:bg-epm-gray-100 border-t border-epm-gray-300 last:border-b"
+                        key={leader.name}
+                        onClick={(event) => toggleLeader(event)}
+                      >
+                        <div className="flex flex-row lg:h-1/5">
+                          <div className="leader_image relative h-full overflow-hidden leading-0">
+                            {isMobile && (
+                              <div className="">
+                                <Image
+                                  loading="eager"
+                                  src={leader.image.mobile}
+                                  alt=""
+                                  width={103}
+                                  height={103}
+                                  objectFit="cover"
+                                  quality={100}
+                                />
+                              </div>
+                            )}
+                            {isDesktop && (
+                              <Image
+                                loading="eager"
+                                src={leader.image.desktop}
+                                alt=""
+                                width={180}
+                                height={180}
+                                objectFit="cover"
+                                quality={100}
+                              />
+                            )}
+                          </div>
+                          <div className="leader_content flex flex-col flex-grow py-4 lg:py-6 pl-8 lg:pl-36">
+                            <div className="flex flex-col justify-start h-full">
+                              <div className="leader__name text-lg leading-tight lg:text-2xl font-bold">
+                                {leader.name}
+                              </div>
+                              <div className="leader__role text-sm lg:text-lg font-light">
+                                {leader.role}
+                              </div>
+                              <div className="leader__group text-xxs uppercase lg:text-base font-light pt-3">
+                                {group.group}
+                              </div>
+                            </div>
+                            {isDesktop && (
+                              <div className="leader__text font-light text-lg mt-8 w-101 hidden">
+                                {leader.text}
+                              </div>
+                            )}
+                          </div>
+                          <div className="icon mx-4 lg:mx-8 pt-4 lg:pt-8 flex flex-col justify-start">
+                            <div className="arrow">
+                              {isMobile && (
+                                <Image
+                                  loading="eager"
+                                  src="/img/icons/arrow_down_dark.svg"
+                                  alt=""
+                                  width={20}
+                                  height={12}
+                                  layout="intrinsic"
+                                  quality={100}
+                                />
+                              )}
+                              {isDesktop && (
+                                <Image
+                                  loading="eager"
+                                  src="/img/icons/arrow_down_dark.svg"
+                                  alt=""
+                                  width={40}
+                                  height={24}
+                                  objectFit="cover"
+                                  quality={100}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        </div>
                         {isMobile && (
-                          <div className="absolute -top-20">
-                            <Image
-                              loading="eager"
-                              src={leader.image.mobile}
-                              alt=""
-                              width={375}
-                              height={500}
-                              layout="intrinsic"
-                              quality={100}
-                            />
+                          <div className="leader__text px-8 pt-4 pb-8 hidden">
+                            {leader.text}
                           </div>
                         )}
-                        {isDesktop && (
-                          <Image
-                            loading="eager"
-                            src={leader.image.desktop}
-                            alt=""
-                            layout="fill"
-                            objectFit="cover"
-                            quality={100}
-                          />
-                        )}
                       </div>
-                      <div className="absolute left-8 bottom-8 z-10 hidden lg:block">
-                        <div className="name text-lg font-bold text-white">{leader.name}</div>
-                        <div className="role text-sm font-light text-white">{leader.role}</div>
-                      </div>
-                      <div>
-                        <div className="container mx-auto px-8 pt-4 pb-8 lg:hidden">
-                          <div className="name text-lg font-bold text-center">{leader.name}</div>
-                          <div className="role text-xs font-light text-center">{leader.role}</div>
-                          <div className="text mt-8">{leader.text}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                )
-              })}
+                    </>
+                  );
+                })}
+              </div>
             </div>
-          )
-        })}
-      </div>
-    </section>
+          </section>
+        );
+      })}
+    </>
   );
 }
 

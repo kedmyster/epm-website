@@ -78,7 +78,7 @@ function ResearchPapers({ data }) {
       if (slide) {
         paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.url}`;
       }
-      
+
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         event.target.innerText = "Close";
 
@@ -210,9 +210,9 @@ function ResearchPapers({ data }) {
               />
               <div className="text lg:text-lg lg:w-103">
                 <p>
-                  Here are EPM-supported publications that provide further
-                  pharmacologic background to the current paths of research in
-                  which the Company is engaged.
+                  Here are EPM-supported publications on EPM301, offering
+                  further pharmacologic background on current company research
+                  engagements.
                 </p>
               </div>
             </div>

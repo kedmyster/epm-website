@@ -47,7 +47,7 @@ function Solution({ data }) {
       { opacity: 0.5 },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         y: "-=10px",
         yoyo: true,
         repeat: -1,
@@ -55,6 +55,22 @@ function Solution({ data }) {
       }
     );
   }, []);
+
+  const toggleVideo = (event) => {
+    const item = event.target.closest(".item");
+    const video = item.querySelector(".video");
+    const button = item.querySelector("a");
+
+    if (item.getAttribute("aria-expanded") === "false") {
+      item.setAttribute("aria-expanded", "true");
+      video.classList.remove("hidden");
+      button.innerText = "Close Video";
+    } else {
+      item.setAttribute("aria-expanded", "false");
+      video.classList.add("hidden");
+      button.innerText = "Play Video";
+    }
+  };
 
   return (
     <section
@@ -69,35 +85,48 @@ function Solution({ data }) {
         <Slider {...SLIDER_SOLUTION_CONFIG}>
           {data.slides.map((slide) => {
             return (
-              <div className="image relative lg:flex-grow lg:h-screen">
-                {isMobile && (
-                  <Image
-                    loading="eager"
-                    src={slide.images.mobile}
-                    alt=""
-                    width={375}
-                    height={500}
-                    layout="intrinsic"
-                    quality={100}
-                  />
-                )}
-                {isDesktop && (
-                  <Image
-                    loading="eager"
-                    src={slide.images.desktop}
-                    alt=""
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
-                )}
-                <div className="button absolute left-1/2 transform -translate-x-1/2  bottom-8">
-                  <Button
-                    style="light"
-                    href="#"
-                  >
-                    Play Video
-                  </Button>
+              <div className="item relative lg:flex-grow lg:h-screen">
+                <div className="image">
+                  {isMobile && (
+                    <Image
+                      loading="eager"
+                      src={slide.images.mobile}
+                      alt=""
+                      width={375}
+                      height={500}
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  )}
+                  {isDesktop && (
+                    <Image
+                      loading="eager"
+                      src={slide.images.desktop}
+                      alt=""
+                      layout="fill"
+                      objectFit="cover"
+                      quality={100}
+                    />
+                  )}
+
+                  <div className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
+                    <Button
+                      style="light"
+                      onClick={(event) => toggleVideo(event)}
+                    >
+                      Play Video
+                    </Button>
+                  </div>
+                </div>
+                <div className="video absolute inset-0 hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`${slide.video}?controls=0&rel=0`}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
                 </div>
               </div>
             );
@@ -108,27 +137,40 @@ function Solution({ data }) {
         <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 ">
           <div className="mb-6 lg:mb-0">
             <SectionHeader
-              name="Our innovation"
-              title={<h2>The Solution</h2>}
+              name="Our Science"
+              title={<h2>Endless Potential Molecules</h2>}
             />
           </div>
           <div className="text lg:text-lg lg:w-96 lg:mt-6">
             <p className="mb-4">
-              Using proprietary innovative technology, EPM created a
-              comprehensive and fully-protected portfolio of Pharmaceutical
-              solutions, which are potential alternative to steroids and other
-              treatments. EPM’s synthetic cannabinoid acid based products are
-              protected, potent and industrially reproducible to ensure all
-              pharmaceutical challenges are resolved.
+              EPM develops a dynamic portfolio of prescription medicines derived
+              from synthetic cannabinoid acids. The treatments are based on the
+              discovery of 14 synthetic molecules, including 8 novel structures
+              and different development procedures.
+            </p>
+            <p className="mb-4">
+              In preclinical studies, EPM’s lead molecule has repeatedly shown
+              similar results to established steroids in different inflammatory
+              diseases.
+            </p>
+            <p className="mb-4">
+              EPM’s treatments have high potency, are reproducible and scalable,
+              and have full intellectual protection:
+            </p>
+            <p className="mb-4">
+              <strong className="bold">Potency</strong>
+              EPM’s lead treatment has demonstrated activity equivalent to
+              steroids in inflammatory disease models.
+            </p>
+            <p className="mb-4">
+              <strong className="bold">Consistency</strong>
+              EPM produces its medicine in pharmaceutically- approved GMP
+              facilities with industrial capacity.
             </p>
             <p>
-              Although the Pharmaceutical industry and regulatory institutions
-              have excepted cannabis based medicines, the true potential of
-              cannabinoids remains unlock. The disparity in the required potency
-              for treatments, the requirements of IP protection for
-              pharmaceutical solutions, and the consistency required for mass
-              production of medicines are the main challenges the cannabis
-              industry is facing. Potency- Consistency- Protection-
+              <strong className="bold">Protection</strong>
+              EPM’s patents and IP portfolio cover a wide range of drug
+              formulations and medical conditions.
             </p>
           </div>
         </div>
