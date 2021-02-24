@@ -89,7 +89,7 @@ function Header() {
         },
         {
           opacity: "1",
-          zIndex: "10",
+          zIndex: "11",
           translateY: "0",
           duration: 0.15,
         }
