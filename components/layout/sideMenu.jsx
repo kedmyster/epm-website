@@ -22,9 +22,19 @@ function SideMenu() {
 
     const tlSideMenu = gsap.timeline({
       paused: true,
-      onStart: () => menuItem.closest("li").classList.add("active"),
+      onStart: () => 
+        !menuItem.closest("li.hidden") && menuItem.closest("li").classList.add("active"),
       onReverseComplete: () =>
-        menuItem.closest("li").classList.remove("active"),
+        !menuItem.closest("li.hidden") && menuItem.closest("li").classList.remove("active"),
+      scrollTrigger: {
+        trigger: `#${section.id}`,
+        start: "top-=50%",
+        end: "bottom-=50%",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+    const tlSideMenuHover = gsap.timeline({
+      paused: true,
       scrollTrigger: {
         trigger: `#${section.id}`,
         start: "top-=50%",
@@ -34,6 +44,7 @@ function SideMenu() {
     });
 
     tlSideMenu.add("side-menu");
+    tlSideMenuHover.add("side-menu-hover");
 
     tlSideMenu.to(
       pill,
@@ -44,6 +55,15 @@ function SideMenu() {
       },
       "side-menu"
     );
+    tlSideMenuHover.to(
+      pill,
+      {
+        width: 31,
+        backgroundColor: "#FFD534",
+        duration: 0.1,
+      },
+      "side-menu-hover"
+    );
     tlSideMenu.to(
       label,
       {
@@ -53,16 +73,25 @@ function SideMenu() {
       },
       "side-menu"
     );
-    
+    tlSideMenuHover.to(
+      label,
+      {
+        opacity: 1,
+        delay: 0.15,
+        duration: 0.1,
+      },
+      "side-menu-hover"
+    );
 
     menuItem.animation = tlSideMenu;
+    menuItem.animationHover = tlSideMenuHover;
 
     menuItem.addEventListener("mouseenter", function (event) {
       const active = document.querySelector(".side-menu li.active");
       const current = this.closest("li");
 
       if (active !== current) {
-        this.animation.play();
+        this.animationHover.play();
       }
     });
 
@@ -71,7 +100,7 @@ function SideMenu() {
       const current = this.closest("li");
 
       if (active !== current) {
-        this.animation.reverse();
+        this.animationHover.reverse();
       }
     });
   };
@@ -274,10 +303,7 @@ function SideMenu() {
                   return (
                     <li
                       key={section.id}
-                      className={classNames(
-                        "menu-item my-8 font-title text-xs tracking-wide",
-                        { active: index === 0 }
-                      )}
+                      className="menu-item my-8 font-title text-xs tracking-wide"
                     >
                       <div className="slide cursor-pointer relative">
                         <a
@@ -293,9 +319,7 @@ function SideMenu() {
                 } else {
                   return (
                     <li
-                      className={classNames("menu-item hidden", {
-                        active: index === 0,
-                      })}
+                      className="menu-item hidden"
                     >
                       <div className="slide">
                         <a href={`#${section.id}`}></a>
