@@ -33,7 +33,7 @@ function Footer({}) {
   return (
     <footer
       id="footer"
-      className="section bg-epm-yellow h-screen lg:flex lg:flex-wrap lg:content-center"
+      className="section bg-epm-yellow min-h-screen lg:flex lg:flex-wrap lg:content-center"
       data-side-menu-visibility="hidden"
     >
       <div className="container mx-auto px-8 pt-12 pb-4 lg:py-8">
