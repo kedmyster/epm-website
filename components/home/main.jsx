@@ -55,13 +55,13 @@ function Main() {
       data-header-menu-visibility="hidden"
     >
       <div>
-        <div className="absolute w-full h-full">
+        <div className="video absolute w-full h-full">
           {isMobile && (
             <video
               width="375"
               height="812"
               poster="/img/mobile/homepage/hero@2x.jpg"
-              className="inset-0"
+              className="inset-0 object-fill"
               autoPlay
               muted
               loop
@@ -106,7 +106,7 @@ function Main() {
           </h1>
           <p className="main__tagline animate lg:text-3xl lg:font-light">
             Novel therapeutics from synthetic cannabinoid acids
-            <br />
+            <br/>
             for a healthier and brighter future
           </p>
           <Image src="/img/mobile/1.jpg" alt="" width="1" height="1" />

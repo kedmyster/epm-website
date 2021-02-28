@@ -67,7 +67,7 @@ function Story() {
             }
           />
           <div className="animate text lg:w-105 lg:mx-auto">
-            <p className="lg:text-lg lg:mt-6">
+            <p className="lg:text-epm-base lg:mt-6">
               EPM is developing prescription medicine based on novel discoveries
               of synthetic cannabinoid acids to address unmet patient needs.
               These innovations represent new treatment options and aim at
@@ -76,7 +76,7 @@ function Story() {
             </p>
           </div>
           <div className="animate button pt-10 lg:pt-96">
-            <Button href="/about/#story" style="dark">
+            <Button href="/about/#main" style="dark">
               Learn More
             </Button>
           </div>

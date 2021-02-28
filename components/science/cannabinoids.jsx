@@ -37,7 +37,7 @@ function Cannabinoids() {
       data-header-menu-visibility="visible"
     >
       <div className="flex flex-wrap lg:flex-row-reverse lg:h-screen">
-        <div className="relative mx-auto lg:flex-grow lg:h-full lg:w-7/12">
+        <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-7/12">
           <div className="lg:flex lg:flex-wrap lg:h-full">
             <div className="relative lg:flex-grow lg:w-7/12">
               <div className="image mx-auto text-center lg:pb-5">
@@ -68,14 +68,14 @@ function Cannabinoids() {
           </div>
         </div>
         <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-          <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 ">
+          <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader
                 name="Our innovation"
                 title={<h2>Cannabinoids Acid</h2>}
               />
             </div>
-            <div className="animate text lg:text-lg lg:w-96 mt-6">
+            <div className="animate text lg:text-epm-base mt-6">
               <p className="mb-4">
                 In the plant, cannabinoid acids are the source of all known
                 cannabinoids. The therapeutic effects of cannabinoid acids are

@@ -105,10 +105,8 @@ function Treatments({ data }) {
                   EPM is developing cannabinoid acid-based therapeutic solutions
                   providing alternative treatments for patients. This is the
                   driving force behind EPM’s research program, which is based on
-                  14 IP protected APIs. Although cannabinoid acids are potential
-                  treatments for a wide range of diseases, currently EPM’s focus
-                  is on three main therapeutic conditions: inflammatory bowel
-                  diseases, skin conditions and respiratory concerns.
+                  14 IP protected APIs. Currently EPM’s focus is on three main
+                  therapeutic conditions:
                 </p>
               </div>
               <div className="button pt-10">
@@ -136,10 +134,8 @@ function Treatments({ data }) {
                   EPM is developing cannabinoid acid-based therapeutic solutions
                   providing alternative treatments for patients. This is the
                   driving force behind EPM’s research program, which is based on
-                  14 IP protected APIs. Although cannabinoid acids are potential
-                  treatments for a wide range of diseases, currently EPM’s focus
-                  is on three main therapeutic conditions: inflammatory bowel
-                  diseases, skin conditions and respiratory concerns.
+                  14 IP protected APIs. Currently EPM’s focus is on three main
+                  therapeutic conditions:
                 </p>
               </div>
             </div>
@@ -214,7 +210,7 @@ function Treatments({ data }) {
             </div>
             <div className="animate container mx-auto px-8 py-8">
               <div className="button text-center pt-10">
-                <Button href="/treatments/#treatments" style="dark">
+                <Button href="/treatments/#main" style="dark">
                   Learn More
                 </Button>
               </div>

@@ -55,7 +55,7 @@ function Main() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="hidden"
     >
-      <div className="absolute w-full h-full">
+      <div className="video absolute w-full h-full">
         {isMobile && (
           <video
             width="375"

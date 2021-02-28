@@ -208,7 +208,7 @@ function ResearchPapers({ data }) {
                 name="Our Innovation"
                 title={<h2>Research Papers</h2>}
               />
-              <div className="text lg:text-lg lg:w-103">
+              <div className="text lg:text-epm-base lg:w-103">
                 <p>
                   Here are EPM-supported publications on EPM301, offering
                   further pharmacologic background on current company research
@@ -252,7 +252,7 @@ function ResearchPapers({ data }) {
                       <div className="item__box__bottom absolute bottom-0 left-0 bg-white w-full h-px transform scale-0"></div>
                       <div className="item__box__right absolute bottom-0 right-0 bg-white w-px h-full transform scale-0"></div>
                       <div className="item__content">
-                        <div className="item__title font-title text-2xl uppercase mb-5">
+                        <div className="item__title font-title text-2xl uppercase mb-5 lg:h-16">
                           {slide.title}
                         </div>
                         <div className="item__text font-light text-sm">
@@ -283,7 +283,7 @@ function ResearchPapers({ data }) {
                   />
                 </div>
                 <div className="lg:flex-shrink-0 lg:pl-56 lg:py-8 lg:border-b border-epm-gray-300 lg:w-5/12">
-                  <div className="lg:text-lg text-epm-gray-500">
+                  <div className="lg:text-epm-base text-epm-gray-500">
                     EPM-301 Therapeutic Effect on
                   </div>
                   <div className="item__title font-light text-2xl uppercase mb-6">

@@ -108,7 +108,7 @@ function Collaborations({ data }) {
               />
             </div>
             <div>
-              <p className="lg:text-lg mb-4">
+              <p className="lg:text-epm-base mb-4">
                 EPM’s proprietary technology enables the fully synthetic
                 production of both novel and known structures for pre-clinical
                 and clinical development. Laboratory scale synthesis, scale-up
@@ -116,11 +116,11 @@ function Collaborations({ data }) {
                 global pharmaceutical contract research organisations (CROs)
                 such as Recipharm (Israel), Cambrex (US) and MedPharm (UK).
               </p>
-              <p className="lg:text-lg mb-4">
+              <p className="lg:text-epm-base mb-4">
                 Charles River Laboratories (UK) are conducting the toxicology
                 studies while NCK (Denmark) is manufacturing the GMP batches
               </p>
-              <p className="lg:text-lg">
+              <p className="lg:text-epm-base">
                 By producing pharmaceutically reproducible treatments based on
                 cannabinoid acids, we have demonstrated significantly increased
                 potency and established a consistent production process.
@@ -282,7 +282,7 @@ function Collaborations({ data }) {
                 data-collaboration-panel="commercial"
                 aria-expanded="false"
               >
-                <p className="lg:text-lg mb-4">
+                <p className="lg:text-epm-base mb-4">
                   EPM’s proprietary technology enables the fully synthetic
                   production of both novel and known structures for pre-clinical
                   and clinical development. Laboratory scale synthesis, scale-up
@@ -291,11 +291,11 @@ function Collaborations({ data }) {
                   (CROs) such as Recipharm (Israel), Cambrex (US) and MedPharm
                   (UK).
                 </p>
-                <p className="lg:text-lg mb-4">
+                <p className="lg:text-epm-base mb-4">
                   Charles River Laboratories (UK) are conducting the toxicology
                   studies while NCK (Denmark) is manufacturing the GMP batches
                 </p>
-                <p className="lg:text-lg">
+                <p className="lg:text-epm-base">
                   By producing pharmaceutically reproducible treatments based on
                   cannabinoid acids, we have demonstrated significantly
                   increased potency and established a consistent production
@@ -307,7 +307,7 @@ function Collaborations({ data }) {
                 data-collaboration-panel="academy"
                 aria-expanded="false"
               >
-                <p className="lg:text-lg">
+                <p className="lg:text-epm-base">
                   EPM’s pre-clinical pharmacology studies are being conducted by
                   top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
                   Yossi Tam (Hebrew University), and Prof. Mark Brown
@@ -429,7 +429,7 @@ function Collaborations({ data }) {
                 />
               </div>
               <div>
-                <p className="lg:text-lg mb-4">
+                <p className="lg:text-epm-base mb-4">
                   EPM’s proprietary technology enables the fully synthetic
                   production of both novel and known structures for pre-clinical
                   and clinical development. Laboratory scale synthesis, scale-up
@@ -438,11 +438,11 @@ function Collaborations({ data }) {
                   (CROs) such as Recipharm (Israel), Cambrex (US) and MedPharm
                   (UK).
                 </p>
-                <p className="lg:text-lg mb-4">
+                <p className="lg:text-epm-base mb-4">
                   Charles River Laboratories (UK) are conducting the toxicology
                   studies while NCK (Denmark) is manufacturing the GMP batches
                 </p>
-                <p className="lg:text-lg">
+                <p className="lg:text-epm-base">
                   By producing pharmaceutically reproducible treatments based on
                   cannabinoid acids, we have demonstrated significantly
                   increased potency and established a consistent production
@@ -638,7 +638,7 @@ function Collaborations({ data }) {
                       data-collaboration-panel="commercial"
                       aria-expanded="false"
                     >
-                      <p className="lg:text-lg mb-4">
+                      <p className="lg:text-epm-base mb-4">
                         Laboratory scale synthesis, scaleup production and
                         formulation development are performed by leading global
                         pharmaceutical contract research organisations (CROs)
@@ -647,7 +647,7 @@ function Collaborations({ data }) {
                         toxicology studies while NCK (Denmark) manufactures the
                         GMP batches.
                       </p>
-                      <p className="lg:text-lg">
+                      <p className="lg:text-epm-base">
                         By producing pharmaceutically reproducible treatments
                         based on cannabinoid acids, we have demonstrated
                         significantly increased potency and established a
@@ -726,7 +726,7 @@ function Collaborations({ data }) {
                       data-collaboration-panel="academy"
                       aria-expanded="false"
                     >
-                      <p className="lg:text-lg">
+                      <p className="lg:text-epm-base">
                         EPM’s preclinical pharmacology studies are being
                         conducted by top researchers, including Prof. Dan Peer
                         (Tel Aviv University), Prof. Yossi Tam (Hebrew

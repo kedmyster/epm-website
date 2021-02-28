@@ -60,13 +60,13 @@ function CareersComponent({ positions = [] }) {
           )}
         </div>
         <div className="relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
-          <div className="mb-6 lg:mb-0">
+          <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
               title={<h2>Shape the Future of Healthcare </h2>}
             />
           </div>
-          <div className="text lg:text-lg lg:w-container lg:mx-auto lg:mt-6">
+          <div className="text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
             <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
               medicine and create safer treatments for patients by collaborating
@@ -77,11 +77,11 @@ function CareersComponent({ positions = [] }) {
             </p>
             <p>
               We are looking for enthusiastic and talented individuals who
-              thrive on challenges and a dynamic work environment as well as
+              thrive on challenges and a dynamic work environment<br/>as well as
               people who are passionate to impact through actual results.
             </p>
           </div>
-          <div className="font-bold text-lg lg:text-2xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
+          <div className="font-bold text-lg lg:text-xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
             <p className="mb-4 lg:mb-8">
               Looking to join a dynamic company, and be part of a team that
               shapes the future of healthcare?
@@ -109,11 +109,11 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-visibility="visible"
       >
         <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-          <div className="container mx-auto px-8 lg:pr-0 lg:ml-0 py-8 lg:max-w-none lg:w-101 ">
+          <div className="container mx-auto px-8 lg:pr-0 lg:ml-0 py-8 lg:max-w-none lg:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
             </div>
-            <div className="text lg:text-lg lg:w-96">
+            <div className="text lg:text-epm-base">
               <p className="mb-4">
                 We are a fast-paced and dynamic company, striving to develop new
                 medicines and to enable safer treatments for patients, by
@@ -129,8 +129,8 @@ function CareersComponent({ positions = [] }) {
                 passionate to make a difference through the delivery of results.
               </p>
             </div>
-            <div className="job-openings lg:text-lg mt-4 lg:mt-8 lg:w-96">
-              <div className="lg:text-lgmb-4 lg:mb-8">Job Openings</div>
+            <div className="job-openings lg:text-epm-base mt-4 lg:mt-8 lg:w-96">
+              <div className="lg:text-epm-base mb-4 lg:mb-8">Job Openings</div>
               <div>
                 <table className="w-full table-auto">
                   <tbody className="border-b-1 border-epm-gray-700">

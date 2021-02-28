@@ -21,7 +21,7 @@ export default function Treatments() {
             "The treatment is based on EPM301 and has been evaluated in both acute (DSS induced mouse colitis) and chronic (IL-10 knock-out mouse) animal models of IBD and has shown similar activity to prednisone (acute model) and anti-TNFa mAb (chronic model) when administered by gavage.",
           moreInfo: (
             <div>
-              <div className="text base lg:text-lg mb-4 lg:mb-8">
+              <div className="text base lg:text-epm-base mb-4 lg:mb-8">
                 <p className="mb-4 lg:mb-8">
                   Crohn’s disease and ulcerative colitis, collectively known as
                   inflammatory bowel disease (IBD), are characterized by chronic
@@ -180,7 +180,7 @@ export default function Treatments() {
             "The treatment is based on EPM301 and has been evaluated in an ex vivo model of inflammatory skin disease. When applied topically, it displayed similar activity to hydrocortisone",
           moreInfo: (
             <div>
-              <div className="text base lg:text-lg mb-4 lg:mb-8">
+              <div className="text base lg:text-epm-base mb-4 lg:mb-8">
                 <p className="mb-4 lg:mb-8">
                   Psoriasis is a chronic, systemic, inflammatory skin disease
                   associated with a significant physical and psychological
@@ -319,7 +319,7 @@ export default function Treatments() {
             "The treatment is based on EPM301 and has demonstrated anti-inflammatory activity in a number of models of inflammatory disease (acute and chronic colitis, inflammatory skin diseases) when administered both orally and topically. EPM301 was also well tolerated in a 7-day IV toxicity study in rats.",
           moreInfo: (
             <div>
-              <div className="text base lg:text-lg mb-4 lg:mb-8">
+              <div className="text base lg:text-epm-base mb-4 lg:mb-8">
                 <p className="mb-4 lg:mb-8">
                   Coronavirus disease 2019 (COVID-19) is a disease caused by a
                   new virus – severe acute respiratory syndrome coronavirus 2

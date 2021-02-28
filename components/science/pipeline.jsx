@@ -38,7 +38,7 @@ function Pipeline() {
       data-header-menu-visibility="visible"
     >
       <div className="flex flex-wrap lg:flex-row-reverse lg:h-screen">
-        <div className="relative mx-auto lg:flex-grow lg:h-full lg:w-7/12">
+        <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-7/12">
           <div className="lg:flex lg:flex-wrap lg:h-full">
             <div className="relative lg:flex-grow lg:w-7/12">
               <div className="image mx-auto text-center lg:pb-5">
@@ -51,6 +51,7 @@ function Pipeline() {
                     height={327}
                     layout="intrinsic"
                     quality={100}
+                    className="w-full h-full"
                   />
                 )}
                 {isDesktop && (
@@ -59,7 +60,7 @@ function Pipeline() {
                     src="/img/desktop/science/pipeline@2x.jpg"
                     alt=""
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     quality={100}
                   />
                 )}
@@ -68,8 +69,8 @@ function Pipeline() {
           </div>
         </div>
         <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12 lg:border-t lg:border-epm-gray-300">
-          <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 ">
-            <div>
+          <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
+            <div className="">
               <SectionHeader
                 name={<span className="animate">Our Innovation</span>}
                 title={
@@ -81,7 +82,7 @@ function Pipeline() {
                 }
               />
             </div>
-            <div className="animate text lg:text-lg lg:w-96 mt-6">
+            <div className="animate text lg:text-epm-base mt-6">
               <p>
                 EPM is currently advancing treatments in Psoriasis, IBD and ARDS
                 into the clinic, using EPM301. EPM has also developed an

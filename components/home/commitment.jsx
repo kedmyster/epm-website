@@ -110,7 +110,7 @@ function Commitment() {
                 </p>
               </div>
               <div className="button pt-10">
-                <Button href="/treatments/#treatments" style="dark">
+                <Button href="/science/#main" style="dark">
                   Learn More
                 </Button>
               </div>
@@ -212,7 +212,7 @@ function Commitment() {
               </p>
             </div>
             <div className="button animate pt-10">
-              <Button href="/treatments/#treatments" style="light">
+              <Button href="/science/#main" style="light">
                 Learn More
               </Button>
             </div>

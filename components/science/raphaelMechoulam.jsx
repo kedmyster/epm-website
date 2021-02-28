@@ -202,7 +202,7 @@ function RaphaelMechoulam() {
         </Slider>
       </div>
       <div className="lg:w-5/12 lg:pl-56 pt-20 lg:pt-0">
-        <div className="container mx-auto px-8 lg:pl-0 py-8">
+        <div className="container lg:w-96 mx-auto px-8 lg:pl-0 py-8">
           <SectionHeader
             name={<span className="animate">Raphael Mechoulam</span>}
             title={
@@ -213,7 +213,7 @@ function RaphaelMechoulam() {
               </h2>
             }
           />
-          <div className="text lg:text-lg animate mt-6">
+          <div className="text lg:text-epm-base animate mt-6">
             <p>
               Read on about the inspiring life of the godfather
               <br />

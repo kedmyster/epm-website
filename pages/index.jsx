@@ -125,7 +125,7 @@ export default function Home() {
         },
         {
           name: "Prof.Raphael Mechoulam",
-          role: "",
+          role: "Head of Chemistry Discovery",
           images: {
             mobile: "/img/mobile/homepage/our-community/mechoulam@2x.jpg",
             desktop: "/img/desktop/homepage/our-community/mechoulam@2x.jpg",
@@ -153,7 +153,7 @@ export default function Home() {
         // },
         {
           name: "Julian Gangolli",
-          role: "Head of Advisory Board",
+          role: "Chairman of the Board ",
           images: {
             mobile: "/img/mobile/homepage/our-community/julian@2x.jpg",
             desktop: "/img/desktop/homepage/our-community/julian@2x.jpg",

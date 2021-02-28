@@ -146,7 +146,7 @@ function Innovation({ data }) {
                 </p>
               </div>
               <div className="button pt-10">
-                <Button href="/treatments/#treatments" style="dark">
+                <Button href="/science/#main" style="dark">
                   Learn More
                 </Button>
               </div>
@@ -227,7 +227,7 @@ function Innovation({ data }) {
                   </p>
                 </div>
                 <div className="button animate">
-                  <Button href="/treatments/#treatments" style="dark">
+                  <Button href="/science/#main" style="dark">
                     Learn More
                   </Button>
                 </div>

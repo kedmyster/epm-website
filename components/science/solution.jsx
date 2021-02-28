@@ -108,15 +108,14 @@ function Solution({ data }) {
                       quality={100}
                     />
                   )}
-
-                  <div className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
+                  <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
                     <Button
                       style="light"
                       onClick={(event) => toggleVideo(event)}
                     >
                       Play Video
                     </Button>
-                  </div>
+                  </span>
                 </div>
                 <div className="video absolute inset-0 hidden">
                   <iframe
@@ -134,14 +133,14 @@ function Solution({ data }) {
         </Slider>
       </div>
       <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 ">
+        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
           <div className="mb-6 lg:mb-0">
             <SectionHeader
               name="Our Science"
               title={<h2>Endless Potential Molecules</h2>}
             />
           </div>
-          <div className="text lg:text-lg lg:w-96 lg:mt-6">
+          <div className="text lg:text-epm-base lg:mt-6">
             <p className="mb-4">
               EPM develops a dynamic portfolio of prescription medicines derived
               from synthetic cannabinoid acids. The treatments are based on the

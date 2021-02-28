@@ -151,7 +151,7 @@ function Community({ data }) {
               </p>
             </div>
             <div className="button animate pt-10">
-              <Button href="/treatments/#treatments" style="dark">
+              <Button href="#footer" style="dark">
                 Join Us
               </Button>
             </div>

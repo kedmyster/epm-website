@@ -47,8 +47,9 @@ module.exports = {
     extend: {
       fontSize: {
         "xxs": "0.6875rem",
-        "8.5xl": "7.5rem",
+        "epm-base": "0.9375rem",
         "7.5xl": "5.25rem",
+        "8.5xl": "7.5rem",
       },
       lineHeight: {
         '0': '0',

@@ -83,7 +83,7 @@ function Leadership({ leaders = [] }) {
             data-header-menu-visibility="visible"
           >
             <div className="lg:flex-grow lg:pl-56">
-              <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:top-0">
+              <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:top-0">
                 <div className="">
                   <SectionHeader
                     name="Our Team"
@@ -91,7 +91,7 @@ function Leadership({ leaders = [] }) {
                   />
                 </div>
                 {isDesktop && (
-                  <div className="animate text lg:text-lg lg:w-96 lg:mt-6">
+                  <div className="animate text lg:text-epm-base lg:mt-6">
                     <p>{group.text}</p>
                   </div>
                 )}
@@ -139,7 +139,7 @@ function Leadership({ leaders = [] }) {
                               <div className="leader__name text-lg leading-tight lg:text-2xl font-bold">
                                 {leader.name}
                               </div>
-                              <div className="leader__role text-sm lg:text-lg font-light">
+                              <div className="leader__role text-sm lg:epm-base font-light">
                                 {leader.role}
                               </div>
                               <div className="leader__group text-xxs uppercase lg:text-base font-light pt-3">

@@ -156,7 +156,7 @@ function OurTreatments({ data }) {
                   <div className="item flex flex-col w-1/3 items-center justify-between">
                     <div className="item__image flex justify-center items-end flex-grow mb-6">
                       <a
-                        href="#acute-respiratory-distress-syndrome"
+                        href="#psoriasis"
                         className="leading-0"
                       >
                         {isMobile && (
@@ -191,7 +191,7 @@ function OurTreatments({ data }) {
                   </div>
                   <div className="item flex flex-col w-1/3 items-center justify-between">
                     <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a href="#psoriasis" className="leading-0">
+                      <a href="#acute-respiratory-distress-syndrome" className="leading-0">
                         {isMobile && (
                           <Image
                             loading="eager"
@@ -225,14 +225,14 @@ function OurTreatments({ data }) {
             </div>
           </div>
           <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-            <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+            <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
                 <SectionHeader
                   name="Our treatments"
                   title={<h2>Creating Better Treatments and Changing Lives</h2>}
                 />
               </div>
-              <div className="animate text lg:text-lg lg:w-96 lg:mt-6 lg:flex-grow">
+              <div className="animate text lg:text-epm-base lg:mt-6 lg:flex-grow">
                 <p>
                   EPM is committed to developing a series of new therapeutic
                   solutions based on cannabinoid acids which provide alternative
@@ -396,28 +396,28 @@ function OurTreatments({ data }) {
                   </div>
                 </div>
                 <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-                  <div className="container lg:px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+                  <div className="container lg:px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
                     <div className="px-8 lg:px-0 mb-6 lg:mb-0">
                       <SectionHeader
                         name={slide.name}
                         title={<h2>{slide.title}</h2>}
                       />
                     </div>
-                    <div className="animate lg:w-96 px-8 lg:px-0 lg:mt-6 lg:flex-grow">
-                      <div className="formulation lg:text-lg flex-grow pb-4 lg:pb-8">
-                        <p className="lg:text-lg font-bold">
+                    <div className="animate px-8 lg:px-0 lg:mt-6 lg:flex-grow">
+                      <div className="formulation lg:text-epm-base flex-grow pb-4 lg:pb-8">
+                        <p className="lg:text-epm-base font-bold">
                           Selected formulation
                         </p>
-                        <p className="lg:text-lg">{slide.formulation}</p>
+                        <p className="lg:text-epm-base">{slide.formulation}</p>
                       </div>
-                      <div className="timeline lg:text-lg pb-4 lg:pb-8">
-                        <p className="lg:text-lg font-bold">
+                      <div className="timeline lg:text-epm-base pb-4 lg:pb-8">
+                        <p className="lg:text-epm-base font-bold">
                           Expected clinical trail timeline
                         </p>
                         <p>{slide.timeline}</p>
                       </div>
-                      <div className="solution lg:text-lg">
-                        <p className="lg:text-lg font-bold">
+                      <div className="solution lg:text-epm-base">
+                        <p className="lg:text-epm-base font-bold">
                           EPM's potential solution
                         </p>
                         <p>{slide.solution}</p>

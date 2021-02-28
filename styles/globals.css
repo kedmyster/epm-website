@@ -51,6 +51,16 @@ a {
   box-sizing: border-box;
 }
 
+.image > div, .video > div, .video video {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .image > div, .video > div, .video video {
+    width: 100%;
+  }
+}
+
 /* =================== */
 
 .side-menu .slide .slide__pill {
@@ -139,8 +149,8 @@ a {
     @apply text-white;
   }
 
-  body[data-header-theme="light"] .header .desktop-menu sub-menu li a:hover {
-    @apply transition-opacity duration-150 opacity-70;
+  body[data-header-theme="light"] .header .desktop-menu .sub-menu li a:hover {
+    @apply opacity-70 transition-opacity duration-150 ;
   }
 
   body[data-header-theme="dark"] .header .desktop-menu li.menu-item:hover > a {

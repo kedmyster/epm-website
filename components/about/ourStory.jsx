@@ -51,7 +51,7 @@ function OurStory() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="video animate relative lg:flex-grow lg:w-7/12">
+      <div className="video animate relative lg:flex-grow w-full lg:w-7/12">
         {isMobile && (
           <Image
             loading="eager"
@@ -73,22 +73,22 @@ function OurStory() {
             quality={100}
           />
         )}
-        <div className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
+        <span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8 lg:bottom-20">
           <Button href="#" style="light">
             Play Video
           </Button>
-        </div>
+        </span>
       </div>
 
       <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-101 ">
+        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
           <div className="lg:mb-0">
             <SectionHeader
               name="Our story"
               title={<h2>Patient-Focused Pharmaceutical Group</h2>}
             />
           </div>
-          <div className="animate text mt-6 lg:text-lg lg:w-96">
+          <div className="animate text mt-6 lg:text-epm-base">
           <p className="mb-4">
           EPM develops prescription medicine derived from synthetic
           cannabinoid acids to address unmet patient needs.
