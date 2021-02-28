@@ -8,31 +8,16 @@ const THEME_DARK = "dark";
 const VISIBILITY_VISIBLE = "visible";
 const VISIBILITY_HIDDEN = "hidden";
 
+gsap.registerPlugin(GSDevTools);
+
 function SideMenu() {
-  const animateSideMenuActiveState = (
-    sideMenu,
-    section,
-    menuItem,
-    pill,
-    label
-  ) => {
+  const animateSideMenuHover = (sideMenu, section, menuItem, pill, label) => {
     if (!section.id) {
       return;
     }
 
-    const tlSideMenu = gsap.timeline({
-      paused: true,
-      onStart: () => 
-        !menuItem.closest("li.hidden") && menuItem.closest("li").classList.add("active"),
-      onReverseComplete: () =>
-        !menuItem.closest("li.hidden") && menuItem.closest("li").classList.remove("active"),
-      scrollTrigger: {
-        trigger: `#${section.id}`,
-        start: "top-=50%",
-        end: "bottom-=50%",
-        toggleActions: "play reverse play reverse",
-      },
-    });
+    const theme = section.dataset.sideMenuColor;
+
     const tlSideMenuHover = gsap.timeline({
       paused: true,
       scrollTrigger: {
@@ -43,36 +28,36 @@ function SideMenu() {
       },
     });
 
-    tlSideMenu.add("side-menu");
     tlSideMenuHover.add("side-menu-hover");
 
-    tlSideMenu.to(
-      pill,
-      {
-        width: 31,
-        backgroundColor: "#FFD534",
-        duration: 0.1,
-      },
-      "side-menu"
-    );
-    tlSideMenuHover.to(
-      pill,
-      {
-        width: 31,
-        backgroundColor: "#FFD534",
-        duration: 0.1,
-      },
-      "side-menu-hover"
-    );
-    tlSideMenu.to(
-      label,
-      {
-        opacity: 1,
-        delay: 0.15,
-        duration: 0.1,
-      },
-      "side-menu"
-    );
+    if (theme === THEME_LIGHT) {
+      tlSideMenuHover.fromTo(
+        pill,
+        {
+          backgroundColor: "#FFFFFF",
+        },
+        {
+          width: 31,
+          backgroundColor: "#FFD534",
+          duration: 0.1,
+        },
+        "side-menu-hover"
+      );
+    } else if (theme === THEME_DARK) {
+      tlSideMenuHover.fromTo(
+        pill,
+        {
+          backgroundColor: "#636466",
+        },
+        {
+          width: 31,
+          backgroundColor: "#FFD534",
+          duration: 0.1,
+        },
+        "side-menu-hover"
+      );
+    }
+
     tlSideMenuHover.to(
       label,
       {
@@ -83,7 +68,6 @@ function SideMenu() {
       "side-menu-hover"
     );
 
-    menuItem.animation = tlSideMenu;
     menuItem.animationHover = tlSideMenuHover;
 
     menuItem.addEventListener("mouseenter", function (event) {
@@ -103,6 +87,100 @@ function SideMenu() {
         this.animationHover.reverse();
       }
     });
+  };
+
+  const animateSideMenuActiveState = (
+    sideMenu,
+    section,
+    menuItem,
+    pill,
+    label
+  ) => {
+    if (!section.id) {
+      return;
+    }
+
+    const theme = section.dataset.sideMenuColor;
+    const menuItems = sideMenu.querySelectorAll(".menu-item");
+
+    const tlSideMenu = gsap.timeline({
+      paused: true,
+      onStart: () =>
+        !menuItem.closest("li.hidden") &&
+        menuItem.closest("li").classList.add("active"),
+      onReverseComplete: () =>
+        !menuItem.closest("li.hidden") &&
+        menuItem.closest("li").classList.remove("active"),
+      scrollTrigger: {
+        trigger: `#${section.id}`,
+        start: "top-=50%",
+        end: "bottom-=50%",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
+    tlSideMenu.add(`side-menu-${section.id}`);
+
+    menuItems.forEach((item) => {
+      const itemPill = item.querySelector(".slide__pill");
+      const itemLabel = item.querySelector(".slide__label");
+
+      if (menuItem === item.querySelector("a")) {
+        tlSideMenu.to(
+          itemPill,
+          {
+            backgroundColor: "#FFD534",
+            width: 31,
+            duration: 0.1,
+          },
+          `side-menu-${section.id}`
+        );
+
+        if (theme === THEME_LIGHT) {
+          tlSideMenu.to(
+            itemLabel,
+            {
+              opacity: 1,
+              color: "#FFFFFF",
+              duration: 0.1,
+            },
+            `side-menu-${section.id}`
+          );
+        } else if (theme === THEME_DARK) {
+          tlSideMenu.to(
+            itemLabel,
+            {
+              opacity: 1,
+              color: "#636466",
+              duration: 0.1,
+            },
+            `side-menu-${section.id}`
+          );
+        }
+      } else {
+        if (theme === THEME_LIGHT) {
+          tlSideMenu.to(
+            itemPill,
+            {
+              backgroundColor: "#FFFFFF",
+              duration: 0.1,
+            },
+            `side-menu-${section.id}`
+          );
+        } else if (theme === THEME_DARK) {
+          tlSideMenu.to(
+            itemPill,
+            {
+              backgroundColor: "#636466",
+              duration: 0.1,
+            },
+            `side-menu-${section.id}`
+          );
+        }
+      }
+    });
+
+    menuItem.animation = tlSideMenu;
   };
 
   const animateSideMenuVisibility = (
@@ -133,7 +211,13 @@ function SideMenu() {
     }
   };
 
-  const animateSideMenuColor = (sideMenu, section, activeMenuItem, activePill, activeLabel) => {
+  const animateSideMenuColor = (
+    sideMenu,
+    section,
+    activeMenuItem,
+    activePill,
+    activeLabel
+  ) => {
     if (!section.id) {
       return;
     }
@@ -157,15 +241,23 @@ function SideMenu() {
 
       if (activeMenuItem !== item.querySelector("a")) {
         if (theme === THEME_LIGHT) {
-          tlSideMenuColor.to(pill, {
-            backgroundColor: "#FFFFFF",
-            duration: 0.1,
-          }, "side-menu-color");
+          tlSideMenuColor.to(
+            pill,
+            {
+              backgroundColor: "#FFFFFF",
+              duration: 0.1,
+            },
+            "side-menu-color"
+          );
         } else if (theme === THEME_DARK) {
-          tlSideMenuColor.to(pill, {
-            backgroundColor: "#000000",
-            duration: 0.1,
-          }, "side-menu-color");
+          tlSideMenuColor.to(
+            pill,
+            {
+              backgroundColor: "#000000",
+              duration: 0.1,
+            },
+            "side-menu-color"
+          );
         }
       }
     });
@@ -200,6 +292,7 @@ function SideMenu() {
   };
 
   const utils = {
+    animateSideMenuHover,
     animateSideMenuActiveState,
     animateSideMenuVisibility,
     animateSideMenuColor,
@@ -213,14 +306,21 @@ function SideMenu() {
       if (sideMenu) {
         const sections = Array.from(document.querySelectorAll(".section"));
         const menuItems = Array.from(sideMenu.querySelectorAll(".menu-item"));
-  
+
         sections.forEach((section) => {
           const menuItem = document.querySelector(
             `.side-menu li a[href='#${section.id}']`
           );
           const pill = menuItem.querySelector(".slide__pill");
           const label = menuItem.querySelector(".slide__label");
-  
+
+          // utils.animateSideMenuHover(
+          //   sideMenu,
+          //   section,
+          //   menuItem,
+          //   pill,
+          //   label
+          // );
           utils.animateSideMenuActiveState(
             sideMenu,
             section,
@@ -237,45 +337,6 @@ function SideMenu() {
           );
           // utils.animateSideMenuColor(sideMenu, section, menuItem, pill, label);
           utils.animateSectionContent(section);
-  
-          // menuItems.forEach(menuItem => {
-          //   const currentPill = menuItem.querySelector(".slide__pill");
-          //   const currentLabel = menuItem.querySelector(".slide__label");
-  
-          //   const tlSideMenuColor = gsap.timeline({
-          //     scrollTrigger: {
-          //       trigger: `#${section.id}`,
-          //       start: "top-=50%",
-          //       end: "bottom-=50%",
-          //       toggleActions: "play reverse play reverse",
-          //     },
-          //   });
-  
-          //   tlSideMenuColor.from(
-          //     currentPill,
-          //     {
-          //       backgroundColor: () => {
-          //         if (section.dataset.sideMenuColor === THEME_LIGHT) {
-          //           return "#FFFFFF";
-          //         } else if (section.dataset.sideMenuColor === THEME_DARK) {
-          //           return "#000000";
-          //         }
-          //       }
-          //     }
-          //   );
-          //   tlSideMenuColor.from(
-          //     currentLabel,
-          //     {
-          //       color: () => {
-          //         if (section.dataset.sideMenuColor === THEME_LIGHT) {
-          //           return "#FFFFFF";
-          //         } else if (section.dataset.sideMenuColor === THEME_DARK) {
-          //           return "#000000";
-          //         }
-          //       }
-          //     }
-          //   );
-          // });
         });
       }
 
@@ -318,9 +379,7 @@ function SideMenu() {
                   );
                 } else {
                   return (
-                    <li
-                      className="menu-item hidden"
-                    >
+                    <li className="menu-item hidden">
                       <div className="slide">
                         <a href={`#${section.id}`}></a>
                       </div>
