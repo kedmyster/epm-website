@@ -81,7 +81,7 @@ function Solution({ data }) {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="w-full lg:w-7/12">
+      <div className="w-full lg:w-6/12 2xl:w-7/12">
         <Slider {...SLIDER_SOLUTION_CONFIG}>
           {data.slides.map((slide) => {
             return (
@@ -132,8 +132,8 @@ function Solution({ data }) {
           })}
         </Slider>
       </div>
-      <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-        <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
+      <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
           <div className="mb-6 lg:mb-0">
             <SectionHeader
               name="Our Science"

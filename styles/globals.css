@@ -58,6 +58,7 @@ a {
 @media (min-width: 1024px) {
   .image > div, .video > div, .video video {
     width: 100%;
+    height: 100vh
   }
 }
 

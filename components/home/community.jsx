@@ -33,6 +33,13 @@ function Community({ data }) {
           slidesToScroll: 1,
         },
       },
+      {
+        breakpoint: 1536,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
     ],
   };
 
@@ -62,7 +69,7 @@ function Community({ data }) {
       data-header-menu-visibility="visible"
     >
       <div className="lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen">
-        <div className="items animate text-white bg-gray-900 text-center lg:w-7/12">
+        <div className="items animate text-white bg-gray-900 text-center lg:w-6/12 2xl:w-7/12">
           <Slider {...SLIDER_COMMUNITY_CONFIG}>
             {data.slides.map((slide, index) => {
               return (
@@ -116,7 +123,7 @@ function Community({ data }) {
                           />
                         )}
                       </div>
-                      <div className="lg:border-3 lg:border-white lg:h-60">
+                      <div className=" lg:h-60">
                         <div className="quote text-xl lg:text-2xl font-light italic px-6 pb-6 lg:pt-6 text-left">
                           {slide.quote}
                         </div>
@@ -134,8 +141,8 @@ function Community({ data }) {
             })}
           </Slider>
         </div>
-        <div className=" lg:w-5/12 lg:pl-56">
-          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-96">
+        <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-64 xl:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
               <SectionHeader
                 name="Our Community"

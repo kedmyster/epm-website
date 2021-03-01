@@ -196,7 +196,7 @@ function Innovation({ data }) {
                         <div className="item__box__bottom absolute bottom-0 left-0 bg-white w-full h-px transform scale-0"></div>
                         <div className="item__box__right absolute bottom-0 right-0 bg-white w-px h-full transform scale-0"></div>
                         <div className="item__content">
-                          <div className="item__title font-light font-title text-2xl uppercase mb-5">
+                          <div className="item__title font-light font-title text-2xl uppercase mb-5 lg:h-16">
                             {slide.title}
                           </div>
                           <div className="item__text font-light text-sm">
@@ -211,7 +211,7 @@ function Innovation({ data }) {
             </div>
 
             <div className="lg:h-1/3-screen">
-              <div className="container mx-auto px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
+              <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
                     name={<span className="animate">Our Innovation</span>}

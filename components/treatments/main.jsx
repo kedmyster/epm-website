@@ -61,7 +61,7 @@ function Main() {
             width="375"
             height="812"
             poster="/img/mobile/treatments/hero@2x.jpg"
-            className="inset-0"
+            className="inset-0 object-cover"
             autoPlay
             muted
             loop
@@ -82,7 +82,7 @@ function Main() {
             width="1920"
             height="1080"
             poster="/img/desktop/treatments/hero@2x.jpg"
-            className="inset-0"
+            className="inset-0 object-cover"
             autoPlay
             muted
             loop
@@ -100,12 +100,12 @@ function Main() {
         )}
       </div>
       <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
-      <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:w-full">
-        <div className="container mx-auto px-8 py-8 absolute bottom-36 lg:bottom-10 lg:relative lg:z-10">
+      <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-20 lg:bottom-12 lg:w-full">
+        <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <p className="animate text-xs uppercase font-title mb-4 lg:hidden">
             Our Treatments
           </p>
-          <h1 className="animate font-title text-4xl lg:text-7.5xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
+          <h1 className="animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
             Medicines We Develop
           </h1>
         </div>

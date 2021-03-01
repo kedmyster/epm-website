@@ -322,7 +322,7 @@ function Collaborations({ data }) {
           </div>
 
           <div className="lg:h-1/3-screen">
-            <div className="container mx-auto px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
                   name={

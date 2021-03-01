@@ -82,8 +82,8 @@ function Leadership({ leaders = [] }) {
             data-side-menu-visibility="visible"
             data-header-menu-visibility="visible"
           >
-            <div className="lg:flex-grow lg:pl-56">
-              <div className="container mx-auto lg:mx-0 px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:top-0">
+            <div className="lg:flex-grow lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+              <div className="container mx-auto lg:mx-0 px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:top-0">
                 <div className="">
                   <SectionHeader
                     name="Our Team"
@@ -97,7 +97,7 @@ function Leadership({ leaders = [] }) {
                 )}
               </div>
             </div>
-            <div className="leaders lg:w-7/12 lg:flex-shrink-0 lg:h-full">
+            <div className="leaders lg:w-6/12 2xl:w-7/12 lg:flex-shrink-0 lg:h-full">
               <div className="leaders-group relative lg:h-screen overflow-y-hidden lg:overflow-y-auto">
                 {group.people.map((leader) => {
                   return (
@@ -134,7 +134,7 @@ function Leadership({ leaders = [] }) {
                               />
                             )}
                           </div>
-                          <div className="leader_content flex flex-col flex-grow py-4 lg:py-6 pl-8 lg:pl-36">
+                          <div className="leader_content flex flex-col flex-grow py-4 lg:py-6 pl-8 lg:pl-24 2xl:pl-36">
                             <div className="flex flex-col justify-start h-full">
                               <div className="leader__name text-lg leading-tight lg:text-2xl font-bold">
                                 {leader.name}

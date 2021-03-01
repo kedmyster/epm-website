@@ -36,11 +36,11 @@ function Footer({}) {
       className="section bg-epm-yellow min-h-screen lg:flex lg:flex-wrap lg:content-center"
       data-side-menu-visibility="hidden"
     >
-      <div className="container mx-auto px-8 pt-12 pb-4 lg:py-8">
+      <div className="container mx-auto min-h-screen px-8 pt-12 pb-4 lg:py-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
           <div className="contact__form flex-grow lg:flex-grow-0 relative z-10">
             <div className="mb-4 lg:mb-8 lg:w-101">
-              <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-epm-gray-700">
+              <h2 className="font-title text-6xl xl:text-7.5xl 2xl:text-8.5xl leading-tight text-epm-gray-700">
                 Make a Change with Us
               </h2>
             </div>

@@ -54,17 +54,17 @@ function MyApp({ Component, pageProps }) {
 
       tl.to(".header", {
         opacity: 1,
-        duration: 0.25
+        duration: 0.1
       }, "layout");
   
       tl.to(".side-menu", {
         opacity: 1,
-        duration: 0.25
+        duration: 0.1
       }, "layout");
   
       tl.to(".social-media", {
         opacity: 1,
-        duration: 0.25
+        duration: 0.1
       }, "layout");
     });
   }, []);

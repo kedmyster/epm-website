@@ -108,8 +108,8 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-color="light"
         data-side-menu-visibility="visible"
       >
-        <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-          <div className="container mx-auto px-8 lg:pr-0 lg:ml-0 py-8 lg:max-w-none lg:w-96 ">
+        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+          <div className="container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
             </div>
@@ -129,7 +129,7 @@ function CareersComponent({ positions = [] }) {
                 passionate to make a difference through the delivery of results.
               </p>
             </div>
-            <div className="job-openings lg:text-epm-base mt-4 lg:mt-8 lg:w-96">
+            <div className="job-openings lg:text-epm-base mt-4 lg:mt-8 lg:w-64 xl:w-80 2xl:w-96">
               <div className="lg:text-epm-base mb-4 lg:mb-8">Job Openings</div>
               <div>
                 <table className="w-full table-auto">
@@ -162,7 +162,7 @@ function CareersComponent({ positions = [] }) {
           </div>
         </div>
 
-        <div className="relative w-full lg:w-7/12 lg:flex-grow hidden lg:block ">
+        <div className="relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden lg:block ">
           <div className="absolute w-full h-full">
             {isMobile && (
               <Image
@@ -194,7 +194,7 @@ function CareersComponent({ positions = [] }) {
           </div>
         </div>
 
-        <div className="relative w-full lg:w-7/12 lg:flex-grow hidden">
+        <div className="relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden">
           <div className="container px-8 lg:px-36 py-8">
             <div className="job-title font-title lg:text-2xl text-epm-yellow">
               R&D Director

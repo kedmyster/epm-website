@@ -112,7 +112,7 @@ function OurTreatments({ data }) {
         data-header-menu-visibility="visible"
       >
         <div className="flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen">
-          <div className="container relative mx-auto px-4 lg:px-8 flex items-center justify-center lg:flex-grow z-50 h-2/3-screen lg:h-full lg:w-7/12 bg-epm-gray-100">
+          <div className="container relative mx-auto px-4 lg:px-8 flex items-center justify-center lg:flex-grow z-50 h-2/3-screen lg:h-full lg:w-6/12 2xl:w-7/12 bg-epm-gray-100">
             <div className="flex lg:flex-col content-center justify-center lg:justify-end lg:w-full lg:max-w-4xl lg:h-full lg:pb-24">
               <div className="animate container mx-auto lg:px-8">
                 <div className="flex flex-row justify-center">
@@ -224,8 +224,8 @@ function OurTreatments({ data }) {
               </div>
             </div>
           </div>
-          <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-            <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+          <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+            <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
                 <SectionHeader
                   name="Our treatments"
@@ -269,7 +269,7 @@ function OurTreatments({ data }) {
               data-header-menu-visibility="visible"
             >
               <div className="item flex flex-wrap flex-col lg:flex-row-reverse lg:h-screen">
-                <div className="container relative mx-auto px-4 lg:px-8 lg:flex-grow h-2/3-screen lg:h-full lg:w-7/12 bg-epm-gray-100 flex justify-center items-center">
+                <div className="container relative mx-auto px-4 lg:px-8 lg:flex-grow h-2/3-screen lg:h-full lg:w-6/12 2xl:w-7/12 bg-epm-gray-100 flex justify-center items-center">
                   <div className="flex lg:flex-col content-center justify-center lg:w-full lg:max-w-4xl lg:justify-end lg:h-full lg:pb-24">
                     <div className="animate container mx-auto lg:px-8 relative z-0">
                       <div className="flex flex-row justify-center">
@@ -395,8 +395,8 @@ function OurTreatments({ data }) {
                     )}
                   </div>
                 </div>
-                <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-                  <div className="container lg:px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+                <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+                  <div className="container lg:px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
                     <div className="px-8 lg:px-0 mb-6 lg:mb-0">
                       <SectionHeader
                         name={slide.name}

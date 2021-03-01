@@ -61,7 +61,7 @@ function Main() {
               width="375"
               height="812"
               poster="/img/mobile/homepage/hero@2x.jpg"
-              className="inset-0 object-fill"
+              className="inset-0 object-cover"
               autoPlay
               muted
               loop
@@ -82,7 +82,7 @@ function Main() {
               width="1920"
               height="1080"
               poster="/img/desktop/homepage/hero@2x.jpg"
-              className="inset-0"
+              className="inset-0 object-cover"
               autoPlay
               muted
               loop
@@ -100,17 +100,19 @@ function Main() {
           )}
         </div>
         <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
-        <div className="container mx-auto px-8 py-8 absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-36 lg:bottom-10">
-          <h1 className="main__title animate font-title text-4xl lg:text-7.5xl lg:leading-tight tracking-wide mb-4 lg:mb-64">
-            Medicines to All.
-          </h1>
-          <p className="main__tagline animate lg:text-3xl lg:font-light">
-            Novel therapeutics from synthetic cannabinoid acids
-            <br/>
-            for a healthier and brighter future
-          </p>
-          <Image src="/img/mobile/1.jpg" alt="" width="1" height="1" />
+        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-20 lg:bottom-16 lg:w-full">
+          <div className="container mx-auto px-8 py-8 ">
+            <h1 className="main__title animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
+              Medicines to All.
+            </h1>
+            <p className="main__tagline animate lg:text-3xl lg:font-light">
+              Novel therapeutics from synthetic cannabinoid acids
+              <br />
+              for a healthier and brighter future
+            </p>
+          </div>
         </div>
+
         <div className="scroll-to-content animate absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <a
             href="#story"

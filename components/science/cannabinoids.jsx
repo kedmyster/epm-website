@@ -37,9 +37,9 @@ function Cannabinoids() {
       data-header-menu-visibility="visible"
     >
       <div className="flex flex-wrap lg:flex-row-reverse lg:h-screen">
-        <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-7/12">
+        <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-6/12 2xl:w-7/12">
           <div className="lg:flex lg:flex-wrap lg:h-full">
-            <div className="relative lg:flex-grow lg:w-7/12">
+            <div className="relative lg:flex-grow lg:w-6/12 2xl:w-7/12">
               <div className="image mx-auto text-center lg:pb-5">
                 {isMobile && (
                   <Image
@@ -67,8 +67,8 @@ function Cannabinoids() {
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
           </div>
         </div>
-        <div className="lg:flex-shrink-0 lg:pl-56 lg:w-5/12">
-          <div className="container px-8 lg:pr-0 py-8 lg:max-w-none lg:w-96 ">
+        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+          <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader
                 name="Our innovation"

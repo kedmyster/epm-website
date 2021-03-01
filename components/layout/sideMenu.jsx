@@ -103,7 +103,7 @@ function SideMenu() {
     const theme = section.dataset.sideMenuColor;
     const menuItems = sideMenu.querySelectorAll(".menu-item");
 
-    const tlSideMenu = gsap.timeline({
+    const tlSideMenuPills = gsap.timeline({
       paused: true,
       onStart: () =>
         !menuItem.closest("li.hidden") &&
@@ -119,14 +119,53 @@ function SideMenu() {
       },
     });
 
-    tlSideMenu.add(`side-menu-${section.id}`);
+    const tlSideMenuLabels = gsap.timeline({
+      paused: true,
+      onComplete: () => {
+        gsap.to(label, {
+          opacity: 0,
+          delay: 1.5,
+          duration: 0.1,
+        });
+      },
+      scrollTrigger: {
+        trigger: `#${section.id}`,
+        start: "top-=50%",
+        end: "bottom-=50%",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
+    if (theme === THEME_LIGHT) {
+      tlSideMenuLabels.to(
+        label,
+        {
+          opacity: 1,
+          color: "#FFFFFF",
+          duration: 0.1,
+        },
+        `side-menu-${section.id}`
+      );
+    } else if (theme === THEME_DARK) {
+      tlSideMenuLabels.to(
+        label,
+        {
+          opacity: 1,
+          color: "#636466",
+          duration: 0.1,
+        },
+        `side-menu-${section.id}`
+      );
+    }
+
+    tlSideMenuPills.add(`side-menu-${section.id}`);
 
     menuItems.forEach((item) => {
       const itemPill = item.querySelector(".slide__pill");
       const itemLabel = item.querySelector(".slide__label");
 
       if (menuItem === item.querySelector("a")) {
-        tlSideMenu.to(
+        tlSideMenuPills.to(
           itemPill,
           {
             backgroundColor: "#FFD534",
@@ -135,31 +174,9 @@ function SideMenu() {
           },
           `side-menu-${section.id}`
         );
-
-        if (theme === THEME_LIGHT) {
-          tlSideMenu.to(
-            itemLabel,
-            {
-              opacity: 1,
-              color: "#FFFFFF",
-              duration: 0.1,
-            },
-            `side-menu-${section.id}`
-          );
-        } else if (theme === THEME_DARK) {
-          tlSideMenu.to(
-            itemLabel,
-            {
-              opacity: 1,
-              color: "#636466",
-              duration: 0.1,
-            },
-            `side-menu-${section.id}`
-          );
-        }
       } else {
         if (theme === THEME_LIGHT) {
-          tlSideMenu.to(
+          tlSideMenuPills.to(
             itemPill,
             {
               backgroundColor: "#FFFFFF",
@@ -168,7 +185,7 @@ function SideMenu() {
             `side-menu-${section.id}`
           );
         } else if (theme === THEME_DARK) {
-          tlSideMenu.to(
+          tlSideMenuPills.to(
             itemPill,
             {
               backgroundColor: "#636466",
@@ -179,8 +196,6 @@ function SideMenu() {
         }
       }
     });
-
-    menuItem.animation = tlSideMenu;
   };
 
   const animateSideMenuVisibility = (
