@@ -21,11 +21,11 @@ function MyApp({ Component, pageProps }) {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }) {
     <div className="app">
       <Header/>
       <Component {...pageProps} />
-      {isDesktop && <SideMenu/>}
+      {(isTablet|| isDesktop) && <SideMenu/>}
       {isDesktop && <SocialMedia/>}
       <Footer/>
     </div>

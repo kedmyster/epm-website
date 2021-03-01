@@ -26,11 +26,11 @@ function RaphaelMechoulam() {
   };
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -172,7 +172,7 @@ function RaphaelMechoulam() {
               <div className="item cursor-pointer">
                 <div className="group relative text-center w-full flex flex-wrap content-end lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
                   <div className="w-full h-full flex items-end justify-center">
-                    {isMobile && (
+                    {(isMobile || isTablet) && (
                       <Image
                         priority={true}
                         src={item.images.mobile}
@@ -183,7 +183,7 @@ function RaphaelMechoulam() {
                         quality={100}
                       />
                     )}
-                    {isDesktop && (
+                    {(isDesktop) && (
                       <Image
                         priority={true}
                         src={item.images.desktop}
@@ -201,7 +201,7 @@ function RaphaelMechoulam() {
           })}
         </Slider>
       </div>
-      <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 pt-20 lg:pt-0">
+      <div className="lg:pl-44 xl:pl-56 pt-20 lg:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
         <div className="container lg:w-64 xl:w-80 2xl:w-96 px-8 lg:pl-0 py-8">
           <SectionHeader
             name={<span className="animate">Raphael Mechoulam</span>}

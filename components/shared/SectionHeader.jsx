@@ -9,7 +9,7 @@ function SectionHeader({ name, title }) {
         </div>
       )}
       {title && (
-        <div className="section-title animate font-title text-2xl lg:text-3xl">
+        <div className="section-title animate font-title text-2xl xl:text-3xl">
           {title}
         </div>
       )}

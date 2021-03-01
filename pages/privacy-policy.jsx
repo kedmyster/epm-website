@@ -580,7 +580,6 @@ function PrivacyPolicy() {
           or other disposition of all or any portion of our business.
         </p>
         </ol>
-       
         <p className="mb-4 lg:mb-8">
           If you are a California resident, you may request that we:
         </p>

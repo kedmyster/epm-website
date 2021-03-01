@@ -10,11 +10,11 @@ function CareersComponent({ positions = [] }) {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -49,7 +49,7 @@ function CareersComponent({ positions = [] }) {
               quality={100}
             />
           )}
-          {isDesktop && (
+          {(isTablet || isDesktop) && (
             <Image
               src="/img/desktop/careers/careers@2x.jpg"
               alt=""
@@ -108,7 +108,7 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-color="light"
         data-side-menu-visibility="visible"
       >
-        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
           <div className="container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
@@ -174,7 +174,7 @@ function CareersComponent({ positions = [] }) {
                 quality={100}
               />
             )}
-            {isDesktop && (
+            {(isTablet || isDesktop) && (
               <Image
                 loading="eager"
                 src="/img/desktop/careers/careers@2x.jpg"

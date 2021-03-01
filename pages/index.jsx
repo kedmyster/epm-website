@@ -50,9 +50,9 @@ export default function Home() {
           tagline: "(Crohn's & Colitis)",
           images: {
             mobile: {
-              url: "/img/mobile/homepage/our-treatments/treatment-pills@3x.png",
-              width: 342,
-              height: 284,
+              url: "/img/mobile/treatments/treatment-pills@3x.png",
+              width: 223,
+              height: 280,
             },
           },
         },
@@ -60,9 +60,9 @@ export default function Home() {
           title: "Topical for Psoriasis",
           images: {
             mobile: {
-              url: "/img/mobile/homepage/our-treatments/treatment-tube@3x.png",
-              width: 137,
-              height: 332,
+              url: "/img/mobile/treatments/treatment-tube@3x.png",
+              width: 79,
+              height: 272,
             },
           },
         },
@@ -71,9 +71,9 @@ export default function Home() {
           tagline: "(Acute Respiratory Distress Syndrome)",
           images: {
             mobile: {
-              url: "/img/mobile/homepage/our-treatments/treatment-iv@3x.png",
-              width: 276,
-              height: 302,
+              url: "/img/mobile/treatments/treatment-iv@3x.png",
+              width: 192,
+              height: 253,
             },
           },
         },

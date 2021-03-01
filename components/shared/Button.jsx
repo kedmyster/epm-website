@@ -20,6 +20,7 @@ function Button({
       "w-full",
       "lg:w-52",
       "font-title",
+      "text-base",
       "text-center",
       "uppercase",
       "border-3",

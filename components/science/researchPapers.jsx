@@ -29,7 +29,7 @@ function ResearchPapers({ data }) {
         settings: "unslick",
       },
       {
-        breakpoint: 480,
+        breakpoint: 769,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -37,6 +37,22 @@ function ResearchPapers({ data }) {
       },
     ],
   };
+
+  useEffect(() => {
+    if (windowWidth >= 1280) {
+      setIsMobile(false);
+      setIsTablet(false);
+      setIsDesktop(true);
+    } else if (windowWidth >=1024) {
+      setIsMobile(false);
+      setIsTablet(true);
+      setIsDesktop(false);
+    } else {
+      setIsMobile(true);
+      setIsTablet(false);
+      setIsDesktop(false);
+    }
+  }, [windowWidth]);
 
   const showMore = (slideNumber) => {
     const slides = Array.from(
@@ -100,14 +116,14 @@ function ResearchPapers({ data }) {
           duration: 0.25,
         });
       }
-    } else if (isDesktop) {
+    } else if (isTablet || isDesktop) {
       if (slide) {
         const paperNameElement = document.querySelector("#paper-name");
         const paperTextElement = document.querySelector("#paper-text");
 
         paperNameElement.innerText = slide.title;
         paperTextElement.innerText = slide.text;
-        paperDocumentElement.src = slide.url;
+        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.url}`;
       }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
@@ -119,22 +135,6 @@ function ResearchPapers({ data }) {
       }
     }
   };
-
-  useEffect(() => {
-    if (windowWidth > 1024) {
-      setIsMobile(false);
-      setIsTablet(false);
-      setIsDesktop(true);
-    } else if (windowWidth > 768) {
-      setIsMobile(false);
-      setIsTablet(true);
-      setIsDesktop(false);
-    } else {
-      setIsMobile(true);
-      setIsTablet(false);
-      setIsDesktop(false);
-    }
-  }, [windowWidth]);
 
   return (
     <section
@@ -220,7 +220,7 @@ function ResearchPapers({ data }) {
         </div>
       )}
 
-      {isDesktop && (
+      {(isTablet || isDesktop) && (
         <div className="h-screen relative">
           <div className="h-2/3-screen ">
             <div
@@ -275,30 +275,32 @@ function ResearchPapers({ data }) {
               aria-expanded="false"
             >
               <div className="flex flex-wrap lg:flex-row-reverse lg:2/3-h-screen">
-                <div className="relative mx-auto lg:flex-grow lg:h-2/3-screen lg:w-7/12 bg-epm-gray-500">
+                <div className="relative mx-auto lg:flex-grow lg:h-2/3-screen lg:w-6/12 2xl:w-7/12 bg-epm-gray-500">
                   <iframe
                     id="paper-document"
                     src=""
                     className="w-full h-2/3-screen"
                   />
                 </div>
-                <div className="lg:flex-shrink-0 lg:pl-56 lg:py-8 lg:border-b border-epm-gray-300 lg:w-5/12">
-                  <div className="lg:text-epm-base text-epm-gray-500">
-                    EPM-301 Therapeutic Effect on
-                  </div>
-                  <div className="item__title font-light text-2xl uppercase mb-6">
-                    <span id="paper-name"></span>
-                  </div>
-                  <div className="item-ref text-xs">
-                    <span id="paper-text"></span>
-                  </div>
-                  <div className="button pt-10 lg:inline-block text-center">
-                    <Button
-                      className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-opacity duration-150 hover:opacity-70 lg:px-10 py-2 border-epm-gray-700 text-epm-gray-700"
-                      onClick={(event) => togglePaper(event)}
-                    >
-                      Close
-                    </Button>
+                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
+                  <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
+                    <div className="lg:text-epm-base text-epm-gray-500">
+                      EPM-301 Therapeutic Effect on
+                    </div>
+                    <div className="item__title font-light text-2xl uppercase mb-6">
+                      <span id="paper-name"></span>
+                    </div>
+                    <div className="item-ref text-xs">
+                      <span id="paper-text"></span>
+                    </div>
+                    <div className="button pt-10 lg:inline-block text-center">
+                      <Button
+                        className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-opacity duration-150 hover:opacity-70 lg:px-10 py-2 border-epm-gray-700 text-epm-gray-700"
+                        onClick={(event) => togglePaper(event)}
+                      >
+                        Close
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>

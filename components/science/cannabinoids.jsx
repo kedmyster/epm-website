@@ -12,11 +12,11 @@ function Cannabinoids() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -40,19 +40,18 @@ function Cannabinoids() {
         <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-6/12 2xl:w-7/12">
           <div className="lg:flex lg:flex-wrap lg:h-full">
             <div className="relative lg:flex-grow lg:w-6/12 2xl:w-7/12">
-              <div className="image mx-auto text-center lg:pb-5">
+              <div className="image mx-auto text-center lg:pb-5 w-full h-2/3-screen">
                 {isMobile && (
                   <Image
                     loading="eager"
                     src="/img/mobile/science/cannabinoids-acid@2x.jpg"
                     alt=""
-                    width={375}
-                    height={500}
-                    layout="intrinsic"
+                    layout="fill"
+                    objectFit="cover"
                     quality={100}
                   />
                 )}
-                {isDesktop && (
+                {(isTablet || isDesktop) && (
                   <Image
                     loading="eager"
                     src="/img/desktop/science/cannabinoids-acids@2x.jpg"
@@ -67,7 +66,7 @@ function Cannabinoids() {
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
           </div>
         </div>
-        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
           <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader

@@ -72,6 +72,7 @@ module.exports = {
         "lg-container": "73.75rem",
         "3/4-screen": "75vw",
         "1/4-screen": "25vw",
+        
       },
       height: {
         101 : "31.25rem",
@@ -79,7 +80,9 @@ module.exports = {
         "2/3-screen": "66.66666vh",
         "1/3-screen": "33.33333vh",
         "1/2-screen": "50vh",
+        "1/5-screen": "20vh",
       },
+      
       margin: {
         '15': '3.875rem',
         '-15': '-3.875rem',

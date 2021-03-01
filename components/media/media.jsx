@@ -18,11 +18,11 @@ function MediaComponent({ data }) {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -68,8 +68,8 @@ function MediaComponent({ data }) {
                     <div className="item-name mb-4 lg:mb-2 text-lg lg:text-5xl hidden">
                       {slide.name}
                     </div>
-                    <div className="text-center lg:text-left lg:inline-block lg:w-105">
-                      <div className="quote lg:text-2xl mb-4">{slide.quote}</div>
+                    <div className="text-center lg:text-left lg:inline-block lg:w-96 xl:w-105">
+                      <div className="quote lg:text-xl xl:text-2xl mb-4 lg:h-20 xl:h-auto">{slide.quote}</div>
                       <div className="item__date lg:text-center text-sm text-epm-gray-500 lg:text-base font-title lg:inline-block">
                         {slide.date}
                       </div>

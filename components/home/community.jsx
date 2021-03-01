@@ -25,6 +25,9 @@ function Community({ data }) {
     slidesToScroll: 1,
     nextArrow: <SliderCustomNextArrow color="light" />,
     prevArrow: <SliderCustomPreviousArrow color="light" />,
+    afterChange: (index) => {
+      setActive(index);
+    },
     responsive: [
       {
         breakpoint: 480,
@@ -44,11 +47,11 @@ function Community({ data }) {
   };
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -77,6 +80,7 @@ function Community({ data }) {
                   className={classNames("item", "cursor-pointer", {
                     "item--active": index === active,
                   })}
+                  key={slide.name}
                   onClick={() => setActive(index)}
                 >
                   <div className="group relative text-center w-full flex flex-wrap content-end h-101 lg:h-screen">
@@ -91,7 +95,7 @@ function Community({ data }) {
                           quality={100}
                         />
                       )}
-                      {isDesktop && (
+                      {(isTablet || isDesktop) && (
                         <Image
                           priority={true}
                           src={slide.images.desktop}
@@ -104,8 +108,8 @@ function Community({ data }) {
                       )}
                     </div>
                     <div className="overlay absolute w-full h-full inset-0 lg:transition-all lg:duration-250 lg:ease-in-out bg-black lg:bg-white group-hover:bg-black bg-opacity-50 lg:bg-opacity-75 group-hover:bg-opacity-50"></div>
-                    <div className="container mx-auto px-8 lg:py-8 relative lg:opacity-0 lg:transition-all lg:duration-250 lg:ease-in-out">
-                      <div className="icon-quote text-left pl-8 lg:pl-0 relative lg:absolute lg:-top-10 lg:left-16">
+                    <div className="container mx-auto px-12 lg:px-8 lg:py-8 xl:py-4 relative lg:opacity-0 lg:transition-all lg:duration-250 lg:ease-in-out">
+                      <div className="icon-quote text-left absolute -top-14 lg:-top-5 xl:-top-10 left-10 lg:left-10 xl:left-16">
                         {isMobile && (
                           <Image
                             src="/img/icons/quote.svg"
@@ -114,17 +118,17 @@ function Community({ data }) {
                             alt=""
                           />
                         )}
-                        {isDesktop && (
+                        {(isTablet || isDesktop) && (
                           <Image
                             src="/img/icons/quote.svg"
-                            width="93"
-                            height="111"
+                            width="47"
+                            height="43"
                             alt=""
                           />
                         )}
                       </div>
-                      <div className=" lg:h-60">
-                        <div className="quote text-xl lg:text-2xl font-light italic px-6 pb-6 lg:pt-6 text-left">
+                      <div className=" lg:h-40 xl:h-48 2xl:h-40">
+                        <div className="quote text-xl lg:text-lg 2xl:text-xl font-light italic xl:px-6 pb-6 text-left">
                           {slide.quote}
                         </div>
                       </div>
@@ -141,7 +145,7 @@ function Community({ data }) {
             })}
           </Slider>
         </div>
-        <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+        <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
           <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-64 xl:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
               <SectionHeader

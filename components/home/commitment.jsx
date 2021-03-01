@@ -12,11 +12,11 @@ function Commitment() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -119,7 +119,7 @@ function Commitment() {
         </div>
       )}
 
-      {isDesktop && (
+      {(isTablet || isDesktop) && (
         <div className="lg:relative lg:h-screen lg:text-white lg:flex lg:flex-col lg:justify-between">
           <div className="absolute w-full h-full">
             <Image

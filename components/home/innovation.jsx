@@ -74,11 +74,11 @@ function Innovation({ data }) {
   };
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -155,22 +155,24 @@ function Innovation({ data }) {
         </div>
       )}
 
-      {isDesktop && (
+      {(isTablet || isDesktop) && (
         <div>
           <div className="relative lg:h-screen">
             <div className="absolute inset-0">
-              <div className="lg:h-2/3-screen">
+              <div className="lg:h-2/3-screen overflow-y-hidden">
                 <Slider
                   ref={(slider) => (vm.slider = slider)}
                   {...SLIDER_INNOVATION_CONFIG_DESKTOP}
                 >
                   {data.slides.map((slide) => {
                     return (
-                      <div key={slide.title}>
-                        <img
+                      <div key={slide.title} className="h-2/3-screen">
+                        <Image
                           src={slide.images.desktop}
                           alt={slide.title}
-                          className="lg:w-screen lg:h-2/3-screen"
+                          layout="fill"
+                          objectFit="cover"
+                          quality={100}
                         />
                       </div>
                     );

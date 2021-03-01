@@ -12,11 +12,11 @@ function OurTreatments({ data }) {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -43,7 +43,7 @@ function OurTreatments({ data }) {
   }, []);
 
   useEffect(() => {
-    if (isDesktop) {
+    if (isTablet || isDesktop) {
       const observer = new IntersectionObserver(
         (entries, observer) => {
           entries.forEach((entry) => {
@@ -53,8 +53,12 @@ function OurTreatments({ data }) {
               );
 
               opened.forEach((section) => {
+                const button = section.closest(".section").querySelector(".button a");
+
                 section.setAttribute("aria-expanded", "false");
                 gsap.to(section, { opacity: 0, duration: 0.25 });
+
+                button.innerText = "Learn More";
               });
             }
           });
@@ -66,7 +70,7 @@ function OurTreatments({ data }) {
         .querySelectorAll(".section")
         .forEach((section) => observer.observe(section));
     }
-  }, [isDesktop]);
+  }, [isTablet, isDesktop]);
 
   const toggleLearnMore = (event) => {
     event.preventDefault();
@@ -76,6 +80,14 @@ function OurTreatments({ data }) {
 
     if (isMobile) {
       const button = section.querySelector(".button");
+      const opened = document.querySelector("[aria-expanded='true']");
+      
+      if (opened) {
+        const openedButton = opened.closest(".section").querySelector(".button");
+        opened.setAttribute("aria-expanded", "false");
+        opened.style.display = "none";
+        openedButton.classList.remove("hidden");
+      }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         moreInfoPanel.setAttribute("aria-expanded", "true");
@@ -88,7 +100,7 @@ function OurTreatments({ data }) {
       }
     }
 
-    if (isDesktop) {
+    if (isTablet || isDesktop) {
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         moreInfoPanel.setAttribute("aria-expanded", "true");
         gsap.to(moreInfoPanel, { opacity: 1, zIndex: 11, duration: 0.25 });
@@ -133,7 +145,7 @@ function OurTreatments({ data }) {
                             quality={100}
                           />
                         )}
-                        {isDesktop && (
+                        {(isTablet || isDesktop) && (
                           <Image
                             loading="eager"
                             src="/img/desktop/treatments/treatments-pills@2x.png"
@@ -146,7 +158,7 @@ function OurTreatments({ data }) {
                         )}
                       </a>
                     </div>
-                    <div className="item__title text-center text-xxs lg:text-base font-title uppercase py-3 px-3 h-14 lg:h-20">
+                    <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
                       Oral for IBD{" "}
                       <span className="block normal-case text-epm-gray-500 font-light">
                         (Crohn’s & Colitis)
@@ -170,7 +182,7 @@ function OurTreatments({ data }) {
                             quality={100}
                           />
                         )}
-                        {isDesktop && (
+                        {(isTablet || isDesktop) && (
                           <Image
                             loading="eager"
                             src="/img/desktop/treatments/treatments-tube@2x.png"
@@ -183,7 +195,7 @@ function OurTreatments({ data }) {
                         )}
                       </a>
                     </div>
-                    <div className="item__title text-center text-xxs lg:text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 lg:h-20">
+                    <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 2xl:h-20">
                       Topical for
                       <br />
                       Psoriasis
@@ -203,7 +215,7 @@ function OurTreatments({ data }) {
                             quality={100}
                           />
                         )}
-                        {isDesktop && (
+                        {(isTablet || isDesktop) && (
                           <Image
                             loading="eager"
                             src="/img/desktop/treatments/treatments-iv@2x.png"
@@ -216,7 +228,7 @@ function OurTreatments({ data }) {
                         )}
                       </a>
                     </div>
-                    <div className="item__title text-center text-xxs lg:text-base font-title uppercase py-3 px-3 h-14 lg:h-20">
+                    <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
                       Acute Respiratory Distress Syndrome
                     </div>
                   </div>
@@ -224,7 +236,7 @@ function OurTreatments({ data }) {
               </div>
             </div>
           </div>
-          <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+          <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
             <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
                 <SectionHeader
@@ -245,9 +257,9 @@ function OurTreatments({ data }) {
                   Syndrome in COVID-19 patients.
                 </p>
               </div>
-              {isDesktop && (
+              {(isTablet || isDesktop) && (
                 <div>
-                  <span className="normal-case text-epm-gray-500 font-light">
+                  <span className="text-xxs xl:text-xs 2xl:text-epm-base normal-case text-epm-gray-500 font-light">
                     Images shown are for illustration purposes only
                   </span>
                 </div>
@@ -284,7 +296,7 @@ function OurTreatments({ data }) {
                                 alt={slide.name}
                               />
                             )}
-                            {isDesktop && (
+                            {(isTablet || isDesktop) && (
                               <Image
                                 src={slide.icons.icon1.desktop.url}
                                 width={slide.icons.icon1.desktop.width}
@@ -293,7 +305,7 @@ function OurTreatments({ data }) {
                               />
                             )}
                           </div>
-                          <div className="item__title text-center text-xxs lg:text-base font-title uppercase py-3 px-3 h-14 lg:h-20">
+                          <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
                             {slide.icons.icon1.label}
                             {slide.icons.icon1.subLabel && (
                               <span className="block normal-case text-epm-gray-500 font-light">
@@ -315,7 +327,7 @@ function OurTreatments({ data }) {
                                 quality={100}
                               />
                             )}
-                            {isDesktop && (
+                            {(isTablet || isDesktop) && (
                               <Image
                                 loading="eager"
                                 src={slide.images.desktop.url}
@@ -336,7 +348,7 @@ function OurTreatments({ data }) {
                                 alt={slide.name}
                               />
                             )}
-                            {isDesktop && (
+                            {(isTablet || isDesktop) && (
                               <Image
                                 src={slide.icons.icon2.desktop.url}
                                 width={slide.icons.icon2.desktop.width}
@@ -345,7 +357,7 @@ function OurTreatments({ data }) {
                               />
                             )}
                           </div>
-                          <div className="item__title text-center text-xxs lg:text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 lg:h-20">
+                          <div className="item__title text-center text-xxs 2xltext-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 2xl:h-20">
                             {slide.icons.icon2.label}
                             {slide.icons.icon2.subLabel && (
                               <span className="block normal-case text-epm-gray-500 font-light">
@@ -365,7 +377,7 @@ function OurTreatments({ data }) {
                                 alt={slide.name}
                               />
                             )}
-                            {isDesktop && (
+                            {(isTablet || isDesktop) && (
                               <Image
                                 src={slide.icons.icon3.desktop.url}
                                 width={slide.icons.icon3.desktop.width}
@@ -374,7 +386,7 @@ function OurTreatments({ data }) {
                               />
                             )}
                           </div>
-                          <div className="item__title text-center text-xxs lg:text-base font-title uppercase py-3 px-3 h-14 lg:h-20">
+                          <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
                             {slide.icons.icon3.label}
                             {slide.icons.icon3.subLabel && (
                               <span className="block normal-case text-epm-gray-500 font-light">
@@ -385,9 +397,9 @@ function OurTreatments({ data }) {
                         </div>
                       </div>
                     </div>
-                    {isDesktop && (
+                    {(isTablet || isDesktop) && (
                       <div
-                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap content-center lg:bg-epm-gray-300 lg:px-36  py-8"
+                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
                         aria-expanded="false"
                       >
                         {slide.moreInfo}
@@ -395,7 +407,7 @@ function OurTreatments({ data }) {
                     )}
                   </div>
                 </div>
-                <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+                <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
                   <div className="container lg:px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
                     <div className="px-8 lg:px-0 mb-6 lg:mb-0">
                       <SectionHeader
@@ -460,9 +472,9 @@ function OurTreatments({ data }) {
                         </div>
                       </div>
                     )}
-                    {isDesktop && (
+                    {(isTablet || isDesktop) && (
                       <div>
-                        <span className="normal-case text-epm-gray-500 font-light">
+                        <span className="text-xxs xl:text-xs 2xl:text-epm-base normal-case text-epm-gray-500 font-light">
                           Images shown are for illustration purposes only
                         </span>
                       </div>

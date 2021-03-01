@@ -12,11 +12,11 @@ function OurStory() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -51,19 +51,18 @@ function OurStory() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="video animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12">
+      <div className="video animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto ">
         {isMobile && (
           <Image
             loading="eager"
             src="/img/mobile/about/mechoulam-thumbnail@2x.jpg"
             alt=""
-            width={375}
-            height={500}
-            layout="intrinsic"
+            layout="fill"
+            objectFit="cover"
             quality={100}
           />
         )}
-        {isDesktop && (
+        {(isTablet || isDesktop) && (
           <Image
             loading="eager"
             src="/img/desktop/about/mechoulam-thumbnail@2x.jpg"
@@ -73,14 +72,14 @@ function OurStory() {
             quality={100}
           />
         )}
-        <span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8 lg:bottom-20">
+        <span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
           <Button href="#" style="light">
             Play Video
           </Button>
         </span>
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+      <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
         <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
           <div className="lg:mb-0">
             <SectionHeader

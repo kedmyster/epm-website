@@ -18,73 +18,138 @@ function SideMenu() {
 
     const theme = section.dataset.sideMenuColor;
 
-    const tlSideMenuHover = gsap.timeline({
-      paused: true,
-      scrollTrigger: {
-        trigger: `#${section.id}`,
-        start: "top-=50%",
-        end: "bottom-=50%",
-        toggleActions: "play reverse play reverse",
-      },
-    });
+    const tlSideMenuHover = gsap.timeline();
 
     tlSideMenuHover.add("side-menu-hover");
 
-    if (theme === THEME_LIGHT) {
-      tlSideMenuHover.fromTo(
-        pill,
-        {
-          backgroundColor: "#FFFFFF",
-        },
-        {
-          width: 31,
-          backgroundColor: "#FFD534",
-          duration: 0.1,
-        },
-        "side-menu-hover"
-      );
-    } else if (theme === THEME_DARK) {
-      tlSideMenuHover.fromTo(
-        pill,
-        {
-          backgroundColor: "#636466",
-        },
-        {
-          width: 31,
-          backgroundColor: "#FFD534",
-          duration: 0.1,
-        },
-        "side-menu-hover"
-      );
-    }
+    // if (theme === THEME_LIGHT) {
+    //   tlSideMenuHover.to(
+    //     pill,
+    //     {
+    //       backgroundColor: "#FFFFFF",
+    //     },
+    //     {
+    //       width: 31,
+    //       backgroundColor: "#FFD534",
+    //       duration: 0.1,
+    //     },
+    //     "side-menu-hover"
+    //   );
+    // } else if (theme === THEME_DARK) {
+    //   tlSideMenuHover.to(
+    //     pill,
+    //     {
+    //       backgroundColor: "#636466",
+    //     },
+    //     {
+    //       width: 31,
+    //       backgroundColor: "#FFD534",
+    //       duration: 0.1,
+    //     },
+    //     "side-menu-hover"
+    //   );
+    // }
 
-    tlSideMenuHover.to(
-      label,
-      {
-        opacity: 1,
-        delay: 0.15,
-        duration: 0.1,
-      },
-      "side-menu-hover"
-    );
+    // tlSideMenuHover.to(
+    //   label,
+    //   {
+    //     opacity: 1,
+    //     delay: 0.15,
+    //     duration: 0.1,
+    //   },
+    //   "side-menu-hover"
+    // );
 
     menuItem.animationHover = tlSideMenuHover;
 
     menuItem.addEventListener("mouseenter", function (event) {
       const active = document.querySelector(".side-menu li.active");
       const current = this.closest("li");
+      const anchor = active.querySelector("a");
+      const section = document.querySelector(anchor.getAttribute("href"));
+      const theme = section.dataset.sideMenuColor;
 
       if (active !== current) {
-        this.animationHover.play();
+        const tlSideMenuHover = gsap.timeline();
+        const pill = current.querySelector(".slide__pill");
+        const label = current.querySelector(".slide__label");
+
+        tlSideMenuHover.to(
+          pill,
+          {
+            width: 31,
+            backgroundColor: "#FFD534",
+            duration: 0.1,
+          },
+          "side-menu-hover"
+        );
+
+        if (theme === THEME_LIGHT) {
+          tlSideMenuHover.to(
+            label,
+            {
+              opacity: 1,
+              color: "#FFFFFF",
+              duration: 0.1,
+            },
+            "side-menu-hover"
+          );
+        } else if (theme === THEME_DARK) {
+          tlSideMenuHover.to(
+            label,
+            {
+              opacity: 1,
+              color: "#636466",
+              duration: 0.1,
+            },
+            "side-menu-hover"
+          );
+        }
+
+        tlSideMenuHover.to(
+          label,
+          {
+            opacity: 0,
+            duration: 0.1,
+          },
+          "side-menu-hover"
+        );
       }
     });
 
     menuItem.addEventListener("mouseleave", function (event) {
       const active = document.querySelector(".side-menu li.active");
       const current = this.closest("li");
+      const anchor = active.querySelector("a");
+      const section = document.querySelector(anchor.getAttribute("href"));
+      const theme = section.dataset.sideMenuColor;
 
       if (active !== current) {
-        this.animationHover.reverse();
+        const tlSideMenuHover = gsap.timeline();
+        const pill = current.querySelector(".slide__pill");
+        const label = current.querySelector(".slide__label");
+
+        if (theme === THEME_LIGHT) {
+          tlSideMenuHover.to(
+            pill,
+            {
+              width: 9,
+              backgroundColor: "#FFFFFF",
+              duration: 0.1,
+            },
+            "side-menu-hover"
+          );
+        } else if (theme === THEME_DARK) {
+          tlSideMenuHover.to(
+            pill,
+            {
+              width: 9,
+              backgroundColor: "#636466",
+              duration: 0.1,
+            },
+            "side-menu-hover"
+          );
+        }
       }
     });
   };
@@ -101,15 +166,17 @@ function SideMenu() {
     }
 
     const theme = section.dataset.sideMenuColor;
+    const logoTheme = section.dataset.logoColor;
     const menuItems = sideMenu.querySelectorAll(".menu-item");
+    const logo = document.querySelector(".logo svg #Path_5");
 
     const tlSideMenuPills = gsap.timeline({
       paused: true,
       onStart: () =>
-        !menuItem.closest("li.hidden") &&
+        // !menuItem.closest("li.hidden") &&
         menuItem.closest("li").classList.add("active"),
       onReverseComplete: () =>
-        !menuItem.closest("li.hidden") &&
+        // !menuItem.closest("li.hidden") &&
         menuItem.closest("li").classList.remove("active"),
       scrollTrigger: {
         trigger: `#${section.id}`,
@@ -136,6 +203,16 @@ function SideMenu() {
       },
     });
 
+    const tlLogo = gsap.timeline({
+      paused: true,
+      scrollTrigger: {
+        trigger: `#${section.id}`,
+        start: "top-=50%",
+        end: "bottom-=50%",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
     if (theme === THEME_LIGHT) {
       tlSideMenuLabels.to(
         label,
@@ -146,6 +223,7 @@ function SideMenu() {
         },
         `side-menu-${section.id}`
       );
+      
     } else if (theme === THEME_DARK) {
       tlSideMenuLabels.to(
         label,
@@ -155,6 +233,24 @@ function SideMenu() {
           duration: 0.1,
         },
         `side-menu-${section.id}`
+      );
+    }
+
+    if (logoTheme === THEME_LIGHT) {
+      tlLogo.to(
+        logo,
+        {
+          fill: "#ffd534",
+          duration: 0.1,
+        },
+      );
+    } else if (logoTheme === THEME_DARK) {
+      tlLogo.to(
+        logo,
+        {
+          fill: "#636466",
+          duration: 0.1,
+        },
       );
     }
 
@@ -329,13 +425,13 @@ function SideMenu() {
           const pill = menuItem.querySelector(".slide__pill");
           const label = menuItem.querySelector(".slide__label");
 
-          // utils.animateSideMenuHover(
-          //   sideMenu,
-          //   section,
-          //   menuItem,
-          //   pill,
-          //   label
-          // );
+          utils.animateSideMenuHover(
+            sideMenu,
+            section,
+            menuItem,
+            pill,
+            label
+          );
           utils.animateSideMenuActiveState(
             sideMenu,
             section,

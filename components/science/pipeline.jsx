@@ -13,11 +13,11 @@ function Pipeline() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -54,7 +54,7 @@ function Pipeline() {
                     className="w-full h-full"
                   />
                 )}
-                {isDesktop && (
+                {(isTablet || isDesktop) && (
                   <Image
                     loading="eager"
                     src="/img/desktop/science/pipeline@2x.jpg"
@@ -68,7 +68,7 @@ function Pipeline() {
             </div>
           </div>
         </div>
-        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:border-t lg:border-epm-gray-300">
+        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:border-t lg:border-epm-gray-300lg:h-screen overflow-y-hidden lg:overflow-y-auto">
           <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="">
               <SectionHeader

@@ -11,11 +11,11 @@ function Leadership({ leaders = [] }) {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -49,10 +49,9 @@ function Leadership({ leaders = [] }) {
 
     leaders.forEach((leader) => {
       const leaderText = leader.querySelector(".leader__text");
+      const arrow = leader.querySelector(".arrow");
 
       if (leader === currentLeader) {
-        const arrow = leader.querySelector(".arrow");
-        
         if (currentLeader.getAttribute("aria-expanded") === "false") {
           leader.setAttribute("aria-expanded", "true");
           leaderText.classList.remove("hidden");
@@ -65,6 +64,7 @@ function Leadership({ leaders = [] }) {
       } else {
         leader.setAttribute("aria-expanded", "false");
         leaderText.classList.add("hidden");
+        gsap.to(arrow, { rotation: 0, duration: 0.25 });
       }
     });
   };
@@ -82,7 +82,7 @@ function Leadership({ leaders = [] }) {
             data-side-menu-visibility="visible"
             data-header-menu-visibility="visible"
           >
-            <div className="lg:flex-grow lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12">
+            <div className="lg:flex-grow lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
               <div className="container mx-auto lg:mx-0 px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:top-0">
                 <div className="">
                   <SectionHeader
@@ -90,7 +90,7 @@ function Leadership({ leaders = [] }) {
                     title={<h2>{group.group}</h2>}
                   />
                 </div>
-                {isDesktop && (
+                {(isTablet || isDesktop) && (
                   <div className="animate text lg:text-epm-base lg:mt-6">
                     <p>{group.text}</p>
                   </div>
@@ -106,9 +106,10 @@ function Leadership({ leaders = [] }) {
                         className="leader animate relative cursor-pointer lg:w-full bg-white transition-colors duration-150 hover:bg-epm-gray-100 border-t border-epm-gray-300 last:border-b"
                         key={leader.name}
                         onClick={(event) => toggleLeader(event)}
+                        aria-expanded="false"
                       >
-                        <div className="flex flex-row lg:h-1/5">
-                          <div className="leader_image relative h-full overflow-hidden leading-0">
+                        <div className="flex flex-row">
+                          <div className="leader_image relative h-full overflow-y-hidden lg:overflow-y-none leading-0 lg:h-1/5-screen">
                             {isMobile && (
                               <div className="">
                                 <Image
@@ -122,7 +123,7 @@ function Leadership({ leaders = [] }) {
                                 />
                               </div>
                             )}
-                            {isDesktop && (
+                            {(isTablet || isDesktop) && (
                               <Image
                                 loading="eager"
                                 src={leader.image.desktop}
@@ -134,20 +135,20 @@ function Leadership({ leaders = [] }) {
                               />
                             )}
                           </div>
-                          <div className="leader_content flex flex-col flex-grow py-4 lg:py-6 pl-8 lg:pl-24 2xl:pl-36">
+                          <div className="leader_content flex flex-col flex-grow py-4 lg:py-6 pl-8 lg:pl-8 xl:pl-24 2xl:pl-36">
                             <div className="flex flex-col justify-start h-full">
-                              <div className="leader__name text-lg leading-tight lg:text-2xl font-bold">
+                              <div className="leader__name text-lg lg:text-xl xl:text-2xl leading-tight font-bold">
                                 {leader.name}
                               </div>
                               <div className="leader__role text-sm lg:epm-base font-light">
                                 {leader.role}
                               </div>
-                              <div className="leader__group text-xxs uppercase lg:text-base font-light pt-3">
+                              <div className="leader__group text-xxs 2xl:text-base font-light uppercase pt-3">
                                 {group.group}
                               </div>
                             </div>
                             {isDesktop && (
-                              <div className="leader__text font-light text-lg mt-8 w-101 hidden">
+                              <div className="leader__text font-light font-epm-base 2xl:text-lg mt-8 lg:w-64 xl:w-78 2xl:w-101 hidden">
                                 {leader.text}
                               </div>
                             )}
@@ -165,7 +166,7 @@ function Leadership({ leaders = [] }) {
                                   quality={100}
                                 />
                               )}
-                              {isDesktop && (
+                              {(isTablet || isDesktop) && (
                                 <Image
                                   loading="eager"
                                   src="/img/icons/arrow_down_dark.svg"
@@ -179,7 +180,7 @@ function Leadership({ leaders = [] }) {
                             </div>
                           </div>
                         </div>
-                        {isMobile && (
+                        {(isMobile || isTablet) && (
                           <div className="leader__text px-8 pt-4 pb-8 hidden">
                             {leader.text}
                           </div>

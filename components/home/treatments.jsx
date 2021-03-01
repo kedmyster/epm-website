@@ -39,11 +39,11 @@ function Treatments({ data }) {
   };
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -119,7 +119,7 @@ function Treatments({ data }) {
         </div>
       )}
 
-      {isDesktop && (
+      {(isTablet || isDesktop) && (
         <div>
           <div className="lg:relative lg:h-screen lg:flex lg:flex-col lg:justify-between bg-epm-gray-100">
             <div className="container mx-auto px-8 py-8">
@@ -209,7 +209,7 @@ function Treatments({ data }) {
               </div>
             </div>
             <div className="animate container mx-auto px-8 py-8">
-              <div className="button text-center pt-10">
+              <div className="button text-center pt-10 lg:pt-0">
                 <Button href="/treatments/#main" style="dark">
                   Learn More
                 </Button>

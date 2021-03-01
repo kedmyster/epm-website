@@ -9,7 +9,7 @@ export default function Media() {
     media: {
       slides: [
         {
-          url: "#",
+          url: "https://www.forbes.com/sites/javierhasse/2020/07/12/dr-mechoulam/#24a41a846a45",
           images: {
             src: "/img/icons/media/forbes.svg",
             width: "213",
@@ -21,7 +21,7 @@ export default function Media() {
           date: "July 12, 2020",
         },
         {
-          url: "#",
+          url: "https://www.nbcnews.com/tech/innovation/cannabis-research-pioneer-hopes-latest-discovery-not-overlooked-again-n1059116",
           images: {
             src: "/img/icons/media/nbc.svg",
             width: "255",
@@ -33,7 +33,7 @@ export default function Media() {
           date: "Sep 26, 2019",
         },
         {
-          url: "#",
+          url: "https://www.discovermagazine.com/health/the-father-of-cannabis-research-on-the-untapped-potential-of-marijuana-as",
           images: {
             src: "/img/icons/media/discover.svg",
             width: "224",
@@ -45,7 +45,7 @@ export default function Media() {
           date: "November 21, 2019",
         },
         {
-          url: "#",
+          url: "https://endpts.com/startup-epm-launches-high-off-acid-based-cannabinoid-innovation/",
           images: {
             src: "/img/icons/media/endpoints.svg",
             width: "247",

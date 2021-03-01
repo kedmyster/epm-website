@@ -51,7 +51,7 @@ a {
   box-sizing: border-box;
 }
 
-.image > div, .video > div, .video video {
+/* .image > div, .video > div, .video video {
   width: 100%;
 }
 
@@ -60,7 +60,7 @@ a {
     width: 100%;
     height: 100vh
   }
-}
+} */
 
 /* =================== */
 
@@ -287,6 +287,12 @@ a {
   .community .item.item--active img,
   .community .item:hover img {
     filter: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .leader_image div {
+    @apply h-1/5-screen;
   }
 }
 

@@ -12,11 +12,11 @@ function Header() {
   let scrollY = 0;
 
   useEffect(() => {
-    if (windowWidth > 1024) {
+    if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth > 768) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -249,7 +249,7 @@ function Header() {
                 />
               )}
 
-              {isDesktop && (
+              {(isTablet || isDesktop) && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="118"
