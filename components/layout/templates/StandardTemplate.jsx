@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import SectionHeader from "../../shared/SectionHeader";
 
 function StandardTemplate({name, title, children}) {
+  useEffect(() => {
+    document.body.dataset.headerTheme = "dark";
+  }, []);
+
   return (
     <section
       id=""

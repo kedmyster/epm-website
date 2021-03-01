@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import MediaComponent from "../components/media/media"
 
@@ -5,6 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Media() {
+  useEffect(() => {
+    document.body.dataset.headerTheme = "dark";
+  }, []);
+
   const page = {
     media: {
       slides: [
@@ -58,6 +63,7 @@ export default function Media() {
       ]
     }
   }
+
   return (
     <>
       <Head>
