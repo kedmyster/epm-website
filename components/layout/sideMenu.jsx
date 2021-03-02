@@ -433,7 +433,7 @@ function SideMenu() {
                   return (
                     <li
                       key={section.id}
-                      className="menu-item my-8 font-title text-xs tracking-wide"
+                      className="menu-item my-8 font-title text-xxs tracking-wide"
                     >
                       <div className="slide cursor-pointer relative">
                         <a

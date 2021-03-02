@@ -10,7 +10,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
   useEffect(() => {
-    document.querySelector(".menu-item--about").classList.add("menu-item--current");
+    document
+      .querySelector(".menu-item--about")
+      .classList.add("menu-item--current");
   }, []);
 
   const getId = (name) => {
@@ -19,10 +21,10 @@ export default function About() {
 
   const [leaders, setLeaders] = useState([
     {
-      group: "Board of directors",
-      id: getId("Board of directors"),
+      group: "Board of Directors",
+      id: getId("Board of Directors"),
       text:
-        "The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in an intergenerational collaboration with Prof. Raphael Mechoulam, Israel prize winner. Although the Pharmaceutical industry and regulatory institutions have already excepted cannabis based medicines, the true potential of cannabinoids remained unlock. They have recognized that the disparity in the required potency for treatments, the requirements of IP protection for pharmaceutical solutions, and the consistency required for mass production of medicines were the main challenges the cannabis industry was facing. Together, they’ve managed to uncover the hidden potential in the plant’s potent capabilities and offer an alternative to current medicine, without having to depend or consume the plant itself.",
+        "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
       people: [
         {
           name: "Julian Gangolli",
@@ -80,7 +82,7 @@ export default function About() {
         },
         {
           name: "Roberto Gonzalez",
-          role: "VP of Strategy",
+          role: "", //   VP of Strategy
           text: (
             <div>
               <p>
@@ -98,20 +100,24 @@ export default function About() {
         },
         {
           name: "Prof. Dan Peer",
-          role: (
-            <span>
-              Head of Inflammatory Research,
-              <br />
-              Tel Aviv University
-            </span>
-          ),
+          role:
+            "",
+            // <span>
+            //   Head of Inflammatory Research,
+            //   <br />
+            //   Tel Aviv University
+            // </span>
           text: (
             <div>
               <p class="mb-4">One of Israel’s most renowned researchers.</p>
               <p class="mb-4">
                 {" "}
-                Vice President at R&D at Tel Aviv University and the Director of the Laboratory of Precision NanoMedicine.Prof. Peer is a world leader in the field of delivery devices and nanomedicine. Prof. Peer also has professional experience at Harvard Medical School, the Children’s Hospital Boston and the Leona M. and Harry B. Helmsley Nanotechnology research fund.
-
+                Vice President at R&D at Tel Aviv University and the Director of
+                the Laboratory of Precision NanoMedicine.Prof. Peer is a world
+                leader in the field of delivery devices and nanomedicine. Prof.
+                Peer also has professional experience at Harvard Medical School,
+                the Children’s Hospital Boston and the Leona M. and Harry B.
+                Helmsley Nanotechnology research fund.
               </p>
               <p>
                 Prof. Peer received many awards, among them were awards from the
@@ -132,10 +138,10 @@ export default function About() {
     },
 
     {
-      group: "Executive leadership",
-      id: getId("Executive leadership"),
+      group: "Executive Leadership",
+      id: getId("Executive Leadership"),
       text:
-        "The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in an intergenerational collaboration with Prof. Raphael Mechoulam, Israel prize winner. Although the Pharmaceutical industry and regulatory institutions have already excepted cannabis based medicines, the true potential of cannabinoids remained unlock. They have recognized that the disparity in the required potency for treatments, the requirements of IP protection for pharmaceutical solutions, and the consistency required for mass production of medicines were the main challenges the cannabis industry was facing. Together, they’ve managed to uncover the hidden potential in the plant’s potent capabilities and offer an alternative to current medicine, without having to depend or consume the plant itself.",
+        "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
       people: [
         {
           name: "Reshef Swisa",
@@ -202,6 +208,24 @@ export default function About() {
           },
         },
         {
+          name: "Dr. Thilo Bayrhoffer",
+          role: "Chief Business Officer",
+          text: (
+            <div>
+              <p>
+                Yaron Hermesh was previously CFO of Object Geometries and
+                several other companies. CPA, with over 20 years in finance,
+                including strategic planning, IPO, mergers and acquisitions, and
+                financial management.
+              </p>
+            </div>
+          ),
+          image: {
+            mobile: "/img/mobile/about/leadership/yaron@2x.jpg",
+            desktop: "/img/desktop/about/leadership/yaron@2x.jpg",
+          },
+        },
+        {
           name: "Rotem Sher",
           role: "Chief of Staff",
           text: (
@@ -242,10 +266,10 @@ export default function About() {
       ],
     },
     {
-      group: "Scientific advisory board",
-      id: getId("Scientific advisory board"),
+      group: "Scientific Advisory Board",
+      id: getId("Scientific Advisory Board"),
       text:
-        "The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in an intergenerational collaboration with Prof. Raphael Mechoulam, Israel prize winner. Although the Pharmaceutical industry and regulatory institutions have already excepted cannabis based medicines, the true potential of cannabinoids remained unlock. They have recognized that the disparity in the required potency for treatments, the requirements of IP protection for pharmaceutical solutions, and the consistency required for mass production of medicines were the main challenges the cannabis industry was facing. Together, they’ve managed to uncover the hidden potential in the plant’s potent capabilities and offer an alternative to current medicine, without having to depend or consume the plant itself.",
+        "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
       people: [
         {
           name: "Prof. Raphael Mechoulam",

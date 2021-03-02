@@ -16,7 +16,7 @@ function Header() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -79,7 +79,7 @@ function Header() {
 
     if (header) {
       header.classList.add("menu--shown");
-  
+
       gsap.fromTo(
         header,
         {
@@ -102,7 +102,7 @@ function Header() {
 
     if (header) {
       header.classList.remove("menu--shown");
-  
+
       gsap.to(header, {
         opacity: "0",
         zIndex: "0",
@@ -341,6 +341,15 @@ function Header() {
                   <ul className="sub-menu font-light leading-tight	text-white text-left absolute top-8 left-0 w-36">
                     <li className="mb-4">
                       <a
+                        href="/treatments/#current-developments"
+                        className=""
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Current Developments
+                      </a>
+                    </li>
+                    <li className="mb-4">
+                      <a
                         href="/treatments/#inflammatory-bowel-disease"
                         className=""
                         onClick={(event) => goToSection(event)}
@@ -415,7 +424,7 @@ function Header() {
                         className=""
                         onClick={(event) => goToSection(event)}
                       >
-                        Prof. Mechoulam Biography
+                        Prof. Mechoulam Bio
                       </a>
                     </li>
                   </ul>
@@ -426,7 +435,7 @@ function Header() {
                     onClick={(event) => scrollToFooter(event)}
                     className="uppercase font-title"
                   >
-                    Contact
+                    Contact Us
                   </a>
                 </li>
               </ul>
@@ -559,7 +568,7 @@ function Header() {
                   href="/about"
                   className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) =>
-                  toggleSubMenu(event, document.querySelector(".menu--about"))
+                    toggleSubMenu(event, document.querySelector(".menu--about"))
                   }
                 >
                   About
@@ -595,6 +604,58 @@ function Header() {
                       onClick={(event) => goToSection(event)}
                     >
                       Scientific Advisory Board
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
+                <a
+                  href="/treatments"
+                  className="block uppercase cursor-pointer relative font-title"
+                  onClick={(event) =>
+                    toggleSubMenu(
+                      event,
+                      document.querySelector(".menu--treatments")
+                    )
+                  }
+                >
+                  Treatments
+                </a>
+                <ul className="sub-menu menu--treatments hidden">
+                  <li className="text-sm my-2">
+                    <a
+                      href="/treatments/#current-developments"
+                      className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Current Developments 
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href="/treatments/#inflammatory-bowel-disease"
+                      className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Inflammatory Bowel Disease
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href="/treatments/#psoriasis"
+                      className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Psoriasis
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href="/treatments/#acute-respiratory-distress-syndrome"
+                      className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Acute Respiratory Distress Syndrome
                     </a>
                   </li>
                 </ul>
@@ -655,63 +716,13 @@ function Header() {
                       className="transition-opacity duration-150 hover:opacity-70"
                       onClick={(event) => goToSection(event)}
                     >
-                      Prof. Mechoulam Biography
+                      Prof. Mechoulam Bio
                     </a>
                   </li>
                 </ul>
               </li>
-              <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
-                <a
-                  href="/treatments"
-                  className="block uppercase cursor-pointer relative font-title"
-                  onClick={(event) =>
-                    toggleSubMenu(
-                      event,
-                      document.querySelector(".menu--treatments")
-                    )
-                  }
-                >
-                  Treatments
-                </a>
-                <ul className="sub-menu menu--treatments hidden">
-                  <li className="text-sm my-2">
-                    <a
-                      href="/treatments/#inflammatory-bowel-disease"
-                      className="transition-opacity duration-150 hover:opacity-70"
-                      onClick={(event) => goToSection(event)}
-                    >
-                      Inflammatory Bowel Disease
-                    </a>
-                  </li>
-                  <li className="text-sm my-2">
-                    <a
-                      href="/treatments/#psoriasis"
-                      className="transition-opacity duration-150 hover:opacity-70"
-                      onClick={(event) => goToSection(event)}
-                    >
-                      Psoriasis
-                    </a>
-                  </li>
-                  <li className="text-sm my-2">
-                    <a
-                      href="/treatments/#acute-respiratory-distress-syndrome"
-                      className="transition-opacity duration-150 hover:opacity-70"
-                      onClick={(event) => goToSection(event)}
-                    >
-                      Acute Respiratory Distress Syndrome
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
-                <a
-                  href="/contact"
-                  className="block uppercase cursor-pointer relative font-title"
-                  onClick={(event) => scrollToFooter(event)}
-                >
-                  Contact
-                </a>
-              </li>
+              
+              
               <li className="font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/careers"
@@ -721,13 +732,22 @@ function Header() {
                   Careers
                 </a>
               </li>
-              <li className="font-title text-epm-gray-700 tracking-wide">
+              <li className="font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/media"
                   className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) => goToSection(event)}
                 >
                   Media
+                </a>
+              </li>
+              <li className="font-title text-epm-gray-700 tracking-wide ">
+                <a
+                  href="/contact"
+                  className="block uppercase cursor-pointer relative font-title"
+                  onClick={(event) => scrollToFooter(event)}
+                >
+                  Contact Us
                 </a>
               </li>
             </ul>

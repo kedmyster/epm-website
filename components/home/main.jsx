@@ -103,11 +103,13 @@ function Main() {
         <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-20 lg:bottom-16 lg:w-full">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
-              Medicines to All.
+              Medicine to All
             </h1>
             <p className="main__tagline animate lg:text-3xl lg:font-light">
               Novel therapeutics from synthetic cannabinoid acids
-              <br />
+              {(isTablet || isDesktop) && (
+               <br/>
+              )}
               for a healthier and brighter future
             </p>
           </div>

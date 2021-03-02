@@ -110,6 +110,20 @@ export default function Home() {
           ),
         },
         {
+          name: "Prof. Raphael Mechoulam",
+          role: "Head of Chemistry Discovery",
+          images: {
+            mobile: "/img/mobile/homepage/our-community/mechoulam@2x.jpg",
+            desktop: "/img/desktop/homepage/our-community/mechoulam@2x.jpg",
+          },
+          quote: (
+            <p>
+              Cannabinoid acids are compounds that are much more potent than
+              cannabinoids and have an outstanding therapeutic potential.
+            </p>
+          ),
+        },
+        {
           name: "George, 73",
           role: "Psoriasis",
           images: {
@@ -120,20 +134,6 @@ export default function Home() {
             <p>
               You constantly wish for health. I hope for medicine with fewer
               side effects than those I’ve had!
-            </p>
-          ),
-        },
-        {
-          name: "Prof.Raphael Mechoulam",
-          role: "Head of Chemistry Discovery",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/mechoulam@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/mechoulam@2x.jpg",
-          },
-          quote: (
-            <p>
-              Cannabinoid acids are compounds that are much more potent than
-              cannabinoids and have an outstanding therapeutic potential.
             </p>
           ),
         },

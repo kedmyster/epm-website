@@ -116,9 +116,9 @@ function OurTreatments({ data }) {
   return (
     <>
       <section
-        id="treatments"
+        id="current-developments"
         className="section treatments bg-white relative w-full"
-        data-side-menu-label="Treatments"
+        data-side-menu-label="Current Developments"
         data-side-menu-color="dark"
         data-side-menu-visibility="visible"
         data-header-menu-visibility="visible"
@@ -275,7 +275,7 @@ function OurTreatments({ data }) {
             <section
               id={slide.id}
               className="section treatments bg-white relative w-full  "
-              data-side-menu-label={slide.name}
+              data-side-menu-label={slide.title}
               data-side-menu-color="dark"
               data-side-menu-visibility="visible"
               data-header-menu-visibility="visible"

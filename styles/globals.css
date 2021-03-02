@@ -296,7 +296,7 @@ a {
 
 @media (min-width: 1280px) {
   .leader_image div {
-    @apply h-1/5-screen;
+    @apply h-1/6-screen;
   }
 }
 

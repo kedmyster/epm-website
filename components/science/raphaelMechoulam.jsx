@@ -30,7 +30,7 @@ function RaphaelMechoulam() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -160,7 +160,7 @@ function RaphaelMechoulam() {
     <section
       id="raphael-mechoulam"
       className="section raphael-mechoulam bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
-      data-side-menu-label="Prof. Mechoulam Biography"
+      data-side-menu-label="Prof. Mechoulam Bio"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -183,7 +183,7 @@ function RaphaelMechoulam() {
                         quality={100}
                       />
                     )}
-                    {(isDesktop) && (
+                    {isDesktop && (
                       <Image
                         priority={true}
                         src={item.images.desktop}
@@ -215,9 +215,7 @@ function RaphaelMechoulam() {
           />
           <div className="text lg:text-epm-base animate mt-6">
             <p>
-              Read on about the inspiring life of the godfather
-              <br />
-              of cannabis science
+              Read more about the inspiring life of Prof. Rephael Mechoulam
             </p>
           </div>
         </div>

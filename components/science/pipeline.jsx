@@ -33,7 +33,7 @@ function Pipeline() {
       id="pipeline"
       className="section pipeline bg-white"
       data-side-menu-label="Pipeline"
-      data-side-menu-color="light"
+      data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
@@ -83,13 +83,18 @@ function Pipeline() {
               />
             </div>
             <div className="animate text lg:text-epm-base mt-6">
-              <p>
+              <p className="mb-4">
                 EPM is currently advancing treatments in Psoriasis, IBD and ARDS
                 into the clinic, using EPM301. EPM has also developed an
                 intellectual property pipeline with 14 different cannabinoid
                 acid molecules to innovate treatments in additional therapeutic
                 areas.
               </p>
+              <p >
+              EPM maintains control over all aspects of the product development
+              process – research and discovery, formulation, toxicology, scaleup
+              manufacturing, clinical trials and regulatory affairs.
+            </p>
             </div>
           </div>
         </div>

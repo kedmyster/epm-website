@@ -8,19 +8,29 @@ function Footer({}) {
     const tl = gsap.timeline();
 
     tl.add("contact-form-submit");
-    tl.fromTo(".contact__form", {
-      opacity: 1,
-    }, {
-      opacity: 0,
-      duration: 0.25
-    }, "contact-form-submit");
-    tl.fromTo(".contact__thanks", {
-      opacity: 0,
-    }, {
-      opacity: 1,
-      duration: 0.25,
-      zIndex: 11,
-    }, "contact-form-submit");
+    tl.fromTo(
+      ".contact__form",
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+        duration: 0.25,
+      },
+      "contact-form-submit"
+    );
+    tl.fromTo(
+      ".contact__thanks",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.25,
+        zIndex: 11,
+      },
+      "contact-form-submit"
+    );
   };
 
   const scrollToHome = (event) => {
@@ -37,15 +47,15 @@ function Footer({}) {
       data-side-menu-visibility="hidden"
       data-logo-color="dark"
     >
-      <div className="container mx-auto min-h-screen px-8 pt-12 pb-4 lg:py-8 lg:pl-44 xl:pl-56 lg:flex lg:flex-col lg:justify-between">
+      <div className="container mx-auto min-h-screen px-8 pt-12 pb-4 lg:py-8 lg:pl-44 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
-          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-96 2xl:w-101 lg:pr-20 xl:pr-0">
+          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-56 xl:w-80 2xl:w-101 xl:pr-0">
             <div className="mb-4 lg:mb-8">
               <h2 className="font-title text-6xl xl:text-7.5xl 2xl:text-8.5xl leading-tight text-epm-gray-700">
                 Make a Change with Us
               </h2>
             </div>
-            <div className="mb-8 lg:mb-0">
+            {/*<div className="mb-8 lg:mb-0">
               <form onSubmit={(event) => handleSubmit(event)}>
                 <div className="mb-6 leading-8">
                   <input
@@ -63,18 +73,24 @@ function Footer({}) {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
           </div>
           <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">
             <div className="mb-8">
-              <h2 className="font-title text-6xl lg:text-8.5xl leading-tight text-white">
+              <h2 className="font-title text-6xl xl:text-7.5xl 2xl:text-8.5xl leading-tight text-white">
                 Great :)
-                <br/>
+                <br />
                 Thank You!
               </h2>
             </div>
             <div>
-             <a href="#main" onClick={(event) => scrollToHome(event)} className="font-title text-md text-epm-gray-700 underline uppercase">Back home</a>
+              <a
+                href="#main"
+                onClick={(event) => scrollToHome(event)}
+                className="font-title text-md text-epm-gray-700 underline uppercase"
+              >
+                Back home
+              </a>
             </div>
           </div>
           <div className="flex flex-row">
@@ -133,22 +149,7 @@ function Footer({}) {
             <div className="flex flex-col lg:hidden">
               <div className="mb-3">
                 <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener"
-                  className="transition-opacity duration-150 hover:opacity-70"
-                >
-                  <Image
-                    src="/img/icons/facebook.svg"
-                    width="32"
-                    height="32"
-                    alt="Facebook"
-                  />
-                </a>
-              </div>
-              <div className="mb-3">
-                <a
-                  href="https://twitter.com/EPMIP"
+                  href="https://www.linkedin.com/company/epmip/"
                   target="_blank"
                   rel="noopener"
                   className="transition-opacity duration-150 hover:opacity-70"
@@ -163,7 +164,7 @@ function Footer({}) {
               </div>
               <div className="mb-3">
                 <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCr8mb7WyEcxGCEXIyYS0Cog"
                   target="_blank"
                   rel="noopener"
                   className="transition-opacity duration-150 hover:opacity-70"
@@ -179,53 +180,50 @@ function Footer({}) {
             </div>
           </div>
           <div id="footer_menu" className="footer-menu hidden lg:block">
-              <div div className="container mx-auto px-8 lg:px-0 relative">
-                <nav role="navigation">
-                  <ul className="leading-8">
-                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                      <a
-                        href="/about"
-                        className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                      >
-                        About
-                      </a>
-                    </li>
-                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                      <a
-                        href="/science"
-                        className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Science
-                      </a>
-                    </li>
-                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                      <a
-                        href="/treatments"
-                        className="block uppercase underline"
-                      >
-                        Treatments
-                      </a>
-                    </li>
-                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                      <a
-                        href="/media"
-                        className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Media
-                      </a>
-                    </li>
-                    <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                      <a
-                        href="/careers"
-                        className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                      >
-                        Careers
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+            <div div className="container mx-auto px-8 lg:px-0 relative">
+              <nav role="navigation">
+                <ul className="leading-8">
+                  <li className="font-title text-epm-gray-700 tracking-wide pb-4">
+                    <a
+                      href="/about"
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li className="font-title text-epm-gray-700 tracking-wide pb-4">
+                    <a
+                      href="/science"
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      Science
+                    </a>
+                  </li>
+                  <li className="font-title text-epm-gray-700 tracking-wide pb-4">
+                    <a href="/treatments" className="block uppercase underline">
+                      Treatments
+                    </a>
+                  </li>
+                  <li className="font-title text-epm-gray-700 tracking-wide pb-4">
+                    <a
+                      href="/media"
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      Media
+                    </a>
+                  </li>
+                  <li className="font-title text-epm-gray-700 tracking-wide pb-4">
+                    <a
+                      href="/careers"
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      Careers
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
+          </div>
         </div>
         <div className="copyright text-xs lg:text-sm font-title text-epm-gray-700 lg:pt-48 ">
           <a
@@ -242,7 +240,9 @@ function Footer({}) {
             Terms of Use
           </a>
           <span className="hidden lg:inline"> | </span>
-          <span className="block mt-1.5 lg:inline-block lg:mt-0">Copyright ©2021 EPM Group, Inc. All Rights Reserved</span>
+          <span className="block mt-1.5 lg:inline-block lg:mt-0">
+            Copyright ©2021 EPM Group, Inc. All Rights Reserved
+          </span>
         </div>
       </div>
     </footer>

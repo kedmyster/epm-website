@@ -83,7 +83,7 @@ function FoundingEPM() {
             <p className="mb-4">
               The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in
               an intergenerational collaboration with Israeli Prize winner and
-              cannabis pioneer Prof. Raphael Mechoulam.. Although the
+              cannabis pioneer Prof. Raphael Mechoulam. Although the
               pharmaceutical industry and regulatory institutions have already
               accepted cannabis-based medicine, the true potential of
               cannabinoids had remained locked. They recognized the disparity in

@@ -16,7 +16,7 @@ function OurStory() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -42,6 +42,22 @@ function OurStory() {
     );
   }, []);
 
+  const toggleVideo = (event) => {
+    const item = event.target.closest(".item");
+    const video = item.querySelector(".video");
+    const button = item.querySelector("a");
+
+    if (item.getAttribute("aria-expanded") === "false") {
+      item.setAttribute("aria-expanded", "true");
+      video.classList.remove("hidden");
+      button.innerText = "Close Video";
+    } else {
+      item.setAttribute("aria-expanded", "false");
+      video.classList.add("hidden");
+      button.innerText = "Play Video";
+    }
+  };
+
   return (
     <section
       id="our-story"
@@ -51,7 +67,9 @@ function OurStory() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="video animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto ">
+      <div
+        className="item animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto"
+      >
         {isMobile && (
           <Image
             loading="eager"
@@ -73,10 +91,20 @@ function OurStory() {
           />
         )}
         <span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
-          <Button href="#" style="light">
+          <Button style="light" onClick={(event) => toggleVideo(event)}>
             Play Video
           </Button>
         </span>
+        <div className="video absolute inset-0 hidden">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/UrC_dGhrga0?controls=1&autoplay=1&rel=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
 
       <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
@@ -88,35 +116,30 @@ function OurStory() {
             />
           </div>
           <div className="animate text mt-6 lg:text-epm-base">
-          <p className="mb-4">
-          EPM develops prescription medicine derived from synthetic
-          cannabinoid acids to address unmet patient needs.
-        </p>
-        <p className="mb-4">
-          Our mission is to enable safe, effective and accessible treatments
-          for patients in a wide range of therapeutic areas.
-        </p>
-        <p className="mb-4">
-          We have created a pipeline which includes the discovery of 14
-          protected synthetic molecules, including 8 novel structures and
-          production processes IP. Currently EPM is advancing 3 treatments
-          to human trials following the guidance of the U.S. FDA: Psoriasis,
-          IBD and ARDS.
-        </p>
-        <p className="mb-4">
-          At EPM, we are committed to continue the novel discovery of
-          cannabinoid acid molecules for research and drug development
-          purposes
-        </p>
-        <p className="mb-4">
-          EPM maintains control over all aspects of the product development
-          process – research and discovery, formulation, toxicology, scaleup
-          manufacturing, clinical trials and regulatory affairs.
-        </p>
-        <p className="">
-          EPM is leading the way in realizing the untapped potential of
-          cannabinoid acids as new pharmaceutical treatments.
-        </p>
+            <p className="mb-4">
+              EPM develops prescription medicine derived from synthetic
+              cannabinoid acids to address unmet patient needs.
+            </p>
+            <p className="mb-4">
+              Our mission is to enable safe, effective and accessible treatments
+              for patients in a wide range of therapeutic areas.
+            </p>
+            <p className="mb-4">
+              We have created a pipeline which includes the discovery of 14
+              protected synthetic molecules, including 8 novel structures and
+              production processes IP. Currently EPM is advancing 3 treatments
+              to human trials following the guidance of the U.S. FDA: Psoriasis,
+              IBD and ARDS.
+            </p>
+            <p className="">
+              At EPM, we are committed to continue the novel discovery of
+              cannabinoid acid molecules for research and drug development
+              purposes
+            </p>
+            {/*<p className="">
+              EPM is leading the way in realizing the untapped potential of
+              cannabinoid acids as new pharmaceutical treatments.
+              </p>*/}
           </div>
         </div>
       </div>

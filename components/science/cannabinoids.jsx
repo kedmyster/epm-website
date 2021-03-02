@@ -31,7 +31,7 @@ function Cannabinoids() {
     <section
       id="cannabinoids"
       className="section cannabinoids bg-white relative w-full"
-      data-side-menu-label="About Cannabinoid Acids"
+      data-side-menu-label="Cannabinoid Acids"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

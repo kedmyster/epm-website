@@ -43,7 +43,7 @@ function Treatments({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -65,7 +65,7 @@ function Treatments({ data }) {
     >
       {isMobile && (
         <div>
-          <div className="items text-white bg-gray-300 lg:h-2/3-screen">
+          <div className="items text-white lg:h-2/3-screen">
             <div className="container mx-auto px-8 py-8 lg:flex lg:flex-row lg:space-x-20">
               <Slider {...SLIDER_TREATMENTS_CONFIG}>
                 {data.slides.map((slide) => {
@@ -96,7 +96,7 @@ function Treatments({ data }) {
               <div className="mb-6">
                 <SectionHeader
                   name="Our Treatments"
-                  title={<h2>Medicines We Develop</h2>}
+                  title={<h2>Medicine We Develop</h2>}
                 />
               </div>
 

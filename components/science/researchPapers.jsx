@@ -43,7 +43,7 @@ function ResearchPapers({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -317,9 +317,9 @@ function ResearchPapers({ data }) {
 
               <div className="animate text mt-6 lg:w-103">
                 <p>
-                  Here are EPM-supported publications that provide further
-                  pharmacologic background to the current paths of research in
-                  which the Company is engaged.
+                  Here are EPM-supported publications on EPM301, offering
+                  further pharmacologic background on current company research
+                  engagements.
                 </p>
               </div>
             </div>

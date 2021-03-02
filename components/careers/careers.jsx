@@ -39,7 +39,7 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-visibility="hidden"
         data-header-menu-visibility="visible"
       >
-        <div className="absolute w-full h-full">
+        <div className="animate absolute w-full h-full">
           {isMobile && (
             <Image
               src="/img/mobile/careers/careers@2x.jpg"
@@ -59,7 +59,7 @@ function CareersComponent({ positions = [] }) {
             />
           )}
         </div>
-        <div className="relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
+        <div className="animate relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
           <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
@@ -109,7 +109,7 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-visibility="visible"
       >
         <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
+          <div className="animate container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
             </div>
@@ -162,7 +162,7 @@ function CareersComponent({ positions = [] }) {
           </div>
         </div>
 
-        <div className="relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden lg:block ">
+        <div className="animate relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden lg:block ">
           <div className="absolute w-full h-full">
             {isMobile && (
               <Image

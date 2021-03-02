@@ -77,7 +77,7 @@ function Leadership({ leaders = [] }) {
             id={group.id}
             key={group.id}
             className="section leadership bg-white relative w-full flex flex-col lg:flex-row border-b-1 border-epm-gray-300 lg:h-screen"
-            data-side-menu-label="Leadership"
+            data-side-menu-label={group.group}
             data-side-menu-color="dark"
             data-side-menu-visibility="visible"
             data-header-menu-visibility="visible"
@@ -109,7 +109,7 @@ function Leadership({ leaders = [] }) {
                         aria-expanded="false"
                       >
                         <div className="flex flex-row">
-                          <div className="leader_image relative h-full overflow-y-hidden lg:overflow-y-none leading-0 lg:h-1/5-screen">
+                          <div className="leader_image relative h-full overflow-y-hidden lg:overflow-y-none leading-0 lg:h-1/6-screen">
                             {isMobile && (
                               <div className="">
                                 <Image

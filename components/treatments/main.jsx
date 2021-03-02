@@ -106,7 +106,7 @@ function Main() {
             Our Treatments
           </p>
           <h1 className="animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
-            Medicines We Develop
+            Medicine We Develop
           </h1>
         </div>
       </div>
