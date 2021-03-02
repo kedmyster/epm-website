@@ -67,9 +67,7 @@ function OurStory() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div
-        className="item animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto"
-      >
+      <div className="item animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto" aria-expanded="false">
         {isMobile && (
           <Image
             loading="eager"
@@ -99,7 +97,7 @@ function OurStory() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube-nocookie.com/embed/UrC_dGhrga0?controls=1&autoplay=1&rel=0"
+            src="https://www.youtube.com/embed/UrC_dGhrga0?start=13"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
