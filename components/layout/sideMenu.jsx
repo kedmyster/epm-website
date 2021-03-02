@@ -22,44 +22,6 @@ function SideMenu() {
 
     tlSideMenuHover.add("side-menu-hover");
 
-    // if (theme === THEME_LIGHT) {
-    //   tlSideMenuHover.to(
-    //     pill,
-    //     {
-    //       backgroundColor: "#FFFFFF",
-    //     },
-    //     {
-    //       width: 31,
-    //       backgroundColor: "#FFD534",
-    //       duration: 0.1,
-    //     },
-    //     "side-menu-hover"
-    //   );
-    // } else if (theme === THEME_DARK) {
-    //   tlSideMenuHover.to(
-    //     pill,
-    //     {
-    //       backgroundColor: "#636466",
-    //     },
-    //     {
-    //       width: 31,
-    //       backgroundColor: "#FFD534",
-    //       duration: 0.1,
-    //     },
-    //     "side-menu-hover"
-    //   );
-    // }
-
-    // tlSideMenuHover.to(
-    //   label,
-    //   {
-    //     opacity: 1,
-    //     delay: 0.15,
-    //     duration: 0.1,
-    //   },
-    //   "side-menu-hover"
-    // );
-
     menuItem.animationHover = tlSideMenuHover;
 
     menuItem.addEventListener("mouseenter", function (event) {
@@ -68,12 +30,11 @@ function SideMenu() {
       const anchor = active.querySelector("a");
       const section = document.querySelector(anchor.getAttribute("href"));
       const theme = section.dataset.sideMenuColor;
+      const tlSideMenuHover = gsap.timeline();
+      const pill = current.querySelector(".slide__pill");
+      const label = current.querySelector(".slide__label");
 
       if (active !== current) {
-        const tlSideMenuHover = gsap.timeline();
-        const pill = current.querySelector(".slide__pill");
-        const label = current.querySelector(".slide__label");
-
         tlSideMenuHover.to(
           pill,
           {
@@ -83,33 +44,24 @@ function SideMenu() {
           },
           "side-menu-hover"
         );
+      }
 
-        if (theme === THEME_LIGHT) {
-          tlSideMenuHover.to(
-            label,
-            {
-              opacity: 1,
-              color: "#FFFFFF",
-              duration: 0.1,
-            },
-            "side-menu-hover"
-          );
-        } else if (theme === THEME_DARK) {
-          tlSideMenuHover.to(
-            label,
-            {
-              opacity: 1,
-              color: "#636466",
-              duration: 0.1,
-            },
-            "side-menu-hover"
-          );
-        }
-
+      if (theme === THEME_LIGHT) {
         tlSideMenuHover.to(
           label,
           {
-            opacity: 0,
+            opacity: 1,
+            color: "#FFFFFF",
+            duration: 0.1,
+          },
+          "side-menu-hover"
+        );
+      } else if (theme === THEME_DARK) {
+        tlSideMenuHover.to(
+          label,
+          {
+            opacity: 1,
+            color: "#636466",
             duration: 0.1,
           },
           "side-menu-hover"
@@ -123,11 +75,11 @@ function SideMenu() {
       const anchor = active.querySelector("a");
       const section = document.querySelector(anchor.getAttribute("href"));
       const theme = section.dataset.sideMenuColor;
+      const tlSideMenuHover = gsap.timeline();
+      const pill = current.querySelector(".slide__pill");
+      const label = current.querySelector(".slide__label");
 
       if (active !== current) {
-        const tlSideMenuHover = gsap.timeline();
-        const pill = current.querySelector(".slide__pill");
-        const label = current.querySelector(".slide__label");
 
         if (theme === THEME_LIGHT) {
           tlSideMenuHover.to(
@@ -151,6 +103,15 @@ function SideMenu() {
           );
         }
       }
+
+      tlSideMenuHover.to(
+        label,
+        {
+          opacity: 0,
+          duration: 0.1,
+        },
+        "side-menu-hover"
+      );
     });
   };
 
@@ -173,10 +134,8 @@ function SideMenu() {
     const tlSideMenuPills = gsap.timeline({
       paused: true,
       onStart: () =>
-        // !menuItem.closest("li.hidden") &&
         menuItem.closest("li").classList.add("active"),
       onReverseComplete: () =>
-        // !menuItem.closest("li.hidden") &&
         menuItem.closest("li").classList.remove("active"),
       scrollTrigger: {
         trigger: `#${section.id}`,
@@ -241,6 +200,7 @@ function SideMenu() {
         logo,
         {
           fill: "#ffd534",
+          opacity: 1,
           duration: 0.1,
         },
       );
@@ -249,6 +209,7 @@ function SideMenu() {
         logo,
         {
           fill: "#636466",
+          opacity: 0.5,
           duration: 0.1,
         },
       );
@@ -446,12 +407,9 @@ function SideMenu() {
             pill,
             label
           );
-          // utils.animateSideMenuColor(sideMenu, section, menuItem, pill, label);
           utils.animateSectionContent(section);
         });
       }
-
-      // GSDevTools.create();
     });
   }, []);
 
