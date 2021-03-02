@@ -138,10 +138,12 @@ a {
     @apply text-epm-gray-500;
   }
 
+  body[data-header-theme="light"] .header .desktop-menu li.menu-item.menu-item--current > a,
   body[data-header-theme="light"] .header .desktop-menu li.menu-item:hover > a {
     @apply border-b border-epm-yellow pb-0.5 transition-all ease-in-out duration-150;
   }
 
+  body[data-header-theme="light"] .header .desktop-menu li.menu-item.menu-item--current,
   body[data-header-theme="light"] .header .desktop-menu li.menu-item:hover {
     @apply text-white;
   }
@@ -154,10 +156,12 @@ a {
     @apply opacity-70 transition-opacity duration-150 ;
   }
 
+  body[data-header-theme="dark"] .header .desktop-menu li.menu-item.menu-item--current > a,
   body[data-header-theme="dark"] .header .desktop-menu li.menu-item:hover > a {
     @apply border-b border-epm-yellow pb-0.5 transition-all ease-in-out duration-150;
   }
 
+  body[data-header-theme="dark"] .header .desktop-menu li.menu-item.menu-item--current,
   body[data-header-theme="dark"] .header .desktop-menu li.menu-item:hover {
     @apply text-epm-gray-700;
   }

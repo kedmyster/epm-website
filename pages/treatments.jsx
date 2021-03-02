@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Main from "../components/treatments/main";
 import OurTreatments from "../components/treatments/ourTreatments";
 
 export default function Treatments() {
+  useEffect(() => {
+    document.querySelector(".menu-item--treatments").classList.add("menu-item--current");
+  }, []);
+
   const getId = (name) => {
     return name.toLowerCase().replace(/ /g, "-");
   };

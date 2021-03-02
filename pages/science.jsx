@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import Main from "../components/science/main";
 import Solution from "../components/science/solution";
@@ -12,6 +12,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function science() {
+  useEffect(() => {
+    document.querySelector(".menu-item--science").classList.add("menu-item--current");
+  }, []);
+
   const page = {
     solution: {
       slides: [ 

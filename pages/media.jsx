@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Media() {
   useEffect(() => {
     document.body.dataset.headerTheme = "dark";
+    document.querySelector(".menu-item--media").classList.add("menu-item--current");
   }, []);
 
   const page = {

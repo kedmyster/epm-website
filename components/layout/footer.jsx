@@ -7,20 +7,20 @@ function Footer({}) {
 
     const tl = gsap.timeline();
 
-    tl.add("layout");
+    tl.add("contact-form-submit");
     tl.fromTo(".contact__form", {
       opacity: 1,
     }, {
       opacity: 0,
       duration: 0.25
-    }, "layout");
+    }, "contact-form-submit");
     tl.fromTo(".contact__thanks", {
       opacity: 0,
     }, {
       opacity: 1,
       duration: 0.25,
       zIndex: 11,
-    }, "layout");
+    }, "contact-form-submit");
   };
 
   const scrollToHome = (event) => {

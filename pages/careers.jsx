@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import CareersComponent from "../components/careers/careers"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Careers() {
+  useEffect(() => {
+    document.querySelector(".menu-item--careers").classList.add("menu-item--current");
+  }, []);
+
   const [positions, setPositions] = useState([{}]);
   const page = {
     careers: {

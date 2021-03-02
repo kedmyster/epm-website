@@ -42,27 +42,23 @@ function MyApp({ Component, pageProps }) {
     setTimeout(() => {
       tl.add("layout");
 
-      gsap.set(".header", {
+      tl.fromTo(".header", {
         opacity: 0,
-      });
-      gsap.set(".side-menu", {
-        opacity: 0,
-      });
-      gsap.set(".social-media", {
-        opacity: 0,
-      });
-
-      tl.to(".header", {
+      }, {
         opacity: 1,
         duration: 0.1
       }, "layout");
   
-      tl.to(".side-menu", {
+      tl.fromTo(".side-menu", {
+        opacity: 0,
+      }, {
         opacity: 1,
         duration: 0.1
       }, "layout");
   
-      tl.to(".social-media", {
+      tl.fromTo(".social-media", {
+        opacity: 0,
+      }, {
         opacity: 1,
         duration: 0.1
       }, "layout");

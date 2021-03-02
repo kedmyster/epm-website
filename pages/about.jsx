@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Main from "../components/about/main";
 import OurStory from "../components/about/ourStory";
@@ -9,6 +9,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
+  useEffect(() => {
+    document.querySelector(".menu-item--about").classList.add("menu-item--current");
+  }, []);
+
   const getId = (name) => {
     return name.toLowerCase().replace(/ /g, "-");
   };

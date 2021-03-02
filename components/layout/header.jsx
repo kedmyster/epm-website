@@ -291,7 +291,7 @@ function Header() {
           <div className="desktop-menu hidden lg:block flex-grow text-center lg:ml-32">
             <nav role="navigation">
               <ul>
-                <li className="menu-item inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--about inline-block pr-12 py-1 relative">
                   <a href="/about" className="uppercase font-title">
                     About
                   </a>
@@ -334,7 +334,7 @@ function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className="menu-item inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--treatments inline-block pr-12 py-1 relative">
                   <a href="/treatments" className="uppercase font-title">
                     Treatments
                   </a>
@@ -368,7 +368,7 @@ function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className="menu-item inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--science inline-block pr-12 py-1 relative">
                   <a href="/science" className="uppercase font-title">
                     Science
                   </a>
@@ -435,12 +435,12 @@ function Header() {
           <div className="desktop-menu hidden lg:block">
             <nav role="navigation">
               <ul className="font-title">
-                <li className="menu-item inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--careers inline-block pr-12 py-1 relative">
                   <a href="/careers" className="uppercase font-title">
                     Careers
                   </a>
                 </li>
-                <li className="menu-item inline-block py-1 relative">
+                <li className="menu-item menu-item--media inline-block py-1 relative">
                   <a href="/media" className="uppercase font-title">
                     Media
                   </a>
