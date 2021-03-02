@@ -44,7 +44,7 @@ function Cannabinoids() {
                 {isMobile && (
                   <Image
                     loading="eager"
-                    src="/img/mobile/science/cannabinoids-acid@2x.jpg"
+                    src="/img/mobile/science/cannabinoids-acids@2x.jpg"
                     alt=""
                     layout="fill"
                     objectFit="cover"
