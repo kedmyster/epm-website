@@ -10,7 +10,7 @@ import {
   SliderCustomNextArrow,
 } from "../shared/carousel";
 
-function Solution({ data }) {
+function OurScience({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -21,6 +21,22 @@ function Solution({ data }) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (slick, currentSlide, nextSlide) => {
+      const item = document.querySelector("#our-science .item[aria-expanded='true']");
+
+      if (item) {
+        const video = item.querySelector(".video");
+        const button = item.querySelector("a");
+        
+        if (video.player) {
+          video.player.stopVideo();
+        }
+  
+        item.setAttribute("aria-expanded", "false");
+        video.classList.add("hidden");
+        button.innerText = "Play Video";
+      }
+    },
     nextArrow: <SliderCustomNextArrow color="light" />,
     prevArrow: <SliderCustomPreviousArrow color="light" />,
   };
@@ -56,6 +72,17 @@ function Solution({ data }) {
     );
   }, []);
 
+  useEffect(() => {
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  }, []);
+
+  const getId = (name) => {
+    return name.toLowerCase().replace(/ /g, "-");
+  };
+
   const toggleVideo = (event) => {
     const item = event.target.closest(".item");
     const video = item.querySelector(".video");
@@ -65,18 +92,52 @@ function Solution({ data }) {
       item.setAttribute("aria-expanded", "true");
       video.classList.remove("hidden");
       button.innerText = "Close Video";
+
+      if (video.player) {
+        video.player.playVideo();
+      } else {
+        const videoId = video.dataset.videoId;
+        const player  = new YT.Player(video, {
+          height: '100%',
+          width: '100%',
+          videoId,
+          events: {
+            'onReady': (event) => {
+              event.target.playVideo();
+              event.target.h.player = event.target;
+            },
+          }
+        });
+      }
     } else {
       item.setAttribute("aria-expanded", "false");
       video.classList.add("hidden");
       button.innerText = "Play Video";
+      
+      if (video.player) {
+        video.player.stopVideo();
+      } else {
+        const videoId = video.dataset.videoId;
+        const player  = new YT.Player(video, {
+          height: '100%',
+          width: '100%',
+          videoId,
+          events: {
+            'onReady': (event) => {
+              event.target.stopVideo();
+              event.target.h.player = event.target;
+            },
+          }
+        });
+      }
     }
   };
 
   return (
     <section
-      id="solution"
-      className="section solution bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-700 lg:flex-row-reverse lg:h-screen"
-      data-side-menu-label="Our Solution"
+      id="our-science"
+      className="section our-science bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-700 lg:flex-row-reverse lg:h-screen"
+      data-side-menu-label="Our Science"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -86,7 +147,7 @@ function Solution({ data }) {
           {data.slides.map((slide) => {
             return (
               <div className="item relative lg:flex-grow lg:h-screen" aria-expanded="false">
-                <div className="image w-full h-2/3-screen">
+                {<div className="image w-full h-2/3-screen">
                   {isMobile && (
                     <Image
                       loading="eager"
@@ -115,17 +176,8 @@ function Solution({ data }) {
                       Play Video
                     </Button>
                   </span>
-                </div>
-                <div className="video absolute inset-0 hidden">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`${slide.video}?controls=0&rel=0`}
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
+                </div>}
+                <div id={`video-${getId(slide.name)}`} className="video absolute inset-0 hidden" data-video-id={slide.video}></div>
               </div>
             );
           })}
@@ -177,4 +229,4 @@ function Solution({ data }) {
   );
 }
 
-export default Solution;
+export default OurScience;

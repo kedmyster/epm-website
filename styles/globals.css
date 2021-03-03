@@ -245,8 +245,9 @@ a {
 
 @media (min-width: 1024px) {
   .raphael-mechoulam .slick-arrow {
-    top: 50%;
-    transform: translateY(-50%);
+    top: auto;
+    transform: none;
+    bottom: 120px;
 
   }
   .raphael-mechoulam .slick-prev{
@@ -255,6 +256,13 @@ a {
 
   .raphael-mechoulam .slick-next{
     right: 4.5rem !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .raphael-mechoulam .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

@@ -31,10 +31,10 @@ export default function About() {
           role: "Chairman",
           text: (
             <div>
-              <p class="mb-4">
+              <p className="mb-4">
                 Previously North America-based president of GW Pharmaceuticals.
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 {" "}
                 Prior to that, Mr. Gangolli served 11 years as president and
                 executive committee member of Allergen North America r He has
@@ -59,11 +59,11 @@ export default function About() {
           role: "Co-Founder & CEO",
           text: (
             <div>
-              <p class="mb-4">
+              <p className="mb-4">
                 Previously worked as co-founder and GM of NPG, China’s first
                 antibiotic-free poultry producer.
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 {" "}
                 He has over 20 years of experience in global business
                 development and operations.{" "}
@@ -100,17 +100,16 @@ export default function About() {
         },
         {
           name: "Prof. Dan Peer",
-          role:
-            "",
-            // <span>
-            //   Head of Inflammatory Research,
-            //   <br />
-            //   Tel Aviv University
-            // </span>
+          role: "",
+          // <span>
+          //   Head of Inflammatory Research,
+          //   <br />
+          //   Tel Aviv University
+          // </span>
           text: (
             <div>
-              <p class="mb-4">One of Israel’s most renowned researchers.</p>
-              <p class="mb-4">
+              <p className="mb-4">One of Israel’s most renowned researchers.</p>
+              <p className="mb-4">
                 {" "}
                 Vice President at R&D at Tel Aviv University and the Director of
                 the Laboratory of Precision NanoMedicine.Prof. Peer is a world
@@ -148,11 +147,11 @@ export default function About() {
           role: "Co-Founder & CEO",
           text: (
             <div>
-              <p class="mb-4">
+              <p className="mb-4">
                 Previously worked as co-founder and GM of NPG, China’s first
                 antibiotic-free poultry producer.
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 {" "}
                 He has over 20 years of experience in global business
                 development and operations.{" "}
@@ -174,7 +173,7 @@ export default function About() {
           role: "Chief Scientific Officer ",
           text: (
             <div>
-              <p class="">
+              <p className="">
                 Previously GM at Leo Pharma Australia and New Zealand, which led
                 the development of an FDA approved skin cancer treatment from
                 lab to market. Dr. Welburn has over 30 years of experience in
@@ -194,7 +193,7 @@ export default function About() {
           role: "Chief Financial Officer ",
           text: (
             <div>
-              <p class="">
+              <p className="">
                 Yaron Hermesh was previously CFO of Object Geometries and
                 several other companies. CPA, with over 20 years in finance,
                 including strategic planning, IPO, mergers and acquisitions, and
@@ -212,17 +211,30 @@ export default function About() {
           role: "Chief Business Officer",
           text: (
             <div>
+              <p className="mb-4">
+                Dr. Bayrhoffer has over 20 years’ experience in the
+                pharmaceutical industry. He has gained truly global exposure in
+                operational roles as well as during his tenure in strategic
+                consulting and at VC/PE companies focused on the sector.
+              </p>
+              <p className="mb-4">
+                Besides working at firms such as The Boston Consulting Group,
+                Empartners, and Swisscore Group throughout Europe, the Americas,
+                and Asia, he is also a successful angel investor. Dr. Bayrhoffer
+                has founded and exited several ventures and has been appointed
+                to executive and non-executive board positions in the life
+                science space.
+              </p>
               <p>
-                Yaron Hermesh was previously CFO of Object Geometries and
-                several other companies. CPA, with over 20 years in finance,
-                including strategic planning, IPO, mergers and acquisitions, and
-                financial management.
+                Dr. Bayrhoffer is a licensed physician in Germany, he holds an
+                MBA (Honors) from Simon School of Business, University of
+                Rochester, NY.
               </p>
             </div>
           ),
           image: {
-            mobile: "/img/mobile/about/leadership/yaron@2x.jpg",
-            desktop: "/img/desktop/about/leadership/yaron@2x.jpg",
+            mobile: "/img/mobile/about/leadership/thilo@2x.jpg",
+            desktop: "/img/desktop/about/leadership/thilo@2x.jpg",
           },
         },
         {
@@ -282,14 +294,14 @@ export default function About() {
           ),
           text: (
             <div>
-              <p class="mb-4">Known as the “Godfather” of medical cannabis.</p>
-              <p class="mb-4">
+              <p className="mb-4">Known as the “Godfather” of medical cannabis.</p>
+              <p className="mb-4">
                 Prof. Mechoulam has a lifetime of experience in the isolation
                 and total synthesis of the main active ingredients of cannabis
                 (cannabinoids). Best known for his discovery and syntheses of
                 CBD and THC.
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 Since the inception of his research in the 1960s, Prof.
                 Mechoulam has been nominated for over 25 academic awards,
                 including an Honorary doctorate from Complutense University
@@ -318,11 +330,11 @@ export default function About() {
           ),
           text: (
             <div>
-              <p class="mb-4">
+              <p className="mb-4">
                 World leading researcher in the field of cannabis and
                 cannabinoids.
               </p>
-              <p class="mb-4">
+              <p className="mb-4">
                 Prof. Tam is the Head of Obesity & Metabolism laboratory at the
                 Hebrew University of Jerusalem, Director of the
                 multidisciplinary center on cannabinoid in Israel and President
@@ -345,7 +357,7 @@ export default function About() {
         //   role: "Medical Advisory Board",
         //   text:(
         //     <div>
-        //       <p class="mb-4">An internationally renowned surgeon and one of Israel’s leading doctors for Medical Cannabis treatments. Dr. Robinson is the Head of the Foot and Ankle Department and Orthopedic Research Unit at HaSharon Hospital at the Rabin Medical Center.</p>
+        //       <p className="mb-4">An internationally renowned surgeon and one of Israel’s leading doctors for Medical Cannabis treatments. Dr. Robinson is the Head of the Foot and Ankle Department and Orthopedic Research Unit at HaSharon Hospital at the Rabin Medical Center.</p>
         //       <p>He is a specialist in Medical Cannabis for pain and a Serial inventor and Medical Director at various orthopedics companies. Dr. Robinson has published over 90 papers in peer-reviewed journals, conducted 100+ animal trials and 25+ human trials.</p>
         //     </div>
         //   ),

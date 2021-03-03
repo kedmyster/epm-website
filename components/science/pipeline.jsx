@@ -41,7 +41,7 @@ function Pipeline() {
         <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-6/12 2xl:w-7/12">
           <div className="lg:flex lg:flex-wrap lg:h-full">
             <div className="relative lg:flex-grow lg:w-6/12 2xl:w-7/12">
-              <div className="image mx-auto text-center lg:pb-5">
+              <div className="image mx-auto text-center lg:h-screen lg:pb-5">
                 {isMobile && (
                   <Image
                     loading="eager"
@@ -60,7 +60,8 @@ function Pipeline() {
                     src="/img/desktop/science/pipeline@2x.jpg"
                     alt=""
                     layout="fill"
-                    objectFit="fill"
+                    objectFit="contain"
+                    objectPosition="top right"
                     quality={100}
                   />
                 )}

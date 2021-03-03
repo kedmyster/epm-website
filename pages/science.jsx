@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import Main from "../components/science/main";
-import Solution from "../components/science/solution";
+import OurScience from "../components/science/ourScience";
 import Cannabinoids from "../components/science/cannabinoids";
 import Pipeline from "../components/science/pipeline";
 import Collaborations from "../components/science/collaborations";
@@ -17,28 +17,31 @@ export default function science() {
   }, []);
 
   const page = {
-    solution: {
+    ourScience: {
       slides: [ 
         {
+          name: "Yossi Tam",
           images: {
             mobile: "/img/mobile/science/solution/thumb-01@2x.jpg",
             desktop: "/img/desktop/science/solution/thumb-01@2x.jpg",
           },
-          video: "https://www.youtube.com/embed/cWShfI5tCUs",
+          video: "cWShfI5tCUs",
         }, 
         {
+          name: "Raphael Mechoulam",
           images: {
             mobile: "/img/mobile/science/solution/thumb-02@2x.jpg",
             desktop: "/img/desktop/science/solution/thumb-02@2x.jpg",
           },
-          video: "https://www.youtube.com/embed/1qrPwiifufo",
+          video: "1qrPwiifufo",
         },
         {
+          name: "Dan Peer",
           images: {
             mobile: "/img/mobile/science/solution/thumb-03@2x.jpg",
             desktop: "/img/desktop/science/solution/thumb-03@2x.jpg",
           },
-          video: "https://www.youtube.com/embed/KVKuov_GbZo",
+          video: "KVKuov_GbZo",
         },
       ],
     },
@@ -249,7 +252,7 @@ export default function science() {
       </Head>
 
       <Main />
-      <Solution data={page.solution}/>
+      <OurScience data={page.ourScience}/>
       <Cannabinoids />
       <Pipeline />
       <Collaborations data={page.collaborations} />

@@ -42,6 +42,17 @@ function OurStory() {
     );
   }, []);
 
+  useEffect(() => {
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  }, []);
+
+  const getId = (name) => {
+    return name.toLowerCase().replace(/ /g, "-");
+  };
+
   const toggleVideo = (event) => {
     const item = event.target.closest(".item");
     const video = item.querySelector(".video");
@@ -51,10 +62,44 @@ function OurStory() {
       item.setAttribute("aria-expanded", "true");
       video.classList.remove("hidden");
       button.innerText = "Close Video";
+
+      if (video.player) {
+        video.player.playVideo();
+      } else {
+        const videoId = video.dataset.videoId;
+        const player  = new YT.Player(video, {
+          height: '100%',
+          width: '100%',
+          videoId,
+          events: {
+            'onReady': (event) => {
+              event.target.playVideo();
+              event.target.h.player = event.target;
+            },
+          }
+        });
+      }
     } else {
       item.setAttribute("aria-expanded", "false");
       video.classList.add("hidden");
       button.innerText = "Play Video";
+      
+      if (video.player) {
+        video.player.stopVideo();
+      } else {
+        const videoId = video.dataset.videoId;
+        const player  = new YT.Player(video, {
+          height: '100%',
+          width: '100%',
+          videoId,
+          events: {
+            'onReady': (event) => {
+              event.target.stopVideo();
+              event.target.h.player = event.target;
+            },
+          }
+        });
+      }
     }
   };
 
@@ -88,21 +133,12 @@ function OurStory() {
             quality={100}
           />
         )}
-        <span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
+        {<span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
           <Button style="light" onClick={(event) => toggleVideo(event)}>
             Play Video
           </Button>
-        </span>
-        <div className="video absolute inset-0 hidden">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/UrC_dGhrga0?start=13"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+        </span>}
+        <div id={`video-${getId("Rapahel Mechoulam")}`} className="video absolute inset-0 hidden" data-video-id="UrC_dGhrga0"></div>
       </div>
 
       <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">

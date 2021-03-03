@@ -12,10 +12,10 @@ function SocialMedia() {
               className="transition-opacity duration-150 hover:opacity-70"
             >
               <Image
-                src="/img/icons/twitter-light-gray.svg"
+                src="/img/icons/linkedin-light-gray.svg"
                 width="30"
                 height="30"
-                alt="Twitter"
+                alt="LinkedIn"
               />
             </a>
           </div>
@@ -27,10 +27,10 @@ function SocialMedia() {
               className="transition-opacity duration-150 hover:opacity-70"
             >
               <Image
-                src="/img/icons/instagram-light-gray.svg"
+                src="/img/icons/youtube-light-gray.svg"
                 width="30"
                 height="30"
-                alt="Instagram"
+                alt="YouTube"
               />
             </a>
           </div>

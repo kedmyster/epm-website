@@ -46,6 +46,7 @@ function CareersComponent({ positions = [] }) {
               alt=""
               layout="fill"
               objectFit="cover"
+              priority={true}
               quality={100}
             />
           )}
@@ -55,18 +56,19 @@ function CareersComponent({ positions = [] }) {
               alt=""
               layout="fill"
               objectFit="cover"
+              priority={true}
               quality={100}
             />
           )}
         </div>
-        <div className="animate relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
+        <div className="relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
           <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
               title={<h2>Shape the Future of Healthcare </h2>}
             />
           </div>
-          <div className="text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
+          <div className="animate text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
             <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
               medicine and create safer treatments for patients by collaborating
@@ -81,7 +83,7 @@ function CareersComponent({ positions = [] }) {
               people who are passionate to impact through actual results.
             </p>
           </div>
-          <div className="font-bold text-lg lg:text-xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
+          <div className="animate font-bold text-lg lg:text-xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
             <p className="mb-4 lg:mb-8">
               Looking to join a dynamic company, and be part of a team that
               shapes the future of healthcare?

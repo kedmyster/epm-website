@@ -155,10 +155,10 @@ function Footer({}) {
                   className="transition-opacity duration-150 hover:opacity-70"
                 >
                   <Image
-                    src="/img/icons/twitter.svg"
+                    src="/img/icons/linkedin-dark-gray.svg"
                     width="32"
                     height="32"
-                    alt="Twitter"
+                    alt="LinkedIn"
                   />
                 </a>
               </div>
@@ -170,10 +170,10 @@ function Footer({}) {
                   className="transition-opacity duration-150 hover:opacity-70"
                 >
                   <Image
-                    src="/img/icons/instagram.svg"
+                    src="/img/icons/youtube-dark-gray.svg"
                     width="32"
                     height="32"
-                    alt="Instagram"
+                    alt="YouTube"
                   />
                 </a>
               </div>

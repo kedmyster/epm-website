@@ -65,12 +65,12 @@ function Treatments({ data }) {
     >
       {isMobile && (
         <div>
-          <div className="items text-white lg:h-2/3-screen">
-            <div className="container mx-auto px-8 py-8 lg:flex lg:flex-row lg:space-x-20">
+          <div className="items text-white  bg-epm-gray-100">
+            <div className="container mx-auto px-8 py-8 ">
               <Slider {...SLIDER_TREATMENTS_CONFIG}>
                 {data.slides.map((slide) => {
                   return (
-                    <div className="item text-center text-epm-gray-700 lg:text-left lg:p-5">
+                    <div className="item text-center text-epm-gray-700">
                       <div className="image w-full h-96 flex items-center justify-center">
                         <Image
                           src={slide.images.mobile.url}
@@ -91,7 +91,7 @@ function Treatments({ data }) {
               </Slider>
             </div>
           </div>
-          <div className="lg:h-1/3-screen">
+          <div className="">
             <div className="container mx-auto px-8 py-8">
               <div className="mb-6">
                 <SectionHeader
@@ -100,7 +100,7 @@ function Treatments({ data }) {
                 />
               </div>
 
-              <div className="text lg:w-103">
+              <div className="text">
                 <p>
                   EPM is developing cannabinoid acid-based therapeutic solutions
                   providing alternative treatments for patients. This is the
@@ -126,7 +126,7 @@ function Treatments({ data }) {
               <div className="text-center mb-6">
                 <SectionHeader
                   name="Our Treatments"
-                  title={<h2>Medicines We Develop</h2>}
+                  title={<h2>Medicine We Develop</h2>}
                 />
               </div>
               <div className="text mx-auto animate text-center w-105">
