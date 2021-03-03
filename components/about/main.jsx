@@ -63,7 +63,7 @@ function Main() {
             poster="/img/mobile/about/hero@2x.jpg"
             className="inset-0 w-full h-screen object-cover"
             autoPlay
-            playsinline
+            playsInline
             muted
             loop
           >
@@ -85,7 +85,7 @@ function Main() {
             poster="/img/desktop/about/hero@2x.jpg"
             className="inset-0 w-full h-screen object-cover"
             autoPlay
-            playsinline
+            playsInline
             muted
             loop
           >
