@@ -323,7 +323,7 @@ export default function About() {
           },
         },
         {
-          name: "Prof. Joseph (Yossi) Tam",
+          name: "Prof. Yossi Tam",
           role: (
             <span>
               Head of Metabolic Disorders Research,

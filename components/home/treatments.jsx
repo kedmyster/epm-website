@@ -147,15 +147,28 @@ function Treatments({ data }) {
                       href="/treatments/#inflammatory-bowel-disease"
                       className="leading-0"
                     >
-                      <Image
-                        loading="eager"
-                        src="/img/desktop/treatments/treatments-pills@2x.png"
-                        alt=""
-                        width="281"
-                        height="326"
-                        layout="intrinsic"
-                        quality={100}
-                      />
+                      {isTablet && (
+                        <Image
+                          loading="eager"
+                          src="/img/desktop/treatments/treatments-pills@2x.png"
+                          alt=""
+                          width="215"
+                          height="249"
+                          layout="intrinsic"
+                          quality={100}
+                        />
+                      )}
+                      {isDesktop && (
+                        <Image
+                          loading="eager"
+                          src="/img/desktop/treatments/treatments-pills@2x.png"
+                          alt=""
+                          width="281"
+                          height="326"
+                          layout="intrinsic"
+                          quality={100}
+                        />
+                      )}
                     </a>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
@@ -168,15 +181,28 @@ function Treatments({ data }) {
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
                     <a href="/treatments/#psoriasis" className="leading-0">
-                      <Image
-                        loading="eager"
-                        src="/img/desktop/treatments/treatments-tube@2x.png"
-                        alt=""
-                        width="113"
-                        height="386"
-                        layout="intrinsic"
-                        quality={100}
-                      />
+                      {isTablet && (
+                        <Image
+                          loading="eager"
+                          src="/img/desktop/treatments/treatments-tube@2x.png"
+                          alt=""
+                          width="86"
+                          height="295"
+                          layout="intrinsic"
+                          quality={100}
+                        />
+                      )}
+                      {isDesktop && (
+                        <Image
+                          loading="eager"
+                          src="/img/desktop/treatments/treatments-tube@2x.png"
+                          alt=""
+                          width="113"
+                          height="386"
+                          layout="intrinsic"
+                          quality={100}
+                        />
+                      )}
                     </a>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 px-20 py-3 mt-6 h-20">
@@ -188,15 +214,28 @@ function Treatments({ data }) {
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
                     <a href="/treatments/#psoriasis" className="leading-0">
-                      <Image
-                        loading="eager"
-                        src="/img/desktop/treatments/treatments-iv@2x.png"
-                        alt=""
-                        width="249"
-                        height="327"
-                        layout="intrinsic"
-                        quality={100}
-                      />
+                    {isTablet && (
+                        <Image
+                          loading="eager"
+                          src="/img/desktop/treatments/treatments-iv@2x.png"
+                          alt=""
+                          width="190"
+                          height="250"
+                          layout="intrinsic"
+                          quality={100}
+                        />
+                      )}
+                      {isDesktop && (
+                        <Image
+                          loading="eager"
+                          src="/img/desktop/treatments/treatments-iv@2x.png"
+                          alt=""
+                          width="249"
+                          height="327"
+                          layout="intrinsic"
+                          quality={100}
+                        />
+                      )}
                     </a>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">

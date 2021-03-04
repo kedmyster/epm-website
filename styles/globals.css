@@ -21,7 +21,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: max(100vh, 860px);
 }
 
 @media (min-width: 1024px) {

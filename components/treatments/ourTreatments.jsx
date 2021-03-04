@@ -327,7 +327,7 @@ function OurTreatments({ data }) {
                                 quality={100}
                               />
                             )}
-                            {(isTablet || isDesktop) && (
+                            {(isDesktop) && (
                               <Image
                                 loading="eager"
                                 src={slide.images.desktop.url}
