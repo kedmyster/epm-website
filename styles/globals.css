@@ -120,6 +120,9 @@ a {
 }
 
 /* =================== */
+body[data-header-theme="dark"] .header .menu-button svg {
+    stroke: #636466;
+  }
 
 @media (min-width: 1024px) {
   header .desktop-menu .sub-menu {

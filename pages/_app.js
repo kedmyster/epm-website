@@ -70,7 +70,7 @@ function MyApp({ Component, pageProps }) {
       <Header/>
       <Component {...pageProps} />
       {(isTablet|| isDesktop) && <SideMenu/>}
-      {isDesktop && <SocialMedia/>}
+      {(isTablet|| isDesktop) && <SocialMedia/>}
       <Footer/>
     </div>
   );

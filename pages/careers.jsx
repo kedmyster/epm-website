@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function Careers() {
   useEffect(() => {
+    document.body.dataset.headerTheme = "dark";
     document.querySelector(".menu-item--careers").classList.add("menu-item--current");
   }, []);
 
@@ -16,49 +17,47 @@ export default function Careers() {
         {
           url: "#",
           images: {
-            src: "/img/icons/media/forbes.svg",
-            width: "213",
-            height: "55",
+            
           },
-          name: "Forbes",
+          name: "",
           quote:
-            "More Potent Than CBD, THC: Dr. Raphael Mechoulam Explains His Latest Discovery",
-          date: "July 12, 2020",
+            "",
+          date: "",
         },
         {
           url: "#",
           images: {
-            src: "/img/icons/media/nbc.svg",
-            width: "255",
-            height: "57",
+            src: "",
+            width: "",
+            height: "",
           },
-          name: "NBC News",
+          name: "",
           quote:
-            "Cannabis research pioneer hopes latest discovery is not overlooked — again",
-          date: "Sep 26, 2019",
+            "",
+          date: "",
         },
         {
           url: "#",
           images: {
-            src: "/img/icons/media/discover.svg",
-            width: "224",
-            height: "64",
+            src: "",
+            width: "",
+            height: "",
           },
-          name: "Discover",
+          name: "",
           quote:
-            "The 'Father of Cannabis Research' on the Untapped Potential of Marijuana as Medicine",
-          date: "November 21, 2019",
+            "",
+          date: "",
         },
         {
           url: "#",
           images: {
-            src: "/img/icons/media/endpoints.svg",
-            width: "247",
-            height: "23",
+            src: "",
+            width: "",
+            height: "",
           },
-          name: "EndpoiontsNews",
-          quote: "Startup EPM launches, high off cannabinoid acid innovation",
-          date: "Jul 12, 2020",
+          name: "",
+          quote: "",
+          date: "",
         },
       ]
     }

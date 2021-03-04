@@ -63,7 +63,6 @@ function Cannabinoids() {
                 )}
               </div>
             </div>
-            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
           </div>
         </div>
         <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">

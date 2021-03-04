@@ -47,11 +47,11 @@ function Footer({}) {
       data-side-menu-visibility="hidden"
       data-logo-color="dark"
     >
-      <div className="container mx-auto min-h-screen px-8 pt-12 pb-4 lg:py-8 lg:pl-44 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
+      <div className="container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:pl-44 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
-          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-56 xl:w-80 2xl:w-101 xl:pr-0">
+          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-56 xl:w-96 2xl:w-109 xl:pr-0">
             <div className="mb-4 lg:mb-8">
-              <h2 className="font-title text-6xl xl:text-7.5xl 2xl:text-8.5xl leading-tight text-epm-gray-700">
+              <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-epm-gray-700">
                 Make a Change with Us
               </h2>
             </div>
@@ -77,7 +77,7 @@ function Footer({}) {
           </div>
           <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">
             <div className="mb-8">
-              <h2 className="font-title text-6xl xl:text-7.5xl 2xl:text-8.5xl leading-tight text-white">
+              <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-white">
                 Great :)
                 <br />
                 Thank You!
@@ -96,7 +96,7 @@ function Footer({}) {
           <div className="flex flex-row">
             <div className="flex-grow">
               <div className="mb-4 leading-8">
-                <div className="text-white uppercase">Information</div>
+                <div className="text-white font-bold uppercase">Information</div>
                 <div className="">
                   <a
                     href="mailto:info@epmip.com"
@@ -126,7 +126,7 @@ function Footer({}) {
               </div>
               <div>
                 <div className="mb-4 leading-8">
-                  <div className="text-white uppercase">US Headquarters</div>
+                  <div className="text-white font-bold uppercase">US Headquarters</div>
                   <div className="">
                     1347 19th St.
                     <br />
@@ -137,7 +137,7 @@ function Footer({}) {
                 </div>
 
                 <div className="mb-4 leading-8">
-                  <div className="text-white uppercase">Israel Office</div>
+                  <div className="text-white font-bold uppercase">Israel Office</div>
                   <div className="">
                     121 Menachem Begin Rd.
                     <br />
@@ -225,7 +225,7 @@ function Footer({}) {
             </div>
           </div>
         </div>
-        <div className="copyright text-xs lg:text-sm font-title text-epm-gray-700 lg:pt-48 ">
+        <div className="copyright text-xs lg:text-sm font-title text-epm-gray-700">
           <a
             href="/privacy-policy"
             className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"

@@ -14,7 +14,7 @@ function CareersComponent({ positions = [] }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -61,7 +61,7 @@ function CareersComponent({ positions = [] }) {
             />
           )}
         </div>
-        <div className="relative container mx-auto py-8 px-8 lg:flex lg:flex-col lg:justify-center">
+        <div className="relative container mx-auto px-8 py-8 mt-8 lg:mt-0 lg:flex lg:flex-col lg:justify-center">
           <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
@@ -71,15 +71,12 @@ function CareersComponent({ positions = [] }) {
           <div className="animate text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
             <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
-              medicine and create safer treatments for patients by collaborating
-              with leading pharmaceutical companies.
+              medicine and create safer treatments for patients. We believe in
+              helping people live a higher quality of life.
             </p>
             <p className="lg:mx-20">
-              We believe in helping people live a higher quality of life.
-            </p>
-            <p>
               We are looking for enthusiastic and talented individuals who
-              thrive on challenges and a dynamic work environment<br/>as well as
+              thrive on challenges and a dynamic work environment as well as
               people who are passionate to impact through actual results.
             </p>
           </div>
@@ -88,9 +85,7 @@ function CareersComponent({ positions = [] }) {
               Looking to join a dynamic company, and be part of a team that
               shapes the future of healthcare?
             </p>
-            <p className="mb-4 lg:mb-8">
-              We’d love to hear from you.
-            </p>
+            <p className="mb-4 lg:mb-8">We’d love to hear from you.</p>
             <a
               href="mailto:jobs@epmip.com"
               className="underline lg:no-underline inline-block lg:pb-8"

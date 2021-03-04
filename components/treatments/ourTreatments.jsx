@@ -357,7 +357,7 @@ function OurTreatments({ data }) {
                               />
                             )}
                           </div>
-                          <div className="item__title text-center text-xxs 2xltext-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 2xl:h-20">
+                          <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 2xl:h-20">
                             {slide.icons.icon2.label}
                             {slide.icons.icon2.subLabel && (
                               <span className="block normal-case text-epm-gray-500 font-light">

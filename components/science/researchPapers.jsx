@@ -92,7 +92,7 @@ function ResearchPapers({ data }) {
 
     if (isMobile) {
       if (slide) {
-        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.url}`;
+        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.url}&pagemode=none`;
       }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {

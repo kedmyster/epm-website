@@ -206,6 +206,27 @@ export default function About() {
             desktop: "/img/desktop/about/leadership/yaron@2x.jpg",
           },
         },
+
+        {
+          name: "Rotem Sher",
+          role: "Chief of Staff",
+          text: (
+            <div>
+              <p>
+                Previously director of business operations at Wix.com, Rotem has
+                a rich experience in the hi-tech industry in several senior
+                director positions. Having focused on building companies to
+                scale and executing global projects, Rotem’s specialty is
+                leading business units while shaping and turning strategy into
+                practice.
+              </p>
+            </div>
+          ),
+          image: {
+            mobile: "/img/mobile/about/leadership/rotem@2x.jpg",
+            desktop: "/img/desktop/about/leadership/rotem@2x.jpg",
+          },
+        },
         {
           name: "Dr. Thilo Bayrhoffer",
           role: "Chief Business Officer",
@@ -235,26 +256,6 @@ export default function About() {
           image: {
             mobile: "/img/mobile/about/leadership/thilo@2x.jpg",
             desktop: "/img/desktop/about/leadership/thilo@2x.jpg",
-          },
-        },
-        {
-          name: "Rotem Sher",
-          role: "Chief of Staff",
-          text: (
-            <div>
-              <p>
-                Previously director of business operations at Wix.com, Rotem has
-                a rich experience in the hi-tech industry in several senior
-                director positions. Having focused on building companies to
-                scale and executing global projects, Rotem’s specialty is
-                leading business units while shaping and turning strategy into
-                practice.
-              </p>
-            </div>
-          ),
-          image: {
-            mobile: "/img/mobile/about/leadership/rotem@2x.jpg",
-            desktop: "/img/desktop/about/leadership/rotem@2x.jpg",
           },
         },
         {
@@ -294,7 +295,9 @@ export default function About() {
           ),
           text: (
             <div>
-              <p className="mb-4">Known as the “Godfather” of medical cannabis.</p>
+              <p className="mb-4">
+                Known as the “Godfather” of medical cannabis.
+              </p>
               <p className="mb-4">
                 Prof. Mechoulam has a lifetime of experience in the isolation
                 and total synthesis of the main active ingredients of cannabis

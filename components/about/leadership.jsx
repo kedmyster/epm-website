@@ -109,7 +109,7 @@ function Leadership({ leaders = [] }) {
                         aria-expanded="false"
                       >
                         <div className="flex flex-row">
-                          <div className="leader_image relative h-full overflow-y-hidden lg:overflow-y-none leading-0 lg:h-1/6-screen">
+                          <div className="leader_image relative h-full overflow-y-hidden lg:overflow-y-none leading-0 lg:w-32 xl:w-36 2xl:w-40 lg:h-1/6-screen">
                             {isMobile && (
                               <div className="">
                                 <Image
@@ -135,25 +135,25 @@ function Leadership({ leaders = [] }) {
                               />
                             )}
                           </div>
-                          <div className="leader_content flex flex-col flex-grow py-4 lg:py-6 pl-8 lg:pl-8 xl:pl-24 2xl:pl-36">
-                            <div className="flex flex-col justify-start h-full">
-                              <div className="leader__name text-lg lg:text-xl xl:text-2xl leading-tight font-bold">
+                          <div className="leader_content flex flex-col flex-grow pl-8 lg:pl-8 xl:pl-24 2xl:pl-36">
+                            <div className="flex flex-col justify-center h-full lg:h-1/6-screen">
+                              <div className="leader__name text-lg lg:text-xl xl:text-2xl leading-tight font-bold mb-1">
                                 {leader.name}
                               </div>
                               <div className="leader__role text-sm lg:epm-base font-light">
                                 {leader.role}
-                              </div>
-                              <div className="leader__group text-xxs 2xl:text-base font-light uppercase pt-3">
+                            </div>
+                              {/*<div className="leader__group text-xxs 2xl:text-base font-light uppercase pt-3">
                                 {group.group}
-                              </div>
+                              </div>*/}
                             </div>
                             {isDesktop && (
-                              <div className="leader__text font-light font-epm-base 2xl:text-lg mt-8 lg:w-64 xl:w-78 2xl:w-101 hidden">
+                              <div className="leader__text font-light font-epm-base 2xl:text-lg mt-8 lg:mb-8 lg:w-64 xl:w-78 2xl:w-101 hidden">
                                 {leader.text}
                               </div>
                             )}
                           </div>
-                          <div className="icon mx-4 lg:mx-8 pt-4 lg:pt-8 flex flex-col justify-start">
+                          <div className="icon mx-4 lg:mx-8 flex flex-col justify-start pt-10 lg:pt-14 xl:pt-16">
                             <div className="arrow">
                               {isMobile && (
                                 <Image

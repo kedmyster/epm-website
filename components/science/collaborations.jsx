@@ -200,7 +200,7 @@ function Collaborations({ data }) {
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
               <div className="animate container mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10">
-                <div className="collaborations__panel commercial lg:w-1/2 mx-8">
+                <div className="collaborations__panel commercial lg:w-1/2 px-8">
                   <div className="relative z-10">
                     <div className="font-title uppercase text-2xl mb-16">
                       Commercial
@@ -239,7 +239,7 @@ function Collaborations({ data }) {
                   </div>
                 </div>
 
-                <div className="collaborations__panel academia lg:w-1/2 mx-8">
+                <div className="collaborations__panel academia lg:w-1/2 px-8 lg:border-l lg:border-epm-gray-100 lg:border-opacity-30">
                   <div className="relative z-10">
                     <div className="font-title uppercase lg:text-2xl mb-16">
                       Academia
@@ -302,7 +302,7 @@ function Collaborations({ data }) {
                   process.
                 </p>
               </div>
-              <div
+              // <div
                 className="more-info academy-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 left-0 hidden lg:flex flex-wrap content-center text-left lg:bg-white lg:px-16 xl:px-36 py-8"
                 data-collaboration-panel="academy"
                 aria-expanded="false"
@@ -310,7 +310,7 @@ function Collaborations({ data }) {
                 <p className="lg:text-epm-base">
                   EPM’s pre-clinical pharmacology studies are being conducted by
                   top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
-                  Yossi Tam (Hebrew University), and Prof. Mark Brown
+                  Yossi Tam (Hebrew University), and Prof. Marc Brown
                   (MedPharm), amongst others. The animal studies cover a wide
                   range of disease areas, including: Inflammatory Skin Diseases,
                   Metabolic Diseases, Osteoarthritis and joint pain, and

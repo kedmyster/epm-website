@@ -129,7 +129,8 @@ function SideMenu() {
     const theme = section.dataset.sideMenuColor;
     const logoTheme = section.dataset.logoColor;
     const menuItems = sideMenu.querySelectorAll(".menu-item");
-    const logo = document.querySelector(".logo svg #Path_5");
+    const logoIcon = document.querySelector(".logo svg .logo-icon");
+    const logoText = document.querySelectorAll(".logo svg .logo-text");
 
     const tlSideMenuPills = gsap.timeline({
       paused: true,
@@ -172,6 +173,8 @@ function SideMenu() {
       },
     });
 
+    tlLogo.add(`logo-${section.id}`);
+
     if (theme === THEME_LIGHT) {
       tlSideMenuLabels.to(
         label,
@@ -197,22 +200,48 @@ function SideMenu() {
 
     if (logoTheme === THEME_LIGHT) {
       tlLogo.to(
-        logo,
+        logoIcon,
         {
           fill: "#ffd534",
           opacity: 1,
           duration: 0.1,
         },
+        `logo-${section.id}`
       );
+
+      logoText.forEach(item => {
+        tlLogo.to(
+          item,
+          {
+            fill: "#a9acb0",
+            opacity: 1,
+            duration: 0.1,
+          },
+          `logo-${section.id}`
+        );
+      })
     } else if (logoTheme === THEME_DARK) {
       tlLogo.to(
-        logo,
+        logoIcon,
         {
           fill: "#636466",
           opacity: 0.5,
           duration: 0.1,
         },
+        `logo-${section.id}`
       );
+
+      logoText.forEach(item => {
+        tlLogo.to(
+          item,
+          {
+            fill: "#636466",
+            opacity: 1,
+            duration: 0.1,
+          },
+          `logo-${section.id}`
+        );
+      })
     }
 
     tlSideMenuPills.add(`side-menu-${section.id}`);
@@ -325,7 +354,7 @@ function SideMenu() {
           tlSideMenuColor.to(
             pill,
             {
-              backgroundColor: "#000000",
+              backgroundColor: "#636466",
               duration: 0.1,
             },
             "side-menu-color"

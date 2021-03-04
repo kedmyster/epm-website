@@ -48,6 +48,8 @@ module.exports = {
       fontSize: {
         "xxs": "0.6875rem",
         "epm-base": "0.9375rem",
+        "4.5xl": "2.5rem",
+        "5.5xl": "3.25rem",
         "7.5xl": "5.25rem",
         "8.5xl": "7.5rem",
       },
@@ -68,6 +70,7 @@ module.exports = {
         101: "31rem",
         103: "33rem",
         105: "35rem",
+        109: "39rem",
         "container": "58.125rem",
         "lg-container": "73.75rem",
         "3/4-screen": "75vw",
@@ -75,6 +78,7 @@ module.exports = {
       },
       height: {
         101 : "31.25rem",
+        103 : "37.5rem",
         110 : "56.375rem",
         "2/3-screen": "66.66666vh",
         "1/3-screen": "33.33333vh",
