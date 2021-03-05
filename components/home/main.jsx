@@ -55,7 +55,7 @@ function Main() {
       data-header-menu-visibility="hidden"
     >
       <div>
-        <div className="video absolute w-full h-full">
+        <div className="video w-full h-full">
           {isMobile && (
             <video
               width="375"
@@ -101,7 +101,7 @@ function Main() {
             </video>
           )}
         </div>
-        <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
+        <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
         <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-20 lg:bottom-16 lg:w-full">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
