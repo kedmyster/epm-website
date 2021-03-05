@@ -55,7 +55,7 @@ function Main() {
       data-header-menu-visibility="hidden"
     >
       <div>
-        <div className="video w-full h-full">
+        <div className="video">
           {isMobile && (
             <video
               width="375"
@@ -102,7 +102,7 @@ function Main() {
           )}
         </div>
         <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-20 lg:bottom-16 lg:w-full">
+        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 lg:w-full">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
               Medicine to All
@@ -117,7 +117,7 @@ function Main() {
           </div>
         </div>
 
-        <div className="scroll-to-content animate absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="scroll-to-content animate absolute bottom-12 left-1/2 transform -translate-x-1/2">
           <a
             href="#story"
             onClick={scrollToContent}

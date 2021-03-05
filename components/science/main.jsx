@@ -55,7 +55,7 @@ function Main() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="hidden"
     >
-      <div className="video w-full h-full">
+      <div className="video">
         {isMobile && (
           <video
             width="375"
@@ -102,76 +102,14 @@ function Main() {
         )}
       </div>
       <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-      <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-16 lg:bottom-12 lg:w-full ">
+      <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-12 lg:w-full ">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <h1 className="font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide">
             Unlock the medical potential of synthetic cannabinoid acids
           </h1>
         </div>
-        {/*<div className="container w-container mx-auto px-8 py-8 hidden relative z-10 lg:flex lg:flex-row ">
-          <div className="w-1/3">
-            <div className="icon w-16 mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                width="68"
-                height="68"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <div className="text font-title text-2xl">Potency</div>
-          </div>
-          <div className="w-1/3">
-            <div className="icon w-16 mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                width="68"
-                height="68"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <div className="text font-title text-2xl">Consistency</div>
-          </div>
-          <div className="w-1/3">
-            <div className="icon w-16 mx-auto mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                width="68"
-                height="68"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1"
-                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <div className="text font-title text-2xl">Protection</div>
-          </div>
-        </div> */}
       </div>
-      <div className="scroll-to-content absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="scroll-to-content absolute bottom-12 left-1/2 transform -translate-x-1/2">
         <a
           href="#solution"
           onClick={scrollToContent}
