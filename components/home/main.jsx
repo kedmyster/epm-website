@@ -108,7 +108,7 @@ function Main() {
               Medicine to All
             </h1>
             <p className="main__tagline animate lg:text-3xl lg:font-light">
-              Novel therapeutics from synthetic cannabinoid acids
+              Novel therapeutics from synthetic cannabinoid acids{" "}
               {(isTablet || isDesktop) && (
                <br/>
               )}

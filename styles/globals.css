@@ -22,6 +22,7 @@ body {
 
 section {
   min-height: 100vh;
+  min-height: fill-available;
 }
 
 @media (min-width: 1024px) {
@@ -130,8 +131,6 @@ body[data-header-theme="dark"] .header .menu-button svg {
     z-index: -1;
     @apply transition-all ease-in-out duration-150;
   }
-
-  
 
   header .desktop-menu li.menu-item:hover .sub-menu {
     opacity: 1;
