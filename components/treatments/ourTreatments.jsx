@@ -82,7 +82,7 @@ function OurTreatments({ data }) {
       const button = section.querySelector(".button");
       const opened = document.querySelector("[aria-expanded='true']");
       
-      if (opened) {
+      if (opened && opened !== moreInfoPanel) {
         const openedButton = opened.closest(".section").querySelector(".button");
         opened.setAttribute("aria-expanded", "false");
         opened.style.display = "none";
