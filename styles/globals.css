@@ -8,7 +8,7 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior: contain;
-  height: fill-available;
+  block-size: fill-available;
 }
 
 body {
