@@ -50,7 +50,7 @@ function Main() {
   return (
     <section
       id="main"
-      className="section main w-full bg-cover text-center text-white relative h-screen"
+      className="section main w-full bg-cover text-center text-white relative lg:h-screen"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="hidden"
