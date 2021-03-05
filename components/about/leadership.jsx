@@ -135,12 +135,12 @@ function Leadership({ leaders = [] }) {
                               />
                             )}
                           </div>
-                          <div className="leader_content flex flex-col flex-grow pl-8 lg:pl-8 xl:pl-24 2xl:pl-36">
+                          <div className="leader_content flex flex-col flex-grow pl-4 lg:pl-8 xl:pl-24 2xl:pl-36">
                             <div className="flex flex-col justify-center h-full lg:h-1/6-screen">
-                              <div className="leader__name text-lg lg:text-xl xl:text-2xl leading-tight font-bold mb-1">
+                              <div className="leader__name text-base lg:text-xl xl:text-2xl leading-tight font-bold mb-1">
                                 {leader.name}
                               </div>
-                              <div className="leader__role text-sm lg:epm-base font-light">
+                              <div className="leader__role text-xs lg:epm-base font-light">
                                 {leader.role}
                             </div>
                               {/*<div className="leader__group text-xxs 2xl:text-base font-light uppercase pt-3">

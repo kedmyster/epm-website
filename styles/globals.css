@@ -8,7 +8,7 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior: contain;
-  height: -webkit-fill-available;
+  height: fill-available;
 }
 
 html,
@@ -17,11 +17,11 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  min-height: -webkit-fill-available;
+  min-height: fill-available;
 }
 
 section {
-  min-height: max(100vh, 860px);
+  min-height: 100vh;
 }
 
 @media (min-width: 1024px) {
@@ -30,7 +30,7 @@ section {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px)/* and (min-height: 768px)*/ {
   html {
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
