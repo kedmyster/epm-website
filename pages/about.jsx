@@ -387,7 +387,7 @@ export default function About() {
         <meta name="keywords" content="" />
       </Head>
 
-      {/*<Main />*/}
+      <Main />
       <OurStory />
       <FoundingEPM />
       <Leadership leaders={leaders} />

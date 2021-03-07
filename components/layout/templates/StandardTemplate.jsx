@@ -8,7 +8,7 @@ function StandardTemplate({name, title, children}) {
 
   return (
     <section
-      id=""
+      id="standard-template"
       className="section bg-white pt-10 lg:pt-20 lg:px-72 lg:min-h-screen"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
@@ -21,7 +21,7 @@ function StandardTemplate({name, title, children}) {
             title={title}
           />
         </div>
-        <div className="text">
+        <div className="text animate opacity-0">
           {children}
         </div>
       </div>

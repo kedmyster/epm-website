@@ -180,7 +180,7 @@ export default function Home() {
         <meta name="keywords" content="" />
       </Head>
 
-      {/*<Main />*/}
+      <Main />
       <Story />
       <Innovation data={page.innovation} />
       <Treatments data={page.treatments} />
