@@ -140,7 +140,7 @@ function ResearchPapers({ data }) {
     <section
       id="research-papers"
       className="section research-papers bg-white"
-      data-side-menu-label="Research Papers"
+      data-side-menu-label="Publications"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

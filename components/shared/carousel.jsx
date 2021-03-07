@@ -8,6 +8,8 @@ export function SliderCustomPreviousArrow(props) {
     path = "/img/icons/arrow_left.svg";
   } else if (color === "dark") {
     path = "/img/icons/arrow_left_dark.svg";
+  }  else if (color === "gray") {
+    path = "/img/icons/arrow_left_light_gray.svg";
   }
 
   return (
@@ -16,12 +18,7 @@ export function SliderCustomPreviousArrow(props) {
       style={{ ...style }}
       onClick={onClick}
     >
-      <Image
-        src={path}
-        width="16"
-        height="28"
-        alt="Previous"
-      />
+      <Image src={path} width="16" height="28" alt="Previous" />
     </div>
   );
 }
@@ -34,6 +31,8 @@ export function SliderCustomNextArrow(props) {
     path = "/img/icons/arrow_right.svg";
   } else if (color === "dark") {
     path = "/img/icons/arrow_right_dark.svg";
+  } else if (color === "gray") {
+    path = "/img/icons/arrow_right_light_gray.svg";
   }
 
   return (
@@ -42,12 +41,7 @@ export function SliderCustomNextArrow(props) {
       style={{ ...style }}
       onClick={onClick}
     >
-      <Image
-        src={path}
-        width="16"
-        height="28"
-        alt="Previous"
-      />
+      <Image src={path} width="16" height="28" alt="Previous" />
     </div>
   );
 }

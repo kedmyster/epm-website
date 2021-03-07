@@ -21,8 +21,8 @@ function RaphaelMechoulam() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SliderCustomNextArrow color="dark" />,
-    prevArrow: <SliderCustomPreviousArrow color="dark" />,
+    nextArrow: <SliderCustomNextArrow color="gray" />,
+    prevArrow: <SliderCustomPreviousArrow color="gray" />,
   };
 
   useEffect(() => {
@@ -160,7 +160,7 @@ function RaphaelMechoulam() {
     <section
       id="raphael-mechoulam"
       className="section raphael-mechoulam bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
-      data-side-menu-label="Prof. Mechoulam Bio"
+      data-side-menu-label="Mechoulam's Bio"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

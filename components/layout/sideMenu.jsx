@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { gsap } from "gsap";
-import { GSDevTools } from "gsap/dist/GSDevTools";
 
 const THEME_LIGHT = "light";
 const THEME_DARK = "dark";
 const VISIBILITY_VISIBLE = "visible";
 const VISIBILITY_HIDDEN = "hidden";
-
-gsap.registerPlugin(GSDevTools);
 
 function SideMenu() {
   const animateSideMenuHover = (sideMenu, section, menuItem, pill, label) => {

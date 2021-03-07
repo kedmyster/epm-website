@@ -145,7 +145,7 @@ function Treatments({ data }) {
                   <div className="item__image flex justify-center items-end flex-grow">
                     <a
                       href="/treatments/#inflammatory-bowel-disease"
-                      className="leading-0"
+                      className="leading-0 transition-opacity duration-150 hover:opacity-70"
                     >
                       {isTablet && (
                         <Image
@@ -180,7 +180,7 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#psoriasis" className="leading-0">
+                    <a href="/treatments/#psoriasis" className="leading-0 transition-opacity duration-150 hover:opacity-70">
                       {isTablet && (
                         <Image
                           loading="eager"
@@ -213,7 +213,7 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#psoriasis" className="leading-0">
+                    <a href="/treatments/#psoriasis" className="leading-0 transition-opacity duration-150 hover:opacity-70">
                     {isTablet && (
                         <Image
                           loading="eager"

@@ -47,6 +47,8 @@ function Collaborations({ data }) {
         gsap.to(moreInfoPanel, { opacity: 0, zIndex: 0, duration: 0.25 });
         event.target.innerText = "Learn More";
       }
+
+      document.querySelector(".collaborations__panel.academia").classList.toggle("lg\:border-l");
     }
   };
 
@@ -54,7 +56,7 @@ function Collaborations({ data }) {
     <section
       id={"collaborations"}
       className="section collaborations bg-white"
-      data-side-menu-label="Key Collaborations"
+      data-side-menu-label="Collaborations"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

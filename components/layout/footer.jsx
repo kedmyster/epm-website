@@ -164,6 +164,21 @@ function Footer({}) {
               </div>
               <div className="mb-3">
                 <a
+                  href="https://twitter.com/EPMIP"
+                  target="_blank"
+                  rel="noopener"
+                  className="transition-opacity duration-150 hover:opacity-70"
+                >
+                  <Image
+                    src="/img/icons/linkedin-dark-gray.svg"
+                    width="32"
+                    height="32"
+                    alt="Twitter"
+                  />
+                </a>
+              </div>
+              <div className="mb-3">
+                <a
                   href="https://www.youtube.com/channel/UCr8mb7WyEcxGCEXIyYS0Cog"
                   target="_blank"
                   rel="noopener"

@@ -22,24 +22,24 @@ export default function science() {
         {
           name: "Yossi Tam",
           images: {
-            mobile: "/img/mobile/science/solution/thumb-01@2x.jpg",
-            desktop: "/img/desktop/science/solution/thumb-01@2x.jpg",
+            mobile: "/img/mobile/science/our-science/thumb-01@2x.jpg",
+            desktop: "/img/desktop/science/our-science/thumb-01@2x.jpg",
           },
           video: "cWShfI5tCUs",
         }, 
         {
           name: "Raphael Mechoulam",
           images: {
-            mobile: "/img/mobile/science/solution/thumb-02@2x.jpg",
-            desktop: "/img/desktop/science/solution/thumb-02@2x.jpg",
+            mobile: "/img/mobile/science/our-science/thumb-02@2x.jpg",
+            desktop: "/img/desktop/science/our-science/thumb-02@2x.jpg",
           },
           video: "1qrPwiifufo",
         },
         {
           name: "Dan Peer",
           images: {
-            mobile: "/img/mobile/science/solution/thumb-03@2x.jpg",
-            desktop: "/img/desktop/science/solution/thumb-03@2x.jpg",
+            mobile: "/img/mobile/science/our-science/thumb-03@2x.jpg",
+            desktop: "/img/desktop/science/our-science/thumb-03@2x.jpg",
           },
           video: "KVKuov_GbZo",
         },
