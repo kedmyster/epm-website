@@ -21,12 +21,14 @@ body {
 }
 
 section {
-  height: stretch;
+  min-height: 100vh;
+  min-height: stretch;
 }
 
 @media (min-width: 1024px) {
   section {
-    min-height: 100vh;
+    min-height: auto;
+    height: 100vh;
   }
 }
 
