@@ -101,7 +101,7 @@ function Main() {
           </video>
         )}
       </div>
-      <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
+      {/*<div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>*/}
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-24 lg:bottom-16 lg:w-full">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <p className="text-xs animate opacity-0 uppercase font-title mb-4 lg:hidden">
