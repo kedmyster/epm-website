@@ -129,7 +129,7 @@ function Treatments({ data }) {
                   title={<h2>Medicine We Develop</h2>}
                 />
               </div>
-              <div className="text mx-auto animate text-center w-105">
+              <div className="text mx-auto animate opacity-0 text-center w-105">
                 <p>
                   EPM is developing cannabinoid acid-based therapeutic solutions
                   providing alternative treatments for patients. This is the
@@ -139,7 +139,7 @@ function Treatments({ data }) {
                 </p>
               </div>
             </div>
-            <div className="animate container max-w-4xl mx-auto px-8">
+            <div className="animate opacity-0 container max-w-4xl mx-auto px-8">
               <div className="flex flex-row justify-center">
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
@@ -247,7 +247,7 @@ function Treatments({ data }) {
                 </div>
               </div>
             </div>
-            <div className="animate container mx-auto px-8 py-8">
+            <div className="animate opacity-0 container mx-auto px-8 py-8">
               <div className="button text-center pt-10 lg:pt-0">
                 <Button href="/treatments/#main" style="dark">
                   Learn More

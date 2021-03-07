@@ -174,6 +174,10 @@ export default function Home() {
       <Head>
         <title>EPM - Medicine to All.</title>
         <link rel="icon" href="/favicon.svg" />
+        <link rel="preload" as="image" href="/img/desktop/homepage/hero@2x.jpg" />
+        <link rel="preload" as="image" href="/img/mobile/homepage/hero@2x.jpg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <Main />

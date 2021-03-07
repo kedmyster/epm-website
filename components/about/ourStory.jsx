@@ -112,7 +112,7 @@ function OurStory() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="item animate relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto" aria-expanded="false">
+      <div className="item animate opacity-0 relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto" aria-expanded="false">
         {isMobile && (
           <Image
             loading="eager"
@@ -133,7 +133,7 @@ function OurStory() {
             quality={100}
           />
         )}
-        {<span className="animate button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
+        {<span className="animate opacity-0 button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
           <Button style="light" onClick={(event) => toggleVideo(event)}>
             Play Video
           </Button>
@@ -149,7 +149,7 @@ function OurStory() {
               title={<h2>Patient-Focused Pharmaceutical Group</h2>}
             />
           </div>
-          <div className="animate text mt-6 lg:text-epm-base">
+          <div className="animate opacity-0 text mt-6 lg:text-epm-base">
             <p className="mb-4">
               EPM develops prescription medicine derived from synthetic
               cannabinoid acids to address unmet patient needs.

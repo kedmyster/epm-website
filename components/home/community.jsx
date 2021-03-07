@@ -72,7 +72,7 @@ function Community({ data }) {
       data-header-menu-visibility="visible"
     >
       <div className="lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen">
-        <div className="items animate text-white bg-gray-900 text-center lg:w-6/12 2xl:w-7/12">
+        <div className="items animate opacity-0 text-white bg-gray-900 text-center lg:w-6/12 2xl:w-7/12">
           <Slider {...SLIDER_COMMUNITY_CONFIG}>
             {data.slides.map((slide, index) => {
               return (
@@ -153,7 +153,7 @@ function Community({ data }) {
                 title={<h2>Curing and Treating Patients Worldwide </h2>}
               />
             </div>
-            <div className="text animate lg:mt-6">
+            <div className="text animate opacity-0 lg:mt-6">
               <p>
                 EPM’s vision is to reach patients worldwide and improve their
                 quality of life. Partnering with leading pharmaceutical
@@ -161,7 +161,7 @@ function Community({ data }) {
                 this vision into a reality.
               </p>
             </div>
-            <div className="button animate pt-10">
+            <div className="button animate opacity-0 pt-10">
               <Button href="#footer" style="dark">
                 Join Us
               </Button>

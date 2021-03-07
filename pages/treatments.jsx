@@ -488,6 +488,10 @@ export default function Treatments() {
       <Head>
         <title>Treatments - EPM</title>
         <link rel="icon" href="/favicon.svg" />
+        <link rel="preload" as="image" href="/img/desktop/treatments/hero@2x.jpg" />
+        <link rel="preload" as="image" href="/img/mobile/treatments/hero@2x.jpg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <Main />

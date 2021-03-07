@@ -91,7 +91,7 @@ function Leadership({ leaders = [] }) {
                   />
                 </div>
                 {(isTablet || isDesktop) && (
-                  <div className="animate text lg:text-epm-base lg:mt-6">
+                  <div className="animate opacity-0 text lg:text-epm-base lg:mt-6">
                     <p>{group.text}</p>
                   </div>
                 )}
@@ -103,7 +103,7 @@ function Leadership({ leaders = [] }) {
                   return (
                     <>
                       <div
-                        className="leader animate relative cursor-pointer lg:w-full bg-white transition-colors duration-150 hover:bg-epm-gray-100 border-t border-epm-gray-300 last:border-b"
+                        className="leader animate opacity-0 relative cursor-pointer lg:w-full bg-white transition-colors duration-150 hover:bg-epm-gray-100 border-t border-epm-gray-300 last:border-b"
                         key={leader.name}
                         onClick={(event) => toggleLeader(event)}
                         aria-expanded="false"

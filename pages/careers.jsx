@@ -68,6 +68,10 @@ export default function Careers() {
       <Head>
         <title>Careers - EPM</title>
         <link rel="icon" href="/favicon.svg" />
+        <link rel="preload" as="image" href="/img/desktop/careers/careers@2x.jpg" />
+        <link rel="preload" as="image" href="/img/mobile/careers/careers@2x.jpg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <CareersComponent data={page.careers} positions={positions}/>

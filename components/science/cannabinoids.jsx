@@ -73,7 +73,7 @@ function Cannabinoids() {
                 title={<h2>Cannabinoids Acid</h2>}
               />
             </div>
-            <div className="animate text lg:text-epm-base mt-6">
+            <div className="animate opacity-0 text lg:text-epm-base mt-6">
               <p className="mb-4">
                 In the plant, cannabinoid acids are the source of all known
                 cannabinoids. The therapeutic effects of cannabinoid acids are

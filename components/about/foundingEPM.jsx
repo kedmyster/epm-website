@@ -51,7 +51,7 @@ function FoundingEPM() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="image relative animate lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto">
+      <div className="image relative animate opacity-0 lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto">
         {isMobile && (
           <Image
             loading="eager"
@@ -79,7 +79,7 @@ function FoundingEPM() {
           <div className="lg:mb-0">
             <SectionHeader name="Our Story" title={<h2>Founding EPM</h2>} />
           </div>
-          <div className="animate text mt-6 lg:text-epm-base">
+          <div className="animate opacity-0 text mt-6 lg:text-epm-base">
             <p className="mb-4">
               The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in
               an intergenerational collaboration with Israeli Prize winner and

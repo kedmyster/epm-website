@@ -39,7 +39,7 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-visibility="hidden"
         data-header-menu-visibility="visible"
       >
-        <div className="animate absolute w-full h-full">
+        <div className="animate opacity-0 absolute w-full h-full">
           {isMobile && (
             <Image
               src="/img/mobile/careers/careers@2x.jpg"
@@ -68,7 +68,7 @@ function CareersComponent({ positions = [] }) {
               title={<h2>Shape the Future of Healthcare </h2>}
             />
           </div>
-          <div className="animate text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
+          <div className="animate opacity-0 text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
             <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
               medicine and create safer treatments for patients. We believe in
@@ -80,7 +80,7 @@ function CareersComponent({ positions = [] }) {
               people who are passionate to impact through actual results.
             </p>
           </div>
-          <div className="animate font-bold text-lg lg:text-xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
+          <div className="animate opacity-0 font-bold text-lg lg:text-xl lg:mx-auto mt-4 lg:mt-8 lg:w-103 lg:px-2">
             <p className="mb-4 lg:mb-8">
               Looking to join a dynamic company, and be part of a team that
               shapes the future of healthcare?
@@ -106,7 +106,7 @@ function CareersComponent({ positions = [] }) {
         data-side-menu-visibility="visible"
       >
         <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="animate container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
+          <div className="animate opacity-0 container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
               <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
             </div>
@@ -159,7 +159,7 @@ function CareersComponent({ positions = [] }) {
           </div>
         </div>
 
-        <div className="animate relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden lg:block ">
+        <div className="animate opacity-0 relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden lg:block ">
           <div className="absolute w-full h-full">
             {isMobile && (
               <Image

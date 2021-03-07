@@ -249,6 +249,10 @@ export default function science() {
       <Head>
         <title>Science - EPM</title>
         <link rel="icon" href="/favicon.svg" />
+        <link rel="preload" as="image" href="/img/desktop/science/hero@2x.jpg" />
+        <link rel="preload" as="image" href="/img/mobile/science/hero@2x.jpg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <Main />

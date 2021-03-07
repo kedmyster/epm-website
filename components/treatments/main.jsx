@@ -104,10 +104,10 @@ function Main() {
       <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
       <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-12 lg:w-full">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
-          <p className="animate text-xs uppercase font-title mb-4 lg:hidden">
+          <p className="animate opacity-0 text-xs uppercase font-title mb-4 lg:hidden">
             Our Treatments
           </p>
-          <h1 className="animate font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
+          <h1 className="animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
             Medicine We Develop
           </h1>
         </div>

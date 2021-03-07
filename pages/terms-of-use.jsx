@@ -7,6 +7,8 @@ function TermsOfUse() {
       <Head>
         <title>Terms of Use - EPM</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <StandardTemplate title="Terms of Use">

@@ -381,6 +381,10 @@ export default function About() {
       <Head>
         <title>About - EPM</title>
         <link rel="icon" href="/favicon.svg" />
+        <link rel="preload" as="image" href="/img/desktop/about/hero@2x.jpg" />
+        <link rel="preload" as="image" href="/img/mobile/about/hero@3x.jpg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <Main />

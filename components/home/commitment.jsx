@@ -137,7 +137,7 @@ function Commitment() {
               title={<h2>Developing Safer Treatments</h2>}
             />
           </div>
-          <div className="animate container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto space-x-10">
+          <div className="animate opacity-0 container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto space-x-10">
             <div className="item w-1/3 text-center">
               <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
                 <Image
@@ -202,7 +202,7 @@ function Commitment() {
             </div>
           </div>
           <div className="container relative mx-auto text-center px-8 py-8">
-            <div className="text animate font-light mx-auto lg:w-105">
+            <div className="text animate opacity-0 font-light mx-auto lg:w-105">
               <p>
                 EPM is committed to developing a series of new medicinal
                 solutions based on cannabinoid acids. We believe that providing
@@ -211,7 +211,7 @@ function Commitment() {
                 healthful alternative to existing products in the market.
               </p>
             </div>
-            <div className="button animate pt-10">
+            <div className="button animate opacity-0 pt-10">
               <Button href="/science/#main" style="light">
                 Learn More
               </Button>

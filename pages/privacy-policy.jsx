@@ -7,6 +7,8 @@ function PrivacyPolicy() {
       <Head>
         <title>Privacy Policy - EPM</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Head>
 
       <StandardTemplate title="Privacy Policy">

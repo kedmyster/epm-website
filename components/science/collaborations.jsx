@@ -74,7 +74,7 @@ function Collaborations({ data }) {
               />
             </div>
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
-            <div className="animate container mx-auto text-center px-8 py-8 h-full lg:h-auto flex lg:block flex-wrap content-center">
+            <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full lg:h-auto flex lg:block flex-wrap content-center">
               <div className="commercial lg:w-1/2">
                 <div className="font-title text-white uppercase text-2xl mb-16 relative">
                   Commercial
@@ -105,8 +105,8 @@ function Collaborations({ data }) {
           <div className="container px-8 py-8">
             <div className="mb-6">
               <SectionHeader
-                name={<span className="animate">Our Development Quality</span>}
-                title={<h2 className="animate">Commercial Collaborations</h2>}
+                name={<span className="animate opacity-0">Our Development Quality</span>}
+                title={<h2 className="animate opacity-0">Commercial Collaborations</h2>}
               />
             </div>
             <div>
@@ -140,7 +140,7 @@ function Collaborations({ data }) {
               />
             </div>
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
-            <div className="animate container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
+            <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
               <div className="academy lg:w-1/2">
                 <div className="font-title text-white uppercase text-2xl mb-16 relative">
                   Academy
@@ -171,8 +171,8 @@ function Collaborations({ data }) {
           <div className="container px-8 py-8">
             <div className="mb-6">
               <SectionHeader
-                name={<span className="animate">Our Development Quality</span>}
-                title={<h2 className="animate">Academy Collaborations</h2>}
+                name={<span className="animate opacity-0">Our Development Quality</span>}
+                title={<h2 className="animate opacity-0">Academy Collaborations</h2>}
               />
             </div>
             <div>
@@ -201,7 +201,7 @@ function Collaborations({ data }) {
                 />
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-              <div className="animate container mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10">
+              <div className="animate opacity-0 container mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10">
                 <div className="collaborations__panel commercial lg:w-1/2 px-8">
                   <div className="relative z-10">
                     <div className="font-title uppercase text-2xl mb-16">
@@ -328,13 +328,13 @@ function Collaborations({ data }) {
               <div>
                 <SectionHeader
                   name={
-                    <span className="animate">Our Development Quality</span>
+                    <span className="animate opacity-0">Our Development Quality</span>
                   }
-                  title={<h2 className="animate">Key Collaborations</h2>}
+                  title={<h2 className="animate opacity-0">Key Collaborations</h2>}
                 />
               </div>
 
-              <div className="animate text lg:w-103 mt-6">
+              <div className="animate opacity-0 text lg:w-103 mt-6">
                 <p>
                   EPM has brought together top researchers from around the world
                   and contracted with leading Contract Research Organizations to

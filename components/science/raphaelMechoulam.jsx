@@ -165,7 +165,7 @@ function RaphaelMechoulam() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="items animate text-white text-center lg:w-6/12 2xl:w-7/12">
+      <div className="items animate opacity-0 text-white text-center lg:w-6/12 2xl:w-7/12">
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
           {mechoulam.map((item, index) => {
             return (
@@ -204,16 +204,16 @@ function RaphaelMechoulam() {
       <div className="lg:pl-44 xl:pl-56 pt-10 lg:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
         <div className="container lg:w-64 xl:w-80 2xl:w-96 px-8 lg:pl-0 py-8">
           <SectionHeader
-            name={<span className="animate">Raphael Mechoulam</span>}
+            name={<span className="animate opacity-0">Raphael Mechoulam</span>}
             title={
-              <h2 className="animate">
+              <h2 className="animate opacity-0">
                 The Godfather of
                 <br />
                 Cannabis Science
               </h2>
             }
           />
-          <div className="text lg:text-epm-base animate mt-6">
+          <div className="text lg:text-epm-base animate opacity-0 mt-6">
             <p>
               Read more about the inspiring life of Prof. Rephael Mechoulam
             </p>

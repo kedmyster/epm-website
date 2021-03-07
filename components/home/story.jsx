@@ -59,14 +59,14 @@ function Story() {
         </div>
         <div className="relative container mx-auto py-8 px-8">
           <SectionHeader
-            name={<span className="animate">Our Story</span>}
+            name={<span className="animate opacity-0">Our Story</span>}
             title={
-              <h2 className="animate pb-52 lg:pb-0">
+              <h2 className="animate opacity-0 pb-52 lg:pb-0">
                 Patient-focused Pharmaceutical Group
               </h2>
             }
           />
-          <div className="animate text lg:w-105 lg:mx-auto">
+          <div className="animate opacity-0 text lg:w-105 lg:mx-auto">
             <p className="lg:text-epm-base lg:mt-6">
               EPM is developing prescription medicine based on novel discoveries
               of synthetic cannabinoid acids to address unmet patient needs.
@@ -75,7 +75,7 @@ function Story() {
               patients worldwide.
             </p>
           </div>
-          <div className="animate button pt-10 lg:pt-96">
+          <div className="animate opacity-0 button pt-10 lg:pt-96">
             <Button href="/about/#main" style="dark">
               Learn More
             </Button>

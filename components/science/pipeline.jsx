@@ -73,9 +73,9 @@ function Pipeline() {
           <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="">
               <SectionHeader
-                name={<span className="animate">Our Innovation</span>}
+                name={<span className="animate opacity-0">Our Innovation</span>}
                 title={
-                  <h2 className="animate">
+                  <h2 className="animate opacity-0">
                     Our Pipeline
                     <br />
                     Future Products and Development
@@ -83,7 +83,7 @@ function Pipeline() {
                 }
               />
             </div>
-            <div className="animate text lg:text-epm-base mt-6">
+            <div className="animate opacity-0 text lg:text-epm-base mt-6">
               <p className="mb-4">
                 EPM is currently advancing treatments in Psoriasis, IBD and ARDS
                 into the clinic, using EPM301. EPM has also developed an

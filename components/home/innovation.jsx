@@ -184,7 +184,7 @@ function Innovation({ data }) {
             <div className="lg:h-2/3-screen">
               <div className="relative text-center w-full lg:h-full lg:text-left flex flex-wrap content-end">
                 <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-                <div className="animate container mx-auto px-8 py-8 lg:w-container lg:text-white lg:flex lg:flex-row lg:space-x-20 z-10">
+                <div className="animate opacity-0 container mx-auto px-8 py-8 lg:w-container lg:text-white lg:flex lg:flex-row lg:space-x-20 z-10">
                   {data.slides.map((slide, index) => {
                     return (
                       <div
@@ -216,19 +216,19 @@ function Innovation({ data }) {
               <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
-                    name={<span className="animate">Our Innovation</span>}
-                    title={<h2 className="animate">Creating New Treatments</h2>}
+                    name={<span className="animate opacity-0">Our Innovation</span>}
+                    title={<h2 className="animate opacity-0">Creating New Treatments</h2>}
                   />
                 </div>
 
-                <div className="animate text lg:w-103">
+                <div className="animate opacity-0 text lg:w-103">
                   <p>
                     EPM’s mission is to develop a wide array of therapeutic
                     treatments based on synthetic cannabinoid acids, producing
                     medicinal solutions and treatments like never before.
                   </p>
                 </div>
-                <div className="button animate">
+                <div className="button animate opacity-0">
                   <Button href="/science/#main" style="dark">
                     Learn More
                   </Button>

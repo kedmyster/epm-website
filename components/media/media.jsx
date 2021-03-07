@@ -70,7 +70,7 @@ function MediaComponent({ data }) {
                         {slide.date}
                       </div>
                     </div>
-                    <div className="button animate pt-10 lg:pt-0 lg:inline-block text-center">
+                    <div className="button animate opacity-0 pt-10 lg:pt-0 lg:inline-block text-center">
                       <Button
                         style="dark"
                         href={slide.url}

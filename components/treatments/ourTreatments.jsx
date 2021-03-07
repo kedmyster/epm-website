@@ -126,7 +126,7 @@ function OurTreatments({ data }) {
         <div className="flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen">
           <div className="container relative mx-auto px-4 lg:px-8 flex items-center justify-center lg:flex-grow z-50 h-2/3-screen lg:h-full lg:w-6/12 2xl:w-7/12 bg-epm-gray-100">
             <div className="flex lg:flex-col content-center justify-center lg:justify-end lg:w-full lg:max-w-4xl lg:h-full lg:pb-24">
-              <div className="animate container mx-auto lg:px-8">
+              <div className="animate opacity-0 container mx-auto lg:px-8">
                 <div className="flex flex-row justify-center">
                   <div className="item flex flex-col w-1/3 items-center justify-between">
                     <div className="item__image flex justify-center items-end flex-grow mb-6">
@@ -244,7 +244,7 @@ function OurTreatments({ data }) {
                   title={<h2>Creating Better Treatments and Changing Lives</h2>}
                 />
               </div>
-              <div className="animate text lg:text-epm-base lg:mt-6 lg:flex-grow">
+              <div className="animate opacity-0 text lg:text-epm-base lg:mt-6 lg:flex-grow">
                 <p>
                   EPM is committed to developing a series of new therapeutic
                   solutions based on cannabinoid acids which provide alternative
@@ -283,7 +283,7 @@ function OurTreatments({ data }) {
               <div className="item flex flex-wrap flex-col lg:flex-row-reverse lg:h-screen">
                 <div className="container relative mx-auto px-4 lg:px-8 lg:flex-grow h-2/3-screen lg:h-full lg:w-6/12 2xl:w-7/12 bg-epm-gray-100 flex justify-center items-center">
                   <div className="flex lg:flex-col content-center justify-center lg:w-full lg:max-w-4xl lg:justify-end lg:h-full lg:pb-24">
-                    <div className="animate container mx-auto lg:px-8 relative z-0">
+                    <div className="animate opacity-0 container mx-auto lg:px-8 relative z-0">
                       <div className="flex flex-row justify-center">
                         <div className="item flex flex-col w-1/3 items-center justify-between">
                           <div className="item__image flex justify-center items-end flex-grow"></div>
@@ -415,7 +415,7 @@ function OurTreatments({ data }) {
                         title={<h2>{slide.title}</h2>}
                       />
                     </div>
-                    <div className="animate px-8 lg:px-0 lg:mt-6 lg:flex-grow">
+                    <div className="animate opacity-0 px-8 lg:px-0 lg:mt-6 lg:flex-grow">
                       <div className="formulation lg:text-epm-base flex-grow pb-4 lg:pb-8">
                         <p className="lg:text-epm-base font-bold">
                           Selected formulation
@@ -446,7 +446,7 @@ function OurTreatments({ data }) {
                     </div>
                     {isMobile && (
                       <div
-                        className="more-info animate container lg:opacity-0 hidden bg-epm-gray-300 mt-8 px-8 py-8"
+                        className="more-info animate opacity-0 container lg:opacity-0 hidden bg-epm-gray-300 mt-8 px-8 py-8"
                         aria-expanded="false"
                       >
                         <div className="pb-8">

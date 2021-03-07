@@ -237,7 +237,7 @@ function ResearchPapers({ data }) {
                 />
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-              <div className="animate container mx-auto px-8 py-8 w-container text-white flex flex-row space-x-20 z-10">
+              <div className="animate opacity-0 container mx-auto px-8 py-8 w-container text-white flex flex-row space-x-20 z-10">
                 {data.slides.map((slide, index) => {
                   return (
                     <div
@@ -310,12 +310,12 @@ function ResearchPapers({ data }) {
             <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
-                  name={<span className="animate">Our Innovation</span>}
-                  title={<h2 className="animate">Research Papers</h2>}
+                  name={<span className="animate opacity-0">Our Innovation</span>}
+                  title={<h2 className="animate opacity-0">Research Papers</h2>}
                 />
               </div>
 
-              <div className="animate text mt-6 lg:w-103">
+              <div className="animate opacity-0 text mt-6 lg:w-103">
                 <p>
                   Here are EPM-supported publications on EPM301, offering
                   further pharmacologic background on current company research
