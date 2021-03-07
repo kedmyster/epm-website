@@ -123,7 +123,7 @@ function Main() {
             onClick={scrollToContent}
             className="transition-opacity duration-150 hover:opacity-70"
           >
-            <Image src="/img/icons/arrow_down.svg" width="28" height="16" />
+            <Image src="/img/icons/arrow_down.svg" width="28" height="16" loading="eager" />
           </a>
         </div>
       </div>
