@@ -22,6 +22,7 @@ export default function About() {
   const [leaders, setLeaders] = useState([
     {
       group: "Board of Directors",
+      label:"Directorate",
       id: getId("Board of Directors"),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
@@ -138,6 +139,7 @@ export default function About() {
 
     {
       group: "Executive Leadership",
+      label:"Executives",
       id: getId("Executive Leadership"),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
@@ -280,6 +282,7 @@ export default function About() {
     },
     {
       group: "Scientific Advisory Board",
+      label:"Advisory Board",
       id: getId("Scientific Advisory Board"),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",

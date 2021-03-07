@@ -70,7 +70,7 @@ function Treatments({ data }) {
               <Slider {...SLIDER_TREATMENTS_CONFIG}>
                 {data.slides.map((slide) => {
                   return (
-                    <div className="item text-center text-epm-gray-700">
+                    <div className="item text-center text-epm-gray-700 outline-none">
                       <div className="image w-full h-96 flex items-center justify-center">
                         <Image
                           src={slide.images.mobile.url}

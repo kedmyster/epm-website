@@ -35,7 +35,7 @@ function SideMenu() {
         tlSideMenuHover.to(
           pill,
           {
-            width: 31,
+            width: '1.9375rem',
             backgroundColor: "#FFD534",
             duration: 0.1,
           },
@@ -82,7 +82,7 @@ function SideMenu() {
           tlSideMenuHover.to(
             pill,
             {
-              width: 9,
+              width: '0.5625rem',
               backgroundColor: "#FFFFFF",
               duration: 0.1,
             },
@@ -92,7 +92,7 @@ function SideMenu() {
           tlSideMenuHover.to(
             pill,
             {
-              width: 9,
+              width: '0.5625rem',
               backgroundColor: "#636466",
               duration: 0.1,
             },
@@ -252,7 +252,7 @@ function SideMenu() {
           itemPill,
           {
             backgroundColor: "#FFD534",
-            width: 31,
+            width: '1.9375rem',
             duration: 0.1,
           },
           `side-menu-${section.id}`

@@ -275,7 +275,7 @@ function OurTreatments({ data }) {
             <section
               id={slide.id}
               className="section treatments bg-white relative w-full  "
-              data-side-menu-label={slide.title}
+              data-side-menu-label={slide.label}
               data-side-menu-color="dark"
               data-side-menu-visibility="visible"
               data-header-menu-visibility="visible"

@@ -19,6 +19,7 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Inflammatory Bowel Disease"),
           title: "Inflammatory Bowel Disease",
+          label:"IBD",
           formulation: "Oral",
           timeline:
             "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
@@ -178,6 +179,7 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Psoriasis"),
           title: "Psoriasis",
+          label:"Psoriasis",
           formulation: "Topical",
           timeline:
             "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
@@ -317,6 +319,7 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Acute Respiratory Distress Syndrome"),
           title: "Acute Respiratory Distress Syndrome",
+          label:"ARDS",
           formulation: "IV",
           timeline:
             "IND approval to treat COVID-19 patients with poor prognosis under compassionate usage grounds is anticipated in Q4 2021",
