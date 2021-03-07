@@ -69,7 +69,7 @@ function Main() {
           >
             <source src="/videos/mobile/our-story.mp4" type="video/mp4" />
             <Image
-              priority={true}
+              loading="eager"
               src="/img/mobile/about/hero@3x.jpg"
               alt="Patient-focused - Pharmaceutical Group"
               layout="fill"
@@ -91,7 +91,7 @@ function Main() {
           >
             <source src="/videos/desktop/our-story.mp4" type="video/mp4" />
             <Image
-              priority={true}
+              loading="eager"
               src="/img/desktop/about/hero@2x.jpg"
               alt="Patient-focused - Pharmaceutical Group"
               layout="fill"

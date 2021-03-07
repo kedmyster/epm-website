@@ -151,7 +151,7 @@ function OurScience({ data }) {
                   {<div className="image w-full h-2/3-screen">
                     {isMobile && (
                       <Image
-                        priority={true}
+                        loading="eager"
                         src={slide.images.mobile}
                         alt="Endless Potential Molecules"
                         layout="fill"
@@ -161,7 +161,7 @@ function OurScience({ data }) {
                     )}
                     {(isTablet || isDesktop) && (
                       <Image
-                        priority={true}
+                        loading="eager"
                         src={slide.images.desktop}
                         alt="Endless Potential Molecules"
                         layout="fill"

@@ -87,7 +87,7 @@ function Community({ data }) {
                     <div className="absolute w-full h-full">
                       {isMobile && (
                         <Image
-                          priority={true}
+                          loading="eager"
                           src={slide.images.mobile}
                           alt={slide.name}
                           layout="fill"
@@ -97,7 +97,7 @@ function Community({ data }) {
                       )}
                       {(isTablet || isDesktop) && (
                         <Image
-                          priority={true}
+                          loading="eager"
                           src={slide.images.desktop}
                           alt={slide.name}
                           layout="fill"

@@ -44,7 +44,6 @@ function Pipeline() {
               <div className="image animate opacity-0 mx-auto text-center lg:h-screen lg:pb-5">
                 {isMobile && (
                   <Image
-                    priority={true}
                     src="/img/mobile/science/pipeline@2x.jpg"
                     alt="Our Pipeline - Future Products and Development"
                     width={375}
@@ -56,7 +55,6 @@ function Pipeline() {
                 )}
                 {(isTablet || isDesktop) && (
                   <Image
-                    priority={true}
                     src="/img/desktop/science/pipeline@2x.jpg"
                     alt="Our Pipeline - Future Products and Development"
                     layout="fill"

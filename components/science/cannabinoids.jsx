@@ -43,7 +43,6 @@ function Cannabinoids() {
               <div className="image animate opacity-0 mx-auto text-center lg:pb-5 w-full h-2/3-screen lg:h-screen">
                 {isMobile && (
                   <Image
-                    priority={true}
                     src="/img/mobile/science/cannabinoids-acids@2x.jpg"
                     alt="Cannabinoids Acid"
                     layout="fill"
@@ -53,7 +52,6 @@ function Cannabinoids() {
                 )}
                 {(isTablet || isDesktop) && (
                   <Image
-                    priority={true}
                     src="/img/desktop/science/cannabinoids-acids@2x.jpg"
                     alt="Cannabinoids Acid"
                     layout="fill"

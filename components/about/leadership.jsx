@@ -113,7 +113,6 @@ function Leadership({ leaders = [] }) {
                             {isMobile && (
                               <div className="">
                                 <Image
-                                  priority={true}
                                   src={leader.image.mobile}
                                   alt={leader.name}
                                   width={103}
@@ -125,7 +124,6 @@ function Leadership({ leaders = [] }) {
                             )}
                             {(isTablet) && (
                               <Image
-                                priority={true}
                                 src={leader.image.desktop}
                                 alt={leader.name}
                                 width={134}
@@ -136,7 +134,6 @@ function Leadership({ leaders = [] }) {
                             )}
                             {(isDesktop) && (
                               <Image
-                                priority={true}
                                 src={leader.image.desktop}
                                 alt={leader.name}
                                 width={157}
@@ -168,7 +165,6 @@ function Leadership({ leaders = [] }) {
                             <div className="arrow">
                               {isMobile && (
                                 <Image
-                                  priority={true}
                                   src="/img/icons/arrow_down_dark.svg"
                                   alt={leader.name}
                                   width={20}
@@ -179,7 +175,6 @@ function Leadership({ leaders = [] }) {
                               )}
                               {(isTablet || isDesktop) && (
                                 <Image
-                                  priority={true}
                                   src="/img/icons/arrow_down_dark.svg"
                                   alt={leader.name}
                                   width={40}

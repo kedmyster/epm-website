@@ -136,7 +136,6 @@ function OurTreatments({ data }) {
                       >
                         {isMobile && (
                           <Image
-                            priority={true}
                             src="/img/mobile/treatments/treatment-pills@3x.png"
                             alt="Oral for IBD (Crohn’s & Colitis)"
                             width="223"
@@ -147,7 +146,6 @@ function OurTreatments({ data }) {
                         )}
                         {(isTablet || isDesktop) && (
                           <Image
-                            priority={true}
                             src="/img/desktop/treatments/treatments-pills@2x.png"
                             alt="Oral for IBD (Crohn’s & Colitis)"
                             width="281"
@@ -173,7 +171,6 @@ function OurTreatments({ data }) {
                       >
                         {isMobile && (
                           <Image
-                            priority={true}
                             src="/img/mobile/treatments/treatment-tube@3x.png"
                             alt="Topical for Psoriasis"
                             width="79"
@@ -184,7 +181,6 @@ function OurTreatments({ data }) {
                         )}
                         {(isTablet || isDesktop) && (
                           <Image
-                            priority={true}
                             src="/img/desktop/treatments/treatments-tube@2x.png"
                             alt="Topical for Psoriasis"
                             width="113"
@@ -206,7 +202,6 @@ function OurTreatments({ data }) {
                       <a href="#acute-respiratory-distress-syndrome" className="leading-0">
                         {isMobile && (
                           <Image
-                            priority={true}
                             src="/img/mobile/treatments/treatment-iv@3x.png"
                             alt="Acute Respiratory Distress Syndrome"
                             width="192"
@@ -217,7 +212,6 @@ function OurTreatments({ data }) {
                         )}
                         {(isTablet || isDesktop) && (
                           <Image
-                            priority={true}
                             src="/img/desktop/treatments/treatments-iv@2x.png"
                             alt="Acute Respiratory Distress Syndrome"
                             width="249"
@@ -318,7 +312,6 @@ function OurTreatments({ data }) {
                           <div className="item__image flex justify-center items-end flex-grow mb-6 -mx-6 lg:-mx-10">
                             {isMobile && (
                               <Image
-                                priority={true}
                                 src={slide.images.mobile.url}
                                 alt={slide.name}
                                 width={slide.images.mobile.width}
@@ -329,7 +322,6 @@ function OurTreatments({ data }) {
                             )}
                             {(isDesktop) && (
                               <Image
-                                priority={true}
                                 src={slide.images.desktop.url}
                                 alt={slide.name}
                                 width={slide.images.desktop.width}

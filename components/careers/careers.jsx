@@ -46,7 +46,6 @@ function CareersComponent({ positions = [] }) {
               alt="Shape the Future of Healthcare"
               layout="fill"
               objectFit="cover"
-              priority={true}
               quality={100}
             />
           )}
@@ -56,7 +55,6 @@ function CareersComponent({ positions = [] }) {
               alt="Shape the Future of Healthcare"
               layout="fill"
               objectFit="cover"
-              priority={true}
               quality={100}
             />
           )}
@@ -163,7 +161,6 @@ function CareersComponent({ positions = [] }) {
           <div className="absolute w-full h-full">
             {isMobile && (
               <Image
-                priority={true}
                 src="/img/mobile/homepage/our-story@2x.jpg"
                 alt="Leadership"
                 layout="fill"
@@ -173,7 +170,6 @@ function CareersComponent({ positions = [] }) {
             )}
             {(isTablet || isDesktop) && (
               <Image
-                priority={true}
                 src="/img/desktop/careers/careers@2x.jpg"
                 alt="Leadership"
                 layout="fill"

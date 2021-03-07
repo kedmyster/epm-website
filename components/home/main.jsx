@@ -69,7 +69,7 @@ function Main() {
             >
               <source src="/videos/mobile/home.mp4" type="video/mp4" />
               <Image
-                priority={true}
+                loading="eager"
                 src="/img/mobile/homepage/hero@2x.jpg"
                 alt="Medicine to All"
                 layout="fill"
@@ -91,7 +91,7 @@ function Main() {
             >
               <source src="/videos/desktop/home.mp4" type="video/mp4" />
               <Image
-                priority={true}
+                loading="eager"
                 src="/img/desktop/homepage/hero@2x.jpg"
                 alt="Medicine to All"
                 layout="fill"

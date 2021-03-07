@@ -76,6 +76,7 @@ function Treatments({ data }) {
                     >
                       <div className="image w-full h-96 flex items-center justify-center">
                         <Image
+                          loading="eager"
                           src={slide.images.mobile.url}
                           alt={slide.title}
                           width={slide.images.mobile.width}
@@ -152,7 +153,6 @@ function Treatments({ data }) {
                     >
                       {isTablet && (
                         <Image
-                          priority={true}
                           src="/img/desktop/treatments/treatments-pills@2x.png"
                           alt="Oral for IBD (Crohn’s & Colitis)"
                           width="215"
@@ -163,7 +163,6 @@ function Treatments({ data }) {
                       )}
                       {isDesktop && (
                         <Image
-                          priority={true}
                           src="/img/desktop/treatments/treatments-pills@2x.png"
                           alt="Oral for IBD (Crohn’s & Colitis)"
                           width="281"
@@ -189,7 +188,6 @@ function Treatments({ data }) {
                     >
                       {isTablet && (
                         <Image
-                          priority={true}
                           src="/img/desktop/treatments/treatments-tube@2x.png"
                           alt="Topical for Psoriasis"
                           width="86"
@@ -200,7 +198,6 @@ function Treatments({ data }) {
                       )}
                       {isDesktop && (
                         <Image
-                          priority={true}
                           src="/img/desktop/treatments/treatments-tube@2x.png"
                           alt="Topical for Psoriasis"
                           width="113"
@@ -225,7 +222,6 @@ function Treatments({ data }) {
                     >
                       {isTablet && (
                         <Image
-                          priority={true}
                           src="/img/desktop/treatments/treatments-iv@2x.png"
                           alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
                           width="190"
@@ -236,7 +232,6 @@ function Treatments({ data }) {
                       )}
                       {isDesktop && (
                         <Image
-                          priority={true}
                           src="/img/desktop/treatments/treatments-iv@2x.png"
                           alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
                           width="249"

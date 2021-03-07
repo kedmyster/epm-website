@@ -174,7 +174,7 @@ function RaphaelMechoulam() {
                   <div className="w-full h-full lg:h-auto 2xl:h-full flex items-end lg:items-start 2xl:items-end justify-center">
                     {isMobile && (
                       <Image
-                        priority={true}
+                        loading="eager"
                         src={item.images.mobile}
                         alt="Raphael Mechoulam"
                         width={452}
@@ -185,7 +185,7 @@ function RaphaelMechoulam() {
                     )}
                     {(isTablet || isDesktop) && (
                       <Image
-                        priority={true}
+                        loading="eager"
                         src={item.images.desktop}
                         alt="Raphael Mechoulam"
                         width={902}
