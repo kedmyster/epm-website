@@ -20,16 +20,13 @@ body {
   height: stretch;
 }
 
-section {
-  min-height: 100vh;
-  min-height: stretch;
+.main {
+  height: 100vh;
+  height: stretch;
 }
 
-@media (min-width: 1024px) {
-  section {
-    min-height: auto;
-    height: 100vh;
-  }
+section {
+  height: 100vh;
 }
 
 @media (min-width: 1024px) {
