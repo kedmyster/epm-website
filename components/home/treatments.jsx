@@ -65,7 +65,7 @@ function Treatments({ data }) {
     >
       {isMobile && (
         <div>
-          <div className="items text-white  bg-epm-gray-100">
+          <div className="items animate opacity-0 text-white  bg-epm-gray-100">
             <div className="container mx-auto px-8 py-8 ">
               <Slider {...SLIDER_TREATMENTS_CONFIG}>
                 {data.slides.map((slide) => {

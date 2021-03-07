@@ -38,7 +38,7 @@ function Commitment() {
     >
       {isMobile && (
         <div>
-          <div className="items relative text-white bg-gray-300 w-full text-center flex items-center h-2/3-screen">
+          <div className="items animate opacity-0 relative text-white bg-gray-300 w-full text-center flex items-center h-2/3-screen">
             <div className="absolute w-full h-full">
               <Image
                 src="/img/mobile/homepage/our-commitment/our-commitment@2x.jpg"

@@ -100,7 +100,7 @@ function Innovation({ data }) {
     >
       {isMobile && (
         <div className="">
-          <div className="items text-white bg-gray-800 text-center h-2/3-screen">
+          <div className="items animate opacity-0 text-white bg-gray-800 text-center h-2/3-screen">
             <Slider {...SLIDER_INNOVATION_CONFIG_MOBILE}>
               {data.slides.map((slide) => {
                 return (
