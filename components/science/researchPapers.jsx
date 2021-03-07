@@ -148,7 +148,7 @@ function ResearchPapers({ data }) {
       {isMobile && (
         <div>
           <div className="items text-white bg-gray-800 text-center relative">
-            <div className="absolute w-full h-2/3-screen">
+            <div className="image animate opacity-0 absolute w-full h-2/3-screen">
               <Image
                 src="/img/mobile/science/research-papers@2x.jpg"
                 alt=""

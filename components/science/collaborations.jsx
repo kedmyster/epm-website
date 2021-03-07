@@ -64,7 +64,7 @@ function Collaborations({ data }) {
       {isMobile && (
         <div>
           <div className="relative h-2/3-screen">
-            <div className="absolute w-full h-full">
+            <div className="image animate opacity-0 absolute w-full h-full">
               <Image
                 src="/img/mobile/science/collaborations/commercial@2x.jpg"
                 alt=""
@@ -76,7 +76,7 @@ function Collaborations({ data }) {
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
             <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full lg:h-auto flex lg:block flex-wrap content-center">
               <div className="commercial lg:w-1/2">
-                <div className="font-title text-white uppercase text-2xl mb-16 relative">
+                <div className="font-title animate opacity-0 text-white uppercase text-2xl mb-16 relative">
                   Commercial
                 </div>
                 <div className="logos flex flex-wrap">
@@ -130,7 +130,7 @@ function Collaborations({ data }) {
             </div>
           </div>
           <div className="relative h-2/3-screen">
-            <div className="absolute w-full h-full">
+            <div className="image animate opacity-0 absolute w-full h-full">
               <Image
                 src="/img/mobile/science/collaborations/academy@2x.jpg"
                 alt=""
@@ -142,7 +142,7 @@ function Collaborations({ data }) {
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
             <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
               <div className="academy lg:w-1/2">
-                <div className="font-title text-white uppercase text-2xl mb-16 relative">
+                <div className="font-title animate opacity-0 text-white uppercase text-2xl mb-16 relative">
                   Academy
                 </div>
                 <div className="logos flex flex-wrap">

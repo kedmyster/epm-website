@@ -143,45 +143,47 @@ function OurScience({ data }) {
       data-header-menu-visibility="visible"
     >
       <div className="w-full lg:w-6/12 2xl:w-7/12">
-        <Slider {...SLIDER_SOLUTION_CONFIG}>
-          {data.slides.map((slide) => {
-            return (
-              <div className="item relative lg:flex-grow lg:h-screen" aria-expanded="false">
-                {<div className="image w-full h-2/3-screen">
-                  {isMobile && (
-                    <Image
-                      loading="eager"
-                      src={slide.images.mobile}
-                      alt=""
-                      layout="fill"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  )}
-                  {(isTablet || isDesktop) && (
-                    <Image
-                      loading="eager"
-                      src={slide.images.desktop}
-                      alt=""
-                      layout="fill"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  )}
-                  <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
-                    <Button
-                      style="light"
-                      onClick={(event) => toggleVideo(event)}
-                    >
-                      Play Video
-                    </Button>
-                  </span>
-                </div>}
-                <div id={`video-${getId(slide.name)}`} className="video absolute inset-0 hidden" data-video-id={slide.video}></div>
-              </div>
-            );
-          })}
-        </Slider>
+        <div className="items animate opacity-0">
+          <Slider {...SLIDER_SOLUTION_CONFIG}>
+            {data.slides.map((slide) => {
+              return (
+                <div className="item relative lg:flex-grow lg:h-screen" aria-expanded="false">
+                  {<div className="image w-full h-2/3-screen">
+                    {isMobile && (
+                      <Image
+                        loading="eager"
+                        src={slide.images.mobile}
+                        alt=""
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                      />
+                    )}
+                    {(isTablet || isDesktop) && (
+                      <Image
+                        loading="eager"
+                        src={slide.images.desktop}
+                        alt=""
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                      />
+                    )}
+                    <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
+                      <Button
+                        style="light"
+                        onClick={(event) => toggleVideo(event)}
+                      >
+                        Play Video
+                      </Button>
+                    </span>
+                  </div>}
+                  <div id={`video-${getId(slide.name)}`} className="video absolute inset-0 hidden" data-video-id={slide.video}></div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
       <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
         <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">

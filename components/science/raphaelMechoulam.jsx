@@ -165,7 +165,7 @@ function RaphaelMechoulam() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="items animate opacity-0 text-white text-center lg:w-6/12 2xl:w-7/12">
+      <div className="items animate opacity-0 animate text-white text-center lg:w-6/12 2xl:w-7/12">
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
           {mechoulam.map((item, index) => {
             return (
