@@ -40,7 +40,7 @@ function Cannabinoids() {
         <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-6/12 2xl:w-7/12">
           <div className="lg:flex lg:flex-wrap lg:h-full">
             <div className="relative lg:flex-grow lg:w-6/12 2xl:w-7/12">
-              <div className="image animate opacity-0 mx-auto text-center lg:pb-5 w-full h-2/3-screen">
+              <div className="image animate opacity-0 mx-auto text-center lg:pb-5 w-full h-2/3-screen lg:h-screen">
                 {isMobile && (
                   <Image
                     loading="eager"
