@@ -41,7 +41,7 @@ function Story() {
           {isMobile && (
             <Image
               src="/img/mobile/homepage/our-story@2x.jpg"
-              alt=""
+              alt="Patient-focused Pharmaceutical Group"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -50,7 +50,7 @@ function Story() {
           {(isTablet || isDesktop) && (
             <Image
               src="/img/desktop/homepage/our-story@2x.jpg"
-              alt=""
+              alt="Patient-focused Pharmaceutical Group"
               layout="fill"
               objectFit="cover"
               quality={100}

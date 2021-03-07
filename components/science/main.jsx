@@ -71,7 +71,7 @@ function Main() {
             <Image
               priority="true"
               src="/img/mobile/science/hero@2x.jpg"
-              alt=""
+              alt="Unlock the medical potential of synthetic cannabinoid acids"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -93,7 +93,7 @@ function Main() {
             <Image
               priority="true"
               src="/img/desktop/science/hero@2x.jpg"
-              alt=""
+              alt="Unlock the medical potential of synthetic cannabinoid acids"
               layout="fill"
               objectFit="cover"
               quality={100}

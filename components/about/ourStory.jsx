@@ -115,9 +115,9 @@ function OurStory() {
       <div className="item animate opacity-0 relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto" aria-expanded="false">
         {isMobile && (
           <Image
-            loading="eager"
+            priority={true}
             src="/img/mobile/about/mechoulam-thumbnail@2x.jpg"
-            alt=""
+            alt="Patient-Focused Pharmaceutical Group"
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -125,9 +125,9 @@ function OurStory() {
         )}
         {(isTablet || isDesktop) && (
           <Image
-            loading="eager"
+            priority={true}
             src="/img/desktop/about/mechoulam-thumbnail@2x.jpg"
-            alt=""
+            alt="Patient-Focused Pharmaceutical Group"
             layout="fill"
             objectFit="cover"
             quality={100}

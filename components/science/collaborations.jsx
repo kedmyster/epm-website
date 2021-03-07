@@ -67,7 +67,7 @@ function Collaborations({ data }) {
             <div className="image animate opacity-0 absolute w-full h-full">
               <Image
                 src="/img/mobile/science/collaborations/commercial@2x.jpg"
-                alt=""
+                alt="Commercial"
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -133,7 +133,7 @@ function Collaborations({ data }) {
             <div className="image animate opacity-0 absolute w-full h-full">
               <Image
                 src="/img/mobile/science/collaborations/academy@2x.jpg"
-                alt=""
+                alt="Academy"
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -194,7 +194,7 @@ function Collaborations({ data }) {
               <div className="absolute w-full h-full">
                 <Image
                   src="/img/desktop/science/collaborations@2x.jpg"
-                  alt=""
+                  alt="Commercial"
                   layout="fill"
                   objectFit="cover"
                   quality={100}

@@ -52,7 +52,7 @@ function MediaComponent({ data }) {
                       <div className="w-auto mx-auto lg:mx-0 relative">
                         <Image
                           src={slide.images.src}
-                          alt=""
+                          alt={slide.name}
                           width={slide.images.width}
                           height={slide.images.height}
                           layout="responsive"

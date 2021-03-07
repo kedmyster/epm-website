@@ -42,7 +42,7 @@ function Commitment() {
             <div className="absolute w-full h-full">
               <Image
                 src="/img/mobile/homepage/our-commitment/our-commitment@2x.jpg"
-                alt=""
+                alt="Developing Safer Treatments"
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -54,7 +54,7 @@ function Commitment() {
                 <div className="item-image w-24 h-14 flex items-center justify-center">
                   <Image
                     src="/img/icons/homepage/our-commitment/alternative-to-steroids.svg"
-                    alt=""
+                    alt="Alternative to Steroids"
                     width="69"
                     height="26"
                   />
@@ -67,7 +67,7 @@ function Commitment() {
                 <div className="item-image w-24 h-14 flex items-center justify-center">
                   <Image
                     src="/img/icons/homepage/our-commitment/affordable.svg"
-                    alt=""
+                    alt="Affordable Drugs"
                     width="49"
                     height="49"
                   />
@@ -80,7 +80,7 @@ function Commitment() {
                 <div className="item-image w-24 h-14 flex items-center justify-center">
                   <Image
                     src="/img/icons/homepage/our-commitment/minimal-side-effects.svg"
-                    alt=""
+                    alt="Minimal Side Effects"
                     width="43"
                     height="36"
                   />
@@ -124,7 +124,7 @@ function Commitment() {
           <div className="absolute w-full h-full">
             <Image
               src="/img/desktop/homepage/our-commitment/our-commitment@2x.jpg"
-              alt=""
+              alt="Developing Safer Treatments"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -142,7 +142,7 @@ function Commitment() {
               <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
                 <Image
                   src="/img/icons/homepage/our-commitment/alternative-to-steroids.svg"
-                  alt=""
+                  alt="Alternative to steroids"
                   width="130"
                   height="49"
                 />
@@ -162,7 +162,7 @@ function Commitment() {
               <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
                 <Image
                   src="/img/icons/homepage/our-commitment/minimal-side-effects.svg"
-                  alt=""
+                  alt="Minimal side effects"
                   width="82"
                   height="67"
                 />
@@ -184,7 +184,7 @@ function Commitment() {
               <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
                 <Image
                   src="/img/icons/homepage/our-commitment/affordable.svg"
-                  alt=""
+                  alt="Affordable Drugs"
                   width="93"
                   height="93"
                 />

@@ -1,7 +1,30 @@
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { gsap } from "gsap";
+import { useWindowWidth } from "@react-hook/window-size/throttled";
 
 function Footer({}) {
+  const windowWidth = useWindowWidth();
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    if (windowWidth >= 1280) {
+      setIsMobile(false);
+      setIsTablet(false);
+      setIsDesktop(true);
+    } else if (windowWidth >=1024) {
+      setIsMobile(false);
+      setIsTablet(true);
+      setIsDesktop(false);
+    } else {
+      setIsMobile(true);
+      setIsTablet(false);
+      setIsDesktop(false);
+    }
+  }, [windowWidth]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -132,7 +155,12 @@ function Footer({}) {
                     <br />
                     Los Angeles, Santa Monica, 90404
                     <br />
-                    <a href="tel:1 323 307 2111"> Tel: +1 (323) 307-2111</a>
+                    {isMobile && (
+                      <a href="tel:1 323 307 2111"> Tel: +1 (323) 307-2111</a>
+                    )}
+                    {!isMobile && (
+                      <span>Tel: +1 (323) 307-2111</span>
+                    )}
                   </div>
                 </div>
 

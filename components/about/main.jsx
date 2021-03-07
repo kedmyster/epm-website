@@ -71,7 +71,7 @@ function Main() {
             <Image
               priority={true}
               src="/img/mobile/about/hero@3x.jpg"
-              alt=""
+              alt="Patient-focused - Pharmaceutical Group"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -93,7 +93,7 @@ function Main() {
             <Image
               priority={true}
               src="/img/desktop/about/hero@2x.jpg"
-              alt=""
+              alt="Patient-focused - Pharmaceutical Group"
               layout="fill"
               objectFit="cover"
               quality={100}

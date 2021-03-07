@@ -152,9 +152,9 @@ function Treatments({ data }) {
                     >
                       {isTablet && (
                         <Image
-                          loading="eager"
+                          priority={true}
                           src="/img/desktop/treatments/treatments-pills@2x.png"
-                          alt=""
+                          alt="Oral for IBD (Crohn’s & Colitis)"
                           width="215"
                           height="249"
                           layout="intrinsic"
@@ -163,9 +163,9 @@ function Treatments({ data }) {
                       )}
                       {isDesktop && (
                         <Image
-                          loading="eager"
+                          priority={true}
                           src="/img/desktop/treatments/treatments-pills@2x.png"
-                          alt=""
+                          alt="Oral for IBD (Crohn’s & Colitis)"
                           width="281"
                           height="326"
                           layout="intrinsic"
@@ -189,9 +189,9 @@ function Treatments({ data }) {
                     >
                       {isTablet && (
                         <Image
-                          loading="eager"
+                          priority={true}
                           src="/img/desktop/treatments/treatments-tube@2x.png"
-                          alt=""
+                          alt="Topical for Psoriasis"
                           width="86"
                           height="295"
                           layout="intrinsic"
@@ -200,9 +200,9 @@ function Treatments({ data }) {
                       )}
                       {isDesktop && (
                         <Image
-                          loading="eager"
+                          priority={true}
                           src="/img/desktop/treatments/treatments-tube@2x.png"
-                          alt=""
+                          alt="Topical for Psoriasis"
                           width="113"
                           height="386"
                           layout="intrinsic"
@@ -225,9 +225,9 @@ function Treatments({ data }) {
                     >
                       {isTablet && (
                         <Image
-                          loading="eager"
+                          priority={true}
                           src="/img/desktop/treatments/treatments-iv@2x.png"
-                          alt=""
+                          alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
                           width="190"
                           height="250"
                           layout="intrinsic"
@@ -236,9 +236,9 @@ function Treatments({ data }) {
                       )}
                       {isDesktop && (
                         <Image
-                          loading="eager"
+                          priority={true}
                           src="/img/desktop/treatments/treatments-iv@2x.png"
-                          alt=""
+                          alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
                           width="249"
                           height="327"
                           layout="intrinsic"

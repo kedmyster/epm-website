@@ -71,7 +71,7 @@ function Main() {
             <Image
               priority="true"
               src="/img/mobile/treatments/hero@2x.jpg"
-              alt=""
+              alt="Our Treatments - Medicine We Develop"
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -93,7 +93,7 @@ function Main() {
             <Image
               priority="true"
               src="/img/desktop/treatments/hero@2x.jpg"
-              alt=""
+              alt="Our Treatments - Medicine We Develop"
               layout="fill"
               objectFit="cover"
               quality={100}

@@ -43,7 +43,7 @@ function CareersComponent({ positions = [] }) {
           {isMobile && (
             <Image
               src="/img/mobile/careers/careers@2x.jpg"
-              alt=""
+              alt="Shape the Future of Healthcare"
               layout="fill"
               objectFit="cover"
               priority={true}
@@ -53,7 +53,7 @@ function CareersComponent({ positions = [] }) {
           {(isTablet || isDesktop) && (
             <Image
               src="/img/desktop/careers/careers@2x.jpg"
-              alt=""
+              alt="Shape the Future of Healthcare"
               layout="fill"
               objectFit="cover"
               priority={true}
@@ -65,7 +65,7 @@ function CareersComponent({ positions = [] }) {
           <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
-              title={<h2>Shape the Future of Healthcare </h2>}
+              title={<h2>Shape the Future of Healthcare</h2>}
             />
           </div>
           <div className="animate opacity-0 text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
@@ -163,9 +163,9 @@ function CareersComponent({ positions = [] }) {
           <div className="absolute w-full h-full">
             {isMobile && (
               <Image
-                loading="eager"
+                priority={true}
                 src="/img/mobile/homepage/our-story@2x.jpg"
-                alt=""
+                alt="Leadership"
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -173,9 +173,9 @@ function CareersComponent({ positions = [] }) {
             )}
             {(isTablet || isDesktop) && (
               <Image
-                loading="eager"
+                priority={true}
                 src="/img/desktop/careers/careers@2x.jpg"
-                alt=""
+                alt="Leadership"
                 layout="fill"
                 objectFit="cover"
                 quality={100}

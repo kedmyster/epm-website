@@ -54,9 +54,9 @@ function FoundingEPM() {
       <div className="image relative animate opacity-0 lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto">
         {isMobile && (
           <Image
-            loading="eager"
+            priority={true}
             src="/img/mobile/about/founding-epm@2x.jpg"
-            alt=""
+            alt="Founding EPM"
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -64,9 +64,9 @@ function FoundingEPM() {
         )}
         {(isTablet || isDesktop) && (
           <Image
-            loading="eager"
+            priority={true}
             src="/img/desktop/about/founding-epm@2x.jpg"
-            alt=""
+            alt="Founding EPM"
             layout="fill"
             objectFit="cover"
             quality={100}

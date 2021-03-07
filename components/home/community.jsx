@@ -89,7 +89,7 @@ function Community({ data }) {
                         <Image
                           priority={true}
                           src={slide.images.mobile}
-                          alt=""
+                          alt={slide.name}
                           layout="fill"
                           objectFit="cover"
                           quality={100}
@@ -99,7 +99,7 @@ function Community({ data }) {
                         <Image
                           priority={true}
                           src={slide.images.desktop}
-                          alt=""
+                          alt={slide.name}
                           layout="fill"
                           objectFit="cover"
                           quality={100}
@@ -115,7 +115,7 @@ function Community({ data }) {
                             src="/img/icons/quote.svg"
                             width="46.5"
                             height="55.5"
-                            alt=""
+                            alt={slide.name}
                           />
                         )}
                         {(isTablet || isDesktop) && (
@@ -123,7 +123,7 @@ function Community({ data }) {
                             src="/img/icons/quote.svg"
                             width="47"
                             height="43"
-                            alt=""
+                            alt={slide.name}
                           />
                         )}
                       </div>

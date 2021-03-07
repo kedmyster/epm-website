@@ -6,10 +6,24 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
+  getGTM = () => {
+    return {
+      __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-150272551-1');
+    `
+    }
+  }
+
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150272551-1"></script>
+          <script dangerouslySetInnerHTML={this.getGTM()}/>
+        </Head>
         <body className="font-body text-epm-gray-700" data-header-theme="light">
           <Main />
           <NextScript />

@@ -151,7 +151,7 @@ function ResearchPapers({ data }) {
             <div className="image animate opacity-0 absolute w-full h-2/3-screen">
               <Image
                 src="/img/mobile/science/research-papers@2x.jpg"
-                alt=""
+                alt="Research Papers"
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -230,7 +230,7 @@ function ResearchPapers({ data }) {
               <div className="absolute w-full h-full">
                 <Image
                   src="/img/desktop/science/research-papers@2x.jpg"
-                  alt=""
+                  alt="Research Papers"
                   layout="fill"
                   objectFit="cover"
                   quality={100}

@@ -245,7 +245,7 @@ function Header() {
                   src="/img/icons/logo.svg"
                   width="66.051"
                   height="20.674"
-                  alt=""
+                  alt="EPM"
                 />
               )}
 
@@ -514,7 +514,7 @@ function Header() {
                   src="/img/icons/logo.svg"
                   width="66.051"
                   height="20.674"
-                  alt=""
+                  alt="EPM"
                 />
               </a>
             </div>

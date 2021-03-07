@@ -169,14 +169,14 @@ function RaphaelMechoulam() {
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
           {mechoulam.map((item, index) => {
             return (
-              <div className="item cursor-pointer">
+              <div className="item cursor-pointer outline-none">
                 <div className="group relative text-center w-full flex flex-wrap content-end lg:content-start 2xl:content-end lg:transition-all lg:duration-500 lg:ease-in-out 2xl:h-screen">
                   <div className="w-full h-full lg:h-auto 2xl:h-full flex items-end lg:items-start 2xl:items-end justify-center">
-                    {(isMobile ) && (
+                    {isMobile && (
                       <Image
                         priority={true}
                         src={item.images.mobile}
-                        alt=""
+                        alt="Raphael Mechoulam"
                         width={452}
                         height={601}
                         objectFit="cover"
@@ -187,7 +187,7 @@ function RaphaelMechoulam() {
                       <Image
                         priority={true}
                         src={item.images.desktop}
-                        alt=""
+                        alt="Raphael Mechoulam"
                         width={902}
                         height={902}
                         objectFit="contain"

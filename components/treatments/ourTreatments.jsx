@@ -136,9 +136,9 @@ function OurTreatments({ data }) {
                       >
                         {isMobile && (
                           <Image
-                            loading="eager"
+                            priority={true}
                             src="/img/mobile/treatments/treatment-pills@3x.png"
-                            alt=""
+                            alt="Oral for IBD (Crohn’s & Colitis)"
                             width="223"
                             height="280"
                             layout="intrinsic"
@@ -147,9 +147,9 @@ function OurTreatments({ data }) {
                         )}
                         {(isTablet || isDesktop) && (
                           <Image
-                            loading="eager"
+                            priority={true}
                             src="/img/desktop/treatments/treatments-pills@2x.png"
-                            alt=""
+                            alt="Oral for IBD (Crohn’s & Colitis)"
                             width="281"
                             height="326"
                             layout="intrinsic"
@@ -173,9 +173,9 @@ function OurTreatments({ data }) {
                       >
                         {isMobile && (
                           <Image
-                            loading="eager"
+                            priority={true}
                             src="/img/mobile/treatments/treatment-tube@3x.png"
-                            alt=""
+                            alt="Topical for Psoriasis"
                             width="79"
                             height="272"
                             layout="intrinsic"
@@ -184,9 +184,9 @@ function OurTreatments({ data }) {
                         )}
                         {(isTablet || isDesktop) && (
                           <Image
-                            loading="eager"
+                            priority={true}
                             src="/img/desktop/treatments/treatments-tube@2x.png"
-                            alt=""
+                            alt="Topical for Psoriasis"
                             width="113"
                             height="386"
                             layout="intrinsic"
@@ -206,9 +206,9 @@ function OurTreatments({ data }) {
                       <a href="#acute-respiratory-distress-syndrome" className="leading-0">
                         {isMobile && (
                           <Image
-                            loading="eager"
+                            priority={true}
                             src="/img/mobile/treatments/treatment-iv@3x.png"
-                            alt=""
+                            alt="Acute Respiratory Distress Syndrome"
                             width="192"
                             height="253"
                             layout="intrinsic"
@@ -217,9 +217,9 @@ function OurTreatments({ data }) {
                         )}
                         {(isTablet || isDesktop) && (
                           <Image
-                            loading="eager"
+                            priority={true}
                             src="/img/desktop/treatments/treatments-iv@2x.png"
-                            alt=""
+                            alt="Acute Respiratory Distress Syndrome"
                             width="249"
                             height="327"
                             layout="intrinsic"
@@ -318,9 +318,9 @@ function OurTreatments({ data }) {
                           <div className="item__image flex justify-center items-end flex-grow mb-6 -mx-6 lg:-mx-10">
                             {isMobile && (
                               <Image
-                                loading="eager"
+                                priority={true}
                                 src={slide.images.mobile.url}
-                                alt=""
+                                alt={slide.name}
                                 width={slide.images.mobile.width}
                                 height={slide.images.mobile.height}
                                 layout="intrinsic"
@@ -329,9 +329,9 @@ function OurTreatments({ data }) {
                             )}
                             {(isDesktop) && (
                               <Image
-                                loading="eager"
+                                priority={true}
                                 src={slide.images.desktop.url}
-                                alt=""
+                                alt={slide.name}
                                 width={slide.images.desktop.width}
                                 height={slide.images.desktop.height}
                                 objectFit="cover"
