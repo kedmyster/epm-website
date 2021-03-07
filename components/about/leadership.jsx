@@ -123,13 +123,24 @@ function Leadership({ leaders = [] }) {
                                 />
                               </div>
                             )}
-                            {(isTablet || isDesktop) && (
+                            {(isTablet) && (
                               <Image
                                 loading="eager"
                                 src={leader.image.desktop}
                                 alt=""
-                                width={180}
-                                height={180}
+                                width={134}
+                                height={134}
+                                objectFit="cover"
+                                quality={100}
+                              />
+                            )}
+                            {(isDesktop) && (
+                              <Image
+                                loading="eager"
+                                src={leader.image.desktop}
+                                alt=""
+                                width={157}
+                                height={157}
                                 objectFit="cover"
                                 quality={100}
                               />
