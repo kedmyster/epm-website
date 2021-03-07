@@ -147,7 +147,7 @@ function OurScience({ data }) {
           <Slider {...SLIDER_SOLUTION_CONFIG}>
             {data.slides.map((slide) => {
               return (
-                <div className="item relative lg:flex-grow lg:h-screen" aria-expanded="false">
+                <div className="item relative lg:flex-grow lg:h-screen" key={slide.name} aria-expanded="false">
                   {<div className="image w-full h-2/3-screen">
                     {isMobile && (
                       <Image
