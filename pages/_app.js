@@ -20,6 +20,38 @@ function MyApp({ Component, pageProps }) {
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
+  const animateSectionContent = (section) => {
+    if (section) {
+      if (!section.id) {
+        return;
+      }
+
+      const tlAnimateContent = gsap.timeline({
+        scrollTrigger: {
+          trigger: `#${section.id}`,
+          start: "top-=50%",
+        },
+      });
+
+      tlAnimateContent.fromTo(
+        `#${section.id} .animate`,
+        {
+          y: "-=5px",
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+        }
+      );
+    }
+  };
+
+  const utils = {
+    animateSectionContent,
+  };
+
   useEffect(() => {
     if (windowWidth >= 1280) {
       setIsMobile(false);
@@ -62,6 +94,12 @@ function MyApp({ Component, pageProps }) {
         opacity: 1,
         duration: 0.1
       }, "layout");
+
+      const sections = Array.from(document.querySelectorAll(".section"));
+
+      sections.forEach((section) => {
+        utils.animateSectionContent(section);
+      });
     });
   }, []);
 

@@ -17,7 +17,7 @@ function Pipeline() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -73,9 +73,9 @@ function Pipeline() {
           <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
             <div className="">
               <SectionHeader
-                name={<span className="animate opacity-0">Our Innovation</span>}
+                name={<span>Our Innovation</span>}
                 title={
-                  <h2 className="animate opacity-0">
+                  <h2>
                     Our Pipeline
                     <br />
                     Future Products and Development
@@ -91,11 +91,12 @@ function Pipeline() {
                 acid molecules to innovate treatments in additional therapeutic
                 areas.
               </p>
-              <p >
-              EPM maintains control over all aspects of the product development
-              process – research and discovery, formulation, toxicology, scaleup
-              manufacturing, clinical trials and regulatory affairs.
-            </p>
+              <p>
+                EPM maintains control over all aspects of the product
+                development process – research and discovery, formulation,
+                toxicology, scaleup manufacturing, clinical trials and
+                regulatory affairs.
+              </p>
             </div>
           </div>
         </div>

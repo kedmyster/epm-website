@@ -105,12 +105,12 @@ function Collaborations({ data }) {
           <div className="container px-8 py-8">
             <div className="mb-6">
               <SectionHeader
-                name={<span className="animate opacity-0">Our Development Quality</span>}
-                title={<h2 className="animate opacity-0">Commercial Collaborations</h2>}
+                name={<span>Our Development Quality</span>}
+                title={<h2>Commercial Collaborations</h2>}
               />
             </div>
-            <div>
-              <p className="lg:text-epm-base mb-4">
+            <div className="animate opacity-0">
+              <p className="g:text-epm-base mb-4">
                 EPM’s proprietary technology enables the fully synthetic
                 production of both novel and known structures for pre-clinical
                 and clinical development. Laboratory scale synthesis, scale-up
@@ -171,11 +171,11 @@ function Collaborations({ data }) {
           <div className="container px-8 py-8">
             <div className="mb-6">
               <SectionHeader
-                name={<span className="animate opacity-0">Our Development Quality</span>}
-                title={<h2 className="animate opacity-0">Academy Collaborations</h2>}
+                name={<span>Our Development Quality</span>}
+                title={<h2>Academy Collaborations</h2>}
               />
             </div>
-            <div>
+            <div className="animate opacity-0">
               <p className="">
                 EPM has brought together top researchers from around the world
                 and contracted with leading Contract Research Organizations to
@@ -304,7 +304,7 @@ function Collaborations({ data }) {
                   process.
                 </p>
               </div>
-              // <div
+              <div
                 className="more-info academy-more-info container lg:w-1/2 lg:h-2/3-screen lg:opacity-0 lg:absolute z-0 top-0 left-0 hidden lg:flex flex-wrap content-center text-left lg:bg-white lg:px-16 xl:px-36 py-8"
                 data-collaboration-panel="academy"
                 aria-expanded="false"
@@ -328,9 +328,9 @@ function Collaborations({ data }) {
               <div>
                 <SectionHeader
                   name={
-                    <span className="animate opacity-0">Our Development Quality</span>
+                    <span>Our Development Quality</span>
                   }
-                  title={<h2 className="animate opacity-0">Key Collaborations</h2>}
+                  title={<h2>Key Collaborations</h2>}
                 />
               </div>
 

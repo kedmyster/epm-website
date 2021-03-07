@@ -208,7 +208,7 @@ function ResearchPapers({ data }) {
                 name="Our Innovation"
                 title={<h2>Research Papers</h2>}
               />
-              <div className="text lg:text-epm-base lg:w-103">
+              <div className="text animate opacity-0  lg:text-epm-base lg:w-103">
                 <p>
                   Here are EPM-supported publications on EPM301, offering
                   further pharmacologic background on current company research
@@ -310,8 +310,8 @@ function ResearchPapers({ data }) {
             <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
-                  name={<span className="animate opacity-0">Our Innovation</span>}
-                  title={<h2 className="animate opacity-0">Research Papers</h2>}
+                  name={<span>Our Innovation</span>}
+                  title={<h2>Research Papers</h2>}
                 />
               </div>
 

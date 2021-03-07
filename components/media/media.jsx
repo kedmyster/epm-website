@@ -45,7 +45,7 @@ function MediaComponent({ data }) {
         <div className="items lg:pt-8">
           {data.slides.map((slide, index) => {
             return (
-              <div className="item group cursor-pointer border-t last:border-b border-epm-gray-300 h-96 lg:h-auto min-h-full lg:min-h-0 flex lg:block flex-wrap content-center lg:py-8 lg:px-4 transition-colors duration-150 hover:bg-epm-gray-100">
+              <div className="item group animate opacity-0 cursor-pointer border-t last:border-b border-epm-gray-300 h-96 lg:h-auto min-h-full lg:min-h-0 flex lg:block flex-wrap content-center lg:py-8 lg:px-4 transition-colors duration-150 hover:bg-epm-gray-100">
                 <a href="#">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mx-8 lg:mx-0">
                     <div className="item-image lg:w-64 mb-4 lg:mb-0">
@@ -70,7 +70,7 @@ function MediaComponent({ data }) {
                         {slide.date}
                       </div>
                     </div>
-                    <div className="button animate opacity-0 pt-10 lg:pt-0 lg:inline-block text-center">
+                    <div className="button pt-10 lg:pt-0 lg:inline-block text-center">
                       <Button
                         style="dark"
                         href={slide.url}

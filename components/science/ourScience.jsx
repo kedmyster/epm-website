@@ -191,7 +191,7 @@ function OurScience({ data }) {
               title={<h2>Endless Potential Molecules</h2>}
             />
           </div>
-          <div className="text lg:text-epm-base lg:mt-6">
+          <div className="text animate opacity-0 lg:text-epm-base lg:mt-6">
             <p className="mb-4">
               EPM develops a dynamic portfolio of prescription medicines derived
               from synthetic cannabinoid acids. The treatments are based on the

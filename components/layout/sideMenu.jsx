@@ -361,51 +361,23 @@ function SideMenu() {
     });
   };
 
-  const animateSectionContent = (section) => {
-    if (section) {
-      if (!section.id) {
-        return;
-      }
-
-      const tlAnimateContent = gsap.timeline({
-        scrollTrigger: {
-          trigger: `#${section.id}`,
-          start: "top-=50%",
-        },
-      });
-
-      tlAnimateContent.fromTo(
-        `#${section.id} .animate`,
-        {
-          y: "-=5px",
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.1,
-        }
-      );
-    }
-  };
+  
 
   const utils = {
     animateSideMenuHover,
     animateSideMenuActiveState,
     animateSideMenuVisibility,
     animateSideMenuColor,
-    animateSectionContent,
   };
 
   useEffect(() => {
     setTimeout(() => {
       const sideMenu = document.querySelector(".side-menu");
+      const sections = Array.from(document.querySelectorAll(".section"));
+      const menuItems = Array.from(sideMenu.querySelectorAll(".menu-item"));
 
-      if (sideMenu) {
-        const sections = Array.from(document.querySelectorAll(".section"));
-        const menuItems = Array.from(sideMenu.querySelectorAll(".menu-item"));
-
-        sections.forEach((section) => {
+      sections.forEach((section) => {
+        if (sideMenu) {
           const menuItem = document.querySelector(
             `.side-menu li a[href='#${section.id}']`
           );
@@ -433,9 +405,8 @@ function SideMenu() {
             pill,
             label
           );
-          utils.animateSectionContent(section);
-        });
-      }
+        }
+      });
     });
   }, []);
 

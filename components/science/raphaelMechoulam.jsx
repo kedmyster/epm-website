@@ -204,9 +204,9 @@ function RaphaelMechoulam() {
       <div className="lg:pl-44 xl:pl-56 pt-10 lg:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
         <div className="container lg:w-64 xl:w-80 2xl:w-96 px-8 lg:pl-0 py-8">
           <SectionHeader
-            name={<span className="animate opacity-0">Raphael Mechoulam</span>}
+            name={<span>Raphael Mechoulam</span>}
             title={
-              <h2 className="animate opacity-0">
+              <h2>
                 The Godfather of
                 <br />
                 Cannabis Science

@@ -78,7 +78,7 @@ function Innovation({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -104,7 +104,7 @@ function Innovation({ data }) {
             <Slider {...SLIDER_INNOVATION_CONFIG_MOBILE}>
               {data.slides.map((slide) => {
                 return (
-                  <div className="item">
+                  <div className="item" key={slide.title}>
                     <div className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
                       <div className="absolute w-full h-full">
                         <Image
@@ -138,14 +138,14 @@ function Innovation({ data }) {
                   title={<h2>Creating Treatments</h2>}
                 />
               </div>
-              <div className="text lg:w-103">
+              <div className="text animate opacity-0 lg:w-103">
                 <p>
                   EPM’s mission is to develop a wide array of therapeutic
                   treatments based on synthetic cannabinoid acids, producing
                   medicinal solutions and treatments like never before.
                 </p>
               </div>
-              <div className="button pt-10">
+              <div className="button animate opacity-0 pt-10">
                 <Button href="/science/#main" style="dark">
                   Learn More
                 </Button>
@@ -216,8 +216,8 @@ function Innovation({ data }) {
               <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
-                    name={<span className="animate opacity-0">Our Innovation</span>}
-                    title={<h2 className="animate opacity-0">Creating New Treatments</h2>}
+                    name={<span>Our Innovation</span>}
+                    title={<h2>Creating New Treatments</h2>}
                   />
                 </div>
 

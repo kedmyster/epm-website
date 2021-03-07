@@ -70,7 +70,10 @@ function Treatments({ data }) {
               <Slider {...SLIDER_TREATMENTS_CONFIG}>
                 {data.slides.map((slide) => {
                   return (
-                    <div className="item text-center text-epm-gray-700 outline-none">
+                    <div
+                      className="item text-center text-epm-gray-700 outline-none"
+                      key={slide.title}
+                    >
                       <div className="image w-full h-96 flex items-center justify-center">
                         <Image
                           src={slide.images.mobile.url}
@@ -100,7 +103,7 @@ function Treatments({ data }) {
                 />
               </div>
 
-              <div className="text">
+              <div className="text animate opacity-0">
                 <p>
                   EPM is developing cannabinoid acid-based therapeutic solutions
                   providing alternative treatments for patients. This is the
@@ -109,7 +112,7 @@ function Treatments({ data }) {
                   therapeutic conditions:
                 </p>
               </div>
-              <div className="button pt-10">
+              <div className="button animate opacity-0 pt-10">
                 <Button href="/treatments/#treatments" style="dark">
                   Learn More
                 </Button>
@@ -129,7 +132,7 @@ function Treatments({ data }) {
                   title={<h2>Medicine We Develop</h2>}
                 />
               </div>
-              <div className="text mx-auto animate opacity-0 text-center w-105">
+              <div className="text animate opacity-0 mx-auto animate text-center w-105">
                 <p>
                   EPM is developing cannabinoid acid-based therapeutic solutions
                   providing alternative treatments for patients. This is the
@@ -180,7 +183,10 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#psoriasis" className="leading-0 transition-opacity duration-150 hover:opacity-70">
+                    <a
+                      href="/treatments/#psoriasis"
+                      className="leading-0 transition-opacity duration-150 hover:opacity-70"
+                    >
                       {isTablet && (
                         <Image
                           loading="eager"
@@ -213,8 +219,11 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a href="/treatments/#psoriasis" className="leading-0 transition-opacity duration-150 hover:opacity-70">
-                    {isTablet && (
+                    <a
+                      href="/treatments/#psoriasis"
+                      className="leading-0 transition-opacity duration-150 hover:opacity-70"
+                    >
+                      {isTablet && (
                         <Image
                           loading="eager"
                           src="/img/desktop/treatments/treatments-iv@2x.png"

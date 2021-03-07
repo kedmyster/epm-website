@@ -16,7 +16,7 @@ function Story() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -59,9 +59,9 @@ function Story() {
         </div>
         <div className="relative container mx-auto py-8 px-8">
           <SectionHeader
-            name={<span className="animate opacity-0">Our Story</span>}
+            name={<span>Our Story</span>}
             title={
-              <h2 className="animate opacity-0 pb-52 lg:pb-0">
+              <h2 className="pb-52 lg:pb-0">
                 Patient-focused Pharmaceutical Group
               </h2>
             }
