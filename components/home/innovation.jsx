@@ -108,6 +108,7 @@ function Innovation({ data }) {
                     <div className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
                       <div className="absolute w-full h-full">
                         <Image
+                          loading="eager"
                           src={slide.images.mobile}
                           alt={slide.title}
                           layout="fill"
@@ -168,6 +169,7 @@ function Innovation({ data }) {
                     return (
                       <div key={slide.title} className="h-2/3-screen">
                         <Image
+                          loading="eager"
                           src={slide.images.desktop}
                           alt={slide.title}
                           layout="fill"
