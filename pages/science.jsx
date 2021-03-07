@@ -255,7 +255,7 @@ export default function science() {
         <meta name="keywords" content="" />
       </Head>
 
-      <Main />
+      {/*<Main />*/}
       <OurScience data={page.ourScience}/>
       <Cannabinoids />
       <Pipeline />

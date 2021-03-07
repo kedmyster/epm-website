@@ -494,7 +494,7 @@ export default function Treatments() {
         <meta name="keywords" content="" />
       </Head>
 
-      <Main />
+      {/*<Main />*/}
       <OurTreatments data={page.treatments} />
     </>
   );
