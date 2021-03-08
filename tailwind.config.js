@@ -71,6 +71,7 @@ module.exports = {
         103: "33rem",
         105: "35rem",
         109: "39rem",
+        "sm-container": "50rem",
         "container": "58.125rem",
         "lg-container": "73.75rem",
         "3/4-screen": "75vw",

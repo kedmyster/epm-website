@@ -157,8 +157,8 @@ export default function Treatments() {
             icon3: {
               mobile: {
                 url: "/img/icons/treatments/32m-ibd.svg",
-                width: 30,
-                height: 30,
+                width: 54,
+                height: 26,
               },
               desktop: {
                 url: "/img/icons/treatments/32m-ibd.svg",
@@ -297,8 +297,8 @@ export default function Treatments() {
             icon3: {
               mobile: {
                 url: "/img/icons/treatments/125m-psoriasis.svg",
-                width: 30,
-                height: 30,
+                width: 62,
+                height: 26,
               },
               desktop: {
                 url: "/img/icons/treatments/125m-psoriasis.svg",
@@ -461,8 +461,8 @@ export default function Treatments() {
             icon3: {
               mobile: {
                 url: "/img/icons/treatments/3m-ards.svg",
-                width: 30,
-                height: 30,
+                width: 36,
+                height: 26,
               },
               desktop: {
                 url: "/img/icons/treatments/3m-ards.svg",

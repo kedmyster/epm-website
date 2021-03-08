@@ -38,7 +38,7 @@ function Commitment() {
     >
       {isMobile && (
         <div>
-          <div className="items animate opacity-0 relative text-white bg-gray-300 w-full text-center flex items-center h-2/3-screen">
+          <div className="items relative text-white bg-gray-300 w-full text-center flex flex-col items-center h-2/3-screen">
             <div className="absolute w-full h-full">
               <Image
                 src="/img/mobile/homepage/our-commitment/our-commitment@2x.jpg"
@@ -49,9 +49,10 @@ function Commitment() {
               />
             </div>
             <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
-            <div className="container relative mx-auto px-8 py-8 flex flex-wrap content-end lg:content-center lg:justify-center w-full lg:mx-auto lg:space-x-20">
+            <div className="animate opacity-0 text-3xl text-white flex-grow pt-8">We believe in </div>
+            <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full">
               <div className="item text-center w-1/3">
-                <div className="item-image w-24 h-14 flex items-center justify-center">
+                <div className="item-image h-14 flex items-center justify-center">
                   <Image
                     src="/img/icons/homepage/our-commitment/alternative-to-steroids.svg"
                     alt="Alternative to Steroids"
@@ -64,7 +65,7 @@ function Commitment() {
                 </div>
               </div>
               <div className="item text-center w-1/3 border-l-0.5 border-r-0.5 border-white">
-                <div className="item-image w-24 h-14 flex items-center justify-center">
+                <div className="item-image h-14 flex items-center justify-center">
                   <Image
                     src="/img/icons/homepage/our-commitment/affordable.svg"
                     alt="Affordable Drugs"
@@ -77,7 +78,7 @@ function Commitment() {
                 </div>
               </div>
               <div className="item text-center w-1/3">
-                <div className="item-image w-24 h-14 flex items-center justify-center">
+                <div className="item-image h-14 flex items-center justify-center">
                   <Image
                     src="/img/icons/homepage/our-commitment/minimal-side-effects.svg"
                     alt="Minimal Side Effects"
@@ -120,7 +121,7 @@ function Commitment() {
       )}
 
       {(isTablet || isDesktop) && (
-        <div className="lg:relative lg:h-screen lg:text-white lg:flex lg:flex-col lg:justify-between">
+        <div className="relative h-screen text-white flex flex-col justify-between">
           <div className="absolute w-full h-full">
             <Image
               src="/img/desktop/homepage/our-commitment/our-commitment@2x.jpg"

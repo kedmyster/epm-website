@@ -198,7 +198,7 @@ function Footer({}) {
                   className="transition-opacity duration-150 hover:opacity-70"
                 >
                   <Image
-                    src="/img/icons/linkedin-dark-gray.svg"
+                    src="/img/icons/twitter-dark-gray.svg"
                     width="32"
                     height="32"
                     alt="Twitter"

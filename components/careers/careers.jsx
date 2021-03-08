@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
+import { gsap } from "gsap";
 
-function CareersComponent({ positions = [] }) {
+function CareersComponent({ data, positions = [] }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -29,8 +30,59 @@ function CareersComponent({ positions = [] }) {
     document.body.dataset.headerTheme = "dark";
   }, []);
 
-  if (positions && positions.length === 1) {
-    return (
+  useEffect(() => {
+    setTimeout(() => {
+      const tl = gsap.timeline();
+
+      tl.to(".scroll-to-content", {
+        duration: 2,
+        y: "-=10px",
+        yoyo: true,
+        repeat: -1,
+        ease: "easeInOut",
+      });
+    });
+  }, []);
+
+  const scrollToContent = (event) => {
+    event.preventDefault();
+    document.querySelector("#open-positions").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const togglePosition = (event) => {
+    event.preventDefault();
+
+    const positions = document.querySelectorAll(".position");
+    const currentPosition = event.target.closest(".position");
+
+    positions.forEach(position => {
+      const positionDescription = position.querySelector(
+        ".position__description"
+      );
+      const arrow = position.querySelector(".arrow");
+
+      if (position === currentPosition) {
+        if (currentPosition.getAttribute("aria-expanded") === "false") {
+          position.setAttribute("aria-expanded", "true");
+          positionDescription.classList.remove("hidden");
+          gsap.to(arrow, { rotation: 180, duration: 0.25 });
+        } else {
+          position.setAttribute("aria-expanded", "false");
+          positionDescription.classList.add("hidden");
+          gsap.to(arrow, { rotation: 0, duration: 0.25 });
+        }
+      } else {
+        position.setAttribute("aria-expanded", "false");
+        positionDescription.classList.add("hidden");
+        gsap.to(arrow, { rotation: 0, duration: 0.25 });
+      }
+    });
+  };
+
+  return (
+    <>
       <section
         id="careers"
         className="section careers bg-white relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
@@ -61,14 +113,14 @@ function CareersComponent({ positions = [] }) {
             />
           )}
         </div>
-        <div className="relative container mx-auto px-8 py-8 mt-8 lg:mt-0 lg:flex lg:flex-col lg:justify-center">
+        <div className="relative lg:w-sm-container mx-auto px-8 py-8 mt-8 lg:mt-0 lg:flex lg:flex-col lg:justify-center">
           <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
               title={<h2>Shape the Future of Healthcare</h2>}
             />
           </div>
-          <div className="animate opacity-0 text lg:text-epm-base lg:w-container lg:mx-auto lg:mt-6">
+          <div className="animate opacity-0 text lg:text-epm-base  lg:mx-auto lg:mt-6">
             <p className="mb-4 lg:mb-8 lg:mx-20">
               We are a fast-paced and dynamic company, striving to develop new
               medicine and create safer treatments for patients. We believe in
@@ -94,172 +146,85 @@ function CareersComponent({ positions = [] }) {
             </a>
           </div>
         </div>
-      </section>
-    );
-  } else {
-    return (
-      <section
-        id="careers"
-        className="section careers bg-white relative w-full flex flex-wrap lg:flex-row lg:h-screen"
-        data-side-menu-label="Careers"
-        data-side-menu-color="light"
-        data-side-menu-visibility="visible"
-      >
-        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="animate opacity-0 container mx-auto px-8 lg:pl-0 lg:ml-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
-            <div className="mb-6 lg:mb-0">
-              <SectionHeader name="Our story" title={<h2>Leadership</h2>} />
-            </div>
-            <div className="text lg:text-epm-base">
-              <p className="mb-4">
-                We are a fast-paced and dynamic company, striving to develop new
-                medicines and to enable safer treatments for patients, by
-                collaborating with leading pharmaceutical companies.
-              </p>
-              <p className="mb-4">
-                We believe in making a difference and helping people live a life
-                of higher quality.
-              </p>
-              <p>
-                We are looking for enthusiastic and talented individuals who
-                thrive on challenges and a dynamic work environment, and are
-                passionate to make a difference through the delivery of results.
-              </p>
-            </div>
-            <div className="job-openings lg:text-epm-base mt-4 lg:mt-8 lg:w-64 xl:w-80 2xl:w-96">
-              <div className="lg:text-epm-base mb-4 lg:mb-8">Job Openings</div>
-              <div>
-                <table className="w-full table-auto">
-                  <tbody className="border-b-1 border-epm-gray-700">
-                    <tr className="border-t-1 border-epm-gray-700 h-12">
-                      <td className="font-bold transition-all duration-150 hover:text-epm-yellow cursor-pointer">
-                        R&D Director
-                      </td>
-                      <td>Full-Time</td>
-                      <td className="text-right">Tel Aviv</td>
-                    </tr>
-                    <tr className="border-t-1 border-epm-gray-700 h-12">
-                      <td className="font-bold transition-all duration-150 hover:text-epm-yellow cursor-pointer">
-                        R&D Director
-                      </td>
-                      <td>Full-Time</td>
-                      <td className="text-right">Tel Aviv</td>
-                    </tr>
-                    <tr className="border-t-1 border-epm-gray-700 h-12">
-                      <td className="font-bold transition-all duration-150 hover:text-epm-yellow cursor-pointer">
-                        R&D Director
-                      </td>
-                      <td>Full-Time</td>
-                      <td className="text-right">Tel Aviv</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="animate opacity-0 relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden lg:block ">
-          <div className="absolute w-full h-full">
-            {isMobile && (
+        {positions && positions.length > 0 && (
+          <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
+            <a
+              href="#story"
+              onClick={scrollToContent}
+              className="transition-opacity duration-150 hover:opacity-70"
+            >
               <Image
-                src="/img/mobile/homepage/our-story@2x.jpg"
-                alt="Leadership"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
+                src="/img/icons/arrow_down_dark.svg"
+                width="28"
+                height="16"
+                loading="eager"
               />
-            )}
-            {(isTablet || isDesktop) && (
-              <Image
-                src="/img/desktop/careers/careers@2x.jpg"
-                alt="Leadership"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-              />
-            )}
+            </a>
           </div>
-          <div className="container px-8 py-8 lg:text-2xl font-bold z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:w-101 text-center">
-            <p className="mb-4 lg:mb-8">
-              Looking to join a dynamic company and be part of a team where you
-              can make a difference? We’d love to learn more about you.
-            </p>
-            <a href="mailto:jobs@epmip.com">jobs@epmip.com</a>
-          </div>
-        </div>
-
-        <div className="relative w-full lg:w-6/12 2xl:w-7/12 lg:flex-grow hidden">
-          <div className="container px-8 lg:px-36 py-8">
-            <div className="job-title font-title lg:text-2xl text-epm-yellow">
-              R&D Director
-            </div>
-            <div className="job-details text-lg">
-              <span>Tel-Aviv</span>
-              <span> | </span>
-              <span>Full-time</span>
-              <span> | </span>
-              <span> Position open to remote: Yes</span>
-            </div>
-            <div className="job-description text-lg">
-              <div className="font-bold mt-4 lg:mt-8">Job Description</div>
-              The Ecosystem Engagement team is responsible for the largest
-              customer facing web application at EPM. Building features that
-              support merchants across the ecosystem and throughout their entire
-              lifecycle; as well as acting as role models and setting guidelines
-              with impact across the company.
-              <div className="font-bold mt-4 lg:mt-8">
-                As a Senior Engineer on the Ecosystem Engagement team, you will
-                help build products that help merchants gain insights into both
-                their business and EPM as a set of tools to help them grow their
-                dreams. You will:
-              </div>
-              <ul>
-                <li>
-                  Oversee the entirety of your features - that includes
-                  component design, implementation, automated testing, and
-                  roll-out{" "}
-                </li>
-                <li>
-                  WorkWork with other engineers, designers, and product managers
-                  to develop excellent product experiences
-                </li>
-                <li>
-                  Hold yourself, and your teammates accountable to the standards
-                  of engineering that enables Square to safely move billions of
-                  dollars in payments and allow our customers to trust us with
-                  their sensitive data
-                </li>
-                <li>
-                  Work with and influence the larger Frontend community within
-                  EPM
-                </li>
-              </ul>
-              <div className="font-bold mt-4 lg:mt-8">You have:</div>
-              <ul>
-                <li>
-                  Natural curiosity and desire to build products that merchants
-                  depend on
-                </li>
-                <li>Desire to solve hard and engaging engineering problems</li>
-                <li>A deep understanding of frontend technologies</li>
-                <li>Interest and fulfillment in mentoring those around you</li>
-                <li>5+ years professional experience</li>
-              </ul>
-              <div className="font-bold mt-4 lg:mt-8">
-                Additional Information
-              </div>
-              At EPM, we value diversity and always treat all employees and job
-              applicants based on merit, qualifications, competence, and talent.
-              We do not discriminate on the basis of race, religion, color,
-              national origin, gender, sexual orientation, age, marital status,
-              veteran status, or disability status.
-            </div>
-          </div>
-        </div>
+        )}
       </section>
-    );
-  }
+
+      {positions && positions.length > 0 && (
+        <section
+          id="open-positions"
+          className="section open-positions bg-white relative w-full flex justify-center lg:h-screen"
+          data-side-menu-label="Positions"
+          data-side-menu-color="dark"
+          data-side-menu-visibility="hidden"
+        >
+          <div className="positions flex flex-col w-full lg:w-sm-container pt-8 lg:pt-16 mx-8 lg:mx-auto">
+            {data.items.map((position, index) => {
+              return (
+                <div
+                  className="position animate opacity-0 relative cursor-pointer bg-white transition-colors duration-150 hover:bg-epm-gray-100 px-4 border-t border-epm-gray-300 last:border-b"
+                  key={position.position}
+                  onClick={(event) => togglePosition(event)}
+                  aria-expanded="false"
+                >
+                  <div className="flex flex-row items-center justify-between h-12 lg:h-24">
+                    <div className="position__position text-sm lg:text-lg xl:text-xl font-bold w-1/3 lg:w-auto">
+                      {position.position}
+                    </div>
+                    <div className="position__location text-sm lg:text-lg xl:text-xl font-light w-1/3 lg:w-auto">
+                      {position.location}
+                    </div>
+                    <div className="icon mx-4 lg:mx-8 flex flex-col justify-start lg:pt-5">
+                      <div className="arrow">
+                        {isMobile && (
+                          <Image
+                            src="/img/icons/arrow_down_dark.svg"
+                            alt={position.position}
+                            width={20}
+                            height={12}
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                        {(isTablet || isDesktop) && (
+                          <Image
+                            src="/img/icons/arrow_down_dark.svg"
+                            alt={position.position}
+                            width={40}
+                            height={24}
+                            objectFit="cover"
+                            quality={100}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="position__description pt-4 lg:pt-0 pb-8 h-2/3-screen overflow-y-scroll hidden">
+                    {position.description}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+    </>
+  );
 }
 
 export default CareersComponent;
