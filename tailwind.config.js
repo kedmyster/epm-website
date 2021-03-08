@@ -83,6 +83,7 @@ module.exports = {
         110 : "56.375rem",
         "2/3-screen": "66.66666vh",
         "1/3-screen": "33.33333vh",
+        "5/12-screen": "41.66666vh",
         "1/2-screen": "50vh",
         "1/6-screen": "16.66667vh",
       },

@@ -86,10 +86,10 @@ function CareersComponent({ data, positions = [] }) {
       <section
         id="careers"
         className="section careers bg-white relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
-        data-side-menu-label="Careers"
+        data-side-menu-label=""
         data-side-menu-color="light"
         data-side-menu-visibility="hidden"
-        data-header-menu-visibility="visible"
+        data-header-menu-visibility="hidden"
       >
         <div className="animate opacity-0 absolute w-full h-full">
           {isMobile && (
@@ -168,7 +168,7 @@ function CareersComponent({ data, positions = [] }) {
         <section
           id="open-positions"
           className="section open-positions bg-white relative w-full flex justify-center lg:h-screen"
-          data-side-menu-label="Positions"
+          data-side-menu-label=""
           data-side-menu-color="dark"
           data-side-menu-visibility="hidden"
         >

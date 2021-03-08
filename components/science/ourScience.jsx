@@ -210,17 +210,17 @@ function OurScience({ data }) {
               and have full intellectual protection:
             </p>
             <p className="mb-4">
-              <strong className="bold">Potency</strong>
+              <strong className="bold">Potency </strong>
               EPM’s lead treatment has demonstrated activity equivalent to
               steroids in inflammatory disease models.
             </p>
             <p className="mb-4">
-              <strong className="bold">Consistency</strong>
+              <strong className="bold">Consistency </strong>
               EPM produces its medicine in pharmaceutically- approved GMP
               facilities with industrial capacity.
             </p>
             <p>
-              <strong className="bold">Protection</strong>
+              <strong className="bold">Protection </strong>
               EPM’s patents and IP portfolio cover a wide range of drug
               formulations and medical conditions.
             </p>

@@ -233,11 +233,11 @@ export default function Careers() {
                   Professional-level English in both speaking and writing.
                 </li>
               </ul>
-              <strong className="block mb-4 lg:mb-8">
-              Preferred:
-              </strong>
+              <strong className="block mb-4 lg:mb-8">Preferred:</strong>
               <ul className="list-disc ml-5 mb-4 lg:mb-8">
-                <li>Knowledge of Cannabinoids research will be an advantage.</li>
+                <li>
+                  Knowledge of Cannabinoids research will be an advantage.
+                </li>
                 <li>Experience contributing to regulatory submissions.</li>
               </ul>
               <span className="mb-4 lg:mb-8 block">
@@ -265,8 +265,14 @@ export default function Careers() {
           as="image"
           href="/img/mobile/careers/careers@2x.jpg"
         />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta
+          name="description"
+          content="We are a fast-paced and dynamic company, striving to develop new medicine and create safer treatments for patients. We believe in helping people live a higher quality of life."
+        />
+        <meta
+          name="keywords"
+          content="obs@epmip.com, Shape the Future of Healthcare"
+        />
       </Head>
 
       <CareersComponent data={page.careers} positions={positions} />

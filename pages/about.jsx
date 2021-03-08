@@ -22,7 +22,7 @@ export default function About() {
   const [leaders, setLeaders] = useState([
     {
       group: "Board of Directors",
-      label:"Directorate",
+      label: "Directorate",
       id: getId("Board of Directors"),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
@@ -99,36 +99,33 @@ export default function About() {
             desktop: "/img/desktop/about/leadership/roberto@2x.jpg",
           },
         },
-        {
-          name: "Prof. Dan Peer",
-          role: "",
-          // <span>
-          //   Head of Inflammatory Research,
-          //   <br />
-          //   Tel Aviv University
-          // </span>
-          text: (
-            <div>
-              <p className="mb-4">One of Israel’s most renowned researchers.</p>
-              <p className="mb-4">
-                {" "}
-                Vice President at R&D at Tel Aviv University and the Director of
-                the Laboratory of Precision NanoMedicine.Prof. Peer is a world
-                leader in the field of delivery devices and nanomedicine. Prof.
-                Peer also has professional experience at Harvard Medical School,
-                the Children’s Hospital Boston and the Leona M. and Harry B.
-                Helmsley Nanotechnology research fund.
-              </p>
-              <p>
-                Prof. Peer received many awards, among them were awards from the
-                Kenneth Rainin Foundation on his pioneering work in inflammatory
-                bowel diseases (IBD) and award for the 1st Untold News Award
-                together with Prof. Rimona Margalit also from Tel Aviv
-                University on the “Cancer Bullet” invention that might change
-                the world.
-              </p>
-            </div>
-          ),
+        // {
+        //   name: "Prof. Dan Peer",
+        //   role: "",
+        //   text: (
+        //     <div>
+        //       <p className="mb-4">One of Israel’s most renowned scientists.</p>
+        //       <p className="mb-4">
+        //         {" "}
+        //         Prof. Peer is the Director of the Laboratory of Precision
+        //         NanoMedicine at Tel Aviv University. He is also the VP for R&D
+        //         at Tel Aviv University. Prof. Peer is a world leader in the
+        //         field of nanomedicine. And made pioneering work in the field of
+        //         RNA therapeutics and Vaccines. Prof. Peer was trained at Harvard
+        //         Medical School; Center for Blood Research and Boston Children’s
+        //         Hospital.
+        //       </p>
+        //       <p>
+        //         Prof. Peer received many awards, among them he was awarded the
+        //         innovator award and the breakthrough Award from the Kenneth
+        //         Rainin Foundation on his pioneering work in inflammatory bowel
+        //         diseases (IBD). In addition he was awarded the 1st Untold News
+        //         Award, along with Prof. Rimona Margalit, from Tel Aviv
+        //         University, on the “Cancer Bullet” invention that may change the
+        //         world in Cancer therapy.
+        //       </p>
+        //     </div>
+        //   ),
           image: {
             mobile: "/img/mobile/about/leadership/dan@2x.jpg",
             desktop: "/img/desktop/about/leadership/dan@2x.jpg",
@@ -139,7 +136,7 @@ export default function About() {
 
     {
       group: "Executive Leadership",
-      label:"Executives",
+      label: "Executives",
       id: getId("Executive Leadership"),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
@@ -282,7 +279,7 @@ export default function About() {
     },
     {
       group: "Scientific Advisory Board",
-      label:"Advisory Board",
+      label: "Advisory Board",
       id: getId("Scientific Advisory Board"),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
@@ -383,8 +380,14 @@ export default function About() {
         <link rel="icon" href="/favicon.svg" />
         <link rel="preload" as="image" href="/img/desktop/about/hero@2x.jpg" />
         <link rel="preload" as="image" href="/img/mobile/about/hero@3x.jpg" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta
+          name="description"
+          content="EPM is a patient focused Pharmaceutical Group developing prescription medicine derived from synthetic cannabinoid acids to address unmet patient needs."
+        />
+        <meta
+          name="keywords"
+          content="Synthetic, Cannabinoid acids, Patient-focused, Prof. Raphael Mechoula, Prof. Dan Peer, Prof. Yossi Tam, Julian Gangolli, Roberto Gonzalez, Reshef Swisa, Dr. Peter Welburn, Dr. Thilo Bayrhoffer, Ron Sharhabani, Rotem Sher, help people live a life of higher quality"
+        />
       </Head>
 
       <Main />

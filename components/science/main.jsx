@@ -42,7 +42,7 @@ function Main() {
 
   const scrollToContent = (event) => {
     event.preventDefault();
-    document.querySelector("#solution").scrollIntoView({
+    document.querySelector("#our-science").scrollIntoView({
       behavior: "smooth",
     });
   };
@@ -111,7 +111,7 @@ function Main() {
       </div>
       <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
         <a
-          href="#solution"
+          href="#our-science"
           onClick={scrollToContent}
           className="transition-opacity duration-150 hover:opacity-70"
         >

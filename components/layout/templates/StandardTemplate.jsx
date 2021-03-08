@@ -12,7 +12,7 @@ function StandardTemplate({name, title, children}) {
       className="section bg-white pt-10 lg:pt-20 lg:px-72 lg:min-h-screen"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
-      data-header-menu-visibility="hidden"
+      data-header-menu-visibility="visible"
     >
       <div className="container mx-auto px-8 py-8">
         <div className="mb-6">

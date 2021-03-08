@@ -44,33 +44,36 @@ function Header() {
         ".section[data-header-menu-visibility='hidden']"
       );
 
+      const menu = document.querySelector("#menu");
+      let stopPosition = 2 * 62;
+      
       if (main) {
         const rect = main.getBoundingClientRect();
-        const menu = document.querySelector("#menu");
+        stopPosition = rect.bottom / 2;
+      }
 
-        window.addEventListener(
-          "scroll",
-          throttle((event) => {
-            if (!menu.classList.contains("hidden")) {
-              toggleMenu(event);
-            }
+      window.addEventListener(
+        "scroll",
+        throttle((event) => {
+          if (!menu.classList.contains("hidden")) {
+            toggleMenu(event);
+          }
 
-            if (scrollY > window.scrollY) {
-              if (window.scrollY > rect.bottom / 2) {
-                if (!header.classList.contains("menu--shown")) {
-                  openFixedMenu(event);
-                }
-              } else {
-                closeFixedMenu(event);
+          if (scrollY > window.scrollY) {
+            if (window.scrollY > stopPosition) {
+              if (!header.classList.contains("menu--shown")) {
+                openFixedMenu(event);
               }
             } else {
               closeFixedMenu(event);
             }
+          } else {
+            closeFixedMenu(event);
+          }
 
-            scrollY = window.scrollY;
-          }, 250)
-        );
-      }
+          scrollY = window.scrollY;
+        }, 250)
+      );
     }
   }, [isMobile]);
 

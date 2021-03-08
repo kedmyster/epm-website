@@ -39,7 +39,7 @@ function MediaComponent({ data }) {
       className="section media bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden lg:min-h-screen"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
-      data-header-menu-visibility="hidden"
+      data-header-menu-visibility="visible"
     >
       <div className="container lg:w-lg-container mx-auto lg:px-8 pt-16 lg:pt-16">
         <div className="items lg:pt-8">

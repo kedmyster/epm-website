@@ -63,6 +63,7 @@ section.section.main {
 
   .section {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
 
@@ -207,6 +208,10 @@ body[data-header-theme="dark"] .header .menu-button svg {
     @apply opacity-70 transition-opacity duration-150;
   }
 
+  body[data-header-theme="dark"] .header .desktop-menu li.menu-item a {
+    @apply pb-4;
+  }
+
   body[data-header-theme="dark"]
     .header
     .desktop-menu
@@ -225,7 +230,7 @@ body[data-header-theme="dark"] .header .menu-button svg {
   }
 
   body[data-header-theme="dark"] .header .desktop-menu .sub-menu {
-    @apply bg-white p-4 shadow-md mt-2 w-48 top-11;
+    @apply bg-white p-4 shadow-md w-48 top-11;
   }
 
   body[data-header-theme="dark"] .header .desktop-menu .sub-menu li {

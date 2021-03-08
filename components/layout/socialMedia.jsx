@@ -12,7 +12,7 @@ function SocialMedia() {
               className="transition-opacity duration-150 hover:opacity-70"
             >
               <Image
-                src="/img/icons/linkedin-light-gray.svg"
+                src="/img/icons/linkedin-dark-gray.svg"
                 width="30"
                 height="30"
                 alt="LinkedIn"
@@ -27,7 +27,7 @@ function SocialMedia() {
               className="transition-opacity duration-150 hover:opacity-70"
             >
               <Image
-                src="/img/icons/twitter-light-gray.svg"
+                src="/img/icons/twitter-dark-gray.svg"
                 width="30"
                 height="30"
                 alt="Twitter"
@@ -42,7 +42,7 @@ function SocialMedia() {
               className="transition-opacity duration-150 hover:opacity-70"
             >
               <Image
-                src="/img/icons/youtube-light-gray.svg"
+                src="/img/icons/youtube-dark-gray.svg"
                 width="30"
                 height="30"
                 alt="YouTube"

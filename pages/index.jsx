@@ -174,10 +174,24 @@ export default function Home() {
       <Head>
         <title>EPM - Medicine to All.</title>
         <link rel="icon" href="/favicon.svg" />
-        <link rel="preload" as="image" href="/img/desktop/homepage/hero@2x.jpg" />
-        <link rel="preload" as="image" href="/img/mobile/homepage/hero@2x.jpg" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <link
+          rel="preload"
+          as="image"
+          href="/img/desktop/homepage/hero@2x.jpg"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/img/mobile/homepage/hero@2x.jpg"
+        />
+        <meta
+          name="description"
+          content="EPM is leading the way in next-generation cannabinoid acid medicine - unlocking its full potential to address unmet patient and consumer needs."
+        />
+        <meta
+          name="keywords"
+          content="Unlock the potential, Novel therapeutics, Synthetic, Cannabinoid acids, Patient-focused, Pharmaceutical Group, prescription medicine, Lab-made, FDA Guidelines, alternative treatments, Minimal side effects, Alternative to steroids, Affordable Drugs Psoriasis, IBD, ARDS, Curing, Treating, community, Endless Potenital Molecules, Minimal side effects, Alternative to steroids, Affordable Drugs, new medicinal solutions "
+        />
       </Head>
 
       <Main />

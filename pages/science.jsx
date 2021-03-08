@@ -13,12 +13,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function science() {
   useEffect(() => {
-    document.querySelector(".menu-item--science").classList.add("menu-item--current");
+    document
+      .querySelector(".menu-item--science")
+      .classList.add("menu-item--current");
   }, []);
 
   const page = {
     ourScience: {
-      slides: [ 
+      slides: [
         {
           name: "Yossi Tam",
           images: {
@@ -26,7 +28,7 @@ export default function science() {
             desktop: "/img/desktop/science/our-science/thumb-01@2x.jpg",
           },
           video: "cWShfI5tCUs",
-        }, 
+        },
         {
           name: "Raphael Mechoulam",
           images: {
@@ -61,9 +63,10 @@ export default function science() {
                 url: "/img/icons/collaborations/charles-river.svg",
                 width: "154.11",
                 height: "30.674",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www.recipharm.com/",
             title: "Recipharm",
             image: {
@@ -76,9 +79,10 @@ export default function science() {
                 url: "/img/icons/collaborations/recipharm.svg",
                 width: "136",
                 height: "56",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www.medpharm.com/en/",
             title: "Medpharm",
             image: {
@@ -91,9 +95,10 @@ export default function science() {
                 url: "/img/icons/collaborations/medpharm.svg",
                 width: "104",
                 height: "38",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "http://www.nck.dk/",
             title: "NCK",
             image: {
@@ -106,9 +111,10 @@ export default function science() {
                 url: "/img/icons/collaborations/nck.svg",
                 width: "121",
                 height: "46",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www.cambrex.com/",
             title: "Cambrex",
             image: {
@@ -121,9 +127,9 @@ export default function science() {
                 url: "/img/icons/collaborations/cambrex.svg",
                 width: "140",
                 height: "61",
-              }
-            }
-          }
+              },
+            },
+          },
         ],
       },
       academy: {
@@ -133,17 +139,20 @@ export default function science() {
             title: "The Hebrew University of Jerusalem",
             image: {
               mobile: {
-                url: "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
+                url:
+                  "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
                 width: "159",
                 height: "54",
               },
               desktop: {
-                url: "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
+                url:
+                  "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
                 width: "159",
                 height: "54",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www1.biu.ac.il/indexE.php",
             title: "Bar Ilan University",
             image: {
@@ -156,9 +165,10 @@ export default function science() {
                 url: "/img/icons/collaborations/bar-ilan-university.svg",
                 width: "112",
                 height: "41",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://english.tau.ac.il/",
             title: "Tel-Aviv University",
             image: {
@@ -171,9 +181,10 @@ export default function science() {
                 url: "/img/icons/collaborations/tel-aviv-university.svg",
                 width: "96",
                 height: "52",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www.uoguelph.ca/",
             title: "University of Guelph",
             image: {
@@ -186,9 +197,10 @@ export default function science() {
                 url: "/img/icons/collaborations/university-of-guelph.svg",
                 width: "136",
                 height: "44",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www.abdn.ac.uk/",
             title: "University of Aberdeen",
             image: {
@@ -201,9 +213,10 @@ export default function science() {
                 url: "/img/icons/collaborations/university-of-aberdeen.svg",
                 width: "132",
                 height: "29",
-              }
-            }
-          }, {
+              },
+            },
+          },
+          {
             url: "https://www.mcmaster.ca/",
             title: "McMaster University",
             image: {
@@ -216,11 +229,11 @@ export default function science() {
                 url: "/img/icons/collaborations/mcmaster-university.svg",
                 width: "109",
                 height: "60",
-              }
-            }
-          }
+              },
+            },
+          },
         ],
-      }
+      },
     },
     researchPapers: {
       slides: [
@@ -228,13 +241,11 @@ export default function science() {
           title: "Depression",
           text: "Hen-Shoval.D,et.al.,Behavioral Brain Research, 2018",
           url: "/papers/deperssion.pdf",
-          
         },
         {
           title: "Nausea and Anxiety",
           text: "Pertwee.R.G, et.al.,British Journal of pharmacology, 2018",
           url: "/papers/nausea-and-anxiety.pdf",
-          
         },
         {
           title: "Neuropathic Pain",
@@ -249,14 +260,24 @@ export default function science() {
       <Head>
         <title>Science - EPM</title>
         <link rel="icon" href="/favicon.svg" />
-        <link rel="preload" as="image" href="/img/desktop/science/hero@2x.jpg" />
+        <link
+          rel="preload"
+          as="image"
+          href="/img/desktop/science/hero@2x.jpg"
+        />
         <link rel="preload" as="image" href="/img/mobile/science/hero@2x.jpg" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta
+          name="description"
+          content="Unlock the medical potential of synthetic cannabinoid acids. Using unique technology, EPM develops a dynamic portfolio of prescription medicines derived from synthetic cannabinoid acids."
+        />
+        <meta
+          name="keywords"
+          content="Unlock the medical potential, synthetic cannabinoid acids, Potency, Protection, IP portfolio, similar results to established steroids toxicology, scaleup manufacturing, EPM301, EPM302, EPM303, EPM304, EPM305, EPM306, EPM307, EPM308, EPM309, EPM310, EPM311, EPM312, EPM313, EPM314,  Deperssion, Nausea and Anxiety, neuropathic Pain,The Godfather of Cannabis Science, Prof. Mechoulam Bio, Charles River Laboratories, NCK, MedPharm, Recipharm, Cambrex, GMP batches, Tel Aviv University, Hebrew University, Bar Ilan University, Mcmaster University, Aberdeen university, University of Guelph, product development process"
+        />
       </Head>
 
       <Main />
-      <OurScience data={page.ourScience}/>
+      <OurScience data={page.ourScience} />
       <Cannabinoids />
       <Pipeline />
       <Collaborations data={page.collaborations} />

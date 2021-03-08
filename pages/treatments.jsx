@@ -5,7 +5,9 @@ import OurTreatments from "../components/treatments/ourTreatments";
 
 export default function Treatments() {
   useEffect(() => {
-    document.querySelector(".menu-item--treatments").classList.add("menu-item--current");
+    document
+      .querySelector(".menu-item--treatments")
+      .classList.add("menu-item--current");
   }, []);
 
   const getId = (name) => {
@@ -19,7 +21,7 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Inflammatory Bowel Disease"),
           title: "Inflammatory Bowel Disease",
-          label:"IBD",
+          label: "IBD",
           formulation: "Oral",
           timeline:
             "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
@@ -179,7 +181,7 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Psoriasis"),
           title: "Psoriasis",
-          label:"Psoriasis",
+          label: "Psoriasis",
           formulation: "Topical",
           timeline:
             "Phase 1 clinical trail in healthy volunteers anticipated in 2002",
@@ -319,7 +321,7 @@ export default function Treatments() {
           name: "Our Treatments",
           id: getId("Acute Respiratory Distress Syndrome"),
           title: "Acute Respiratory Distress Syndrome",
-          label:"ARDS",
+          label: "ARDS",
           formulation: "IV",
           timeline:
             "IND approval to treat COVID-19 patients with poor prognosis under compassionate usage grounds is anticipated in Q4 2021",
@@ -488,10 +490,24 @@ export default function Treatments() {
       <Head>
         <title>Treatments - EPM</title>
         <link rel="icon" href="/favicon.svg" />
-        <link rel="preload" as="image" href="/img/desktop/treatments/hero@2x.jpg" />
-        <link rel="preload" as="image" href="/img/mobile/treatments/hero@2x.jpg" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <link
+          rel="preload"
+          as="image"
+          href="/img/desktop/treatments/hero@2x.jpg"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/img/mobile/treatments/hero@2x.jpg"
+        />
+        <meta
+          name="description"
+          content="EPM is committed to developing a series of new therapeutic solutions based on cannabinoid acids which provide alternative treatments for patients. EPM focuses on three main therapeutic conditions: IBD, psoriasis and ARDS in COVID-19 patients."
+        />
+        <meta
+          name="keywords"
+          content="ARDS, IBD, Psoriasis, IL-10 knock-out mouse, Inflammatory Bowel Disease, Acute Respiratory Distress Syndrome, IV formulation, topical formulation, oral formulation, toxicity, COVID-19, clinical trail"
+        />
       </Head>
 
       <Main />

@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }) {
     setTimeout(() => {
       tl.add("layout");
 
-      tl.fromTo(".header", {
+      tl.fromTo(".header:not(.header--fixed)", {
         opacity: 0,
       }, {
         opacity: 1,
