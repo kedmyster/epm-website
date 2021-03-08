@@ -42,6 +42,7 @@ function CareersComponent({ positions = [] }) {
         <div className="animate opacity-0 absolute w-full h-full">
           {isMobile && (
             <Image
+              loading="eager"
               src="/img/mobile/careers/careers@2x.jpg"
               alt="Shape the Future of Healthcare"
               layout="fill"
@@ -51,6 +52,7 @@ function CareersComponent({ positions = [] }) {
           )}
           {(isTablet || isDesktop) && (
             <Image
+              loading="eager"
               src="/img/desktop/careers/careers@2x.jpg"
               alt="Shape the Future of Healthcare"
               layout="fill"

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import CareersComponent from "../components/careers/careers"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CareersComponent from "../components/careers/careers";
 
 export default function Careers() {
   useEffect(() => {
