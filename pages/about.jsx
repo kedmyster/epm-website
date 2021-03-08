@@ -126,11 +126,11 @@ export default function About() {
         //       </p>
         //     </div>
         //   ),
-          image: {
-            mobile: "/img/mobile/about/leadership/dan@2x.jpg",
-            desktop: "/img/desktop/about/leadership/dan@2x.jpg",
-          },
-        },
+        //   image: {
+        //     mobile: "/img/mobile/about/leadership/dan@2x.jpg",
+        //     desktop: "/img/desktop/about/leadership/dan@2x.jpg",
+        //   },
+        // },
       ],
     },
 
