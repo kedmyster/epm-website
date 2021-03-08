@@ -225,11 +225,11 @@ body[data-header-theme="dark"] .header .menu-button svg {
   }
 
   body[data-header-theme="dark"] .header .desktop-menu .sub-menu {
-    @apply bg-white p-4 shadow-md mt-1 w-48;
+    @apply bg-white p-4 shadow-md mt-2 w-48 top-11;
   }
 
   body[data-header-theme="dark"] .header .desktop-menu .sub-menu li {
-    @apply border-b border-epm-gray-500 pb-2 mb-2;
+    @apply border-b border-epm-gray-500 pb-2 mb-1;
   }
 
   body[data-header-theme="dark"] .header .desktop-menu .sub-menu li:last-child {
@@ -261,7 +261,7 @@ body[data-header-theme="dark"] .header .menu-button svg {
 
 .innovation .slick-arrow {
   top: auto;
-  bottom: 6.25rem ;
+  bottom: 6.25rem;
 }
 
 .treatments .slick-arrow {

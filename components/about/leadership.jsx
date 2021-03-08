@@ -115,8 +115,8 @@ function Leadership({ leaders = [] }) {
                                 <Image
                                   src={leader.image.mobile}
                                   alt={leader.name}
-                                  width={103}
-                                  height={103}
+                                  width={104}
+                                  height={104}
                                   objectFit="cover"
                                   quality={100}
                                 />
