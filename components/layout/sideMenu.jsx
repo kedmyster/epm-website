@@ -309,65 +309,10 @@ function SideMenu() {
     }
   };
 
-  const animateSideMenuColor = (
-    sideMenu,
-    section,
-    activeMenuItem,
-    activePill,
-    activeLabel
-  ) => {
-    if (!section.id) {
-      return;
-    }
-
-    const theme = section.dataset.sideMenuColor;
-    const menuItems = sideMenu.querySelectorAll(".menu-item");
-    const tlSideMenuColor = gsap.timeline({
-      scrollTrigger: {
-        trigger: `#${section.id}`,
-        start: "top-=50%",
-        end: "bottom-=50%",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-
-    tlSideMenuColor.add("side-menu-color");
-
-    menuItems.forEach((item) => {
-      const pill = item.querySelector(".slide__pill");
-      const label = item.querySelector(".slide__label");
-
-      if (activeMenuItem !== item.querySelector("a")) {
-        if (theme === THEME_LIGHT) {
-          tlSideMenuColor.to(
-            pill,
-            {
-              backgroundColor: "#FFFFFF",
-              duration: 0.1,
-            },
-            "side-menu-color"
-          );
-        } else if (theme === THEME_DARK) {
-          tlSideMenuColor.to(
-            pill,
-            {
-              backgroundColor: "#636466",
-              duration: 0.1,
-            },
-            "side-menu-color"
-          );
-        }
-      }
-    });
-  };
-
-  
-
   const utils = {
     animateSideMenuHover,
     animateSideMenuActiveState,
     animateSideMenuVisibility,
-    animateSideMenuColor,
   };
 
   useEffect(() => {
@@ -407,7 +352,7 @@ function SideMenu() {
           );
         }
       });
-    });
+    }, 1500);
   }, []);
 
   const sections = Array.from(document.querySelectorAll(".section"));

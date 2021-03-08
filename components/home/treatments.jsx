@@ -165,8 +165,8 @@ function Treatments({ data }) {
                         <Image
                           src="/img/desktop/treatments/treatments-pills@2x.png"
                           alt="Oral for IBD (Crohn’s & Colitis)"
-                          width="281"
-                          height="326"
+                          width="227"
+                          height="263"
                           layout="intrinsic"
                           quality={100}
                         />
@@ -200,8 +200,8 @@ function Treatments({ data }) {
                         <Image
                           src="/img/desktop/treatments/treatments-tube@2x.png"
                           alt="Topical for Psoriasis"
-                          width="113"
-                          height="386"
+                          width="91"
+                          height="312"
                           layout="intrinsic"
                           quality={100}
                         />
@@ -234,8 +234,8 @@ function Treatments({ data }) {
                         <Image
                           src="/img/desktop/treatments/treatments-iv@2x.png"
                           alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
-                          width="249"
-                          height="327"
+                          width="201"
+                          height="263"
                           layout="intrinsic"
                           quality={100}
                         />
