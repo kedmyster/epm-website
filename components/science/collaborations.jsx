@@ -55,7 +55,7 @@ function Collaborations({ data }) {
   return (
     <section
       id={"collaborations"}
-      className="section collaborations bg-white"
+      className="section collaborations"
       data-side-menu-label="Collaborations"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"

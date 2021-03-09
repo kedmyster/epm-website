@@ -67,23 +67,6 @@ section.section.main {
   }
 }
 
-/* @media (min-width: 1024px) and (max-height: 767) {
-  .h-screen,
-  .lg\:h-screen,
-  .xl\:h-screen,
-  .2xl\:h-screen {
-    height: auto !important ;
-  }
-
-  html {
-    scroll-snap-type: none;
-  }
-
-  .section {
-    scroll-snap-align: none;
-  }
-} */
-
 a {
   color: inherit;
   text-decoration: none;
@@ -92,17 +75,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
-/* .image > div, .video > div, .video video {
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .image > div, .video > div, .video video {
-    width: 100%;
-    height: 100vh
-  }
-} */
 
 /* =================== */
 

@@ -167,37 +167,37 @@ export default function About() {
             desktop: "/img/desktop/about/leadership/reshef@2x.jpg",
           },
         },
-        {
-          name: "Dr. Thilo Bayrhoffer",
-          role: "Chief Business Officer",
-          text: (
-            <div>
-              <p className="mb-4">
-                Dr. Bayrhoffer has over 20 years’ experience in the
-                pharmaceutical industry. He has gained truly global exposure in
-                operational roles as well as during his tenure in strategic
-                consulting and at VC/PE companies focused on the sector.
-              </p>
-              <p className="mb-4">
-                Besides working at firms such as The Boston Consulting Group,
-                Empartners, and Swisscore Group throughout Europe, the Americas,
-                and Asia, he is also a successful angel investor. Dr. Bayrhoffer
-                has founded and exited several ventures and has been appointed
-                to executive and non-executive board positions in the life
-                science space.
-              </p>
-              <p>
-                Dr. Bayrhoffer is a licensed physician in Germany, he holds an
-                MBA (Honors) from Simon School of Business, University of
-                Rochester, NY.
-              </p>
-            </div>
-          ),
-          image: {
-            mobile: "/img/mobile/about/leadership/thilo@2x.jpg",
-            desktop: "/img/desktop/about/leadership/thilo@2x.jpg",
-          },
-        },
+        // {
+        //   name: "Dr. Thilo Bayrhoffer",
+        //   role: "Chief Business Officer",
+        //   text: (
+        //     <div>
+        //       <p className="mb-4">
+        //         Dr. Bayrhoffer has over 20 years’ experience in the
+        //         pharmaceutical industry. He has gained truly global exposure in
+        //         operational roles as well as during his tenure in strategic
+        //         consulting and at VC/PE companies focused on the sector.
+        //       </p>
+        //       <p className="mb-4">
+        //         Besides working at firms such as The Boston Consulting Group,
+        //         Empartners, and Swisscore Group throughout Europe, the Americas,
+        //         and Asia, he is also a successful angel investor. Dr. Bayrhoffer
+        //         has founded and exited several ventures and has been appointed
+        //         to executive and non-executive board positions in the life
+        //         science space.
+        //       </p>
+        //       <p>
+        //         Dr. Bayrhoffer is a licensed physician in Germany, he holds an
+        //         MBA (Honors) from Simon School of Business, University of
+        //         Rochester, NY.
+        //       </p>
+        //     </div>
+        //   ),
+        //   image: {
+        //     mobile: "/img/mobile/about/leadership/thilo@2x.jpg",
+        //     desktop: "/img/desktop/about/leadership/thilo@2x.jpg",
+        //   },
+        // },
         {
           name: "Dr. Peter Welburn",
           role: "Chief Scientific Officer ",

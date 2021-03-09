@@ -160,8 +160,9 @@ export default function Home() {
           },
           quote: (
             <p>
-              The significant clinical values of CBD and cannabinoids has
-              already been demonstrated a very exciting therapeutic development.
+              The significant clinical value of CBD and cannabinoids has already
+              been demonstrated. EPM’s platform represents an exciting
+              therapeutic direction
             </p>
           ),
         },

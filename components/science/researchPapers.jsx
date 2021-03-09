@@ -139,7 +139,7 @@ function ResearchPapers({ data }) {
   return (
     <section
       id="research-papers"
-      className="section research-papers bg-white"
+      className="section research-papers"
       data-side-menu-label="Publications"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"

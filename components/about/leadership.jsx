@@ -76,7 +76,7 @@ function Leadership({ leaders = [] }) {
           <section
             id={group.id}
             key={group.id}
-            className="section leadership bg-white relative w-full flex flex-col lg:flex-row lg:border-b-1 lg:border-epm-gray-300 lg:h-screen min-h-0 lg:min-h-screen"
+            className="section leadership relative w-full flex flex-col lg:flex-row lg:border-b-1 lg:border-epm-gray-300 lg:h-screen min-h-0 lg:min-h-screen"
             data-side-menu-label={group.label}
             data-side-menu-color="dark"
             data-side-menu-visibility="visible"

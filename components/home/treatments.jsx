@@ -57,7 +57,7 @@ function Treatments({ data }) {
   return (
     <section
       id="treatments"
-      className="section treatments bg-white lg:h-screen"
+      className="section treatments lg:h-screen"
       data-side-menu-label="Our Treatments"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

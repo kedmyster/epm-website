@@ -92,7 +92,7 @@ function Innovation({ data }) {
   return (
     <section
       id="innovation"
-      className="section innovation bg-white"
+      className="section innovation"
       data-side-menu-label="Our Innovation"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"

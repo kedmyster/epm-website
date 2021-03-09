@@ -30,7 +30,7 @@ function Story() {
   return (
     <section
       id="story"
-      className="section story bg-white relative w-full bg-cover text-center"
+      className="section story relative w-full bg-cover text-center"
       data-side-menu-label="Our Story"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

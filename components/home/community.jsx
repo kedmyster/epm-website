@@ -65,7 +65,7 @@ function Community({ data }) {
   return (
     <section
       id="community"
-      className="section community bg-white"
+      className="section community"
       data-side-menu-label="Our Community"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

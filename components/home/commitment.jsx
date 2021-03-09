@@ -30,7 +30,7 @@ function Commitment() {
   return (
     <section
       id="commitment"
-      className="section commitment bg-white"
+      className="section commitment"
       data-side-menu-label="Our commitment"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"

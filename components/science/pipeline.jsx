@@ -31,7 +31,7 @@ function Pipeline() {
   return (
     <section
       id="pipeline"
-      className="section pipeline bg-white"
+      className="section pipeline"
       data-side-menu-label="Pipeline"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

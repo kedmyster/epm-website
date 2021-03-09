@@ -36,7 +36,7 @@ function MediaComponent({ data }) {
   return (
     <section
       id="media"
-      className="section media bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden lg:min-h-screen"
+      className="section media lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden lg:min-h-screen"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

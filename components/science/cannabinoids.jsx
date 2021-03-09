@@ -30,7 +30,7 @@ function Cannabinoids() {
   return (
     <section
       id="cannabinoids"
-      className="section cannabinoids bg-white relative w-full"
+      className="section cannabinoids relative w-full"
       data-side-menu-label="The Acids"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

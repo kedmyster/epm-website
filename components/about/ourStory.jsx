@@ -106,7 +106,7 @@ function OurStory() {
   return (
     <section
       id="our-story"
-      className="section story bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
+      className="section story relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
       data-side-menu-label="Our Story"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

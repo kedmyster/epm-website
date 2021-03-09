@@ -136,7 +136,7 @@ function OurScience({ data }) {
   return (
     <section
       id="our-science"
-      className="section our-science bg-white relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
+      className="section our-science relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
       data-side-menu-label="Our Science"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

@@ -159,7 +159,7 @@ function RaphaelMechoulam() {
   return (
     <section
       id="raphael-mechoulam"
-      className="section raphael-mechoulam bg-white lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
+      className="section raphael-mechoulam lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
       data-side-menu-label="Mechoulam's Bio"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"

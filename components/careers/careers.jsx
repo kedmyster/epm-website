@@ -85,7 +85,7 @@ function CareersComponent({ data, positions = [] }) {
     <>
       <section
         id="careers"
-        className="section careers bg-white relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
+        className="section careers relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
         data-side-menu-label=""
         data-side-menu-color="light"
         data-side-menu-visibility="hidden"
