@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import Image from "next/image";
-import Head from "next/head";
 import Header from "../components/layout/header.jsx";
 import Footer from "../components/layout/footer.jsx";
 import SideMenu from "../components/layout/sideMenu.jsx";
@@ -48,8 +46,20 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
+  const animateSectionSnapping = () => {
+    const instance = new PanelSnap({
+      container: document.body,
+      panelSelector: '.section',
+      directionThreshold: 50,
+      delay: 0,
+      duration: 150,
+      easing: function(t) { return t },
+    });
+  }
+
   const utils = {
     animateSectionContent,
+    animateSectionSnapping,
   };
 
   useEffect(() => {
@@ -100,6 +110,8 @@ function MyApp({ Component, pageProps }) {
       sections.forEach((section) => {
         utils.animateSectionContent(section);
       });
+
+      utils.animateSectionSnapping();
     });
   }, []);
 

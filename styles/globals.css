@@ -55,7 +55,7 @@ section.section.main {
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   html {
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
@@ -66,7 +66,7 @@ section.section.main {
     scroll-snap-align: start;
     scroll-snap-stop: always;
   }
-}
+} */
 
 a {
   color: inherit;
