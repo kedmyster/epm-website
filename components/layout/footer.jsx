@@ -70,7 +70,7 @@ function Footer({}) {
       data-side-menu-visibility="hidden"
       data-logo-color="dark"
     >
-      <div className="container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:pl-44 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
+      <div className="animate opacity-0 container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:pl-44 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
           <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-56 xl:w-96 2xl:w-109 xl:pr-0">
             <div className="mb-4 lg:mb-8">

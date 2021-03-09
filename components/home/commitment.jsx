@@ -16,7 +16,7 @@ function Commitment() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -49,7 +49,9 @@ function Commitment() {
               />
             </div>
             <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
-            <div className="animate opacity-0 text-3xl text-white flex-grow pt-8">We believe in </div>
+            <div className="animate opacity-0 text-white flex-grow pt-8">
+              <SectionHeader name="" title={<h2> We believe in</h2>} />
+            </div>
             <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full">
               <div className="item text-center w-1/3">
                 <div className="item-image h-14 flex items-center justify-center">

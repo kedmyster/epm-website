@@ -168,7 +168,7 @@ function Collaborations({ data }) {
               </div>
             </div>
           </div>
-          <div className="container px-8 py-8">
+          <div className="container px-8 py-8 h-1/3-screen">
             <div className="mb-6">
               <SectionHeader
                 name={<span>Our Development Quality</span>}

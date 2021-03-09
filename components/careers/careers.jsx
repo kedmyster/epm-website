@@ -57,7 +57,7 @@ function CareersComponent({ data, positions = [] }) {
     const positions = document.querySelectorAll(".position");
     const currentPosition = event.target.closest(".position");
 
-    positions.forEach(position => {
+    positions.forEach((position) => {
       const positionDescription = position.querySelector(
         ".position__description"
       );
@@ -172,11 +172,17 @@ function CareersComponent({ data, positions = [] }) {
           data-side-menu-color="dark"
           data-side-menu-visibility="hidden"
         >
-          <div className="positions flex flex-col w-full lg:w-sm-container pt-8 lg:pt-16 mx-8 lg:mx-auto">
+          <div className="positions flex flex-col w-full lg:w-sm-container pt-8 lg:pt-20">
+            <div className="animate opacity-0 mb-6 lg:mb-6 text-center">
+              <SectionHeader
+                name=""
+                title={<h2>Open Positions</h2>}
+              />
+            </div>
             {data.items.map((position, index) => {
               return (
                 <div
-                  className="position animate opacity-0 relative cursor-pointer bg-white transition-colors duration-150 hover:bg-epm-gray-100 px-4 border-t border-epm-gray-300 last:border-b"
+                  className="position animate opacity-0 relative cursor-pointer bg-white transition-colors duration-150 hover:bg-epm-gray-100 px-8 lg:px-4 border-t border-epm-gray-300 last:border-b"
                   key={position.position}
                   onClick={(event) => togglePosition(event)}
                   aria-expanded="false"
@@ -188,7 +194,7 @@ function CareersComponent({ data, positions = [] }) {
                     <div className="position__location text-sm lg:text-lg xl:text-xl font-light w-1/3 lg:w-auto">
                       {position.location}
                     </div>
-                    <div className="icon mx-4 lg:mx-8 flex flex-col justify-start lg:pt-5">
+                    <div className="icon flex flex-col justify-start lg:pt-5">
                       <div className="arrow">
                         {isMobile && (
                           <Image

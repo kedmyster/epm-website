@@ -173,8 +173,8 @@ function OurTreatments({ data }) {
                           <Image
                             src="/img/mobile/treatments/treatment-tube@3x.png"
                             alt="Topical for Psoriasis"
-                            width="79"
-                            height="272"
+                            width="59"
+                            height="204"
                             layout="intrinsic"
                             quality={100}
                           />

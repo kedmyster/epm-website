@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
       tlAnimateContent.fromTo(
         `#${section.id} .animate`,
         {
-          y: "+=5px",
+          y: "+=20px",
           opacity: 0,
         },
         {

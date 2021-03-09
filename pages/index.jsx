@@ -162,7 +162,7 @@ export default function Home() {
             <p>
               The significant clinical value of CBD and cannabinoids has already
               been demonstrated. EPM’s platform represents an exciting
-              therapeutic direction
+              therapeutic direction.
             </p>
           ),
         },
@@ -198,9 +198,8 @@ export default function Home() {
       <Main />
       <Story />
       <Innovation data={page.innovation} />
-      <Treatments data={page.treatments} />
-      <Commitment />
       <Community data={page.community} />
+      <Commitment />
     </>
   );
 }

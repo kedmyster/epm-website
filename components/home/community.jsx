@@ -51,7 +51,7 @@ function Community({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -148,22 +148,25 @@ function Community({ data }) {
         <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
           <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-64 xl:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
-              <SectionHeader
-                name="Our Community"
-                title={<h2>Curing and Treating Patients Worldwide </h2>}
-              />
-            </div>
-            <div className="text animate opacity-0 lg:mt-6">
-              <p>
-                EPM’s vision is to reach patients worldwide and improve their
-                quality of life. Partnering with leading pharmaceutical
-                companies and conducting groundbreaking research, we will turn
-                this vision into a reality.
-              </p>
+              <div className="mb-6">
+                <SectionHeader
+                  name="Our Treatments"
+                  title={<h2>Curing and Treating Patients Worldwide</h2>}
+                />
+              </div>
+              <div className="text animate opacity-0">
+                <p>
+                  EPM is developing cannabinoid acid-based therapeutic solutions
+                  providing alternative treatments for patients. This is the
+                  driving force behind EPM’s research program, which is based on
+                  14 IP protected APIs. Currently EPM’s focus is on three main
+                  therapeutic conditions:
+                </p>
+              </div>
             </div>
             <div className="button animate opacity-0 pt-10">
-              <Button href="#footer" style="dark">
-                Join Us
+              <Button href="/treatments/#main" style="dark">
+                Learn More
               </Button>
             </div>
           </div>
