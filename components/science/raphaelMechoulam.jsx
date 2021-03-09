@@ -44,112 +44,112 @@ function RaphaelMechoulam() {
   const mechoulam = [
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-01@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-01@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-01@2x.jpg",
       },
       label: "Label 1",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-02@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-02@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-02@2x.jpg",
       },
       label: "Label 2",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-03@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-03@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-03@2x.jpg",
       },
       label: "Label 3",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-04@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-04@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-04@2x.jpg",
       },
       label: "Label 4",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-05@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-05@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-05@2x.jpg",
       },
       label: "Label 5",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-06@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-06@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-06@2x.jpg",
       },
       label: "Label 6",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-07@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-07@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-07@2x.jpg",
       },
       label: "Label 7",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-08@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-08@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-08@2x.jpg",
       },
       label: "Label 8",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-09@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-09@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-09@2x.jpg",
       },
       label: "Label 9",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-10@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-10@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-10@2x.jpg",
       },
       label: "Label 10",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-11@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-11@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-11@2x.jpg",
       },
       label: "Label 11",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-12@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-12@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-12@2x.jpg",
       },
       label: "Label 12",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-13@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-13@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-13@2x.jpg",
       },
       label: "Label 13",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-14@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-14@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-14@2x.jpg",
       },
       label: "Label 14",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-15@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-15@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-15@2x.jpg",
       },
       label: "Label 15",
     },
     {
       images: {
-        mobile: "/img/mobile/science/mechoulam/mechoulam-16@3x.jpg",
+        mobile: "/img/mobile/science/mechoulam/mechoulam-16@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-16@2x.jpg",
       },
       label: "Label 16",
@@ -165,13 +165,13 @@ function RaphaelMechoulam() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="items animate opacity-0 animate text-white text-center lg:w-6/12 2xl:w-7/12">
+      <div className="items animate opacity-0 text-white lg:h-screen lg:w-6/12 2xl:w-7/12">
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
           {mechoulam.map((item, index) => {
             return (
               <div className="item cursor-pointer outline-none">
-                <div className="group relative text-center w-full flex flex-wrap content-end lg:content-start lg:transition-all lg:duration-500 lg:ease-in-out 2xl:h-screen">
-                  <div className="w-full h-full lg:h-auto 2xl:h-full flex items-end lg:items-start justify-center lg:justify-end">
+                <div className="group relative text-center w-full flex flex-wrap content-end lg:content-start lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
+                  <div className="w-full h-full flex items-end lg:items-start justify-center lg:justify-start">
                     {isMobile && (
                       <Image
                         loading="eager"
@@ -188,9 +188,8 @@ function RaphaelMechoulam() {
                         loading="eager"
                         src={item.images.desktop}
                         alt="Raphael Mechoulam"
-                        width={1106}
-                        height={960}
-                        objectFit="contain"
+                        layout="fill"
+                        objectFit="cover"
                         quality={100}
                       />
                     )}
