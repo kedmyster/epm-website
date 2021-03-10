@@ -178,12 +178,12 @@ export default function Home() {
         <link
           rel="preload"
           as="image"
-          href="/img/desktop/homepage/hero@2x.jpg"
+          href="/img/desktop/homepage/hero@2x.webp"
         />
         <link
           rel="preload"
           as="image"
-          href="/img/mobile/homepage/hero@2x.jpg"
+          href="/img/mobile/homepage/hero@2x.webp"
         />
         <meta
           name="description"

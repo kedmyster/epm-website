@@ -493,12 +493,12 @@ export default function Treatments() {
         <link
           rel="preload"
           as="image"
-          href="/img/desktop/treatments/hero@2x.jpg"
+          href="/img/desktop/treatments/hero@2x.webp"
         />
         <link
           rel="preload"
           as="image"
-          href="/img/mobile/treatments/hero@2x.jpg"
+          href="/img/mobile/treatments/hero@2x.webp"
         />
         <meta
           name="description"

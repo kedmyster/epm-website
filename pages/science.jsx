@@ -263,9 +263,9 @@ export default function science() {
         <link
           rel="preload"
           as="image"
-          href="/img/desktop/science/hero@2x.jpg"
+          href="/img/desktop/science/hero@2x.webp"
         />
-        <link rel="preload" as="image" href="/img/mobile/science/hero@2x.jpg" />
+        <link rel="preload" as="image" href="/img/mobile/science/hero@2x.webp" />
         <meta
           name="description"
           content="Unlock the medical potential of synthetic cannabinoid acids. Using unique technology, EPM develops a dynamic portfolio of prescription medicines derived from synthetic cannabinoid acids."

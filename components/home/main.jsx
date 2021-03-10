@@ -60,7 +60,7 @@ function Main() {
             <video
               width="375"
               height="812"
-              poster="/img/mobile/homepage/hero@2x.jpg"
+              poster="/img/mobile/homepage/hero@2x.webp"
               className="inset-0 w-full h-screen object-cover"
               autoPlay
               playsInline
@@ -82,7 +82,7 @@ function Main() {
             <video
               width="1920"
               height="1080"
-              poster="/img/desktop/homepage/hero@2x.jpg"
+              poster="/img/desktop/homepage/hero@2x.webp"
               className="inset-0 w-full h-screen object-cover"
               autoPlay
               playsInline

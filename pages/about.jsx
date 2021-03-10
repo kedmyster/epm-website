@@ -378,8 +378,8 @@ export default function About() {
       <Head>
         <title>About - EPM</title>
         <link rel="icon" href="/favicon.svg" />
-        <link rel="preload" as="image" href="/img/desktop/about/hero@2x.jpg" />
-        <link rel="preload" as="image" href="/img/mobile/about/hero@3x.jpg" />
+        <link rel="preload" as="image" href="/img/desktop/about/hero@2x.webp" />
+        <link rel="preload" as="image" href="/img/mobile/about/hero@2x.webp" />
         <meta
           name="description"
           content="EPM is a patient focused Pharmaceutical Group developing prescription medicine derived from synthetic cannabinoid acids to address unmet patient needs."
