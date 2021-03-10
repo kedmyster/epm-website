@@ -110,10 +110,14 @@ function MyApp({ Component, pageProps }) {
       sections.forEach((section) => {
         utils.animateSectionContent(section);
       });
-
-      utils.animateSectionSnapping();
     });
   }, []);
+
+  useEffect(() => {
+    if (isDesktop || isTablet) {
+      utils.animateSectionSnapping();
+    }
+  }, [isDesktop, isTablet]);
 
   return (
     <div className="app">

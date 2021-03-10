@@ -47,7 +47,7 @@ function Pipeline() {
                     src="/img/mobile/science/pipeline@2x.jpg"
                     alt="Our Pipeline - Future Products and Development"
                     width={375}
-                    height={327}
+                    height={401}
                     layout="intrinsic"
                     quality={100}
                     className="w-full h-full"

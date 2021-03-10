@@ -38,7 +38,7 @@ function Commitment() {
     >
       {isMobile && (
         <div>
-          <div className="items relative text-white bg-gray-300 w-full text-center flex flex-col items-center h-2/3-screen">
+          <div className="items relative text-white bg-gray-300 w-full text-center flex flex-col justify-center items-center h-2/3-screen">
             <div className="absolute w-full h-full">
               <Image
                 src="/img/mobile/homepage/our-commitment/our-commitment@2x.jpg"
@@ -49,8 +49,8 @@ function Commitment() {
               />
             </div>
             <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
-            <div className="animate opacity-0 text-white flex-grow pt-8">
-              <SectionHeader name="" title={<h2> We believe in</h2>} />
+            <div className="animate opacity-0 text-white pt-8">
+              <SectionHeader name="" title={<h2>Our Goals</h2>} />
             </div>
             <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full">
               <div className="item text-center w-1/3">

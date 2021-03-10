@@ -55,19 +55,6 @@ section.section.main {
   }
 }
 
-/* @media (min-width: 1024px) {
-  html {
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-  }
-
-  .section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-} */
-
 a {
   color: inherit;
   text-decoration: none;
@@ -87,7 +74,7 @@ a {
 }
 
 .side-menu .slide .slide__label {
-  @apply ml-10 opacity-0 text-white;
+  @apply ml-10 opacity-0 text-white leading-none;
 }
 
 /* =================== */
