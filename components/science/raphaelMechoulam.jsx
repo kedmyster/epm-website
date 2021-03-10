@@ -47,112 +47,112 @@ function RaphaelMechoulam() {
         mobile: "/img/mobile/science/mechoulam/mechoulam-01@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-01@2x.jpg",
       },
-      label: "Label 1",
+      label: "The Godfather of Cannabis Science",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-02@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-02@2x.jpg",
       },
-      label: "Label 2",
+      label: "",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-03@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-03@2x.jpg",
       },
-      label: "Label 3",
+      label: "",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-04@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-04@2x.jpg",
       },
-      label: "Label 4",
+      label: "",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-05@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-05@2x.jpg",
       },
-      label: "Label 5",
+      label: "Born in Sofia, Bulgaria, 1930",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-06@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-06@2x.jpg",
       },
-      label: "Label 6",
+      label: "Received Ph.D. from Weizmann Institute, Rehovot, 1958",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-07@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-07@2x.jpg",
       },
-      label: "Label 7",
+      label: "Acquired first batch of cannabis for research, 1963",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-08@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-08@2x.jpg",
       },
-      label: "Label 8",
+      label: "Rector of the Hebrew University of Jerusalem, 1979-1982",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-09@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-09@2x.jpg",
       },
-      label: "Label 9",
+      label: "CBD structure, 1963",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-10@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-10@2x.jpg",
       },
-      label: "Label 10",
+      label: "Isolates THC in cannabis, 1964",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-11@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-11@2x.jpg",
       },
-      label: "Label 11",
+      label: "Discovery of the endogenous cannabinoids, 1992 and 1995",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-12@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-12@2x.jpg",
       },
-      label: "Label 12",
+      label: "Academic honors",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-13@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-13@2x.jpg",
       },
-      label: "Label 13",
+      label: "Research on stable cannabinoid acids, 2016",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-14@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-14@2x.jpg",
       },
-      label: "Label 14",
+      label: "Unlocks true potential of cannabinoid acids, 2019",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-15@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-15@2x.jpg",
       },
-      label: "Label 15",
+      label: "",
     },
     {
       images: {
         mobile: "/img/mobile/science/mechoulam/mechoulam-16@2x.jpg",
         desktop: "/img/desktop/science/mechoulam/mechoulam-16@2x.jpg",
       },
-      label: "Label 16",
+      label: "",
     },
   ];
 
@@ -171,12 +171,12 @@ function RaphaelMechoulam() {
             return (
               <div className="item cursor-pointer outline-none">
                 <div className="group relative text-center w-full flex flex-wrap content-end lg:content-start lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
-                  <div className="w-full h-full flex items-end lg:items-start justify-center lg:justify-start">
+                  <div className="w-full h-full flex items-end lg:items-start justify-center lg:justify-start bg-epm-gray-100">
                     {isMobile && (
                       <Image
                         loading="eager"
                         src={item.images.mobile}
-                        alt="Raphael Mechoulam"
+                        alt={item.label}
                         width={452}
                         height={601}
                         objectFit="cover"
@@ -187,9 +187,9 @@ function RaphaelMechoulam() {
                       <Image
                         loading="eager"
                         src={item.images.desktop}
-                        alt="Raphael Mechoulam"
+                        alt={item.label}
                         layout="fill"
-                        objectFit="cover"
+                        objectFit="contain"
                         quality={100}
                       />
                     )}

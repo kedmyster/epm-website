@@ -116,6 +116,7 @@ function Main() {
         <a
           href="#story"
           onClick={scrollToContent}
+          alt="Current Developments"
           className="transition-opacity duration-150 hover:opacity-70"
         >
           <Image src="/img/icons/arrow_down.svg" width="28" height="16" loading="eager" />

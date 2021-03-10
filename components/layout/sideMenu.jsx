@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { gsap } from "gsap";
 
+// import { GSDevTools } from "gsap/dist/GSDevTools";
+// gsap.registerPlugin(GSDevTools);
+
 const THEME_LIGHT = "light";
 const THEME_DARK = "dark";
 const VISIBILITY_VISIBLE = "visible";
 const VISIBILITY_HIDDEN = "hidden";
+
 
 function SideMenu() {
   const animateSideMenuHover = (sideMenu, section, menuItem, pill, label) => {
@@ -35,9 +39,10 @@ function SideMenu() {
         tlSideMenuHover.to(
           pill,
           {
-            width: '1.9375rem',
+            width: "1.9375rem",
             backgroundColor: "#FFD534",
             duration: 0.1,
+            onComplete: () => console.log("Hey")
           },
           "side-menu-hover"
         );
@@ -50,6 +55,7 @@ function SideMenu() {
             opacity: 1,
             color: "#FFFFFF",
             duration: 0.1,
+            onComplete: () => console.log("mouseenter-tlSideMenuHover-label")
           },
           "side-menu-hover"
         );
@@ -60,6 +66,7 @@ function SideMenu() {
             opacity: 1,
             color: "#636466",
             duration: 0.1,
+            onComplete: () => console.log("mouseenter-tlSideMenuHover-label")
           },
           "side-menu-hover"
         );
@@ -77,14 +84,14 @@ function SideMenu() {
       const label = current.querySelector(".slide__label");
 
       if (active !== current) {
-
         if (theme === THEME_LIGHT) {
           tlSideMenuHover.to(
             pill,
             {
-              width: '0.5625rem',
+              width: "0.5625rem",
               backgroundColor: "#FFFFFF",
               duration: 0.1,
+              onComplete: () => console.log("mouseleave-tlSideMenuHover-pill")
             },
             "side-menu-hover"
           );
@@ -92,9 +99,10 @@ function SideMenu() {
           tlSideMenuHover.to(
             pill,
             {
-              width: '0.5625rem',
+              width: "0.5625rem",
               backgroundColor: "#636466",
               duration: 0.1,
+              onComplete: () => console.log("mouseleave-tlSideMenuHover-pill")
             },
             "side-menu-hover"
           );
@@ -106,6 +114,7 @@ function SideMenu() {
         {
           opacity: 0,
           duration: 0.1,
+          onComplete: () => console.log("mouseleave-tlSideMenuHover-label")
         },
         "side-menu-hover"
       );
@@ -131,8 +140,7 @@ function SideMenu() {
 
     const tlSideMenuPills = gsap.timeline({
       paused: true,
-      onStart: () =>
-        menuItem.closest("li").classList.add("active"),
+      onStart: () => menuItem.closest("li").classList.add("active"),
       onReverseComplete: () =>
         menuItem.closest("li").classList.remove("active"),
       scrollTrigger: {
@@ -150,6 +158,7 @@ function SideMenu() {
           opacity: 0,
           delay: 1.5,
           duration: 0.1,
+          onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
         });
       },
       scrollTrigger: {
@@ -179,10 +188,10 @@ function SideMenu() {
           opacity: 1,
           color: "#FFFFFF",
           duration: 0.1,
+          onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
         },
         `side-menu-${section.id}`
       );
-      
     } else if (theme === THEME_DARK) {
       tlSideMenuLabels.to(
         label,
@@ -190,6 +199,7 @@ function SideMenu() {
           opacity: 1,
           color: "#636466",
           duration: 0.1,
+          onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
         },
         `side-menu-${section.id}`
       );
@@ -202,21 +212,23 @@ function SideMenu() {
           fill: "#ffd534",
           opacity: 1,
           duration: 0.1,
+          onComplete: () => console.log("Hey")
         },
         `logo-${section.id}`
       );
 
-      logoText.forEach(item => {
+      logoText.forEach((item) => {
         tlLogo.to(
           item,
           {
             fill: "#a9acb0",
             opacity: 1,
             duration: 0.1,
+            onComplete: () => console.log("Hey")
           },
           `logo-${section.id}`
         );
-      })
+      });
     } else if (logoTheme === THEME_DARK) {
       tlLogo.to(
         logoIcon,
@@ -224,21 +236,23 @@ function SideMenu() {
           fill: "#636466",
           opacity: 0.5,
           duration: 0.1,
+          onComplete: () => console.log("Hey")
         },
         `logo-${section.id}`
       );
 
-      logoText.forEach(item => {
+      logoText.forEach((item) => {
         tlLogo.to(
           item,
           {
             fill: "#636466",
             opacity: 1,
             duration: 0.1,
+            onComplete: () => console.log("Hey")
           },
           `logo-${section.id}`
         );
-      })
+      });
     }
 
     tlSideMenuPills.add(`side-menu-${section.id}`);
@@ -252,8 +266,9 @@ function SideMenu() {
           itemPill,
           {
             backgroundColor: "#FFD534",
-            width: '1.9375rem',
+            width: "1.9375rem",
             duration: 0.1,
+            onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
           },
           `side-menu-${section.id}`
         );
@@ -264,6 +279,7 @@ function SideMenu() {
             {
               backgroundColor: "#FFFFFF",
               duration: 0.1,
+              onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
             },
             `side-menu-${section.id}`
           );
@@ -273,6 +289,7 @@ function SideMenu() {
             {
               backgroundColor: "#636466",
               duration: 0.1,
+              onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
             },
             `side-menu-${section.id}`
           );
@@ -305,6 +322,7 @@ function SideMenu() {
       tlSideMenuVisibility.to(sideMenu, {
         opacity: 0,
         duration: 0.1,
+        onComplete: () => console.log("Hey")
       });
     }
   };
@@ -329,13 +347,7 @@ function SideMenu() {
           const pill = menuItem.querySelector(".slide__pill");
           const label = menuItem.querySelector(".slide__label");
 
-          utils.animateSideMenuHover(
-            sideMenu,
-            section,
-            menuItem,
-            pill,
-            label
-          );
+          utils.animateSideMenuHover(sideMenu, section, menuItem, pill, label);
           utils.animateSideMenuActiveState(
             sideMenu,
             section,
@@ -351,6 +363,8 @@ function SideMenu() {
             label
           );
         }
+
+        // GSDevTools.create();
       });
     }, 1500);
   }, []);
@@ -390,7 +404,7 @@ function SideMenu() {
                   );
                 } else {
                   return (
-                    <li className="menu-item hidden">
+                    <li className="menu-item hidden" key={section.id}>
                       <div className="slide">
                         <a href={`#${section.id}`}></a>
                       </div>

@@ -38,7 +38,7 @@ export default function About() {
               <p className="mb-4">
                 {" "}
                 Prior to that, Mr. Gangolli served 11 years as president and
-                executive committee member of Allergen North America r He has
+                executive committee member of Allergen North America He has
                 over 40 years of experience in the pharmaceutical sector in
                 senior executive positions and extensive U.S. commercialization
                 experience.

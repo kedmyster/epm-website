@@ -47,14 +47,18 @@ function MyApp({ Component, pageProps }) {
   };
 
   const animateSectionSnapping = () => {
-    const instance = new PanelSnap({
-      container: document.body,
-      panelSelector: '.section',
-      directionThreshold: 50,
-      delay: 0,
-      duration: 150,
-      easing: function(t) { return t },
-    });
+    try {
+      const instance = new PanelSnap({
+        container: document.body,
+        panelSelector: '.section',
+        directionThreshold: window.innerHeight / 5 ,
+        delay: 0,
+        duration: 150,
+        easing: function(t) { return t },
+      });
+    } catch(ex) {
+      // 
+    }
   }
 
   const utils = {

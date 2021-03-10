@@ -483,14 +483,14 @@ function Header() {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   className="top"
-                  d="M4 6h16M4"
+                  d="M4 6h16"
                 />
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   className="middle"
-                  d="M4 12h16M4"
+                  d="M4 12h16"
                 />
                 <path
                   strokeLinecap="round"

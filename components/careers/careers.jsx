@@ -157,6 +157,7 @@ function CareersComponent({ data, positions = [] }) {
                 src="/img/icons/arrow_down_dark.svg"
                 width="28"
                 height="16"
+                alt="Open Positions"
                 loading="eager"
               />
             </a>

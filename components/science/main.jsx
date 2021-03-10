@@ -113,6 +113,7 @@ function Main() {
         <a
           href="#our-science"
           onClick={scrollToContent}
+          alt="Our Science"
           className="transition-opacity duration-150 hover:opacity-70"
         >
           <Image src="/img/icons/arrow_down.svg" width="28" height="16" loading="eager" />
