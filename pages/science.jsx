@@ -22,7 +22,7 @@ export default function science() {
     ourScience: {
       slides: [
         {
-          name: "Yossi Tam",
+          name: "Joseph Tam",
           images: {
             mobile: "/img/mobile/science/our-science/thumb-01@2x.jpg",
             desktop: "/img/desktop/science/our-science/thumb-01@2x.jpg",

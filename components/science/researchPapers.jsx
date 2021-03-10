@@ -161,7 +161,7 @@ function ResearchPapers({ data }) {
             <Slider {...SLIDER_RESEARCH_PAPERS_CONFIG}>
               {data.slides.map((slide) => {
                 return (
-                  <div className="item">
+                  <div className="item" key={slide.title}>
                     <div className="relative text-center w-full h-2/3-screen lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
                       <div className="container mx-auto px-16 py-8 lg:flex lg:flex-row lg:space-x-20 z-10">
                         <div className="item__title font-title text-2xl uppercase pb-5">
@@ -241,7 +241,7 @@ function ResearchPapers({ data }) {
                 {data.slides.map((slide, index) => {
                   return (
                     <div
-                      key={"Depression"}
+                      key={slide.title}
                       className="item lg:w-1/3 p-4 relative cursor-pointer"
                       onMouseEnter={() => showMore(index)}
                       onClick={(event) => togglePaper(event, slide)}

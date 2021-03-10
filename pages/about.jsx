@@ -323,7 +323,7 @@ export default function About() {
           },
         },
         {
-          name: "Prof. Yossi Tam",
+          name: "Prof. Joseph Tam",
           role: (
             <span>
               Head of Metabolic Disorders Research,
@@ -386,7 +386,7 @@ export default function About() {
         />
         <meta
           name="keywords"
-          content="Synthetic, Cannabinoid acids, Patient-focused, Prof. Raphael Mechoula, Prof. Dan Peer, Prof. Yossi Tam, Julian Gangolli, Roberto Gonzalez, Reshef Swisa, Dr. Peter Welburn, Dr. Thilo Bayrhoffer, Ron Sharhabani, Rotem Sher, help people live a life of higher quality"
+          content="Synthetic, Cannabinoid acids, Patient-focused, Prof. Raphael Mechoula, Prof. Dan Peer, Prof. Joseph Tam, Julian Gangolli, Roberto Gonzalez, Reshef Swisa, Dr. Peter Welburn, Dr. Thilo Bayrhoffer, Ron Sharhabani, Rotem Sher, help people live a life of higher quality"
         />
       </Head>
 

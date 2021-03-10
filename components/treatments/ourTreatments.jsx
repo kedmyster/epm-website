@@ -268,6 +268,7 @@ function OurTreatments({ data }) {
           return (
             <section
               id={slide.id}
+              key={slide.id}
               className="section treatments relative w-full"
               data-side-menu-label={slide.label}
               data-side-menu-color="dark"

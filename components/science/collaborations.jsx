@@ -82,7 +82,7 @@ function Collaborations({ data }) {
                 <div className="logos flex flex-wrap">
                   {data.commercial.slides.map((slide, index) => {
                     return (
-                      <div className="logo relative w-1/2 mb-12">
+                      <div className="logo relative w-1/2 mb-12" key={slide.title}>
                         <a
                           href={slide.url}
                           target="_blank"
@@ -148,7 +148,7 @@ function Collaborations({ data }) {
                 <div className="logos flex flex-wrap">
                   {data.academy.slides.map((slide, index) => {
                     return (
-                      <div className="logo relative w-1/2 mb-12">
+                      <div className="logo relative w-1/2 mb-12" key={slide.title}>
                         <a
                           href={slide.url}
                           target="_blank"
@@ -210,7 +210,7 @@ function Collaborations({ data }) {
                     <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.commercial.slides.map((slide, index) => {
                         return (
-                          <div className="logo flex items-center justify-center">
+                          <div className="logo flex items-center justify-center" key={slide.title}>
                             <a
                               href={slide.url}
                               target="_blank"
@@ -249,7 +249,7 @@ function Collaborations({ data }) {
                     <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.academy.slides.map((slide, index) => {
                         return (
-                          <div className="logo flex items-center justify-center">
+                          <div className="logo flex items-center justify-center" key={slide.title}>
                             <a
                               href={slide.url}
                               target="_blank"
@@ -312,7 +312,7 @@ function Collaborations({ data }) {
                 <p className="lg:text-epm-base">
                   EPM’s pre-clinical pharmacology studies are being conducted by
                   top researchers: Prof. Dan Peer (Tel Aviv University), Prof.
-                  Yossi Tam (Hebrew University), and Prof. Marc Brown
+                  Joseph Tam (Hebrew University), and Prof. Marc Brown
                   (MedPharm), amongst others. The animal studies cover a wide
                   range of disease areas, including: Inflammatory Skin Diseases,
                   Metabolic Diseases, Osteoarthritis and joint pain, and
