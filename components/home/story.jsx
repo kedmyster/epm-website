@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { gsap } from "gsap";
 import Button from "../shared/Button";
 import SectionHeader from "../shared/SectionHeader";
 
@@ -40,6 +39,7 @@ function Story() {
         <div className="absolute w-full h-full">
           {isMobile && (
             <Image
+              loading="eager"
               src="/img/mobile/homepage/our-story@2x.jpg"
               alt="Patient-focused Pharmaceutical Group"
               layout="fill"
@@ -49,6 +49,7 @@ function Story() {
           )}
           {(isTablet || isDesktop) && (
             <Image
+              loading="eager"
               src="/img/desktop/homepage/our-story@2x.jpg"
               alt="Patient-focused Pharmaceutical Group"
               layout="fill"
