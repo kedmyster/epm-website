@@ -11,19 +11,6 @@ html {
   height: stretch;
 }
 
-@media (min-width: 1024px) {
-  html.support-native-scroll-snapping {
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
-  }
-
-  html.support-native-scroll-snapping .section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-}
-
 @media (min-width: 1024px) and (max-height: 640px) {
   html {
     font-size: 12px;
