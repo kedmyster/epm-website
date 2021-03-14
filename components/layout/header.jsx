@@ -332,7 +332,7 @@ function Header() {
                     </li>
                     <li className="">
                       <a
-                        href="/about/#scientific-advisory-board"
+                        href="/about/#advisory-board"
                         className=""
                         onClick={(event) => goToSection(event)}
                       >
@@ -607,10 +607,10 @@ function Header() {
                   </li>
                   <li className="text-sm my-2">
                     <a
-                      href="/about/#scientific-advisory-board"
+                      href="/about/#advisory-board"
                       onClick={(event) => goToSection(event)}
                     >
-                      Scientific Advisory Board
+                      Advisory Board
                     </a>
                   </li>
                 </ul>
