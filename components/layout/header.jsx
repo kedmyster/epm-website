@@ -336,7 +336,7 @@ function Header() {
                         className=""
                         onClick={(event) => goToSection(event)}
                       >
-                        Scientific Advisory Board
+                        Advisory Board
                       </a>
                     </li>
                   </ul>
