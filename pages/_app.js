@@ -47,23 +47,24 @@ function MyApp({ Component, pageProps }) {
   };
 
   const animateSectionSnapping = () => {
-    try {
-      const instance = new PanelSnap({
-        container: document.body,
-        panelSelector: '.section',
-        directionThreshold: window.innerHeight / 5 ,
-        delay: 0,
-        duration: 150,
-        easing: function(t) { return t },
-      });
-    } catch(ex) {
-      // 
-    }
-  }
+    const htmlNode = document.querySelector("html");
 
-  const utils = {
-    animateSectionContent,
-    animateSectionSnapping,
+    if (htmlNode.classList.contains("support-custom-scroll-snapping")) {
+      try {
+        const instance = new PanelSnap({
+          container: document.body,
+          panelSelector: ".section",
+          directionThreshold: window.innerHeight / 5,
+          delay: 0,
+          duration: 150,
+          easing: function (t) {
+            return t;
+          },
+        });
+      } catch (ex) {
+        //
+      }
+    }
   };
 
   useEffect(() => {
@@ -71,7 +72,7 @@ function MyApp({ Component, pageProps }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -83,31 +84,65 @@ function MyApp({ Component, pageProps }) {
   }, [windowWidth]);
 
   useEffect(() => {
+    const platform = (navigator && navigator.platform || '').toLowerCase();
+    if (/win/.test(platform)) {
+      document
+        .querySelector("html")
+        .classList.add("support-custom-scroll-snapping");
+      document
+        .querySelector("html")
+        .classList.remove("support-native-scroll-snapping");
+    } else {
+      document
+        .querySelector("html")
+        .classList.add("support-native-scroll-snapping");
+      document
+        .querySelector("html")
+        .classList.remove("support-custom-scroll-snapping");
+    }
+  }, []);
+
+  useEffect(() => {
     const tl = gsap.timeline();
 
     setTimeout(() => {
       tl.add("layout");
 
-      tl.fromTo(".header:not(.header--fixed)", {
-        opacity: 0,
-      }, {
-        opacity: 1,
-        duration: 0.1
-      }, "layout");
-  
-      tl.fromTo(".side-menu", {
-        opacity: 0,
-      }, {
-        opacity: 1,
-        duration: 0.1
-      }, "layout");
-  
-      tl.fromTo(".social-media", {
-        opacity: 0,
-      }, {
-        opacity: 1,
-        duration: 0.1
-      }, "layout");
+      tl.fromTo(
+        ".header:not(.header--fixed)",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.1,
+        },
+        "layout"
+      );
+
+      tl.fromTo(
+        ".side-menu",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.1,
+        },
+        "layout"
+      );
+
+      tl.fromTo(
+        ".social-media",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.1,
+        },
+        "layout"
+      );
 
       const sections = Array.from(document.querySelectorAll(".section"));
 
@@ -123,13 +158,18 @@ function MyApp({ Component, pageProps }) {
     }
   }, [isDesktop, isTablet]);
 
+  const utils = {
+    animateSectionContent,
+    animateSectionSnapping,
+  };
+
   return (
     <div className="app">
-      <Header/>
+      <Header />
       <Component {...pageProps} />
-      {(isTablet|| isDesktop) && <SideMenu/>}
-      {(isTablet|| isDesktop) && <SocialMedia/>}
-      <Footer/>
+      {(isTablet || isDesktop) && <SideMenu />}
+      {(isTablet || isDesktop) && <SocialMedia />}
+      <Footer />
     </div>
   );
 }
