@@ -9,6 +9,11 @@
   },
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
+    "@sanity/client": "^2.2.6",
+    "@sentry/browser": "^6.2.2",
+    "@sentry/integrations": "^6.2.2",
+    "@sentry/node": "^6.2.2",
+    "@sentry/webpack-plugin": "^1.14.2",
     "classnames": "^2.2.6",
     "gsap": "npm:@gsap/shockingly@^3.6.0",
     "lodash.throttle": "^4.1.1",
