@@ -74,8 +74,8 @@ function Collaborations({ data }) {
               />
             </div>
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
-            <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full lg:h-auto flex lg:block flex-wrap content-center">
-              <div className="commercial lg:w-1/2">
+            <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
+              <div className="commercial w-full lg:w-1/2">
                 <div className="font-title animate opacity-0 text-white uppercase text-2xl mb-16 relative">
                   Commercial
                 </div>
@@ -141,7 +141,7 @@ function Collaborations({ data }) {
             </div>
             <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
             <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
-              <div className="academy lg:w-1/2">
+              <div className="academy w-full lg:w-1/2">
                 <div className="font-title animate opacity-0 text-white uppercase text-2xl mb-16 relative">
                   Academy
                 </div>
@@ -324,7 +324,7 @@ function Collaborations({ data }) {
           </div>
 
           <div className="lg:h-1/3-screen">
-            <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
                   name={

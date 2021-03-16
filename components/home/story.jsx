@@ -35,7 +35,7 @@ function Story() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="flex flex-wrap content-end h-screen">
+      <div className="flex flex-wrap content-end md:content-start lg:content-end h-screen">
         <div className="absolute w-full h-full">
           {isMobile && (
             <Image
@@ -62,12 +62,12 @@ function Story() {
           <SectionHeader
             name={<span>Our Story</span>}
             title={
-              <h2 className="pb-52 lg:pb-0">
+              <h2 className="pb-52 md:pb-6 lg:pb-0">
                 Patient-focused Pharmaceutical Group
               </h2>
             }
           />
-          <div className="animate opacity-0 text lg:w-105 lg:mx-auto">
+          <div className="animate opacity-0 text md:w-105 md:mx-auto">
             <p className="lg:text-epm-base lg:mt-6">
               EPM is developing prescription medicine based on novel discoveries
               of synthetic cannabinoid acids to address unmet patient needs.

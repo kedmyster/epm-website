@@ -102,7 +102,7 @@ function Main() {
           )}
         </div>
         {/*<div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>*/}
-        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 lg:w-full">
+        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 w-full">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
               Medicine to All

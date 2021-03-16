@@ -7,24 +7,34 @@ import { gsap } from "gsap";
 function CareersComponent({ data, positions = [] }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
+  const [isTabletPortrait, setIsTabletPortrait] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     if (windowWidth >= 1280) {
       setIsMobile(false);
+      setIsTabletPortrait(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >= 1024) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
+      setIsTabletPortrait(false);
       setIsTablet(true);
+      setIsDesktop(false);
+    } else if (windowWidth >=768) {
+      setIsMobile(false);
+      setIsTabletPortrait(true);
+      setIsTablet(false);
       setIsDesktop(false);
     } else {
       setIsMobile(true);
+      setIsTabletPortrait(false);
       setIsTablet(false);
       setIsDesktop(false);
     }
   }, [windowWidth]);
+
 
   useEffect(() => {
     document.body.dataset.headerTheme = "dark";
@@ -92,7 +102,7 @@ function CareersComponent({ data, positions = [] }) {
         data-header-menu-visibility="hidden"
       >
         <div className="animate opacity-0 absolute w-full h-full">
-          {isMobile && (
+          {(isMobile) && (
             <Image
               loading="eager"
               src="/img/mobile/careers/careers@2x.jpg"
@@ -102,7 +112,7 @@ function CareersComponent({ data, positions = [] }) {
               quality={100}
             />
           )}
-          {(isTablet || isDesktop) && (
+          {(isTabletPortrait || isTablet || isDesktop) && (
             <Image
               loading="eager"
               src="/img/desktop/careers/careers@2x.jpg"
@@ -113,7 +123,7 @@ function CareersComponent({ data, positions = [] }) {
             />
           )}
         </div>
-        <div className="relative lg:w-sm-container mx-auto px-8 py-8 mt-8 lg:mt-0 lg:flex lg:flex-col lg:justify-center">
+        <div className="relative lg:w-sm-container mx-auto px-8 py-8 mt-8 md:mt-0 md:flex md:flex-col md:justify-center">
           <div className="mb-6 lg:mb-0 ">
             <SectionHeader
               name="Our Opportunities"
@@ -197,7 +207,7 @@ function CareersComponent({ data, positions = [] }) {
                     </div>
                     <div className="icon flex flex-col justify-start lg:pt-5">
                       <div className="arrow">
-                        {isMobile && (
+                        {(isMobile || isTabletPortrait) && (
                           <Image
                             src="/img/icons/arrow_down_dark.svg"
                             alt={position.position}

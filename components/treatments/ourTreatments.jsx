@@ -230,8 +230,8 @@ function OurTreatments({ data }) {
               </div>
             </div>
           </div>
-          <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-            <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+          <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+            <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
                 <SectionHeader
                   name="Our treatments"
@@ -400,8 +400,8 @@ function OurTreatments({ data }) {
                     )}
                   </div>
                 </div>
-                <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-                  <div className="container lg:px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+                <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+                  <div className="container lg:px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
                     <div className="px-8 lg:px-0 mb-6 lg:mb-0">
                       <SectionHeader
                         name={slide.name}

@@ -121,7 +121,7 @@ function Innovation({ data }) {
                         <div className="item__title font-light font-title text-2xl uppercase pb-5">
                           {slide.title}
                         </div>
-                        <div className="item__text font-light text-sm h-14">
+                        <div className="item__text font-light text-sm h-14 md:w-101 md:mx-auto">
                           {slide.text}
                         </div>
                       </div>
@@ -215,7 +215,7 @@ function Innovation({ data }) {
             </div>
 
             <div className="lg:h-1/3-screen">
-              <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
+              <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
                     name={<span>Our Innovation</span>}

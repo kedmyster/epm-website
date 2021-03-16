@@ -282,7 +282,7 @@ function ResearchPapers({ data }) {
                     className="w-full h-2/3-screen"
                   />
                 </div>
-                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
+                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
                   <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
                     <div className="lg:text-epm-base text-epm-gray-500">
                       EPM-301 Therapeutic Effect on
@@ -307,7 +307,7 @@ function ResearchPapers({ data }) {
             </div>
           </div>
           <div className="h-1/3-screen">
-            <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
                   name={<span>Our Innovation</span>}

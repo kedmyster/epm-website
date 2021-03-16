@@ -170,7 +170,7 @@ function MyApp({ Component, pageProps, err }) {
     <div className="app">
       <Header />
       <Component {...pageProps} err={err}/>
-      {(isTablet || isDesktop) && <SideMenu />}
+      {(isDesktop) && <SideMenu />}
       {(isTablet || isDesktop) && <SocialMedia />}
       <Footer />
     </div>

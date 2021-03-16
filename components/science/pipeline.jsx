@@ -9,20 +9,29 @@ import Button from "../shared/Button";
 function Pipeline() {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
+  const [isTabletPortrait, setIsTabletPortrait] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     if (windowWidth >= 1280) {
       setIsMobile(false);
+      setIsTabletPortrait(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >= 1024) {
+    } else if (windowWidth >=1024) {
       setIsMobile(false);
+      setIsTabletPortrait(false);
       setIsTablet(true);
+      setIsDesktop(false);
+    } else if (windowWidth >=768) {
+      setIsMobile(false);
+      setIsTabletPortrait(true);
+      setIsTablet(false);
       setIsDesktop(false);
     } else {
       setIsMobile(true);
+      setIsTabletPortrait(false);
       setIsTablet(false);
       setIsDesktop(false);
     }
@@ -38,10 +47,10 @@ function Pipeline() {
       data-header-menu-visibility="visible"
     >
       <div className="flex flex-wrap lg:flex-row-reverse lg:h-screen">
-        <div className="relative mx-auto lg:flex-grow lg:h-full w-full lg:w-6/12 2xl:w-7/12">
-          <div className="lg:flex lg:flex-wrap lg:h-full">
-            <div className="relative lg:flex-grow lg:w-6/12 2xl:w-7/12">
-              <div className="image animate opacity-0 mx-auto text-center lg:h-screen lg:pb-5">
+        <div className="relative mx-auto md:flex-grow md:h-full w-full lg:w-6/12 2xl:w-7/12">
+          <div className="md:flex md:flex-wrap md:h-full">
+            <div className="relative lg:flex-grow md:w-full lg:w-6/12 2xl:w-7/12">
+              <div className="image animate opacity-0 mx-auto text-center md:h-2/3-screen lg:h-screen lg:pb-5">
                 {isMobile && (
                   <Image
                     src="/img/mobile/science/pipeline@2x.jpg"
@@ -53,7 +62,7 @@ function Pipeline() {
                     className="w-full h-full"
                   />
                 )}
-                {(isTablet || isDesktop) && (
+                {(isTabletPortrait || isTablet || isDesktop) && (
                   <Image
                     src="/img/desktop/science/pipeline@2x.jpg"
                     alt="Our Pipeline - Future Products and Development"
@@ -67,8 +76,8 @@ function Pipeline() {
             </div>
           </div>
         </div>
-        <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:border-t lg:border-epm-gray-300lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
+        <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:border-t lg:border-epm-gray-300lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+          <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
             <div className="">
               <SectionHeader
                 name={<span>Our Innovation</span>}

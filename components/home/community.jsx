@@ -127,7 +127,7 @@ function Community({ data }) {
                           />
                         )}
                       </div>
-                      <div className=" lg:h-40 xl:h-48 2xl:h-40">
+                      <div className=" md:h-36 lg:h-40 xl:h-48 2xl:h-40">
                         <div className="quote text-xl lg:text-lg 2xl:text-xl font-light italic xl:px-6 pb-6 text-left">
                           {slide.quote}
                         </div>
@@ -145,8 +145,8 @@ function Community({ data }) {
             })}
           </Slider>
         </div>
-        <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-64 xl:w-80 2xl:w-96">
+        <div className="lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
               <div className="mb-6">
                 <SectionHeader

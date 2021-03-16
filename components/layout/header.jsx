@@ -238,7 +238,7 @@ function Header() {
     <>
       <header className="header bg-transparent py-4 lg:py-6 top-0 absolute w-full">
         <div div className="mx-auto px-8 flex flex-row items-center relative ">
-          <div className="logo flex-grow lg:flex-grow-0 lg:fixed z-50">
+          <div className="logo flex-grow xl:flex-grow-0 xl:fixed z-50">
             <a
               href="/"
               className="transition-opacity duration-150 hover:opacity-70"
@@ -295,7 +295,7 @@ function Header() {
               )}
             </a>
           </div>
-          <div className="desktop-menu hidden lg:block flex-grow text-center lg:ml-32">
+          <div className="desktop-menu hidden xl:block flex-grow text-center xl:ml-32">
             <nav role="navigation">
               <ul>
                 <li className="menu-item menu-item--about inline-block pr-12 py-1 relative">
@@ -448,7 +448,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="desktop-menu hidden lg:block">
+          <div className="desktop-menu hidden xl:block">
             <nav role="navigation">
               <ul className="font-title">
                 <li className="menu-item menu-item--careers inline-block pr-12 py-1 relative">
@@ -464,7 +464,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="menu-button lg:hidden relative z-50">
+          <div className="menu-button xl:hidden relative z-50">
             <button
               type="button"
               onClick={(event) => toggleMenu(event)}
@@ -521,7 +521,7 @@ function Header() {
                 />
               </a>
             </div>
-            <div className="menu-button lg:hidden">
+            <div className="menu-button">
               <button
                 type="button"
                 onClick={(event) => toggleMenu(event)}
@@ -565,7 +565,7 @@ function Header() {
 
       <div
         id="menu"
-        className="menu mobile-menu fixed inset-x-0 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15"
+        className="menu mobile-menu fixed inset-x-0 lg:inset-x-auto lg:inset-y-0 lg:top-0 lg:right-0 lg:w-96 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15 lg:mt-20"
       >
         <div div className="container mx-auto p-8 relative">
           <nav role="navigation">

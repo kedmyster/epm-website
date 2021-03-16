@@ -82,8 +82,8 @@ function Leadership({ leaders = [] }) {
             data-side-menu-visibility="visible"
             data-header-menu-visibility="visible"
           >
-            <div className="lg:flex-grow lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-              <div className="container mx-auto lg:mx-0 px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 lg:top-0">
+            <div className="lg:flex-grow lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+              <div className="container mx-auto lg:mx-0 px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:top-0">
                 <div className="">
                   <SectionHeader
                     name="Our Team"
