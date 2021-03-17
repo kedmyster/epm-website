@@ -7,11 +7,13 @@ import Pipeline from "../components/science/pipeline";
 import Collaborations from "../components/science/collaborations";
 import ResearchPapers from "../components/science/researchPapers";
 import RaphaelMechoulam from "../components/science/raphaelMechoulam";
+import client from "../client";
+import { getSectionDataByName } from "../utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function science() {
+function Science() {
   useEffect(() => {
     document
       .querySelector(".menu-item--science")
@@ -286,3 +288,15 @@ export default function science() {
     </>
   );
 }
+
+Science.getInitialProps = async function (context) {
+  const { slug = "" } = context.query;
+  return await client.fetch(
+    `
+    *[_type == "science"][0]
+  `,
+    { slug }
+  );
+};
+
+export default Science;

@@ -4,11 +4,13 @@ import Main from "../components/about/main";
 import OurStory from "../components/about/ourStory";
 import FoundingEPM from "../components/about/foundingEPM";
 import Leadership from "../components/about/leadership";
+import client from "../client";
+import { getSectionDataByName } from "../utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function About() {
+function About(data) {
   useEffect(() => {
     document
       .querySelector(".menu-item--about")
@@ -426,3 +428,15 @@ export default function About() {
     </>
   );
 }
+
+About.getInitialProps = async function (context) {
+  const { slug = "" } = context.query;
+  return await client.fetch(
+    `
+    *[_type == "about"][0]
+  `,
+    { slug }
+  );
+};
+
+export default About;

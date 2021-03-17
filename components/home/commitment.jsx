@@ -4,8 +4,11 @@ import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+const BlockContent = require("@sanity/block-content-to-react");
+import { urlFor } from "../../utils";
 
-function Commitment() {
+function Commitment({ data }) {
+  console.log(data);
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -31,7 +34,7 @@ function Commitment() {
     <section
       id="commitment"
       className="section commitment"
-      data-side-menu-label="Our commitment"
+      data-side-menu-label={data.name}
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -42,7 +45,7 @@ function Commitment() {
             <div className="absolute w-full h-full">
               <Image
                 src="/img/mobile/homepage/our-commitment/our-commitment@2x.jpg"
-                alt="Developing Safer Treatments"
+                alt={data.title}
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -50,7 +53,7 @@ function Commitment() {
             </div>
             <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
             <div className="animate opacity-0 text-white pt-8">
-              <SectionHeader name="" title={<h2>Our Goals</h2>} />
+              <SectionHeader name="" title={<h2>{data.title}</h2>} />
             </div>
             <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full">
               <div className="item text-center w-1/3">
@@ -98,19 +101,12 @@ function Commitment() {
             <div className="container mx-auto px-8 py-8">
               <div className="mb-6">
                 <SectionHeader
-                  name="Our Commitment"
-                  title={<h2>Developing Safer Treatments</h2>}
+                  name={data.name}
+                  title={<h2>{data.title}</h2>}
                 />
               </div>
               <div className="text lg:w-103">
-                <p>
-                  EPM is committed to developing a series of new medicinal
-                  solutions based on cannabinoid acids. We believe that
-                  providing alternative and better treatments to a wide range of
-                  patients is our mission, and that cannabinoid acid-based
-                  treatments are the healthful alternative to existing products
-                  in the market.
-                </p>
+                <BlockContent blocks={data.content} />,
               </div>
               <div className="button pt-10">
                 <Button href="/science/#main" style="dark">
@@ -127,7 +123,7 @@ function Commitment() {
           <div className="absolute w-full h-full">
             <Image
               src="/img/desktop/homepage/our-commitment/our-commitment@2x.jpg"
-              alt="Developing Safer Treatments"
+              alt={data.title}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -135,10 +131,7 @@ function Commitment() {
           </div>
           <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
           <div className="container relative mx-auto px-8 pt-8 text-center">
-            <SectionHeader
-              name="Our Commitment"
-              title={<h2>Developing Safer Treatments</h2>}
-            />
+            <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
           <div className="animate opacity-0 container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto space-x-10">
             <div className="item w-1/3 text-center">
@@ -206,17 +199,11 @@ function Commitment() {
           </div>
           <div className="container relative mx-auto text-center px-8 py-8">
             <div className="text animate opacity-0 font-light mx-auto lg:w-105">
-              <p>
-                EPM is committed to developing a series of new medicinal
-                solutions based on cannabinoid acids. We believe that providing
-                alternative and better treatments to a wide range of patients is
-                our mission, and that cannabinoid acid-based treatments are the
-                healthful alternative to existing products in the market.
-              </p>
+              <BlockContent blocks={data.content} />
             </div>
             <div className="button animate opacity-0 pt-10">
               <Button href="/science/#main" style="light">
-                Learn More
+                {data.button}
               </Button>
             </div>
           </div>

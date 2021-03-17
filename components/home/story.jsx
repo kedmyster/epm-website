@@ -4,7 +4,8 @@ import { useWindowWidth } from "@react-hook/window-size/throttled";
 import Button from "../shared/Button";
 import SectionHeader from "../shared/SectionHeader";
 
-function Story() {
+function Story(data) {
+  console.log("story", data);
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);

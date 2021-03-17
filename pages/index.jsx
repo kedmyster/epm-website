@@ -2,14 +2,15 @@ import Head from "next/head";
 import Main from "../components/home/main";
 import Story from "../components/home/story";
 import Innovation from "../components/home/innovation";
-import Treatments from "../components/home/treatments";
 import Commitment from "../components/home/commitment";
 import Community from "../components/home/community";
+import client from "../client";
+import { getSectionDataByName } from "../utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function Home() {
+function Home(data) {
   const page = {
     innovation: {
       slides: [
@@ -191,15 +192,27 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Unlock the potential, Novel therapeutics, Synthetic, Cannabinoid acids, Patient-focused, Pharmaceutical Group, prescription medicine, Lab-made, FDA Guidelines, alternative treatments, Minimal side effects, Alternative to steroids, Affordable Drugs Psoriasis, IBD, ARDS, Curing, Treating, community, Endless Potenital Molecules, Minimal side effects, Alternative to steroids, Affordable Drugs, new medicinal solutions "
+          content="Unlock the potential, Novel therapeutics, Synthetic, Cannabinoid acids, Patient-focused, Pharmaceutical Group, prescription medicine, Lab-made, FDA Guidelines, alternative treatments, Minimal side effects, Alternative to steroids, Affordable Drugs Psoriasis, IBD, ARDS, Curing, Treating, community, Endless Potenital Molecules, Minimal side effects, Alternative to steroids, Affordable Drugs, new medicinal solutions"
         />
       </Head>
 
-      <Main />
-      <Story />
+      <Main data={getSectionDataByName(data, "hero")}/>
+      <Story data={getSectionDataByName(data, "homepage__story")}/>
       <Innovation data={page.innovation} />
       <Community data={page.community} />
-      <Commitment />
+      <Commitment data={getSectionDataByName(data, "homepage__commitment")} />
     </>
   );
 }
+
+Home.getInitialProps = async function (context) {
+  const { slug = "" } = context.query;
+  return await client.fetch(
+    `
+    *[_type == "homepage"][0]
+  `,
+    { slug }
+  );
+};
+
+export default Home;
