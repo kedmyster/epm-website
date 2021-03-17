@@ -28,7 +28,7 @@ function Header() {
   }, [windowWidth]);
 
   useEffect(() => {
-    if (isMobile) {
+    if (isMobile || isTablet) {
       document.body.addEventListener("click", (event) => {
         if (!event.target.closest(".mobile-menu")) {
           const menu = document.querySelector("#menu");
@@ -75,7 +75,7 @@ function Header() {
         }, 250)
       );
     }
-  }, [isMobile]);
+  }, [isMobile, isTablet]);
 
   const openFixedMenu = (event) => {
     const header = document.querySelector(".header.header--fixed");
@@ -92,7 +92,7 @@ function Header() {
         },
         {
           opacity: "1",
-          zIndex: "11",
+          zIndex: "51",
           translateY: "0",
           duration: 0.15,
         }
@@ -167,8 +167,6 @@ function Header() {
         x: "-=2",
         scaleX: 1,
       });
-
-      closeFixedMenu(event);
     }
   };
 
@@ -237,7 +235,7 @@ function Header() {
   return (
     <>
       <header className="header bg-transparent py-4 lg:py-6 top-0 absolute w-full">
-        <div div className="mx-auto px-8 flex flex-row items-center relative ">
+        <div div className="mx-auto px-8 flex flex-row items-center relative">
           <div className="logo flex-grow xl:flex-grow-0 xl:fixed z-50">
             <a
               href="/"
@@ -464,7 +462,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="menu-button xl:hidden relative z-50">
+          <div className="menu-button xl:hidden relative z-[51]">
             <button
               type="button"
               onClick={(event) => toggleMenu(event)}
@@ -505,10 +503,10 @@ function Header() {
         </div>
       </header>
 
-      {isMobile && (
-        <div className="header header--fixed bg-white py-4 lg:py-6 top-0 fixed w-full opacity-0 z-0 shadow-md">
+      {(isMobile || isTablet) && (
+        <div className="header header--fixed bg-white py-4 top-0 fixed w-full opacity-0 z-0 shadow-md">
           <div div className="mx-auto px-8 flex flex-row items-center relative">
-            <div className="logo flex-grow lg:flex-grow-0 lg:fixed">
+            <div className="logo flex-grow">
               <a
                 href="/"
                 className="transition-opacity duration-150 hover:opacity-70"
@@ -565,7 +563,7 @@ function Header() {
 
       <div
         id="menu"
-        className="menu mobile-menu fixed inset-x-0 lg:inset-x-auto lg:inset-y-0 lg:top-0 lg:right-0 lg:w-96 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15 lg:mt-20"
+        className="menu mobile-menu fixed inset-x-0 lg:inset-x-auto lg:inset-y-0 lg:top-0 lg:right-0 lg:w-96 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15 lg:mt-0 lg:pt-16"
       >
         <div div className="container mx-auto p-8 relative">
           <nav role="navigation">
