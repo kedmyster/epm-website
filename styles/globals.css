@@ -9,7 +9,6 @@
   scroll-behavior: smooth;
   overscroll-behavior: contain;
   height: stretch;
-  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -38,6 +37,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   height: 100vh;
   height: stretch;
+  overscroll-behavior: none;
 }
 
 section {
