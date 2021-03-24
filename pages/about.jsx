@@ -99,41 +99,8 @@ export default function About() {
             desktop: "/img/desktop/about/leadership/roberto@2x.jpg",
           },
         },
-        // {
-        //   name: "Prof. Dan Peer",
-        //   role: "",
-        //   text: (
-        //     <div>
-        //       <p className="mb-4">One of Israel’s most renowned scientists.</p>
-        //       <p className="mb-4">
-        //         {" "}
-        //         Prof. Peer is the Director of the Laboratory of Precision
-        //         NanoMedicine at Tel Aviv University. He is also the VP for R&D
-        //         at Tel Aviv University. Prof. Peer is a world leader in the
-        //         field of nanomedicine. And made pioneering work in the field of
-        //         RNA therapeutics and Vaccines. Prof. Peer was trained at Harvard
-        //         Medical School; Center for Blood Research and Boston Children’s
-        //         Hospital.
-        //       </p>
-        //       <p>
-        //         Prof. Peer received many awards, among them he was awarded the
-        //         innovator award and the breakthrough Award from the Kenneth
-        //         Rainin Foundation on his pioneering work in inflammatory bowel
-        //         diseases (IBD). In addition he was awarded the 1st Untold News
-        //         Award, along with Prof. Rimona Margalit, from Tel Aviv
-        //         University, on the “Cancer Bullet” invention that may change the
-        //         world in Cancer therapy.
-        //       </p>
-        //     </div>
-        //   ),
-        //   image: {
-        //     mobile: "/img/mobile/about/leadership/dan@2x.jpg",
-        //     desktop: "/img/desktop/about/leadership/dan@2x.jpg",
-        //   },
-        // },
       ],
     },
-
     {
       group: "Executive Leadership",
       label: "Executives",
@@ -320,6 +287,44 @@ export default function About() {
           image: {
             mobile: "/img/mobile/about/leadership/raphi@2x.jpg",
             desktop: "/img/desktop/about/leadership/raphi@2x.jpg",
+          },
+        },
+        {
+          name: "Prof. Dan Peer",
+          role: (
+            <span>
+              Head of Inflammatory Research
+              <br />
+              Tel Aviv University
+            </span>
+          ),
+          text: (
+            <div>
+              <p className="mb-4">One of Israel’s most renowned scientists.</p>
+              <p className="mb-4">
+                {" "}
+                Prof. Peer is the Director of the Laboratory of Precision
+                NanoMedicine at Tel Aviv University. He is also the VP for R&D
+                at Tel Aviv University. Prof. Peer is a world leader in the
+                field of nanomedicine. And made pioneering work in the field of
+                RNA therapeutics and Vaccines. Prof. Peer was trained at Harvard
+                Medical School; Center for Blood Research and Boston Children’s
+                Hospital.
+              </p>
+              <p>
+                Prof. Peer received many awards, among them he was awarded the
+                innovator award and the breakthrough Award from the Kenneth
+                Rainin Foundation on his pioneering work in inflammatory bowel
+                diseases (IBD). In addition he was awarded the 1st Untold News
+                Award, along with Prof. Rimona Margalit, from Tel Aviv
+                University, on the “Cancer Bullet” invention that may change the
+                world in Cancer therapy.
+              </p>
+            </div>
+          ),
+          image: {
+            mobile: "/img/mobile/about/leadership/dan@2x.jpg",
+            desktop: "/img/desktop/about/leadership/dan@2x.jpg",
           },
         },
         {
