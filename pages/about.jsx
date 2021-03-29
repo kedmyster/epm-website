@@ -38,9 +38,9 @@ export default function About() {
               <p className="mb-4">
                 {" "}
                 Prior to that, Mr. Gangolli served 11 years as president and
-                executive committee member of Allergen North America He has
-                over 40 years of experience in the pharmaceutical sector in
-                senior executive positions and extensive U.S. commercialization
+                executive committee member of Allergen North America He has over
+                40 years of experience in the pharmaceutical sector in senior
+                executive positions and extensive U.S. commercialization
                 experience.
               </p>
               <p>
@@ -304,12 +304,11 @@ export default function About() {
               <p className="mb-4">
                 {" "}
                 Prof. Peer is the Director of the Laboratory of Precision
-                NanoMedicine at Tel Aviv University. He is also the VP for R&D
-                at Tel Aviv University. Prof. Peer is a world leader in the
-                field of nanomedicine. And made pioneering work in the field of
-                RNA therapeutics and Vaccines. Prof. Peer was trained at Harvard
-                Medical School; Center for Blood Research and Boston Children’s
-                Hospital.
+                NanoMedicine at Tel Aviv University and a world leader in the
+                field of nanomedicine. Prof. Peer made pioneering work in the
+                field of RNA therapeutics and Vaccines. Prof. Peer was trained
+                at Harvard Medical School; Center for Blood Research and Boston
+                Children’s Hospital.
               </p>
               <p>
                 Prof. Peer received many awards, among them he was awarded the
