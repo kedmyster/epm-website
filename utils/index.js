@@ -17,3 +17,7 @@ export function getSectionDataByName(data, name) {
 export function urlFor(source) {
   return builder.image(source);
 }
+
+export function getId(name) {
+  return name.toLowerCase().replace(/ /g, "-");
+};

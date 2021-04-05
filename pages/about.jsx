@@ -5,7 +5,7 @@ import OurStory from "../components/about/ourStory";
 import FoundingEPM from "../components/about/foundingEPM";
 import Leadership from "../components/about/leadership";
 import client from "../client";
-import { getSectionDataByName } from "../utils";
+import { getSectionDataByName, getId } from "../utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,10 +16,6 @@ function About(data) {
       .querySelector(".menu-item--about")
       .classList.add("menu-item--current");
   }, []);
-
-  const getId = (name) => {
-    return name.toLowerCase().replace(/ /g, "-");
-  };
 
   const [leaders, setLeaders] = useState([
     {
@@ -407,24 +403,24 @@ function About(data) {
   return (
     <>
       <Head>
-        <title>About - EPM</title>
+        <title>{data.title}</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="preload" as="image" href="/img/desktop/about/hero@2x.webp" />
         <link rel="preload" as="image" href="/img/mobile/about/hero@2x.webp" />
         <meta
           name="description"
-          content="EPM is a patient focused Pharmaceutical Group developing prescription medicine derived from synthetic cannabinoid acids to address unmet patient needs."
+          content={data.description}
         />
         <meta
           name="keywords"
-          content="Synthetic, Cannabinoid acids, Patient-focused, Prof. Raphael Mechoula, Prof. Dan Peer, Prof. Joseph Tam, Julian Gangolli, Roberto Gonzalez, Reshef Swisa, Dr. Peter Welburn, Dr. Thilo Bayrhoffer, Ron Sharhabani, Rotem Sher, help people live a life of higher quality"
+          content={data.keywords}
         />
       </Head>
 
-      <Main />
-      <OurStory />
-      <FoundingEPM />
-      <Leadership leaders={leaders} />
+      <Main data={getSectionDataByName(data, "hero")}/>
+      <OurStory data={getSectionDataByName(data, "about__story")}/>
+      <FoundingEPM data={getSectionDataByName(data, "about__founding")}/>
+      <Leadership data={getSectionDataByName(data, "about__leadership")} leaders={leaders} />
     </>
   );
 }

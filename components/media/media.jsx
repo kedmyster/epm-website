@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
-import classNames from "classnames";
 import Image from "next/image";
-import Slider from "react-slick";
-import { gsap } from "gsap";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../client";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import {
-  SliderCustomPreviousArrow,
-  SliderCustomNextArrow,
-} from "../shared/carousel";
 import Button from "../shared/Button";
 
 function MediaComponent({ data }) {
+  for (let i = 0; i < data.articles.length; i++) {
+    data.articles[i].images = {
+      logo: useNextSanityImage(client, data.articles[i].logo),
+    };
+  }
+
   const windowWidth = useWindowWidth();
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -22,7 +23,7 @@ function MediaComponent({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -43,18 +44,21 @@ function MediaComponent({ data }) {
     >
       <div className="container lg:w-lg-container mx-auto lg:px-8 pt-16 lg:pt-16 lg:h-screen lg:overflow-y-auto">
         <div className="items lg:pt-8">
-          {data.slides.map((slide, index) => {
+          {data.articles.map((slide, index) => {
             return (
-              <div className="item group animate opacity-0 cursor-pointer border-t last:border-b border-epm-gray-300 h-96 lg:h-auto min-h-full lg:min-h-0 flex lg:block flex-wrap content-center md:justify-center lg:justify-start lg:py-8 lg:px-4 transition-colors duration-150 hover:bg-epm-gray-100" key={slide.name}>
+              <div
+                className="item group animate opacity-0 cursor-pointer border-t last:border-b border-epm-gray-300 h-96 lg:h-auto min-h-full lg:min-h-0 flex lg:block flex-wrap content-center md:justify-center lg:justify-start lg:py-8 lg:px-4 transition-colors duration-150 hover:bg-epm-gray-100"
+                key={slide.name}
+              >
                 <a href={slide.url} target="_blank" rel="noopener noreferrer">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mx-8 lg:mx-0">
                     <div className="item-image lg:w-64 mb-4 lg:mb-0">
                       <div className="w-auto mx-auto lg:mx-0 relative">
                         <Image
-                          src={slide.images.src}
+                          src={slide.images.logo.src}
                           alt={slide.name}
-                          width={slide.images.width}
-                          height={slide.images.height}
+                          width={slide.images.logo.width}
+                          height={slide.images.logo.height}
                           layout="responsive"
                           quality={100}
                           className="max-w-full h-auto"
@@ -65,7 +69,9 @@ function MediaComponent({ data }) {
                       {slide.name}
                     </div>
                     <div className="text-center lg:text-left lg:inline-block lg:w-96 xl:w-105">
-                      <div className="quote lg:text-xl xl:text-2xl mb-4 lg:h-20 xl:h-auto">{slide.quote}</div>
+                      <div className="quote lg:text-xl xl:text-2xl mb-4 lg:h-20 xl:h-auto">
+                        {slide.title}
+                      </div>
                       <div className="item__date lg:text-center text-sm text-epm-gray-500 lg:text-base font-title lg:inline-block">
                         {slide.date}
                       </div>
@@ -73,11 +79,11 @@ function MediaComponent({ data }) {
                     <div className="button pt-10 lg:pt-0 lg:inline-block text-center">
                       <Button
                         style="dark"
-                        href={slide.url}
+                        href={slide.button.link}
                         extendedClassNames="group-hover:bg-epm-yellow group-hover:border-epm-yellow"
                         target="_blank"
                       >
-                        Read More
+                        {slide.button.text}
                       </Button>
                     </div>
                   </div>

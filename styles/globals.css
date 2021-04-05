@@ -307,3 +307,12 @@ body[data-header-theme="dark"] .header .menu-button svg {
     @apply h-1/6-screen;
   }
 }
+
+.external-text p,  
+.external-text a {
+  @apply pb-4 lg:pb-8;
+}
+
+.external-text p:last-child {
+  @apply pb-0 lg:pb-0;
+}

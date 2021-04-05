@@ -2,17 +2,15 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Main from "../components/treatments/main";
 import OurTreatments from "../components/treatments/ourTreatments";
+import client from "../client";
+import { getSectionDataByName, getId } from "../utils";
 
-export default function Treatments() {
+function Treatments(data) {
   useEffect(() => {
     document
       .querySelector(".menu-item--treatments")
       .classList.add("menu-item--current");
   }, []);
-
-  const getId = (name) => {
-    return name.toLowerCase().replace(/ /g, "-");
-  };
 
   const page = {
     treatments: {
@@ -488,7 +486,7 @@ export default function Treatments() {
   return (
     <>
       <Head>
-        <title>Treatments - EPM</title>
+        <title>{data.title}</title>
         <link rel="icon" href="/favicon.svg" />
         <link
           rel="preload"
@@ -502,16 +500,28 @@ export default function Treatments() {
         />
         <meta
           name="description"
-          content="EPM is committed to developing a series of new therapeutic solutions based on cannabinoid acids which provide alternative treatments for patients. EPM focuses on three main therapeutic conditions: IBD, psoriasis and ARDS in COVID-19 patients."
+          content={data.description}
         />
         <meta
           name="keywords"
-          content="ARDS, IBD, Psoriasis, IL-10 knock-out mouse, Inflammatory Bowel Disease, Acute Respiratory Distress Syndrome, IV formulation, topical formulation, oral formulation, toxicity, COVID-19, clinical trail"
+          content={data.keywords}
         />
       </Head>
 
-      <Main />
-      <OurTreatments data={page.treatments} />
+      <Main data={getSectionDataByName(data, "hero")} />
+      <OurTreatments data={getSectionDataByName(data, "treatments__ourTreatments")} />
     </>
   );
 }
+
+Treatments.getInitialProps = async function (context) {
+  const { slug = "" } = context.query;
+  return await client.fetch(
+    `
+    *[_type == "treatments"][0]
+  `,
+    { slug }
+  );
+};
+
+export default Treatments;

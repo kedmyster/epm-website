@@ -13,7 +13,7 @@ import { getSectionDataByName } from "../utils";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function Science() {
+function Science(data) {
   useEffect(() => {
     document
       .querySelector(".menu-item--science")
@@ -260,7 +260,7 @@ function Science() {
   return (
     <>
       <Head>
-        <title>Science - EPM</title>
+        <title>{data.title}</title>
         <link rel="icon" href="/favicon.svg" />
         <link
           rel="preload"
@@ -270,21 +270,21 @@ function Science() {
         <link rel="preload" as="image" href="/img/mobile/science/hero@2x.webp" />
         <meta
           name="description"
-          content="Unlock the medical potential of synthetic cannabinoid acids. Using unique technology, EPM develops a dynamic portfolio of prescription medicines derived from synthetic cannabinoid acids."
+          content={data.description}
         />
         <meta
           name="keywords"
-          content="Unlock the medical potential, synthetic cannabinoid acids, Potency, Protection, IP portfolio, similar results to established steroids toxicology, scaleup manufacturing, EPM301, EPM302, EPM303, EPM304, EPM305, EPM306, EPM307, EPM308, EPM309, EPM310, EPM311, EPM312, EPM313, EPM314,  Deperssion, Nausea and Anxiety, neuropathic Pain,The Godfather of Cannabis Science, Prof. Mechoulam Bio, Charles River Laboratories, NCK, MedPharm, Recipharm, Cambrex, GMP batches, Tel Aviv University, Hebrew University, Bar Ilan University, Mcmaster University, Aberdeen university, University of Guelph, product development process"
+          content={data.keywords}
         />
       </Head>
 
-      <Main />
-      <OurScience data={page.ourScience} />
-      <Cannabinoids />
-      <Pipeline />
+      <Main data={getSectionDataByName(data, "hero")}/>
+      <OurScience data={getSectionDataByName(data, "science__ourScience")} />
+      <Cannabinoids data={getSectionDataByName(data, "science__cannabinoids")}/>
+      <Pipeline data={getSectionDataByName(data, "science__pipeline")}/>
       <Collaborations data={page.collaborations} />
-      <ResearchPapers data={page.researchPapers} />
-      <RaphaelMechoulam />
+      <ResearchPapers data={page.researchPapers} data2={getSectionDataByName(data, "science__researchPapers")}/>
+      <RaphaelMechoulam data={page.ourScience} data={getSectionDataByName(data, "science__mechoulam")}/>
     </>
   );
 }

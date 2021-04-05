@@ -20,6 +20,9 @@ process.env.SENTRY_DSN = SENTRY_DSN
 const basePath = ''
 
 module.exports = {
+  images: {
+		domains: ['cdn.sanity.io']
+	},
   productionBrowserSourceMaps: true,
   env: {
     // Make the COMMIT_SHA available to the client so that Sentry events can be

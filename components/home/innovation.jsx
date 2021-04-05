@@ -3,6 +3,8 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from 'next-sanity-image';
+import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import {
@@ -10,7 +12,22 @@ import {
   SliderCustomNextArrow,
 } from "../shared/carousel";
 
+const BlockContent = require("@sanity/block-content-to-react");
+
 function Innovation({ data }) {
+  for (let i = 0; i < data.bullets.length; i++) {
+    data.bullets[i].images = {
+      mobile: useNextSanityImage(
+        client,
+        data.bullets[i].mobile_image
+      ),
+      desktop: useNextSanityImage(
+        client,
+        data.bullets[i].desktop_image
+      ),
+    }
+  }
+
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -93,7 +110,7 @@ function Innovation({ data }) {
     <section
       id="innovation"
       className="section innovation"
-      data-side-menu-label="Our Innovation"
+      data-side-menu-label={data.name}
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -102,14 +119,14 @@ function Innovation({ data }) {
         <div className="">
           <div className="items animate opacity-0 text-white bg-gray-800 text-center h-2/3-screen">
             <Slider {...SLIDER_INNOVATION_CONFIG_MOBILE}>
-              {data.slides.map((slide) => {
+              {data.bullets.map((slide) => {
                 return (
                   <div className="item" key={slide.title}>
                     <div className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
                       <div className="absolute w-full h-full">
                         <Image
+                          src={slide.images.mobile.src}
                           loading="eager"
-                          src={slide.images.mobile}
                           alt={slide.title}
                           layout="fill"
                           objectFit="cover"
@@ -134,21 +151,14 @@ function Innovation({ data }) {
           <div>
             <div className="container mx-auto px-8 py-8">
               <div className="mb-6">
-                <SectionHeader
-                  name="Our Innovation"
-                  title={<h2>Creating Treatments</h2>}
-                />
+                <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               </div>
               <div className="text animate opacity-0 lg:w-103">
-                <p>
-                  EPM’s mission is to develop a wide array of therapeutic
-                  treatments based on synthetic cannabinoid acids, producing
-                  medicinal solutions and treatments like never before.
-                </p>
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
               <div className="button animate opacity-0 pt-10">
                 <Button href="/science/#main" style="dark">
-                  Learn More
+                  {data.button}
                 </Button>
               </div>
             </div>
@@ -165,12 +175,12 @@ function Innovation({ data }) {
                   ref={(slider) => (vm.slider = slider)}
                   {...SLIDER_INNOVATION_CONFIG_DESKTOP}
                 >
-                  {data.slides.map((slide) => {
+                  {data.bullets.map((slide) => {
                     return (
                       <div key={slide.title} className="h-2/3-screen">
                         <Image
+                          src={slide.images.desktop.src}
                           loading="eager"
-                          src={slide.images.desktop}
                           alt={slide.title}
                           layout="fill"
                           objectFit="cover"
@@ -187,7 +197,7 @@ function Innovation({ data }) {
               <div className="relative text-center w-full lg:h-full lg:text-left flex flex-wrap content-end">
                 <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
                 <div className="animate opacity-0 container mx-auto px-8 py-8 lg:w-container lg:text-white lg:flex lg:flex-row lg:space-x-20 z-10">
-                  {data.slides.map((slide, index) => {
+                  {data.bullets.map((slide, index) => {
                     return (
                       <div
                         key={slide.title}
@@ -218,21 +228,17 @@ function Innovation({ data }) {
               <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
-                    name={<span>Our Innovation</span>}
-                    title={<h2>Creating New Treatments</h2>}
+                    name={<span>{data.name}</span>}
+                    title={<h2>{data.title}</h2>}
                   />
                 </div>
 
                 <div className="animate opacity-0 text lg:w-103">
-                  <p>
-                    EPM’s mission is to develop a wide array of therapeutic
-                    treatments based on synthetic cannabinoid acids, producing
-                    medicinal solutions and treatments like never before.
-                  </p>
+                  <BlockContent blocks={data.content} className="external-text" />
                 </div>
                 <div className="button animate opacity-0">
                   <Button href="/science/#main" style="dark">
-                    Learn More
+                    {data.button}
                   </Button>
                 </div>
               </div>

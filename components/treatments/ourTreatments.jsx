@@ -1,11 +1,38 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import classNames from "classnames";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from 'next-sanity-image';
+import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import { getId } from "../../utils";
+
+const BlockContent = require("@sanity/block-content-to-react");
 
 function OurTreatments({ data }) {
+  for (let i = 0; i < data.treatments__sections.length; i++) {
+    data.treatments__sections[i].product.images =  {
+      mobile: useNextSanityImage(
+        client,
+        data.treatments__sections[i].product.mobile__image
+      ),
+      desktop: useNextSanityImage(
+        client,
+        data.treatments__sections[i].product.desktop__image
+      ),
+    };
+
+    for (let j = 0; j < data.treatments__sections[i].product.icons.length; j++) {
+      data.treatments__sections[i].product.icons[j].image = useNextSanityImage(
+        client,
+        data.treatments__sections[i].product.icons[j].icon
+      );
+    }
+  }
+
+  console.log(data);
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -128,104 +155,45 @@ function OurTreatments({ data }) {
             <div className="flex lg:flex-col content-center justify-center lg:justify-end lg:w-full lg:max-w-4xl lg:h-full lg:pb-24">
               <div className="animate opacity-0 container mx-auto lg:px-8">
                 <div className="flex flex-row justify-center">
-                  <div className="item flex flex-col w-1/3 items-center justify-between">
-                    <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a
-                        href="#inflammatory-bowel-disease"
-                        className="leading-0"
-                      >
-                        {isMobile && (
-                          <Image
-                            src="/img/mobile/treatments/treatment-pills@3x.png"
-                            alt="Oral for IBD (Crohn’s & Colitis)"
-                            width="223"
-                            height="280"
-                            layout="intrinsic"
-                            quality={100}
-                          />
-                        )}
-                        {(isTablet || isDesktop) && (
-                          <Image
-                            src="/img/desktop/treatments/treatments-pills@2x.png"
-                            alt="Oral for IBD (Crohn’s & Colitis)"
-                            width="281"
-                            height="326"
-                            layout="intrinsic"
-                            quality={100}
-                          />
-                        )}
-                      </a>
-                    </div>
-                    <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
-                      Oral for IBD{" "}
-                      <span className="block normal-case text-epm-gray-500 font-light">
-                        (Crohn’s & Colitis)
-                      </span>
-                    </div>
-                  </div>
-                  <div className="item flex flex-col w-1/3 items-center justify-between">
-                    <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a
-                        href="#psoriasis"
-                        className="leading-0"
-                      >
-                        {isMobile && (
-                          <Image
-                            src="/img/mobile/treatments/treatment-tube@3x.png"
-                            alt="Topical for Psoriasis"
-                            width="59"
-                            height="204"
-                            layout="intrinsic"
-                            quality={100}
-                          />
-                        )}
-                        {(isTablet || isDesktop) && (
-                          <Image
-                            src="/img/desktop/treatments/treatments-tube@2x.png"
-                            alt="Topical for Psoriasis"
-                            width="113"
-                            height="386"
-                            layout="intrinsic"
-                            quality={100}
-                          />
-                        )}
-                      </a>
-                    </div>
-                    <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 2xl:h-20">
-                      Topical for
-                      <br />
-                      Psoriasis
-                    </div>
-                  </div>
-                  <div className="item flex flex-col w-1/3 items-center justify-between">
-                    <div className="item__image flex justify-center items-end flex-grow mb-6">
-                      <a href="#acute-respiratory-distress-syndrome" className="leading-0">
-                        {isMobile && (
-                          <Image
-                            src="/img/mobile/treatments/treatment-iv@3x.png"
-                            alt="Acute Respiratory Distress Syndrome"
-                            width="192"
-                            height="253"
-                            layout="intrinsic"
-                            quality={100}
-                          />
-                        )}
-                        {(isTablet || isDesktop) && (
-                          <Image
-                            src="/img/desktop/treatments/treatments-iv@2x.png"
-                            alt="Acute Respiratory Distress Syndrome"
-                            width="249"
-                            height="327"
-                            layout="intrinsic"
-                            quality={100}
-                          />
-                        )}
-                      </a>
-                    </div>
-                    <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
-                      Acute Respiratory Distress Syndrome
-                    </div>
-                  </div>
+                  {data.treatments__sections.map((slide) => {
+                    return (
+                      <div className="item flex flex-col w-1/3 items-center justify-between">
+                        <div className="item__image flex justify-center items-end flex-grow mb-6">
+                          <a
+                            href={"#"+getId(slide.title)}
+                            className="leading-0"
+                          >
+                            {isMobile && (
+                              <Image
+                                src={slide.product.images.mobile.src}
+                                alt={slide.title}
+                                width={slide.product.images.mobile.width / 2}
+                                height={slide.product.images.mobile.height / 2}
+                                layout="intrinsic"
+                                quality={100}
+                              />
+                            )}
+                            {(isTablet || isDesktop) && (
+                              <Image
+                                src={slide.product.images.desktop.src}
+                                alt={slide.title}
+                                width={slide.product.images.desktop.width / 3}
+                                height={slide.product.images.desktop.height / 3}
+                                layout="intrinsic"
+                                quality={100}
+                              />
+                            )}
+                          </a>
+                        </div>
+                        <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
+                          {slide.product.name}{" "}
+                          <span className="block normal-case text-epm-gray-500 font-light">
+                            {slide.product.label}
+                          </span>
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -234,22 +202,12 @@ function OurTreatments({ data }) {
             <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
                 <SectionHeader
-                  name="Our treatments"
-                  title={<h2>Creating Better Treatments and Changing Lives</h2>}
+                  name={data.name}
+                  title={<h2>{data.title}</h2>}
                 />
               </div>
               <div className="animate opacity-0 text lg:text-epm-base lg:mt-6 lg:flex-grow">
-                <p>
-                  EPM is committed to developing a series of new therapeutic
-                  solutions based on cannabinoid acids which provide alternative
-                  treatments for patients. This is the driving force behind
-                  EPM’s research program. Although cannabinoid acids are
-                  potential treatments for a wide range of diseases, currently,
-                  EPM focuses on three main therapeutic conditions based on its
-                  lead molecule EPM301: Inflammatory Bowel Disease, inflammatory
-                  skin disease (psoriasis) and Acute Respiratory Distress
-                  Syndrome in COVID-19 patients.
-                </p>
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
               {(isTablet || isDesktop) && (
                 <div>
@@ -264,13 +222,13 @@ function OurTreatments({ data }) {
       </section>
 
       <div className="divide-y divide-epm-gray-300">
-        {data.slides.map((slide) => {
+        {data.treatments__sections.map((slide) => {
           return (
             <section
-              id={slide.id}
-              key={slide.id}
+              id={getId(slide.title)}
+              key={getId(slide.name)}
               className="section treatments relative w-full"
-              data-side-menu-label={slide.label}
+              data-side-menu-label={slide.title}
               data-side-menu-color="dark"
               data-side-menu-visibility="visible"
               data-header-menu-visibility="visible"
@@ -280,114 +238,57 @@ function OurTreatments({ data }) {
                   <div className="flex lg:flex-col content-center justify-center lg:w-full lg:max-w-4xl lg:justify-end lg:h-full lg:pb-24">
                     <div className="animate opacity-0 container mx-auto lg:px-8 relative z-0">
                       <div className="flex flex-row justify-center">
-                        <div className="item flex flex-col w-1/3 items-center justify-between">
-                          <div className="item__image flex justify-center items-end flex-grow"></div>
-                          <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
-                            {isMobile && (
-                              <Image
-                                src={slide.icons.icon1.mobile.url}
-                                width={slide.icons.icon1.mobile.width}
-                                height={slide.icons.icon1.mobile.height}
-                                alt={slide.name}
-                              />
-                            )}
-                            {(isTablet || isDesktop) && (
-                              <Image
-                                src={slide.icons.icon1.desktop.url}
-                                width={slide.icons.icon1.desktop.width}
-                                height={slide.icons.icon1.desktop.height}
-                                alt={slide.name}
-                              />
-                            )}
-                          </div>
-                          <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
-                            {slide.icons.icon1.label}
-                            {slide.icons.icon1.subLabel && (
-                              <span className="block normal-case text-epm-gray-500 font-light">
-                                {slide.icons.icon1.subLabel}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                        <div className="item flex flex-col w-1/3 items-center justify-between">
-                          <div className="item__image flex justify-center items-end flex-grow mb-6 -mx-6 lg:-mx-10">
-                            {isMobile && (
-                              <Image
-                                src={slide.images.mobile.url}
-                                alt={slide.name}
-                                width={slide.images.mobile.width}
-                                height={slide.images.mobile.height}
-                                layout="intrinsic"
-                                quality={100}
-                              />
-                            )}
-                            {(isDesktop) && (
-                              <Image
-                                src={slide.images.desktop.url}
-                                alt={slide.name}
-                                width={slide.images.desktop.width}
-                                height={slide.images.desktop.height}
-                                objectFit="cover"
-                                quality={100}
-                              />
-                            )}
-                          </div>
-                          <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
-                            {isMobile && (
-                              <Image
-                                src={slide.icons.icon2.mobile.url}
-                                width={slide.icons.icon2.mobile.width}
-                                height={slide.icons.icon2.mobile.height}
-                                alt={slide.name}
-                              />
-                            )}
-                            {(isTablet || isDesktop) && (
-                              <Image
-                                src={slide.icons.icon2.desktop.url}
-                                width={slide.icons.icon2.desktop.width}
-                                height={slide.icons.icon2.desktop.height}
-                                alt={slide.name}
-                              />
-                            )}
-                          </div>
-                          <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 w-full px-4 py-3 h-14 2xl:h-20">
-                            {slide.icons.icon2.label}
-                            {slide.icons.icon2.subLabel && (
-                              <span className="block normal-case text-epm-gray-500 font-light">
-                                {slide.icons.icon2.subLabel}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                        <div className="item flex flex-col w-1/3 items-center justify-between">
-                          <div className="item__image flex justify-center items-end flex-grow"></div>
-                          <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
-                            {isMobile && (
-                              <Image
-                                src={slide.icons.icon3.mobile.url}
-                                width={slide.icons.icon3.mobile.width}
-                                height={slide.icons.icon3.mobile.height}
-                                alt={slide.name}
-                              />
-                            )}
-                            {(isTablet || isDesktop) && (
-                              <Image
-                                src={slide.icons.icon3.desktop.url}
-                                width={slide.icons.icon3.desktop.width}
-                                height={slide.icons.icon3.desktop.height}
-                                alt={slide.name}
-                              />
-                            )}
-                          </div>
-                          <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
-                            {slide.icons.icon3.label}
-                            {slide.icons.icon3.subLabel && (
-                              <span className="block normal-case text-epm-gray-500 font-light">
-                                {slide.icons.icon3.subLabel}
-                              </span>
-                            )}
-                          </div>
-                        </div>
+                        {slide.product.icons.map((icon, index) => {
+                          return (
+                            <div className="item flex flex-col w-1/3 items-center justify-between" key={getId(icon.name)}>
+                              <div className={classNames("item__image flex justify-center items-end flex-grow mb-6", { "mb-6 -mx-6 lg:-mx-10": index === 1})}>
+                                {index === 1 && (
+                                  <a
+                                    href={"#"+getId(slide.title)}
+                                    className="leading-0"
+                                  >
+                                    {isMobile && (
+                                      <Image
+                                        src={slide.product.images.mobile.src}
+                                        alt={slide.title}
+                                        width={slide.product.images.mobile.width / 2}
+                                        height={slide.product.images.mobile.height / 2}
+                                        layout="intrinsic"
+                                        quality={100}
+                                      />
+                                    )}
+                                    {(isTablet || isDesktop) && (
+                                      <Image
+                                        src={slide.product.images.desktop.src}
+                                        alt={slide.title}
+                                        width={slide.product.images.desktop.width / 2.5}
+                                        height={slide.product.images.desktop.height / 2.5}
+                                        layout="intrinsic"
+                                        quality={100}
+                                      />
+                                    )}
+                                  </a>
+                                )}
+                              </div>
+                              <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
+                                <Image
+                                  src={icon.image.src}
+                                  width={icon.image.width}
+                                  height={icon.image.height}
+                                  alt={icon.name}
+                                />
+                              </div>
+                              <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
+                                {icon.name}
+                                {icon.label && (
+                                  <span className="block normal-case text-epm-gray-500 font-light">
+                                    {icon.label}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          )
+                        })}
                       </div>
                     </div>
                     {(isTablet || isDesktop) && (
@@ -395,7 +296,7 @@ function OurTreatments({ data }) {
                         className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
                         aria-expanded="false"
                       >
-                        {slide.moreInfo}
+                        <BlockContent blocks={slide.product.info} className="external-text" />
                       </div>
                     )}
                   </div>
@@ -409,31 +310,16 @@ function OurTreatments({ data }) {
                       />
                     </div>
                     <div className="animate opacity-0 px-8 lg:px-0 lg:mt-6 lg:flex-grow">
-                      <div className="formulation lg:text-epm-base flex-grow pb-4 lg:pb-8">
-                        <p className="lg:text-epm-base font-bold">
-                          Selected formulation
-                        </p>
-                        <p className="lg:text-epm-base">{slide.formulation}</p>
+                      <div className="lg:text-epm-base flex-grow pb-4 lg:pb-8">
+                        <BlockContent blocks={slide.content} className="external-text" />
                       </div>
-                      <div className="timeline lg:text-epm-base pb-4 lg:pb-8">
-                        <p className="lg:text-epm-base font-bold">
-                          Expected clinical trail timeline
-                        </p>
-                        <p>{slide.timeline}</p>
-                      </div>
-                      <div className="solution lg:text-epm-base">
-                        <p className="lg:text-epm-base font-bold">
-                          EPM's potential solution
-                        </p>
-                        <p>{slide.solution}</p>
-                      </div>
-                      <div className="button pt-10 lg:inline-block text-center">
+                      <div className="button lg:inline-block text-center">
                         <Button
                           style="dark"
                           href="#"
                           onClick={(event) => toggleLearnMore(event)}
                         >
-                          Learn More
+                          {slide.button}
                         </Button>
                       </div>
                     </div>
@@ -452,7 +338,7 @@ function OurTreatments({ data }) {
                           </Button>
                         </div>
 
-                        {slide.moreInfo}
+                        <BlockContent blocks={slide.product.info} className="external-text" />
 
                         <div className="pt-8">
                           <Button

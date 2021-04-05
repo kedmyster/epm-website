@@ -1,10 +1,30 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from 'next-sanity-image';
+import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
+import { getId } from "../../utils";
 
-function Leadership({ leaders = [] }) {
+const BlockContent = require("@sanity/block-content-to-react");
+
+function Leadership({ data, leaders = [] }) {
+  for (let i = 0; i < data.leaders__group.length; i++) {
+    for (let j = 0; j < data.leaders__group[i].leaders.length; j++) {
+      data.leaders__group[i].leaders[j].images =  {
+        mobile: useNextSanityImage(
+          client,
+          data.leaders__group[i].leaders[j].mobile_image
+        ),
+        desktop: useNextSanityImage(
+          client,
+          data.leaders__group[i].leaders[j].desktop_image
+        ),
+      };
+    }
+  }
+
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -71,11 +91,11 @@ function Leadership({ leaders = [] }) {
 
   return (
     <>
-      {leaders.map((group) => {
+      {data.leaders__group.map((group) => {
         return (
           <section
-            id={group.id}
-            key={group.id}
+            id={getId(group.title)}
+            key={getId(group.title)}
             className="section leadership relative w-full flex flex-col lg:flex-row lg:border-b-1 lg:border-epm-gray-300 lg:h-screen min-h-0 lg:min-h-screen"
             data-side-menu-label={group.label}
             data-side-menu-color="dark"
@@ -86,20 +106,22 @@ function Leadership({ leaders = [] }) {
               <div className="container mx-auto lg:mx-0 px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:top-0">
                 <div className="">
                   <SectionHeader
-                    name="Our Team"
-                    title={<h2>{group.group}</h2>}
+                    name={group.name}
+                    title={<h2>{group.title}</h2>}
                   />
                 </div>
                 {(isTablet || isDesktop) && (
                   <div className="animate opacity-0 text lg:text-epm-base lg:mt-6">
-                    <p>{group.text}</p>
+                    <BlockContent
+                      blocks={group.content}
+                    />
                   </div>
                 )}
               </div>
             </div>
             <div className="leaders lg:w-6/12 2xl:w-7/12 lg:flex-shrink-0 lg:h-full">
               <div className="leaders-group relative lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-                {group.people.map((leader) => {
+                {group.leaders.map((leader) => {
                   return (
                     <>
                       <div
@@ -113,7 +135,7 @@ function Leadership({ leaders = [] }) {
                             {isMobile && (
                               <div className="">
                                 <Image
-                                  src={leader.image.mobile}
+                                  src={leader.images.mobile.src}
                                   alt={leader.name}
                                   width={104}
                                   height={104}
@@ -124,7 +146,7 @@ function Leadership({ leaders = [] }) {
                             )}
                             {(isTablet) && (
                               <Image
-                                src={leader.image.desktop}
+                                src={leader.images.desktop.src}
                                 alt={leader.name}
                                 width={134}
                                 height={134}
@@ -134,7 +156,7 @@ function Leadership({ leaders = [] }) {
                             )}
                             {(isDesktop) && (
                               <Image
-                                src={leader.image.desktop}
+                                src={leader.images.desktop.src}
                                 alt={leader.name}
                                 width={157}
                                 height={157}
@@ -157,7 +179,9 @@ function Leadership({ leaders = [] }) {
                             </div>
                             {isDesktop && (
                               <div className="leader__text font-light font-epm-base 2xl:text-lg mt-8 lg:mb-8 lg:w-64 xl:w-78 2xl:w-101 hidden">
-                                {leader.text}
+                                <BlockContent
+                                  blocks={leader.text}
+                                />
                               </div>
                             )}
                           </div>
@@ -188,7 +212,9 @@ function Leadership({ leaders = [] }) {
                         </div>
                         {(isMobile || isTablet) && (
                           <div className="leader__text px-8 pt-4 pb-8 hidden">
-                            {leader.text}
+                            <BlockContent
+                              blocks={leader.text}
+                            />
                           </div>
                         )}
                       </div>

@@ -42,7 +42,7 @@ function SideMenu() {
             width: "1.9375rem",
             backgroundColor: "#FFD534",
             duration: 0.1,
-            onComplete: () => console.log("Hey")
+            // onComplete: () => console.log("Hey")
           },
           "side-menu-hover"
         );
@@ -55,7 +55,7 @@ function SideMenu() {
             opacity: 1,
             color: "#FFFFFF",
             duration: 0.1,
-            onComplete: () => console.log("mouseenter-tlSideMenuHover-label")
+            // onComplete: () => console.log("mouseenter-tlSideMenuHover-label")
           },
           "side-menu-hover"
         );
@@ -66,7 +66,7 @@ function SideMenu() {
             opacity: 1,
             color: "#636466",
             duration: 0.1,
-            onComplete: () => console.log("mouseenter-tlSideMenuHover-label")
+            // onComplete: () => console.log("mouseenter-tlSideMenuHover-label")
           },
           "side-menu-hover"
         );
@@ -91,7 +91,7 @@ function SideMenu() {
               width: "0.5625rem",
               backgroundColor: "#FFFFFF",
               duration: 0.1,
-              onComplete: () => console.log("mouseleave-tlSideMenuHover-pill")
+              // onComplete: () => console.log("mouseleave-tlSideMenuHover-pill")
             },
             "side-menu-hover"
           );
@@ -102,7 +102,7 @@ function SideMenu() {
               width: "0.5625rem",
               backgroundColor: "#636466",
               duration: 0.1,
-              onComplete: () => console.log("mouseleave-tlSideMenuHover-pill")
+              // onComplete: () => console.log("mouseleave-tlSideMenuHover-pill")
             },
             "side-menu-hover"
           );
@@ -114,7 +114,7 @@ function SideMenu() {
         {
           opacity: 0,
           duration: 0.1,
-          onComplete: () => console.log("mouseleave-tlSideMenuHover-label")
+          // onComplete: () => console.log("mouseleave-tlSideMenuHover-label")
         },
         "side-menu-hover"
       );
@@ -158,7 +158,7 @@ function SideMenu() {
           opacity: 0,
           delay: 1.5,
           duration: 0.1,
-          onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
+          // onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
         });
       },
       scrollTrigger: {
@@ -188,7 +188,7 @@ function SideMenu() {
           opacity: 1,
           color: "#FFFFFF",
           duration: 0.1,
-          onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
+          // onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
         },
         `side-menu-${section.id}`
       );
@@ -199,7 +199,7 @@ function SideMenu() {
           opacity: 1,
           color: "#636466",
           duration: 0.1,
-          onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
+          // onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-label")
         },
         `side-menu-${section.id}`
       );
@@ -212,7 +212,7 @@ function SideMenu() {
           fill: "#ffd534",
           opacity: 1,
           duration: 0.1,
-          onComplete: () => console.log("Hey")
+          // onComplete: () => console.log("Hey")
         },
         `logo-${section.id}`
       );
@@ -224,7 +224,7 @@ function SideMenu() {
             fill: "#a9acb0",
             opacity: 1,
             duration: 0.1,
-            onComplete: () => console.log("Hey")
+            // onComplete: () => console.log("Hey")
           },
           `logo-${section.id}`
         );
@@ -236,7 +236,7 @@ function SideMenu() {
           fill: "#636466",
           opacity: 0.5,
           duration: 0.1,
-          onComplete: () => console.log("Hey")
+          // onComplete: () => console.log("Hey")
         },
         `logo-${section.id}`
       );
@@ -248,7 +248,7 @@ function SideMenu() {
             fill: "#636466",
             opacity: 1,
             duration: 0.1,
-            onComplete: () => console.log("Hey")
+            // onComplete: () => console.log("Hey")
           },
           `logo-${section.id}`
         );
@@ -268,7 +268,7 @@ function SideMenu() {
             backgroundColor: "#FFD534",
             width: "1.9375rem",
             duration: 0.1,
-            onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
+            // onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
           },
           `side-menu-${section.id}`
         );
@@ -279,7 +279,7 @@ function SideMenu() {
             {
               backgroundColor: "#FFFFFF",
               duration: 0.1,
-              onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
+              // onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
             },
             `side-menu-${section.id}`
           );
@@ -289,7 +289,7 @@ function SideMenu() {
             {
               backgroundColor: "#636466",
               duration: 0.1,
-              onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
+              // onComplete: () => console.log("animateSideMenuActiveState-tlSideMenuLabels-pill")
             },
             `side-menu-${section.id}`
           );
@@ -322,7 +322,7 @@ function SideMenu() {
       tlSideMenuVisibility.to(sideMenu, {
         opacity: 0,
         duration: 0.1,
-        onComplete: () => console.log("Hey")
+        // onComplete: () => console.log("Hey")
       });
     }
   };

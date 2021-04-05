@@ -174,7 +174,7 @@ function Home(data) {
   return (
     <>
       <Head>
-        <title>EPM - Medicine to All.</title>
+        <title>{data.title}</title>
         <link rel="icon" href="/favicon.svg" />
         <link
           rel="preload"
@@ -188,18 +188,18 @@ function Home(data) {
         />
         <meta
           name="description"
-          content="EPM is leading the way in next-generation cannabinoid acid medicine - unlocking its full potential to address unmet patient and consumer needs."
+          content={data.description}
         />
         <meta
           name="keywords"
-          content="Unlock the potential, Novel therapeutics, Synthetic, Cannabinoid acids, Patient-focused, Pharmaceutical Group, prescription medicine, Lab-made, FDA Guidelines, alternative treatments, Minimal side effects, Alternative to steroids, Affordable Drugs Psoriasis, IBD, ARDS, Curing, Treating, community, Endless Potenital Molecules, Minimal side effects, Alternative to steroids, Affordable Drugs, new medicinal solutions"
+          content={data.keywords}
         />
       </Head>
 
       <Main data={getSectionDataByName(data, "hero")}/>
       <Story data={getSectionDataByName(data, "homepage__story")}/>
-      <Innovation data={page.innovation} />
-      <Community data={page.community} />
+      <Innovation data={getSectionDataByName(data, "homepage__innovation")} />
+      <Community data={getSectionDataByName(data, "homepage__treatments")} />
       <Commitment data={getSectionDataByName(data, "homepage__commitment")} />
     </>
   );
