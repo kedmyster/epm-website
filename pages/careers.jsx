@@ -6,7 +6,6 @@ import client from "../client";
 import { getSectionDataByName } from "../utils";
 
 function Careers(data) {
-  console.log(data);
   useEffect(() => {
     document.body.dataset.headerTheme = "dark";
     document

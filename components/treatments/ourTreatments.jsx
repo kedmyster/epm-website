@@ -32,7 +32,6 @@ function OurTreatments({ data }) {
     }
   }
 
-  console.log(data);
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);

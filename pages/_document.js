@@ -26,7 +26,7 @@ class MyDocument extends Document {
           />
           <script
             src="https://cdn.lr-ingest.io/LogRocket.min.js"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           ></script>
           <script
             dangerouslySetInnerHTML={{

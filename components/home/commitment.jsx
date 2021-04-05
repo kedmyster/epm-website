@@ -11,7 +11,6 @@ import Button from "../shared/Button";
 const BlockContent = require("@sanity/block-content-to-react");
 
 function Commitment({ data }) {
-  console.log(data);
   for (let i = 0; i < data.bullets.length; i++) {
     data.bullets[i].image = useNextSanityImage(
       client,
