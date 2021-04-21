@@ -99,6 +99,31 @@ export default function About() {
             desktop: "/img/desktop/about/leadership/roberto@2x.jpg",
           },
         },
+        {
+          name: "Jaime Rodriguez",
+          role: "", //   VP of Strategy
+          text: (
+            <div>
+              <p className="mb-4">
+                Mr. Rodriguez is a result driven industry agnostic executive
+                with extensive knowledge across multiple geographies. Has proven
+                experience in world class companies as a consultant at Bain &
+                Company and as Chief Strategy Officer in publicly traded
+                organizations.
+              </p>
+              <p>
+                Mr. Rodriguez serves in several Board of Directors and Advisory
+                Committees sharing knowledge with entrepreneurs and businessman.
+                Currently is the General Manager at family office for one of
+                Mexico´s prominent families.
+              </p>
+            </div>
+          ),
+          image: {
+            mobile: "/img/mobile/about/leadership/jaime@2x.jpg",
+            desktop: "/img/desktop/about/leadership/jaime@2x.jpg",
+          },
+        },
       ],
     },
     {
