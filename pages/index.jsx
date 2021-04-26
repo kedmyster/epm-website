@@ -11,166 +11,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Home(data) {
-  const page = {
-    innovation: {
-      slides: [
-        {
-          title: "Lab-Made",
-          text:
-            "Synthesizing and creating consistent cannabinoid methyl-ester based treatments.",
-          images: {
-            mobile: "/img/mobile/homepage/our-innovation/made-in-labs@2x.jpg",
-            desktop: "/img/desktop/homepage/our-innovation/made-in-labs@2x.jpg",
-          },
-        },
-        {
-          title: "FDA Guidelines",
-          text:
-            "Developing prescription medicine under guidelines and FDA approval.",
-          images: {
-            mobile: "/img/mobile/homepage/our-innovation/fda@2x.jpg",
-            desktop: "/img/desktop/homepage/our-innovation/fda@2x.jpg",
-          },
-        },
-        {
-          title: "Collaboration",
-          text:
-            "Researching and developing with leading pharmaceutical contract research organizations around the world.",
-          images: {
-            mobile: "/img/mobile/homepage/our-innovation/collaboration@2x.jpg",
-            desktop:
-              "/img/desktop/homepage/our-innovation/collaboration@2x.jpg",
-          },
-        },
-      ],
-    },
-    treatments: {
-      slides: [
-        {
-          title: "Oral for IBD",
-          tagline: "(Crohn's & Colitis)",
-          images: {
-            mobile: {
-              url: "/img/mobile/treatments/treatment-pills@3x.png",
-              width: 223,
-              height: 280,
-            },
-          },
-        },
-        {
-          title: "Topical for Psoriasis",
-          images: {
-            mobile: {
-              url: "/img/mobile/treatments/treatment-tube@3x.png",
-              width: 79,
-              height: 272,
-            },
-          },
-        },
-        {
-          title: "IV for ARDS",
-          tagline: "(Acute Respiratory Distress Syndrome)",
-          images: {
-            mobile: {
-              url: "/img/mobile/treatments/treatment-iv@3x.png",
-              width: 192,
-              height: 253,
-            },
-          },
-        },
-      ],
-    },
-    community: {
-      slides: [
-        {
-          name: "Maria, 32",
-          role: "Crohn's Disease",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/maria@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/maria@2x.jpg",
-          },
-          quote: (
-            <p>
-              My diagnosis made me miserable. But the promise of EPM’s effective
-              solution gave me hope for a better future.
-            </p>
-          ),
-        },
-        {
-          name: "Linda, 45",
-          role: "Ulcerative Colitis",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/lory@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/lory@2x.jpg",
-          },
-          quote: (
-            <p>
-              I’ve been living with my Colitis for over 6 years, EPM’s discovery
-              can be a real life-changer.
-            </p>
-          ),
-        },
-        {
-          name: "Prof. Raphael Mechoulam",
-          role: "Head of Chemistry Discovery",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/mechoulam@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/mechoulam@2x.jpg",
-          },
-          quote: (
-            <p>
-              Cannabinoid acids are compounds that are much more potent than
-              cannabinoids and have an outstanding therapeutic potential.
-            </p>
-          ),
-        },
-        {
-          name: "George, 73",
-          role: "Psoriasis",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/george@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/george@2x.jpg",
-          },
-          quote: (
-            <p>
-              You constantly wish for health. I hope for medicine with fewer
-              side effects than those I’ve had!
-            </p>
-          ),
-        },
-        // {
-        //   name: "Ryan, 25",
-        //   role: "Ulcerative Colitis",
-        //   images: {
-        //     mobile: "/img/mobile/homepage/our-community/ryan@2x.jpg",
-        //     desktop: "/img/desktop/homepage/our-community/ryan@2x.jpg",
-        //   },
-        //   quote: (
-        //     <p>
-        //       “I’ve been living with my Colitis for over 6 years, EPM’s
-        //       discovery can be a real life-changer. “
-        //     </p>
-        //   ),
-        // },
-        {
-          name: "Julian Gangolli",
-          role: "Chairman of the Board ",
-          images: {
-            mobile: "/img/mobile/homepage/our-community/julian@2x.jpg",
-            desktop: "/img/desktop/homepage/our-community/julian@2x.jpg",
-          },
-          quote: (
-            <p>
-              The significant clinical value of CBD and cannabinoids has already
-              been demonstrated. EPM’s platform represents an exciting
-              therapeutic direction.
-            </p>
-          ),
-        },
-      ],
-    },
-  };
-
   return (
     <>
       <Head>
@@ -186,18 +26,12 @@ function Home(data) {
           as="image"
           href="/img/mobile/homepage/hero@2x.webp"
         />
-        <meta
-          name="description"
-          content={data.description}
-        />
-        <meta
-          name="keywords"
-          content={data.keywords}
-        />
+        <meta name="description" content={data.description} />
+        <meta name="keywords" content={data.keywords} />
       </Head>
 
-      <Main data={getSectionDataByName(data, "hero")}/>
-      <Story data={getSectionDataByName(data, "homepage__story")}/>
+      <Main data={getSectionDataByName(data, "hero")} />
+      <Story data={getSectionDataByName(data, "homepage__story")} />
       <Innovation data={getSectionDataByName(data, "homepage__innovation")} />
       <Community data={getSectionDataByName(data, "homepage__treatments")} />
       <Commitment data={getSectionDataByName(data, "homepage__commitment")} />

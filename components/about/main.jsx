@@ -3,8 +3,7 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 
-
-function Main({data}) {
+function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -15,7 +14,7 @@ function Main({data}) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -119,7 +118,13 @@ function Main({data}) {
           onClick={scrollToContent}
           className="transition-opacity duration-150 hover:opacity-70"
         >
-          <Image src="/img/icons/arrow_down.svg" width="28" height="16" alt="Our Story" loading="eager" />
+          <Image
+            src="/img/icons/arrow_down.svg"
+            width="28"
+            height="16"
+            alt="Our Story"
+            loading="eager"
+          />
         </a>
       </div>
     </section>

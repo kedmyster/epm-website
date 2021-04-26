@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
@@ -9,10 +9,10 @@ import { getId } from "../../utils";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function Leadership({ data, leaders = [] }) {
+function Leadership({ data }) {
   for (let i = 0; i < data.leaders__group.length; i++) {
     for (let j = 0; j < data.leaders__group[i].leaders.length; j++) {
-      data.leaders__group[i].leaders[j].images =  {
+      data.leaders__group[i].leaders[j].images = {
         mobile: useNextSanityImage(
           client,
           data.leaders__group[i].leaders[j].mobile_image
@@ -35,7 +35,7 @@ function Leadership({ data, leaders = [] }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -112,9 +112,7 @@ function Leadership({ data, leaders = [] }) {
                 </div>
                 {(isTablet || isDesktop) && (
                   <div className="animate opacity-0 text lg:text-epm-base lg:mt-6">
-                    <BlockContent
-                      blocks={group.content}
-                    />
+                    <BlockContent blocks={group.content} className="external-text" />
                   </div>
                 )}
               </div>
@@ -144,7 +142,7 @@ function Leadership({ data, leaders = [] }) {
                                 />
                               </div>
                             )}
-                            {(isTablet) && (
+                            {isTablet && (
                               <Image
                                 src={leader.images.desktop.src}
                                 alt={leader.name}
@@ -154,7 +152,7 @@ function Leadership({ data, leaders = [] }) {
                                 quality={100}
                               />
                             )}
-                            {(isDesktop) && (
+                            {isDesktop && (
                               <Image
                                 src={leader.images.desktop.src}
                                 alt={leader.name}
@@ -172,16 +170,14 @@ function Leadership({ data, leaders = [] }) {
                               </div>
                               <div className="leader__role text-xs lg:epm-base font-light">
                                 {leader.role}
-                            </div>
+                              </div>
                               {/*<div className="leader__group text-xxs 2xl:text-base font-light uppercase pt-3">
                                 {group.group}
                               </div>*/}
                             </div>
                             {isDesktop && (
                               <div className="leader__text font-light font-epm-base 2xl:text-lg mt-8 lg:mb-8 lg:w-64 xl:w-78 2xl:w-101 hidden">
-                                <BlockContent
-                                  blocks={leader.text}
-                                />
+                                <BlockContent blocks={leader.text} className="external-text" />
                               </div>
                             )}
                           </div>
@@ -212,9 +208,7 @@ function Leadership({ data, leaders = [] }) {
                         </div>
                         {(isMobile || isTablet) && (
                           <div className="leader__text px-8 pt-4 pb-8 hidden">
-                            <BlockContent
-                              blocks={leader.text}
-                            />
+                            <BlockContent blocks={leader.text} className="external-text" />
                           </div>
                         )}
                       </div>

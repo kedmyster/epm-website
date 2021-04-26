@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 
-function Main({data}) {
+function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -14,7 +14,7 @@ function Main({data}) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -105,7 +105,7 @@ function Main({data}) {
       <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-12 lg:w-full ">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <h1 className="font-title animate opacity-0 text-4xl lg:text-6xl lg:leading-tight tracking-wide">
-           {data.title}
+            {data.title}
           </h1>
         </div>
       </div>
@@ -116,7 +116,12 @@ function Main({data}) {
           alt="Our Science"
           className="transition-opacity duration-150 hover:opacity-70"
         >
-          <Image src="/img/icons/arrow_down.svg" width="28" height="16" loading="eager" />
+          <Image
+            src="/img/icons/arrow_down.svg"
+            width="28"
+            height="16"
+            loading="eager"
+          />
         </a>
       </div>
     </section>

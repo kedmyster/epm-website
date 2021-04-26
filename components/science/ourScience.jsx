@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import { gsap } from "gsap";
 import Button from "../shared/Button";
@@ -18,15 +18,9 @@ const BlockContent = require("@sanity/block-content-to-react");
 function OurScience({ data }) {
   for (let i = 0; i < data.videos.length; i++) {
     for (let j = 0; j < data.videos[i].video.length; j++) {
-      data.videos[i].images =  {
-        mobile: useNextSanityImage(
-          client,
-          data.videos[i].mobile_image
-        ),
-        desktop: useNextSanityImage(
-          client,
-          data.videos[i].desktop_image
-        ),
+      data.videos[i].images = {
+        mobile: useNextSanityImage(client, data.videos[i].mobile_image),
+        desktop: useNextSanityImage(client, data.videos[i].desktop_image),
       };
     }
   }
@@ -42,16 +36,18 @@ function OurScience({ data }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (slick, currentSlide, nextSlide) => {
-      const item = document.querySelector("#our-science .item[aria-expanded='true']");
+      const item = document.querySelector(
+        "#our-science .item[aria-expanded='true']"
+      );
 
       if (item) {
         const video = item.querySelector(".video");
         const button = item.querySelector("a");
-        
+
         if (video.player) {
           video.player.stopVideo();
         }
-  
+
         item.setAttribute("aria-expanded", "false");
         video.classList.add("hidden");
         button.innerText = "Play Video";
@@ -66,7 +62,7 @@ function OurScience({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -93,9 +89,9 @@ function OurScience({ data }) {
   }, []);
 
   useEffect(() => {
-    var tag = document.createElement('script');
+    var tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
+    var firstScriptTag = document.getElementsByTagName("script")[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   }, []);
 
@@ -113,37 +109,37 @@ function OurScience({ data }) {
         video.player.playVideo();
       } else {
         const videoId = video.dataset.videoId;
-        const player  = new YT.Player(video, {
-          height: '100%',
-          width: '100%',
+        const player = new YT.Player(video, {
+          height: "100%",
+          width: "100%",
           videoId,
           events: {
-            'onReady': (event) => {
+            onReady: (event) => {
               event.target.playVideo();
               event.target.h.player = event.target;
             },
-          }
+          },
         });
       }
     } else {
       item.setAttribute("aria-expanded", "false");
       video.classList.add("hidden");
       button.innerText = "Play Video";
-      
+
       if (video.player) {
         video.player.stopVideo();
       } else {
         const videoId = video.dataset.videoId;
-        const player  = new YT.Player(video, {
-          height: '100%',
-          width: '100%',
+        const player = new YT.Player(video, {
+          height: "100%",
+          width: "100%",
           videoId,
           events: {
-            'onReady': (event) => {
+            onReady: (event) => {
               event.target.stopVideo();
               event.target.h.player = event.target;
             },
-          }
+          },
         });
       }
     }
@@ -163,38 +159,48 @@ function OurScience({ data }) {
           <Slider {...SLIDER_SOLUTION_CONFIG}>
             {data.videos.map((slide) => {
               return (
-                <div className="item relative lg:flex-grow lg:h-screen" key={slide.name} aria-expanded="false">
-                  {<div className="image w-full h-2/3-screen">
-                    {isMobile && (
-                      <Image
-                        loading="eager"
-                        src={slide.images.mobile.src}
-                        alt={slide.name}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                      />
-                    )}
-                    {(isTablet || isDesktop) && (
-                      <Image
-                        loading="eager"
-                        src={slide.images.desktop.src}
-                        alt={slide.name}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                      />
-                    )}
-                    <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
-                      <Button
-                        style="light"
-                        onClick={(event) => toggleVideo(event)}
-                      >
-                        Play Video
-                      </Button>
-                    </span>
-                  </div>}
-                  <div id={`video-${getId(slide.name)}`} className="video absolute inset-0 hidden" data-video-id={slide.video}></div>
+                <div
+                  className="item relative lg:flex-grow lg:h-screen"
+                  key={slide.name}
+                  aria-expanded="false"
+                >
+                  {
+                    <div className="image w-full h-2/3-screen">
+                      {isMobile && (
+                        <Image
+                          loading="eager"
+                          src={slide.images.mobile.src}
+                          alt={slide.name}
+                          layout="fill"
+                          objectFit="cover"
+                          quality={100}
+                        />
+                      )}
+                      {(isTablet || isDesktop) && (
+                        <Image
+                          loading="eager"
+                          src={slide.images.desktop.src}
+                          alt={slide.name}
+                          layout="fill"
+                          objectFit="cover"
+                          quality={100}
+                        />
+                      )}
+                      <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
+                        <Button
+                          style="light"
+                          onClick={(event) => toggleVideo(event)}
+                        >
+                          Play Video
+                        </Button>
+                      </span>
+                    </div>
+                  }
+                  <div
+                    id={`video-${getId(slide.name)}`}
+                    className="video absolute inset-0 hidden"
+                    data-video-id={slide.video}
+                  ></div>
                 </div>
               );
             })}
@@ -204,10 +210,7 @@ function OurScience({ data }) {
       <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
         <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96">
           <div className="mb-6 lg:mb-0">
-            <SectionHeader
-              name={data.name}
-              title={<h2>{data.title}</h2>}
-            />
+            <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
           <div className="text animate opacity-0 lg:text-epm-base lg:mt-6">
             <BlockContent blocks={data.content} className="external-text" />

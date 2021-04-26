@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
@@ -17,14 +17,8 @@ const BlockContent = require("@sanity/block-content-to-react");
 function Community({ data }) {
   for (let i = 0; i < data.bullets.length; i++) {
     data.bullets[i].images = {
-      mobile: useNextSanityImage(
-        client,
-        data.bullets[i].mobile_image
-      ),
-      desktop: useNextSanityImage(
-        client,
-        data.bullets[i].desktop_image
-      )
+      mobile: useNextSanityImage(client, data.bullets[i].mobile_image),
+      desktop: useNextSanityImage(client, data.bullets[i].desktop_image),
     };
   }
 
@@ -165,15 +159,10 @@ function Community({ data }) {
           <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
               <div className="mb-6">
-                <SectionHeader
-                  name={data.name}
-                  title={<h2>{data.title}</h2>}
-                />
+                <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               </div>
               <div className="text animate opacity-0">
-                <BlockContent
-                  blocks={data.content}
-                />
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
             </div>
             <div className="button animate opacity-0 pt-10">

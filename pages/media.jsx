@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import Head from "next/head";
-import MediaComponent from "../components/media/media"
+import MediaComponent from "../components/media/media";
 import client from "../client";
 import { getSectionDataByName } from "../utils";
 
 function Media(data) {
   useEffect(() => {
     document.body.dataset.headerTheme = "dark";
-    document.querySelector(".menu-item--media").classList.add("menu-item--current");
+    document
+      .querySelector(".menu-item--media")
+      .classList.add("menu-item--current");
   }, []);
 
   return (
@@ -19,7 +21,7 @@ function Media(data) {
         <meta name="keywords" content={data.keywords} />
       </Head>
 
-      <MediaComponent data={getSectionDataByName(data, "media__media")}/>
+      <MediaComponent data={getSectionDataByName(data, "media__media")} />
     </>
   );
 }

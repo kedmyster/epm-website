@@ -3,7 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
@@ -14,17 +14,11 @@ import {
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function ResearchPapers({ data, data2 }) {
-  data2.images = {
-    mobile: useNextSanityImage(
-      client,
-      data2.mobile_image
-    ),
-    desktop: useNextSanityImage(
-      client,
-      data2.desktop_image
-    ),
-  }
+function ResearchPapers({ data }) {
+  data.images = {
+    mobile: useNextSanityImage(client, data.mobile_image),
+    desktop: useNextSanityImage(client, data.desktop_image),
+  };
 
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
@@ -165,7 +159,7 @@ function ResearchPapers({ data, data2 }) {
           <div className="items text-white bg-gray-800 text-center relative">
             <div className="image animate opacity-0 absolute w-full h-2/3-screen">
               <Image
-                src={data2.images.mobile.src}
+                src={data.images.mobile.src}
                 alt="Research Papers"
                 layout="fill"
                 objectFit="cover"
@@ -174,7 +168,7 @@ function ResearchPapers({ data, data2 }) {
             </div>
             <div className="absolute w-full h-2/3-screen inset-0 bg-black bg-opacity-50"></div>
             <Slider {...SLIDER_RESEARCH_PAPERS_CONFIG}>
-              {data2.papers.map((slide) => {
+              {data.papers.map((slide) => {
                 return (
                   <div className="item" key={slide.title}>
                     <div className="relative text-center w-full h-2/3-screen lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
@@ -219,12 +213,9 @@ function ResearchPapers({ data, data2 }) {
           </div>
           <div>
             <div className="container mx-auto px-8 py-8">
-              <SectionHeader
-                name={data2.name}
-                title={<h2>{data2.title}</h2>}
-              />
+              <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               <div className="text animate opacity-0  lg:text-epm-base lg:w-103">
-                <BlockContent blocks={data2.content} className="external-text" />
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
             </div>
           </div>
@@ -240,7 +231,7 @@ function ResearchPapers({ data, data2 }) {
             >
               <div className="absolute w-full h-full">
                 <Image
-                  src={data2.images.desktop.src}
+                  src={data.images.desktop.src}
                   alt="Research Papers"
                   layout="fill"
                   objectFit="cover"
@@ -249,7 +240,7 @@ function ResearchPapers({ data, data2 }) {
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
               <div className="animate opacity-0 container mx-auto px-8 py-8 w-container text-white flex flex-row space-x-20 z-10">
-                {data2.papers.map((slide, index) => {
+                {data.papers.map((slide, index) => {
                   return (
                     <div
                       key={slide.title}
@@ -321,13 +312,13 @@ function ResearchPapers({ data, data2 }) {
             <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
-                  name={<span>{data2.name}</span>}
-                  title={<h2>{data2.title}</h2>}
+                  name={<span>{data.name}</span>}
+                  title={<h2>{data.title}</h2>}
                 />
               </div>
 
               <div className="animate opacity-0 text mt-6 lg:w-103">
-                <BlockContent blocks={data2.content} className="external-text" />
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
             </div>
           </div>

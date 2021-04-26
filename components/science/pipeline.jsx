@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function Pipeline({data}) {
+function Pipeline({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTabletPortrait, setIsTabletPortrait] = useState(false);
@@ -24,12 +24,12 @@ function Pipeline({data}) {
       setIsTabletPortrait(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTabletPortrait(false);
       setIsTablet(true);
       setIsDesktop(false);
-    } else if (windowWidth >=768) {
+    } else if (windowWidth >= 768) {
       setIsMobile(false);
       setIsTabletPortrait(true);
       setIsTablet(false);
@@ -86,11 +86,7 @@ function Pipeline({data}) {
             <div className="">
               <SectionHeader
                 name={<span>{data.name}</span>}
-                title={
-                  <h2>
-                    {data.title}
-                  </h2>
-                }
+                title={<h2>{data.title}</h2>}
               />
             </div>
             <div className="animate opacity-0 text lg:text-epm-base mt-6">

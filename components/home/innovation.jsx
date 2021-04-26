@@ -3,7 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
@@ -17,15 +17,9 @@ const BlockContent = require("@sanity/block-content-to-react");
 function Innovation({ data }) {
   for (let i = 0; i < data.bullets.length; i++) {
     data.bullets[i].images = {
-      mobile: useNextSanityImage(
-        client,
-        data.bullets[i].mobile_image
-      ),
-      desktop: useNextSanityImage(
-        client,
-        data.bullets[i].desktop_image
-      ),
-    }
+      mobile: useNextSanityImage(client, data.bullets[i].mobile_image),
+      desktop: useNextSanityImage(client, data.bullets[i].desktop_image),
+    };
   }
 
   const windowWidth = useWindowWidth();
@@ -234,7 +228,10 @@ function Innovation({ data }) {
                 </div>
 
                 <div className="animate opacity-0 text lg:w-103">
-                  <BlockContent blocks={data.content} className="external-text" />
+                  <BlockContent
+                    blocks={data.content}
+                    className="external-text"
+                  />
                 </div>
                 <div className="button animate opacity-0">
                   <Button href="/science/#main" style="dark">

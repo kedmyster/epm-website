@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function CareersComponent({ data, positions = [] }) {
+function CareersComponent({ data, hasPositions }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTabletPortrait, setIsTabletPortrait] = useState(false);
@@ -105,10 +105,13 @@ function CareersComponent({ data, positions = [] }) {
           <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
         </div>
         <div className="animate opacity-0 text lg:text-epm-base lg:mx-auto lg:mt-6">
-          <BlockContent blocks={data.content} className="external-text lg:mx-20" />
+          <BlockContent
+            blocks={data.content}
+            className="external-text lg:mx-20"
+          />
         </div>
       </div>
-      {positions && positions.length > 0 && (
+      {hasPositions && (
         <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
           <a
             href="#story"

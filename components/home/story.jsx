@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import Button from "../shared/Button";
 import SectionHeader from "../shared/SectionHeader";
@@ -73,10 +73,7 @@ function Story({ data }) {
           />
           <div className="animate opacity-0 text md:w-105 md:mx-auto">
             <div className="lg:text-epm-base lg:mt-6">
-              <BlockContent
-                blocks={data.content}
-                className="external-text"
-              />
+              <BlockContent blocks={data.content} className="external-text" />
             </div>
           </div>
           <div className="animate opacity-0 button pt-10 lg:pt-96">

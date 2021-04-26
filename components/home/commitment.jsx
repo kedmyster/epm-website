@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { useNextSanityImage } from 'next-sanity-image';
-import classNames from 'classnames';
+import { useNextSanityImage } from "next-sanity-image";
+import classNames from "classnames";
 import client from "../../client";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
@@ -12,12 +12,9 @@ const BlockContent = require("@sanity/block-content-to-react");
 
 function Commitment({ data }) {
   for (let i = 0; i < data.bullets.length; i++) {
-    data.bullets[i].image = useNextSanityImage(
-      client,
-      data.bullets[i].icon
-    );
+    data.bullets[i].image = useNextSanityImage(client, data.bullets[i].icon);
   }
-  
+
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -69,7 +66,7 @@ function Commitment({ data }) {
               <SectionHeader name="" title={<h2>{data.title}</h2>} />
             </div>
             <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-x divide-white">
-              {data.bullets.map(bullet => {
+              {data.bullets.map((bullet) => {
                 return (
                   <div className="item text-center w-1/3">
                     <div className="item-image h-14 flex items-center justify-center">
@@ -84,7 +81,7 @@ function Commitment({ data }) {
                       {bullet.title}
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -133,11 +130,21 @@ function Commitment({ data }) {
                       height={bullet.image.height}
                     />
                   </div>
-                  <div className={classNames({"border-l-0.5 border-r-0.5 border-white border-box": index % 2 === 1})}>
+                  <div
+                    className={classNames({
+                      "border-l-0.5 border-r-0.5 border-white border-box":
+                        index % 2 === 1,
+                    })}
+                  >
                     <div className="item__title text-center text-2xl font-title mt-6 px-10 h-16">
                       {bullet.title}
                     </div>
-                    <div className={classNames("item-text text-center text-sm font-light mt-1", {"px-10": index % 2 === 1})}>
+                    <div
+                      className={classNames(
+                        "item-text text-center text-sm font-light mt-1",
+                        { "px-10": index % 2 === 1 }
+                      )}
+                    >
                       <p>{bullet.text}</p>
                     </div>
                   </div>

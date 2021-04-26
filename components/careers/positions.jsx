@@ -122,7 +122,10 @@ function PositionsComponent({ data }) {
               </div>
 
               <div className="position__description pt-4 lg:pt-0 pb-8 h-2/3-screen overflow-y-scroll hidden">
-                <BlockContent blocks={position.description} className="external-text" />
+                <BlockContent
+                  blocks={position.description}
+                  className="external-text"
+                />
               </div>
             </div>
           );

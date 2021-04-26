@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
@@ -13,7 +13,7 @@ const BlockContent = require("@sanity/block-content-to-react");
 
 function OurTreatments({ data }) {
   for (let i = 0; i < data.treatments__sections.length; i++) {
-    data.treatments__sections[i].product.images =  {
+    data.treatments__sections[i].product.images = {
       mobile: useNextSanityImage(
         client,
         data.treatments__sections[i].product.mobile__image
@@ -24,7 +24,11 @@ function OurTreatments({ data }) {
       ),
     };
 
-    for (let j = 0; j < data.treatments__sections[i].product.icons.length; j++) {
+    for (
+      let j = 0;
+      j < data.treatments__sections[i].product.icons.length;
+      j++
+    ) {
       data.treatments__sections[i].product.icons[j].image = useNextSanityImage(
         client,
         data.treatments__sections[i].product.icons[j].icon
@@ -42,7 +46,7 @@ function OurTreatments({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -79,7 +83,9 @@ function OurTreatments({ data }) {
               );
 
               opened.forEach((section) => {
-                const button = section.closest(".section").querySelector(".button a");
+                const button = section
+                  .closest(".section")
+                  .querySelector(".button a");
 
                 section.setAttribute("aria-expanded", "false");
                 gsap.to(section, { opacity: 0, duration: 0.25 });
@@ -107,9 +113,11 @@ function OurTreatments({ data }) {
     if (isMobile) {
       const button = section.querySelector(".button");
       const opened = document.querySelector("[aria-expanded='true']");
-      
+
       if (opened && opened !== moreInfoPanel) {
-        const openedButton = opened.closest(".section").querySelector(".button");
+        const openedButton = opened
+          .closest(".section")
+          .querySelector(".button");
         opened.setAttribute("aria-expanded", "false");
         opened.style.display = "none";
         openedButton.classList.remove("hidden");
@@ -159,7 +167,7 @@ function OurTreatments({ data }) {
                       <div className="item flex flex-col w-1/3 items-center justify-between">
                         <div className="item__image flex justify-center items-end flex-grow mb-6">
                           <a
-                            href={"#"+getId(slide.title)}
+                            href={"#" + getId(slide.title)}
                             className="leading-0"
                           >
                             {isMobile && (
@@ -191,7 +199,7 @@ function OurTreatments({ data }) {
                           </span>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -200,10 +208,7 @@ function OurTreatments({ data }) {
           <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
             <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
-                <SectionHeader
-                  name={data.name}
-                  title={<h2>{data.title}</h2>}
-                />
+                <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               </div>
               <div className="animate opacity-0 text lg:text-epm-base lg:mt-6 lg:flex-grow">
                 <BlockContent blocks={data.content} className="external-text" />
@@ -239,19 +244,31 @@ function OurTreatments({ data }) {
                       <div className="flex flex-row justify-center">
                         {slide.product.icons.map((icon, index) => {
                           return (
-                            <div className="item flex flex-col w-1/3 items-center justify-between" key={getId(icon.name)}>
-                              <div className={classNames("item__image flex justify-center items-end flex-grow mb-6", { "mb-6 -mx-6 lg:-mx-10": index === 1})}>
+                            <div
+                              className="item flex flex-col w-1/3 items-center justify-between"
+                              key={getId(icon.name)}
+                            >
+                              <div
+                                className={classNames(
+                                  "item__image flex justify-center items-end flex-grow mb-6",
+                                  { "mb-6 -mx-6 lg:-mx-10": index === 1 }
+                                )}
+                              >
                                 {index === 1 && (
                                   <a
-                                    href={"#"+getId(slide.title)}
+                                    href={"#" + getId(slide.title)}
                                     className="leading-0"
                                   >
                                     {isMobile && (
                                       <Image
                                         src={slide.product.images.mobile.src}
                                         alt={slide.title}
-                                        width={slide.product.images.mobile.width / 2}
-                                        height={slide.product.images.mobile.height / 2}
+                                        width={
+                                          slide.product.images.mobile.width / 2
+                                        }
+                                        height={
+                                          slide.product.images.mobile.height / 2
+                                        }
                                         layout="intrinsic"
                                         quality={100}
                                       />
@@ -260,8 +277,14 @@ function OurTreatments({ data }) {
                                       <Image
                                         src={slide.product.images.desktop.src}
                                         alt={slide.title}
-                                        width={slide.product.images.desktop.width / 2.5}
-                                        height={slide.product.images.desktop.height / 2.5}
+                                        width={
+                                          slide.product.images.desktop.width /
+                                          2.5
+                                        }
+                                        height={
+                                          slide.product.images.desktop.height /
+                                          2.5
+                                        }
                                         layout="intrinsic"
                                         quality={100}
                                       />
@@ -286,7 +309,7 @@ function OurTreatments({ data }) {
                                 )}
                               </div>
                             </div>
-                          )
+                          );
                         })}
                       </div>
                     </div>
@@ -295,7 +318,10 @@ function OurTreatments({ data }) {
                         className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
                         aria-expanded="false"
                       >
-                        <BlockContent blocks={slide.product.info} className="external-text" />
+                        <BlockContent
+                          blocks={slide.product.info}
+                          className="external-text"
+                        />
                       </div>
                     )}
                   </div>
@@ -310,7 +336,10 @@ function OurTreatments({ data }) {
                     </div>
                     <div className="animate opacity-0 px-8 lg:px-0 lg:mt-6 lg:flex-grow">
                       <div className="lg:text-epm-base flex-grow pb-4 lg:pb-8">
-                        <BlockContent blocks={slide.content} className="external-text" />
+                        <BlockContent
+                          blocks={slide.content}
+                          className="external-text"
+                        />
                       </div>
                       <div className="button lg:inline-block text-center">
                         <Button
@@ -337,7 +366,10 @@ function OurTreatments({ data }) {
                           </Button>
                         </div>
 
-                        <BlockContent blocks={slide.product.info} className="external-text" />
+                        <BlockContent
+                          blocks={slide.product.info}
+                          className="external-text"
+                        />
 
                         <div className="pt-8">
                           <Button

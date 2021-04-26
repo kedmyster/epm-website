@@ -282,9 +282,9 @@ function Science(data) {
       <OurScience data={getSectionDataByName(data, "science__ourScience")} />
       <Cannabinoids data={getSectionDataByName(data, "science__cannabinoids")}/>
       <Pipeline data={getSectionDataByName(data, "science__pipeline")}/>
-      <Collaborations data={page.collaborations} />
-      <ResearchPapers data={page.researchPapers} data2={getSectionDataByName(data, "science__researchPapers")}/>
-      <RaphaelMechoulam data={page.ourScience} data={getSectionDataByName(data, "science__mechoulam")}/>
+      <Collaborations data={getSectionDataByName(data, "science__collaborations")} />
+      <ResearchPapers data={getSectionDataByName(data, "science__researchPapers")}/>
+      <RaphaelMechoulam data={getSectionDataByName(data, "science__mechoulam")}/>
     </>
   );
 }

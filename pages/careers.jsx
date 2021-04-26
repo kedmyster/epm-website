@@ -13,6 +13,7 @@ function Careers(data) {
       .classList.add("menu-item--current");
   }, []);
 
+  const career = getSectionDataByName(data, "careers__careers");
   const positions = getSectionDataByName(data, "careers__openPositions") || [];
 
   return (
@@ -30,21 +31,13 @@ function Careers(data) {
           as="image"
           href="/img/mobile/careers/careers@2x.jpg"
         />
-        <meta
-          name="description"
-          content={data.description}
-        />
-        <meta
-          name="keywords"
-          content={data.keywords}
-        />
+        <meta name="description" content={data.description} />
+        <meta name="keywords" content={data.keywords} />
       </Head>
 
-      <CareersComponent data={getSectionDataByName(data, "careers__careers")} />
+      <CareersComponent data={career} hasPositions={positions.length > 0} />
 
-      {positions.positions.length && (
-        <PositionsComponent data={positions} />
-      )}
+      {positions.positions.length && <PositionsComponent data={positions} />}
     </>
   );
 }

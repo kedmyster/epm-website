@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import { data } from "autoprefixer";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function Cannabinoids({data}) {
+function Cannabinoids({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -23,7 +23,7 @@ function Cannabinoids({data}) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -73,10 +73,7 @@ function Cannabinoids({data}) {
         <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
           <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
             <div className="mb-6 lg:mb-0">
-              <SectionHeader
-                name={data.name}
-                title={<h2>{data.title}</h2>}
-              />
+              <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
             </div>
             <div className="animate opacity-0 text lg:text-epm-base mt-6">
               <BlockContent blocks={data.content} className="external-text" />
