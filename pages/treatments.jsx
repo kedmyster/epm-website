@@ -150,7 +150,7 @@ export default function Treatments() {
               },
               label: (
                 <span>
-                  Phase I: clinical <br />
+                  Phase I clinical <br />
                   trial in 2022
                 </span>
               ),
@@ -289,7 +289,7 @@ export default function Treatments() {
               },
               label: (
                 <span>
-                  Phase I: clinical
+                  Phase I clinical
                   <br />
                   trial in 2022
                 </span>
@@ -454,8 +454,8 @@ export default function Treatments() {
               },
               label: (
                 <span>
-                  Phase I: clinical <br />
-                  trial in 2021
+                  Phase I clinical <br />
+                  trial TBD.
                 </span>
               ),
               subLabel: "",
