@@ -324,7 +324,7 @@ export default function Treatments() {
           label: "ARDS",
           formulation: "IV",
           timeline:
-            "IND approval to treat COVID-19 patients with poor prognosis under compassionate usage grounds is anticipated in Q4 2021",
+            "IND approval to treat COVID-19 patients with poor prognosis under compassionate usage grounds is yet to be defined",
           solution:
             "The treatment is based on EPM301 and has demonstrated anti-inflammatory activity in a number of models of inflammatory disease (acute and chronic colitis, inflammatory skin diseases) when administered both orally and topically. EPM301 was also well tolerated in a 7-day IV toxicity study in rats.",
           moreInfo: (
