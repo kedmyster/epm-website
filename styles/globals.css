@@ -308,11 +308,21 @@ body[data-header-theme="dark"] .header .menu-button svg {
   }
 }
 
-.external-text p,  
+/* =================== */
+
+.external-text p,
 .external-text a {
   @apply pb-4 lg:pb-8;
 }
 
 .external-text p:last-child {
   @apply pb-0 lg:pb-0;
+}
+
+.external-text h3 {
+  @apply text-lg lg:text-xl mb-4 lg:mb-8;
+}
+
+#standard-template ul {
+  @apply list-disc ml-5 mb-4 lg:mb-8;
 }

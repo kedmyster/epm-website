@@ -162,7 +162,7 @@ function OurTreatments({ data }) {
             <div className="flex lg:flex-col content-center justify-center lg:justify-end lg:w-full lg:max-w-4xl lg:h-full lg:pb-24">
               <div className="animate opacity-0 container mx-auto lg:px-8">
                 <div className="flex flex-row justify-center">
-                  {data.treatments__sections.map((slide) => {
+                  {data.treatments__sections.map((slide, index) => {
                     return (
                       <div className="item flex flex-col w-1/3 items-center justify-between">
                         <div className="item__image flex justify-center items-end flex-grow mb-6">
@@ -174,8 +174,8 @@ function OurTreatments({ data }) {
                               <Image
                                 src={slide.product.images.mobile.src}
                                 alt={slide.title}
-                                width={slide.product.images.mobile.width / 2}
-                                height={slide.product.images.mobile.height / 2}
+                                width={slide.product.images.mobile.width / 3}
+                                height={slide.product.images.mobile.height / 3}
                                 layout="intrinsic"
                                 quality={100}
                               />
@@ -192,8 +192,18 @@ function OurTreatments({ data }) {
                             )}
                           </a>
                         </div>
-                        <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
-                          {slide.product.name}{" "}
+                        <div
+                          className={classNames(
+                            "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
+                            {
+                              "border-r":
+                                index < data.treatments__sections.length - 1,
+                            }
+                          )}
+                        >
+                          <span className="inline-block lg:w-48">
+                            {slide.product.name}
+                          </span>
                           <span className="block normal-case text-epm-gray-500 font-light">
                             {slide.product.label}
                           </span>
@@ -264,10 +274,10 @@ function OurTreatments({ data }) {
                                         src={slide.product.images.mobile.src}
                                         alt={slide.title}
                                         width={
-                                          slide.product.images.mobile.width / 2
+                                          slide.product.images.mobile.width / 3
                                         }
                                         height={
-                                          slide.product.images.mobile.height / 2
+                                          slide.product.images.mobile.height / 3
                                         }
                                         layout="intrinsic"
                                         quality={100}
@@ -293,15 +303,36 @@ function OurTreatments({ data }) {
                                 )}
                               </div>
                               <div className="item__icon h-9 lg:h-16 flex justify-center items-center">
-                                <Image
-                                  src={icon.image.src}
-                                  width={icon.image.width}
-                                  height={icon.image.height}
-                                  alt={icon.name}
-                                />
+                                {isMobile && (
+                                  <Image
+                                    src={icon.image.src}
+                                    width={Math.floor(icon.image.width / 1.3)}
+                                    height={Math.floor(icon.image.height / 1.3)}
+                                    alt={icon.name}
+                                  />
+                                )}
+                                {(isTablet || isDesktop) && (
+                                  <Image
+                                    src={icon.image.src}
+                                    width={icon.image.width}
+                                    height={icon.image.height}
+                                    alt={icon.name}
+                                  />
+                                )}
                               </div>
-                              <div className="item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 h-14 2xl:h-20">
-                                {icon.name}
+                              <div
+                                className={classNames(
+                                  "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
+                                  {
+                                    "border-r":
+                                      index <
+                                      data.treatments__sections.length - 1,
+                                  }
+                                )}
+                              >
+                                <span className="inline-block lg:w-48">
+                                  {icon.name}
+                                </span>
                                 {icon.label && (
                                   <span className="block normal-case text-epm-gray-500 font-light">
                                     {icon.label}

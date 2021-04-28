@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
-import classNames from 'classnames';
+import classNames from "classnames";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import { getId } from "../../utils";
@@ -22,7 +22,7 @@ function Collaborations({ data }) {
       data.collaboration__logos[i].logos[j].image = useNextSanityImage(
         client,
         data.collaboration__logos[i].logos[j].icon
-      )
+      );
     }
   }
 
@@ -58,17 +58,15 @@ function Collaborations({ data }) {
     if (isTablet || isDesktop) {
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         moreInfoPanel.setAttribute("aria-expanded", "true");
-        gsap.to(moreInfoPanel, { opacity: 1, zIndex: 11, duration: 0.25 });
+        gsap.set(moreInfoPanel, { zIndex: 11 });
+        gsap.to(moreInfoPanel, { opacity: 1, duration: 0.25 });
         event.target.innerText = "Close";
       } else {
         moreInfoPanel.setAttribute("aria-expanded", "false");
-        gsap.to(moreInfoPanel, { opacity: 0, zIndex: 0, duration: 0.25 });
+        gsap.set(moreInfoPanel, { zIndex: 0 });
+        gsap.to(moreInfoPanel, { opacity: 0, duration: 0.25 });
         event.target.innerText = "Learn More";
       }
-
-      // document
-      //   .querySelector(".collaborations__panel.academy")
-      //   .classList.toggle("lg:border-l");
     }
   };
 
@@ -83,10 +81,13 @@ function Collaborations({ data }) {
     >
       {isMobile && (
         <div>
-          {data.collaboration__logos.map(section => {
+          {data.collaboration__logos.map((section) => {
             return (
               <>
-                <div className="relative h-2/3-screen">
+                <div
+                  className="relative h-2/3-screen"
+                  key={getId(section.title)}
+                >
                   <div className="image animate opacity-0 absolute w-full h-full">
                     <Image
                       src={section.image.src}
@@ -98,7 +99,12 @@ function Collaborations({ data }) {
                   </div>
                   <div className="absolute w-full h-full inset-0 bg-black bg-opacity-30"></div>
                   <div className="animate opacity-0 container mx-auto text-center px-8 py-8 h-full flex flex-wrap content-center">
-                    <div className={classNames("w-full lg:w-1/2", getId(section.title))}>
+                    <div
+                      className={classNames(
+                        "w-full lg:w-1/2",
+                        getId(section.title)
+                      )}
+                    >
                       <div className="font-title animate opacity-0 text-white uppercase text-2xl mb-16 relative">
                         {section.title}
                       </div>
@@ -116,8 +122,8 @@ function Collaborations({ data }) {
                               >
                                 <Image
                                   src={slide.image.src}
-                                  width={slide.image.width}
-                                  height={slide.image.height}
+                                  width={slide.image.width / 3}
+                                  height={slide.image.height / 3}
                                   alt={slide.title}
                                 />
                               </a>
@@ -136,7 +142,10 @@ function Collaborations({ data }) {
                     />
                   </div>
                   <div className="animate opacity-0">
-                    <BlockContent blocks={section.text} className="external-text" />
+                    <BlockContent
+                      blocks={section.text}
+                      className="external-text"
+                    />
                   </div>
                 </div>
               </>
@@ -159,16 +168,21 @@ function Collaborations({ data }) {
                 />
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-              <div className="animate opacity-0 w-full mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10">
-                {data.collaboration__logos.map(section => {
+              <div className="animate opacity-0 w-full mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10 divide-x divide-epm-gray-100 divide-opacity-30">
+                {data.collaboration__logos.map((section, sectionIndex) => {
                   return (
-                    <div className={classNames("collaborations__panel lg:w-1/2 px-8", getId(section.title))}>
+                    <div
+                      className={classNames(
+                        "collaborations__panel lg:w-1/2 px-8",
+                        getId(section.title)
+                      )}
+                    >
                       <div className="relative z-10">
                         <div className="font-title uppercase text-2xl mb-16">
                           {section.title}
                         </div>
                         <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
-                          {section.logos.map((slide, index) => {
+                          {section.logos.map((slide) => {
                             return (
                               <div
                                 className="logo flex items-center justify-center transition-opacity duration-150 hover:opacity-70"
@@ -181,8 +195,8 @@ function Collaborations({ data }) {
                                 >
                                   <Image
                                     src={slide.image.src}
-                                    width={slide.image.width}
-                                    height={slide.image.height}
+                                    width={slide.image.width / 3}
+                                    height={slide.image.height / 3}
                                     alt={slide.title}
                                   />
                                 </a>
@@ -202,13 +216,22 @@ function Collaborations({ data }) {
                           </Button>
                         </div>
                       </div>
-  
+
                       <div
-                        className="more-info commercial-more-info container lg:w-1/2 lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col xl:justify-center text-left text-epm-gray-700 lg:bg-white lg:px-16 xl:px-36 py-8 lg:h-2/3-screen lg:overflow-y-auto"
+                        className={classNames(
+                          "more-info commercial-more-info container lg:w-1/2 lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col xl:justify-center text-left text-epm-gray-700 lg:bg-white lg:px-16 xl:px-36 py-8 lg:h-2/3-screen lg:overflow-y-auto",
+                          {
+                            "right-0": sectionIndex % 2 === 0,
+                            "left-0": sectionIndex % 2 === 1,
+                          }
+                        )}
                         data-collaboration-panel={getId(section.title)}
                         aria-expanded="false"
                       >
-                        <BlockContent blocks={section.text} className="external-text" />
+                        <BlockContent
+                          blocks={section.text}
+                          className="external-text"
+                        />
                       </div>
                     </div>
                   );

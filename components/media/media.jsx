@@ -52,7 +52,7 @@ function MediaComponent({ data }) {
               >
                 <a href={slide.url} target="_blank" rel="noopener noreferrer">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mx-8 lg:mx-0">
-                    <div className="item-image lg:w-64 mb-4 lg:mb-0">
+                    <div className="item-image lg:w-48 mb-4 lg:mb-0">
                       <div className="w-auto mx-auto lg:mx-0 relative">
                         <Image
                           src={slide.images.logo.src}
@@ -73,7 +73,9 @@ function MediaComponent({ data }) {
                         {slide.title}
                       </div>
                       <div className="item__date lg:text-center text-sm text-epm-gray-500 lg:text-base font-title lg:inline-block">
-                        {slide.date}
+                        {new Intl.DateTimeFormat("en-US", {
+                          dateStyle: "long",
+                        }).format(new Date(slide.date))}
                       </div>
                     </div>
                     <div className="button pt-10 lg:pt-0 lg:inline-block text-center">

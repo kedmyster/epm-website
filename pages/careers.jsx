@@ -35,7 +35,10 @@ function Careers(data) {
         <meta name="keywords" content={data.keywords} />
       </Head>
 
-      <CareersComponent data={career} hasPositions={positions.length > 0} />
+      <CareersComponent
+        data={career}
+        hasPositions={positions.positions.length > 0}
+      />
 
       {positions.positions.length && <PositionsComponent data={positions} />}
     </>
