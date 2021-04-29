@@ -168,7 +168,7 @@ function Leadership({ data }) {
                               <div className="leader__name text-base lg:text-xl xl:text-2xl leading-tight font-bold mb-1">
                                 {leader.name}
                               </div>
-                              <div className="leader__role text-xs lg:epm-base font-light">
+                              <div className="leader__role text-xs lg:epm-base font-light w-44 sm:w-auto">
                                 {leader.role}
                               </div>
                               {/*<div className="leader__group text-xxs 2xl:text-base font-light uppercase pt-3">

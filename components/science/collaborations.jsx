@@ -122,8 +122,8 @@ function Collaborations({ data }) {
                               >
                                 <Image
                                   src={slide.image.src}
-                                  width={slide.image.width / 3}
-                                  height={slide.image.height / 3}
+                                  width={slide.image.width / 3.5}
+                                  height={slide.image.height / 3.5}
                                   alt={slide.title}
                                 />
                               </a>

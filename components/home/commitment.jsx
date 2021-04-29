@@ -63,7 +63,7 @@ function Commitment({ data }) {
             </div>
             <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
             <div className="animate opacity-0 text-white pt-8">
-              <SectionHeader name="" title={<h2>{data.title}</h2>} />
+              <SectionHeader name="" title={<h2>{data.mobile__title}</h2>} />
             </div>
             <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-x divide-white">
               {data.bullets.map((bullet) => {
@@ -73,8 +73,8 @@ function Commitment({ data }) {
                       <Image
                         src={bullet.image.src}
                         alt="Alternative to Steroids"
-                        width="69"
-                        height="26"
+                        width={bullet.image.width / 2 }
+                        height={bullet.image.height / 2 }
                       />
                     </div>
                     <div className="item__title text-center text-sm font-title mt-1">

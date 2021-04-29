@@ -323,6 +323,6 @@ body[data-header-theme="dark"] .header .menu-button svg {
   @apply text-lg lg:text-xl mb-4 lg:mb-8;
 }
 
-#standard-template ul {
+.external-text ul {
   @apply list-disc ml-5 mb-4 lg:mb-8;
 }
