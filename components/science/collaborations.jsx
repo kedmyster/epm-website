@@ -18,7 +18,7 @@ function Collaborations({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -48,7 +48,9 @@ function Collaborations({ data }) {
         event.target.innerText = "Learn More";
       }
 
-      document.querySelector(".collaborations__panel.academia").classList.toggle("lg\:border-l");
+      document
+        .querySelector(".collaborations__panel.academia")
+        .classList.toggle("lg:border-l");
     }
   };
 
@@ -82,7 +84,10 @@ function Collaborations({ data }) {
                 <div className="logos flex flex-wrap">
                   {data.commercial.slides.map((slide, index) => {
                     return (
-                      <div className="logo relative w-1/2 mb-12" key={slide.title}>
+                      <div
+                        className="logo relative w-1/2 mt-6 mb-6"
+                        key={slide.title}
+                      >
                         <a
                           href={slide.url}
                           target="_blank"
@@ -148,7 +153,10 @@ function Collaborations({ data }) {
                 <div className="logos flex flex-wrap">
                   {data.academy.slides.map((slide, index) => {
                     return (
-                      <div className="logo relative w-1/2 mb-12" key={slide.title}>
+                      <div
+                        className="logo relative w-1/2 mt-6 mb-6"
+                        key={slide.title}
+                      >
                         <a
                           href={slide.url}
                           target="_blank"
@@ -210,7 +218,10 @@ function Collaborations({ data }) {
                     <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.commercial.slides.map((slide, index) => {
                         return (
-                          <div className="logo flex items-center justify-center" key={slide.title}>
+                          <div
+                            className="logo flex items-center justify-center"
+                            key={slide.title}
+                          >
                             <a
                               href={slide.url}
                               target="_blank"
@@ -249,7 +260,10 @@ function Collaborations({ data }) {
                     <div className="logos grid grid-cols-3 gap-6 max-w-lg mx-auto">
                       {data.academy.slides.map((slide, index) => {
                         return (
-                          <div className="logo flex items-center justify-center" key={slide.title}>
+                          <div
+                            className="logo flex items-center justify-center"
+                            key={slide.title}
+                          >
                             <a
                               href={slide.url}
                               target="_blank"
@@ -327,9 +341,7 @@ function Collaborations({ data }) {
             <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
-                  name={
-                    <span>Our Development Quality</span>
-                  }
+                  name={<span>Our Development Quality</span>}
                   title={<h2>Key Collaborations</h2>}
                 />
               </div>
