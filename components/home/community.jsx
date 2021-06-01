@@ -15,9 +15,9 @@ import {
 function Community({ data }) {
   const windowWidth = useWindowWidth();
   const [active, setActive] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+  const [isTablet, setIsTablet] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   const SLIDER_COMMUNITY_CONFIG = {
     dots: false,
