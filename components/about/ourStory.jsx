@@ -4,6 +4,7 @@ import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import slugify from "slugify";
 
 function OurStory() {
   const windowWidth = useWindowWidth();
@@ -43,15 +44,11 @@ function OurStory() {
   }, []);
 
   useEffect(() => {
-    var tag = document.createElement('script');
+    var tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
+    var firstScriptTag = document.getElementsByTagName("script")[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   }, []);
-
-  const getId = (name) => {
-    return name.toLowerCase().replace(/ /g, "-");
-  };
 
   const toggleVideo = (event) => {
     const item = event.target.closest(".item");
@@ -67,37 +64,37 @@ function OurStory() {
         video.player.playVideo();
       } else {
         const videoId = video.dataset.videoId;
-        const player  = new YT.Player(video, {
-          height: '100%',
-          width: '100%',
+        const player = new YT.Player(video, {
+          height: "100%",
+          width: "100%",
           videoId,
           events: {
-            'onReady': (event) => {
+            onReady: (event) => {
               event.target.playVideo();
               event.target.h.player = event.target;
             },
-          }
+          },
         });
       }
     } else {
       item.setAttribute("aria-expanded", "false");
       video.classList.add("hidden");
       button.innerText = "Play Video";
-      
+
       if (video.player) {
         video.player.stopVideo();
       } else {
         const videoId = video.dataset.videoId;
-        const player  = new YT.Player(video, {
-          height: '100%',
-          width: '100%',
+        const player = new YT.Player(video, {
+          height: "100%",
+          width: "100%",
           videoId,
           events: {
-            'onReady': (event) => {
+            onReady: (event) => {
               event.target.stopVideo();
               event.target.h.player = event.target;
             },
-          }
+          },
         });
       }
     }
@@ -112,7 +109,10 @@ function OurStory() {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="item animate opacity-0 relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto" aria-expanded="false">
+      <div
+        className="item animate opacity-0 relative lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto"
+        aria-expanded="false"
+      >
         {isMobile && (
           <Image
             src="/img/mobile/about/mechoulam-thumbnail@2x.jpg"
@@ -131,12 +131,18 @@ function OurStory() {
             quality={100}
           />
         )}
-        {<span className="animate opacity-0 button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
-          <Button style="light" onClick={(event) => toggleVideo(event)}>
-            Play Video
-          </Button>
-        </span>}
-        <div id={`video-${getId("Rapahel Mechoulam")}`} className="video absolute inset-0 hidden" data-video-id="UrC_dGhrga0"></div>
+        {
+          <span className="animate opacity-0 button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
+            <Button style="light" onClick={(event) => toggleVideo(event)}>
+              Play Video
+            </Button>
+          </span>
+        }
+        <div
+          id={`video-${slugify("Rapahel Mechoulam", { lower: true })}`}
+          className="video absolute inset-0 hidden"
+          data-video-id="UrC_dGhrga0"
+        ></div>
       </div>
 
       <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
@@ -168,10 +174,6 @@ function OurStory() {
               cannabinoid acid molecules for research and drug development
               purposes
             </p>
-            {/*<p className="">
-              EPM is leading the way in realizing the untapped potential of
-              cannabinoid acids as new pharmaceutical treatments.
-              </p>*/}
           </div>
         </div>
       </div>

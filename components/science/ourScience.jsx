@@ -3,6 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
+import slugify from "slugify";
 import Button from "../shared/Button";
 import SectionHeader from "../shared/SectionHeader";
 import {
@@ -22,16 +23,18 @@ function OurScience({ data }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (slick, currentSlide, nextSlide) => {
-      const item = document.querySelector("#our-science .item[aria-expanded='true']");
+      const item = document.querySelector(
+        "#our-science .item[aria-expanded='true']"
+      );
 
       if (item) {
         const video = item.querySelector(".video");
         const button = item.querySelector("a");
-        
+
         if (video.player) {
           video.player.stopVideo();
         }
-  
+
         item.setAttribute("aria-expanded", "false");
         video.classList.add("hidden");
         button.innerText = "Play Video";
@@ -46,7 +49,7 @@ function OurScience({ data }) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -73,15 +76,11 @@ function OurScience({ data }) {
   }, []);
 
   useEffect(() => {
-    var tag = document.createElement('script');
+    var tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
+    var firstScriptTag = document.getElementsByTagName("script")[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   }, []);
-
-  const getId = (name) => {
-    return name.toLowerCase().replace(/ /g, "-");
-  };
 
   const toggleVideo = (event) => {
     const item = event.target.closest(".item");
@@ -97,37 +96,37 @@ function OurScience({ data }) {
         video.player.playVideo();
       } else {
         const videoId = video.dataset.videoId;
-        const player  = new YT.Player(video, {
-          height: '100%',
-          width: '100%',
+        const player = new YT.Player(video, {
+          height: "100%",
+          width: "100%",
           videoId,
           events: {
-            'onReady': (event) => {
+            onReady: (event) => {
               event.target.playVideo();
               event.target.h.player = event.target;
             },
-          }
+          },
         });
       }
     } else {
       item.setAttribute("aria-expanded", "false");
       video.classList.add("hidden");
       button.innerText = "Play Video";
-      
+
       if (video.player) {
         video.player.stopVideo();
       } else {
         const videoId = video.dataset.videoId;
-        const player  = new YT.Player(video, {
-          height: '100%',
-          width: '100%',
+        const player = new YT.Player(video, {
+          height: "100%",
+          width: "100%",
           videoId,
           events: {
-            'onReady': (event) => {
+            onReady: (event) => {
               event.target.stopVideo();
               event.target.h.player = event.target;
             },
-          }
+          },
         });
       }
     }
@@ -147,38 +146,48 @@ function OurScience({ data }) {
           <Slider {...SLIDER_SOLUTION_CONFIG}>
             {data.slides.map((slide) => {
               return (
-                <div className="item relative lg:flex-grow lg:h-screen" key={slide.name} aria-expanded="false">
-                  {<div className="image w-full h-2/3-screen">
-                    {isMobile && (
-                      <Image
-                        loading="eager"
-                        src={slide.images.mobile}
-                        alt="Endless Potential Molecules"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                      />
-                    )}
-                    {(isTablet || isDesktop) && (
-                      <Image
-                        loading="eager"
-                        src={slide.images.desktop}
-                        alt="Endless Potential Molecules"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                      />
-                    )}
-                    <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
-                      <Button
-                        style="light"
-                        onClick={(event) => toggleVideo(event)}
-                      >
-                        Play Video
-                      </Button>
-                    </span>
-                  </div>}
-                  <div id={`video-${getId(slide.name)}`} className="video absolute inset-0 hidden" data-video-id={slide.video}></div>
+                <div
+                  className="item relative lg:flex-grow lg:h-screen"
+                  key={slide.name}
+                  aria-expanded="false"
+                >
+                  {
+                    <div className="image w-full h-2/3-screen">
+                      {isMobile && (
+                        <Image
+                          loading="eager"
+                          src={slide.images.mobile}
+                          alt="Endless Potential Molecules"
+                          layout="fill"
+                          objectFit="cover"
+                          quality={100}
+                        />
+                      )}
+                      {(isTablet || isDesktop) && (
+                        <Image
+                          loading="eager"
+                          src={slide.images.desktop}
+                          alt="Endless Potential Molecules"
+                          layout="fill"
+                          objectFit="cover"
+                          quality={100}
+                        />
+                      )}
+                      <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
+                        <Button
+                          style="light"
+                          onClick={(event) => toggleVideo(event)}
+                        >
+                          Play Video
+                        </Button>
+                      </span>
+                    </div>
+                  }
+                  <div
+                    id={`video-${slugify(slide.name, { lower: true })}`}
+                    className="video absolute inset-0 hidden"
+                    data-video-id={slide.video}
+                  ></div>
                 </div>
               );
             })}

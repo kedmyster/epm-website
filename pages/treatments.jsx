@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import slugify from "slugify";
 import Main from "../components/treatments/main";
 import OurTreatments from "../components/treatments/ourTreatments";
 
@@ -10,16 +11,12 @@ export default function Treatments() {
       .classList.add("menu-item--current");
   }, []);
 
-  const getId = (name) => {
-    return name.toLowerCase().replace(/ /g, "-");
-  };
-
   const page = {
     treatments: {
       slides: [
         {
           name: "Our Treatments",
-          id: getId("Inflammatory Bowel Disease"),
+          id: slugify("Inflammatory Bowel Disease", { lower: true }),
           title: "Inflammatory Bowel Disease",
           label: "IBD",
           formulation: "Oral",
@@ -179,7 +176,7 @@ export default function Treatments() {
         },
         {
           name: "Our Treatments",
-          id: getId("Psoriasis"),
+          id: slugify("Psoriasis", { lower: true }),
           title: "Psoriasis",
           label: "Psoriasis",
           formulation: "Topical",
@@ -319,7 +316,7 @@ export default function Treatments() {
         },
         {
           name: "Our Treatments",
-          id: getId("Acute Respiratory Distress Syndrome"),
+          id: slugify("Acute Respiratory Distress Syndrome", { lower: true }),
           title: "Acute Respiratory Distress Syndrome",
           label: "ARDS",
           formulation: "IV",

@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import slugify from "slugify";
 import {
   SliderCustomPreviousArrow,
   SliderCustomNextArrow,
@@ -80,7 +81,7 @@ function Community({ data }) {
                   className={classNames("item", "cursor-pointer", {
                     "item--active": index === active,
                   })}
-                  key={slide.name}
+                  key={slugify(slide.name, { lower: true })}
                   onClick={() => setActive(index)}
                 >
                   <div className="group relative text-center w-full flex flex-wrap content-end h-101 lg:h-screen">

@@ -4,6 +4,7 @@ import Main from "../components/about/main";
 import OurStory from "../components/about/ourStory";
 import FoundingEPM from "../components/about/foundingEPM";
 import Leadership from "../components/about/leadership";
+import slugify from "slugify";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,15 +16,11 @@ export default function About() {
       .classList.add("menu-item--current");
   }, []);
 
-  const getId = (name) => {
-    return name.toLowerCase().replace(/ /g, "-");
-  };
-
   const [leaders, setLeaders] = useState([
     {
       group: "Board of Directors",
       label: "Directorate",
-      id: getId("Board of Directors"),
+      id: slugify("Board of Directors", { lower: true }),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
       people: [
@@ -129,7 +126,7 @@ export default function About() {
     {
       group: "Executive Leadership",
       label: "Executives",
-      id: getId("Executive Leadership"),
+      id: slugify("Executive Leadership", { lower: true }),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
       people: [
@@ -272,7 +269,7 @@ export default function About() {
     {
       group: "Advisory Board",
       label: "Advisory Board",
-      id: getId("Advisory Board"),
+      id: slugify("Advisory Board", { lower: true }),
       text:
         "We are grateful to have an experienced team with specialties in different fields and unique backgrounds and our elite research team is one of the most recognized in the industry. We all share a common vision and values. We all strive to advance science to “help people live a life of higher quality” and want to make sure our efforts reach as many people as possible.",
       people: [
