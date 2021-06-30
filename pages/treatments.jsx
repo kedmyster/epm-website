@@ -181,7 +181,7 @@ export default function Treatments() {
           label: "Psoriasis",
           formulation: "Topical",
           timeline:
-            "Phase 1 clinical trail in healthy volunteers anticipated in 2023.",
+            "Phase 1 clinical trail in healthy volunteers anticipated in Q4/2022.",
           solution:
             "The treatment is based on EPM301 and has been evaluated in an ex vivo model of inflammatory skin disease. When applied topically, it displayed similar activity to hydrocortisone",
           moreInfo: (
@@ -288,7 +288,7 @@ export default function Treatments() {
                 <span>
                   Phase I clinical
                   <br />
-                  trial in 2023
+                  trial in Q4/2022
                 </span>
               ),
               subLabel: "",
