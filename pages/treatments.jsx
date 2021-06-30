@@ -21,7 +21,7 @@ export default function Treatments() {
           label: "IBD",
           formulation: "Oral",
           timeline:
-            "Phase 1 clinical trail in healthy volunteers anticipated in 2022.",
+            "Phase 1 clinical trail in healthy volunteers anticipated in 2023.",
           solution:
             "The treatment is based on EPM301 and has been evaluated in both acute (DSS induced mouse colitis) and chronic (IL-10 knock-out mouse) animal models of IBD and has shown similar activity to prednisone (acute model) and anti-TNFa mAb (chronic model) when administered by gavage.",
           moreInfo: (
@@ -148,7 +148,7 @@ export default function Treatments() {
               label: (
                 <span>
                   Phase I clinical <br />
-                  trial in 2022
+                  trial in 2023
                 </span>
               ),
               subLabel: "",
@@ -181,7 +181,7 @@ export default function Treatments() {
           label: "Psoriasis",
           formulation: "Topical",
           timeline:
-            "Phase 1 clinical trail in healthy volunteers anticipated in 2022.",
+            "Phase 1 clinical trail in healthy volunteers anticipated in 2023.",
           solution:
             "The treatment is based on EPM301 and has been evaluated in an ex vivo model of inflammatory skin disease. When applied topically, it displayed similar activity to hydrocortisone",
           moreInfo: (
@@ -288,7 +288,7 @@ export default function Treatments() {
                 <span>
                   Phase I clinical
                   <br />
-                  trial in 2022
+                  trial in 2023
                 </span>
               ),
               subLabel: "",
