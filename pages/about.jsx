@@ -247,7 +247,7 @@ export default function About() {
           },
         },
         {
-          name: "Ron Sharhabani",
+          name: "Ron Shahrabani",
           role: "VP of Compliance and IP",
           text: (
             <div>
