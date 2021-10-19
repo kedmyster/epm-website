@@ -6,7 +6,7 @@ import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
-import { getId } from "../../utils";
+import slugify from "slugify";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -147,9 +147,9 @@ function OurStory({ data }) {
           </span>
         }
         <div
-          id={`video-${getId("Rapahel Mechoulam")}`}
+          id={`video-${slugify("Rapahel Mechoulam", { lower: true })}`}
           className="video absolute inset-0 hidden"
-          data-video-id={data.video}
+          data-video-id="UrC_dGhrga0"
         ></div>
       </div>
 

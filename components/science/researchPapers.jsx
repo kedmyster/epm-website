@@ -289,7 +289,7 @@ function ResearchPapers({ data }) {
                     <div className="lg:text-epm-base text-epm-gray-500">
                       EPM-301 Therapeutic Effect on
                     </div>
-                    <div className="item__title font-light text-2xl uppercase mb-6">
+                    <div className="item__title font-title text-2xl uppercase mb-6">
                       <span id="paper-name"></span>
                     </div>
                     <div className="item-ref text-xs">

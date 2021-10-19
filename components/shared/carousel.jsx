@@ -8,7 +8,7 @@ export function SliderCustomPreviousArrow(props) {
     path = "/img/icons/arrow_left.svg";
   } else if (color === "dark") {
     path = "/img/icons/arrow_left_dark.svg";
-  }  else if (color === "gray") {
+  } else if (color === "gray") {
     path = "/img/icons/arrow_left_light_gray.svg";
   }
 
