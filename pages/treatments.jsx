@@ -3,7 +3,7 @@ import Head from "next/head";
 import Main from "../components/treatments/main";
 import OurTreatments from "../components/treatments/ourTreatments";
 import client from "../client";
-import { getSectionDataByName, getId } from "../utils";
+import { getSectionDataByName } from "../utils";
 
 function Treatments(data) {
   useEffect(() => {

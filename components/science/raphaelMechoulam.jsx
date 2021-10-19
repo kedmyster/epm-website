@@ -171,7 +171,10 @@ function RaphaelMechoulam({data}) {
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
           {mechoulam.map((item, index) => {
             return (
-              <div className="item cursor-pointer outline-none" key={item.label}>
+              <div
+                className="item cursor-pointer outline-none"
+                key={item.label}
+              >
                 <div className="group relative text-center w-full flex flex-wrap content-end lg:content-start lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
                   <div className="w-full h-full flex items-end lg:items-start justify-center lg:justify-start bg-epm-gray-100">
                     {isMobile && (

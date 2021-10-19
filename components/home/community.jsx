@@ -7,6 +7,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import slugify from "slugify";
 import {
   SliderCustomPreviousArrow,
   SliderCustomNextArrow,
@@ -24,9 +25,9 @@ function Community({ data }) {
 
   const windowWidth = useWindowWidth();
   const [active, setActive] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+  const [isTablet, setIsTablet] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   const SLIDER_COMMUNITY_CONFIG = {
     dots: false,
@@ -90,7 +91,7 @@ function Community({ data }) {
                   className={classNames("item", "cursor-pointer", {
                     "item--active": index === active,
                   })}
-                  key={slide.name}
+                  key={slugify(slide.name, { lower: true })}
                   onClick={() => setActive(index)}
                 >
                   <div className="group relative text-center w-full flex flex-wrap content-end h-101 lg:h-screen">

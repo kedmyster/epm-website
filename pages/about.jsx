@@ -5,7 +5,7 @@ import OurStory from "../components/about/ourStory";
 import FoundingEPM from "../components/about/foundingEPM";
 import Leadership from "../components/about/leadership";
 import client from "../client";
-import { getSectionDataByName, getId } from "../utils";
+import { getSectionDataByName } from "../utils";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

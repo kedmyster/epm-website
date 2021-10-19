@@ -281,8 +281,15 @@ body[data-header-theme="dark"] .header .menu-button svg {
 
 @media (min-width: 1280px) {
   .raphael-mechoulam .slick-arrow {
-    top: 50%;
-    transform: translateY(-50%);
+    @apply top-0 transform-none w-1/2 h-full bottom-auto flex !important;
+  }
+
+  .raphael-mechoulam .slick-prev {
+    @apply left-0 pl-10 justify-start !important;
+  }
+
+  .raphael-mechoulam .slick-next {
+    @apply right-0 pr-10 justify-end !important;
   }
 }
 

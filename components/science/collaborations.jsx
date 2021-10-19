@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import slugify from "slugify";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
@@ -7,7 +8,6 @@ import client from "../../client";
 import classNames from "classnames";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
-import { getId } from "../../utils";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -67,6 +67,10 @@ function Collaborations({ data }) {
         gsap.to(moreInfoPanel, { opacity: 0, duration: 0.25 });
         event.target.innerText = "Learn More";
       }
+
+      document
+        .querySelector(".collaborations__panel.academia")
+        .classList.toggle("lg:border-l");
     }
   };
 
@@ -86,7 +90,7 @@ function Collaborations({ data }) {
               <>
                 <div
                   className="relative h-2/3-screen"
-                  key={getId(section.title)}
+                  key={slugify(section.title)}
                 >
                   <div className="image animate opacity-0 absolute w-full h-full">
                     <Image
@@ -102,7 +106,7 @@ function Collaborations({ data }) {
                     <div
                       className={classNames(
                         "w-full lg:w-1/2",
-                        getId(section.title)
+                        slugify(section.title)
                       )}
                     >
                       <div className="font-title animate opacity-0 text-white uppercase text-2xl mb-16 relative">
@@ -174,7 +178,7 @@ function Collaborations({ data }) {
                     <div
                       className={classNames(
                         "collaborations__panel lg:w-1/2 px-8",
-                        getId(section.title)
+                        slugify(section.title)
                       )}
                     >
                       <div className="relative z-10">
@@ -209,7 +213,7 @@ function Collaborations({ data }) {
                             href="#"
                             style="light"
                             onClick={(event) =>
-                              toggleLearnMore(event, getId(section.title))
+                              toggleLearnMore(event, slugify(section.title))
                             }
                           >
                             Learn More
@@ -225,7 +229,7 @@ function Collaborations({ data }) {
                             "left-0": sectionIndex % 2 === 1,
                           }
                         )}
-                        data-collaboration-panel={getId(section.title)}
+                        data-collaboration-panel={slugify(section.title)}
                         aria-expanded="false"
                       >
                         <BlockContent

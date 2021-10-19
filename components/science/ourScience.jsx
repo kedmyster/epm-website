@@ -5,9 +5,9 @@ import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import { gsap } from "gsap";
+import slugify from "slugify";
 import Button from "../shared/Button";
 import SectionHeader from "../shared/SectionHeader";
-import { getId } from "../../utils";
 import {
   SliderCustomPreviousArrow,
   SliderCustomNextArrow,
@@ -197,7 +197,7 @@ function OurScience({ data }) {
                     </div>
                   }
                   <div
-                    id={`video-${getId(slide.name)}`}
+                    id={`video-${slugify(slide.name, { lower: true })}`}
                     className="video absolute inset-0 hidden"
                     data-video-id={slide.video}
                   ></div>
