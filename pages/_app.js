@@ -6,13 +6,16 @@ import Header from "../components/layout/header.jsx";
 import Footer from "../components/layout/footer.jsx";
 import SideMenu from "../components/layout/sideMenu.jsx";
 import SocialMedia from "../components/layout/socialMedia.jsx";
+import { init } from '../utils/sentry';
+
+init();
 
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, err }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -166,8 +169,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="app">
       <Header />
-      <Component {...pageProps} />
-      {(isTablet || isDesktop) && <SideMenu />}
+      <Component {...pageProps} err={err}/>
+      {(isDesktop) && <SideMenu />}
       {(isTablet || isDesktop) && <SocialMedia />}
       <Footer />
     </div>

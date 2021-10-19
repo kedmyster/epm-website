@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 
-function Main() {
+function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -14,7 +14,7 @@ function Main() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -93,7 +93,7 @@ function Main() {
               <Image
                 loading="eager"
                 src="/img/desktop/homepage/hero@2x.jpg"
-                alt="Medicine to All"
+                alt={data.name}
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -101,18 +101,13 @@ function Main() {
             </video>
           )}
         </div>
-        {/*<div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>*/}
-        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 lg:w-full">
+        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 w-full">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
-              Medicine to All
+              {data.name}
             </h1>
-            <p className="main__tagline animate opacity-0 lg:text-3xl lg:font-light">
-              Novel therapeutics from synthetic cannabinoid acids{" "}
-              {(isTablet || isDesktop) && (
-               <br/>
-              )}
-              for a healthier and brighter future
+            <p className="main__tagline animate opacity-0 lg:text-3xl lg:font-light lg:w-sm-container lg:mx-auto">
+              {data.title}
             </p>
           </div>
         </div>
@@ -124,7 +119,12 @@ function Main() {
             alt="Our Story"
             className="transition-opacity duration-150 hover:opacity-70"
           >
-            <Image src="/img/icons/arrow_down.svg" width="28" height="16" loading="eager" />
+            <Image
+              src="/img/icons/arrow_down.svg"
+              width="28"
+              height="16"
+              loading="eager"
+            />
           </a>
         </div>
       </div>

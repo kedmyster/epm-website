@@ -1,16 +1,24 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import slugify from "slugify";
 
-function OurStory() {
+const BlockContent = require("@sanity/block-content-to-react");
+
+function OurStory({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const atmosphere = {
+    mobile: useNextSanityImage(client, data.mobile_image),
+    desktop: useNextSanityImage(client, data.desktop_image),
+  };
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -115,7 +123,7 @@ function OurStory() {
       >
         {isMobile && (
           <Image
-            src="/img/mobile/about/mechoulam-thumbnail@2x.jpg"
+            src={atmosphere.mobile.src}
             alt="Patient-Focused Pharmaceutical Group"
             layout="fill"
             objectFit="cover"
@@ -124,7 +132,7 @@ function OurStory() {
         )}
         {(isTablet || isDesktop) && (
           <Image
-            src="/img/desktop/about/mechoulam-thumbnail@2x.jpg"
+            src={atmosphere.desktop.src}
             alt="Patient-Focused Pharmaceutical Group"
             layout="fill"
             objectFit="cover"
@@ -145,35 +153,13 @@ function OurStory() {
         ></div>
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
+      <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
           <div className="lg:mb-0">
-            <SectionHeader
-              name="Our story"
-              title={<h2>Patient-Focused Pharmaceutical Group</h2>}
-            />
+            <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
           <div className="animate opacity-0 text mt-6 lg:text-epm-base">
-            <p className="mb-4">
-              EPM develops prescription medicine derived from synthetic
-              cannabinoid acids to address unmet patient needs.
-            </p>
-            <p className="mb-4">
-              Our mission is to enable safe, effective and accessible treatments
-              for patients in a wide range of therapeutic areas.
-            </p>
-            <p className="mb-4">
-              We have created a pipeline which includes the discovery of 14
-              protected synthetic molecules, including 8 novel structures and
-              production processes IP. Currently EPM is advancing 3 treatments
-              to human trials following the guidance of the U.S. FDA: Psoriasis,
-              IBD and ARDS.
-            </p>
-            <p className="">
-              At EPM, we are committed to continue the novel discovery of
-              cannabinoid acid molecules for research and drug development
-              purposes
-            </p>
+            <BlockContent blocks={data.content} className="external-text" />
           </div>
         </div>
       </div>

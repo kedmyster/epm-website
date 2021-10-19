@@ -9,7 +9,7 @@ function StandardTemplate({name, title, children}) {
   return (
     <section
       id="standard-template"
-      className="section bg-white pt-10 lg:pt-20 lg:px-72 lg:min-h-screen"
+      className="section bg-white pt-10 lg:pt-20 lg:px-72 lg:min-h-screen lg:overflow-y-auto"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

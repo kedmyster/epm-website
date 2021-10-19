@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../client";
 import { gsap } from "gsap";
 import slugify from "slugify";
 import Button from "../shared/Button";
@@ -11,7 +13,18 @@ import {
   SliderCustomNextArrow,
 } from "../shared/carousel";
 
+const BlockContent = require("@sanity/block-content-to-react");
+
 function OurScience({ data }) {
+  for (let i = 0; i < data.videos.length; i++) {
+    for (let j = 0; j < data.videos[i].video.length; j++) {
+      data.videos[i].images = {
+        mobile: useNextSanityImage(client, data.videos[i].mobile_image),
+        desktop: useNextSanityImage(client, data.videos[i].desktop_image),
+      };
+    }
+  }
+
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -144,7 +157,7 @@ function OurScience({ data }) {
       <div className="w-full lg:w-6/12 2xl:w-7/12">
         <div className="items animate opacity-0">
           <Slider {...SLIDER_SOLUTION_CONFIG}>
-            {data.slides.map((slide) => {
+            {data.videos.map((slide) => {
               return (
                 <div
                   className="item relative lg:flex-grow lg:h-screen"
@@ -156,8 +169,8 @@ function OurScience({ data }) {
                       {isMobile && (
                         <Image
                           loading="eager"
-                          src={slide.images.mobile}
-                          alt="Endless Potential Molecules"
+                          src={slide.images.mobile.src}
+                          alt={slide.name}
                           layout="fill"
                           objectFit="cover"
                           quality={100}
@@ -166,8 +179,8 @@ function OurScience({ data }) {
                       {(isTablet || isDesktop) && (
                         <Image
                           loading="eager"
-                          src={slide.images.desktop}
-                          alt="Endless Potential Molecules"
+                          src={slide.images.desktop.src}
+                          alt={slide.name}
                           layout="fill"
                           objectFit="cover"
                           quality={100}
@@ -194,45 +207,13 @@ function OurScience({ data }) {
           </Slider>
         </div>
       </div>
-      <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
+      <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96">
           <div className="mb-6 lg:mb-0">
-            <SectionHeader
-              name="Our Science"
-              title={<h2>Endless Potential Molecules</h2>}
-            />
+            <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
           <div className="text animate opacity-0 lg:text-epm-base lg:mt-6">
-            <p className="mb-4">
-              EPM develops a dynamic portfolio of prescription medicines derived
-              from synthetic cannabinoid acids. The treatments are based on the
-              discovery of 14 synthetic molecules, including 8 novel structures
-              and different development procedures.
-            </p>
-            <p className="mb-4">
-              In preclinical studies, EPM’s lead molecule has repeatedly shown
-              similar results to established steroids in different inflammatory
-              diseases.
-            </p>
-            <p className="mb-4">
-              EPM’s treatments have high potency, are reproducible and scalable,
-              and have full intellectual protection:
-            </p>
-            <p className="mb-4">
-              <strong className="bold">Potency </strong>
-              EPM’s lead treatment has demonstrated activity equivalent to
-              steroids in inflammatory disease models.
-            </p>
-            <p className="mb-4">
-              <strong className="bold">Consistency </strong>
-              EPM produces its medicine in pharmaceutically- approved GMP
-              facilities with industrial capacity.
-            </p>
-            <p>
-              <strong className="bold">Protection </strong>
-              EPM’s patents and IP portfolio cover a wide range of drug
-              formulations and medical conditions.
-            </p>
+            <BlockContent blocks={data.content} className="external-text" />
           </div>
         </div>
       </div>

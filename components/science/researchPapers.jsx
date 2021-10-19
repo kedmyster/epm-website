@@ -3,6 +3,8 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import {
@@ -10,7 +12,14 @@ import {
   SliderCustomNextArrow,
 } from "../shared/carousel";
 
+const BlockContent = require("@sanity/block-content-to-react");
+
 function ResearchPapers({ data }) {
+  data.images = {
+    mobile: useNextSanityImage(client, data.mobile_image),
+    desktop: useNextSanityImage(client, data.desktop_image),
+  };
+
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -92,7 +101,7 @@ function ResearchPapers({ data }) {
 
     if (isMobile) {
       if (slide) {
-        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.url}&pagemode=none`;
+        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.file}&pagemode=none`;
       }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
@@ -150,7 +159,7 @@ function ResearchPapers({ data }) {
           <div className="items text-white bg-gray-800 text-center relative">
             <div className="image animate opacity-0 absolute w-full h-2/3-screen">
               <Image
-                src="/img/mobile/science/research-papers@2x.jpg"
+                src={data.images.mobile.src}
                 alt="Research Papers"
                 layout="fill"
                 objectFit="cover"
@@ -159,7 +168,7 @@ function ResearchPapers({ data }) {
             </div>
             <div className="absolute w-full h-2/3-screen inset-0 bg-black bg-opacity-50"></div>
             <Slider {...SLIDER_RESEARCH_PAPERS_CONFIG}>
-              {data.slides.map((slide) => {
+              {data.papers.map((slide) => {
                 return (
                   <div className="item" key={slide.title}>
                     <div className="relative text-center w-full h-2/3-screen lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
@@ -175,7 +184,7 @@ function ResearchPapers({ data }) {
                             href={slide.url}
                             onClick={(event) => togglePaper(event, slide)}
                           >
-                            Read
+                            {slide.button}
                           </Button>
                         </div>
                       </div>
@@ -204,16 +213,9 @@ function ResearchPapers({ data }) {
           </div>
           <div>
             <div className="container mx-auto px-8 py-8">
-              <SectionHeader
-                name="Our Innovation"
-                title={<h2>Research Papers</h2>}
-              />
+              <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               <div className="text animate opacity-0  lg:text-epm-base lg:w-103">
-                <p>
-                  Here are EPM-supported publications on EPM301, offering
-                  further pharmacologic background on current company research
-                  engagements.
-                </p>
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
             </div>
           </div>
@@ -229,7 +231,7 @@ function ResearchPapers({ data }) {
             >
               <div className="absolute w-full h-full">
                 <Image
-                  src="/img/desktop/science/research-papers@2x.jpg"
+                  src={data.images.desktop.src}
                   alt="Research Papers"
                   layout="fill"
                   objectFit="cover"
@@ -238,7 +240,7 @@ function ResearchPapers({ data }) {
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
               <div className="animate opacity-0 container mx-auto px-8 py-8 w-container text-white flex flex-row space-x-20 z-10">
-                {data.slides.map((slide, index) => {
+                {data.papers.map((slide, index) => {
                   return (
                     <div
                       key={slide.title}
@@ -282,7 +284,7 @@ function ResearchPapers({ data }) {
                     className="w-full h-2/3-screen"
                   />
                 </div>
-                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
+                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
                   <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
                     <div className="lg:text-epm-base text-epm-gray-500">
                       EPM-301 Therapeutic Effect on
@@ -307,20 +309,16 @@ function ResearchPapers({ data }) {
             </div>
           </div>
           <div className="h-1/3-screen">
-            <div className="container mx-auto px-8 lg:pl-44 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
-                  name={<span>Our Innovation</span>}
-                  title={<h2>Research Papers</h2>}
+                  name={<span>{data.name}</span>}
+                  title={<h2>{data.title}</h2>}
                 />
               </div>
 
               <div className="animate opacity-0 text mt-6 lg:w-103">
-                <p>
-                  Here are EPM-supported publications on EPM301, offering
-                  further pharmacologic background on current company research
-                  engagements.
-                </p>
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
             </div>
           </div>

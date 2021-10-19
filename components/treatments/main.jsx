@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 
-function Main() {
+function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -14,7 +14,7 @@ function Main() {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -71,7 +71,7 @@ function Main() {
             <Image
               priority="true"
               src="/img/mobile/treatments/hero@2x.jpg"
-              alt="Our Treatments - Medicine We Develop"
+              alt={data.title}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -93,7 +93,7 @@ function Main() {
             <Image
               priority="true"
               src="/img/desktop/treatments/hero@2x.jpg"
-              alt="Our Treatments - Medicine We Develop"
+              alt={data.title}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -102,13 +102,13 @@ function Main() {
         )}
       </div>
       {/*<div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>*/}
-      <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-12 lg:w-full">
+      <div className="absolute md:left-1/2 md:transform md:-translate-x-1/2 bottom-24 lg:bottom-12 md:w-full">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <p className="animate opacity-0 text-xs uppercase font-title mb-4 lg:hidden">
-            Our Treatments
+            {data.name}
           </p>
           <h1 className="animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide lg:w-container lg:mx-auto">
-            Medicine We Develop
+            {data.title}
           </h1>
         </div>
       </div>
@@ -116,10 +116,15 @@ function Main() {
         <a
           href="#story"
           onClick={scrollToContent}
-          alt="Current Developments"
           className="transition-opacity duration-150 hover:opacity-70"
         >
-          <Image src="/img/icons/arrow_down.svg" width="28" height="16" loading="eager" />
+          <Image
+            src="/img/icons/arrow_down.svg"
+            alt="Current Developments"
+            width="28"
+            height="16"
+            loading="eager"
+          />
         </a>
       </div>
     </section>

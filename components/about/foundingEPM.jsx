@@ -1,22 +1,29 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
-import Button from "../shared/Button";
 
-function FoundingEPM() {
+const BlockContent = require("@sanity/block-content-to-react");
+
+function FoundingEPM({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const atmosphere = {
+    mobile: useNextSanityImage(client, data.mobile_image),
+    desktop: useNextSanityImage(client, data.desktop_image),
+  };
 
   useEffect(() => {
     if (windowWidth >= 1280) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -54,7 +61,7 @@ function FoundingEPM() {
       <div className="image relative animate opacity-0 lg:flex-grow w-full lg:w-6/12 2xl:w-7/12 h-2/3-screen lg:h-auto">
         {isMobile && (
           <Image
-            src="/img/mobile/about/founding-epm@2x.jpg"
+            src={atmosphere.mobile.src}
             alt="Founding EPM"
             layout="fill"
             objectFit="cover"
@@ -63,7 +70,7 @@ function FoundingEPM() {
         )}
         {(isTablet || isDesktop) && (
           <Image
-            src="/img/desktop/about/founding-epm@2x.jpg"
+            src={atmosphere.desktop.src}
             alt="Founding EPM"
             layout="fill"
             objectFit="cover"
@@ -72,39 +79,13 @@ function FoundingEPM() {
         )}
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96 ">
+      <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
           <div className="lg:mb-0">
-            <SectionHeader name="Our Story" title={<h2>Founding EPM</h2>} />
+            <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
           <div className="animate opacity-0 text mt-6 lg:text-epm-base">
-            <p className="mb-4">
-              The company was founded in 2017 by Reshef Swisa and Asaf Ohana, in
-              an intergenerational collaboration with Israeli Prize winner and
-              cannabis pioneer Prof. Raphael Mechoulam. Although the
-              pharmaceutical industry and regulatory institutions have already
-              accepted cannabis-based medicine, the true potential of
-              cannabinoids had remained locked. They recognized the disparity in
-              the required potency for treatments, the requirements of IP
-              protection for pharmaceutical solutions, and the consistency
-              required for mass production of medicine. These were the main
-              challenges the cannabis industry was facing.
-            </p>
-            <p className="mb-4">
-              Together, EPM’s founders have managed to uncover the hidden
-              potential in the plant’s potent capabilities and offer an
-              alternative to current medicine, without having to depend or
-              consume the plant itself.
-            </p>
-            <p className="">
-              <strong className="block">The solution</strong>
-              Using proprietary innovative technology, EPM created a
-              comprehensive and fully-protected portfolio of pharmaceutical
-              solutions, which are a potential alternative to steroids and other
-              treatments. EPM’s synthetic cannabinoid acid based products are
-              protected, potent and industrially reproducible to ensure all
-              pharmaceutical challenges are resolved.
-            </p>
+            <BlockContent blocks={data.content} className="external-text" />
           </div>
         </div>
       </div>

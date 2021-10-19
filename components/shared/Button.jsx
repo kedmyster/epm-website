@@ -18,7 +18,7 @@ function Button({
       "cursor-pointer",
       "inline-block",
       "w-full",
-      "lg:w-52",
+      "md:w-52",
       "font-title",
       "text-base",
       "text-center",

@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import Slider from "react-slick";
-import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import slugify from "slugify";
@@ -12,7 +13,16 @@ import {
   SliderCustomNextArrow,
 } from "../shared/carousel";
 
+const BlockContent = require("@sanity/block-content-to-react");
+
 function Community({ data }) {
+  for (let i = 0; i < data.bullets.length; i++) {
+    data.bullets[i].images = {
+      mobile: useNextSanityImage(client, data.bullets[i].mobile_image),
+      desktop: useNextSanityImage(client, data.bullets[i].desktop_image),
+    };
+  }
+
   const windowWidth = useWindowWidth();
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(true);
@@ -67,7 +77,7 @@ function Community({ data }) {
     <section
       id="community"
       className="section community"
-      data-side-menu-label="Our Community"
+      data-side-menu-label={data.name}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -75,7 +85,7 @@ function Community({ data }) {
       <div className="lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen">
         <div className="items animate opacity-0 text-white bg-gray-900 text-center lg:w-6/12 2xl:w-7/12">
           <Slider {...SLIDER_COMMUNITY_CONFIG}>
-            {data.slides.map((slide, index) => {
+            {data.bullets.map((slide, index) => {
               return (
                 <div
                   className={classNames("item", "cursor-pointer", {
@@ -88,8 +98,8 @@ function Community({ data }) {
                     <div className="absolute w-full h-full">
                       {isMobile && (
                         <Image
+                          src={slide.images.mobile.src}
                           loading="eager"
-                          src={slide.images.mobile}
                           alt={slide.name}
                           layout="fill"
                           objectFit="cover"
@@ -99,7 +109,7 @@ function Community({ data }) {
                       {(isTablet || isDesktop) && (
                         <Image
                           loading="eager"
-                          src={slide.images.desktop}
+                          src={slide.images.desktop.src}
                           alt={slide.name}
                           layout="fill"
                           objectFit="cover"
@@ -128,7 +138,7 @@ function Community({ data }) {
                           />
                         )}
                       </div>
-                      <div className=" lg:h-40 xl:h-48 2xl:h-40">
+                      <div className=" md:h-36 lg:h-40 xl:h-48 2xl:h-40">
                         <div className="quote text-xl lg:text-lg 2xl:text-xl font-light italic xl:px-6 pb-6 text-left">
                           {slide.quote}
                         </div>
@@ -146,28 +156,19 @@ function Community({ data }) {
             })}
           </Slider>
         </div>
-        <div className="lg:pl-44 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-64 xl:w-80 2xl:w-96">
+        <div className="lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
               <div className="mb-6">
-                <SectionHeader
-                  name="Our Treatments"
-                  title={<h2>Curing and Treating Patients Worldwide</h2>}
-                />
+                <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               </div>
               <div className="text animate opacity-0">
-                <p>
-                  EPM is developing cannabinoid acid-based therapeutic solutions
-                  providing alternative treatments for patients. This is the
-                  driving force behind EPM’s research program, which is based on
-                  14 IP protected APIs. Currently EPM’s focus is on three main
-                  therapeutic conditions:
-                </p>
+                <BlockContent blocks={data.content} className="external-text" />
               </div>
             </div>
             <div className="button animate opacity-0 pt-10">
               <Button href="/treatments/#main" style="dark">
-                Learn More
+                {data.button}
               </Button>
             </div>
           </div>
