@@ -46,7 +46,7 @@ function Header() {
 
       const menu = document.querySelector("#menu");
       let stopPosition = 2 * 62;
-      
+
       if (main) {
         const rect = main.getBoundingClientRect();
         stopPosition = rect.bottom / 2;
@@ -297,7 +297,10 @@ function Header() {
             <nav role="navigation">
               <ul>
                 <li className="menu-item menu-item--about inline-block pr-12 py-1 relative">
-                  <a href="/about" className="uppercase font-title relative z-10">
+                  <a
+                    href="/about"
+                    className="uppercase font-title relative z-10"
+                  >
                     About
                   </a>
                   <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
@@ -340,7 +343,10 @@ function Header() {
                   </ul>
                 </li>
                 <li className="menu-item menu-item--treatments inline-block pr-12 py-1 relative">
-                  <a href="/treatments" className="uppercase font-title relative z-10">
+                  <a
+                    href="/treatments"
+                    className="uppercase font-title relative z-10"
+                  >
                     Treatments
                   </a>
                   <ul className="sub-menu font-light leading-tight	text-white text-left absolute top-8 left-0 w-36">
@@ -371,19 +377,13 @@ function Header() {
                         Psoriasis
                       </a>
                     </li>
-                    <li className="mb-4">
-                      <a
-                        href="/treatments/#acute-respiratory-distress-syndrome"
-                        className=""
-                        onClick={(event) => goToSection(event)}
-                      >
-                        Acute Respiratory Distress Syndrome
-                      </a>
-                    </li>
                   </ul>
                 </li>
                 <li className="menu-item menu-item--science inline-block pr-12 py-1 relative">
-                  <a href="/science" className="uppercase font-title relative z-10">
+                  <a
+                    href="/science"
+                    className="uppercase font-title relative z-10"
+                  >
                     Science
                   </a>
                   <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
@@ -450,12 +450,18 @@ function Header() {
             <nav role="navigation">
               <ul className="font-title">
                 <li className="menu-item menu-item--careers inline-block pr-12 py-1 relative">
-                  <a href="/careers" className="uppercase font-title relative z-10">
+                  <a
+                    href="/careers"
+                    className="uppercase font-title relative z-10"
+                  >
                     Careers
                   </a>
                 </li>
                 <li className="menu-item menu-item--media inline-block py-1 relative">
-                  <a href="/media" className="uppercase font-title relative z-10">
+                  <a
+                    href="/media"
+                    className="uppercase font-title relative z-10"
+                  >
                     Media
                   </a>
                 </li>
@@ -633,7 +639,7 @@ function Header() {
                       className="transition-opacity duration-150 hover:opacity-70"
                       onClick={(event) => goToSection(event)}
                     >
-                      Current Developments 
+                      Current Developments
                     </a>
                   </li>
                   <li className="text-sm my-2">
@@ -726,8 +732,7 @@ function Header() {
                   </li>
                 </ul>
               </li>
-              
-              
+
               <li className="font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
                 <a
                   href="/careers"

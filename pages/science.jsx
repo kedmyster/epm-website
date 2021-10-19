@@ -141,14 +141,12 @@ function Science(data) {
             title: "The Hebrew University of Jerusalem",
             image: {
               mobile: {
-                url:
-                  "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
+                url: "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
                 width: "159",
                 height: "54",
               },
               desktop: {
-                url:
-                  "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
+                url: "/img/icons/collaborations/the-hebrew-university-of-jerusalem.svg",
                 width: "159",
                 height: "54",
               },
@@ -267,24 +265,30 @@ function Science(data) {
           as="image"
           href="/img/desktop/science/hero@2x.webp"
         />
-        <link rel="preload" as="image" href="/img/mobile/science/hero@2x.webp" />
-        <meta
-          name="description"
-          content={data.description}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/mobile/science/hero@2x.webp"
         />
-        <meta
-          name="keywords"
-          content={data.keywords}
-        />
+        <meta name="description" content={data.description} />
+        <meta name="keywords" content={data.keywords} />
       </Head>
 
-      <Main data={getSectionDataByName(data, "hero")}/>
+      <Main data={getSectionDataByName(data, "hero")} />
       <OurScience data={getSectionDataByName(data, "science__ourScience")} />
-      <Cannabinoids data={getSectionDataByName(data, "science__cannabinoids")}/>
-      <Pipeline data={getSectionDataByName(data, "science__pipeline")}/>
-      <Collaborations data={getSectionDataByName(data, "science__collaborations")} />
-      <ResearchPapers data={getSectionDataByName(data, "science__researchPapers")}/>
-      <RaphaelMechoulam data={getSectionDataByName(data, "science__mechoulam")}/>
+      <Cannabinoids
+        data={getSectionDataByName(data, "science__cannabinoids")}
+      />
+      <Pipeline data={getSectionDataByName(data, "science__pipeline")} />
+      <Collaborations
+        data={getSectionDataByName(data, "science__collaborations")}
+      />
+      <ResearchPapers
+        data={getSectionDataByName(data, "science__researchPapers")}
+      />
+      <RaphaelMechoulam
+        data={getSectionDataByName(data, "science__mechoulam")}
+      />
     </>
   );
 }

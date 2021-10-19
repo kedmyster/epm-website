@@ -40,7 +40,9 @@ function Careers(data) {
         hasPositions={positions.positions.length > 0}
       />
 
-      {positions.positions.length && <PositionsComponent data={positions} />}
+      {positions.positions.length > 0 && (
+        <PositionsComponent data={positions} />
+      )}
     </>
   );
 }

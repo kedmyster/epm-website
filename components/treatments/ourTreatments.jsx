@@ -325,8 +325,7 @@ function OurTreatments({ data }) {
                                   "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
                                   {
                                     "border-r":
-                                      index <
-                                      data.treatments__sections.length - 1,
+                                      index < slide.product.icons.length - 1,
                                   }
                                 )}
                               >
