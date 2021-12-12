@@ -167,9 +167,9 @@ function Footer({}) {
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">Israel Office</div>
                   <div className="">
-                    121 Menachem Begin Rd.
+                    4 Berkovitch St.
                     <br />
-                    Tel Aviv 6701203
+                    Tel Aviv
                   </div>
                 </div>
               </div>
