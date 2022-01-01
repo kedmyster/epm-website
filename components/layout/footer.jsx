@@ -72,22 +72,40 @@ function Footer({}) {
     >
       <div className="animate opacity-0 container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:pl-24 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
-          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-56 xl:w-96 2xl:w-109 xl:pr-0">
+          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-96 2xl:w-109 xl:pr-0">
             <div className="mb-4 lg:mb-8">
               <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-epm-gray-700">
                 Make a Change with Us
               </h2>
+              <p className="mt-4">
+                For more updates about EPM please fill in your details:
+              </p>
             </div>
-            {/*<div className="mb-8 lg:mb-0">
-              <form onSubmit={(event) => handleSubmit(event)}>
-                <div className="mb-6 leading-8">
+            <div className="mb-8 lg:mb-0">
+              <form
+                className="flex flex-col"
+                onSubmit={(event) => handleSubmit(event)}
+              >
+                <div className="mb-4 lg:mb-6 leading-8 lg:flex">
                   <input
-                    type="email"
-                    placeholder="The latest updates directly to your inbox"
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full font-light rounded-3xl px-5 py-2 mr-4 mb-4 lg:mb-0"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
                     className="w-full font-light rounded-3xl px-5 py-2"
                   />
                 </div>
-                <div className="">
+                <div className="mb-4 lg:mb-6 leading-8 flex-1">
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="w-full font-light rounded-3xl px-5 py-2"
+                  />
+                </div>
+                <div className="mb-12 lg:mb-20">
                   <button
                     type="submit"
                     className="w-full lg:w-auto font-title text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
@@ -96,7 +114,7 @@ function Footer({}) {
                   </button>
                 </div>
               </form>
-            </div> */}
+            </div>
           </div>
           <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">
             <div className="mb-8">
@@ -107,19 +125,21 @@ function Footer({}) {
               </h2>
             </div>
             <div>
-              <a
+              {/* <a
                 href="#main"
                 onClick={(event) => scrollToHome(event)}
                 className="font-title text-md text-epm-gray-700 underline uppercase"
               >
                 Back home
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="flex flex-row">
             <div className="flex-grow">
               <div className="mb-4 leading-8">
-                <div className="text-white font-bold uppercase">Information</div>
+                <div className="text-white font-bold uppercase">
+                  Information
+                </div>
                 <div className="">
                   <a
                     href="mailto:info@epmip.com"
@@ -149,7 +169,9 @@ function Footer({}) {
               </div>
               <div>
                 <div className="mb-4 leading-8">
-                  <div className="text-white font-bold uppercase">US Headquarters</div>
+                  <div className="text-white font-bold uppercase">
+                    US Headquarters
+                  </div>
                   <div className="">
                     1347 19th St.
                     <br />
@@ -158,14 +180,14 @@ function Footer({}) {
                     {isMobile && (
                       <a href="tel:1 323 307 2111"> Tel: +1 (323) 307-2111</a>
                     )}
-                    {!isMobile && (
-                      <span>Tel: +1 (323) 307-2111</span>
-                    )}
+                    {!isMobile && <span>Tel: +1 (323) 307-2111</span>}
                   </div>
                 </div>
 
                 <div className="mb-4 leading-8">
-                  <div className="text-white font-bold uppercase">Israel Office</div>
+                  <div className="text-white font-bold uppercase">
+                    Israel Office
+                  </div>
                   <div className="">
                     4 Berkovitch St.
                     <br />
