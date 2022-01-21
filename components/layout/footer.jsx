@@ -2,6 +2,9 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import classNames from "classnames";
+import axios from "axios";
 
 function Footer({}) {
   const windowWidth = useWindowWidth();
@@ -14,7 +17,7 @@ function Footer({}) {
       setIsMobile(false);
       setIsTablet(false);
       setIsDesktop(true);
-    } else if (windowWidth >=1024) {
+    } else if (windowWidth >= 1024) {
       setIsMobile(false);
       setIsTablet(true);
       setIsDesktop(false);
@@ -82,38 +85,104 @@ function Footer({}) {
               </p>
             </div>
             <div className="mb-8 lg:mb-0">
-              <form
-                className="flex flex-col"
-                onSubmit={(event) => handleSubmit(event)}
+              <Formik
+                initialValues={{ firstName: "", lastName: "", email: "" }}
+                validate={(values) => {
+                  const errors = {};
+                  if (!values.email) {
+                    errors.email = "Required";
+                  } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                      values.email
+                    )
+                  ) {
+                    errors.email = "Invalid email address";
+                  }
+                  return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                  setTimeout(async () => {
+                    setSubmitting(false);
+
+                    await axios.post(
+                      "https://zapier.com/shared/332c0a44cf84ce01ea7871854000f230770076d1",
+                      {
+                        firstName: values.firstName,
+                        lastName: values.lastName,
+                        email: values.email,
+                      }
+                    );
+
+                    const tl = gsap.timeline();
+
+                    tl.add("contact-form-submit");
+                    tl.fromTo(
+                      ".contact__form",
+                      {
+                        opacity: 1,
+                      },
+                      {
+                        opacity: 0,
+                        duration: 0.25,
+                      },
+                      "contact-form-submit"
+                    );
+                    tl.fromTo(
+                      ".contact__thanks",
+                      {
+                        opacity: 0,
+                      },
+                      {
+                        opacity: 1,
+                        duration: 0.25,
+                        zIndex: 11,
+                      },
+                      "contact-form-submit"
+                    );
+                  }, 400);
+                }}
               >
-                <div className="mb-4 lg:mb-6 leading-8 lg:flex">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="w-full font-light rounded-3xl px-5 py-2 mr-4 mb-4 lg:mb-0"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="w-full font-light rounded-3xl px-5 py-2"
-                  />
-                </div>
-                <div className="mb-4 lg:mb-6 leading-8 flex-1">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full font-light rounded-3xl px-5 py-2"
-                  />
-                </div>
-                <div className="mb-12 lg:mb-20">
-                  <button
-                    type="submit"
-                    className="w-full lg:w-auto font-title text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+                {({ errors, isSubmitting }) => (
+                  <Form>
+                    <div className="flex flex-col">
+                      <div className="mb-4 lg:mb-6 leading-8 lg:flex">
+                        <Field
+                          type="text"
+                          name="firstName"
+                          placeholder="First Name"
+                          className="w-full font-light rounded-3xl px-5 py-2 mr-4 mb-4 lg:mb-0"
+                        />
+                        <Field
+                          type="text"
+                          name="lastName"
+                          placeholder="Last Name"
+                          className="w-full font-light rounded-3xl px-5 py-2"
+                        />
+                      </div>
+                      <div className="mb-4 lg:mb-6 leading-8 flex-1">
+                        <Field
+                          type="email"
+                          name="email"
+                          placeholder="Email Address"
+                          className={classNames(
+                            "w-full font-light rounded-3xl px-5 py-2",
+                            { "outline-2 outline-red-500": errors.email }
+                          )}
+                        />
+                      </div>
+                      <div className="mb-12 lg:mb-20">
+                        <button
+                          type="submit"
+                          className="w-full lg:w-auto font-title text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
+                          disabled={isSubmitting}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
             </div>
           </div>
           <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">

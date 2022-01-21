@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { useNextSanityImage } from "next-sanity-image";
-import client from "../../client";
-import { useWindowWidth } from "@react-hook/window-size/throttled";
-import Button from "../shared/Button";
+import { useEffect, useState } from "react";
 
+import Button from "../shared/Button";
+import Image from "next/image";
 import SectionHeader from "../shared/SectionHeader";
+import client from "../../client";
+import { useNextSanityImage } from "next-sanity-image";
+import { useWindowWidth } from "@react-hook/window-size/throttled";
 
 function MediaComponent({ data }) {
   for (let i = 0; i < data.articles.length; i++) {
@@ -36,127 +36,8 @@ function MediaComponent({ data }) {
     }
   }, [windowWidth]);
 
-  const ipo = {
-    name: "Investor Relations",
-    title: "Title",
-    description:
-      "Few sentences. epm is planning... a fast-paced and dynamic company, striving to develop new medicines and to enable safer treatments for patients, by collaborating with leading",
-    info: "For additional information and to join the IPO - Click here!",
-    categories: [
-      {
-        category: "Prospects",
-        links: [
-          {
-            text: "English",
-            link: "/",
-          },
-          {
-            text: "Hebrew",
-            link: "/",
-          },
-        ],
-      },
-      {
-        category: "IPO Deck",
-        links: [
-          {
-            text: "English",
-            link: "/",
-          },
-          {
-            text: "Hebrew",
-            link: "/",
-          },
-        ],
-      },
-      {
-        category: "Videos",
-        links: [
-          {
-            text: "Watch",
-            link: "",
-          },
-        ],
-      },
-    ],
-  };
-
   return (
     <>
-      <section
-        id="ipo"
-        className="section ipo lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden lg:min-h-screen"
-        data-side-menu-color="dark"
-        data-side-menu-visibility="visible"
-        data-header-menu-visibility="visible"
-      >
-        <div className="container lg:w-lg-container mx-auto px-8 py-8 pt-16 lg:h-screen ">
-          <div className="mb-6 lg:mb-0 pt-8 lg:pt-[56px] -mx-8 lg:mx-0 px-8 lg:px-0 lg:text-center border-t border-epm-gray-300 ">
-            <SectionHeader name={ipo.name} title={<h2>{ipo.title}</h2>} />
-          </div>
-          <div className="lg:pt-[47px] lg:text-center">{ipo.description}</div>
-          <div className="text-3xl mt-8 lg:mt-[65px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
-            {ipo.info}
-          </div>
-          <div className="items -mx-8 lg:pt-8 lg:overflow-y-auto">
-            {ipo.categories.map((item, index) => {
-              return (
-                <article
-                  className="item group animate opacity-0 cursor-pointer border-t last:border-b border-epm-gray-300 h-28 lg:h-auto  min-h-full lg:min-h-0 flex lg:block flex-wrap content-center md:justify-center lg:justify-start lg:py-8 lg:px-4 transition-colors duration-150 hover:bg-epm-gray-100 lg:mx-8"
-                  key={item.category}
-                >
-                  <div className="flex lg:flex-row items-center justify-between mx-8 lg:mx-0 w-full">
-                    <div className="text-center lg:text-left lg:inline-block lg:w-96 xl:w-105">
-                      <div className="text-3xl lg:text-xl xl:text-4xl font-bold lg:mb-4 lg:h-20 xl:h-auto">
-                        {item.category}
-                      </div>
-                    </div>
-                    <div className="">
-                      {item.links.length === 1 ? (
-                        <div>
-                          {item.links.map((link, index) => {
-                            return (
-                              <div className="button pt-0 lg:inline-block text-center ">
-                                <Button
-                                  style="dark"
-                                  href={link.link}
-                                  extendedClassNames="bg-epm-gray-700 lg:bg-white text-white lg:text-epm-gray-700"
-                                  target="_blank"
-                                >
-                                  {link.text}
-                                </Button>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      ) : (
-                        <div>
-                          {item.links.map((link, index) => {
-                            return (
-                              <div className="button pt-0 inline-block text-center pl-6">
-                                <Button
-                                  style="dark"
-                                  href={link.link}
-                                  extendedClassNames="px-2 lg:px-10 rounded-[100%] lg:rounded-3xl w-auto lg:w-52 bg-epm-gray-700 lg:bg-white text-white lg:text-epm-gray-700"
-                                  target="_blank"
-                                >
-                                  {isMobile
-                                    ? link.text.substring(0, 2)
-                                    : link.text}
-                                </Button>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
       <section
         id="media"
         className="section media lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-hidden lg:min-h-screen"
@@ -166,7 +47,7 @@ function MediaComponent({ data }) {
       >
         <div className="container lg:w-lg-container mx-auto lg:px-8 pt-4 lg:pt-16 lg:h-screen lg:overflow-y-auto">
           <div className="mb-6 lg:mb-0 px-8 lg:text-center">
-            <SectionHeader name={ipo.name} title={<h2>{ipo.title}</h2>} />
+            <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
           <div className="items lg:pt-8">
             {data.articles.map((slide, index) => {
