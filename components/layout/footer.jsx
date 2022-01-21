@@ -105,7 +105,7 @@ function Footer({}) {
                     setSubmitting(false);
 
                     await axios.post(
-                      "https://zapier.com/shared/332c0a44cf84ce01ea7871854000f230770076d1",
+                      "https://hooks.zapier.com/hooks/catch/5896166/b90eib7/",
                       {
                         firstName: values.firstName,
                         lastName: values.lastName,
