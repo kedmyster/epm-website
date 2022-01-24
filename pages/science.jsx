@@ -13,7 +13,6 @@ import client from "../client";
 import { getSectionDataByName } from "../utils";
 import { useEffect } from "react";
 
-function Science(data) {
   useEffect(() => {
     document
       .querySelector(".menu-item--science")
