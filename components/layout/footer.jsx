@@ -104,41 +104,50 @@ function Footer({}) {
                   setTimeout(async () => {
                     setSubmitting(false);
 
-                    await axios.post(
+                    fetch(
                       "https://hooks.zapier.com/hooks/catch/5896166/b90eib7/",
                       {
-                        firstName: values.firstName,
-                        lastName: values.lastName,
-                        email: values.email,
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                          firstName: values.firstName,
+                          lastName: values.lastName,
+                          email: values.email,
+                        }),
                       }
-                    );
+                    )
+                      .then((response) => {
+                        const tl = gsap.timeline();
 
-                    const tl = gsap.timeline();
-
-                    tl.add("contact-form-submit");
-                    tl.fromTo(
-                      ".contact__form",
-                      {
-                        opacity: 1,
-                      },
-                      {
-                        opacity: 0,
-                        duration: 0.25,
-                      },
-                      "contact-form-submit"
-                    );
-                    tl.fromTo(
-                      ".contact__thanks",
-                      {
-                        opacity: 0,
-                      },
-                      {
-                        opacity: 1,
-                        duration: 0.25,
-                        zIndex: 11,
-                      },
-                      "contact-form-submit"
-                    );
+                        tl.add("contact-form-submit");
+                        tl.fromTo(
+                          ".contact__form",
+                          {
+                            opacity: 1,
+                          },
+                          {
+                            opacity: 0,
+                            duration: 0.25,
+                          },
+                          "contact-form-submit"
+                        );
+                        tl.fromTo(
+                          ".contact__thanks",
+                          {
+                            opacity: 0,
+                          },
+                          {
+                            opacity: 1,
+                            duration: 0.25,
+                            zIndex: 11,
+                          },
+                          "contact-form-submit"
+                        );
+                      })
+                      .catch((error) => {
+                        console.error(error);
+                      });
                   }, 400);
                 }}
               >
@@ -166,7 +175,9 @@ function Footer({}) {
                           placeholder="Email Address"
                           className={classNames(
                             "w-full font-light rounded-3xl px-5 py-2",
-                            { "outline-2 outline-red-500": errors.email }
+                            {
+                              "outline-2 outline-red-500": errors.email,
+                            }
                           )}
                         />
                       </div>

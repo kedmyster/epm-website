@@ -77,8 +77,6 @@ function MediaIPO({ data }) {
     ],
   };
 
-  console.log(data);
-
   return (
     <section
       id="ipo"
