@@ -1,9 +1,8 @@
+import { useEffect } from "react";
 import Head from "next/head";
-import IPOComponent from "../components/media/ipo";
 import MediaComponent from "../components/media/media";
 import client from "../client";
 import { getSectionDataByName } from "../utils";
-import { useEffect } from "react";
 
 function Media(data) {
   useEffect(() => {
@@ -22,7 +21,6 @@ function Media(data) {
         <meta name="keywords" content={data.keywords} />
       </Head>
 
-      <IPOComponent data={getSectionDataByName(data, "media__ipo")} />
       <MediaComponent data={getSectionDataByName(data, "media__media")} />
     </>
   );

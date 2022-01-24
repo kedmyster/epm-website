@@ -1,5 +1,5 @@
 module.exports = {
-  content: [
+  purge: [
     "./pages/**/*.js",
     "./pages/**/*.jsx",
     "./components/**/*.js",
@@ -46,7 +46,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        xxs: "0.6875rem",
+        "xxs": "0.6875rem",
         "epm-base": "0.9375rem",
         "4.5xl": "2.5rem",
         "5.5xl": "3.25rem",
@@ -54,7 +54,7 @@ module.exports = {
         "8.5xl": "7.5rem",
       },
       lineHeight: {
-        0: "0",
+        '0': '0',
       },
       colors: {
         "epm-gray-100": "#f8f8f8",
@@ -72,15 +72,15 @@ module.exports = {
         105: "35rem",
         109: "39rem",
         "sm-container": "50rem",
-        container: "58.125rem",
+        "container": "58.125rem",
         "lg-container": "73.75rem",
         "3/4-screen": "75vw",
         "1/4-screen": "25vw",
       },
       height: {
-        101: "31.25rem",
-        103: "37.5rem",
-        110: "56.375rem",
+        101 : "31.25rem",
+        103 : "37.5rem",
+        110 : "56.375rem",
         "2/3-screen": "66.66666vh",
         "1/3-screen": "33.33333vh",
         "5/12-screen": "41.66666vh",
@@ -88,17 +88,17 @@ module.exports = {
         "1/6-screen": "16.66667vh",
       },
       margin: {
-        15: "3.875rem",
-        "-15": "-3.875rem",
-        22: "5.625rem",
-        "-22": "-5.625rem",
-      },
+        '15': '3.875rem',
+        '-15': '-3.875rem',
+        '22': '5.625rem',
+        '-22': '-5.625rem',
+      }
     },
   },
   variants: {
     extend: {
-      borderWidth: ["last"],
-      margin: ["last"],
+      borderWidth: ['last'],
+      margin: ['last'],
     },
   },
   plugins: [],

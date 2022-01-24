@@ -462,7 +462,7 @@ function Header() {
                     href="/media"
                     className="uppercase font-title relative z-10"
                   >
-                    IPO & Media
+                    Media
                   </a>
                 </li>
               </ul>
@@ -748,7 +748,7 @@ function Header() {
                   className="block uppercase cursor-pointer relative font-title"
                   onClick={(event) => goToSection(event)}
                 >
-                  IPO & Media
+                  Media
                 </a>
               </li>
               <li className="font-title text-epm-gray-700 tracking-wide ">
