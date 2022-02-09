@@ -87,11 +87,8 @@ function Collaborations({ data }) {
         <div>
           {data.collaboration__logos.map((section) => {
             return (
-              <>
-                <div
-                  className="relative h-2/3-screen"
-                  key={slugify(section.title)}
-                >
+              <div key={slugify(section.title)}>
+                <div className="relative h-2/3-screen">
                   <div className="image animate opacity-0 absolute w-full h-full">
                     <Image
                       src={section.image.src}
@@ -152,7 +149,7 @@ function Collaborations({ data }) {
                     />
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
@@ -176,6 +173,7 @@ function Collaborations({ data }) {
                 {data.collaboration__logos.map((section, sectionIndex) => {
                   return (
                     <div
+                      key={slugify(section.title)}
                       className={classNames(
                         "collaborations__panel lg:w-1/2 px-8",
                         slugify(section.title)

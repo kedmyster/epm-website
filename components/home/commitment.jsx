@@ -68,13 +68,13 @@ function Commitment({ data }) {
             <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-x divide-white">
               {data.bullets.map((bullet) => {
                 return (
-                  <div className="item text-center w-1/3">
+                  <div key={bullet.title} className="item text-center w-1/3">
                     <div className="item-image h-14 flex items-center justify-center">
                       <Image
                         src={bullet.image.src}
                         alt="Alternative to Steroids"
-                        width={bullet.image.width / 2 }
-                        height={bullet.image.height / 2 }
+                        width={bullet.image.width / 2}
+                        height={bullet.image.height / 2}
                       />
                     </div>
                     <div className="item__title text-center text-sm font-title mt-1">
