@@ -120,7 +120,7 @@ function Community({ data }) {
                     </div>
                     <div className="overlay absolute w-full h-full inset-0 lg:transition-all lg:duration-250 lg:ease-in-out bg-black lg:bg-white group-hover:bg-black bg-opacity-50 lg:bg-opacity-75 group-hover:bg-opacity-50"></div>
                     <div className="container mx-auto px-12 lg:px-8 lg:py-8 xl:py-4 relative lg:opacity-0 lg:transition-all lg:duration-250 lg:ease-in-out">
-                      <div className="icon-quote text-left absolute -top-14 lg:-top-5 xl:-top-10 left-10 lg:left-10 xl:left-16">
+                      <div className="icon-quote text-start absolute -top-14 lg:-top-5 xl:-top-10 start-10 lg:start-10 xl:start-16">
                         {isMobile && (
                           <Image
                             src="/img/icons/quote.svg"
@@ -139,7 +139,7 @@ function Community({ data }) {
                         )}
                       </div>
                       <div className=" md:h-36 lg:h-40 xl:h-48 2xl:h-40">
-                        <div className="quote text-xl lg:text-lg 2xl:text-xl font-light italic xl:px-6 pb-6 text-left">
+                        <div className="quote text-xl lg:text-lg 2xl:text-xl font-light italic xl:px-6 pb-6 text-start">
                           {slide.quote}
                         </div>
                       </div>
@@ -156,8 +156,8 @@ function Community({ data }) {
             })}
           </Slider>
         </div>
-        <div className="lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="container mx-auto lg:ml-0 px-8 lg:pl-0 py-8 lg:w-80 2xl:w-96">
+        <div className="lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+          <div className="container mx-auto lg:ms-0 px-8 lg:ps-0 py-8 lg:w-80 2xl:w-96">
             <div className="mb-6 lg:mb-0">
               <div className="mb-6">
                 <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />

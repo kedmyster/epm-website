@@ -10,7 +10,6 @@ const THEME_DARK = "dark";
 const VISIBILITY_VISIBLE = "visible";
 const VISIBILITY_HIDDEN = "hidden";
 
-
 function SideMenu() {
   const animateSideMenuHover = (sideMenu, section, menuItem, pill, label) => {
     if (!section.id) {
@@ -378,7 +377,7 @@ function SideMenu() {
       <>
         <div
           id="side-menu"
-          className="side-menu fixed left-8 top-1/2 transform -translate-y-1/2 z-10"
+          className="side-menu fixed start-8 top-1/2 transform -translate-y-1/2 z-10"
         >
           <nav role="navigation">
             <ul>

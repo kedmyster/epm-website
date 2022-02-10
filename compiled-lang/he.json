@@ -2,19 +2,19 @@
   "common.close": [
     {
       "type": 0,
-      "value": "Close"
+      "value": "סגור"
     }
   ],
   "common.learnMore": [
     {
       "type": 0,
-      "value": "Learn More"
+      "value": "קרא עוד"
     }
   ],
   "common.playVideo": [
     {
       "type": 0,
-      "value": "Play Video"
+      "value": "צפה בסרטון"
     }
   ],
   "footer.contact.success.great": [
@@ -44,13 +44,13 @@
   "footer.il.address1": [
     {
       "type": 0,
-      "value": "4 Berkovitch St."
+      "value": "רחוב ברקוביץ 4"
     }
   ],
   "footer.il.address2": [
     {
       "type": 0,
-      "value": "Tel Aviv"
+      "value": "תל-אביב"
     }
   ],
   "footer.il.title": [
@@ -68,31 +68,31 @@
   "footer.information.media": [
     {
       "type": 0,
-      "value": "Media"
+      "value": "מדיה"
     }
   ],
   "footer.information.title": [
     {
       "type": 0,
-      "value": "Information"
+      "value": "מידע"
     }
   ],
   "footer.menu.about": [
     {
       "type": 0,
-      "value": "About"
+      "value": "אודות"
     }
   ],
   "footer.menu.careers": [
     {
       "type": 0,
-      "value": "Careers"
+      "value": "קריירה"
     }
   ],
   "footer.menu.media": [
     {
       "type": 0,
-      "value": "Media"
+      "value": "מדיה"
     }
   ],
   "footer.menu.privacyPolicy": [
@@ -152,7 +152,7 @@
   "header.menu.about": [
     {
       "type": 0,
-      "value": "About"
+      "value": "אודות"
     }
   ],
   "header.menu.about.advisoryBoard": [
@@ -182,13 +182,13 @@
   "header.menu.careers": [
     {
       "type": 0,
-      "value": "Careers"
+      "value": "קריירה"
     }
   ],
   "header.menu.contact": [
     {
       "type": 0,
-      "value": "Contact Us"
+      "value": "צור קשר"
     }
   ],
   "header.menu.ipoAndMedia": [

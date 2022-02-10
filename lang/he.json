@@ -1,12 +1,12 @@
 {
   "common.close": {
-    "defaultMessage": "Close"
+    "defaultMessage": "סגור"
   },
   "common.learnMore": {
-    "defaultMessage": "Learn More"
+    "defaultMessage": "קרא עוד"
   },
   "common.playVideo": {
-    "defaultMessage": "Play Video"
+    "defaultMessage": "צפה בסרטון"
   },
   "footer.contact.success.great": {
     "defaultMessage": "Great :)"
@@ -21,10 +21,10 @@
     "defaultMessage": "For more updates about EPM please fill in your details:"
   },
   "footer.il.address1": {
-    "defaultMessage": "4 Berkovitch St."
+    "defaultMessage": "רחוב ברקוביץ 4"
   },
   "footer.il.address2": {
-    "defaultMessage": "Tel Aviv"
+    "defaultMessage": "תל-אביב"
   },
   "footer.il.title": {
     "defaultMessage": "Israel Office"
@@ -33,19 +33,19 @@
     "defaultMessage": "Investor Relations"
   },
   "footer.information.media": {
-    "defaultMessage": "Media"
+    "defaultMessage": "מדיה"
   },
   "footer.information.title": {
-    "defaultMessage": "Information"
+    "defaultMessage": "מידע"
   },
   "footer.menu.about": {
-    "defaultMessage": "About"
+    "defaultMessage": "אודות"
   },
   "footer.menu.careers": {
-    "defaultMessage": "Careers"
+    "defaultMessage": "קריירה"
   },
   "footer.menu.media": {
-    "defaultMessage": "Media"
+    "defaultMessage": "מדיה"
   },
   "footer.menu.privacyPolicy": {
     "defaultMessage": "Privacy Policy"
@@ -75,7 +75,7 @@
     "defaultMessage": "US Headquarters"
   },
   "header.menu.about": {
-    "defaultMessage": "About"
+    "defaultMessage": "אודות"
   },
   "header.menu.about.advisoryBoard": {
     "defaultMessage": "Advisory Board"
@@ -90,10 +90,10 @@
     "defaultMessage": "Our Story"
   },
   "header.menu.careers": {
-    "defaultMessage": "Careers"
+    "defaultMessage": "קריירה"
   },
   "header.menu.contact": {
-    "defaultMessage": "Contact Us"
+    "defaultMessage": "צור קשר"
   },
   "header.menu.ipoAndMedia": {
     "defaultMessage": "IPO & Media"

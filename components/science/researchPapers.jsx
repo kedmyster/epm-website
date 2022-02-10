@@ -172,7 +172,7 @@ function ResearchPapers({ data }) {
               {data.papers.map((slide) => {
                 return (
                   <div className="item" key={slide.title}>
-                    <div className="relative text-center w-full h-2/3-screen lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
+                    <div className="relative text-center w-full h-2/3-screen lg:text-start lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
                       <div className="container mx-auto px-16 py-8 lg:flex lg:flex-row lg:space-x-20 z-10">
                         <div className="item__title font-title text-2xl uppercase pb-5">
                           {slide.title}
@@ -198,7 +198,7 @@ function ResearchPapers({ data }) {
           <div>
             <div
               id="research-read-more"
-              className="read-more bg-white h-2/3-screen w-full hidden z-0 top-0 left-0 opacity-0"
+              className="read-more bg-white h-2/3-screen w-full hidden z-0 top-0 start-0 opacity-0"
               aria-expanded="false"
             >
               <div className="flex flex-wrap lg:flex-row-reverse lg:2/3-h-screen bg-epm-gray-700">
@@ -228,7 +228,7 @@ function ResearchPapers({ data }) {
           <div className="h-2/3-screen ">
             <div
               id="research-papers-list"
-              className="relative z-10 w-full h-full text-left flex flex-wrap content-end"
+              className="relative z-10 w-full h-full text-start flex flex-wrap content-end"
             >
               <div className="absolute w-full h-full">
                 <Image
@@ -250,10 +250,10 @@ function ResearchPapers({ data }) {
                       onClick={(event) => togglePaper(event, slide)}
                       data-slide={index}
                     >
-                      <div className="item__box__top absolute top-0 left-0 bg-white w-full h-px"></div>
-                      <div className="item__box__left absolute top-0 left-0 bg-white w-px h-full transform scale-0"></div>
-                      <div className="item__box__bottom absolute bottom-0 left-0 bg-white w-full h-px transform scale-0"></div>
-                      <div className="item__box__right absolute bottom-0 right-0 bg-white w-px h-full transform scale-0"></div>
+                      <div className="item__box__top absolute top-0 start-0 bg-white w-full h-px"></div>
+                      <div className="item__box__start absolute top-0 start-0 bg-white w-px h-full transform scale-0"></div>
+                      <div className="item__box__bottom absolute bottom-0 start-0 bg-white w-full h-px transform scale-0"></div>
+                      <div className="item__box__right absolute bottom-0 end-0 bg-white w-px h-full transform scale-0"></div>
                       <div className="item__content">
                         <div className="item__title font-title text-2xl uppercase mb-5 lg:h-16">
                           {slide.title}
@@ -274,7 +274,7 @@ function ResearchPapers({ data }) {
             </div>
             <div
               id="research-read-more"
-              className="read-more bg-white h-2/3-screen w-full absolute z-0 top-0 left-0 opacity-0"
+              className="read-more bg-white h-2/3-screen w-full absolute z-0 top-0 start-0 opacity-0"
               aria-expanded="false"
             >
               <div className="flex flex-wrap lg:flex-row-reverse lg:2/3-h-screen">
@@ -285,8 +285,8 @@ function ResearchPapers({ data }) {
                     className="w-full h-2/3-screen"
                   />
                 </div>
-                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
-                  <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
+                <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
+                  <div className="container px-8 lg:ps-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
                     <div className="lg:text-epm-base text-epm-gray-500">
                       <FormattedMessage
                         id="science.research.paper.title"
@@ -316,7 +316,7 @@ function ResearchPapers({ data }) {
             </div>
           </div>
           <div className="h-1/3-screen">
-            <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:ps-24 xl:ps-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
                   name={<span>{data.name}</span>}

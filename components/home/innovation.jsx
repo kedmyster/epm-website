@@ -116,7 +116,7 @@ function Innovation({ data }) {
               {data.bullets.map((slide) => {
                 return (
                   <div className="item" key={slide.title}>
-                    <div className="relative text-center w-full lg:text-left lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
+                    <div className="relative text-center w-full lg:text-start lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
                       <div className="absolute w-full h-full">
                         <Image
                           src={slide.images.mobile.src}
@@ -188,7 +188,7 @@ function Innovation({ data }) {
             </div>
 
             <div className="lg:h-2/3-screen">
-              <div className="relative text-center w-full lg:h-full lg:text-left flex flex-wrap content-end">
+              <div className="relative text-center w-full lg:h-full lg:text-start flex flex-wrap content-end">
                 <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
                 <div className="animate opacity-0 container mx-auto px-8 py-8 lg:w-container lg:text-white lg:flex lg:flex-row lg:space-x-20 z-10">
                   {data.bullets.map((slide, index) => {
@@ -199,10 +199,10 @@ function Innovation({ data }) {
                         onMouseEnter={() => showMore(index)}
                         data-slide={index}
                       >
-                        <div className="item__box__top absolute top-0 left-0 bg-white w-full h-px"></div>
-                        <div className="item__box__left absolute top-0 left-0 bg-white w-px h-full transform scale-0"></div>
-                        <div className="item__box__bottom absolute bottom-0 left-0 bg-white w-full h-px transform scale-0"></div>
-                        <div className="item__box__right absolute bottom-0 right-0 bg-white w-px h-full transform scale-0"></div>
+                        <div className="item__box__top absolute top-0 start-0 bg-white w-full h-px"></div>
+                        <div className="item__box__start absolute top-0 start-0 bg-white w-px h-full transform scale-0"></div>
+                        <div className="item__box__bottom absolute bottom-0 start-0 bg-white w-full h-px transform scale-0"></div>
+                        <div className="item__box__right absolute bottom-0 start-0 bg-white w-px h-full transform scale-0"></div>
                         <div className="item__content">
                           <div className="item__title font-light font-title text-2xl uppercase mb-5 lg:h-16">
                             {slide.title}
@@ -219,7 +219,7 @@ function Innovation({ data }) {
             </div>
 
             <div className="lg:h-1/3-screen">
-              <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
+              <div className="container mx-auto px-8 lg:ps-24 xl:ps-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col justify-between">
                 <div>
                   <SectionHeader
                     name={<span>{data.name}</span>}

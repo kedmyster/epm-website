@@ -141,7 +141,7 @@ function OurStory({ data }) {
           />
         )}
         {
-          <span className="animate opacity-0 button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
+          <span className="animate opacity-0 button absolute w-48 start-1/2 transform -translate-x-1/2 bottom-8">
             <Button style="light" onClick={(event) => toggleVideo(event)}>
               <FormattedMessage
                 id="common.playVideo"
@@ -157,8 +157,8 @@ function OurStory({ data }) {
         ></div>
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
+      <div className="lg:flex-shrink-0 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
           <div className="lg:mb-0">
             <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>

@@ -294,10 +294,10 @@ function Header() {
               </a>
             </Link>
           </div>
-          <div className="desktop-menu hidden xl:block flex-grow text-center xl:ml-32">
+          <div className="desktop-menu hidden xl:block flex-grow text-center xl:ms-32">
             <nav role="navigation">
               <ul>
-                <li className="menu-item menu-item--about inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--about inline-block pe-12 py-1 relative">
                   <Link href="/about">
                     <a className="uppercase font-title relative z-10">
                       <FormattedMessage
@@ -306,7 +306,7 @@ function Header() {
                       />
                     </a>
                   </Link>
-                  <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
+                  <ul className="sub-menu font-light leading-tight text-white text-start absolute top-8 start-0 w-36">
                     <li className="mb-4">
                       <Link
                         href="/about/#our-story"
@@ -361,7 +361,7 @@ function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className="menu-item menu-item--treatments inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--treatments inline-block pe-12 py-1 relative">
                   <Link href="/treatments">
                     <a className="uppercase font-title relative z-10">
                       <FormattedMessage
@@ -370,7 +370,7 @@ function Header() {
                       />
                     </a>
                   </Link>
-                  <ul className="sub-menu font-light leading-tight	text-white text-left absolute top-8 left-0 w-36">
+                  <ul className="sub-menu font-light leading-tight	text-white text-start absolute top-8 start-0 w-36">
                     <li className="mb-4">
                       <Link
                         href="/treatments/#current-developments"
@@ -412,17 +412,16 @@ function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className="menu-item menu-item--science inline-block pr-12 py-1 relative">
-                  <a
-                    href="/science"
-                    className="uppercase font-title relative z-10"
-                  >
-                    <FormattedMessage
-                      id="header.menu.science"
-                      defaultMessage="Science"
-                    />
-                  </a>
-                  <ul className="sub-menu font-light leading-tight text-white text-left absolute top-8 left-0 w-36">
+                <li className="menu-item menu-item--science inline-block pe-12 py-1 relative">
+                  <Link href="/science">
+                    <a className="uppercase font-title relative z-10">
+                      <FormattedMessage
+                        id="header.menu.science"
+                        defaultMessage="Science"
+                      />
+                    </a>
+                  </Link>
+                  <ul className="sub-menu font-light leading-tight text-white text-start absolute top-8 start-0 w-36">
                     <li className="mb-3">
                       <Link
                         href="/science/#cannabinoids"
@@ -508,7 +507,7 @@ function Header() {
           <div className="desktop-menu hidden xl:block">
             <nav role="navigation">
               <ul className="font-title">
-                <li className="menu-item menu-item--careers inline-block pr-12 py-1 relative">
+                <li className="menu-item menu-item--careers inline-block pe-12 py-1 relative">
                   <Link href="/careers">
                     <a className="uppercase font-title relative z-10">
                       <FormattedMessage
@@ -631,7 +630,7 @@ function Header() {
 
       <div
         id="menu"
-        className="menu mobile-menu fixed inset-x-0 lg:inset-x-auto lg:inset-y-0 lg:top-0 lg:right-0 lg:w-96 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15 lg:mt-0 lg:pt-16"
+        className="menu mobile-menu fixed inset-x-0 lg:inset-x-auto lg:inset-y-0 lg:top-0 lg:end-0 lg:w-96 z-50 bg-white bg-opacity-100 shadow-md hidden mt-15 lg:mt-0 lg:pt-16"
       >
         <div div className="container mx-auto p-8 relative">
           <nav role="navigation">

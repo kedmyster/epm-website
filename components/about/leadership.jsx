@@ -102,8 +102,8 @@ function Leadership({ data }) {
             data-side-menu-visibility="visible"
             data-header-menu-visibility="visible"
           >
-            <div className="lg:flex-grow lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-              <div className="container mx-auto lg:mx-0 px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:top-0">
+            <div className="lg:flex-grow lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+              <div className="container mx-auto lg:mx-0 px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:top-0">
                 <div className="">
                   <SectionHeader
                     name={group.name}
@@ -112,7 +112,10 @@ function Leadership({ data }) {
                 </div>
                 {(isTablet || isDesktop) && (
                   <div className="animate opacity-0 text lg:text-epm-base lg:mt-6">
-                    <BlockContent blocks={group.content} className="external-text" />
+                    <BlockContent
+                      blocks={group.content}
+                      className="external-text"
+                    />
                   </div>
                 )}
               </div>
@@ -163,7 +166,7 @@ function Leadership({ data }) {
                               />
                             )}
                           </div>
-                          <div className="leader_content flex flex-col flex-grow pl-4 lg:pl-8 xl:pl-24 2xl:pl-36">
+                          <div className="leader_content flex flex-col flex-grow ps-4 lg:ps-8 xl:ps-24 2xl:ps-36">
                             <div className="flex flex-col justify-center h-full lg:h-1/6-screen">
                               <div className="leader__name text-base lg:text-xl xl:text-2xl leading-tight font-bold mb-1">
                                 {leader.name}
@@ -177,7 +180,10 @@ function Leadership({ data }) {
                             </div>
                             {isDesktop && (
                               <div className="leader__text font-light font-epm-base 2xl:text-lg mt-8 lg:mb-8 lg:w-64 xl:w-78 2xl:w-101 hidden">
-                                <BlockContent blocks={leader.text} className="external-text" />
+                                <BlockContent
+                                  blocks={leader.text}
+                                  className="external-text"
+                                />
                               </div>
                             )}
                           </div>
@@ -208,7 +214,10 @@ function Leadership({ data }) {
                         </div>
                         {(isMobile || isTablet) && (
                           <div className="leader__text px-8 pt-4 pb-8 hidden">
-                            <BlockContent blocks={leader.text} className="external-text" />
+                            <BlockContent
+                              blocks={leader.text}
+                              className="external-text"
+                            />
                           </div>
                         )}
                       </div>

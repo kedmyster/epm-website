@@ -74,7 +74,7 @@ function MediaComponent({ data }) {
                       <div className="item-name mb-4 lg:mb-2 text-lg lg:text-5xl hidden">
                         {slide.name}
                       </div>
-                      <div className="text-center lg:text-left lg:inline-block lg:w-96 xl:w-105">
+                      <div className="text-center lg:text-start lg:inline-block lg:w-96 xl:w-105">
                         <div className="quote lg:text-xl xl:text-2xl mb-4 lg:h-20 xl:h-auto">
                           {slide.title}
                         </div>

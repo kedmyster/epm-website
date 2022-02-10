@@ -159,7 +159,7 @@ function Collaborations({ data }) {
       {(isTablet || isDesktop) && (
         <div className="lg:h-screen relative">
           <div className="h-2/3-screen">
-            <div className="relative w-full h-full text-left flex">
+            <div className="relative w-full h-full text-start flex">
               <div className="absolute w-full h-full">
                 <Image
                   src="/img/desktop/science/collaborations@2x.jpg"
@@ -225,10 +225,10 @@ function Collaborations({ data }) {
 
                       <div
                         className={classNames(
-                          "more-info commercial-more-info container lg:w-1/2 lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col xl:justify-center text-left text-epm-gray-700 lg:bg-white lg:px-16 xl:px-36 py-8 lg:h-2/3-screen lg:overflow-y-auto",
+                          "more-info commercial-more-info container lg:w-1/2 lg:opacity-0 lg:absolute z-0 top-0 end-0 hidden lg:flex lg:flex-col xl:justify-center text-start text-epm-gray-700 lg:bg-white lg:px-16 xl:px-36 py-8 lg:h-2/3-screen lg:overflow-y-auto",
                           {
-                            "right-0": sectionIndex % 2 === 0,
-                            "left-0": sectionIndex % 2 === 1,
+                            "end-0": sectionIndex % 2 === 0,
+                            "start-0": sectionIndex % 2 === 1,
                           }
                         )}
                         data-collaboration-panel={slugify(section.title)}
@@ -247,7 +247,7 @@ function Collaborations({ data }) {
           </div>
 
           <div className="lg:h-1/3-screen">
-            <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:ps-24 xl:ps-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
                   name={<span>{data.name}</span>}

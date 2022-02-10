@@ -81,8 +81,8 @@ function Pipeline({ data }) {
             </div>
           </div>
         </div>
-        <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:border-t lg:border-epm-gray-300lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-          <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
+        <div className="lg:flex-shrink-0 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:border-t lg:border-epm-gray-300lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+          <div className="container px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
             <div className="">
               <SectionHeader
                 name={<span>{data.name}</span>}

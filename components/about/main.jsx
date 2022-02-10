@@ -103,7 +103,7 @@ function Main({ data }) {
         )}
       </div>
       {/*<div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>*/}
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-24 lg:bottom-16 lg:w-full">
+      <div className="absolute start-1/2 transform -translate-x-1/2 bottom-24 lg:bottom-16 lg:w-full">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <p className="text-xs animate opacity-0 uppercase font-title mb-4 lg:hidden">
             {data.name}
@@ -113,7 +113,7 @@ function Main({ data }) {
           </h1>
         </div>
       </div>
-      <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
+      <div className="scroll-to-content animate opacity-0 absolute bottom-12 start-1/2 transform -translate-x-1/2">
         <Link href="#our-story" onClick={scrollToContent}>
           <a className="transition-opacity duration-150 hover:opacity-70">
             <Image

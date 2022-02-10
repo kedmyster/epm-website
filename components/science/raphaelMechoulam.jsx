@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import {
@@ -12,7 +12,7 @@ import {
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function RaphaelMechoulam({data}) {
+function RaphaelMechoulam({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -205,15 +205,11 @@ function RaphaelMechoulam({data}) {
           })}
         </Slider>
       </div>
-      <div className="lg:pl-24 xl:pl-56 pt-10 md:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container lg:w-80 2xl:w-96 px-8 lg:pl-0 py-8">
+      <div className="lg:ps-24 xl:ps-56 pt-10 md:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container lg:w-80 2xl:w-96 px-8 lg:ps-0 py-8">
           <SectionHeader
             name={<span>{data.name}</span>}
-            title={
-              <h2 className="lg:pr-26">
-                {data.title}
-              </h2>
-            }
+            title={<h2 className="lg:pe-26">{data.title}</h2>}
           />
           <div className="text lg:text-epm-base animate opacity-0 mt-6">
             <BlockContent blocks={data.content} className="external-text" />

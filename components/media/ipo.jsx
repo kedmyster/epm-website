@@ -58,7 +58,7 @@ function MediaIPO({ data }) {
                 key={category.name}
               >
                 <div className="flex lg:flex-row items-center justify-between mx-8 lg:mx-0 w-full">
-                  <div className="text-center lg:text-left lg:inline-block lg:w-96 xl:w-105">
+                  <div className="text-center lg:text-start lg:inline-block lg:w-96 xl:w-105">
                     <div className="text-3xl lg:text-xl xl:text-4xl font-bold lg:mb-4 lg:h-20 xl:h-auto">
                       {category.name}
                     </div>
@@ -88,7 +88,7 @@ function MediaIPO({ data }) {
                       <div>
                         {category.button.map((link, index) => {
                           return (
-                            <div className="button pt-0 inline-block text-center pl-6">
+                            <div className="button pt-0 inline-block text-center ps-6">
                               <Button
                                 style="dark"
                                 href={link.link}

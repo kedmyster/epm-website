@@ -74,9 +74,9 @@ function Footer({}) {
       data-side-menu-visibility="hidden"
       data-logo-color="dark"
     >
-      <div className="animate opacity-0 container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:pl-24 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
+      <div className="animate opacity-0 container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:ps-24 xl:ps-56 2xl:ps-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
-          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-96 2xl:w-109 xl:pr-0">
+          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-96 2xl:w-109 xl:pe-0">
             <div className="mb-4 lg:mb-8">
               <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-epm-gray-700">
                 <FormattedMessage
@@ -166,7 +166,7 @@ function Footer({}) {
                           type="text"
                           name="firstName"
                           placeholder="First Name"
-                          className="w-full font-light rounded-3xl px-5 py-2 mr-4 mb-4 lg:mb-0"
+                          className="w-full font-light rounded-3xl px-5 py-2 me-4 mb-4 lg:mb-0"
                         />
                         <Field
                           type="text"
@@ -203,7 +203,7 @@ function Footer({}) {
               </Formik>
             </div>
           </div>
-          <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">
+          <div className="contact__thanks mb-12 opacity-0 absolute top-0 start-0 z-0">
             <div className="mb-8">
               <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-white">
                 <FormattedMessage

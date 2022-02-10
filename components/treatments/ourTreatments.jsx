@@ -195,7 +195,7 @@ function OurTreatments({ data }) {
                         </div>
                         <div
                           className={classNames(
-                            "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
+                            "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ms-2 ps-2 me-2 mp-2",
                             {
                               "border-r":
                                 index < data.treatments__sections.length - 1,
@@ -216,8 +216,8 @@ function OurTreatments({ data }) {
               </div>
             </div>
           </div>
-          <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-            <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+          <div className="lg:flex-shrink-0 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+            <div className="container px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
               <div className="mb-6 lg:mb-0">
                 <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
               </div>
@@ -326,7 +326,7 @@ function OurTreatments({ data }) {
                               </div>
                               <div
                                 className={classNames(
-                                  "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
+                                  "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ms-2 ps-2 me-2 mp-2",
                                   {
                                     "border-r":
                                       index < slide.product.icons.length - 1,
@@ -360,8 +360,8 @@ function OurTreatments({ data }) {
                     )}
                   </div>
                 </div>
-                <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-                  <div className="container lg:px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
+                <div className="lg:flex-shrink-0 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+                  <div className="container lg:px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 lg:flex lg:flex-col lg:justify-between lg:h-screen">
                     <div className="px-8 lg:px-0 mb-6 lg:mb-0">
                       <SectionHeader
                         name={slide.name}
