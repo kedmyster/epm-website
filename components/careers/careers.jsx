@@ -5,6 +5,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -113,19 +114,17 @@ function CareersComponent({ data, hasPositions }) {
       </div>
       {hasPositions && (
         <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
-          <a
-            href="#story"
-            onClick={scrollToContent}
-            className="transition-opacity duration-150 hover:opacity-70"
-          >
-            <Image
-              src="/img/icons/arrow_down_dark.svg"
-              width="28"
-              height="16"
-              alt="Open Positions"
-              loading="eager"
-            />
-          </a>
+          <Link href="#story" onClick={scrollToContent}>
+            <a className="transition-opacity duration-150 hover:opacity-70">
+              <Image
+                src="/img/icons/arrow_down_dark.svg"
+                width="28"
+                height="16"
+                alt="Open Positions"
+                loading="eager"
+              />
+            </a>
+          </Link>
         </div>
       )}
     </section>

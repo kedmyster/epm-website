@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { IntlProvider } from "react-intl";
 import Header from "../components/layout/header.jsx";
 import Footer from "../components/layout/footer.jsx";
 import SideMenu from "../components/layout/sideMenu.jsx";
 import SocialMedia from "../components/layout/socialMedia.jsx";
-import { init } from '../utils/sentry';
+import { init } from "../utils/sentry";
 
 init();
 
@@ -15,11 +17,31 @@ import "tailwindcss/tailwind.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+async function loadLocaleData(locale) {
+  switch (locale) {
+    case "he":
+      return await import("../compiled-lang/he.json");
+    default:
+      return await import("../compiled-lang/en.json");
+  }
+}
+
 function MyApp({ Component, pageProps, err }) {
   const windowWidth = useWindowWidth();
+  const [messages, setMessages] = useState({});
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const getTranslation = async () => {
+      const translations = await loadLocaleData(router.locale);
+      setMessages(translations);
+    };
+
+    getTranslation();
+  }, []);
 
   const animateSectionContent = (section) => {
     if (section) {
@@ -87,7 +109,7 @@ function MyApp({ Component, pageProps, err }) {
   }, [windowWidth]);
 
   useEffect(() => {
-    const platform = (navigator && navigator.platform || '').toLowerCase();
+    const platform = ((navigator && navigator.platform) || "").toLowerCase();
     if (/win/.test(platform)) {
       document
         .querySelector("html")
@@ -167,13 +189,15 @@ function MyApp({ Component, pageProps, err }) {
   };
 
   return (
-    <div className="app">
-      <Header />
-      <Component {...pageProps} err={err}/>
-      {(isDesktop) && <SideMenu />}
-      {(isTablet || isDesktop) && <SocialMedia />}
-      <Footer />
-    </div>
+    <IntlProvider messages={messages} locale={router.locale} defaultLocale="en">
+      <div className="app">
+        <Header />
+        <Component {...pageProps} err={err} />
+        {isDesktop && <SideMenu />}
+        {(isTablet || isDesktop) && <SocialMedia />}
+        <Footer />
+      </div>
+    </IntlProvider>
   );
 }
 

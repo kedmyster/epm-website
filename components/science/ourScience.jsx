@@ -3,6 +3,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
+import { FormattedMessage } from "react-intl";
 import client from "../../client";
 import { gsap } from "gsap";
 import slugify from "slugify";
@@ -191,7 +192,10 @@ function OurScience({ data }) {
                           style="light"
                           onClick={(event) => toggleVideo(event)}
                         >
-                          Play Video
+                          <FormattedMessage
+                            id="common.playVideo"
+                            defaultMessage="Play Video"
+                          />
                         </Button>
                       </span>
                     </div>

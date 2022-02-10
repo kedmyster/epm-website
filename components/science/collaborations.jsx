@@ -8,6 +8,7 @@ import client from "../../client";
 import classNames from "classnames";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import { FormattedMessage } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -214,7 +215,10 @@ function Collaborations({ data }) {
                               toggleLearnMore(event, slugify(section.title))
                             }
                           >
-                            Learn More
+                            <FormattedMessage
+                              id="common.learnMore"
+                              defaultMessage="Learn More"
+                            />
                           </Button>
                         </div>
                       </div>

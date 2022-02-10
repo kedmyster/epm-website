@@ -32,51 +32,6 @@ function MediaIPO({ data }) {
     }
   }, [windowWidth]);
 
-  const ipo = {
-    name: "Investor Relations",
-    title: "Title",
-    description:
-      "Few sentences. epm is planning... a fast-paced and dynamic company, striving to develop new medicines and to enable safer treatments for patients, by collaborating with leading",
-    info: "For additional information and to join the IPO - Click here!",
-    categories: [
-      {
-        category: "Prospects",
-        links: [
-          {
-            text: "English",
-            link: "/",
-          },
-          {
-            text: "Hebrew",
-            link: "/",
-          },
-        ],
-      },
-      {
-        category: "IPO Deck",
-        links: [
-          {
-            text: "English",
-            link: "/",
-          },
-          {
-            text: "Hebrew",
-            link: "/",
-          },
-        ],
-      },
-      {
-        category: "Videos",
-        links: [
-          {
-            text: "Watch",
-            link: "",
-          },
-        ],
-      },
-    ],
-  };
-
   return (
     <section
       id="ipo"

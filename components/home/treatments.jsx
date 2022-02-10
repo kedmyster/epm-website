@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { FormattedMessage } from "react-intl";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import Link from "next/link";
 import {
   SliderCustomPreviousArrow,
   SliderCustomNextArrow,
@@ -85,9 +87,6 @@ function Treatments({ data }) {
                       </div>
                       <div className="item__title text-center text-base font-title uppercase w-32 h-12 mx-auto flex items-center justify-center">
                         {slide.title}
-                        {/*{" "}<span className="block normal-case text-epm-gray-500">
-                      (Crohn’s & Colitis)
-                      </span> */}
                       </div>
                     </div>
                   );
@@ -99,7 +98,7 @@ function Treatments({ data }) {
             <div className="container mx-auto px-8 py-8">
               <div className="mb-6">
                 <SectionHeader
-                  name="Our Treatments"
+                  name={<span>Our Treatments</span>}
                   title={<h2>Medicine We Develop</h2>}
                 />
               </div>
@@ -129,7 +128,7 @@ function Treatments({ data }) {
             <div className="container mx-auto px-8 py-8">
               <div className="text-center mb-6">
                 <SectionHeader
-                  name="Our Treatments"
+                  name={<span>Our Treatments</span>}
                   title={<h2>Medicine We Develop</h2>}
                 />
               </div>
@@ -147,31 +146,30 @@ function Treatments({ data }) {
               <div className="flex flex-row justify-center">
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a
-                      href="/treatments/#inflammatory-bowel-disease"
-                      className="leading-0 transition-opacity duration-150 hover:opacity-70"
-                    >
-                      {isTablet && (
-                        <Image
-                          src="/img/desktop/treatments/treatments-pills@2x.png"
-                          alt="Oral for IBD (Crohn’s & Colitis)"
-                          width="215"
-                          height="249"
-                          layout="intrinsic"
-                          quality={100}
-                        />
-                      )}
-                      {isDesktop && (
-                        <Image
-                          src="/img/desktop/treatments/treatments-pills@2x.png"
-                          alt="Oral for IBD (Crohn’s & Colitis)"
-                          width="227"
-                          height="263"
-                          layout="intrinsic"
-                          quality={100}
-                        />
-                      )}
-                    </a>
+                    <Link href="/treatments/#inflammatory-bowel-disease">
+                      <a className="leading-0 transition-opacity duration-150 hover:opacity-70">
+                        {isTablet && (
+                          <Image
+                            src="/img/desktop/treatments/treatments-pills@2x.png"
+                            alt="Oral for IBD (Crohn’s & Colitis)"
+                            width="215"
+                            height="249"
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                        {isDesktop && (
+                          <Image
+                            src="/img/desktop/treatments/treatments-pills@2x.png"
+                            alt="Oral for IBD (Crohn’s & Colitis)"
+                            width="227"
+                            height="263"
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                      </a>
+                    </Link>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
                     Oral for IBD{" "}
@@ -182,31 +180,30 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a
-                      href="/treatments/#psoriasis"
-                      className="leading-0 transition-opacity duration-150 hover:opacity-70"
-                    >
-                      {isTablet && (
-                        <Image
-                          src="/img/desktop/treatments/treatments-tube@2x.png"
-                          alt="Topical for Psoriasis"
-                          width="86"
-                          height="295"
-                          layout="intrinsic"
-                          quality={100}
-                        />
-                      )}
-                      {isDesktop && (
-                        <Image
-                          src="/img/desktop/treatments/treatments-tube@2x.png"
-                          alt="Topical for Psoriasis"
-                          width="91"
-                          height="312"
-                          layout="intrinsic"
-                          quality={100}
-                        />
-                      )}
-                    </a>
+                    <Link href="/treatments/#psoriasis">
+                      <a className="leading-0 transition-opacity duration-150 hover:opacity-70">
+                        {isTablet && (
+                          <Image
+                            src="/img/desktop/treatments/treatments-tube@2x.png"
+                            alt="Topical for Psoriasis"
+                            width="86"
+                            height="295"
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                        {isDesktop && (
+                          <Image
+                            src="/img/desktop/treatments/treatments-tube@2x.png"
+                            alt="Topical for Psoriasis"
+                            width="91"
+                            height="312"
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                      </a>
+                    </Link>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 px-20 py-3 mt-6 h-20">
                     Topical for
@@ -216,31 +213,30 @@ function Treatments({ data }) {
                 </div>
                 <div className="item flex flex-col w-1/3 items-center justify-between">
                   <div className="item__image flex justify-center items-end flex-grow">
-                    <a
-                      href="/treatments/#psoriasis"
-                      className="leading-0 transition-opacity duration-150 hover:opacity-70"
-                    >
-                      {isTablet && (
-                        <Image
-                          src="/img/desktop/treatments/treatments-iv@2x.png"
-                          alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
-                          width="190"
-                          height="250"
-                          layout="intrinsic"
-                          quality={100}
-                        />
-                      )}
-                      {isDesktop && (
-                        <Image
-                          src="/img/desktop/treatments/treatments-iv@2x.png"
-                          alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
-                          width="201"
-                          height="263"
-                          layout="intrinsic"
-                          quality={100}
-                        />
-                      )}
-                    </a>
+                    <Link href="/treatments/#psoriasis">
+                      <a className="leading-0 transition-opacity duration-150 hover:opacity-70">
+                        {isTablet && (
+                          <Image
+                            src="/img/desktop/treatments/treatments-iv@2x.png"
+                            alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
+                            width="190"
+                            height="250"
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                        {isDesktop && (
+                          <Image
+                            src="/img/desktop/treatments/treatments-iv@2x.png"
+                            alt="IV for ARDS (Acute Respiratory Distress Syndrome)"
+                            width="201"
+                            height="263"
+                            layout="intrinsic"
+                            quality={100}
+                          />
+                        )}
+                      </a>
+                    </Link>
                   </div>
                   <div className="item__title text-center text-base font-title uppercase py-3 mt-6 h-20">
                     IV for ARDS

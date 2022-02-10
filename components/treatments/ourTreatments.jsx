@@ -3,6 +3,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
+import { FormattedMessage } from "react-intl";
 import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
@@ -226,7 +227,10 @@ function OurTreatments({ data }) {
               {(isTablet || isDesktop) && (
                 <div>
                   <span className="text-xxs xl:text-xs 2xl:text-epm-base normal-case text-epm-gray-500 font-light">
-                    Images shown are for illustration purposes only
+                    <FormattedMessage
+                      id="treatments.disclaimer"
+                      defaultMessage="Images shown are for illustration purposes only"
+                    />
                   </span>
                 </div>
               )}
@@ -415,7 +419,10 @@ function OurTreatments({ data }) {
                     {(isTablet || isDesktop) && (
                       <div>
                         <span className="text-xxs xl:text-xs 2xl:text-epm-base normal-case text-epm-gray-500 font-light">
-                          Images shown are for illustration purposes only
+                          <FormattedMessage
+                            id="treatments.disclaimer"
+                            defaultMessage="Images shown are for illustration purposes only"
+                          />
                         </span>
                       </div>
                     )}

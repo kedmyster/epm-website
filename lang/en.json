@@ -1,0 +1,137 @@
+{
+  "common.close": {
+    "defaultMessage": "Close"
+  },
+  "common.learnMore": {
+    "defaultMessage": "Learn More"
+  },
+  "common.playVideo": {
+    "defaultMessage": "Play Video"
+  },
+  "footer.contact.success.great": {
+    "defaultMessage": "Great :)"
+  },
+  "footer.contact.success.thanks": {
+    "defaultMessage": "Thank You!"
+  },
+  "footer.copyright": {
+    "defaultMessage": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"
+  },
+  "footer.description": {
+    "defaultMessage": "For more updates about EPM please fill in your details:"
+  },
+  "footer.il.address1": {
+    "defaultMessage": "4 Berkovitch St."
+  },
+  "footer.il.address2": {
+    "defaultMessage": "Tel Aviv"
+  },
+  "footer.il.title": {
+    "defaultMessage": "Israel Office"
+  },
+  "footer.information.ir": {
+    "defaultMessage": "Investor Relations"
+  },
+  "footer.information.media": {
+    "defaultMessage": "Media"
+  },
+  "footer.information.title": {
+    "defaultMessage": "Information"
+  },
+  "footer.menu.about": {
+    "defaultMessage": "About"
+  },
+  "footer.menu.careers": {
+    "defaultMessage": "Careers"
+  },
+  "footer.menu.media": {
+    "defaultMessage": "Media"
+  },
+  "footer.menu.privacyPolicy": {
+    "defaultMessage": "Privacy Policy"
+  },
+  "footer.menu.science": {
+    "defaultMessage": "Science"
+  },
+  "footer.menu.termsOfUse": {
+    "defaultMessage": "Terms of Use"
+  },
+  "footer.menu.treatments": {
+    "defaultMessage": "Treatments"
+  },
+  "footer.title": {
+    "defaultMessage": "Make a Change with Us"
+  },
+  "footer.us.address1": {
+    "defaultMessage": "1347 19th St."
+  },
+  "footer.us.address2": {
+    "defaultMessage": "Los Angeles, Santa Monica, 90404"
+  },
+  "footer.us.tel": {
+    "defaultMessage": "Tel: +1 (323) 307-2111"
+  },
+  "footer.us.title": {
+    "defaultMessage": "US Headquarters"
+  },
+  "header.menu.about": {
+    "defaultMessage": "About"
+  },
+  "header.menu.about.advisoryBoard": {
+    "defaultMessage": "Advisory Board"
+  },
+  "header.menu.about.boardOfDirectors": {
+    "defaultMessage": "Board of Directors"
+  },
+  "header.menu.about.executiveLeadership": {
+    "defaultMessage": "Executive Leadership"
+  },
+  "header.menu.about.story": {
+    "defaultMessage": "Our Story"
+  },
+  "header.menu.careers": {
+    "defaultMessage": "Careers"
+  },
+  "header.menu.contact": {
+    "defaultMessage": "Contact Us"
+  },
+  "header.menu.ipoAndMedia": {
+    "defaultMessage": "IPO & Media"
+  },
+  "header.menu.science": {
+    "defaultMessage": "Science"
+  },
+  "header.menu.science.cannabiniods": {
+    "defaultMessage": "About Cannabiniod Acids"
+  },
+  "header.menu.science.collaborations": {
+    "defaultMessage": "Key Collaborations"
+  },
+  "header.menu.science.mechoulam": {
+    "defaultMessage": "Prof. Mechoulam Bio"
+  },
+  "header.menu.science.pipeline": {
+    "defaultMessage": "Pipeline"
+  },
+  "header.menu.science.research": {
+    "defaultMessage": "Research Papers"
+  },
+  "header.menu.treatments": {
+    "defaultMessage": "Treatments"
+  },
+  "header.menu.treatments.currentDevelopment": {
+    "defaultMessage": "Current Developments"
+  },
+  "header.menu.treatments.inflammatoryBowelDisease": {
+    "defaultMessage": "Inflammatory Bowel Disease"
+  },
+  "header.menu.treatments.psoriasis": {
+    "defaultMessage": "Psoriasis"
+  },
+  "science.research.paper.title": {
+    "defaultMessage": "EPM-301 Therapeutic Effect on"
+  },
+  "treatments.disclaimer": {
+    "defaultMessage": "Images shown are for illustration purposes only"
+  }
+}

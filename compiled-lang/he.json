@@ -1,0 +1,272 @@
+{
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "common.learnMore": [
+    {
+      "type": 0,
+      "value": "Learn More"
+    }
+  ],
+  "common.playVideo": [
+    {
+      "type": 0,
+      "value": "Play Video"
+    }
+  ],
+  "footer.contact.success.great": [
+    {
+      "type": 0,
+      "value": "Great :)"
+    }
+  ],
+  "footer.contact.success.thanks": [
+    {
+      "type": 0,
+      "value": "Thank You!"
+    }
+  ],
+  "footer.copyright": [
+    {
+      "type": 0,
+      "value": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"
+    }
+  ],
+  "footer.description": [
+    {
+      "type": 0,
+      "value": "For more updates about EPM please fill in your details:"
+    }
+  ],
+  "footer.il.address1": [
+    {
+      "type": 0,
+      "value": "4 Berkovitch St."
+    }
+  ],
+  "footer.il.address2": [
+    {
+      "type": 0,
+      "value": "Tel Aviv"
+    }
+  ],
+  "footer.il.title": [
+    {
+      "type": 0,
+      "value": "Israel Office"
+    }
+  ],
+  "footer.information.ir": [
+    {
+      "type": 0,
+      "value": "Investor Relations"
+    }
+  ],
+  "footer.information.media": [
+    {
+      "type": 0,
+      "value": "Media"
+    }
+  ],
+  "footer.information.title": [
+    {
+      "type": 0,
+      "value": "Information"
+    }
+  ],
+  "footer.menu.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "footer.menu.careers": [
+    {
+      "type": 0,
+      "value": "Careers"
+    }
+  ],
+  "footer.menu.media": [
+    {
+      "type": 0,
+      "value": "Media"
+    }
+  ],
+  "footer.menu.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Privacy Policy"
+    }
+  ],
+  "footer.menu.science": [
+    {
+      "type": 0,
+      "value": "Science"
+    }
+  ],
+  "footer.menu.termsOfUse": [
+    {
+      "type": 0,
+      "value": "Terms of Use"
+    }
+  ],
+  "footer.menu.treatments": [
+    {
+      "type": 0,
+      "value": "Treatments"
+    }
+  ],
+  "footer.title": [
+    {
+      "type": 0,
+      "value": "Make a Change with Us"
+    }
+  ],
+  "footer.us.address1": [
+    {
+      "type": 0,
+      "value": "1347 19th St."
+    }
+  ],
+  "footer.us.address2": [
+    {
+      "type": 0,
+      "value": "Los Angeles, Santa Monica, 90404"
+    }
+  ],
+  "footer.us.tel": [
+    {
+      "type": 0,
+      "value": "Tel: +1 (323) 307-2111"
+    }
+  ],
+  "footer.us.title": [
+    {
+      "type": 0,
+      "value": "US Headquarters"
+    }
+  ],
+  "header.menu.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "header.menu.about.advisoryBoard": [
+    {
+      "type": 0,
+      "value": "Advisory Board"
+    }
+  ],
+  "header.menu.about.boardOfDirectors": [
+    {
+      "type": 0,
+      "value": "Board of Directors"
+    }
+  ],
+  "header.menu.about.executiveLeadership": [
+    {
+      "type": 0,
+      "value": "Executive Leadership"
+    }
+  ],
+  "header.menu.about.story": [
+    {
+      "type": 0,
+      "value": "Our Story"
+    }
+  ],
+  "header.menu.careers": [
+    {
+      "type": 0,
+      "value": "Careers"
+    }
+  ],
+  "header.menu.contact": [
+    {
+      "type": 0,
+      "value": "Contact Us"
+    }
+  ],
+  "header.menu.ipoAndMedia": [
+    {
+      "type": 0,
+      "value": "IPO & Media"
+    }
+  ],
+  "header.menu.science": [
+    {
+      "type": 0,
+      "value": "Science"
+    }
+  ],
+  "header.menu.science.cannabiniods": [
+    {
+      "type": 0,
+      "value": "About Cannabiniod Acids"
+    }
+  ],
+  "header.menu.science.collaborations": [
+    {
+      "type": 0,
+      "value": "Key Collaborations"
+    }
+  ],
+  "header.menu.science.mechoulam": [
+    {
+      "type": 0,
+      "value": "Prof. Mechoulam Bio"
+    }
+  ],
+  "header.menu.science.pipeline": [
+    {
+      "type": 0,
+      "value": "Pipeline"
+    }
+  ],
+  "header.menu.science.research": [
+    {
+      "type": 0,
+      "value": "Research Papers"
+    }
+  ],
+  "header.menu.treatments": [
+    {
+      "type": 0,
+      "value": "Treatments"
+    }
+  ],
+  "header.menu.treatments.currentDevelopment": [
+    {
+      "type": 0,
+      "value": "Current Developments"
+    }
+  ],
+  "header.menu.treatments.inflammatoryBowelDisease": [
+    {
+      "type": 0,
+      "value": "Inflammatory Bowel Disease"
+    }
+  ],
+  "header.menu.treatments.psoriasis": [
+    {
+      "type": 0,
+      "value": "Psoriasis"
+    }
+  ],
+  "science.research.paper.title": [
+    {
+      "type": 0,
+      "value": "EPM-301 Therapeutic Effect on"
+    }
+  ],
+  "treatments.disclaimer": [
+    {
+      "type": 0,
+      "value": "Images shown are for illustration purposes only"
+    }
+  ]
+}

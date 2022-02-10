@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
+import { FormattedMessage } from "react-intl";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
@@ -287,7 +288,10 @@ function ResearchPapers({ data }) {
                 <div className="lg:flex-shrink-0 lg:border-b border-epm-gray-300 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:2/3-h-screen overflow-y-hidden lg:overflow-y-auto">
                   <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-64 xl:w-80 2xl:w-96">
                     <div className="lg:text-epm-base text-epm-gray-500">
-                      EPM-301 Therapeutic Effect on
+                      <FormattedMessage
+                        id="science.research.paper.title"
+                        defaultMessage="EPM-301 Therapeutic Effect on"
+                      />
                     </div>
                     <div className="item__title font-title text-2xl uppercase mb-6">
                       <span id="paper-name"></span>
@@ -300,7 +304,10 @@ function ResearchPapers({ data }) {
                         className="cursor-pointer inline-block w-full lg:w-48 text-center uppercase border-3 rounded-3xl select-none transition-opacity duration-150 hover:opacity-70 lg:px-10 py-2 border-epm-gray-700 text-epm-gray-700"
                         onClick={(event) => togglePaper(event)}
                       >
-                        Close
+                        <FormattedMessage
+                          id="common.close"
+                          defaultMessage="Close"
+                        />
                       </Button>
                     </div>
                   </div>

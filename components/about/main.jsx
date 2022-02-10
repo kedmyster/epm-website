@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
@@ -113,19 +114,17 @@ function Main({ data }) {
         </div>
       </div>
       <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
-        <a
-          href="#our-story"
-          onClick={scrollToContent}
-          className="transition-opacity duration-150 hover:opacity-70"
-        >
-          <Image
-            src="/img/icons/arrow_down.svg"
-            width="28"
-            height="16"
-            alt="Our Story"
-            loading="eager"
-          />
-        </a>
+        <Link href="#our-story" onClick={scrollToContent}>
+          <a className="transition-opacity duration-150 hover:opacity-70">
+            <Image
+              src="/img/icons/arrow_down.svg"
+              width="28"
+              height="16"
+              alt="Our Story"
+              loading="eager"
+            />
+          </a>
+        </Link>
       </div>
     </section>
   );

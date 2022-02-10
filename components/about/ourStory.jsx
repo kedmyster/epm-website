@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import slugify from "slugify";
+import { FormattedMessage } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -142,7 +143,10 @@ function OurStory({ data }) {
         {
           <span className="animate opacity-0 button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
             <Button style="light" onClick={(event) => toggleVideo(event)}>
-              Play Video
+              <FormattedMessage
+                id="common.playVideo"
+                defaultMessage="Play Video"
+              />
             </Button>
           </span>
         }
