@@ -370,6 +370,15 @@ function Header() {
                     </li>
                     <li className="mb-4">
                       <a
+                        href="/treatments/#prader-willi-syndrome"
+                        className=""
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Prader-Willi Syndrome
+                      </a>
+                    </li>
+                    <li className="mb-4">
+                      <a
                         href="/treatments/#psoriasis"
                         className=""
                         onClick={(event) => goToSection(event)}
@@ -651,6 +660,15 @@ function Header() {
                       Inflammatory Bowel Disease
                     </a>
                   </li>
+                  <li className="mb-4">
+                    <a
+                      href="/treatments/#prader-willi-syndrome"
+                      className=""
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Prader-Willi Syndrome
+                    </a>
+                  </li>
                   <li className="text-sm my-2">
                     <a
                       href="/treatments/#psoriasis"
@@ -658,15 +676,6 @@ function Header() {
                       onClick={(event) => goToSection(event)}
                     >
                       Psoriasis
-                    </a>
-                  </li>
-                  <li className="text-sm my-2">
-                    <a
-                      href="/treatments/#acute-respiratory-distress-syndrome"
-                      className="transition-opacity duration-150 hover:opacity-70"
-                      onClick={(event) => goToSection(event)}
-                    >
-                      Acute Respiratory Distress Syndrome
                     </a>
                   </li>
                 </ul>

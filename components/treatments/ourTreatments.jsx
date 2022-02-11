@@ -194,14 +194,14 @@ function OurTreatments({ data }) {
                         </div>
                         <div
                           className={classNames(
-                            "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
+                            "item__title flex flex-col items-center text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 pr-2",
                             {
                               "border-r":
                                 index < data.treatments__sections.length - 1,
                             }
                           )}
                         >
-                          <span className="inline-block lg:w-48">
+                          <span className="inline-block xl:w-48">
                             {slide.product.name}
                           </span>
                           <span className="block normal-case text-epm-gray-500 font-light">
@@ -322,18 +322,18 @@ function OurTreatments({ data }) {
                               </div>
                               <div
                                 className={classNames(
-                                  "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 mp-2",
+                                  "item__title flex flex-col items-center text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ml-2 pl-2 mr-2 pr-2",
                                   {
                                     "border-r":
                                       index < slide.product.icons.length - 1,
                                   }
                                 )}
                               >
-                                <span className="inline-block lg:w-48">
+                                <span className="inline-block xl:w-36 2xl:w-48">
                                   {icon.name}
                                 </span>
                                 {icon.label && (
-                                  <span className="block normal-case text-epm-gray-500 font-light">
+                                  <span className="block normal-case text-epm-gray-500 font-light xl:w-36 2xl:w-48">
                                     {icon.label}
                                   </span>
                                 )}
@@ -345,7 +345,7 @@ function OurTreatments({ data }) {
                     </div>
                     {(isTablet || isDesktop) && (
                       <div
-                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
+                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
                         aria-expanded="false"
                       >
                         <BlockContent
