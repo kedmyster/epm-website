@@ -361,20 +361,20 @@ function Header() {
                     </li>
                     <li className="mb-4">
                       <a
-                        href="/treatments/#inflammatory-bowel-disease"
-                        className=""
-                        onClick={(event) => goToSection(event)}
-                      >
-                        Inflammatory Bowel Disease
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a
                         href="/treatments/#prader-willi-syndrome"
                         className=""
                         onClick={(event) => goToSection(event)}
                       >
                         Prader-Willi Syndrome
+                      </a>
+                    </li>
+                    <li className="mb-4">
+                      <a
+                        href="/treatments/#inflammatory-bowel-disease"
+                        className=""
+                        onClick={(event) => goToSection(event)}
+                      >
+                        Inflammatory Bowel Disease
                       </a>
                     </li>
                     <li className="mb-4">
@@ -653,20 +653,20 @@ function Header() {
                   </li>
                   <li className="text-sm my-2">
                     <a
-                      href="/treatments/#inflammatory-bowel-disease"
-                      className="transition-opacity duration-150 hover:opacity-70"
-                      onClick={(event) => goToSection(event)}
-                    >
-                      Inflammatory Bowel Disease
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
                       href="/treatments/#prader-willi-syndrome"
                       className=""
                       onClick={(event) => goToSection(event)}
                     >
                       Prader-Willi Syndrome
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href="/treatments/#inflammatory-bowel-disease"
+                      className="transition-opacity duration-150 hover:opacity-70"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      Inflammatory Bowel Disease
                     </a>
                   </li>
                   <li className="text-sm my-2">
