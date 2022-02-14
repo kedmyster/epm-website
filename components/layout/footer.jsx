@@ -262,6 +262,8 @@ function Footer({}) {
                     B.B.C Business Center
                     <br />
                     5126237, Bnei Brak
+                    <br />
+                    (+972) 077-5060-500 
                   </div>
                 </div>
                 <div className="mb-4 leading-8">
