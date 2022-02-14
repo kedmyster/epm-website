@@ -250,6 +250,22 @@ function Footer({}) {
               <div>
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">
+                    Israel Office
+                  </div>
+                  <div className="">
+                    14th floor
+                    <br />
+                    BSR 3 Tower
+                    <br />
+                    5 Kinneret St.
+                    <br />
+                    B.B.C Business center
+                    <br />
+                    5126237, Bnei Brak
+                  </div>
+                </div>
+                <div className="mb-4 leading-8">
+                  <div className="text-white font-bold uppercase">
                     US Headquarters
                   </div>
                   <div className="">
@@ -261,17 +277,6 @@ function Footer({}) {
                       <a href="tel:1 323 307 2111"> Tel: +1 (323) 307-2111</a>
                     )}
                     {!isMobile && <span>Tel: +1 (323) 307-2111</span>}
-                  </div>
-                </div>
-
-                <div className="mb-4 leading-8">
-                  <div className="text-white font-bold uppercase">
-                    Israel Office
-                  </div>
-                  <div className="">
-                    4 Berkovitch St.
-                    <br />
-                    Tel Aviv
                   </div>
                 </div>
               </div>
