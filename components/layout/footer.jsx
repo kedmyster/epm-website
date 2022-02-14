@@ -259,7 +259,7 @@ function Footer({}) {
                     <br />
                     5 Kinneret St.
                     <br />
-                    B.B.C Business center
+                    B.B.C Business Center
                     <br />
                     5126237, Bnei Brak
                   </div>
