@@ -505,7 +505,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="desktop-menu hidden xl:block xl:me-16">
+          <div className="desktop-menu hidden xl:block xl:me-24">
             <nav role="navigation">
               <ul className="font-title">
                 <li className="menu-item menu-item--careers inline-block pe-12 py-1 relative">
@@ -531,10 +531,10 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="lang-menu flex-grow xl:flex-grow-0 xl:absolute xl:end-8 text-xl z-50">
-            <nav>
-              <ul>
-                <li>
+          <div className="lang-switcher flex-grow xl:flex-grow-0 xl:absolute xl:end-8 text-xl z-50">
+            <div className="">
+              <Link href="/">
+                <a className="relative flex gap-2 -top-[2px]git ">
                   <Image
                     src="/img/icons/flag_usa.svg"
                     alt=""
@@ -543,17 +543,28 @@ function Header() {
                     layout="intrinsic"
                     quality={100}
                   />
-                </li>
-              </ul>
-            </nav>
-            <Image
-              src="/img/icons/flag_usa.svg"
-              alt=""
-              width={16}
-              height={12}
-              layout="intrinsic"
-              quality={100}
-            />
+                  <span className="font-title text-base xl:text-lg text-white">
+                      <FormattedMessage id="header.lang.en" defaultMessage="EN" />
+                  </span>
+                  
+                </a>
+              </Link>
+            </div>
+            <div className="hidden">
+              <Link href="/">
+                <a className="font-title relative z-10 text-white">
+                  <Image
+                    src="/img/icons/flag_israel.svg"
+                    alt=""
+                    width={16}
+                    height={12}
+                    layout="intrinsic"
+                    quality={100}
+                  />
+                  <FormattedMessage id="header.lang.he" defaultMessage="HE" />
+                </a>
+              </Link>
+            </div>
           </div>
           <div className="menu-button xl:hidden relative z-[51]">
             <button
