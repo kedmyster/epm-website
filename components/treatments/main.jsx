@@ -103,7 +103,7 @@ function Main({ data }) {
         )}
       </div>
       {/*<div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>*/}
-      <div className="absolute md:start-1/2 md:transform md:-translate-x-1/2 bottom-24 lg:bottom-12 md:w-full">
+      <div className="absolute bottom-0 w-full py-12">
         <div className="container mx-auto px-8 py-8 relative lg:z-10">
           <p className="animate opacity-0 text-xs uppercase font-title mb-4 lg:hidden">
             {data.name}
@@ -112,19 +112,22 @@ function Main({ data }) {
             {data.title}
           </h1>
         </div>
-      </div>
-      <div className="scroll-to-content absolute bottom-12 start-1/2 transform -translate-x-1/2">
-        <Link href="#story" onClick={scrollToContent}>
-          <a className="transition-opacity duration-150 hover:opacity-70">
-            <Image
-              src="/img/icons/arrow_down.svg"
-              alt="Current Developments"
-              width="28"
-              height="16"
-              loading="eager"
-            />
-          </a>
-        </Link>
+        <div className="scroll-to-content">
+          <Link href="#story">
+            <a
+              className="transition-opacity duration-150 hover:opacity-70"
+              onClick={scrollToContent}
+            >
+              <Image
+                src="/img/icons/arrow_down.svg"
+                alt="Current Developments"
+                width="28"
+                height="16"
+                loading="eager"
+              />
+            </a>
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import classNames from "classnames";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -28,9 +29,11 @@ function Community({ data }) {
   const [isMobile, setIsMobile] = useState(true);
   const [isTablet, setIsTablet] = useState(true);
   const [isDesktop, setIsDesktop] = useState(true);
+  const router = useRouter();
 
   const SLIDER_COMMUNITY_CONFIG = {
     dots: false,
+    rtl: router.locale === "he",
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,

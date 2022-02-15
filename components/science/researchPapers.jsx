@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { gsap } from "gsap";
+import { getFile } from "@sanity/asset-utils";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
 import { FormattedMessage } from "react-intl";
@@ -102,7 +103,8 @@ function ResearchPapers({ data }) {
 
     if (isMobile) {
       if (slide) {
-        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.file}&pagemode=none`;
+        const file = getFile(slide.file, client.config());
+        paperDocumentElement.src = file.asset.url;
       }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
@@ -130,10 +132,11 @@ function ResearchPapers({ data }) {
       if (slide) {
         const paperNameElement = document.querySelector("#paper-name");
         const paperTextElement = document.querySelector("#paper-text");
+        const file = getFile(slide.file, client.config());
 
         paperNameElement.innerText = slide.title;
         paperTextElement.innerText = slide.text;
-        paperDocumentElement.src = `/pdfjs/web/viewer.html?file=${slide.url}`;
+        paperDocumentElement.src = file.asset.url;
       }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
@@ -145,6 +148,8 @@ function ResearchPapers({ data }) {
       }
     }
   };
+
+  console.log(data.papers);
 
   return (
     <section
@@ -240,7 +245,7 @@ function ResearchPapers({ data }) {
                 />
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-              <div className="animate opacity-0 container mx-auto px-8 py-8 w-container text-white flex flex-row space-x-20 z-10">
+              <div className="animate opacity-0 container mx-auto px-8 py-8 w-container text-white flex flex-row gap-20 z-10">
                 {data.papers.map((slide, index) => {
                   return (
                     <div
@@ -251,7 +256,7 @@ function ResearchPapers({ data }) {
                       data-slide={index}
                     >
                       <div className="item__box__top absolute top-0 start-0 bg-white w-full h-px"></div>
-                      <div className="item__box__start absolute top-0 start-0 bg-white w-px h-full transform scale-0"></div>
+                      <div className="item__box__left absolute top-0 start-0 bg-white w-px h-full transform scale-0"></div>
                       <div className="item__box__bottom absolute bottom-0 start-0 bg-white w-full h-px transform scale-0"></div>
                       <div className="item__box__right absolute bottom-0 end-0 bg-white w-px h-full transform scale-0"></div>
                       <div className="item__content">

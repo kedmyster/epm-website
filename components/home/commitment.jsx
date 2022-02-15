@@ -118,7 +118,7 @@ function Commitment({ data }) {
           <div className="container relative mx-auto px-8 pt-8 text-center">
             <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
-          <div className="animate opacity-0 container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto space-x-10">
+          <div className="animate opacity-0 container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto gap-6">
             {data.bullets.map((bullet, index) => {
               return (
                 <div className="item w-1/3 text-center">
@@ -132,7 +132,7 @@ function Commitment({ data }) {
                   </div>
                   <div
                     className={classNames({
-                      "border-l-0.5 border-r-0.5 border-white border-box":
+                      "border-s-0.5 border-e-0.5 border-white border-box":
                         index % 2 === 1,
                     })}
                   >
@@ -141,7 +141,7 @@ function Commitment({ data }) {
                     </div>
                     <div
                       className={classNames(
-                        "item-text text-center text-sm font-light mt-1",
+                        "item-text text-center text-sm font-light mt-1 px-4",
                         { "px-10": index % 2 === 1 }
                       )}
                     >

@@ -51,14 +51,18 @@ function Button({
     rel,
   };
 
-  if (href) {
+  if (href && href !== "#") {
     return (
       <Link href={href} onClick={onClick}>
         <a {...settings}>{children}</a>
       </Link>
     );
   } else {
-    return <a {...settings}>{children}</a>;
+    return (
+      <a href={href} onClick={onClick} {...settings}>
+        {children}
+      </a>
+    );
   }
 }
 

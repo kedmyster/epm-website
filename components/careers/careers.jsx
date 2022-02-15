@@ -114,8 +114,11 @@ function CareersComponent({ data, hasPositions }) {
       </div>
       {hasPositions && (
         <div className="scroll-to-content animate opacity-0 absolute bottom-12 start-1/2 transform -translate-x-1/2">
-          <Link href="#story" onClick={scrollToContent}>
-            <a className="transition-opacity duration-150 hover:opacity-70">
+          <Link href="#story">
+            <a
+              className="transition-opacity duration-150 hover:opacity-70"
+              onClick={scrollToContent}
+            >
               <Image
                 src="/img/icons/arrow_down_dark.svg"
                 width="28"

@@ -102,7 +102,7 @@ function Main({ data }) {
             </video>
           )}
         </div>
-        <div className="absolute lg:start-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 w-full">
+        <div className="absolute bottom-0 w-full py-12">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
               {data.name}
@@ -111,19 +111,21 @@ function Main({ data }) {
               {data.title}
             </p>
           </div>
-        </div>
-
-        <div className="scroll-to-content animate opacity-0 absolute bottom-12 start-1/2 transform -translate-x-1/2">
-          <Link href="#story" onClick={scrollToContent} alt="Our Story">
-            <a className="transition-opacity duration-150 hover:opacity-70">
-              <Image
-                src="/img/icons/arrow_down.svg"
-                width="28"
-                height="16"
-                loading="eager"
-              />
-            </a>
-          </Link>
+          <div className="scroll-to-content animate opacity-0 ">
+            <Link href="#story" alt="Our Story">
+              <a
+                className="transition-opacity duration-150 hover:opacity-70"
+                onClick={scrollToContent}
+              >
+                <Image
+                  src="/img/icons/arrow_down.svg"
+                  width="28"
+                  height="16"
+                  loading="eager"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -190,7 +190,7 @@ function Innovation({ data }) {
             <div className="lg:h-2/3-screen">
               <div className="relative text-center w-full lg:h-full lg:text-start flex flex-wrap content-end">
                 <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-                <div className="animate opacity-0 container mx-auto px-8 py-8 lg:w-container lg:text-white lg:flex lg:flex-row lg:space-x-20 z-10">
+                <div className="animate opacity-0 container mx-auto px-8 py-8 lg:w-container lg:text-white lg:flex lg:flex-row lg:gap-20 z-10">
                   {data.bullets.map((slide, index) => {
                     return (
                       <div
@@ -200,9 +200,9 @@ function Innovation({ data }) {
                         data-slide={index}
                       >
                         <div className="item__box__top absolute top-0 start-0 bg-white w-full h-px"></div>
-                        <div className="item__box__start absolute top-0 start-0 bg-white w-px h-full transform scale-0"></div>
+                        <div className="item__box__left absolute top-0 start-0 bg-white w-px h-full transform scale-0"></div>
                         <div className="item__box__bottom absolute bottom-0 start-0 bg-white w-full h-px transform scale-0"></div>
-                        <div className="item__box__right absolute bottom-0 start-0 bg-white w-px h-full transform scale-0"></div>
+                        <div className="item__box__right absolute bottom-0 end-0 bg-white w-px h-full transform scale-0"></div>
                         <div className="item__content">
                           <div className="item__title font-light font-title text-2xl uppercase mb-5 lg:h-16">
                             {slide.title}

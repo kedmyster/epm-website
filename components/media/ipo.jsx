@@ -48,7 +48,7 @@ function MediaIPO({ data }) {
           <BlockContent blocks={data.description} className="external-text" />
         </div>
         <div className="text-3xl mt-8 lg:mt-[65px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
-          {data.cta}
+          <BlockContent blocks={data.cta} className="external-text" />
         </div>
         <div className="items -mx-8 lg:pt-8 lg:overflow-y-auto">
           {data.categories.map((category, index) => {

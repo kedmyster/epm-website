@@ -141,14 +141,16 @@ function OurStory({ data }) {
           />
         )}
         {
-          <span className="animate opacity-0 button absolute w-48 start-1/2 transform -translate-x-1/2 bottom-8">
-            <Button style="light" onClick={(event) => toggleVideo(event)}>
-              <FormattedMessage
-                id="common.playVideo"
-                defaultMessage="Play Video"
-              />
-            </Button>
-          </span>
+          <div className=" absolute w-full bottom-8 flex justify-center">
+            <span className="animate opacity-0 button w-48">
+              <Button style="light" onClick={(event) => toggleVideo(event)}>
+                <FormattedMessage
+                  id="common.playVideo"
+                  defaultMessage="Play Video"
+                />
+              </Button>
+            </span>
+          </div>
         }
         <div
           id={`video-${slugify("Rapahel Mechoulam", { lower: true })}`}

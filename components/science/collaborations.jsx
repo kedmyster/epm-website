@@ -70,8 +70,8 @@ function Collaborations({ data }) {
       }
 
       document
-        .querySelector(".collaborations__panel.academia")
-        .classList.toggle("lg:border-l");
+        .querySelector(".collaborations__panel.academy")
+        .classList.toggle("lg:border-s");
     }
   };
 
@@ -177,7 +177,7 @@ function Collaborations({ data }) {
                       key={slugify(section.title)}
                       className={classNames(
                         "collaborations__panel lg:w-1/2 px-8",
-                        slugify(section.title)
+                        slugify(section.title.toLowerCase())
                       )}
                     >
                       <div className="relative z-10">

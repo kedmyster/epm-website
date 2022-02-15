@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import { getId } from "../../utils";
+import slugify from "slugify";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -165,7 +166,10 @@ function OurTreatments({ data }) {
                 <div className="flex flex-row justify-center">
                   {data.treatments__sections.map((slide, index) => {
                     return (
-                      <div className="item flex flex-col w-1/3 items-center justify-between">
+                      <div
+                        className="item flex flex-col w-1/3 items-center justify-between"
+                        key={`${slugify(slide.title)}-${index}`}
+                      >
                         <div className="item__image flex justify-center items-end flex-grow mb-6">
                           <a
                             href={"#" + getId(slide.title)}
@@ -197,7 +201,7 @@ function OurTreatments({ data }) {
                           className={classNames(
                             "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ms-2 ps-2 me-2 mp-2",
                             {
-                              "border-r":
+                              "border-e":
                                 index < data.treatments__sections.length - 1,
                             }
                           )}
@@ -240,11 +244,11 @@ function OurTreatments({ data }) {
       </section>
 
       <div className="divide-y divide-epm-gray-300">
-        {data.treatments__sections.map((slide) => {
+        {data.treatments__sections.map((slide, index) => {
           return (
             <section
               id={getId(slide.title)}
-              key={getId(slide.name)}
+              key={`${slugify(slide.name.toLowerCase())}-${index}`}
               className="section treatments relative w-full"
               data-side-menu-label={slide.title}
               data-side-menu-color="dark"
@@ -260,7 +264,9 @@ function OurTreatments({ data }) {
                           return (
                             <div
                               className="item flex flex-col w-1/3 items-center justify-between"
-                              key={getId(icon.name)}
+                              key={`${slugify(
+                                icon.name.toLowerCase()
+                              )}-${index}`}
                             >
                               <div
                                 className={classNames(
@@ -328,7 +334,7 @@ function OurTreatments({ data }) {
                                 className={classNames(
                                   "item__title text-center text-xxs 2xl:text-base font-title uppercase py-3 px-3 w-full h-14 2xl:h-20 border-epm-gray-500 ms-2 ps-2 me-2 mp-2",
                                   {
-                                    "border-r":
+                                    "border-e":
                                       index < slide.product.icons.length - 1,
                                   }
                                 )}

@@ -187,17 +187,19 @@ function OurScience({ data }) {
                           quality={100}
                         />
                       )}
-                      <span className="button absolute start-1/2 transform -translate-x-1/2 bottom-8">
-                        <Button
-                          style="light"
-                          onClick={(event) => toggleVideo(event)}
-                        >
-                          <FormattedMessage
-                            id="common.playVideo"
-                            defaultMessage="Play Video"
-                          />
-                        </Button>
-                      </span>
+                      <div className=" absolute w-full bottom-8 flex justify-center">
+                        <span className="button">
+                          <Button
+                            style="light"
+                            onClick={(event) => toggleVideo(event)}
+                          >
+                            <FormattedMessage
+                              id="common.playVideo"
+                              defaultMessage="Play Video"
+                            />
+                          </Button>
+                        </span>
+                      </div>
                     </div>
                   }
                   <div

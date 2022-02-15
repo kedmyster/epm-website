@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import Slider from "react-slick";
 import { FormattedMessage } from "react-intl";
 import { gsap } from "gsap";
@@ -17,9 +18,11 @@ function Treatments({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
 
   const SLIDER_TREATMENTS_CONFIG = {
     dots: false,
+    rtl: router.locale === "he",
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -205,7 +208,7 @@ function Treatments({ data }) {
                       </a>
                     </Link>
                   </div>
-                  <div className="item__title text-center text-base font-title uppercase border-l-1 border-r-1 border-epm-gray-500 px-20 py-3 mt-6 h-20">
+                  <div className="item__title text-center text-base font-title uppercase border-s-1 border-e-1 border-epm-gray-500 px-20 py-3 mt-6 h-20">
                     Topical for
                     <br />
                     Psoriasis

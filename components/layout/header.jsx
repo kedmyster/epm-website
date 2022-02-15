@@ -294,6 +294,7 @@ function Header() {
               </a>
             </Link>
           </div>
+          <div className="spacer w-[150px]"></div>
           <div className="desktop-menu hidden xl:block flex-grow text-center xl:ms-32">
             <nav role="navigation">
               <ul>
@@ -504,7 +505,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="desktop-menu hidden xl:block">
+          <div className="desktop-menu hidden xl:block xl:me-16">
             <nav role="navigation">
               <ul className="font-title">
                 <li className="menu-item menu-item--careers inline-block pe-12 py-1 relative">
@@ -529,6 +530,30 @@ function Header() {
                 </li>
               </ul>
             </nav>
+          </div>
+          <div className="lang-menu flex-grow xl:flex-grow-0 xl:absolute xl:end-8 text-xl z-50">
+            <nav>
+              <ul>
+                <li>
+                  <Image
+                    src="/img/icons/flag_usa.svg"
+                    alt=""
+                    width={16}
+                    height={12}
+                    layout="intrinsic"
+                    quality={100}
+                  />
+                </li>
+              </ul>
+            </nav>
+            <Image
+              src="/img/icons/flag_usa.svg"
+              alt=""
+              width={16}
+              height={12}
+              layout="intrinsic"
+              quality={100}
+            />
           </div>
           <div className="menu-button xl:hidden relative z-[51]">
             <button

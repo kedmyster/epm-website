@@ -235,8 +235,10 @@ body[data-header-theme="dark"] .header .menu-button svg {
 .solution .slick-arrow {
   top: auto;
   @apply bottom-8;
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .solution .slick-arrow {
     bottom: auto;
     top: 50%;
     transform: translateY(-50%);
@@ -251,8 +253,10 @@ body[data-header-theme="dark"] .header .menu-button svg {
 .community .slick-arrow {
   top: auto;
   bottom: 1.875rem;
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .community .slick-arrow {
     bottom: 0;
     top: 50%;
     transform: translateY(-50%);
