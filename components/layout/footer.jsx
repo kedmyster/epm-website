@@ -250,7 +250,7 @@ function Footer({}) {
               <div>
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">
-                    Israel Office
+                    Israel Headquarters
                   </div>
                   <div className="">
                     14th floor
@@ -263,12 +263,12 @@ function Footer({}) {
                     <br />
                     5126237, Bnei Brak
                     <br />
-                    Tel: (+972) 077-5060-500 
+                    Tel: (+972) 077-5060-500
                   </div>
                 </div>
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">
-                    US Headquarters
+                    US Office
                   </div>
                   <div className="">
                     1347 19th St.
