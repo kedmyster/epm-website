@@ -5,13 +5,24 @@ import { gsap } from "gsap";
 import { throttle } from "lodash";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
+import { useRouter } from "next/router";
 
 function Header() {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
+  const [lang, setLang] = useState("en_US");
   let scrollY = 0;
+
+  useEffect(() => {
+    if (router.locale === "he") {
+      setLang("he_IL");
+    } else if (router.locale === "en") {
+      setLang("en_US");
+    }
+  }, []);
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -532,39 +543,40 @@ function Header() {
             </nav>
           </div>
           <div className="lang-switcher flex-grow xl:flex-grow-0 xl:absolute xl:end-8 text-xl z-50">
-            <div className="">
-              <Link href="/">
-                <a className="relative flex gap-2 -top-[2px]git ">
-                  <Image
-                    src="/img/icons/flag_usa.svg"
-                    alt=""
-                    width={16}
-                    height={12}
-                    layout="intrinsic"
-                    quality={100}
-                  />
-                  <span className="font-title text-base xl:text-lg text-white">
-                      <FormattedMessage id="header.lang.en" defaultMessage="EN" />
-                  </span>
-                  
-                </a>
-              </Link>
-            </div>
-            <div className="hidden">
-              <Link href="/">
-                <a className="font-title relative z-10 text-white">
-                  <Image
-                    src="/img/icons/flag_israel.svg"
-                    alt=""
-                    width={16}
-                    height={12}
-                    layout="intrinsic"
-                    quality={100}
-                  />
-                  <FormattedMessage id="header.lang.he" defaultMessage="HE" />
-                </a>
-              </Link>
-            </div>
+            {lang === "he_IL" && (
+              <div className="">
+                <Link href="/" locale="">
+                  <a className="relative flex gap-1 -top-[2px] lg:top-0">
+                    <Image
+                      src="/img/icons/flag_usa.svg"
+                      alt=""
+                      width={16}
+                      height={12}
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                    <span className="font-title text-base xl:text-lg">EN</span>
+                  </a>
+                </Link>
+              </div>
+            )}
+            {lang === "en_US" && (
+              <div className="">
+                <Link href="/" locale="he">
+                  <a className="relative flex gap-2 -top-[2px] lg:top-0">
+                    <Image
+                      src="/img/icons/flag_israel.svg"
+                      alt=""
+                      width={16}
+                      height={12}
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                    <span className="font-title text-base xl:text-lg">HE</span>
+                  </a>
+                </Link>
+              </div>
+            )}
           </div>
           <div className="menu-button xl:hidden relative z-[51]">
             <button

@@ -2,85 +2,85 @@
   "common.close": [
     {
       "type": 0,
-      "value": "סגור"
+      "value": "סגירה"
     }
   ],
   "common.learnMore": [
     {
       "type": 0,
-      "value": "קרא עוד"
+      "value": "למידע נוסף"
     }
   ],
   "common.playVideo": [
     {
       "type": 0,
-      "value": "צפה בסרטון"
+      "value": "נגן וידיאו"
     }
   ],
   "footer.contact.success.great": [
     {
       "type": 0,
-      "value": "Great :)"
+      "value": "מעולה :)"
     }
   ],
   "footer.contact.success.thanks": [
     {
       "type": 0,
-      "value": "Thank You!"
+      "value": "!תודה"
     }
   ],
   "footer.copyright": [
     {
       "type": 0,
-      "value": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"
+      "value": "Copyright ©2021 EPM Group, Inc. כל הזכויות שמורות"
     }
   ],
   "footer.description": [
     {
       "type": 0,
-      "value": "For more updates about EPM please fill in your details:"
+      "value": "לקבלת מידע נוסף אודות EPM, אנא מלאו את הפרטים הבאים:"
     }
   ],
   "footer.il.address1": [
     {
       "type": 0,
-      "value": "רחוב ברקוביץ 4"
+      "value": "רח׳ כנרת 5 קומה 17 מגדל ב.ס.ר 3"
     }
   ],
   "footer.il.address2": [
     {
       "type": 0,
-      "value": "תל-אביב"
+      "value": "מרכז עסקים בני ברק 5126237"
     }
   ],
   "footer.il.title": [
     {
       "type": 0,
-      "value": "Israel Office"
+      "value": "מטה ראשי ‫-‬ ישראל"
     }
   ],
   "footer.information.ir": [
     {
       "type": 0,
-      "value": "Investor Relations"
+      "value": "קשרי משקיעים"
     }
   ],
   "footer.information.media": [
     {
       "type": 0,
-      "value": "מדיה"
+      "value": "עיתונות"
     }
   ],
   "footer.information.title": [
     {
       "type": 0,
-      "value": "מידע"
+      "value": "מידע כללי"
     }
   ],
   "footer.menu.about": [
     {
       "type": 0,
-      "value": "אודות"
+      "value": "אודותינו"
     }
   ],
   "footer.menu.careers": [
@@ -92,37 +92,37 @@
   "footer.menu.media": [
     {
       "type": 0,
-      "value": "מדיה"
+      "value": "עיתונות"
     }
   ],
   "footer.menu.privacyPolicy": [
     {
       "type": 0,
-      "value": "Privacy Policy"
+      "value": "פרטיות"
     }
   ],
   "footer.menu.science": [
     {
       "type": 0,
-      "value": "Science"
+      "value": "מדע"
     }
   ],
   "footer.menu.termsOfUse": [
     {
       "type": 0,
-      "value": "Terms of Use"
+      "value": "תנאי שימוש ומדיניות"
     }
   ],
   "footer.menu.treatments": [
     {
       "type": 0,
-      "value": "Treatments"
+      "value": "תחומי טיפול"
     }
   ],
   "footer.title": [
     {
       "type": 0,
-      "value": "Make a Change with Us"
+      "value": "הצטרפו למסע שלנו"
     }
   ],
   "footer.us.address1": [
@@ -146,37 +146,37 @@
   "footer.us.title": [
     {
       "type": 0,
-      "value": "US Headquarters"
+      "value": "ארה״ב"
     }
   ],
   "header.menu.about": [
     {
       "type": 0,
-      "value": "אודות"
+      "value": "אודותינו"
     }
   ],
   "header.menu.about.advisoryBoard": [
     {
       "type": 0,
-      "value": "Advisory Board"
+      "value": "וועדה מייעצת"
     }
   ],
   "header.menu.about.boardOfDirectors": [
     {
       "type": 0,
-      "value": "Board of Directors"
+      "value": "דירקטוריון החברה"
     }
   ],
   "header.menu.about.executiveLeadership": [
     {
       "type": 0,
-      "value": "Executive Leadership"
+      "value": "הנהלה בכירה"
     }
   ],
   "header.menu.about.story": [
     {
       "type": 0,
-      "value": "Our Story"
+      "value": "הסיפור שלנו"
     }
   ],
   "header.menu.careers": [
@@ -188,85 +188,85 @@
   "header.menu.contact": [
     {
       "type": 0,
-      "value": "צור קשר"
+      "value": "יצירת קשר"
     }
   ],
   "header.menu.ipoAndMedia": [
     {
       "type": 0,
-      "value": "IPO & Media"
+      "value": "משקיעים & עיתונות"
     }
   ],
   "header.menu.science": [
     {
       "type": 0,
-      "value": "Science"
+      "value": "מדע"
     }
   ],
   "header.menu.science.cannabiniods": [
     {
       "type": 0,
-      "value": "About Cannabiniod Acids"
+      "value": "חומצות קנבינואידיות"
     }
   ],
   "header.menu.science.collaborations": [
     {
       "type": 0,
-      "value": "Key Collaborations"
+      "value": "שיתופי פעולה"
     }
   ],
   "header.menu.science.mechoulam": [
     {
       "type": 0,
-      "value": "Prof. Mechoulam Bio"
+      "value": "הביוגרפיה של פרופ׳ משולם"
     }
   ],
   "header.menu.science.pipeline": [
     {
       "type": 0,
-      "value": "Pipeline"
+      "value": "פורטפוליו מולקולות"
     }
   ],
   "header.menu.science.research": [
     {
       "type": 0,
-      "value": "Research Papers"
+      "value": "מאמרים מדעיים"
     }
   ],
   "header.menu.treatments": [
     {
       "type": 0,
-      "value": "Treatments"
+      "value": "תחומי טיפול"
     }
   ],
   "header.menu.treatments.currentDevelopment": [
     {
       "type": 0,
-      "value": "Current Developments"
+      "value": "תרופות בפיתוח"
     }
   ],
   "header.menu.treatments.inflammatoryBowelDisease": [
     {
       "type": 0,
-      "value": "Inflammatory Bowel Disease"
+      "value": "מחלות מעי דלקתיות"
     }
   ],
   "header.menu.treatments.psoriasis": [
     {
       "type": 0,
-      "value": "Psoriasis"
+      "value": "פסוריאזיס"
     }
   ],
   "science.research.paper.title": [
     {
       "type": 0,
-      "value": "EPM-301 Therapeutic Effect on"
+      "value": "השפעה רפואית של EPM301 על"
     }
   ],
   "treatments.disclaimer": [
     {
       "type": 0,
-      "value": "Images shown are for illustration purposes only"
+      "value": "התמונות המוצגות הן להמחשה בלבד"
     }
   ]
 }

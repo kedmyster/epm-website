@@ -11,9 +11,21 @@ import RaphaelMechoulam from "../components/science/raphaelMechoulam";
 import ResearchPapers from "../components/science/researchPapers";
 import client from "../client";
 import { getSectionDataByName } from "../utils";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
-function Science(data) {
+function Science({ data }) {
+  const router = useRouter();
+  const [lang, setLang] = useState("en_US");
+
+  useEffect(() => {
+    if (router.locale === "he") {
+      setLang("he_IL");
+    } else if (router.locale === "en") {
+      setLang("en_US");
+    }
+  }, []);
+
   useEffect(() => {
     document
       .querySelector(".menu-item--science")
@@ -23,7 +35,7 @@ function Science(data) {
   return (
     <>
       <Head>
-        <title>{data.title}</title>
+        {data.title && <title>{data.title[lang]}</title>}
         <link rel="icon" href="/favicon.svg" />
         <link
           rel="preload"
@@ -35,24 +47,30 @@ function Science(data) {
           as="image"
           href="/img/mobile/science/hero@2x.webp"
         />
-        <meta name="description" content={data.description} />
-        <meta name="keywords" content={data.keywords} />
+        {data.description && (
+          <meta name="description" content={data.description[lang]} />
+        )}
+        {data.keywords && (
+          <meta name="keywords" content={data.keywords[lang]} />
+        )}
       </Head>
 
-      <Main data={getSectionDataByName(data, "hero")} />
-      <OurScience data={getSectionDataByName(data, "science__ourScience")} />
-      <Cannabinoids
-        data={getSectionDataByName(data, "science__cannabinoids")}
+      <Main data={getSectionDataByName(data, "hero", lang)} />
+      <OurScience
+        data={getSectionDataByName(data, "science__ourScience", lang)}
       />
-      <Pipeline data={getSectionDataByName(data, "science__pipeline")} />
+      <Cannabinoids
+        data={getSectionDataByName(data, "science__cannabinoids", lang)}
+      />
+      <Pipeline data={getSectionDataByName(data, "science__pipeline", lang)} />
       <Collaborations
-        data={getSectionDataByName(data, "science__collaborations")}
+        data={getSectionDataByName(data, "science__collaborations", lang)}
       />
       <ResearchPapers
-        data={getSectionDataByName(data, "science__researchPapers")}
+        data={getSectionDataByName(data, "science__researchPapers", lang)}
       />
       <RaphaelMechoulam
-        data={getSectionDataByName(data, "science__mechoulam")}
+        data={getSectionDataByName(data, "science__mechoulam", lang)}
       />
     </>
   );
@@ -60,12 +78,28 @@ function Science(data) {
 
 Science.getInitialProps = async function (context) {
   const { slug = "" } = context.query;
-  return await client.fetch(
+  let messages = null;
+
+  switch (context.locale) {
+    case "he":
+      messages = await import("../compiled-lang/he.json");
+      break;
+    default:
+      messages = await import("../compiled-lang/en.json");
+      break;
+  }
+
+  const data = await client.fetch(
     `
     *[_type == "science"][0]
   `,
     { slug }
   );
+
+  return {
+    messages,
+    data,
+  };
 };
 
 export default Science;

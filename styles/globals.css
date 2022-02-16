@@ -136,6 +136,14 @@ body[data-header-theme="dark"] .header .menu-button svg {
   stroke: #636466;
 }
 
+body[data-header-theme="light"] .header .lang-switcher span {
+  @apply text-white;
+}
+
+body[data-header-theme="dark"] .header .lang-switcher span {
+  @apply text-black;
+}
+
 @media (min-width: 1024px) {
   header .desktop-menu .sub-menu {
     opacity: 0;

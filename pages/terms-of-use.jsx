@@ -7,14 +7,14 @@ import { useEffect } from "react";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function TermsOfUse(data) {
+function TermsOfUse({ data }) {
   const router = useRouter();
   const [lang, setLang] = useState("en_US");
 
   useEffect(() => {
     if (router.locale === "he") {
       setLang("he_IL");
-    } else if (context.locale === "en") {
+    } else if (router.locale === "en") {
       setLang("en_US");
     }
   }, []);
@@ -37,15 +37,28 @@ function TermsOfUse(data) {
 
 TermsOfUse.getInitialProps = async function (context) {
   const { slug = "" } = context.query;
+  let messages = null;
 
-  const result = await client.fetch(
+  switch (context.locale) {
+    case "he":
+      messages = await import("../compiled-lang/he.json");
+      break;
+    default:
+      messages = await import("../compiled-lang/en.json");
+      break;
+  }
+
+  const data = await client.fetch(
     `
     *[_type == "legal"][1]
   `,
     { slug }
   );
 
-  return result;
+  return {
+    messages,
+    data,
+  };
 };
 
 export default TermsOfUse;

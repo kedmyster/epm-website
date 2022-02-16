@@ -17,6 +17,14 @@ import {
 const BlockContent = require("@sanity/block-content-to-react");
 
 function Community({ data }) {
+  const windowWidth = useWindowWidth();
+  const [lang, setLang] = useState("en_US");
+  const [active, setActive] = useState(0);
+  const [isMobile, setIsMobile] = useState(true);
+  const [isTablet, setIsTablet] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(true);
+  const router = useRouter();
+
   for (let i = 0; i < data.bullets.length; i++) {
     data.bullets[i].images = {
       mobile: useNextSanityImage(client, data.bullets[i].mobile_image),
@@ -24,12 +32,13 @@ function Community({ data }) {
     };
   }
 
-  const windowWidth = useWindowWidth();
-  const [active, setActive] = useState(0);
-  const [isMobile, setIsMobile] = useState(true);
-  const [isTablet, setIsTablet] = useState(true);
-  const [isDesktop, setIsDesktop] = useState(true);
-  const router = useRouter();
+  useEffect(() => {
+    if (router.locale === "he") {
+      setLang("he_IL");
+    } else if (router.locale === "en") {
+      setLang("en_US");
+    }
+  }, []);
 
   const SLIDER_COMMUNITY_CONFIG = {
     dots: false,

@@ -7,14 +7,14 @@ import { useEffect } from "react";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function PrivacyPolicy(data) {
+function PrivacyPolicy({ data }) {
   const router = useRouter();
   const [lang, setLang] = useState("en_US");
 
   useEffect(() => {
     if (router.locale === "he") {
       setLang("he_IL");
-    } else if (context.locale === "en") {
+    } else if (router.locale === "en") {
       setLang("en_US");
     }
   }, []);
@@ -37,12 +37,28 @@ function PrivacyPolicy(data) {
 
 PrivacyPolicy.getInitialProps = async function (context) {
   const { slug = "" } = context.query;
-  return await client.fetch(
+  let messages = null;
+
+  switch (context.locale) {
+    case "he":
+      messages = await import("../compiled-lang/he.json");
+      break;
+    default:
+      messages = await import("../compiled-lang/en.json");
+      break;
+  }
+
+  const data = await client.fetch(
     `
     *[_type == "legal"][0]
   `,
     { slug }
   );
+
+  return {
+    messages,
+    data,
+  };
 };
 
 export default PrivacyPolicy;

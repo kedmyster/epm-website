@@ -1,66 +1,66 @@
 {
   "common.close": {
-    "defaultMessage": "סגור"
+    "defaultMessage": "סגירה"
   },
   "common.learnMore": {
-    "defaultMessage": "קרא עוד"
+    "defaultMessage": "למידע נוסף"
   },
   "common.playVideo": {
-    "defaultMessage": "צפה בסרטון"
+    "defaultMessage": "נגן וידיאו"
   },
   "footer.contact.success.great": {
-    "defaultMessage": "Great :)"
+    "defaultMessage": "מעולה :)"
   },
   "footer.contact.success.thanks": {
-    "defaultMessage": "Thank You!"
+    "defaultMessage": "!תודה"
   },
   "footer.copyright": {
-    "defaultMessage": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"
+    "defaultMessage": "Copyright ©2021 EPM Group, Inc. כל הזכויות שמורות"
   },
   "footer.description": {
-    "defaultMessage": "For more updates about EPM please fill in your details:"
+    "defaultMessage": "לקבלת מידע נוסף אודות EPM, אנא מלאו את הפרטים הבאים:"
   },
   "footer.il.address1": {
-    "defaultMessage": "רחוב ברקוביץ 4"
+    "defaultMessage": "רח׳ כנרת 5 קומה 17 מגדל ב.ס.ר 3"
   },
   "footer.il.address2": {
-    "defaultMessage": "תל-אביב"
+    "defaultMessage": "מרכז עסקים בני ברק 5126237"
   },
   "footer.il.title": {
-    "defaultMessage": "Israel Office"
+    "defaultMessage": "מטה ראשי ‫-‬ ישראל"
   },
   "footer.information.ir": {
-    "defaultMessage": "Investor Relations"
+    "defaultMessage": "קשרי משקיעים"
   },
   "footer.information.media": {
-    "defaultMessage": "מדיה"
+    "defaultMessage": "עיתונות"
   },
   "footer.information.title": {
-    "defaultMessage": "מידע"
+    "defaultMessage": "מידע כללי"
   },
   "footer.menu.about": {
-    "defaultMessage": "אודות"
+    "defaultMessage": "אודותינו"
   },
   "footer.menu.careers": {
     "defaultMessage": "קריירה"
   },
   "footer.menu.media": {
-    "defaultMessage": "מדיה"
+    "defaultMessage": "עיתונות"
   },
   "footer.menu.privacyPolicy": {
-    "defaultMessage": "Privacy Policy"
+    "defaultMessage": "פרטיות"
   },
   "footer.menu.science": {
-    "defaultMessage": "Science"
+    "defaultMessage": "מדע"
   },
   "footer.menu.termsOfUse": {
-    "defaultMessage": "Terms of Use"
+    "defaultMessage": "תנאי שימוש ומדיניות"
   },
   "footer.menu.treatments": {
-    "defaultMessage": "Treatments"
+    "defaultMessage": "תחומי טיפול"
   },
   "footer.title": {
-    "defaultMessage": "Make a Change with Us"
+    "defaultMessage": "הצטרפו למסע שלנו"
   },
   "footer.us.address1": {
     "defaultMessage": "1347 19th St."
@@ -72,66 +72,66 @@
     "defaultMessage": "Tel: +1 (323) 307-2111"
   },
   "footer.us.title": {
-    "defaultMessage": "US Headquarters"
+    "defaultMessage": "ארה״ב"
   },
   "header.menu.about": {
-    "defaultMessage": "אודות"
+    "defaultMessage": "אודותינו"
   },
   "header.menu.about.advisoryBoard": {
-    "defaultMessage": "Advisory Board"
+    "defaultMessage": "וועדה מייעצת"
   },
   "header.menu.about.boardOfDirectors": {
-    "defaultMessage": "Board of Directors"
+    "defaultMessage": "דירקטוריון החברה"
   },
   "header.menu.about.executiveLeadership": {
-    "defaultMessage": "Executive Leadership"
+    "defaultMessage": "הנהלה בכירה"
   },
   "header.menu.about.story": {
-    "defaultMessage": "Our Story"
+    "defaultMessage": "הסיפור שלנו"
   },
   "header.menu.careers": {
     "defaultMessage": "קריירה"
   },
   "header.menu.contact": {
-    "defaultMessage": "צור קשר"
+    "defaultMessage": "יצירת קשר"
   },
   "header.menu.ipoAndMedia": {
-    "defaultMessage": "IPO & Media"
+    "defaultMessage": "משקיעים & עיתונות"
   },
   "header.menu.science": {
-    "defaultMessage": "Science"
+    "defaultMessage": "מדע"
   },
   "header.menu.science.cannabiniods": {
-    "defaultMessage": "About Cannabiniod Acids"
+    "defaultMessage": "חומצות קנבינואידיות"
   },
   "header.menu.science.collaborations": {
-    "defaultMessage": "Key Collaborations"
+    "defaultMessage": "שיתופי פעולה"
   },
   "header.menu.science.mechoulam": {
-    "defaultMessage": "Prof. Mechoulam Bio"
+    "defaultMessage": "הביוגרפיה של פרופ׳ משולם"
   },
   "header.menu.science.pipeline": {
-    "defaultMessage": "Pipeline"
+    "defaultMessage": "פורטפוליו מולקולות"
   },
   "header.menu.science.research": {
-    "defaultMessage": "Research Papers"
+    "defaultMessage": "מאמרים מדעיים"
   },
   "header.menu.treatments": {
-    "defaultMessage": "Treatments"
+    "defaultMessage": "תחומי טיפול"
   },
   "header.menu.treatments.currentDevelopment": {
-    "defaultMessage": "Current Developments"
+    "defaultMessage": "תרופות בפיתוח"
   },
   "header.menu.treatments.inflammatoryBowelDisease": {
-    "defaultMessage": "Inflammatory Bowel Disease"
+    "defaultMessage": "מחלות מעי דלקתיות"
   },
   "header.menu.treatments.psoriasis": {
-    "defaultMessage": "Psoriasis"
+    "defaultMessage": "פסוריאזיס"
   },
   "science.research.paper.title": {
-    "defaultMessage": "EPM-301 Therapeutic Effect on"
+    "defaultMessage": "השפעה רפואית של EPM301 על"
   },
   "treatments.disclaimer": {
-    "defaultMessage": "Images shown are for illustration purposes only"
+    "defaultMessage": "התמונות המוצגות הן להמחשה בלבד"
   }
 }

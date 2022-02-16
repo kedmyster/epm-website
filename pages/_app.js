@@ -17,31 +17,12 @@ import "tailwindcss/tailwind.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-async function loadLocaleData(locale) {
-  switch (locale) {
-    case "he":
-      return await import("../compiled-lang/he.json");
-    default:
-      return await import("../compiled-lang/en.json");
-  }
-}
-
 function MyApp({ Component, pageProps, err }) {
   const windowWidth = useWindowWidth();
-  const [messages, setMessages] = useState({});
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    const getTranslation = async () => {
-      const translations = await loadLocaleData(router.locale);
-      setMessages(translations);
-    };
-
-    getTranslation();
-  }, []);
 
   const animateSectionContent = (section) => {
     if (section) {
@@ -189,7 +170,11 @@ function MyApp({ Component, pageProps, err }) {
   };
 
   return (
-    <IntlProvider messages={messages} locale={router.locale} defaultLocale="en">
+    <IntlProvider
+      messages={pageProps.messages}
+      locale={router.locale}
+      defaultLocale="en"
+    >
       <div className="app">
         <Header />
         <Component {...pageProps} err={err} />
