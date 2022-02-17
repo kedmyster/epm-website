@@ -29,6 +29,18 @@
   "common.previous": {
     "defaultMessage": "Previous"
   },
+  "contact.firstName": {
+    "defaultMessage": "First Name"
+  },
+  "contact.lastName": {
+    "defaultMessage": "Last Name"
+  },
+  "contact.email": {
+    "defaultMessage": "Email"
+  },
+  "contact.submit": {
+    "defaultMessage": "Submit"
+  },
   "footer.contact.success.great": {
     "defaultMessage": "Great :)"
   },

@@ -2,31 +2,31 @@
   "about.hero.image": [
     {
       "type": 0,
-      "value": "Patient-focused - Pharmaceutical Group"
+      "value": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
     }
   ],
   "about.story.description": [
     {
       "type": 0,
-      "value": "Patient-Focused Pharmaceutical Group"
+      "value": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
     }
   ],
   "about.story.title": [
     {
       "type": 0,
-      "value": "Our Story"
+      "value": "הסיפור שלנו"
     }
   ],
   "careers.opportunities.title": [
     {
       "type": 0,
-      "value": "Shape the Future of Healthcare"
+      "value": "הצטרפו למהפכת התרופות שלנו"
     }
   ],
   "careers.positions.title": [
     {
       "type": 0,
-      "value": "Open Positions"
+      "value": "משרות פנויות"
     }
   ],
   "common.close": [
@@ -44,19 +44,43 @@
   "common.next": [
     {
       "type": 0,
-      "value": "Next"
+      "value": "הבא"
     }
   ],
   "common.playVideo": [
     {
       "type": 0,
-      "value": "נגן וידיאו"
+      "value": "לצפייה בסרטון"
     }
   ],
   "common.previous": [
     {
       "type": 0,
-      "value": "Previous"
+      "value": "הקודם"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "אימייל"
+    }
+  ],
+  "contact.firstName": [
+    {
+      "type": 0,
+      "value": "שם פרטי"
+    }
+  ],
+  "contact.lastName": [
+    {
+      "type": 0,
+      "value": "שם משפחה"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "להצטרפות"
     }
   ],
   "footer.contact.success.great": [
@@ -86,7 +110,7 @@
   "footer.il.address1": [
     {
       "type": 0,
-      "value": "רח׳ כנרת 5 קומה 17 מגדל ב.ס.ר 3"
+      "value": "רח׳ כנרת 5 קומה 14 מגדל ב.ס.ר 3"
     }
   ],
   "footer.il.address2": [
@@ -194,7 +218,7 @@
   "foundingEPM.label": [
     {
       "type": 0,
-      "value": "Founding EPM"
+      "value": "EPM הקמת"
     }
   ],
   "header.menu.about": [
@@ -308,61 +332,61 @@
   "home.hero.title": [
     {
       "type": 0,
-      "value": "Medicine to All"
+      "value": "דור חדש של תרופות בטוחות"
     }
   ],
   "science.bio.title": [
     {
       "type": 0,
-      "value": "Mechoulam's Bio"
+      "value": "הביוגרפיה של פרופ׳ משולם"
     }
   ],
   "science.cannabinoids.acids": [
     {
       "type": 0,
-      "value": "The Acids"
+      "value": "חומצות קנבינואידיות"
     }
   ],
   "science.cannabinoids.title": [
     {
       "type": 0,
-      "value": "Cannabinoids Acid"
+      "value": "חומצות קנבינואידיות"
     }
   ],
   "science.collaborations": [
     {
       "type": 0,
-      "value": "Collaborations"
+      "value": "שיתופי פעולה"
     }
   ],
   "science.collaborations.title": [
     {
       "type": 0,
-      "value": "Key Collaborations"
+      "value": "שיתופי פעולה"
     }
   ],
   "science.hero.title": [
     {
       "type": 0,
-      "value": "Unlock the medical potential of synthetic cannabinoid acids"
+      "value": "פוטנציאל אינסופי למוקולות חדשות"
     }
   ],
   "science.pipeline.description": [
     {
       "type": 0,
-      "value": "Our Pipeline - Future Products and Development"
+      "value": "פורטפוליו מוצרים ופיתוחים"
     }
   ],
   "science.pipeline.title": [
     {
       "type": 0,
-      "value": "Pipeline"
+      "value": "פורטפוליו"
     }
   ],
   "science.publications.title": [
     {
       "type": 0,
-      "value": "Publications"
+      "value": "מאמרים מדעיים"
     }
   ],
   "science.research.paper.title": [
@@ -374,19 +398,19 @@
   "science.research.title": [
     {
       "type": 0,
-      "value": "Research Papers"
+      "value": "מאמרים מדעיים"
     }
   ],
   "science.science.title": [
     {
       "type": 0,
-      "value": "Our Science"
+      "value": "המדע שלנו"
     }
   ],
   "treatments.developments.title": [
     {
       "type": 0,
-      "value": "Developments"
+      "value": "תרופות בפיתוח"
     }
   ],
   "treatments.disclaimer": [

@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function Home({ data }) {
   const router = useRouter();
-  const [lang, setLang] = useState(router.locale ? "he_IL" : "en_US");
+  const [lang, setLang] = useState(router.locale === "he" ? "he_IL" : "en_US");
 
   return (
     <>

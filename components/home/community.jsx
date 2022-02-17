@@ -21,7 +21,7 @@ function Community({ data }) {
   const windowWidth = useWindowWidth();
   const router = useRouter();
   const intl = useIntl();
-  const [lang, setLang] = useState(router.locale ? "he_IL" : "en_US");
+  const [lang, setLang] = useState(router.locale === "he" ? "he_IL" : "en_US");
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(true);
   const [isTablet, setIsTablet] = useState(true);

@@ -1,4 +1,34 @@
 {
+  "about.hero.image": [
+    {
+      "type": 0,
+      "value": "Patient-focused - Pharmaceutical Group"
+    }
+  ],
+  "about.story.description": [
+    {
+      "type": 0,
+      "value": "Patient-Focused Pharmaceutical Group"
+    }
+  ],
+  "about.story.title": [
+    {
+      "type": 0,
+      "value": "Our Story"
+    }
+  ],
+  "careers.opportunities.title": [
+    {
+      "type": 0,
+      "value": "Shape the Future of Healthcare"
+    }
+  ],
+  "careers.positions.title": [
+    {
+      "type": 0,
+      "value": "Open Positions"
+    }
+  ],
   "common.close": [
     {
       "type": 0,
@@ -11,10 +41,46 @@
       "value": "Learn More"
     }
   ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Next"
+    }
+  ],
   "common.playVideo": [
     {
       "type": 0,
       "value": "Play Video"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Previous"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "Email"
+    }
+  ],
+  "contact.firstName": [
+    {
+      "type": 0,
+      "value": "First Name"
+    }
+  ],
+  "contact.lastName": [
+    {
+      "type": 0,
+      "value": "Last Name"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "Submit"
     }
   ],
   "footer.contact.success.great": [
@@ -263,10 +329,88 @@
       "value": "Psoriasis"
     }
   ],
+  "home.hero.title": [
+    {
+      "type": 0,
+      "value": "Medicine to All"
+    }
+  ],
+  "science.bio.title": [
+    {
+      "type": 0,
+      "value": "Mechoulam's Bio"
+    }
+  ],
+  "science.cannabinoids.acids": [
+    {
+      "type": 0,
+      "value": "The Acids"
+    }
+  ],
+  "science.cannabinoids.title": [
+    {
+      "type": 0,
+      "value": "Cannabinoids Acid"
+    }
+  ],
+  "science.collaborations": [
+    {
+      "type": 0,
+      "value": "Collaborations"
+    }
+  ],
+  "science.collaborations.title": [
+    {
+      "type": 0,
+      "value": "Key Collaborations"
+    }
+  ],
+  "science.hero.title": [
+    {
+      "type": 0,
+      "value": "Unlock the medical potential of synthetic cannabinoid acids"
+    }
+  ],
+  "science.pipeline.description": [
+    {
+      "type": 0,
+      "value": "Our Pipeline - Future Products and Development"
+    }
+  ],
+  "science.pipeline.title": [
+    {
+      "type": 0,
+      "value": "Pipeline"
+    }
+  ],
+  "science.publications.title": [
+    {
+      "type": 0,
+      "value": "Publications"
+    }
+  ],
   "science.research.paper.title": [
     {
       "type": 0,
       "value": "EPM-301 Therapeutic Effect on"
+    }
+  ],
+  "science.research.title": [
+    {
+      "type": 0,
+      "value": "Research Papers"
+    }
+  ],
+  "science.science.title": [
+    {
+      "type": 0,
+      "value": "Our Science"
+    }
+  ],
+  "treatments.developments.title": [
+    {
+      "type": 0,
+      "value": "Developments"
     }
   ],
   "treatments.disclaimer": [

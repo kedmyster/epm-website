@@ -15,7 +15,7 @@ function Header() {
   const [isDesktop, setIsDesktop] = useState(false);
   const router = useRouter();
   const intl = useIntl();
-  const [lang, setLang] = useState(router.locale ? "he_IL" : "en_US");
+  const [lang, setLang] = useState(router.locale === "he" ? "he_IL" : "en_US");
   let scrollY = 0;
 
   useEffect(() => {

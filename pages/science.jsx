@@ -16,7 +16,7 @@ import { useRouter } from "next/router";
 
 function Science({ data }) {
   const router = useRouter();
-  const [lang, setLang] = useState(router.locale ? "he_IL" : "en_US");
+  const [lang, setLang] = useState(router.locale === "he" ? "he_IL" : "en_US");
 
   useEffect(() => {
     document

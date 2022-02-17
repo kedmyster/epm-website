@@ -9,7 +9,7 @@ const BlockContent = require("@sanity/block-content-to-react");
 
 function PrivacyPolicy({ data }) {
   const router = useRouter();
-  const [lang, setLang] = useState(router.locale ? "he_IL" : "en_US");
+  const [lang, setLang] = useState(router.locale === "he" ? "he_IL" : "en_US");
 
   return (
     <>

@@ -167,13 +167,19 @@ function Footer({}) {
                         <Field
                           type="text"
                           name="firstName"
-                          placeholder="First Name"
+                          placeholder={intl.formatMessage({
+                            id: "contact.firstName",
+                            defaultMessage: "First Name",
+                          })}
                           className="w-full font-light rounded-3xl px-5 py-2 me-4 mb-4 lg:mb-0"
                         />
                         <Field
                           type="text"
                           name="lastName"
-                          placeholder="Last Name"
+                          placeholder={intl.formatMessage({
+                            id: "contact.lastName",
+                            defaultMessage: "Last Name",
+                          })}
                           className="w-full font-light rounded-3xl px-5 py-2"
                         />
                       </div>
@@ -181,7 +187,10 @@ function Footer({}) {
                         <Field
                           type="email"
                           name="email"
-                          placeholder="Email Address"
+                          placeholder={intl.formatMessage({
+                            id: "contact.email",
+                            defaultMessage: "Email Address",
+                          })}
                           className={classNames(
                             "w-full font-light rounded-3xl px-5 py-2",
                             {
@@ -196,7 +205,10 @@ function Footer({}) {
                           className="w-full lg:w-auto font-title text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
                           disabled={isSubmitting}
                         >
-                          Submit
+                          <FormattedMessage
+                            id="contact.submit"
+                            defaultMessage="Submit"
+                          />
                         </button>
                       </div>
                     </div>

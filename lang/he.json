@@ -1,18 +1,18 @@
 {
   "about.hero.image": {
-    "defaultMessage": "Patient-focused - Pharmaceutical Group"
+    "defaultMessage": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
   },
   "about.story.description": {
-    "defaultMessage": "Patient-Focused Pharmaceutical Group"
+    "defaultMessage": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
   },
   "about.story.title": {
-    "defaultMessage": "Our Story"
+    "defaultMessage": "הסיפור שלנו"
   },
   "careers.opportunities.title": {
-    "defaultMessage": "Shape the Future of Healthcare"
+    "defaultMessage": "הצטרפו למהפכת התרופות שלנו"
   },
   "careers.positions.title": {
-    "defaultMessage": "Open Positions"
+    "defaultMessage": "משרות פנויות"
   },
   "common.close": {
     "defaultMessage": "סגירה"
@@ -21,13 +21,25 @@
     "defaultMessage": "למידע נוסף"
   },
   "common.next": {
-    "defaultMessage": "Next"
+    "defaultMessage": "הבא"
   },
   "common.playVideo": {
-    "defaultMessage": "נגן וידיאו"
+    "defaultMessage": "לצפייה בסרטון"
   },
   "common.previous": {
-    "defaultMessage": "Previous"
+    "defaultMessage": "הקודם"
+  },
+  "contact.firstName": {
+    "defaultMessage": "שם פרטי"
+  },
+  "contact.lastName": {
+    "defaultMessage": "שם משפחה"
+  },
+  "contact.email": {
+    "defaultMessage": "אימייל"
+  },
+  "contact.submit": {
+    "defaultMessage": "להצטרפות"
   },
   "footer.contact.success.great": {
     "defaultMessage": "מעולה :)"
@@ -42,7 +54,7 @@
     "defaultMessage": "לקבלת מידע נוסף אודות EPM, אנא מלאו את הפרטים הבאים:"
   },
   "footer.il.address1": {
-    "defaultMessage": "רח׳ כנרת 5 קומה 17 מגדל ב.ס.ר 3"
+    "defaultMessage": "רח׳ כנרת 5 קומה 14 מגדל ב.ס.ר 3"
   },
   "footer.il.address2": {
     "defaultMessage": "מרכז עסקים בני ברק 5126237"
@@ -96,7 +108,7 @@
     "defaultMessage": "ארה״ב"
   },
   "foundingEPM.label": {
-    "defaultMessage": "Founding EPM"
+    "defaultMessage": "EPM הקמת"
   },
   "header.menu.about": {
     "defaultMessage": "אודותינו"
@@ -153,46 +165,46 @@
     "defaultMessage": "פסוריאזיס"
   },
   "home.hero.title": {
-    "defaultMessage": "Medicine to All"
+    "defaultMessage": "דור חדש של תרופות בטוחות"
   },
   "science.bio.title": {
-    "defaultMessage": "Mechoulam's Bio"
+    "defaultMessage": "הביוגרפיה של פרופ׳ משולם"
   },
   "science.cannabinoids.acids": {
-    "defaultMessage": "The Acids"
+    "defaultMessage": "חומצות קנבינואידיות"
   },
   "science.cannabinoids.title": {
-    "defaultMessage": "Cannabinoids Acid"
+    "defaultMessage": "חומצות קנבינואידיות"
   },
   "science.collaborations": {
-    "defaultMessage": "Collaborations"
+    "defaultMessage": "שיתופי פעולה"
   },
   "science.collaborations.title": {
-    "defaultMessage": "Key Collaborations"
+    "defaultMessage": "שיתופי פעולה"
   },
   "science.hero.title": {
-    "defaultMessage": "Unlock the medical potential of synthetic cannabinoid acids"
+    "defaultMessage": "פוטנציאל אינסופי למוקולות חדשות"
   },
   "science.pipeline.description": {
-    "defaultMessage": "Our Pipeline - Future Products and Development"
+    "defaultMessage": "פורטפוליו מוצרים ופיתוחים"
   },
   "science.pipeline.title": {
-    "defaultMessage": "Pipeline"
+    "defaultMessage": "פורטפוליו"
   },
   "science.publications.title": {
-    "defaultMessage": "Publications"
+    "defaultMessage": "מאמרים מדעיים"
   },
   "science.research.paper.title": {
     "defaultMessage": "השפעה רפואית של EPM301 על"
   },
   "science.research.title": {
-    "defaultMessage": "Research Papers"
+    "defaultMessage": "מאמרים מדעיים"
   },
   "science.science.title": {
-    "defaultMessage": "Our Science"
+    "defaultMessage": "המדע שלנו"
   },
   "treatments.developments.title": {
-    "defaultMessage": "Developments"
+    "defaultMessage": "תרופות בפיתוח"
   },
   "treatments.disclaimer": {
     "defaultMessage": "התמונות המוצגות הן להמחשה בלבד"
