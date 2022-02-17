@@ -3,6 +3,8 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
@@ -26,10 +28,13 @@ function Innovation({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
+  const intl = useIntl();
   const vm = {};
 
   const SLIDER_INNOVATION_CONFIG_MOBILE = {
     dots: false,
+    rtl: router.locale === "he",
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -48,6 +53,7 @@ function Innovation({ data }) {
 
   const SLIDER_INNOVATION_CONFIG_DESKTOP = {
     dots: false,
+    rtl: router.locale === "he",
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -115,7 +121,11 @@ function Innovation({ data }) {
             <Slider {...SLIDER_INNOVATION_CONFIG_MOBILE}>
               {data.bullets.map((slide) => {
                 return (
-                  <div className="item" key={slide.title}>
+                  <div
+                    className="item"
+                    key={slide.title}
+                    dir={router.locale === "he" ? "rtl" : "ltr"}
+                  >
                     <div className="relative text-center w-full lg:text-start lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end h-2/3-screen">
                       <div className="absolute w-full h-full">
                         <Image

@@ -3,12 +3,14 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -72,7 +74,10 @@ function Main({ data }) {
               <Image
                 loading="eager"
                 src="/img/mobile/homepage/hero@2x.jpg"
-                alt="Medicine to All"
+                alt={intl.formatMessage({
+                  id: "home.hero.title",
+                  defaultMessage: "Medicine to All",
+                })}
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -112,13 +117,14 @@ function Main({ data }) {
             </p>
           </div>
           <div className="scroll-to-content animate opacity-0 ">
-            <Link href="#story" alt="Our Story">
+            <Link href="#story">
               <a
                 className="transition-opacity duration-150 hover:opacity-70"
                 onClick={scrollToContent}
               >
                 <Image
                   src="/img/icons/arrow_down.svg"
+                  alt={data.title}
                   width="28"
                   height="16"
                   loading="eager"

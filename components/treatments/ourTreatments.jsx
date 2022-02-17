@@ -3,7 +3,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
-import { FormattedMessage } from "react-intl";
+import { useIntl, FormattedMessage } from "react-intl";
 import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
@@ -42,6 +42,7 @@ function OurTreatments({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -154,7 +155,10 @@ function OurTreatments({ data }) {
       <section
         id="current-developments"
         className="section treatments relative w-full"
-        data-side-menu-label="Developments"
+        alt={intl.formatMessage({
+          id: "treatments.developments.title",
+          defaultMessage: "Developments",
+        })}
         data-side-menu-color="dark"
         data-side-menu-visibility="visible"
         data-header-menu-visibility="visible"
@@ -247,7 +251,7 @@ function OurTreatments({ data }) {
         {data.treatments__sections.map((slide, index) => {
           return (
             <section
-              id={getId(slide.title)}
+              id={getId(slide.id)}
               key={`${slugify(slide.name.toLowerCase())}-${index}`}
               className="section treatments relative w-full"
               data-side-menu-label={slide.title}

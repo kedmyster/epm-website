@@ -6,12 +6,14 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { FormattedMessage } from "react-intl";
 import classNames from "classnames";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Footer({}) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {

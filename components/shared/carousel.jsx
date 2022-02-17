@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { useIntl } from "react-intl";
 
 export function SliderCustomPreviousArrow(props) {
   const { className, style, onClick, color } = props;
+  const intl = useIntl();
   let path;
 
   if (color === "light") {
@@ -18,13 +20,22 @@ export function SliderCustomPreviousArrow(props) {
       style={{ ...style }}
       onClick={onClick}
     >
-      <Image src={path} width="16" height="28" alt="Previous" />
+      <Image
+        src={path}
+        width="16"
+        height="28"
+        alt={intl.formatMessage({
+          id: "common.previous",
+          defaultMessage: "Previous",
+        })}
+      />
     </div>
   );
 }
 
 export function SliderCustomNextArrow(props) {
   const { className, style, onClick, color } = props;
+  const intl = useIntl();
   let path;
 
   if (color === "light") {
@@ -41,7 +52,15 @@ export function SliderCustomNextArrow(props) {
       style={{ ...style }}
       onClick={onClick}
     >
-      <Image src={path} width="16" height="28" alt="Previous" />
+      <Image
+        src={path}
+        width="16"
+        height="28"
+        alt={intl.formatMessage({
+          id: "common.next",
+          defaultMessage: "Next",
+        })}
+      />
     </div>
   );
 }

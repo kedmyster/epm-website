@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { gsap } from "gsap";
 import { getFile } from "@sanity/asset-utils";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
 import { useNextSanityImage } from "next-sanity-image";
 import { FormattedMessage } from "react-intl";
 import client from "../../client";
@@ -26,9 +28,12 @@ function ResearchPapers({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
+  const intl = useIntl();
 
   const SLIDER_RESEARCH_PAPERS_CONFIG = {
     dots: false,
+    rtl: router.locale === "he",
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -149,13 +154,14 @@ function ResearchPapers({ data }) {
     }
   };
 
-  console.log(data.papers);
-
   return (
     <section
       id="research-papers"
       className="section research-papers"
-      data-side-menu-label="Publications"
+      alt={intl.formatMessage({
+        id: "science.publications.title",
+        defaultMessage: "Publications",
+      })}
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -166,7 +172,10 @@ function ResearchPapers({ data }) {
             <div className="image animate opacity-0 absolute w-full h-2/3-screen">
               <Image
                 src={data.images.mobile.src}
-                alt="Research Papers"
+                alt={intl.formatMessage({
+                  id: "science.research.title",
+                  defaultMessage: "Research Papers",
+                })}
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -176,7 +185,11 @@ function ResearchPapers({ data }) {
             <Slider {...SLIDER_RESEARCH_PAPERS_CONFIG}>
               {data.papers.map((slide) => {
                 return (
-                  <div className="item" key={slide.title}>
+                  <div
+                    className="item"
+                    key={slide.title}
+                    dir={router.locale === "he" ? "rtl" : "ltr"}
+                  >
                     <div className="relative text-center w-full h-2/3-screen lg:text-start lg:p-5 lg:border-t-2 lg:border-white flex flex-wrap content-end">
                       <div className="container mx-auto px-16 py-8 lg:flex lg:flex-row lg:space-x-20 z-10">
                         <div className="item__title font-title text-2xl uppercase pb-5">
@@ -238,7 +251,10 @@ function ResearchPapers({ data }) {
               <div className="absolute w-full h-full">
                 <Image
                   src={data.images.desktop.src}
-                  alt="Research Papers"
+                  alt={intl.formatMessage({
+                    id: "science.research.title",
+                    defaultMessage: "Research Papers",
+                  })}
                   layout="fill"
                   objectFit="cover"
                   quality={100}

@@ -5,6 +5,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -13,6 +14,7 @@ function FoundingEPM({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
@@ -53,7 +55,10 @@ function FoundingEPM({ data }) {
     <section
       id="founding-epm"
       className="section founding-epm relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
-      data-side-menu-label="Founding EPM"
+      data-side-menu-label={intl.formatMessage({
+        id: "foundingEPM.label",
+        defaultMessage: "Founding EPM",
+      })}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -62,7 +67,10 @@ function FoundingEPM({ data }) {
         {isMobile && (
           <Image
             src={atmosphere.mobile.src}
-            alt="Founding EPM"
+            alt={intl.formatMessage({
+              id: "foundingEPM.label",
+              defaultMessage: "Founding EPM",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -71,7 +79,10 @@ function FoundingEPM({ data }) {
         {(isTablet || isDesktop) && (
           <Image
             src={atmosphere.desktop.src}
-            alt="Founding EPM"
+            alt={intl.formatMessage({
+              id: "foundingEPM.label",
+              defaultMessage: "Founding EPM",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}

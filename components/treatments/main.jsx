@@ -3,12 +3,14 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -120,7 +122,7 @@ function Main({ data }) {
             >
               <Image
                 src="/img/icons/arrow_down.svg"
-                alt="Current Developments"
+                alt={data.title}
                 width="28"
                 height="16"
                 loading="eager"

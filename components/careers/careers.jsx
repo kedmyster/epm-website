@@ -6,6 +6,7 @@ import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import { gsap } from "gsap";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -15,6 +16,7 @@ function CareersComponent({ data, hasPositions }) {
   const [isTabletPortrait, setIsTabletPortrait] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
@@ -84,7 +86,10 @@ function CareersComponent({ data, hasPositions }) {
           <Image
             loading="eager"
             src={atmosphere.mobile.src}
-            alt="Shape the Future of Healthcare"
+            alt={intl.formatMessage({
+              id: "careers.opportunities.title",
+              defaultMessage: "Shape the Future of Healthcare",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -94,7 +99,10 @@ function CareersComponent({ data, hasPositions }) {
           <Image
             loading="eager"
             src={atmosphere.desktop.src}
-            alt="Shape the Future of Healthcare"
+            alt={intl.formatMessage({
+              id: "careers.opportunities.title",
+              defaultMessage: "Shape the Future of Healthcare",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -123,7 +131,10 @@ function CareersComponent({ data, hasPositions }) {
                 src="/img/icons/arrow_down_dark.svg"
                 width="28"
                 height="16"
-                alt="Open Positions"
+                alt={intl.formatMessage({
+                  id: "careers.positions.title",
+                  defaultMessage: "Open Positions",
+                })}
                 loading="eager"
               />
             </a>

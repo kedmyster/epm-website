@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { useIntl } from "react-intl";
 
 function SocialMedia() {
+  const intl = useIntl();
+
   return (
     <>
       <div

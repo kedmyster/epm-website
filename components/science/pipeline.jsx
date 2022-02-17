@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useIntl } from "react-intl";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
@@ -13,6 +14,7 @@ function Pipeline({ data }) {
   const [isTabletPortrait, setIsTabletPortrait] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
@@ -46,7 +48,10 @@ function Pipeline({ data }) {
     <section
       id="pipeline"
       className="section pipeline"
-      data-side-menu-label="Pipeline"
+      alt={intl.formatMessage({
+        id: "science.pipeline.title",
+        defaultMessage: "Pipeline",
+      })}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -59,7 +64,11 @@ function Pipeline({ data }) {
                 {isMobile && (
                   <Image
                     src={atmosphere.mobile.src}
-                    alt="Our Pipeline - Future Products and Development"
+                    alt={intl.formatMessage({
+                      id: "science.pipeline.description",
+                      defaultMessage:
+                        "Our Pipeline - Future Products and Development",
+                    })}
                     width={375}
                     height={401}
                     layout="intrinsic"
@@ -70,7 +79,11 @@ function Pipeline({ data }) {
                 {(isTabletPortrait || isTablet || isDesktop) && (
                   <Image
                     src={atmosphere.desktop.src}
-                    alt="Our Pipeline - Future Products and Development"
+                    alt={intl.formatMessage({
+                      id: "science.pipeline.description",
+                      defaultMessage:
+                        "Our Pipeline - Future Products and Development",
+                    })}
                     layout="fill"
                     objectFit="contain"
                     objectPosition="top right"

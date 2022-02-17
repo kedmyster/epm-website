@@ -7,6 +7,7 @@ import client from "../../client";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -19,6 +20,7 @@ function Commitment({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
@@ -72,7 +74,7 @@ function Commitment({ data }) {
                     <div className="item-image h-14 flex items-center justify-center">
                       <Image
                         src={bullet.image.src}
-                        alt="Alternative to Steroids"
+                        alt={bullet.title}
                         width={bullet.image.width / 2}
                         height={bullet.image.height / 2}
                       />
@@ -125,7 +127,7 @@ function Commitment({ data }) {
                   <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
                     <Image
                       src={bullet.image.src}
-                      alt="Alternative to steroids"
+                      alt={bullet.title}
                       width={bullet.image.width}
                       height={bullet.image.height}
                     />

@@ -3,7 +3,6 @@ import client from "../client";
 const builder = imageUrlBuilder(client);
 
 export function getSectionDataByName(data, name, lang) {
-  console.log(data.content[lang]);
   if (data && data.content && data.content[lang]) {
     for (let i = 0; i < data.content[lang].length; i++) {
       let section = data.content[lang][i];

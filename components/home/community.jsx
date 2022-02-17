@@ -4,6 +4,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useIntl } from "react-intl";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
@@ -23,6 +24,7 @@ function Community({ data }) {
   const [isMobile, setIsMobile] = useState(true);
   const [isTablet, setIsTablet] = useState(true);
   const [isDesktop, setIsDesktop] = useState(true);
+  const intl = useIntl();
   const router = useRouter();
 
   for (let i = 0; i < data.bullets.length; i++) {
@@ -103,6 +105,7 @@ function Community({ data }) {
                   className={classNames("item", "cursor-pointer", {
                     "item--active": index === active,
                   })}
+                  dir={router.locale === "he" ? "rtl" : "ltr"}
                   key={slugify(slide.name, { lower: true })}
                   onClick={() => setActive(index)}
                 >

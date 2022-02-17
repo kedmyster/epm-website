@@ -155,6 +155,39 @@ function MyApp({ Component, pageProps, err }) {
       sections.forEach((section) => {
         utils.animateSectionContent(section);
       });
+
+      if (router.locale === "he") {
+        document.querySelectorAll(".slick-slider").forEach((slider) => {
+          slider.querySelectorAll(".text-start").forEach((node) => {
+            node.setAttribute(
+              "style",
+              `${
+                node.getAttribute("style") || ""
+              }; text-align: right !important`
+            );
+          });
+
+          slider.querySelectorAll("[class*='start']").forEach((node) => {
+            const styles = window.getComputedStyle(node);
+            node.setAttribute(
+              "style",
+              `${
+                node.getAttribute("style") || ""
+              }; left: auto !important; right: ${styles["left"]} !important`
+            );
+          });
+
+          slider.querySelectorAll("[class*='end']").forEach((node) => {
+            const styles = window.getComputedStyle(node);
+            node.setAttribute(
+              "style",
+              `${
+                node.getAttribute("style") || ""
+              }; right: auto !important; left: ${styles["right"]} !important`
+            );
+          });
+        });
+      }
     });
   }, []);
 

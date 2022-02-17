@@ -54,10 +54,10 @@ function Careers({ data }) {
 
       <CareersComponent
         data={career}
-        hasPositions={positions.positions.length > 0}
+        hasPositions={positions.positions && positions.positions.length > 0}
       />
 
-      {positions.positions.length > 0 && (
+      {positions.positions && positions.positions.length > 0 && (
         <PositionsComponent data={positions} />
       )}
     </>

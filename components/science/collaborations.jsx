@@ -9,10 +9,13 @@ import classNames from "classnames";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
 function Collaborations({ data }) {
+  const intl = useIntl();
+
   for (let i = 0; i < data.collaboration__logos.length; i++) {
     data.collaboration__logos[i].image = useNextSanityImage(
       client,
@@ -79,7 +82,10 @@ function Collaborations({ data }) {
     <section
       id={"collaborations"}
       className="section collaborations"
-      data-side-menu-label="Collaborations"
+      alt={intl.formatMessage({
+        id: "science.collaborations",
+        defaultMessage: "Collaborations",
+      })}
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -163,7 +169,10 @@ function Collaborations({ data }) {
               <div className="absolute w-full h-full">
                 <Image
                   src="/img/desktop/science/collaborations@2x.jpg"
-                  alt="Commercial"
+                  alt={intl.formatMessage({
+                    id: "science.collaborations.title",
+                    defaultMessage: "Key Collaborations",
+                  })}
                   layout="fill"
                   objectFit="cover"
                   quality={100}

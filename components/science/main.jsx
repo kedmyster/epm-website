@@ -3,12 +3,14 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -72,7 +74,11 @@ function Main({ data }) {
             <Image
               priority="true"
               src="/img/mobile/science/hero@2x.jpg"
-              alt="Unlock the medical potential of synthetic cannabinoid acids"
+              alt={intl.formatMessage({
+                id: "science.hero.title",
+                defaultMessage:
+                  "Unlock the medical potential of synthetic cannabinoid acids",
+              })}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -94,7 +100,11 @@ function Main({ data }) {
             <Image
               priority="true"
               src="/img/desktop/science/hero@2x.jpg"
-              alt="Unlock the medical potential of synthetic cannabinoid acids"
+              alt={intl.formatMessage({
+                id: "science.hero.title",
+                defaultMessage:
+                  "Unlock the medical potential of synthetic cannabinoid acids",
+              })}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -110,13 +120,14 @@ function Main({ data }) {
           </h1>
         </div>
         <div className="scroll-to-content animate opacity-0">
-          <Link href="#our-science" alt="Our Science">
+          <Link href="#our-science">
             <a
               className="transition-opacity duration-150 hover:opacity-70"
               onClick={scrollToContent}
             >
               <Image
                 src="/img/icons/arrow_down.svg"
+                alt={data.title}
                 width="28"
                 height="16"
                 loading="eager"

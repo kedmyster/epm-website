@@ -3,12 +3,14 @@ import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -72,7 +74,10 @@ function Main({ data }) {
             <Image
               loading="eager"
               src="/img/mobile/about/hero@3x.jpg"
-              alt="Patient-focused - Pharmaceutical Group"
+              alt={intl.formatMessage({
+                id: "about.hero.image",
+                defaultMessage: "Patient-focused - Pharmaceutical Group",
+              })}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -94,7 +99,10 @@ function Main({ data }) {
             <Image
               loading="eager"
               src="/img/desktop/about/hero@2x.jpg"
-              alt="Patient-focused - Pharmaceutical Group"
+              alt={intl.formatMessage({
+                id: "about.hero.image",
+                defaultMessage: "Patient-focused - Pharmaceutical Group",
+              })}
               layout="fill"
               objectFit="cover"
               quality={100}
@@ -120,9 +128,9 @@ function Main({ data }) {
             >
               <Image
                 src="/img/icons/arrow_down.svg"
+                alt={data.title}
                 width="28"
                 height="16"
-                alt="Our Story"
                 loading="eager"
               />
             </a>

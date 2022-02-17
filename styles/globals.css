@@ -110,6 +110,15 @@ a {
   content: "" !important;
 }
 
+[dir="rtl"] .slick-prev {
+  @apply end-8 !important;
+  right: auto !important;
+}
+[dir="rtl"] .slick-next {
+  left: auto !important;
+  @apply start-8 !important;
+}
+
 /* =================== */
 
 .menu li.menu-item > a:after {

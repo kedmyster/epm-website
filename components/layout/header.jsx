@@ -6,6 +6,7 @@ import { throttle } from "lodash";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
 
 function Header() {
   const windowWidth = useWindowWidth();
@@ -13,6 +14,7 @@ function Header() {
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const router = useRouter();
+  const intl = useIntl();
   const [lang, setLang] = useState("en_US");
   let scrollY = 0;
 
@@ -549,7 +551,7 @@ function Header() {
                   <a className="relative flex gap-1 -top-[2px] lg:top-0">
                     <Image
                       src="/img/icons/flag_usa.svg"
-                      alt=""
+                      alt="English"
                       width={16}
                       height={12}
                       layout="intrinsic"
@@ -566,7 +568,7 @@ function Header() {
                   <a className="relative flex gap-2 -top-[2px] lg:top-0">
                     <Image
                       src="/img/icons/flag_israel.svg"
-                      alt=""
+                      alt="Hebrew"
                       width={16}
                       height={12}
                       layout="intrinsic"

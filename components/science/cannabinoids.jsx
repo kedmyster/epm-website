@@ -4,7 +4,7 @@ import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
-import { data } from "autoprefixer";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -13,6 +13,7 @@ function Cannabinoids({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
@@ -38,7 +39,10 @@ function Cannabinoids({ data }) {
     <section
       id="cannabinoids"
       className="section cannabinoids relative w-full"
-      data-side-menu-label="The Acids"
+      data-side-menu-label={intl.formatMessage({
+        id: "science.cannabinoids.acids",
+        defaultMessage: "The Acids",
+      })}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -51,7 +55,10 @@ function Cannabinoids({ data }) {
                 {isMobile && (
                   <Image
                     src={atmosphere.mobile.src}
-                    alt="Cannabinoids Acid"
+                    alt={intl.formatMessage({
+                      id: "science.cannabinoids.title",
+                      defaultMessage: "Cannabinoids Acid",
+                    })}
                     layout="fill"
                     objectFit="cover"
                     quality={100}
@@ -60,7 +67,10 @@ function Cannabinoids({ data }) {
                 {(isTablet || isDesktop) && (
                   <Image
                     src={atmosphere.desktop.src}
-                    alt="Cannabinoids Acid"
+                    alt={intl.formatMessage({
+                      id: "science.cannabinoids.title",
+                      defaultMessage: "Cannabinoids Acid",
+                    })}
                     layout="fill"
                     objectFit="cover"
                     quality={100}

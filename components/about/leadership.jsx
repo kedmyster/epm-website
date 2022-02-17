@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useIntl } from "react-intl";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import { gsap } from "gsap";
@@ -29,6 +30,7 @@ function Leadership({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -89,12 +91,14 @@ function Leadership({ data }) {
     });
   };
 
+  console.log(data);
+
   return (
     <>
       {data.leaders__group.map((group) => {
         return (
           <section
-            id={getId(group.title)}
+            id={getId(group.id)}
             key={getId(group.title)}
             className="section leadership relative w-full flex flex-col lg:flex-row lg:border-b-1 lg:border-epm-gray-300 lg:h-screen min-h-0 lg:min-h-screen"
             data-side-menu-label={group.label}

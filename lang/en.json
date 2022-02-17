@@ -1,12 +1,33 @@
 {
+  "about.hero.image": {
+    "defaultMessage": "Patient-focused - Pharmaceutical Group"
+  },
+  "about.story.description": {
+    "defaultMessage": "Patient-Focused Pharmaceutical Group"
+  },
+  "about.story.title": {
+    "defaultMessage": "Our Story"
+  },
+  "careers.opportunities.title": {
+    "defaultMessage": "Shape the Future of Healthcare"
+  },
+  "careers.positions.title": {
+    "defaultMessage": "Open Positions"
+  },
   "common.close": {
     "defaultMessage": "Close"
   },
   "common.learnMore": {
     "defaultMessage": "Learn More"
   },
+  "common.next": {
+    "defaultMessage": "Next"
+  },
   "common.playVideo": {
     "defaultMessage": "Play Video"
+  },
+  "common.previous": {
+    "defaultMessage": "Previous"
   },
   "footer.contact.success.great": {
     "defaultMessage": "Great :)"
@@ -74,6 +95,9 @@
   "footer.us.title": {
     "defaultMessage": "US Headquarters"
   },
+  "foundingEPM.label": {
+    "defaultMessage": "Founding EPM"
+  },
   "header.menu.about": {
     "defaultMessage": "About"
   },
@@ -128,8 +152,47 @@
   "header.menu.treatments.psoriasis": {
     "defaultMessage": "Psoriasis"
   },
+  "home.hero.title": {
+    "defaultMessage": "Medicine to All"
+  },
+  "science.bio.title": {
+    "defaultMessage": "Mechoulam's Bio"
+  },
+  "science.cannabinoids.acids": {
+    "defaultMessage": "The Acids"
+  },
+  "science.cannabinoids.title": {
+    "defaultMessage": "Cannabinoids Acid"
+  },
+  "science.collaborations": {
+    "defaultMessage": "Collaborations"
+  },
+  "science.collaborations.title": {
+    "defaultMessage": "Key Collaborations"
+  },
+  "science.hero.title": {
+    "defaultMessage": "Unlock the medical potential of synthetic cannabinoid acids"
+  },
+  "science.pipeline.description": {
+    "defaultMessage": "Our Pipeline - Future Products and Development"
+  },
+  "science.pipeline.title": {
+    "defaultMessage": "Pipeline"
+  },
+  "science.publications.title": {
+    "defaultMessage": "Publications"
+  },
   "science.research.paper.title": {
     "defaultMessage": "EPM-301 Therapeutic Effect on"
+  },
+  "science.research.title": {
+    "defaultMessage": "Research Papers"
+  },
+  "science.science.title": {
+    "defaultMessage": "Our Science"
+  },
+  "treatments.developments.title": {
+    "defaultMessage": "Developments"
   },
   "treatments.disclaimer": {
     "defaultMessage": "Images shown are for illustration purposes only"

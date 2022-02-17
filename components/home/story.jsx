@@ -4,6 +4,7 @@ import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import Button from "../shared/Button";
+import { useIntl } from "react-intl";
 import SectionHeader from "../shared/SectionHeader";
 
 const BlockContent = require("@sanity/block-content-to-react");
@@ -13,6 +14,7 @@ function Story({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
