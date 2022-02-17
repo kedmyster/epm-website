@@ -15,16 +15,8 @@ function Header() {
   const [isDesktop, setIsDesktop] = useState(false);
   const router = useRouter();
   const intl = useIntl();
-  const [lang, setLang] = useState("en_US");
+  const [lang, setLang] = useState(router.locale ? "he_IL" : "en_US");
   let scrollY = 0;
-
-  useEffect(() => {
-    if (router.locale === "he") {
-      setLang("he_IL");
-    } else if (router.locale === "en") {
-      setLang("en_US");
-    }
-  }, []);
 
   useEffect(() => {
     if (windowWidth >= 1280) {

@@ -91,8 +91,6 @@ function Leadership({ data }) {
     });
   };
 
-  console.log(data);
-
   return (
     <>
       {data.leaders__group.map((group) => {
