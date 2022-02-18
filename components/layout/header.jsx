@@ -541,7 +541,7 @@ function Header() {
                     <a className="uppercase font-title relative z-10">
                       <FormattedMessage
                         id="header.menu.ipoAndMedia"
-                        defaultMessage="IPO & Media"
+                        defaultMessage="Media"
                       />
                     </a>
                   </Link>
@@ -935,7 +935,7 @@ function Header() {
                   <a className="block uppercase cursor-pointer relative font-title">
                     <FormattedMessage
                       id="header.menu.ipoAndMedia"
-                      defaultMessage="IPO & Media"
+                      defaultMessage="Media"
                     />
                   </a>
                 </Link>
