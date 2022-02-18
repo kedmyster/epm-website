@@ -59,6 +59,12 @@
       "value": "הקודם"
     }
   ],
+  "common.read": [
+    {
+      "type": 0,
+      "value": "לקריאה"
+    }
+  ],
   "contact.email": [
     {
       "type": 0,
@@ -321,6 +327,12 @@
     {
       "type": 0,
       "value": "מחלות מעי דלקתיות"
+    }
+  ],
+  "header.menu.treatments.praderWilliSyndrome": [
+    {
+      "type": 0,
+      "value": "תסמונת פראדר-ווילי (PWS)"
     }
   ],
   "header.menu.treatments.psoriasis": [

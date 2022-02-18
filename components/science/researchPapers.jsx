@@ -113,7 +113,10 @@ function ResearchPapers({ data }) {
       }
 
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
-        event.target.innerText = "Close";
+        event.target.innerText = intl.formatMessage({
+          id: "common.close",
+          defaultMessage: "Close",
+        });
 
         moreInfoPanel.setAttribute("aria-expanded", "true");
         gsap.to(moreInfoPanel, {
@@ -123,7 +126,10 @@ function ResearchPapers({ data }) {
           duration: 0.25,
         });
       } else {
-        event.target.innerText = "Read";
+        event.target.innerText = intl.formatMessage({
+          id: "common.read",
+          defaultMessage: "Read",
+        });
 
         moreInfoPanel.setAttribute("aria-expanded", "false");
         gsap.to(moreInfoPanel, {
@@ -284,7 +290,10 @@ function ResearchPapers({ data }) {
                         </div>
                         <div className="button pt-5 inline-block">
                           <div className="cursor-pointer inline-block text-white uppercase select-none transition-opacity duration-150 hover:opacity-75">
-                            Read
+                            <FormattedMessage
+                              id="common.read"
+                              defaultMessage="Read"
+                            />
                           </div>
                         </div>
                       </div>

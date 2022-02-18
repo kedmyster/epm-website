@@ -154,7 +154,7 @@ function Community({ data }) {
                     <div className="container mx-auto px-8 pb-8 lg:py-8 h-20 lg:h-auto relative lg:absolute lg:top-0 lg:opacity-0 lg:transition-all lg:duration-250 lg:ease-in-out ">
                       <div className="item-name text-lg">{slide.name}</div>
                       <div className="item__title font-light text-center text-xxs font-title">
-                        {slide.role}
+                        {slide.title}
                       </div>
                     </div>
                   </div>

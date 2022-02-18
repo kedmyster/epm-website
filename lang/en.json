@@ -17,6 +17,9 @@
   "common.close": {
     "defaultMessage": "Close"
   },
+  "common.read": {
+    "defaultMessage": "Read"
+  },
   "common.learnMore": {
     "defaultMessage": "Learn More"
   },
@@ -157,6 +160,9 @@
   },
   "header.menu.treatments.currentDevelopment": {
     "defaultMessage": "Current Developments"
+  },
+  "header.menu.treatments.praderWilliSyndrome": {
+    "defaultMessage": "Prader-Willi Syndrome"
   },
   "header.menu.treatments.inflammatoryBowelDisease": {
     "defaultMessage": "Inflammatory Bowel Disease"

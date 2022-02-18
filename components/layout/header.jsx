@@ -392,6 +392,19 @@ function Header() {
                     </li>
                     <li className="mb-4">
                       <Link
+                        href="/treatments/#prader-willi-syndrome"
+                        onClick={(event) => goToSection(event)}
+                      >
+                        <a className="">
+                          <FormattedMessage
+                            id="header.menu.treatments.praderWilliSyndrome"
+                            defaultMessage="Prader-Willi Syndrome"
+                          />
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="mb-4">
+                      <Link
                         href="/treatments/#inflammatory-bowel-disease"
                         onClick={(event) => goToSection(event)}
                       >
@@ -773,6 +786,19 @@ function Header() {
                         <FormattedMessage
                           id="header.menu.treatments.currentDevelopment"
                           defaultMessage="Current Developments"
+                        />
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="text-sm my-2">
+                    <Link
+                      href="/treatments/#prader-willi-syndrome"
+                      onClick={(event) => goToSection(event)}
+                    >
+                      <a className="transition-opacity duration-150 hover:opacity-70">
+                        <FormattedMessage
+                          id="header.menu.treatments.praderWilliSyndrome"
+                          defaultMessage="Prader-Willi Syndrome"
                         />
                       </a>
                     </Link>

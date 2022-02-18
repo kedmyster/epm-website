@@ -59,6 +59,12 @@
       "value": "Previous"
     }
   ],
+  "common.read": [
+    {
+      "type": 0,
+      "value": "Read"
+    }
+  ],
   "contact.email": [
     {
       "type": 0,
@@ -321,6 +327,12 @@
     {
       "type": 0,
       "value": "Inflammatory Bowel Disease"
+    }
+  ],
+  "header.menu.treatments.praderWilliSyndrome": [
+    {
+      "type": 0,
+      "value": "Prader-Willi Syndrome"
     }
   ],
   "header.menu.treatments.psoriasis": [

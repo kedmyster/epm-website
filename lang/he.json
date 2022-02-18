@@ -17,6 +17,9 @@
   "common.close": {
     "defaultMessage": "סגירה"
   },
+  "common.read": {
+    "defaultMessage": "לקריאה"
+  },
   "common.learnMore": {
     "defaultMessage": "למידע נוסף"
   },
@@ -157,6 +160,9 @@
   },
   "header.menu.treatments.currentDevelopment": {
     "defaultMessage": "תרופות בפיתוח"
+  },
+  "header.menu.treatments.praderWilliSyndrome": {
+    "defaultMessage": "תסמונת פראדר-ווילי (PWS)"
   },
   "header.menu.treatments.inflammatoryBowelDisease": {
     "defaultMessage": "מחלות מעי דלקתיות"
