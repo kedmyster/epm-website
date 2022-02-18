@@ -117,7 +117,7 @@ a {
 }
 [dir="rtl"] .slick-next {
   left: auto !important;
-  @apply start-8 !important;
+  @apply start-8 border !important;
 }
 
 /* =================== */
@@ -307,11 +307,29 @@ body[data-header-theme="dark"] .header .lang-switcher span {
   }
 
   .raphael-mechoulam .slick-prev {
-    @apply start-0 ps-10 justify-start !important;
+    @apply end-auto start-0 ps-10 justify-start !important;
   }
 
   .raphael-mechoulam .slick-next {
-    @apply end-0 pe-10 justify-end !important;
+    @apply start-auto end-0 pe-10 justify-end !important;
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-prev {
+    @apply start-auto end-0 pe-10 justify-end !important;
+    /* @apply rotate-180 !important; */
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-prev div {
+    @apply rotate-180 !important;
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-next {
+    @apply end-auto start-0 ps-10 justify-start !important;
+    /* @apply rotate-180 !important; */
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-next div {
+    @apply rotate-180 !important;
   }
 }
 

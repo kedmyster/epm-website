@@ -55,10 +55,7 @@ function FoundingEPM({ data }) {
     <section
       id="founding-epm"
       className="section founding-epm relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
-      data-side-menu-label={intl.formatMessage({
-        id: "foundingEPM.label",
-        defaultMessage: "Founding EPM",
-      })}
+      data-side-menu-label={data.title}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"

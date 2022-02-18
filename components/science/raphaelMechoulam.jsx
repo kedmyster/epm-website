@@ -163,6 +163,12 @@ function RaphaelMechoulam({ data }) {
     },
   ];
 
+  let slides = mechoulam;
+
+  if (router.locale === "he") {
+    slides.reverse();
+  }
+
   return (
     <section
       id="raphael-mechoulam"
@@ -177,7 +183,7 @@ function RaphaelMechoulam({ data }) {
     >
       <div className="items animate opacity-0 text-white lg:h-screen lg:w-6/12 2xl:w-7/12">
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
-          {mechoulam.map((item, index) => {
+          {slides.map((item, index) => {
             return (
               <div
                 className="item cursor-pointer outline-none"

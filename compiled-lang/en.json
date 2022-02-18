@@ -116,13 +116,37 @@
   "footer.il.address1": [
     {
       "type": 0,
-      "value": "14th floor, BSR 3 Tower, 5 Kinneret St., B.B.C Business Center, 5126237"
+      "value": "5 Kinneret St."
     }
   ],
   "footer.il.address2": [
     {
       "type": 0,
-      "value": "Bnei Brak"
+      "value": "14th floor"
+    }
+  ],
+  "footer.il.address3": [
+    {
+      "type": 0,
+      "value": "BSR 3 Tower"
+    }
+  ],
+  "footer.il.address4": [
+    {
+      "type": 0,
+      "value": "B.B.C. Business Center"
+    }
+  ],
+  "footer.il.address5": [
+    {
+      "type": 0,
+      "value": "Bnei Brak 5126237"
+    }
+  ],
+  "footer.il.tel": [
+    {
+      "type": 0,
+      "value": "Tel: (+972) 077-5060-500"
     }
   ],
   "footer.il.title": [

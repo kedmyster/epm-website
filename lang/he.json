@@ -57,10 +57,22 @@
     "defaultMessage": "לקבלת מידע נוסף אודות EPM, אנא מלאו את הפרטים הבאים:"
   },
   "footer.il.address1": {
-    "defaultMessage": "רח׳ כנרת 5 קומה 14 מגדל ב.ס.ר 3"
+    "defaultMessage": "רח׳ כנרת 5"
   },
   "footer.il.address2": {
-    "defaultMessage": "מרכז עסקים בני ברק 5126237"
+    "defaultMessage": "קומה 14"
+  },
+  "footer.il.address3": {
+    "defaultMessage": "מגדל ב.ס.ר 3"
+  },
+  "footer.il.address4": {
+    "defaultMessage": "מרכז עסקים בני ברק"
+  },
+  "footer.il.address5": {
+    "defaultMessage": "5126237"
+  },
+  "footer.il.tel": {
+    "defaultMessage": "Tel: (+972) 077-5060-500"
   },
   "footer.il.title": {
     "defaultMessage": "מטה ראשי ‫-‬ ישראל"
