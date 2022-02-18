@@ -8,8 +8,20 @@ module.exports = {
   darkMode: false,
   theme: {
     fontFamily: {
-      body: [
+      "body-en": [
         "Lato",
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+      ],
+      "body-he": [
+        "Assistant",
         "system-ui",
         "-apple-system",
         "Segoe UI",

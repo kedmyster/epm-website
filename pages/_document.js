@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import classNames from "classnames";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -42,7 +43,13 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="font-body text-epm-gray-700" data-header-theme="light">
+        <body
+          className={classNames("text-epm-gray-700", {
+            "font-body-en": this.props.locale === "en",
+            "font-body-he": this.props.locale === "he",
+          })}
+          data-header-theme="light"
+        >
           <Main />
           <NextScript />
         </body>
