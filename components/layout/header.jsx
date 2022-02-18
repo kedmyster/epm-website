@@ -549,7 +549,7 @@ function Header() {
               </ul>
             </nav>
           </div>
-          <div className="lang-switcher flex-grow xl:flex-grow-0 xl:absolute xl:end-8 text-xl z-50">
+          <div className="lang-switcher xl:absolute xl:end-8 text-xl z-50">
             {lang === "he_IL" && (
               <div className="">
                 <Link href="/" locale="">
@@ -585,7 +585,7 @@ function Header() {
               </div>
             )}
           </div>
-          <div className="menu-button xl:hidden relative z-[51]">
+          <div className="menu-button ms-2 xl:hidden relative z-[51]">
             <button
               type="button"
               onClick={(event) => toggleMenu(event)}
@@ -691,13 +691,16 @@ function Header() {
           <nav role="navigation">
             <ul>
               <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
-                <Link
-                  href="/about"
-                  onClick={(event) =>
-                    toggleSubMenu(event, document.querySelector(".menu--about"))
-                  }
-                >
-                  <a className="block uppercase cursor-pointer relative font-title">
+                <Link href="/about">
+                  <a
+                    className="block uppercase cursor-pointer relative font-title"
+                    onClick={(event) =>
+                      toggleSubMenu(
+                        event,
+                        document.querySelector(".menu--about")
+                      )
+                    }
+                  >
                     <FormattedMessage
                       id="header.menu.about"
                       defaultMessage="About"
@@ -760,16 +763,16 @@ function Header() {
                 </ul>
               </li>
               <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
-                <Link
-                  href="/treatments"
-                  onClick={(event) =>
-                    toggleSubMenu(
-                      event,
-                      document.querySelector(".menu--treatments")
-                    )
-                  }
-                >
-                  <a className="block uppercase cursor-pointer relative font-title">
+                <Link href="/treatments">
+                  <a
+                    className="block uppercase cursor-pointer relative font-title"
+                    onClick={(event) =>
+                      toggleSubMenu(
+                        event,
+                        document.querySelector(".menu--treatments")
+                      )
+                    }
+                  >
                     <FormattedMessage
                       id="header.menu.treatments"
                       defaultMessage="Treatments"
@@ -832,16 +835,16 @@ function Header() {
                 </ul>
               </li>
               <li className="menu-item font-title text-epm-gray-700 tracking-wide border-b-1 border-epm-gray-500 mb-3 pb-3">
-                <Link
-                  href="/science"
-                  onClick={(event) =>
-                    toggleSubMenu(
-                      event,
-                      document.querySelector(".menu--science")
-                    )
-                  }
-                >
-                  <a className="block uppercase cursor-pointer relative font-title">
+                <Link href="/science">
+                  <a
+                    className="block uppercase cursor-pointer relative font-title"
+                    onClick={(event) =>
+                      toggleSubMenu(
+                        event,
+                        document.querySelector(".menu--science")
+                      )
+                    }
+                  >
                     <FormattedMessage
                       id="header.menu.science"
                       defaultMessage="Science"

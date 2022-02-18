@@ -75,7 +75,7 @@ function CareersComponent({ data, hasPositions }) {
   return (
     <section
       id="careers"
-      className="section careers relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
+      className="section careers relative w-full bg-cover text-center flex content-top justify-center lg:h-screen"
       data-side-menu-label=""
       data-side-menu-color="light"
       data-side-menu-visibility="hidden"
@@ -121,7 +121,7 @@ function CareersComponent({ data, hasPositions }) {
         </div>
       </div>
       {hasPositions && (
-        <div className="scroll-to-content animate opacity-0 absolute bottom-12 start-1/2 transform -translate-x-1/2">
+        <div className="scroll-to-content animate opacity-0 absolute bottom-12">
           <Link href="#story">
             <a
               className="transition-opacity duration-150 hover:opacity-70"

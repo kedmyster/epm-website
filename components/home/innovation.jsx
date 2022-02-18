@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import classNames from "classnames";
 import Slider from "react-slick";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
@@ -54,7 +55,7 @@ function Innovation({ data }) {
   const showMore = (slideNumber) => {
     const slides = Array.from(document.querySelectorAll("#innovation .item"));
     const images = Array.from(
-      document.querySelectorAll("#innovation [data-slide-image")
+      document.querySelectorAll("#innovation [data-slide-image]")
     );
     const tl = gsap.timeline({});
 
@@ -65,7 +66,7 @@ function Innovation({ data }) {
 
       if (index === slideNumber) {
         images[index].style.opacity = 1;
-        images[index].style.zIndex = 2;
+        images[index].style.zIndex = 10;
       } else {
         images[index].style.opacity = 0;
         images[index].style.zIndex = 1;
@@ -178,7 +179,13 @@ function Innovation({ data }) {
             {images.map((slide, index) => {
               return (
                 <div
-                  className="absolute inset-0 lg:h-2/3-screen lg:transition-all lg:duration-1000 lg:ease-in-out"
+                  className={classNames(
+                    "absolute inset-0 lg:h-2/3-screen lg:transition-all lg:duration-1000 lg:ease-in-out",
+                    {
+                      "opacity-1 z-10": index === 0,
+                      "opacity-0 z-1": index !== 0,
+                    }
+                  )}
                   data-slide-image={index}
                 >
                   <div className="lg:h-2/3-screen overflow-y-hidden">

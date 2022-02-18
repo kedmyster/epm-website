@@ -67,7 +67,7 @@ function Commitment({ data }) {
             <div className="animate opacity-0 text-white pt-8">
               <SectionHeader name="" title={<h2>{data.mobile__title}</h2>} />
             </div>
-            <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-x divide-white">
+            <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-s divide-white">
               {data.bullets.map((bullet) => {
                 return (
                   <div key={bullet.title} className="item text-center w-1/3">

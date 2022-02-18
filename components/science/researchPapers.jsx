@@ -164,7 +164,7 @@ function ResearchPapers({ data }) {
     <section
       id="research-papers"
       className="section research-papers"
-      alt={intl.formatMessage({
+      data-side-menu-label={intl.formatMessage({
         id: "science.publications.title",
         defaultMessage: "Publications",
       })}

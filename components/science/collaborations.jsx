@@ -64,17 +64,22 @@ function Collaborations({ data }) {
         moreInfoPanel.setAttribute("aria-expanded", "true");
         gsap.set(moreInfoPanel, { zIndex: 11 });
         gsap.to(moreInfoPanel, { opacity: 1, duration: 0.25 });
-        event.target.innerText = "Close";
+        event.target.innerText = intl.formatMessage({
+          id: "common.close",
+          defaultMessage: "Close",
+        });
       } else {
         moreInfoPanel.setAttribute("aria-expanded", "false");
         gsap.set(moreInfoPanel, { zIndex: 0 });
         gsap.to(moreInfoPanel, { opacity: 0, duration: 0.25 });
-        event.target.innerText = "Learn More";
+        event.target.innerText = intl.formatMessage({
+          id: "common.learnMore",
+          defaultMessage: "Learn More",
+        });
       }
 
-      document
-        .querySelector(".collaborations__panel.academy")
-        .classList.toggle("lg:border-s");
+      const panels = document.querySelectorAll(".collaborations__panel");
+      panels[panels.length - 1].classList.toggle("lg:border-s");
     }
   };
 
@@ -82,7 +87,7 @@ function Collaborations({ data }) {
     <section
       id={"collaborations"}
       className="section collaborations"
-      alt={intl.formatMessage({
+      data-side-menu-label={intl.formatMessage({
         id: "science.collaborations",
         defaultMessage: "Collaborations",
       })}
@@ -179,14 +184,15 @@ function Collaborations({ data }) {
                 />
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-              <div className="animate opacity-0 w-full mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10 divide-x divide-epm-gray-100 divide-opacity-30">
+              <div className="animate opacity-0 w-full mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10 divide-s divide-epm-gray-100 divide-opacity-30">
                 {data.collaboration__logos.map((section, sectionIndex) => {
+                  console.log(section);
                   return (
                     <div
                       key={slugify(section.title)}
                       className={classNames(
                         "collaborations__panel lg:w-1/2 px-8",
-                        slugify(section.title.toLowerCase())
+                        slugify(section.id.toLowerCase())
                       )}
                     >
                       <div className="relative z-10">
@@ -221,7 +227,10 @@ function Collaborations({ data }) {
                             href="#"
                             style="light"
                             onClick={(event) =>
-                              toggleLearnMore(event, slugify(section.title))
+                              toggleLearnMore(
+                                event,
+                                slugify(section.id.toLowerCase())
+                              )
                             }
                           >
                             <FormattedMessage
@@ -240,7 +249,9 @@ function Collaborations({ data }) {
                             "start-0": sectionIndex % 2 === 1,
                           }
                         )}
-                        data-collaboration-panel={slugify(section.title)}
+                        data-collaboration-panel={slugify(
+                          section.id.toLowerCase()
+                        )}
                         aria-expanded="false"
                       >
                         <BlockContent

@@ -63,7 +63,7 @@
     "defaultMessage": "Tel Aviv"
   },
   "footer.il.title": {
-    "defaultMessage": "Israel Office"
+    "defaultMessage": "Israel Headquarters"
   },
   "footer.information.ir": {
     "defaultMessage": "Investor Relations"
@@ -108,7 +108,7 @@
     "defaultMessage": "Tel: +1 (323) 307-2111"
   },
   "footer.us.title": {
-    "defaultMessage": "US Headquarters"
+    "defaultMessage": "US Office"
   },
   "foundingEPM.label": {
     "defaultMessage": "Founding EPM"

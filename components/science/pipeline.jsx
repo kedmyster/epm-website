@@ -48,7 +48,7 @@ function Pipeline({ data }) {
     <section
       id="pipeline"
       className="section pipeline"
-      alt={intl.formatMessage({
+      data-side-menu-label={intl.formatMessage({
         id: "science.pipeline.title",
         defaultMessage: "Pipeline",
       })}

@@ -155,7 +155,7 @@ function OurTreatments({ data }) {
       <section
         id="current-developments"
         className="section treatments relative w-full"
-        alt={intl.formatMessage({
+        data-side-menu-label={intl.formatMessage({
           id: "treatments.developments.title",
           defaultMessage: "Developments",
         })}

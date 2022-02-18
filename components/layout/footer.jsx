@@ -289,8 +289,27 @@ function Footer({}) {
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">
                     <FormattedMessage
+                      id="footer.il.title"
+                      defaultMessage="Israel Headquarters"
+                    />
+                  </div>
+                  <div className="">
+                    <FormattedMessage
+                      id="footer.il.address1"
+                      defaultMessage="4 Berkovitch St."
+                    />
+                    <br />
+                    <FormattedMessage
+                      id="footer.il.address2"
+                      defaultMessage="Tel Aviv"
+                    />
+                  </div>
+                </div>
+                <div className="mb-4 leading-8">
+                  <div className="text-white font-bold uppercase">
+                    <FormattedMessage
                       id="footer.us.title"
-                      defaultMessage="US Headquarters"
+                      defaultMessage="US Office"
                     />
                   </div>
                   <div className="">
@@ -320,26 +339,6 @@ function Footer({}) {
                         />
                       </span>
                     )}
-                  </div>
-                </div>
-
-                <div className="mb-4 leading-8">
-                  <div className="text-white font-bold uppercase">
-                    <FormattedMessage
-                      id="footer.il.title"
-                      defaultMessage="Israel Office"
-                    />
-                  </div>
-                  <div className="">
-                    <FormattedMessage
-                      id="footer.il.address1"
-                      defaultMessage="4 Berkovitch St."
-                    />
-                    <br />
-                    <FormattedMessage
-                      id="footer.il.address2"
-                      defaultMessage="Tel Aviv"
-                    />
                   </div>
                 </div>
               </div>
