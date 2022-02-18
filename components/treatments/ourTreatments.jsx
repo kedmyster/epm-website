@@ -343,11 +343,11 @@ function OurTreatments({ data }) {
                                   }
                                 )}
                               >
-                                <span className="inline-block lg:w-48">
+                                <span className="inline-block xl:w-36 2xl:w-48">
                                   {icon.name}
                                 </span>
                                 {icon.label && (
-                                  <span className="block normal-case text-epm-gray-500 font-light">
+                                  <span className="block normal-case text-epm-gray-500 font-light xl:w-36 2xl:w-48">
                                     {icon.label}
                                   </span>
                                 )}
@@ -359,7 +359,7 @@ function OurTreatments({ data }) {
                     </div>
                     {(isTablet || isDesktop) && (
                       <div
-                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex flex-wrap xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
+                        className="more-info container lg:opacity-0 lg:absolute z-0 inset-0 hidden lg:flex xl:content-center lg:bg-epm-gray-300 lg:px-8 2xl:px-36 py-8 lg:h-screen overflow-y-hidden lg:overflow-y-auto"
                         aria-expanded="false"
                       >
                         <BlockContent
