@@ -189,7 +189,7 @@ function MyApp({ Component, pageProps, err }) {
         });
       }
     });
-  }, []);
+  }, [router.pathname]);
 
   useEffect(() => {
     if (isDesktop || isTablet) {
