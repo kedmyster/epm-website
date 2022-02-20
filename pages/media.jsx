@@ -30,7 +30,7 @@ function Media({ data }) {
         )}
       </Head>
 
-      {/*<IPOComponent data={getSectionDataByName(data, "media__ipo", lang)} />*/}
+      <IPOComponent data={getSectionDataByName(data, "media__ipo", lang)} />
       <MediaComponent data={getSectionDataByName(data, "media__media", lang)} />
     </>
   );
