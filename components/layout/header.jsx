@@ -552,36 +552,32 @@ function Header() {
           <div className="lang-switcher xl:absolute xl:end-8 text-xl z-50">
             {lang === "he_IL" && (
               <div className="">
-                <Link href="/" locale="">
-                  <a className="relative flex gap-1 -top-[2px] lg:top-0">
-                    <Image
-                      src="/img/icons/flag_usa.svg"
-                      alt="English"
-                      width={16}
-                      height={12}
-                      layout="intrinsic"
-                      quality={100}
-                    />
-                    <span className="font-title text-base xl:text-lg">EN</span>
-                  </a>
-                </Link>
+                <a href="/" className="relative flex gap-1 -top-[2px] lg:top-0">
+                  <Image
+                    src="/img/icons/flag_usa.svg"
+                    alt="English"
+                    width={16}
+                    height={12}
+                    layout="intrinsic"
+                    quality={100}
+                  />
+                  <span className="font-title text-base xl:text-lg">EN</span>
+                </a>
               </div>
             )}
             {lang === "en_US" && (
               <div className="">
-                <Link href="/" locale="he">
-                  <a className="relative flex gap-2 -top-[2px] lg:top-0">
-                    <Image
-                      src="/img/icons/flag_israel.svg"
-                      alt="Hebrew"
-                      width={16}
-                      height={12}
-                      layout="intrinsic"
-                      quality={100}
-                    />
-                    <span className="font-title text-base xl:text-lg">HE</span>
-                  </a>
-                </Link>
+                <a href="/he" className="relative flex gap-2 -top-[2px] lg:top-0">
+                  <Image
+                    src="/img/icons/flag_israel.svg"
+                    alt="Hebrew"
+                    width={16}
+                    height={12}
+                    layout="intrinsic"
+                    quality={100}
+                  />
+                  <span className="font-title text-base xl:text-lg">HE</span>
+                </a>
               </div>
             )}
           </div>

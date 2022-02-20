@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import classNames from "classnames";
 import { gsap } from "gsap";
 
@@ -11,6 +12,8 @@ const VISIBILITY_VISIBLE = "visible";
 const VISIBILITY_HIDDEN = "hidden";
 
 function SideMenu() {
+  const router = useRouter();
+
   const animateSideMenuHover = (sideMenu, section, menuItem, pill, label) => {
     if (!section.id) {
       return;
@@ -366,7 +369,7 @@ function SideMenu() {
         // GSDevTools.create();
       });
     }, 1500);
-  }, []);
+  }, [router.pathname]);
 
   const sections = Array.from(document.querySelectorAll(".section"));
 
