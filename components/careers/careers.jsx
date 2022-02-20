@@ -122,23 +122,22 @@ function CareersComponent({ data, hasPositions }) {
       </div>
       {hasPositions && (
         <div className="scroll-to-content animate opacity-0 absolute bottom-12">
-          <Link href="#story">
-            <a
-              className="transition-opacity duration-150 hover:opacity-70"
-              onClick={scrollToContent}
-            >
-              <Image
-                src="/img/icons/arrow_down_dark.svg"
-                width="28"
-                height="16"
-                alt={intl.formatMessage({
-                  id: "careers.positions.title",
-                  defaultMessage: "Open Positions",
-                })}
-                loading="eager"
-              />
-            </a>
-          </Link>
+          <a
+            href="#story"
+            className="transition-opacity duration-150 hover:opacity-70"
+            onClick={scrollToContent}
+          >
+            <Image
+              src="/img/icons/arrow_down_dark.svg"
+              width="28"
+              height="16"
+              alt={intl.formatMessage({
+                id: "careers.positions.title",
+                defaultMessage: "Open Positions",
+              })}
+              loading="eager"
+            />
+          </a>
         </div>
       )}
     </section>

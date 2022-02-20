@@ -7,12 +7,14 @@ import { FormattedMessage } from "react-intl";
 import classNames from "classnames";
 import Link from "next/link";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 
 function Footer({}) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
   const intl = useIntl();
 
   useEffect(() => {
@@ -426,54 +428,59 @@ function Footer({}) {
               <nav role="navigation">
                 <ul className="leading-8">
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <Link href="/about">
-                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
-                        <FormattedMessage
-                          id="footer.menu.about"
-                          defaultMessage="About"
-                        />
-                      </a>
-                    </Link>
+                    <a
+                      href={router.locale === "en" ? "/about" : "/he/about"}
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      <FormattedMessage
+                        id="footer.menu.about"
+                        defaultMessage="About"
+                      />
+                    </a>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <Link href="/science">
-                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
-                        <FormattedMessage
-                          id="footer.menu.science"
-                          defaultMessage="Science"
-                        />
-                      </a>
-                    </Link>
+                    <a
+                      href={router.locale === "en" ? "/science" : "/he/science"}
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      <FormattedMessage
+                        id="footer.menu.science"
+                        defaultMessage="Science"
+                      />
+                    </a>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <Link href="/treatments">
-                      <a className="block uppercase underline">
-                        <FormattedMessage
-                          id="footer.menu.treatments"
-                          defaultMessage="Treatments"
-                        />
-                      </a>
-                    </Link>
+                    <a
+                      href={router.locale === "en" ? "/treatments" : "/he/treatments"}
+                      className="block uppercase underline"
+                    >
+                      <FormattedMessage
+                        id="footer.menu.treatments"
+                        defaultMessage="Treatments"
+                      />
+                    </a>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <Link href="/media">
-                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
-                        <FormattedMessage
-                          id="footer.menu.media"
-                          defaultMessage="Media"
-                        />
-                      </a>
-                    </Link>
+                    <a
+                      href={router.locale === "en" ? "/media" : "/he/media"}
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      <FormattedMessage
+                        id="footer.menu.media"
+                        defaultMessage="Media"
+                      />
+                    </a>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <Link href="/careers">
-                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
-                        <FormattedMessage
-                          id="footer.menu.careers"
-                          defaultMessage="Careers"
-                        />
-                      </a>
-                    </Link>
+                    <a
+                      href={router.locale === "en" ? "/careers" : "/he/careers"}
+                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
+                    >
+                      <FormattedMessage
+                        id="footer.menu.careers"
+                        defaultMessage="Careers"
+                      />
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -481,23 +488,27 @@ function Footer({}) {
           </div>
         </div>
         <div className="copyright text-xs lg:text-sm font-title text-epm-gray-700">
-          <Link href="/privacy-policy">
-            <a className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70">
-              <FormattedMessage
-                id="footer.menu.privacyPolicy"
-                defaultMessage="Privacy Policy"
-              />
-            </a>
-          </Link>
+          <a
+            href={
+              router.locale === "en" ? "/privacy-policy" : "/he/privacy-policy"
+            }
+            className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
+          >
+            <FormattedMessage
+              id="footer.menu.privacyPolicy"
+              defaultMessage="Privacy Policy"
+            />
+          </a>
           <span> | </span>
-          <Link href="/terms-of-use">
-            <a className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70">
-              <FormattedMessage
-                id="footer.menu.termsOfUse"
-                defaultMessage="Terms of Use"
-              />
-            </a>
-          </Link>
+          <a
+            href={router.locale === "en" ? "/terms-of-use" : "/he/terms-of-use"}
+            className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
+          >
+            <FormattedMessage
+              id="footer.menu.termsOfUse"
+              defaultMessage="Terms of Use"
+            />
+          </a>
           <span className="hidden lg:inline"> | </span>
           <span className="block mt-1.5 lg:inline-block lg:mt-0">
             <FormattedMessage

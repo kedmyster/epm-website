@@ -115,20 +115,19 @@ function Main({ data }) {
           </h1>
         </div>
         <div className="scroll-to-content">
-          <Link href="#story">
-            <a
-              className="transition-opacity duration-150 hover:opacity-70"
-              onClick={scrollToContent}
-            >
-              <Image
-                src="/img/icons/arrow_down.svg"
-                alt={data.title}
-                width="28"
-                height="16"
-                loading="eager"
-              />
-            </a>
-          </Link>
+          <a
+            href="#story"
+            className="transition-opacity duration-150 hover:opacity-70"
+            onClick={scrollToContent}
+          >
+            <Image
+              src="/img/icons/arrow_down.svg"
+              alt={data.title}
+              width="28"
+              height="16"
+              loading="eager"
+            />
+          </a>
         </div>
       </div>
     </section>
