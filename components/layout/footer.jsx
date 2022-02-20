@@ -3,14 +3,17 @@ import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { FormattedMessage } from "react-intl";
 import classNames from "classnames";
-import axios from "axios";
+import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Footer({}) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -73,15 +76,21 @@ function Footer({}) {
       data-side-menu-visibility="hidden"
       data-logo-color="dark"
     >
-      <div className="animate opacity-0 container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:pl-24 xl:pl-56 2xl:pl-8 lg:flex lg:flex-col lg:justify-between">
+      <div className="animate opacity-0 container mx-auto min-h-screen lg:min-h-0 lg:h-103 px-8 lg:px-16 xl:px-24 2xl:px-8 pt-12 pb-4 lg:py-8 lg:ps-24 xl:ps-56 2xl:ps-8 lg:flex lg:flex-col lg:justify-between">
         <div className="lg:flex lg:flex-row lg:justify-between relative">
-          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-96 2xl:w-109 xl:pr-0">
+          <div className="contact__form flex-grow lg:flex-grow-0 relative z-10 lg:w-96 2xl:w-109 xl:pe-0">
             <div className="mb-4 lg:mb-8">
               <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-epm-gray-700">
-                Make a Change with Us
+                <FormattedMessage
+                  id="footer.title"
+                  defaultMessage="Make a Change with Us"
+                />
               </h2>
               <p className="mt-4">
-                For more updates about EPM please fill in your details:
+                <FormattedMessage
+                  id="footer.description"
+                  defaultMessage="For more updates about EPM please fill in your details:"
+                />
               </p>
             </div>
             <div className="mb-8 lg:mb-0">
@@ -158,13 +167,19 @@ function Footer({}) {
                         <Field
                           type="text"
                           name="firstName"
-                          placeholder="First Name"
-                          className="w-full font-light rounded-3xl px-5 py-2 mr-4 mb-4 lg:mb-0"
+                          placeholder={intl.formatMessage({
+                            id: "contact.firstName",
+                            defaultMessage: "First Name",
+                          })}
+                          className="w-full font-light rounded-3xl px-5 py-2 me-4 mb-4 lg:mb-0"
                         />
                         <Field
                           type="text"
                           name="lastName"
-                          placeholder="Last Name"
+                          placeholder={intl.formatMessage({
+                            id: "contact.lastName",
+                            defaultMessage: "Last Name",
+                          })}
                           className="w-full font-light rounded-3xl px-5 py-2"
                         />
                       </div>
@@ -172,7 +187,10 @@ function Footer({}) {
                         <Field
                           type="email"
                           name="email"
-                          placeholder="Email Address"
+                          placeholder={intl.formatMessage({
+                            id: "contact.email",
+                            defaultMessage: "Email Address",
+                          })}
                           className={classNames(
                             "w-full font-light rounded-3xl px-5 py-2",
                             {
@@ -187,7 +205,10 @@ function Footer({}) {
                           className="w-full lg:w-auto font-title text-center uppercase transition-opacity duration-150 hover:opacity-70 bg-epm-gray-700 text-xl border-3 border-epm-gray-700 text-white font-light rounded-3xl lg:px-16 py-1"
                           disabled={isSubmitting}
                         >
-                          Submit
+                          <FormattedMessage
+                            id="contact.submit"
+                            defaultMessage="Submit"
+                          />
                         </button>
                       </div>
                     </div>
@@ -196,12 +217,18 @@ function Footer({}) {
               </Formik>
             </div>
           </div>
-          <div className="contact__thanks mb-12 opacity-0 absolute top-0 left-0 z-0">
+          <div className="contact__thanks mb-12 opacity-0 absolute top-0 start-0 z-0">
             <div className="mb-8">
               <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-white">
-                Great :)
+                <FormattedMessage
+                  id="footer.contact.success.great"
+                  defaultMessage="Great :)"
+                />
                 <br />
-                Thank You!
+                <FormattedMessage
+                  id="footer.contact.success.thanks"
+                  defaultMessage="Thank You!"
+                />
               </h2>
             </div>
             <div>
@@ -218,7 +245,10 @@ function Footer({}) {
             <div className="flex-grow">
               <div className="mb-4 leading-8">
                 <div className="text-white font-bold uppercase">
-                  Information
+                  <FormattedMessage
+                    id="footer.information.title"
+                    defaultMessage="Information"
+                  />
                 </div>
                 <div className="">
                   <a
@@ -229,7 +259,11 @@ function Footer({}) {
                   </a>
                 </div>
                 <div className="">
-                  Investor Relations:{" "}
+                  <FormattedMessage
+                    id="footer.information.ir"
+                    defaultMessage="Investor Relations"
+                  />
+                  :{" "}
                   <a
                     href="mailto:ir@epmip.com"
                     className="underline transition-opacity duration-150 hover:opacity-70"
@@ -238,7 +272,11 @@ function Footer({}) {
                   </a>
                 </div>
                 <div className="">
-                  Media:{" "}
+                  <FormattedMessage
+                    id="footer.information.media"
+                    defaultMessage="Media"
+                  />
+                  :{" "}
                   <a
                     href="mailto:media@epmip.com"
                     className="underline transition-opacity duration-150 hover:opacity-70"
@@ -250,35 +288,87 @@ function Footer({}) {
               <div>
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">
-                    Israel Headquarters
+                    <FormattedMessage
+                      id="footer.il.title"
+                      defaultMessage="Israel Headquarters"
+                    />
                   </div>
                   <div className="">
-                    14th floor
+                    <FormattedMessage
+                      id="footer.il.address1"
+                      defaultMessage="5 Kinneret St."
+                    />
                     <br />
-                    BSR 3 Tower
+                    <FormattedMessage
+                      id="footer.il.address2"
+                      defaultMessage="14th floor"
+                    />
                     <br />
-                    5 Kinneret St.
+                    <FormattedMessage
+                      id="footer.il.address3"
+                      defaultMessage="BSR 3 Tower"
+                    />
                     <br />
-                    B.B.C Business Center
+                    <FormattedMessage
+                      id="footer.il.address4"
+                      defaultMessage="B.B.C. Business Center"
+                    />
                     <br />
-                    5126237, Bnei Brak
+                    <FormattedMessage
+                      id="footer.il.address5"
+                      defaultMessage="Bnei Brak 5126237 "
+                    />
                     <br />
-                    Tel: (+972) 077-5060-500
+                    {isMobile && (
+                      <a href="tel:+972 077 307 5060 500">
+                        <FormattedMessage
+                          id="footer.il.tel"
+                          defaultMessage="Tel: (+972) 077-5060-500"
+                        />
+                      </a>
+                    )}
+                    {!isMobile && (
+                      <FormattedMessage
+                        id="footer.il.tel"
+                        defaultMessage="Tel: (+972) 077-5060-500"
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="mb-4 leading-8">
                   <div className="text-white font-bold uppercase">
-                    US Office
+                    <FormattedMessage
+                      id="footer.us.title"
+                      defaultMessage="US Office"
+                    />
                   </div>
                   <div className="">
-                    1347 19th St.
+                    <FormattedMessage
+                      id="footer.us.address1"
+                      defaultMessage="1347 19th St."
+                    />
                     <br />
-                    Los Angeles, Santa Monica, 90404
+                    <FormattedMessage
+                      id="footer.us.address2"
+                      defaultMessage="Los Angeles, Santa Monica, 90404"
+                    />
                     <br />
                     {isMobile && (
-                      <a href="tel:1 323 307 2111"> Tel: +1 (323) 307-2111</a>
+                      <a href="tel:+1 323 307 2111">
+                        <FormattedMessage
+                          id="footer.us.tel"
+                          defaultMessage="Tel: +1 (323) 307-2111"
+                        />
+                      </a>
                     )}
-                    {!isMobile && <span>Tel: +1 (323) 307-2111</span>}
+                    {!isMobile && (
+                      <span>
+                        <FormattedMessage
+                          id="footer.us.tel"
+                          defaultMessage="Tel: +1 (323) 307-2111"
+                        />
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -336,41 +426,54 @@ function Footer({}) {
               <nav role="navigation">
                 <ul className="leading-8">
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <a
-                      href="/about"
-                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                    >
-                      About
-                    </a>
+                    <Link href="/about">
+                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
+                        <FormattedMessage
+                          id="footer.menu.about"
+                          defaultMessage="About"
+                        />
+                      </a>
+                    </Link>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <a
-                      href="/science"
-                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                    >
-                      Science
-                    </a>
+                    <Link href="/science">
+                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
+                        <FormattedMessage
+                          id="footer.menu.science"
+                          defaultMessage="Science"
+                        />
+                      </a>
+                    </Link>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <a href="/treatments" className="block uppercase underline">
-                      Treatments
-                    </a>
+                    <Link href="/treatments">
+                      <a className="block uppercase underline">
+                        <FormattedMessage
+                          id="footer.menu.treatments"
+                          defaultMessage="Treatments"
+                        />
+                      </a>
+                    </Link>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <a
-                      href="/media"
-                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                    >
-                      Media
-                    </a>
+                    <Link href="/media">
+                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
+                        <FormattedMessage
+                          id="footer.menu.media"
+                          defaultMessage="Media"
+                        />
+                      </a>
+                    </Link>
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
-                    <a
-                      href="/careers"
-                      className="block uppercase underline transition-opacity duration-150 hover:opacity-70"
-                    >
-                      Careers
-                    </a>
+                    <Link href="/careers">
+                      <a className="block uppercase underline transition-opacity duration-150 hover:opacity-70">
+                        <FormattedMessage
+                          id="footer.menu.careers"
+                          defaultMessage="Careers"
+                        />
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -378,22 +481,29 @@ function Footer({}) {
           </div>
         </div>
         <div className="copyright text-xs lg:text-sm font-title text-epm-gray-700">
-          <a
-            href="/privacy-policy"
-            className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
-          >
-            Privacy Policy
-          </a>
+          <Link href="/privacy-policy">
+            <a className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70">
+              <FormattedMessage
+                id="footer.menu.privacyPolicy"
+                defaultMessage="Privacy Policy"
+              />
+            </a>
+          </Link>
           <span> | </span>
-          <a
-            href="/terms-of-use"
-            className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70"
-          >
-            Terms of Use
-          </a>
+          <Link href="/terms-of-use">
+            <a className="underline cursor-pointer transition-opacity duration-150 hover:opacity-70">
+              <FormattedMessage
+                id="footer.menu.termsOfUse"
+                defaultMessage="Terms of Use"
+              />
+            </a>
+          </Link>
           <span className="hidden lg:inline"> | </span>
           <span className="block mt-1.5 lg:inline-block lg:mt-0">
-            Copyright ©2021 EPM Group, Inc. All Rights Reserved
+            <FormattedMessage
+              id="footer.copyright"
+              defaultMessage="Copyright ©2021 EPM Group, Inc. All Rights Reserved"
+            />
           </span>
         </div>
       </div>

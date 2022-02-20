@@ -32,3 +32,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Translations
+
+### English
+Run `npm run i18n:extract -- '{pages,components}/**/*.js*' --ignore='**/*.d.ts' --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'`
+Run `npm run i18n:compile -- lang/en.json --ast --out-file compiled-lang/en.json`
+
+### Hebrew
+Run `npm run i18n:extract -- '{pages,components}/**/*.js*' --ignore='**/*.d.ts' --out-file lang/he.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'`
+Run `npm run i18n:compile -- lang/he.json --ast --out-file compiled-lang/he.json`

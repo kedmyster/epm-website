@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
 
 .app {
   scroll-behavior: smooth;
@@ -84,21 +85,21 @@ a {
   width: 0.5625rem;
   height: 0.5625rem;
   border-radius: 50px;
-  @apply block absolute top-1/2 left-0 transform -translate-y-1/2 transition-all ease-in-out duration-150 bg-white;
+  @apply block absolute top-1/2 start-0 transform -translate-y-1/2 transition-all ease-in-out duration-150 bg-white;
 }
 
 .side-menu .slide .slide__label {
-  @apply ml-10 opacity-0 text-white leading-none;
+  @apply ms-10 opacity-0 text-white leading-none;
 }
 
 /* =================== */
 
 .slick-prev {
-  left: 2rem !important;
+  @apply start-8 !important;
 }
 
 .slick-next {
-  right: 2rem !important;
+  @apply end-8 !important;
 }
 
 .slick-arrow {
@@ -110,6 +111,15 @@ a {
   content: "" !important;
 }
 
+[dir="rtl"] .slick-prev {
+  @apply end-8 !important;
+  right: auto !important;
+}
+[dir="rtl"] .slick-next {
+  left: auto !important;
+  @apply start-8 border !important;
+}
+
 /* =================== */
 
 .menu li.menu-item > a:after {
@@ -117,7 +127,7 @@ a {
   width: 0.5625rem;
   height: 0.5625rem;
   border-radius: 50px;
-  @apply block absolute bg-epm-gray-700 top-1/2 right-0 transform -translate-y-1/2 transition-all ease-in-out duration-150;
+  @apply block absolute bg-epm-gray-700 top-1/2 end-0 transform -translate-y-1/2 transition-all ease-in-out duration-150;
 }
 
 .menu li.menu-item.menu-item--open > a:after {
@@ -134,6 +144,14 @@ a {
 /* =================== */
 body[data-header-theme="dark"] .header .menu-button svg {
   stroke: #636466;
+}
+
+body[data-header-theme="light"] .header .lang-switcher span {
+  @apply text-white;
+}
+
+body[data-header-theme="dark"] .header .lang-switcher span {
+  @apply text-black;
 }
 
 @media (min-width: 1024px) {
@@ -235,8 +253,10 @@ body[data-header-theme="dark"] .header .menu-button svg {
 .solution .slick-arrow {
   top: auto;
   @apply bottom-8;
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .solution .slick-arrow {
     bottom: auto;
     top: 50%;
     transform: translateY(-50%);
@@ -251,8 +271,10 @@ body[data-header-theme="dark"] .header .menu-button svg {
 .community .slick-arrow {
   top: auto;
   bottom: 1.875rem;
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .community .slick-arrow {
     bottom: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -285,11 +307,29 @@ body[data-header-theme="dark"] .header .menu-button svg {
   }
 
   .raphael-mechoulam .slick-prev {
-    @apply left-0 pl-10 justify-start !important;
+    @apply end-auto start-0 ps-10 justify-start !important;
   }
 
   .raphael-mechoulam .slick-next {
-    @apply right-0 pr-10 justify-end !important;
+    @apply start-auto end-0 pe-10 justify-end !important;
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-prev {
+    @apply start-auto end-0 pe-10 justify-end !important;
+    /* @apply rotate-180 !important; */
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-prev div {
+    @apply rotate-180 !important;
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-next {
+    @apply end-auto start-0 ps-10 justify-start !important;
+    /* @apply rotate-180 !important; */
+  }
+
+  html[dir="rtl"] .raphael-mechoulam .slick-next div {
+    @apply rotate-180 !important;
   }
 }
 
@@ -331,5 +371,5 @@ body[data-header-theme="dark"] .header .menu-button svg {
 }
 
 .external-text ul {
-  @apply list-disc ml-5 mb-4 lg:mb-8;
+  @apply list-disc ms-5 mb-4 lg:mb-8;
 }

@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useRouter } from "next/router";
 import { useNextSanityImage } from "next-sanity-image";
+import { useIntl, FormattedMessage } from "react-intl";
 import client from "../../client";
 import { gsap } from "gsap";
 import slugify from "slugify";
@@ -29,9 +31,12 @@ function OurScience({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
+  const intl = useIntl();
 
   const SLIDER_SOLUTION_CONFIG = {
     dots: false,
+    rtl: router.locale === "he",
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -149,7 +154,10 @@ function OurScience({ data }) {
     <section
       id="our-science"
       className="section our-science relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
-      data-side-menu-label="Our Science"
+      data-side-menu-label={intl.formatMessage({
+        id: "science.science.title",
+        defaultMessage: "Our Science",
+      })}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -162,6 +170,7 @@ function OurScience({ data }) {
                 <div
                   className="item relative lg:flex-grow lg:h-screen"
                   key={slide.name}
+                  dir={router.locale === "he" ? "rtl" : "ltr"}
                   aria-expanded="false"
                 >
                   {
@@ -186,14 +195,19 @@ function OurScience({ data }) {
                           quality={100}
                         />
                       )}
-                      <span className="button absolute left-1/2 transform -translate-x-1/2 bottom-8">
-                        <Button
-                          style="light"
-                          onClick={(event) => toggleVideo(event)}
-                        >
-                          Play Video
-                        </Button>
-                      </span>
+                      <div className=" absolute w-full bottom-8 flex justify-center">
+                        <span className="button">
+                          <Button
+                            style="light"
+                            onClick={(event) => toggleVideo(event)}
+                          >
+                            <FormattedMessage
+                              id="common.playVideo"
+                              defaultMessage="Play Video"
+                            />
+                          </Button>
+                        </span>
+                      </div>
                     </div>
                   }
                   <div
@@ -207,8 +221,8 @@ function OurScience({ data }) {
           </Slider>
         </div>
       </div>
-      <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96">
+      <div className="lg:flex-shrink-0 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96">
           <div className="mb-6 lg:mb-0">
             <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>

@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
+import Link from "next/link";
+import { useIntl } from "react-intl";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -71,7 +74,10 @@ function Main({ data }) {
               <Image
                 loading="eager"
                 src="/img/mobile/homepage/hero@2x.jpg"
-                alt="Medicine to All"
+                alt={intl.formatMessage({
+                  id: "home.hero.title",
+                  defaultMessage: "Medicine to All",
+                })}
                 layout="fill"
                 objectFit="cover"
                 quality={100}
@@ -101,7 +107,7 @@ function Main({ data }) {
             </video>
           )}
         </div>
-        <div className="absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 bottom-24 lg:bottom-16 w-full">
+        <div className="absolute bottom-0 w-full py-12">
           <div className="container mx-auto px-8 py-8 ">
             <h1 className="main__title animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
               {data.name}
@@ -110,22 +116,22 @@ function Main({ data }) {
               {data.title}
             </p>
           </div>
-        </div>
-
-        <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
-          <a
-            href="#story"
-            onClick={scrollToContent}
-            alt="Our Story"
-            className="transition-opacity duration-150 hover:opacity-70"
-          >
-            <Image
-              src="/img/icons/arrow_down.svg"
-              width="28"
-              height="16"
-              loading="eager"
-            />
-          </a>
+          <div className="scroll-to-content animate opacity-0 ">
+            <Link href="#story">
+              <a
+                className="transition-opacity duration-150 hover:opacity-70"
+                onClick={scrollToContent}
+              >
+                <Image
+                  src="/img/icons/arrow_down.svg"
+                  alt={data.title}
+                  width="28"
+                  height="16"
+                  loading="eager"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

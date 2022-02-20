@@ -20,6 +20,10 @@ process.env.SENTRY_DSN = SENTRY_DSN;
 const basePath = "";
 
 module.exports = {
+  i18n: {
+    locales: ["en", "he"],
+    defaultLocale: "en",
+  },
   images: {
     domains: ["cdn.sanity.io"],
   },

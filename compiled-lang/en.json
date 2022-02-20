@@ -1,0 +1,458 @@
+{
+  "about.hero.image": [
+    {
+      "type": 0,
+      "value": "Patient-focused - Pharmaceutical Group"
+    }
+  ],
+  "about.story.description": [
+    {
+      "type": 0,
+      "value": "Patient-Focused Pharmaceutical Group"
+    }
+  ],
+  "about.story.title": [
+    {
+      "type": 0,
+      "value": "Our Story"
+    }
+  ],
+  "careers.opportunities.title": [
+    {
+      "type": 0,
+      "value": "Shape the Future of Healthcare"
+    }
+  ],
+  "careers.positions.title": [
+    {
+      "type": 0,
+      "value": "Open Positions"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "common.learnMore": [
+    {
+      "type": 0,
+      "value": "Learn More"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "Next"
+    }
+  ],
+  "common.playVideo": [
+    {
+      "type": 0,
+      "value": "Play Video"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "Previous"
+    }
+  ],
+  "common.read": [
+    {
+      "type": 0,
+      "value": "Read"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "Email"
+    }
+  ],
+  "contact.firstName": [
+    {
+      "type": 0,
+      "value": "First Name"
+    }
+  ],
+  "contact.lastName": [
+    {
+      "type": 0,
+      "value": "Last Name"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "Submit"
+    }
+  ],
+  "footer.contact.success.great": [
+    {
+      "type": 0,
+      "value": "Great :)"
+    }
+  ],
+  "footer.contact.success.thanks": [
+    {
+      "type": 0,
+      "value": "Thank You!"
+    }
+  ],
+  "footer.copyright": [
+    {
+      "type": 0,
+      "value": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"
+    }
+  ],
+  "footer.description": [
+    {
+      "type": 0,
+      "value": "For more updates about EPM please fill in your details:"
+    }
+  ],
+  "footer.il.address1": [
+    {
+      "type": 0,
+      "value": "5 Kinneret St."
+    }
+  ],
+  "footer.il.address2": [
+    {
+      "type": 0,
+      "value": "14th floor"
+    }
+  ],
+  "footer.il.address3": [
+    {
+      "type": 0,
+      "value": "BSR 3 Tower"
+    }
+  ],
+  "footer.il.address4": [
+    {
+      "type": 0,
+      "value": "B.B.C. Business Center"
+    }
+  ],
+  "footer.il.address5": [
+    {
+      "type": 0,
+      "value": "Bnei Brak 5126237"
+    }
+  ],
+  "footer.il.tel": [
+    {
+      "type": 0,
+      "value": "Tel: (+972) 077-5060-500"
+    }
+  ],
+  "footer.il.title": [
+    {
+      "type": 0,
+      "value": "Israel Headquarters"
+    }
+  ],
+  "footer.information.ir": [
+    {
+      "type": 0,
+      "value": "Investor Relations"
+    }
+  ],
+  "footer.information.media": [
+    {
+      "type": 0,
+      "value": "Media"
+    }
+  ],
+  "footer.information.title": [
+    {
+      "type": 0,
+      "value": "Information"
+    }
+  ],
+  "footer.menu.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "footer.menu.careers": [
+    {
+      "type": 0,
+      "value": "Careers"
+    }
+  ],
+  "footer.menu.media": [
+    {
+      "type": 0,
+      "value": "Media"
+    }
+  ],
+  "footer.menu.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Privacy Policy"
+    }
+  ],
+  "footer.menu.science": [
+    {
+      "type": 0,
+      "value": "Science"
+    }
+  ],
+  "footer.menu.termsOfUse": [
+    {
+      "type": 0,
+      "value": "Terms of Use"
+    }
+  ],
+  "footer.menu.treatments": [
+    {
+      "type": 0,
+      "value": "Treatments"
+    }
+  ],
+  "footer.title": [
+    {
+      "type": 0,
+      "value": "Make a Change with Us"
+    }
+  ],
+  "footer.us.address1": [
+    {
+      "type": 0,
+      "value": "1347 19th St."
+    }
+  ],
+  "footer.us.address2": [
+    {
+      "type": 0,
+      "value": "Los Angeles, Santa Monica, 90404"
+    }
+  ],
+  "footer.us.tel": [
+    {
+      "type": 0,
+      "value": "Tel: +1 (323) 307-2111"
+    }
+  ],
+  "footer.us.title": [
+    {
+      "type": 0,
+      "value": "US Office"
+    }
+  ],
+  "foundingEPM.label": [
+    {
+      "type": 0,
+      "value": "Founding EPM"
+    }
+  ],
+  "header.menu.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "header.menu.about.advisoryBoard": [
+    {
+      "type": 0,
+      "value": "Advisory Board"
+    }
+  ],
+  "header.menu.about.boardOfDirectors": [
+    {
+      "type": 0,
+      "value": "Board of Directors"
+    }
+  ],
+  "header.menu.about.executiveLeadership": [
+    {
+      "type": 0,
+      "value": "Executive Leadership"
+    }
+  ],
+  "header.menu.about.story": [
+    {
+      "type": 0,
+      "value": "Our Story"
+    }
+  ],
+  "header.menu.careers": [
+    {
+      "type": 0,
+      "value": "Careers"
+    }
+  ],
+  "header.menu.contact": [
+    {
+      "type": 0,
+      "value": "Contact Us"
+    }
+  ],
+  "header.menu.ipoAndMedia": [
+    {
+      "type": 0,
+      "value": "Media"
+    }
+  ],
+  "header.menu.science": [
+    {
+      "type": 0,
+      "value": "Science"
+    }
+  ],
+  "header.menu.science.cannabiniods": [
+    {
+      "type": 0,
+      "value": "About Cannabiniod Acids"
+    }
+  ],
+  "header.menu.science.collaborations": [
+    {
+      "type": 0,
+      "value": "Key Collaborations"
+    }
+  ],
+  "header.menu.science.mechoulam": [
+    {
+      "type": 0,
+      "value": "Prof. Mechoulam Bio"
+    }
+  ],
+  "header.menu.science.pipeline": [
+    {
+      "type": 0,
+      "value": "Pipeline"
+    }
+  ],
+  "header.menu.science.research": [
+    {
+      "type": 0,
+      "value": "Research Papers"
+    }
+  ],
+  "header.menu.treatments": [
+    {
+      "type": 0,
+      "value": "Treatments"
+    }
+  ],
+  "header.menu.treatments.currentDevelopment": [
+    {
+      "type": 0,
+      "value": "Current Developments"
+    }
+  ],
+  "header.menu.treatments.inflammatoryBowelDisease": [
+    {
+      "type": 0,
+      "value": "Inflammatory Bowel Disease"
+    }
+  ],
+  "header.menu.treatments.praderWilliSyndrome": [
+    {
+      "type": 0,
+      "value": "Prader-Willi Syndrome"
+    }
+  ],
+  "header.menu.treatments.psoriasis": [
+    {
+      "type": 0,
+      "value": "Psoriasis"
+    }
+  ],
+  "home.hero.title": [
+    {
+      "type": 0,
+      "value": "Medicine to All"
+    }
+  ],
+  "science.bio.title": [
+    {
+      "type": 0,
+      "value": "Mechoulam's Bio"
+    }
+  ],
+  "science.cannabinoids.acids": [
+    {
+      "type": 0,
+      "value": "The Acids"
+    }
+  ],
+  "science.cannabinoids.title": [
+    {
+      "type": 0,
+      "value": "Cannabinoids Acid"
+    }
+  ],
+  "science.collaborations": [
+    {
+      "type": 0,
+      "value": "Collaborations"
+    }
+  ],
+  "science.collaborations.title": [
+    {
+      "type": 0,
+      "value": "Key Collaborations"
+    }
+  ],
+  "science.hero.title": [
+    {
+      "type": 0,
+      "value": "Unlock the medical potential of synthetic cannabinoid acids"
+    }
+  ],
+  "science.pipeline.description": [
+    {
+      "type": 0,
+      "value": "Our Pipeline - Future Products and Development"
+    }
+  ],
+  "science.pipeline.title": [
+    {
+      "type": 0,
+      "value": "Pipeline"
+    }
+  ],
+  "science.publications.title": [
+    {
+      "type": 0,
+      "value": "Publications"
+    }
+  ],
+  "science.research.paper.title": [
+    {
+      "type": 0,
+      "value": "EPM-301 Therapeutic Effect on"
+    }
+  ],
+  "science.research.title": [
+    {
+      "type": 0,
+      "value": "Research Papers"
+    }
+  ],
+  "science.science.title": [
+    {
+      "type": 0,
+      "value": "Our Science"
+    }
+  ],
+  "treatments.developments.title": [
+    {
+      "type": 0,
+      "value": "Developments"
+    }
+  ],
+  "treatments.disclaimer": [
+    {
+      "type": 0,
+      "value": "Images shown are for illustration purposes only"
+    }
+  ]
+}

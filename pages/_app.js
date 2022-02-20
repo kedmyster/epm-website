@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { IntlProvider } from "react-intl";
 import Header from "../components/layout/header.jsx";
 import Footer from "../components/layout/footer.jsx";
 import SideMenu from "../components/layout/sideMenu.jsx";
 import SocialMedia from "../components/layout/socialMedia.jsx";
-import { init } from '../utils/sentry';
+import { init } from "../utils/sentry";
 
 init();
 
@@ -20,6 +22,7 @@ function MyApp({ Component, pageProps, err }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
 
   const animateSectionContent = (section) => {
     if (section) {
@@ -87,7 +90,7 @@ function MyApp({ Component, pageProps, err }) {
   }, [windowWidth]);
 
   useEffect(() => {
-    const platform = (navigator && navigator.platform || '').toLowerCase();
+    const platform = ((navigator && navigator.platform) || "").toLowerCase();
     if (/win/.test(platform)) {
       document
         .querySelector("html")
@@ -152,8 +155,41 @@ function MyApp({ Component, pageProps, err }) {
       sections.forEach((section) => {
         utils.animateSectionContent(section);
       });
+
+      if (router.locale === "he") {
+        document.querySelectorAll(".slick-slider").forEach((slider) => {
+          slider.querySelectorAll(".text-start").forEach((node) => {
+            node.setAttribute(
+              "style",
+              `${
+                node.getAttribute("style") || ""
+              }; text-align: right !important`
+            );
+          });
+
+          slider.querySelectorAll("[class*='start']").forEach((node) => {
+            const styles = window.getComputedStyle(node);
+            node.setAttribute(
+              "style",
+              `${
+                node.getAttribute("style") || ""
+              }; left: auto !important; right: ${styles["left"]} !important`
+            );
+          });
+
+          slider.querySelectorAll("[class*='end']").forEach((node) => {
+            const styles = window.getComputedStyle(node);
+            node.setAttribute(
+              "style",
+              `${
+                node.getAttribute("style") || ""
+              }; right: auto !important; left: ${styles["right"]} !important`
+            );
+          });
+        });
+      }
     });
-  }, []);
+  }, [router.pathname]);
 
   useEffect(() => {
     if (isDesktop || isTablet) {
@@ -167,13 +203,19 @@ function MyApp({ Component, pageProps, err }) {
   };
 
   return (
-    <div className="app">
-      <Header />
-      <Component {...pageProps} err={err}/>
-      {(isDesktop) && <SideMenu />}
-      {(isTablet || isDesktop) && <SocialMedia />}
-      <Footer />
-    </div>
+    <IntlProvider
+      messages={pageProps.messages}
+      locale={router.locale}
+      defaultLocale="en"
+    >
+      <div className="app">
+        <Header />
+        <Component {...pageProps} err={err} />
+        {isDesktop && <SideMenu />}
+        {(isTablet || isDesktop) && <SocialMedia />}
+        <Footer />
+      </div>
+    </IntlProvider>
   );
 }
 

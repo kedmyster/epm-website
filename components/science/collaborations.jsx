@@ -8,10 +8,14 @@ import client from "../../client";
 import classNames from "classnames";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import { FormattedMessage } from "react-intl";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
 function Collaborations({ data }) {
+  const intl = useIntl();
+
   for (let i = 0; i < data.collaboration__logos.length; i++) {
     data.collaboration__logos[i].image = useNextSanityImage(
       client,
@@ -60,17 +64,22 @@ function Collaborations({ data }) {
         moreInfoPanel.setAttribute("aria-expanded", "true");
         gsap.set(moreInfoPanel, { zIndex: 11 });
         gsap.to(moreInfoPanel, { opacity: 1, duration: 0.25 });
-        event.target.innerText = "Close";
+        event.target.innerText = intl.formatMessage({
+          id: "common.close",
+          defaultMessage: "Close",
+        });
       } else {
         moreInfoPanel.setAttribute("aria-expanded", "false");
         gsap.set(moreInfoPanel, { zIndex: 0 });
         gsap.to(moreInfoPanel, { opacity: 0, duration: 0.25 });
-        event.target.innerText = "Learn More";
+        event.target.innerText = intl.formatMessage({
+          id: "common.learnMore",
+          defaultMessage: "Learn More",
+        });
       }
 
-      document
-        .querySelector(".collaborations__panel.academia")
-        .classList.toggle("lg:border-l");
+      const panels = document.querySelectorAll(".collaborations__panel");
+      panels[panels.length - 1].classList.toggle("lg:border-s");
     }
   };
 
@@ -78,7 +87,10 @@ function Collaborations({ data }) {
     <section
       id={"collaborations"}
       className="section collaborations"
-      data-side-menu-label="Collaborations"
+      data-side-menu-label={intl.formatMessage({
+        id: "science.collaborations",
+        defaultMessage: "Collaborations",
+      })}
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -87,11 +99,8 @@ function Collaborations({ data }) {
         <div>
           {data.collaboration__logos.map((section) => {
             return (
-              <>
-                <div
-                  className="relative h-2/3-screen"
-                  key={slugify(section.title)}
-                >
+              <div key={slugify(section.title)}>
+                <div className="relative h-2/3-screen">
                   <div className="image animate opacity-0 absolute w-full h-full">
                     <Image
                       src={section.image.src}
@@ -152,7 +161,7 @@ function Collaborations({ data }) {
                     />
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
@@ -161,24 +170,29 @@ function Collaborations({ data }) {
       {(isTablet || isDesktop) && (
         <div className="lg:h-screen relative">
           <div className="h-2/3-screen">
-            <div className="relative w-full h-full text-left flex">
+            <div className="relative w-full h-full text-start flex">
               <div className="absolute w-full h-full">
                 <Image
                   src="/img/desktop/science/collaborations@2x.jpg"
-                  alt="Commercial"
+                  alt={intl.formatMessage({
+                    id: "science.collaborations.title",
+                    defaultMessage: "Key Collaborations",
+                  })}
                   layout="fill"
                   objectFit="cover"
                   quality={100}
                 />
               </div>
               <div className="absolute w-full h-full inset-0 bg-black bg-opacity-50"></div>
-              <div className="animate opacity-0 w-full mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10 divide-x divide-epm-gray-100 divide-opacity-30">
+              <div className="animate opacity-0 w-full mx-auto text-center px-8 py-8 text-epm-gray-500 flex flex-row items-center justify-center relative z-10 divide-s divide-epm-gray-100 divide-opacity-30">
                 {data.collaboration__logos.map((section, sectionIndex) => {
+                  console.log(section);
                   return (
                     <div
+                      key={slugify(section.title)}
                       className={classNames(
                         "collaborations__panel lg:w-1/2 px-8",
-                        slugify(section.title)
+                        slugify(section.id.toLowerCase())
                       )}
                     >
                       <div className="relative z-10">
@@ -213,23 +227,31 @@ function Collaborations({ data }) {
                             href="#"
                             style="light"
                             onClick={(event) =>
-                              toggleLearnMore(event, slugify(section.title))
+                              toggleLearnMore(
+                                event,
+                                slugify(section.id.toLowerCase())
+                              )
                             }
                           >
-                            Learn More
+                            <FormattedMessage
+                              id="common.learnMore"
+                              defaultMessage="Learn More"
+                            />
                           </Button>
                         </div>
                       </div>
 
                       <div
                         className={classNames(
-                          "more-info commercial-more-info container lg:w-1/2 lg:opacity-0 lg:absolute z-0 top-0 right-0 hidden lg:flex lg:flex-col xl:justify-center text-left text-epm-gray-700 lg:bg-white lg:px-16 xl:px-36 py-8 lg:h-2/3-screen lg:overflow-y-auto",
+                          "more-info commercial-more-info container lg:w-1/2 lg:opacity-0 lg:absolute z-0 top-0 end-0 hidden lg:flex lg:flex-col xl:justify-center text-start text-epm-gray-700 lg:bg-white lg:px-16 xl:px-36 py-8 lg:h-2/3-screen lg:overflow-y-auto",
                           {
-                            "right-0": sectionIndex % 2 === 0,
-                            "left-0": sectionIndex % 2 === 1,
+                            "end-0": sectionIndex % 2 === 0,
+                            "start-0": sectionIndex % 2 === 1,
                           }
                         )}
-                        data-collaboration-panel={slugify(section.title)}
+                        data-collaboration-panel={slugify(
+                          section.id.toLowerCase()
+                        )}
                         aria-expanded="false"
                       >
                         <BlockContent
@@ -245,7 +267,7 @@ function Collaborations({ data }) {
           </div>
 
           <div className="lg:h-1/3-screen">
-            <div className="container mx-auto px-8 lg:pl-24 xl:pl-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
+            <div className="container mx-auto px-8 lg:ps-24 xl:ps-56 2xl:px-8 py-8 lg:h-1/3-screen lg:flex lg:flex-col">
               <div>
                 <SectionHeader
                   name={<span>{data.name}</span>}

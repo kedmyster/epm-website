@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Link from "next/link";
 
 const STYLE_LIGHT = "light";
 const STYLE_DARK = "dark";
@@ -45,14 +46,24 @@ function Button({
   }
 
   const settings = {
-    href,
-    onClick,
     className,
     target,
     rel,
   };
 
-  return <a {...settings}>{children}</a>;
+  if (href && href !== "#") {
+    return (
+      <Link href={href} onClick={onClick}>
+        <a {...settings}>{children}</a>
+      </Link>
+    );
+  } else {
+    return (
+      <a href={href} onClick={onClick} {...settings}>
+        {children}
+      </a>
+    );
+  }
 }
 
 export default Button;

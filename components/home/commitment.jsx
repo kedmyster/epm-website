@@ -7,6 +7,7 @@ import client from "../../client";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -19,6 +20,7 @@ function Commitment({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
@@ -65,16 +67,16 @@ function Commitment({ data }) {
             <div className="animate opacity-0 text-white pt-8">
               <SectionHeader name="" title={<h2>{data.mobile__title}</h2>} />
             </div>
-            <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-x divide-white">
+            <div className="animate opacity-0 container relative mx-auto px-8 py-8 flex w-full divide-s divide-white">
               {data.bullets.map((bullet) => {
                 return (
-                  <div className="item text-center w-1/3">
+                  <div key={bullet.title} className="item text-center w-1/3">
                     <div className="item-image h-14 flex items-center justify-center">
                       <Image
                         src={bullet.image.src}
-                        alt="Alternative to Steroids"
-                        width={bullet.image.width / 2 }
-                        height={bullet.image.height / 2 }
+                        alt={bullet.title}
+                        width={bullet.image.width / 2}
+                        height={bullet.image.height / 2}
                       />
                     </div>
                     <div className="item__title text-center text-sm font-title mt-1">
@@ -118,21 +120,21 @@ function Commitment({ data }) {
           <div className="container relative mx-auto px-8 pt-8 text-center">
             <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>
-          <div className="animate opacity-0 container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto space-x-10">
+          <div className="animate opacity-0 container relative lg:w-container mx-auto px-8 flex content-center justify-center w-full h-auto gap-6">
             {data.bullets.map((bullet, index) => {
               return (
                 <div className="item w-1/3 text-center">
                   <div className="item-image lg:w-32 lg:h-24 lg:mx-auto lg:flex lg:justify-center lg:items-center">
                     <Image
                       src={bullet.image.src}
-                      alt="Alternative to steroids"
+                      alt={bullet.title}
                       width={bullet.image.width}
                       height={bullet.image.height}
                     />
                   </div>
                   <div
                     className={classNames({
-                      "border-l-0.5 border-r-0.5 border-white border-box":
+                      "border-s-0.5 border-e-0.5 border-white border-box":
                         index % 2 === 1,
                     })}
                   >
@@ -141,7 +143,7 @@ function Commitment({ data }) {
                     </div>
                     <div
                       className={classNames(
-                        "item-text text-center text-sm font-light mt-1",
+                        "item-text text-center text-sm font-light mt-1 px-4",
                         { "px-10": index % 2 === 1 }
                       )}
                     >

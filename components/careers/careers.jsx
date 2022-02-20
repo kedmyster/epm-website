@@ -5,6 +5,8 @@ import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import { gsap } from "gsap";
+import Link from "next/link";
+import { useIntl } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -14,6 +16,7 @@ function CareersComponent({ data, hasPositions }) {
   const [isTabletPortrait, setIsTabletPortrait] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
 
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
@@ -72,7 +75,7 @@ function CareersComponent({ data, hasPositions }) {
   return (
     <section
       id="careers"
-      className="section careers relative w-full bg-cover text-center flex flex-wrap content-top lg:h-screen"
+      className="section careers relative w-full bg-cover text-center flex content-top justify-center lg:h-screen"
       data-side-menu-label=""
       data-side-menu-color="light"
       data-side-menu-visibility="hidden"
@@ -83,7 +86,10 @@ function CareersComponent({ data, hasPositions }) {
           <Image
             loading="eager"
             src={atmosphere.mobile.src}
-            alt="Shape the Future of Healthcare"
+            alt={intl.formatMessage({
+              id: "careers.opportunities.title",
+              defaultMessage: "Shape the Future of Healthcare",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -93,7 +99,10 @@ function CareersComponent({ data, hasPositions }) {
           <Image
             loading="eager"
             src={atmosphere.desktop.src}
-            alt="Shape the Future of Healthcare"
+            alt={intl.formatMessage({
+              id: "careers.opportunities.title",
+              defaultMessage: "Shape the Future of Healthcare",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -112,20 +121,24 @@ function CareersComponent({ data, hasPositions }) {
         </div>
       </div>
       {hasPositions && (
-        <div className="scroll-to-content animate opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2">
-          <a
-            href="#story"
-            onClick={scrollToContent}
-            className="transition-opacity duration-150 hover:opacity-70"
-          >
-            <Image
-              src="/img/icons/arrow_down_dark.svg"
-              width="28"
-              height="16"
-              alt="Open Positions"
-              loading="eager"
-            />
-          </a>
+        <div className="scroll-to-content animate opacity-0 absolute bottom-12">
+          <Link href="#story">
+            <a
+              className="transition-opacity duration-150 hover:opacity-70"
+              onClick={scrollToContent}
+            >
+              <Image
+                src="/img/icons/arrow_down_dark.svg"
+                width="28"
+                height="16"
+                alt={intl.formatMessage({
+                  id: "careers.positions.title",
+                  defaultMessage: "Open Positions",
+                })}
+                loading="eager"
+              />
+            </a>
+          </Link>
         </div>
       )}
     </section>

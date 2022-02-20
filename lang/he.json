@@ -1,0 +1,230 @@
+{
+  "about.hero.image": {
+    "defaultMessage": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
+  },
+  "about.story.description": {
+    "defaultMessage": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
+  },
+  "about.story.title": {
+    "defaultMessage": "הסיפור שלנו"
+  },
+  "careers.opportunities.title": {
+    "defaultMessage": "הצטרפו למהפכת התרופות שלנו"
+  },
+  "careers.positions.title": {
+    "defaultMessage": "משרות פנויות"
+  },
+  "common.close": {
+    "defaultMessage": "סגירה"
+  },
+  "common.read": {
+    "defaultMessage": "לקריאה"
+  },
+  "common.learnMore": {
+    "defaultMessage": "למידע נוסף"
+  },
+  "common.next": {
+    "defaultMessage": "הבא"
+  },
+  "common.playVideo": {
+    "defaultMessage": "לצפייה בסרטון"
+  },
+  "common.previous": {
+    "defaultMessage": "הקודם"
+  },
+  "contact.firstName": {
+    "defaultMessage": "שם פרטי"
+  },
+  "contact.lastName": {
+    "defaultMessage": "שם משפחה"
+  },
+  "contact.email": {
+    "defaultMessage": "אימייל"
+  },
+  "contact.submit": {
+    "defaultMessage": "להצטרפות"
+  },
+  "footer.contact.success.great": {
+    "defaultMessage": "מעולה :)"
+  },
+  "footer.contact.success.thanks": {
+    "defaultMessage": "!תודה"
+  },
+  "footer.copyright": {
+    "defaultMessage": "Copyright ©2021 EPM Group, Inc. כל הזכויות שמורות"
+  },
+  "footer.description": {
+    "defaultMessage": "לקבלת מידע נוסף אודות EPM, אנא מלאו את הפרטים הבאים:"
+  },
+  "footer.il.address1": {
+    "defaultMessage": "רח׳ כנרת 5"
+  },
+  "footer.il.address2": {
+    "defaultMessage": "קומה 14"
+  },
+  "footer.il.address3": {
+    "defaultMessage": "מגדל ב.ס.ר 3"
+  },
+  "footer.il.address4": {
+    "defaultMessage": "מרכז עסקים בני ברק"
+  },
+  "footer.il.address5": {
+    "defaultMessage": "5126237"
+  },
+  "footer.il.tel": {
+    "defaultMessage": "Tel: (+972) 077-5060-500"
+  },
+  "footer.il.title": {
+    "defaultMessage": "מטה ראשי ‫-‬ ישראל"
+  },
+  "footer.information.ir": {
+    "defaultMessage": "קשרי משקיעים"
+  },
+  "footer.information.media": {
+    "defaultMessage": "עיתונות"
+  },
+  "footer.information.title": {
+    "defaultMessage": "מידע כללי"
+  },
+  "footer.menu.about": {
+    "defaultMessage": "אודותינו"
+  },
+  "footer.menu.careers": {
+    "defaultMessage": "קריירה"
+  },
+  "footer.menu.media": {
+    "defaultMessage": "עיתונות"
+  },
+  "footer.menu.privacyPolicy": {
+    "defaultMessage": "פרטיות"
+  },
+  "footer.menu.science": {
+    "defaultMessage": "מדע"
+  },
+  "footer.menu.termsOfUse": {
+    "defaultMessage": "תנאי שימוש ומדיניות"
+  },
+  "footer.menu.treatments": {
+    "defaultMessage": "תחומי טיפול"
+  },
+  "footer.title": {
+    "defaultMessage": "הצטרפו למסע שלנו"
+  },
+  "footer.us.address1": {
+    "defaultMessage": "1347 19th St."
+  },
+  "footer.us.address2": {
+    "defaultMessage": "Los Angeles, Santa Monica, 90404"
+  },
+  "footer.us.tel": {
+    "defaultMessage": "Tel: +1 (323) 307-2111"
+  },
+  "footer.us.title": {
+    "defaultMessage": "ארה״ב"
+  },
+  "foundingEPM.label": {
+    "defaultMessage": "EPM הקמת"
+  },
+  "header.menu.about": {
+    "defaultMessage": "אודותינו"
+  },
+  "header.menu.about.advisoryBoard": {
+    "defaultMessage": "וועדה מייעצת"
+  },
+  "header.menu.about.boardOfDirectors": {
+    "defaultMessage": "דירקטוריון החברה"
+  },
+  "header.menu.about.executiveLeadership": {
+    "defaultMessage": "הנהלה בכירה"
+  },
+  "header.menu.about.story": {
+    "defaultMessage": "הסיפור שלנו"
+  },
+  "header.menu.careers": {
+    "defaultMessage": "קריירה"
+  },
+  "header.menu.contact": {
+    "defaultMessage": "יצירת קשר"
+  },
+  "header.menu.ipoAndMedia": {
+    "defaultMessage": "עיתונות"
+  },
+  "header.menu.science": {
+    "defaultMessage": "מדע"
+  },
+  "header.menu.science.cannabiniods": {
+    "defaultMessage": "חומצות קנבינואידיות"
+  },
+  "header.menu.science.collaborations": {
+    "defaultMessage": "שיתופי פעולה"
+  },
+  "header.menu.science.mechoulam": {
+    "defaultMessage": "הביוגרפיה של פרופ׳ משולם"
+  },
+  "header.menu.science.pipeline": {
+    "defaultMessage": "פורטפוליו מולקולות"
+  },
+  "header.menu.science.research": {
+    "defaultMessage": "מאמרים מדעיים"
+  },
+  "header.menu.treatments": {
+    "defaultMessage": "תחומי טיפול"
+  },
+  "header.menu.treatments.currentDevelopment": {
+    "defaultMessage": "תרופות בפיתוח"
+  },
+  "header.menu.treatments.praderWilliSyndrome": {
+    "defaultMessage": "תסמונת פראדר-ווילי"
+  },
+  "header.menu.treatments.inflammatoryBowelDisease": {
+    "defaultMessage": "מחלות מעי דלקתיות"
+  },
+  "header.menu.treatments.psoriasis": {
+    "defaultMessage": "פסוריאזיס"
+  },
+  "home.hero.title": {
+    "defaultMessage": "דור חדש של תרופות בטוחות"
+  },
+  "science.bio.title": {
+    "defaultMessage": "הביוגרפיה של פרופ׳ משולם"
+  },
+  "science.cannabinoids.acids": {
+    "defaultMessage": "חומצות קנבינואידיות"
+  },
+  "science.cannabinoids.title": {
+    "defaultMessage": "חומצות קנבינואידיות"
+  },
+  "science.collaborations": {
+    "defaultMessage": "שיתופי פעולה"
+  },
+  "science.collaborations.title": {
+    "defaultMessage": "שיתופי פעולה"
+  },
+  "science.hero.title": {
+    "defaultMessage": "פוטנציאל אינסופי למוקולות חדשות"
+  },
+  "science.pipeline.description": {
+    "defaultMessage": "פורטפוליו מוצרים ופיתוחים"
+  },
+  "science.pipeline.title": {
+    "defaultMessage": "פורטפוליו"
+  },
+  "science.publications.title": {
+    "defaultMessage": "מאמרים מדעיים"
+  },
+  "science.research.paper.title": {
+    "defaultMessage": "השפעה רפואית של EPM301 על"
+  },
+  "science.research.title": {
+    "defaultMessage": "מאמרים מדעיים"
+  },
+  "science.science.title": {
+    "defaultMessage": "המדע שלנו"
+  },
+  "treatments.developments.title": {
+    "defaultMessage": "תרופות בפיתוח"
+  },
+  "treatments.disclaimer": {
+    "defaultMessage": "התמונות המוצגות הן להמחשה בלבד"
+  }
+}

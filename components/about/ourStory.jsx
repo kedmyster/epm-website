@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import slugify from "slugify";
+import { useIntl, FormattedMessage } from "react-intl";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -15,6 +16,7 @@ function OurStory({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
     desktop: useNextSanityImage(client, data.desktop_image),
@@ -112,7 +114,10 @@ function OurStory({ data }) {
     <section
       id="our-story"
       className="section story relative w-full flex flex-wrap border-b-1 border-epm-gray-300 lg:flex-row-reverse lg:h-screen"
-      data-side-menu-label="Our Story"
+      data-side-menu-label={intl.formatMessage({
+        id: "about.story.title",
+        defaultMessage: "Our Story",
+      })}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
@@ -124,7 +129,10 @@ function OurStory({ data }) {
         {isMobile && (
           <Image
             src={atmosphere.mobile.src}
-            alt="Patient-Focused Pharmaceutical Group"
+            alt={intl.formatMessage({
+              id: "about.story.description",
+              defaultMessage: "Patient-Focused Pharmaceutical Group",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -133,18 +141,26 @@ function OurStory({ data }) {
         {(isTablet || isDesktop) && (
           <Image
             src={atmosphere.desktop.src}
-            alt="Patient-Focused Pharmaceutical Group"
+            alt={intl.formatMessage({
+              id: "about.story.description",
+              defaultMessage: "Patient-Focused Pharmaceutical Group",
+            })}
             layout="fill"
             objectFit="cover"
             quality={100}
           />
         )}
         {
-          <span className="animate opacity-0 button absolute w-48 left-1/2 transform -translate-x-1/2 bottom-8">
-            <Button style="light" onClick={(event) => toggleVideo(event)}>
-              Play Video
-            </Button>
-          </span>
+          <div className=" absolute w-full bottom-8 flex justify-center">
+            <span className="animate opacity-0 button w-48">
+              <Button style="light" onClick={(event) => toggleVideo(event)}>
+                <FormattedMessage
+                  id="common.playVideo"
+                  defaultMessage="Play Video"
+                />
+              </Button>
+            </span>
+          </div>
         }
         <div
           id={`video-${slugify("Rapahel Mechoulam", { lower: true })}`}
@@ -153,8 +169,8 @@ function OurStory({ data }) {
         ></div>
       </div>
 
-      <div className="lg:flex-shrink-0 lg:pl-24 xl:pl-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container px-8 lg:pl-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
+      <div className="lg:flex-shrink-0 lg:ps-24 xl:ps-56 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container px-8 lg:ps-0 py-8 lg:max-w-none lg:w-80 2xl:w-96 ">
           <div className="lg:mb-0">
             <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
           </div>

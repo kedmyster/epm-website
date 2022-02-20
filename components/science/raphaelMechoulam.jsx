@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { useNextSanityImage } from 'next-sanity-image';
+import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
+import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import SectionHeader from "../shared/SectionHeader";
 import {
@@ -12,14 +14,17 @@ import {
 
 const BlockContent = require("@sanity/block-content-to-react");
 
-function RaphaelMechoulam({data}) {
+function RaphaelMechoulam({ data }) {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
+  const intl = useIntl();
 
   const SLIDER_RAPHAEL_MECHOULAM_CONFIG = {
     dots: false,
+    rtl: router.locale === "he",
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -158,22 +163,32 @@ function RaphaelMechoulam({data}) {
     },
   ];
 
+  let slides = mechoulam;
+
+  if (router.locale === "he") {
+    slides.reverse();
+  }
+
   return (
     <section
       id="raphael-mechoulam"
       className="section raphael-mechoulam lg:flex lg:flex-wrap lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden"
-      data-side-menu-label="Mechoulam's Bio"
+      data-side-menu-label={intl.formatMessage({
+        id: "science.bio.title",
+        defaultMessage: "Mechoulam's Bio",
+      })}
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
       <div className="items animate opacity-0 text-white lg:h-screen lg:w-6/12 2xl:w-7/12">
         <Slider {...SLIDER_RAPHAEL_MECHOULAM_CONFIG}>
-          {mechoulam.map((item, index) => {
+          {slides.map((item, index) => {
             return (
               <div
                 className="item cursor-pointer outline-none"
                 key={item.label}
+                dir={router.locale === "he" ? "rtl" : "ltr"}
               >
                 <div className="group relative text-center w-full flex flex-wrap content-end lg:content-start lg:transition-all lg:duration-500 lg:ease-in-out lg:h-screen">
                   <div className="w-full h-full flex items-end lg:items-start justify-center lg:justify-start bg-epm-gray-100">
@@ -205,15 +220,11 @@ function RaphaelMechoulam({data}) {
           })}
         </Slider>
       </div>
-      <div className="lg:pl-24 xl:pl-56 pt-10 md:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
-        <div className="container lg:w-80 2xl:w-96 px-8 lg:pl-0 py-8">
+      <div className="lg:ps-24 xl:ps-56 pt-10 md:pt-0 lg:w-6/12 2xl:w-5/12 lg:h-screen overflow-y-hidden lg:overflow-y-auto">
+        <div className="container lg:w-80 2xl:w-96 px-8 lg:ps-0 py-8">
           <SectionHeader
             name={<span>{data.name}</span>}
-            title={
-              <h2 className="lg:pr-26">
-                {data.title}
-              </h2>
-            }
+            title={<h2 className="lg:pe-26">{data.title}</h2>}
           />
           <div className="text lg:text-epm-base animate opacity-0 mt-6">
             <BlockContent blocks={data.content} className="external-text" />

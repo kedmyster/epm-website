@@ -1,0 +1,458 @@
+{
+  "about.hero.image": [
+    {
+      "type": 0,
+      "value": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
+    }
+  ],
+  "about.story.description": [
+    {
+      "type": 0,
+      "value": "שיפור איכות החיים של עשרות מיליוני מטופלים בכל העולם"
+    }
+  ],
+  "about.story.title": [
+    {
+      "type": 0,
+      "value": "הסיפור שלנו"
+    }
+  ],
+  "careers.opportunities.title": [
+    {
+      "type": 0,
+      "value": "הצטרפו למהפכת התרופות שלנו"
+    }
+  ],
+  "careers.positions.title": [
+    {
+      "type": 0,
+      "value": "משרות פנויות"
+    }
+  ],
+  "common.close": [
+    {
+      "type": 0,
+      "value": "סגירה"
+    }
+  ],
+  "common.learnMore": [
+    {
+      "type": 0,
+      "value": "למידע נוסף"
+    }
+  ],
+  "common.next": [
+    {
+      "type": 0,
+      "value": "הבא"
+    }
+  ],
+  "common.playVideo": [
+    {
+      "type": 0,
+      "value": "לצפייה בסרטון"
+    }
+  ],
+  "common.previous": [
+    {
+      "type": 0,
+      "value": "הקודם"
+    }
+  ],
+  "common.read": [
+    {
+      "type": 0,
+      "value": "לקריאה"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "אימייל"
+    }
+  ],
+  "contact.firstName": [
+    {
+      "type": 0,
+      "value": "שם פרטי"
+    }
+  ],
+  "contact.lastName": [
+    {
+      "type": 0,
+      "value": "שם משפחה"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "להצטרפות"
+    }
+  ],
+  "footer.contact.success.great": [
+    {
+      "type": 0,
+      "value": "מעולה :)"
+    }
+  ],
+  "footer.contact.success.thanks": [
+    {
+      "type": 0,
+      "value": "!תודה"
+    }
+  ],
+  "footer.copyright": [
+    {
+      "type": 0,
+      "value": "Copyright ©2021 EPM Group, Inc. כל הזכויות שמורות"
+    }
+  ],
+  "footer.description": [
+    {
+      "type": 0,
+      "value": "לקבלת מידע נוסף אודות EPM, אנא מלאו את הפרטים הבאים:"
+    }
+  ],
+  "footer.il.address1": [
+    {
+      "type": 0,
+      "value": "רח׳ כנרת 5"
+    }
+  ],
+  "footer.il.address2": [
+    {
+      "type": 0,
+      "value": "קומה 14"
+    }
+  ],
+  "footer.il.address3": [
+    {
+      "type": 0,
+      "value": "מגדל ב.ס.ר 3"
+    }
+  ],
+  "footer.il.address4": [
+    {
+      "type": 0,
+      "value": "מרכז עסקים בני ברק"
+    }
+  ],
+  "footer.il.address5": [
+    {
+      "type": 0,
+      "value": "5126237"
+    }
+  ],
+  "footer.il.tel": [
+    {
+      "type": 0,
+      "value": "Tel: (+972) 077-5060-500"
+    }
+  ],
+  "footer.il.title": [
+    {
+      "type": 0,
+      "value": "מטה ראשי ‫-‬ ישראל"
+    }
+  ],
+  "footer.information.ir": [
+    {
+      "type": 0,
+      "value": "קשרי משקיעים"
+    }
+  ],
+  "footer.information.media": [
+    {
+      "type": 0,
+      "value": "עיתונות"
+    }
+  ],
+  "footer.information.title": [
+    {
+      "type": 0,
+      "value": "מידע כללי"
+    }
+  ],
+  "footer.menu.about": [
+    {
+      "type": 0,
+      "value": "אודותינו"
+    }
+  ],
+  "footer.menu.careers": [
+    {
+      "type": 0,
+      "value": "קריירה"
+    }
+  ],
+  "footer.menu.media": [
+    {
+      "type": 0,
+      "value": "עיתונות"
+    }
+  ],
+  "footer.menu.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "פרטיות"
+    }
+  ],
+  "footer.menu.science": [
+    {
+      "type": 0,
+      "value": "מדע"
+    }
+  ],
+  "footer.menu.termsOfUse": [
+    {
+      "type": 0,
+      "value": "תנאי שימוש ומדיניות"
+    }
+  ],
+  "footer.menu.treatments": [
+    {
+      "type": 0,
+      "value": "תחומי טיפול"
+    }
+  ],
+  "footer.title": [
+    {
+      "type": 0,
+      "value": "הצטרפו למסע שלנו"
+    }
+  ],
+  "footer.us.address1": [
+    {
+      "type": 0,
+      "value": "1347 19th St."
+    }
+  ],
+  "footer.us.address2": [
+    {
+      "type": 0,
+      "value": "Los Angeles, Santa Monica, 90404"
+    }
+  ],
+  "footer.us.tel": [
+    {
+      "type": 0,
+      "value": "Tel: +1 (323) 307-2111"
+    }
+  ],
+  "footer.us.title": [
+    {
+      "type": 0,
+      "value": "ארה״ב"
+    }
+  ],
+  "foundingEPM.label": [
+    {
+      "type": 0,
+      "value": "EPM הקמת"
+    }
+  ],
+  "header.menu.about": [
+    {
+      "type": 0,
+      "value": "אודותינו"
+    }
+  ],
+  "header.menu.about.advisoryBoard": [
+    {
+      "type": 0,
+      "value": "וועדה מייעצת"
+    }
+  ],
+  "header.menu.about.boardOfDirectors": [
+    {
+      "type": 0,
+      "value": "דירקטוריון החברה"
+    }
+  ],
+  "header.menu.about.executiveLeadership": [
+    {
+      "type": 0,
+      "value": "הנהלה בכירה"
+    }
+  ],
+  "header.menu.about.story": [
+    {
+      "type": 0,
+      "value": "הסיפור שלנו"
+    }
+  ],
+  "header.menu.careers": [
+    {
+      "type": 0,
+      "value": "קריירה"
+    }
+  ],
+  "header.menu.contact": [
+    {
+      "type": 0,
+      "value": "יצירת קשר"
+    }
+  ],
+  "header.menu.ipoAndMedia": [
+    {
+      "type": 0,
+      "value": "עיתונות"
+    }
+  ],
+  "header.menu.science": [
+    {
+      "type": 0,
+      "value": "מדע"
+    }
+  ],
+  "header.menu.science.cannabiniods": [
+    {
+      "type": 0,
+      "value": "חומצות קנבינואידיות"
+    }
+  ],
+  "header.menu.science.collaborations": [
+    {
+      "type": 0,
+      "value": "שיתופי פעולה"
+    }
+  ],
+  "header.menu.science.mechoulam": [
+    {
+      "type": 0,
+      "value": "הביוגרפיה של פרופ׳ משולם"
+    }
+  ],
+  "header.menu.science.pipeline": [
+    {
+      "type": 0,
+      "value": "פורטפוליו מולקולות"
+    }
+  ],
+  "header.menu.science.research": [
+    {
+      "type": 0,
+      "value": "מאמרים מדעיים"
+    }
+  ],
+  "header.menu.treatments": [
+    {
+      "type": 0,
+      "value": "תחומי טיפול"
+    }
+  ],
+  "header.menu.treatments.currentDevelopment": [
+    {
+      "type": 0,
+      "value": "תרופות בפיתוח"
+    }
+  ],
+  "header.menu.treatments.inflammatoryBowelDisease": [
+    {
+      "type": 0,
+      "value": "מחלות מעי דלקתיות"
+    }
+  ],
+  "header.menu.treatments.praderWilliSyndrome": [
+    {
+      "type": 0,
+      "value": "תסמונת פראדר-ווילי"
+    }
+  ],
+  "header.menu.treatments.psoriasis": [
+    {
+      "type": 0,
+      "value": "פסוריאזיס"
+    }
+  ],
+  "home.hero.title": [
+    {
+      "type": 0,
+      "value": "דור חדש של תרופות בטוחות"
+    }
+  ],
+  "science.bio.title": [
+    {
+      "type": 0,
+      "value": "הביוגרפיה של פרופ׳ משולם"
+    }
+  ],
+  "science.cannabinoids.acids": [
+    {
+      "type": 0,
+      "value": "חומצות קנבינואידיות"
+    }
+  ],
+  "science.cannabinoids.title": [
+    {
+      "type": 0,
+      "value": "חומצות קנבינואידיות"
+    }
+  ],
+  "science.collaborations": [
+    {
+      "type": 0,
+      "value": "שיתופי פעולה"
+    }
+  ],
+  "science.collaborations.title": [
+    {
+      "type": 0,
+      "value": "שיתופי פעולה"
+    }
+  ],
+  "science.hero.title": [
+    {
+      "type": 0,
+      "value": "פוטנציאל אינסופי למוקולות חדשות"
+    }
+  ],
+  "science.pipeline.description": [
+    {
+      "type": 0,
+      "value": "פורטפוליו מוצרים ופיתוחים"
+    }
+  ],
+  "science.pipeline.title": [
+    {
+      "type": 0,
+      "value": "פורטפוליו"
+    }
+  ],
+  "science.publications.title": [
+    {
+      "type": 0,
+      "value": "מאמרים מדעיים"
+    }
+  ],
+  "science.research.paper.title": [
+    {
+      "type": 0,
+      "value": "השפעה רפואית של EPM301 על"
+    }
+  ],
+  "science.research.title": [
+    {
+      "type": 0,
+      "value": "מאמרים מדעיים"
+    }
+  ],
+  "science.science.title": [
+    {
+      "type": 0,
+      "value": "המדע שלנו"
+    }
+  ],
+  "treatments.developments.title": [
+    {
+      "type": 0,
+      "value": "תרופות בפיתוח"
+    }
+  ],
+  "treatments.disclaimer": [
+    {
+      "type": 0,
+      "value": "התמונות המוצגות הן להמחשה בלבד"
+    }
+  ]
+}
