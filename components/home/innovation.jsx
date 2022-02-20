@@ -164,7 +164,14 @@ function Innovation({ data }) {
                 <BlockContent blocks={data.content} className="external-text" />
               </div>
               <div className="button animate opacity-0 pt-10">
-                <Button href="/science/#main" style="dark">
+                <Button
+                  href={
+                    router.locale === "en"
+                      ? "/science/#main"
+                      : "/he/science/#main"
+                  }
+                  style="dark"
+                >
                   {data.button}
                 </Button>
               </div>
@@ -251,7 +258,14 @@ function Innovation({ data }) {
                   />
                 </div>
                 <div className="button animate opacity-0">
-                  <Button href="/science/#main" style="dark">
+                  <Button
+                    href={
+                      router.locale === "en"
+                        ? "/science/#main"
+                        : "/he/science/#main"
+                    }
+                    style="dark"
+                  >
                     {data.button}
                   </Button>
                 </div>

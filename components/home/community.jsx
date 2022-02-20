@@ -174,7 +174,14 @@ function Community({ data }) {
               </div>
             </div>
             <div className="button animate opacity-0 pt-10">
-              <Button href="/treatments/#main" style="dark">
+              <Button
+                href={
+                  router.locale === "en"
+                    ? "/treatments/#main"
+                    : "/he/treatments/#main"
+                }
+                style="dark"
+              >
                 {data.button}
               </Button>
             </div>
