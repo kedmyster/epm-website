@@ -5,6 +5,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import client from "../../client";
 import Button from "../shared/Button";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 import SectionHeader from "../shared/SectionHeader";
 
 const BlockContent = require("@sanity/block-content-to-react");
@@ -14,6 +15,7 @@ function Story({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
   const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
@@ -79,7 +81,10 @@ function Story({ data }) {
             </div>
           </div>
           <div className="animate opacity-0 button pt-10 lg:pt-96">
-            <Button href="/about/#main" style="dark">
+            <Button
+              href={router.locale === "en" ? "/about/#main" : "/he/about/#main"}
+              style="dark"
+            >
               {data.button}
             </Button>
           </div>

@@ -5,6 +5,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import classNames from "classnames";
 import client from "../../client";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { useRouter } from "next/router";
 import SectionHeader from "../shared/SectionHeader";
 import Button from "../shared/Button";
 import { useIntl } from "react-intl";
@@ -20,6 +21,7 @@ function Commitment({ data }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
   const intl = useIntl();
   const atmosphere = {
     mobile: useNextSanityImage(client, data.mobile_image),
@@ -96,7 +98,14 @@ function Commitment({ data }) {
                 <BlockContent blocks={data.content} className="external-text" />
               </div>
               <div className="button pt-10">
-                <Button href="/science/#main" style="dark">
+                <Button
+                  href={
+                    router.locale === "en"
+                      ? "/science/#main"
+                      : "/he/science/#main"
+                  }
+                  style="dark"
+                >
                   {data.button}
                 </Button>
               </div>
@@ -159,7 +168,14 @@ function Commitment({ data }) {
               <BlockContent blocks={data.content} className="external-text" />
             </div>
             <div className="button animate opacity-0 pt-10">
-              <Button href="/science/#main" style="light">
+              <Button
+                href={
+                  router.locale === "en"
+                    ? "/science/#main"
+                    : "/he/science/#main"
+                }
+                style="light"
+              >
                 {data.button}
               </Button>
             </div>
