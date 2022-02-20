@@ -677,7 +677,7 @@ function Header() {
           <div div className="mx-auto px-8 flex flex-row items-center relative">
             <div className="logo flex-grow">
               <a
-                ref={router.locale === "en" ? "/" : "/he"}
+                href={router.locale === "en" ? "/" : "/he"}
                 className="transition-opacity duration-150 hover:opacity-70"
               >
                 <Image
