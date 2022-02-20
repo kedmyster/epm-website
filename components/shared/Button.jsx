@@ -51,19 +51,11 @@ function Button({
     rel,
   };
 
-  if (href && href !== "#") {
-    return (
-      <Link href={href} onClick={onClick}>
-        <a {...settings}>{children}</a>
-      </Link>
-    );
-  } else {
-    return (
-      <a href={href} onClick={onClick} {...settings}>
-        {children}
-      </a>
-    );
-  }
+  return (
+    <a href={href} onClick={onClick} {...settings}>
+      {children}
+    </a>
+  );
 }
 
 export default Button;
