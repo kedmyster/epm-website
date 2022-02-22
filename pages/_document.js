@@ -14,20 +14,18 @@ class MyDocument extends Document {
         lang={this.props.locale}
       >
         <Head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-150272551-1"
-          ></script>
+          {/*<!-- Google Tag Manager -->*/}
           <script
             dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-150272551-1');
-          `,
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W5LLDJK');`,
             }}
-          />
+          ></script>
+          {/*<!-- End Google Tag Manager -->*/}
+
           <script
             src="https://cdn.lr-ingest.io/LogRocket.min.js"
             crossOrigin="anonymous"
@@ -50,6 +48,17 @@ class MyDocument extends Document {
           })}
           data-header-theme="light"
         >
+          {/*<!-- Google Tag Manager (noscript) -->*/}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-W5LLDJK"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          {/*<!-- End Google Tag Manager (noscript) -->*/}
+
           <Main />
           <NextScript />
         </body>
