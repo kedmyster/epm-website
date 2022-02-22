@@ -53,6 +53,12 @@
       "value": "Play Video"
     }
   ],
+  "common.closeVideo": [
+    {
+      "type": 0,
+      "value": "Close Video"
+    }
+  ],
   "common.previous": [
     {
       "type": 0,

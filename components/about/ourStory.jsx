@@ -68,7 +68,10 @@ function OurStory({ data }) {
     if (item.getAttribute("aria-expanded") === "false") {
       item.setAttribute("aria-expanded", "true");
       video.classList.remove("hidden");
-      button.innerText = "Close Video";
+      button.innerText = intl.formatMessage({
+        id: "common.closeVideo",
+        defaultMessage: "Close Video",
+      });
 
       if (video.player) {
         video.player.playVideo();
@@ -89,7 +92,10 @@ function OurStory({ data }) {
     } else {
       item.setAttribute("aria-expanded", "false");
       video.classList.add("hidden");
-      button.innerText = "Play Video";
+      button.innerText = intl.formatMessage({
+        id: "common.playVideo",
+        defaultMessage: "Play Video",
+      });
 
       if (video.player) {
         video.player.stopVideo();
