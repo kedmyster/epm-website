@@ -373,3 +373,7 @@ body[data-header-theme="dark"] .header .lang-switcher span {
 .external-text ul {
   @apply list-disc ms-5 mb-4 lg:mb-8;
 }
+
+.external-text ol {
+  @apply list-decimal ms-5 mb-4 lg:mb-8;
+}
