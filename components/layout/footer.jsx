@@ -129,6 +129,14 @@ function Footer({}) {
                       }
                     )
                       .then((response) => {
+                        gtag({
+                          event: "epm",
+                          eventdata: {
+                            category: "lead",
+                            action: "form_submit",
+                          },
+                        });
+
                         const tl = gsap.timeline();
 
                         tl.add("contact-form-submit");
@@ -451,7 +459,11 @@ function Footer({}) {
                   </li>
                   <li className="font-title text-epm-gray-700 tracking-wide pb-4">
                     <a
-                      href={router.locale === "en" ? "/treatments" : "/he/treatments"}
+                      href={
+                        router.locale === "en"
+                          ? "/treatments"
+                          : "/he/treatments"
+                      }
                       className="block uppercase underline"
                     >
                       <FormattedMessage
