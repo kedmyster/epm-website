@@ -29,6 +29,9 @@
   "common.playVideo": {
     "defaultMessage": "Play Video"
   },
+  "common.closeVideo": {
+    "defaultMessage": "Close Video"
+  },
   "common.previous": {
     "defaultMessage": "Previous"
   },

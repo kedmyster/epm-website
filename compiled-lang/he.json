@@ -53,6 +53,12 @@
       "value": "לצפייה בסרטון"
     }
   ],
+  "common.closeVideo": [
+    {
+      "type": 0,
+      "value": "סגור סרטון"
+    }
+  ],
   "common.previous": [
     {
       "type": 0,

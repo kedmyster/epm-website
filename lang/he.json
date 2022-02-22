@@ -29,6 +29,9 @@
   "common.playVideo": {
     "defaultMessage": "לצפייה בסרטון"
   },
+  "common.closeVideo": {
+    "defaultMessage": "סגור סרטון"
+  },
   "common.previous": {
     "defaultMessage": "הקודם"
   },

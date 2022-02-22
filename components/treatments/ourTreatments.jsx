@@ -93,7 +93,10 @@ function OurTreatments({ data }) {
                 section.setAttribute("aria-expanded", "false");
                 gsap.to(section, { opacity: 0, duration: 0.25 });
 
-                button.innerText = "Learn More";
+                button.innerText = intl.formatMessage({
+                  id: "common.learnMore",
+                  defaultMessage: "Learn More",
+                });
               });
             }
           });
@@ -141,11 +144,17 @@ function OurTreatments({ data }) {
       if (moreInfoPanel.getAttribute("aria-expanded") === "false") {
         moreInfoPanel.setAttribute("aria-expanded", "true");
         gsap.to(moreInfoPanel, { opacity: 1, zIndex: 11, duration: 0.25 });
-        event.target.innerText = "Close";
+        event.target.innerText = intl.formatMessage({
+          id: "common.close",
+          defaultMessage: "Close",
+        });
       } else {
         moreInfoPanel.setAttribute("aria-expanded", "false");
         gsap.to(moreInfoPanel, { opacity: 0, zIndex: 0, duration: 0.25 });
-        event.target.innerText = "Learn More";
+        event.target.innerText = intl.formatMessage({
+          id: "common.learnMore",
+          defaultMessage: "Learn More",
+        });
       }
     }
   };
@@ -406,7 +415,10 @@ function OurTreatments({ data }) {
                             href="#"
                             onClick={(event) => toggleLearnMore(event)}
                           >
-                            Close
+                            <FormattedMessage
+                              id="common.close"
+                              defaultMessage="Close"
+                            />
                           </Button>
                         </div>
 
