@@ -430,22 +430,6 @@ function Header() {
                       <a
                         href={
                           router.locale === "en"
-                            ? "/treatments/#inflammatory-bowel-disease"
-                            : "/he/treatments/#inflammatory-bowel-disease"
-                        }
-                        onClick={(event) => goToSection(event)}
-                        className=""
-                      >
-                        <FormattedMessage
-                          id="header.menu.treatments.inflammatoryBowelDisease"
-                          defaultMessage="Inflammatory Bowel Disease"
-                        />
-                      </a>
-                    </li>
-                    <li className="mb-4">
-                      <a
-                        href={
-                          router.locale === "en"
                             ? "/treatments/#psoriasis"
                             : "/he/treatments/#psoriasis"
                         }
@@ -455,6 +439,22 @@ function Header() {
                         <FormattedMessage
                           id="header.menu.treatments.psoriasis"
                           defaultMessage="Psoriasis"
+                        />
+                      </a>
+                    </li>
+                    <li className="mb-4">
+                      <a
+                        href={
+                          router.locale === "en"
+                            ? "/treatments/#inflammatory-bowel-disease"
+                            : "/he/treatments/#inflammatory-bowel-disease"
+                        }
+                        onClick={(event) => goToSection(event)}
+                        className=""
+                      >
+                        <FormattedMessage
+                          id="header.menu.treatments.inflammatoryBowelDisease"
+                          defaultMessage="Inflammatory Bowel Disease"
                         />
                       </a>
                     </li>
@@ -868,22 +868,6 @@ function Header() {
                     <a
                       href={
                         router.locale === "en"
-                          ? "/treatments/#inflammatory-bowel-disease"
-                          : "/he/treatments/#inflammatory-bowel-disease"
-                      }
-                      onClick={(event) => goToSection(event)}
-                      className="transition-opacity duration-150 hover:opacity-70"
-                    >
-                      <FormattedMessage
-                        id="header.menu.treatments.inflammatoryBowelDisease"
-                        defaultMessage="Inflammatory Bowel Disease"
-                      />
-                    </a>
-                  </li>
-                  <li className="text-sm my-2">
-                    <a
-                      href={
-                        router.locale === "en"
                           ? "/treatments/#psoriasis"
                           : "/he/treatments/#psoriasisoard"
                       }
@@ -893,6 +877,22 @@ function Header() {
                       <FormattedMessage
                         id="header.menu.treatments.psoriasis"
                         defaultMessage="Psoriasis"
+                      />
+                    </a>
+                  </li>
+                  <li className="text-sm my-2">
+                    <a
+                      href={
+                        router.locale === "en"
+                          ? "/treatments/#inflammatory-bowel-disease"
+                          : "/he/treatments/#inflammatory-bowel-disease"
+                      }
+                      onClick={(event) => goToSection(event)}
+                      className="transition-opacity duration-150 hover:opacity-70"
+                    >
+                      <FormattedMessage
+                        id="header.menu.treatments.inflammatoryBowelDisease"
+                        defaultMessage="Inflammatory Bowel Disease"
                       />
                     </a>
                   </li>
