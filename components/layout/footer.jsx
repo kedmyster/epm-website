@@ -129,7 +129,7 @@ function Footer({}) {
                       }
                     )
                       .then((response) => {
-                        gtag({
+                        window.dataLayer.push({
                           event: "epm",
                           eventdata: {
                             category: "lead",
