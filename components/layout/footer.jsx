@@ -112,6 +112,14 @@ function Footer({}) {
                   return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
+                  dataLayer.push({
+                    event: "epm",
+                    eventdata: {
+                      category: "lead",
+                      action: "form_submit",
+                    },
+                  });
+
                   setTimeout(async () => {
                     setSubmitting(false);
 
@@ -129,14 +137,6 @@ function Footer({}) {
                       }
                     )
                       .then((response) => {
-                        window.dataLayer.push({
-                          event: "epm",
-                          eventdata: {
-                            category: "lead",
-                            action: "form_submit",
-                          },
-                        });
-
                         const tl = gsap.timeline();
 
                         tl.add("contact-form-submit");
