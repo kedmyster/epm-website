@@ -63,6 +63,7 @@ module.exports = {
     // building the browser's bundle
     if (!options.isServer) {
       config.resolve.alias["@sentry/node"] = "@sentry/browser";
+      require("./scripts/sitemap-generator");
     }
 
     // Define an environment variable so source code can check whether or not
