@@ -35,6 +35,12 @@
       "value": "Close"
     }
   ],
+  "common.closeVideo": [
+    {
+      "type": 0,
+      "value": "Close Video"
+    }
+  ],
   "common.learnMore": [
     {
       "type": 0,
@@ -51,12 +57,6 @@
     {
       "type": 0,
       "value": "Play Video"
-    }
-  ],
-  "common.closeVideo": [
-    {
-      "type": 0,
-      "value": "Close Video"
     }
   ],
   "common.previous": [
@@ -98,13 +98,13 @@
   "footer.contact.success.great": [
     {
       "type": 0,
-      "value": "Great :)"
+      "value": "Thanks for signing up!"
     }
   ],
   "footer.contact.success.thanks": [
     {
       "type": 0,
-      "value": "Thank You!"
+      "value": "You will be the first to know about new updates."
     }
   ],
   "footer.copyright": [

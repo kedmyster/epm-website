@@ -229,17 +229,18 @@ function Footer({}) {
           </div>
           <div className="contact__thanks mb-12 opacity-0 absolute top-0 start-0 z-0">
             <div className="mb-8">
-              <h2 className="font-title text-4.5xl lg:text-6xl xl:text-5.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-white">
+              <h2 className="font-title text-4.5xl lg:text-6xl xl:text-4.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-white">
                 <FormattedMessage
                   id="footer.contact.success.great"
                   defaultMessage="Great :)"
                 />
-                <br />
+              </h2>
+              <p className="text-xs lg:text-lg font-title text-white">
                 <FormattedMessage
                   id="footer.contact.success.thanks"
                   defaultMessage="Thank You!"
                 />
-              </h2>
+              </p>
             </div>
             <div>
               {/* <a
