@@ -48,10 +48,10 @@
     "defaultMessage": "להצטרפות"
   },
   "footer.contact.success.great": {
-    "defaultMessage": "מעולה :)"
+    "defaultMessage": "תודה שנרשמת!"
   },
   "footer.contact.success.thanks": {
-    "defaultMessage": "!תודה"
+    "defaultMessage": "אנו נדאג לעדכן אותך בכל הפרטים דרך המייל."
   },
   "footer.copyright": {
     "defaultMessage": "Copyright ©2021 EPM Group, Inc. כל הזכויות שמורות"

@@ -35,6 +35,12 @@
       "value": "סגירה"
     }
   ],
+  "common.closeVideo": [
+    {
+      "type": 0,
+      "value": "סגור סרטון"
+    }
+  ],
   "common.learnMore": [
     {
       "type": 0,
@@ -51,12 +57,6 @@
     {
       "type": 0,
       "value": "לצפייה בסרטון"
-    }
-  ],
-  "common.closeVideo": [
-    {
-      "type": 0,
-      "value": "סגור סרטון"
     }
   ],
   "common.previous": [
@@ -98,13 +98,13 @@
   "footer.contact.success.great": [
     {
       "type": 0,
-      "value": "מעולה :)"
+      "value": "תודה שנרשמת!"
     }
   ],
   "footer.contact.success.thanks": [
     {
       "type": 0,
-      "value": "!תודה"
+      "value": "אנו נדאג לעדכן אותך בכל הפרטים דרך המייל."
     }
   ],
   "footer.copyright": [

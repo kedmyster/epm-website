@@ -48,10 +48,10 @@
     "defaultMessage": "Submit"
   },
   "footer.contact.success.great": {
-    "defaultMessage": "Great :)"
+    "defaultMessage": "Thanks for signing up!"
   },
   "footer.contact.success.thanks": {
-    "defaultMessage": "Thank You!"
+    "defaultMessage": "You will be the first to know about new updates."
   },
   "footer.copyright": {
     "defaultMessage": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"
