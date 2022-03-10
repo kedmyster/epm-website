@@ -36,13 +36,16 @@
     "defaultMessage": "Previous"
   },
   "contact.firstName": {
-    "defaultMessage": "First Name"
+    "defaultMessage": "First Name*"
   },
   "contact.lastName": {
-    "defaultMessage": "Last Name"
+    "defaultMessage": "Last Name*"
   },
   "contact.email": {
-    "defaultMessage": "Email"
+    "defaultMessage": "Email Address*"
+  },
+  "contact.phone": {
+    "defaultMessage": "Phone Number"
   },
   "contact.submit": {
     "defaultMessage": "Submit"
@@ -52,6 +55,9 @@
   },
   "footer.contact.success.thanks": {
     "defaultMessage": "You will be the first to know about new updates."
+  },
+  "footer.contact.success.thanks2": {
+    "defaultMessage": ""
   },
   "footer.copyright": {
     "defaultMessage": "Copyright ©2021 EPM Group, Inc. All Rights Reserved"

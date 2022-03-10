@@ -133,6 +133,8 @@ function Footer({}) {
                           firstName: values.firstName,
                           lastName: values.lastName,
                           email: values.email,
+                          phone: values.phone,
+                          locale: router.locale,
                         }),
                       }
                     )
@@ -179,7 +181,7 @@ function Footer({}) {
                           name="firstName"
                           placeholder={intl.formatMessage({
                             id: "contact.firstName",
-                            defaultMessage: "First Name",
+                            defaultMessage: "First Name*",
                           })}
                           className="w-full font-light rounded-3xl px-5 py-2 me-4 mb-4 lg:mb-0"
                         />
@@ -188,7 +190,7 @@ function Footer({}) {
                           name="lastName"
                           placeholder={intl.formatMessage({
                             id: "contact.lastName",
-                            defaultMessage: "Last Name",
+                            defaultMessage: "Last Name*",
                           })}
                           className="w-full font-light rounded-3xl px-5 py-2"
                         />
@@ -199,12 +201,28 @@ function Footer({}) {
                           name="email"
                           placeholder={intl.formatMessage({
                             id: "contact.email",
-                            defaultMessage: "Email Address",
+                            defaultMessage: "Email Address*",
                           })}
                           className={classNames(
                             "w-full font-light rounded-3xl px-5 py-2",
                             {
                               "outline-2 outline-red-500": errors.email,
+                            }
+                          )}
+                        />
+                      </div>
+                      <div className="mb-4 lg:mb-6 leading-8 flex-1">
+                        <Field
+                          type="tel"
+                          name="phone"
+                          placeholder={intl.formatMessage({
+                            id: "contact.phone",
+                            defaultMessage: "Phone Number",
+                          })}
+                          className={classNames(
+                            "w-full font-light rounded-3xl px-5 py-2",
+                            {
+                              "outline-2 outline-red-500": errors.phone,
                             }
                           )}
                         />
@@ -229,16 +247,22 @@ function Footer({}) {
           </div>
           <div className="contact__thanks mb-12 opacity-0 absolute top-0 start-0 z-0">
             <div className="mb-8">
-              <h2 className="font-title text-4.5xl lg:text-6xl xl:text-4.5xl 2xl:text-7.5xl leading-snug lg:leading-normal xl:leading-snug text-white">
+              <h2 className="font-title text-4.5xl lg:text-6xl xl:text-4.5xl 2xl:text-6xl leading-snug lg:leading-normal xl:leading-snug text-white">
                 <FormattedMessage
                   id="footer.contact.success.great"
                   defaultMessage="Great :)"
                 />
               </h2>
-              <p className="text-xs lg:text-lg font-title text-white">
+              <p className="text-xs lg:text-lg font-title text-white mt-4">
                 <FormattedMessage
                   id="footer.contact.success.thanks"
                   defaultMessage="Thank You!"
+                />
+              </p>
+              <p className="text-xs lg:text-lg font-title text-white">
+                <FormattedMessage
+                  id="footer.contact.success.thanks2"
+                  defaultMessage=""
                 />
               </p>
             </div>

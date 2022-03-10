@@ -74,19 +74,25 @@
   "contact.email": [
     {
       "type": 0,
-      "value": "Email"
+      "value": "Email Address*"
     }
   ],
   "contact.firstName": [
     {
       "type": 0,
-      "value": "First Name"
+      "value": "First Name*"
     }
   ],
   "contact.lastName": [
     {
       "type": 0,
-      "value": "Last Name"
+      "value": "Last Name*"
+    }
+  ],
+  "contact.phone": [
+    {
+      "type": 0,
+      "value": "Phone Number"
     }
   ],
   "contact.submit": [
@@ -105,6 +111,12 @@
     {
       "type": 0,
       "value": "You will be the first to know about new updates."
+    }
+  ],
+  "footer.contact.success.thanks2": [
+    {
+      "type": 0,
+      "value": ""
     }
   ],
   "footer.copyright": [

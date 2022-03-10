@@ -74,19 +74,25 @@
   "contact.email": [
     {
       "type": 0,
-      "value": "אימייל"
+      "value": "אימייל*"
     }
   ],
   "contact.firstName": [
     {
       "type": 0,
-      "value": "שם פרטי"
+      "value": "שם פרטי*"
     }
   ],
   "contact.lastName": [
     {
       "type": 0,
-      "value": "שם משפחה"
+      "value": "שם משפחה*"
+    }
+  ],
+  "contact.phone": [
+    {
+      "type": 0,
+      "value": "טלפון"
     }
   ],
   "contact.submit": [
@@ -102,6 +108,12 @@
     }
   ],
   "footer.contact.success.thanks": [
+    {
+      "type": 0,
+      "value": "מהפכת התרופות של epm יוצאת לדרך בקרוב!"
+    }
+  ],
+  "footer.contact.success.thanks2": [
     {
       "type": 0,
       "value": "אנו נדאג לעדכן אותך בכל הפרטים דרך המייל."
