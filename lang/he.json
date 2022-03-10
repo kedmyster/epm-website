@@ -36,13 +36,16 @@
     "defaultMessage": "הקודם"
   },
   "contact.firstName": {
-    "defaultMessage": "שם פרטי"
+    "defaultMessage": "שם פרטי*"
   },
   "contact.lastName": {
-    "defaultMessage": "שם משפחה"
+    "defaultMessage": "שם משפחה*"
   },
   "contact.email": {
-    "defaultMessage": "אימייל"
+    "defaultMessage": "אימייל*"
+  },
+  "contact.phone": {
+    "defaultMessage": "טלפון"
   },
   "contact.submit": {
     "defaultMessage": "להצטרפות"
@@ -51,6 +54,9 @@
     "defaultMessage": "תודה שנרשמת!"
   },
   "footer.contact.success.thanks": {
+    "defaultMessage": "מהפכת התרופות של epm יוצאת לדרך בקרוב!"
+  },
+  "footer.contact.success.thanks2": {
     "defaultMessage": "אנו נדאג לעדכן אותך בכל הפרטים דרך המייל."
   },
   "footer.copyright": {
