@@ -109,6 +109,9 @@ function Main({ data }) {
         </div>
         <div className="absolute bottom-0 w-full py-12">
           <div className="container mx-auto px-8 py-8 ">
+            <p className="main__text animate opacity-0 font-title lg:text-lg lg:w-sm-container lg:mx-auto mb-[30px] z-10lg:mb-[45px]">
+              {data.text}
+            </p>
             <h1 className="main__title animate opacity-0 font-title text-4xl lg:text-6xl lg:leading-tight tracking-wide mb-4">
               {data.name}
             </h1>
