@@ -30,6 +30,11 @@ class MyDocument extends Document {
           {/*<!-- End Google Tag Manager -->*/}
 
           <script
+            src="https://portal.allyable.com/aweb?license=ce7caf2827b44e63ba68dc353b86023a"
+            async
+            referrerPolicy="no-referrer-when-downgrade"
+          ></script>
+          <script
             src="https://cdn.lr-ingest.io/LogRocket.min.js"
             crossOrigin="anonymous"
           ></script>

@@ -36,11 +36,6 @@ function Home({ data }) {
         {data.keywords && (
           <meta name="keywords" content={data.keywords[lang]} />
         )}
-        <script
-          src="https://portal.allyable.com/aweb?license=ce7caf2827b44e63ba68dc353b86023a"
-          async
-          referrerPolicy="no-referrer-when-downgrade"
-        ></script>
       </Head>
 
       <Main data={getSectionDataByName(data, "hero", lang)} />
