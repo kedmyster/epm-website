@@ -454,6 +454,21 @@ function Footer({}) {
                   />
                 </a>
               </div>
+              <div className="mb-3">
+                <a
+                  href="https://www.facebook.com/EPMIP"
+                  target="_blank"
+                  rel="noopener"
+                  className="transition-opacity duration-150 hover:opacity-70"
+                >
+                  <Image
+                    src="/img/icons/facebook-dark-gray.svg"
+                    width="30"
+                    height="30"
+                    alt="facebook"
+                  />
+                </a>
+              </div>
             </div>
           </div>
           <div id="footer_menu" className="footer-menu hidden lg:block">
