@@ -6,6 +6,7 @@ import SectionHeader from "../shared/SectionHeader";
 import client from "../../client";
 import { useNextSanityImage } from "next-sanity-image";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
+import { getFile } from "@sanity/asset-utils";
 
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -85,41 +86,44 @@ function MediaIPO({ data }) {
                     </div>
                   </div>
                   <div className="lg:flex-1">
-                    {category.button && category.button.length === 1 ? (
-                      <div>
-                        {category.button.map((link, index) => {
-                          return (
-                            <div
-                              className="button pt-0 lg:inline-block text-center"
-                              key={link.link}
-                            >
-                              <Button
-                                style="dark"
-                                href={link.link}
-                                extendedClassNames="px-2 lg:px-2 xl:px-2 bg-epm-gray-700 bg-white text-epm-gray-700"
-                                target="_blank"
+                    {category.button && (
+                      <div className="lg:flex lg:gap-[10px]">
+                        {category.button.map((button, index) => {
+                          if (button.file) {
+                            const file = getFile(button.file, client.config());
+
+                            return (
+                              <div
+                                className="button pt-0 lg:inline-block text-center"
+                                key={file.asset.url}
                               >
-                                {link.text}
-                              </Button>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ) : (
-                      <div className="flex flex-wrap justify-center md:justify-start">
-                        {category.button && category.button.map((link, index) => {
-                          return (
-                            <div className="button pt-2 pb-2 inline-block text-center md:pe-6">
-                              <Button
-                                style="dark"
-                                href={link.link}
-                                extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700"
-                                target="_blank"
+                                <Button
+                                  style="dark"
+                                  href={file.asset.url}
+                                  extendedClassNames="px-2 lg:px-2 xl:px-2 bg-white text-epm-gray-700"
+                                  target="_blank"
+                                >
+                                  {button.text}
+                                </Button>
+                              </div>
+                            );
+                          } else if (button.link) {
+                            return (
+                              <div
+                                className="button pt-0 lg:inline-block text-center"
+                                key={button.link}
                               >
-                                {link.text}
-                              </Button>
-                            </div>
-                          );
+                                <Button
+                                  style="dark"
+                                  href={button.link}
+                                  extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700"
+                                  target="_blank"
+                                >
+                                  {button.text}
+                                </Button>
+                              </div>
+                            );
+                          }
                         })}
                       </div>
                     )}
