@@ -85,7 +85,7 @@ function MediaIPO({ data }) {
                     </div>
                   </div>
                   <div className="lg:flex-1">
-                    {category.button.length === 1 ? (
+                    {category.button && category.button.length === 1 ? (
                       <div>
                         {category.button.map((link, index) => {
                           return (
@@ -96,7 +96,7 @@ function MediaIPO({ data }) {
                               <Button
                                 style="dark"
                                 href={link.link}
-                                extendedClassNames="px-2 lg:px-2 bg-epm-gray-700 bg-white text-epm-gray-700"
+                                extendedClassNames="px-2 lg:px-2 xl:px-2 bg-epm-gray-700 bg-white text-epm-gray-700"
                                 target="_blank"
                               >
                                 {link.text}
@@ -107,13 +107,13 @@ function MediaIPO({ data }) {
                       </div>
                     ) : (
                       <div className="flex flex-wrap justify-center md:justify-start">
-                        {category.button.map((link, index) => {
+                        {category.button && category.button.map((link, index) => {
                           return (
                             <div className="button pt-2 pb-2 inline-block text-center md:pe-6">
                               <Button
                                 style="dark"
                                 href={link.link}
-                                extendedClassNames="px-2 lg:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700"
+                                extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700"
                                 target="_blank"
                               >
                                 {link.text}
