@@ -27,16 +27,16 @@ function SocialMedia() {
         </div>
         <div className="mb-3">
           <a
-            href="https://twitter.com/EPMIP"
+            href="https://www.facebook.com/EPMIP"
             target="_blank"
             rel="noopener"
             className="transition-opacity duration-150 hover:opacity-70"
           >
             <Image
-              src="/img/icons/twitter-dark-gray.svg"
+              src="/img/icons/facebook-dark-gray.svg"
               width="30"
               height="30"
-              alt="Twitter"
+              alt="facebook"
             />
           </a>
         </div>
@@ -57,16 +57,16 @@ function SocialMedia() {
         </div>
         <div className="mb-3">
           <a
-            href="https://www.facebook.com/EPMIP"
+            href="https://twitter.com/EPMIP"
             target="_blank"
             rel="noopener"
             className="transition-opacity duration-150 hover:opacity-70"
           >
             <Image
-              src="/img/icons/facebook-dark-gray.svg"
+              src="/img/icons/twitter-dark-gray.svg"
               width="30"
               height="30"
-              alt="facebook"
+              alt="Twitter"
             />
           </a>
         </div>

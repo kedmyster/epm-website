@@ -38,19 +38,19 @@ function MediaIPO({ data }) {
   return (
     <section
       id="ipo"
-      className="section ipo lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-auto  lg:min-h-screen"
+      className="section ipo lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-auto lg:min-h-screen"
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="container lg:w-lg-container  mx-auto px-8 py-8 border-t m-[4rem] border-epm-gray-300 ">
+      <div className="container lg:w-lg-container mx-auto px-8 py-8 border-t m-[4rem] border-epm-gray-300 ">
         <div className="mb-6 lg:mb-0  -mx-8 lg:mx-0 px-8 lg:px-0 lg:text-center ">
           <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
         </div>
         <div className="lg:text-lg lg:pt-[47px] lg:text-center">
           <BlockContent blocks={data.description} className="external-text" />
         </div>
-        <div className="text-3xl mt-8 lg:mt-[65px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
+        <div className="text-3xl mt-8 lg:mt-[45px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
           <BlockContent blocks={data.cta} className="external-text" />
         </div>
         <div className="items -mx-8 lg:pt-8 lg:overflow-y-auto">
@@ -61,12 +61,13 @@ function MediaIPO({ data }) {
                 key={category.name}
               >
                 <div className="flex flex-col lg:flex-row items-center md:items-start lg:items-center justify-start mx-8 lg:mx-0 w-full">
-                  <div className="lg:basis-52 xl:basis-72 xl:text-center lg:text-start lg:inline-block lg:w-110 xl:w-130">
-                    <div className="text-3xl lg:text-xl xl:text-4xl font-bold lg:mb-4 lg:h-20 xl:h-auto">
+                  <div className="lg:basis-52 xl:basis-80 xl:text-center lg:text-start lg:inline-block lg:w-110 xl:w-130">
+                    <div className="text-3xl lg:text-xl xl:text-2xl font-bold lg:mb-4 xl:mb-0 lg:h-20 xl:h-auto">
                       {category.name}
                     </div>
-                    <div className="text-xs mt-4 mb-4 lg:mb-0">
-                      {category.links && category.links.length > 0 && (
+
+                    {category.links && category.links.length > 0 && (
+                      <div className="text-xxs mt-4 mb-4 lg:mb-0">
                         <ul className="flex gap-[20px] underline">
                           {category.links.map((link, index) => {
                             return (
@@ -82,8 +83,9 @@ function MediaIPO({ data }) {
                             );
                           })}
                         </ul>
-                      )}
-                    </div>
+                      </div>
+                    )}
+
                   </div>
                   <div className="lg:flex-1">
                     {category.button && (

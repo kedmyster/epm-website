@@ -102,7 +102,7 @@
     "defaultMessage": "קריירה"
   },
   "footer.menu.media": {
-    "defaultMessage": "עיתונות"
+    "defaultMessage": "הנפקה & עיתונות"
   },
   "footer.menu.privacyPolicy": {
     "defaultMessage": "פרטיות"
@@ -156,7 +156,7 @@
     "defaultMessage": "יצירת קשר"
   },
   "header.menu.ipoAndMedia": {
-    "defaultMessage": "עיתונות"
+    "defaultMessage": "הנפקה & עיתונות"
   },
   "header.menu.science": {
     "defaultMessage": "מדע"

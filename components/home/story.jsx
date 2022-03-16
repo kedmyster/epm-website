@@ -46,6 +46,7 @@ function Story({ data }) {
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
+      data-logo-color="dark"
     >
       <div className="flex flex-wrap content-end md:content-start lg:content-end h-screen">
         <div className="absolute w-full h-full">
@@ -70,7 +71,7 @@ function Story({ data }) {
             />
           )}
         </div>
-        <div className="relative container mx-auto py-8 px-8">
+        <div className="relative container mx-auto px-8 py-8 lg:py-16">
           <SectionHeader
             name={<span>{data.name}</span>}
             title={<h2 className="pb-52 md:pb-6 lg:pb-0">{data.title}</h2>}
@@ -80,7 +81,7 @@ function Story({ data }) {
               <BlockContent blocks={data.content} className="external-text" />
             </div>
           </div>
-          <div className="animate opacity-0 button pt-10 lg:pt-96">
+          <div className="animate opacity-0 button pt-10 lg:pt-80">
             <Button
               href={router.locale === "en" ? "/about/#main" : "/he/about/#main"}
               style="dark"
