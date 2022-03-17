@@ -50,9 +50,13 @@ function MediaIPO({ data }) {
         <div className="lg:text-lg lg:pt-[47px] lg:text-center">
           <BlockContent blocks={data.description} className="external-text" />
         </div>
-        <div className="text-3xl mt-8 lg:mt-[45px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
-          <BlockContent blocks={data.cta} className="external-text" />
-        </div>
+
+        <a class="block" href="https://invest.fundit.co.il/project/2066">
+          <div className="text-3xl mt-8 lg:mt-[45px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
+            <BlockContent blocks={data.cta} className="external-text" />
+          </div>
+        </a>
+
         <div className="items -mx-8 lg:pt-8 lg:overflow-y-auto">
           {data.categories.map((category, index) => {
             return (
@@ -85,7 +89,6 @@ function MediaIPO({ data }) {
                         </ul>
                       </div>
                     )}
-
                   </div>
                   <div className="lg:flex-1">
                     {category.button && (
@@ -102,7 +105,7 @@ function MediaIPO({ data }) {
                                 <Button
                                   style="dark"
                                   href={file.asset.url}
-                                  extendedClassNames="px-2 lg:px-2 xl:px-2 bg-white text-epm-gray-700"
+                                  extendedClassNames="px-2 lg:px-2 xl:px-2 w-52 bg-white text-epm-gray-700 mt-2 lg:mt-0"
                                   target="_blank"
                                 >
                                   {button.text}
@@ -118,7 +121,7 @@ function MediaIPO({ data }) {
                                 <Button
                                   style="dark"
                                   href={button.link}
-                                  extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700"
+                                  extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700  mt-2 lg:mt-0"
                                   target="_blank"
                                 >
                                   {button.text}

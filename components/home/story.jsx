@@ -48,7 +48,7 @@ function Story({ data }) {
       data-header-menu-visibility="visible"
       data-logo-color="dark"
     >
-      <div className="flex flex-wrap content-end md:content-start lg:content-end h-screen">
+      <div className="flex flex-wrap content-end md:content-start lg:content-end h-[914px] md:h-screen">
         <div className="absolute w-full h-full">
           {isMobile && (
             <Image
@@ -71,7 +71,7 @@ function Story({ data }) {
             />
           )}
         </div>
-        <div className="relative container mx-auto px-8 py-8 lg:py-16">
+        <div className="relative container mx-auto px-8 py-8 lg:py-16 md:mt-[200px] lg:mt-0">
           <SectionHeader
             name={<span>{data.name}</span>}
             title={<h2 className="pb-52 md:pb-6 lg:pb-0">{data.title}</h2>}

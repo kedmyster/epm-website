@@ -41,33 +41,37 @@ function Home({ data }) {
 
       <Main data={getSectionDataByName(data, "hero", lang)} />
       <div className="relative">
-        <div className="banner text-3xl  text-center bg-epm-yellow absolute lg:top-0 lg:left-0 w-full z-10">
-          <div className="container mx-auto py-8 lg:py-[33px] px-8">
-            <div className="font-title font-bold mb-2">
+        <div className="banner text-center bg-epm-yellow absolute lg:top-0 lg:left-0 w-full z-10">
+          <div className="container mx-auto py-4 xl:py-8 2xl:py-[33px] px-8">
+            <div className="font-title text-2xl 2xl:text-3xl font-bold mb-2">
               {router.locale === "en" && (
                 <span>The medicine revolution has begun!</span>
               )}
               {router.locale === "he" && <span>מהפכת התרופות החלה!</span>}
             </div>
-            <div className="text-lg">
+            <div className="text-epm-base leading-normal 2xl:text-lg">
               {router.locale === "en" && (
                 <span>
-                  The unique IPO process accessible to the general public is now
-                  open - we invite you
-                  <br /> to click on this link, read the prospectus and make an
-                  educated decision
+                  The medicine revolution has begun with an IPO accessible to
+                  all!
+                  <br /> Click on this link, read the prospectus an make an
+                  educated decision.
                 </span>
               )}
               {router.locale === "he" && (
                 <span>
-                  תהליך ההנפקה הייחודי לכלל הציבור פתוח כעת - לחצו על הלינק,
-                  וקבלו החלטה מושכלת
+                  מהפכת התרופות החלה בתהליך של הנפקה נגישה לכולם! <br />
+                  לחצו על הלינק, קראו את התשקיף וקבלו החלטה מושכלת.
                 </span>
               )}
             </div>
-            <div className="button pt-8">
+            <div className="button pt-4">
               <Button
-                href={router.locale === "en" ? "/media/#ipo" : "/he/media/#ipo"}
+                href={
+                  router.locale === "en"
+                    ? "https://invest.fundit.co.il/project/2066"
+                    : "https://invest.fundit.co.il/project/2066"
+                }
                 style="white"
               >
                 {router.locale === "en" && <span>Learn More</span>}
