@@ -33,18 +33,17 @@ function MediaIPO({ data }) {
     }
   }, [windowWidth]);
 
-  console.log(JSON.stringify(data));
-
   return (
     <section
       id="ipo"
       className="section ipo lg:flex lg:flex-wrap lg:flex-row-reverse lg:overflow-y-auto lg:min-h-screen"
+
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
       <div className="container lg:w-lg-container mx-auto px-8 py-8 m-[4rem]">
-        <div className="mb-6 lg:mb-0  -mx-8 lg:mx-0 px-8 lg:px-0 lg:text-center ">
+        <div className="mb-6 lg:mb-0  -mx-8 lg:mx-0 px-8 lg:px-0 lg:text-center">
           <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
         </div>
         <div className="lg:text-lg lg:pt-[47px] lg:text-center">

@@ -36,7 +36,7 @@ function SocialMedia() {
               src="/img/icons/facebook-dark-gray.svg"
               width="30"
               height="30"
-              alt="facebook"
+              alt="Facebook"
             />
           </a>
         </div>
