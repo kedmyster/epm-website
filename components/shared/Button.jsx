@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const STYLE_LIGHT = "light";
 const STYLE_DARK = "dark";
+const STYLE_BANNER = "white";
 
 function Button({
   href,
@@ -37,6 +38,7 @@ function Button({
       "hover:text-epm-gray-700",
       { "border-epm-gray-700 text-epm-gray-700": style === STYLE_DARK },
       { "border-white text-white": style === STYLE_LIGHT },
+      {"bg-white border-epm-gray-700 text-epm-gray-700 hover:bg-epm-gray-700 hover:text-white": style === STYLE_BANNER},
       extendedClassNames
     );
   }
