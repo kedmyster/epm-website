@@ -182,7 +182,7 @@
   "footer.information.media": [
     {
       "type": 0,
-      "value": "עיתונות"
+      "value": "משקיעים & עיתונות"
     }
   ],
   "footer.information.title": [
@@ -206,7 +206,7 @@
   "footer.menu.media": [
     {
       "type": 0,
-      "value": "עיתונות"
+      "value": "הנפקה & עיתונות"
     }
   ],
   "footer.menu.privacyPolicy": [
@@ -314,7 +314,7 @@
   "header.menu.ipoAndMedia": [
     {
       "type": 0,
-      "value": "עיתונות"
+      "value": "הנפקה & עיתונות"
     }
   ],
   "header.menu.science": [
