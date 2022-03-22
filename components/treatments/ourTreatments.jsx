@@ -263,7 +263,7 @@ function OurTreatments({ data }) {
               id={getId(slide.id)}
               key={`${slugify(slide.name.toLowerCase())}-${index}`}
               className="section treatments relative w-full"
-              data-side-menu-label={slide.title}
+              data-side-menu-label={slide.sidebar}
               data-side-menu-color="dark"
               data-side-menu-visibility="visible"
               data-header-menu-visibility="visible"

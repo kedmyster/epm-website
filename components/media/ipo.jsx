@@ -43,7 +43,7 @@ function MediaIPO({ data }) {
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
     >
-      <div className="container lg:w-lg-container mx-auto px-8 py-8 border-t m-[4rem] border-epm-gray-300 ">
+      <div className="container lg:w-lg-container mx-auto px-8 py-8 m-[4rem]">
         <div className="mb-6 lg:mb-0  -mx-8 lg:mx-0 px-8 lg:px-0 lg:text-center ">
           <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
         </div>
