@@ -103,6 +103,7 @@ function Story({ data }) {
                     ? "https://invest.fundit.co.il/project/2066"
                     : "https://invest.fundit.co.il/project/2066"
                 }
+                target="_blank"
                 style="white"
               >
                 {router.locale === "en" && <span>Learn More</span>}

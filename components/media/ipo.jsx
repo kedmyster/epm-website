@@ -50,7 +50,12 @@ function MediaIPO({ data }) {
           <BlockContent blocks={data.description} className="external-text" />
         </div>
 
-        <a class="block" href="https://invest.fundit.co.il/project/2066">
+        <a
+          class="block"
+          href="https://invest.fundit.co.il/project/2066"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="flex justify-center items-stretch text-3xl mt-8 lg:mt-[45px] lg:mb-8 py-[33px] text-center bg-epm-yellow lg:rounded-[53px] -mx-8 px-8 lg:mx-0">
             <BlockContent blocks={data.cta} className="external-text" />
           </div>
