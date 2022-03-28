@@ -4,6 +4,9 @@ import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { gsap } from "gsap";
 import Link from "next/link";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
+
+import Button from "../shared/Button";
 
 function Main({ data }) {
   const windowWidth = useWindowWidth();
@@ -11,6 +14,7 @@ function Main({ data }) {
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const intl = useIntl();
+  const router = useRouter();
 
   useEffect(() => {
     if (windowWidth >= 1280) {
@@ -52,12 +56,12 @@ function Main({ data }) {
   return (
     <section
       id="main"
-      className="section main w-full bg-cover text-center text-white relative lg:h-screen"
+      className="section main w-full bg-cover text-center  relative lg:h-screen"
       data-side-menu-color="light"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="hidden"
     >
-      <div>
+      <div className="relative">
         <div className="video">
           {isMobile && (
             <video
@@ -107,8 +111,53 @@ function Main({ data }) {
             </video>
           )}
         </div>
+        <div className="banner text-center bg-epm-yellow absolute top-[62px] lg:top-1/2 lg:-translate-y-1/2 lg:left-0 w-full z-10">
+          <div className="container mx-auto py-4 xl:py-8 2xl:py-[33px] px-8">
+            <div className="font-title text-2xl 2xl:text-3xl font-bold mb-2 2xl:leading-10">
+              {router.locale === "en" && (
+                <span>
+                  EPM’s accessible IPO is open! Visit Fundit site,
+                  <br />
+                  read the prospectus, and make an educated decision.
+                </span>
+              )}
+              {router.locale === "he" && (
+                <span>
+                  epm החלה בהנפקה נגישה לכולם - היכנסו לאתר,
+                  <br />
+                  קראו את התשקיף וקבלו החלטה מושכלת
+                </span>
+              )}
+            </div>
+            {/*<div className="text-epm-base leading-normal 2xl:text-lg">
+              {router.locale === "en" && (
+                <span>
+                  Click on this link, read the prospectus an make an educated
+                  decision.
+                </span>
+              )}
+              {router.locale === "he" && (
+                <span>לחצו על הלינק, קראו את התשקיף וקבלו החלטה מושכלת.</span>
+              )}
+              </div> */}
+            <div className="button pt-4">
+              <Button
+                href={
+                  router.locale === "en"
+                    ? "https://invest.fundit.co.il/project/2066"
+                    : "https://invest.fundit.co.il/project/2066"
+                }
+                target="_blank"
+                style="white"
+              >
+                {router.locale === "en" && <span>Click Here</span>}
+                {router.locale === "he" && <span>לחצו כאן</span>}
+              </Button>
+            </div>
+          </div>
+        </div>
         <div className="absolute bottom-0 w-full py-12">
-          <div className="container mx-auto px-8 py-8 ">
+          <div className="container mx-auto px-8 py-8 text-white ">
             <p className="main__text animate opacity-0 font-title lg:text-lg lg:w-sm-container lg:mx-auto mb-[30px] z-10lg:mb-[45px]">
               {data.text}
             </p>
