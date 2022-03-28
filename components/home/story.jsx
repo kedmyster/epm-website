@@ -46,7 +46,6 @@ function Story({ data }) {
       data-side-menu-color="dark"
       data-side-menu-visibility="visible"
       data-header-menu-visibility="visible"
-      data-logo-color="dark"
     >
       <div className="flex flex-wrap content-start lg:justify-stretch lg:flex-col lg:content-center h-[914px] md:h-screen">
         <div className="absolute w-full h-full opacity-50">
