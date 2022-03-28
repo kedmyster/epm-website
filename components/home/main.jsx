@@ -111,7 +111,7 @@ function Main({ data }) {
             </video>
           )}
         </div>
-        <div className="banner text-center bg-epm-yellow absolute top-[62px] lg:top-1/2 lg:-translate-y-1/2 lg:left-0 w-full z-10">
+        <div className="banner text-center bg-epm-yellow opacity-75 absolute top-[62px] lg:top-1/2 lg:-translate-y-1/2 lg:left-0 w-full z-10">
           <div className="container mx-auto py-4 xl:py-8 2xl:py-[33px] px-8">
             <div className="font-title text-2xl 2xl:text-3xl font-bold mb-2 2xl:leading-10">
               {router.locale === "en" && (
