@@ -124,7 +124,7 @@ function MediaIPO({ data }) {
                                 <Button
                                   style="dark"
                                   href={button.link}
-                                  extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-auto w-52 bg-white text-epm-gray-700  mt-2 lg:mt-0"
+                                  extendedClassNames="px-2 lg:px-2 xl:px-2 rounded-3xl w-52 bg-white text-epm-gray-700  mt-2 lg:mt-0"
                                   target="_blank"
                                 >
                                   {button.text}
