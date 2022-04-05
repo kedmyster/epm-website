@@ -313,10 +313,10 @@ function Footer({}) {
                   />
                   :{" "}
                   <a
-                    href="mailto:media@epmip.com"
+                    href="mailto:press@epmip.com"
                     className="underline transition-opacity duration-150 hover:opacity-70"
                   >
-                    media@epmip.com
+                    press@epmip.com
                   </a>
                 </div>
               </div>
