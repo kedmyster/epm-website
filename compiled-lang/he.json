@@ -317,6 +317,12 @@
       "value": "הנפקה & עיתונות"
     }
   ],
+  "header.menu.media": [
+    {
+      "type": 0,
+      "value": "עיתונות"
+    }
+  ],
   "header.menu.science": [
     {
       "type": 0,

@@ -158,6 +158,9 @@
   "header.menu.ipoAndMedia": {
     "defaultMessage": "IPO & Media"
   },
+  "header.menu.media": {
+    "defaultMessage": "Media"
+  },
   "header.menu.science": {
     "defaultMessage": "Science"
   },

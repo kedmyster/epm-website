@@ -48,7 +48,7 @@ function MediaComponent({ data }) {
         <div className="container lg:w-lg-container mx-auto lg:px-8 pt-4 lg:pt-16 lg:h-screen lg:overflow-y-auto">
           <div className="mb-12 lg:mb-0 px-8 lg:text-center">
             <SectionHeader name={data.name} title={<h2>{data.title}</h2>} />
-            <div class="mt-[25px]">
+            <div className="mt-[25px]">
               {data.text}
             </div>
           </div>

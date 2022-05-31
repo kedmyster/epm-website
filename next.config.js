@@ -37,15 +37,6 @@ module.exports = {
   future: {
     webpack5: true,
   },
-  async redirects() {
-    return [
-      {
-        source: "/IPO",
-        destination: "http://shorturl.at/qERX4",
-        permanent: true,
-      },
-    ];
-  },
   webpack: (config, options) => {
     // In `pages/_app.js`, Sentry is imported from @sentry/browser. While
     // @sentry/node will run in a Node.js environment. @sentry/node will use

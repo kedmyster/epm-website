@@ -51,7 +51,7 @@ function MediaIPO({ data }) {
         </div>
 
         <a
-          class="block"
+          className="block"
           href="https://invest.fundit.co.il/project/2066"
           target="_blank"
           rel="noopener noreferrer"

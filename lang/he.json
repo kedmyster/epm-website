@@ -158,6 +158,9 @@
   "header.menu.ipoAndMedia": {
     "defaultMessage": "הנפקה & עיתונות"
   },
+  "header.menu.media": {
+    "defaultMessage": "עיתונות"
+  },
   "header.menu.science": {
     "defaultMessage": "מדע"
   },

@@ -8,7 +8,6 @@ import Commitment from "../components/home/commitment";
 import Community from "../components/home/community";
 import client from "../client";
 import { getSectionDataByName } from "../utils";
-import Button from "../components/shared/Button";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
