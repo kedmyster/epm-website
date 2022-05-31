@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import StandardTemplate from "../components/layout/templates/StandardTemplate";
 import client from "../client";
-import { useEffect } from "react";
 
 const BlockContent = require("@sanity/block-content-to-react");
 

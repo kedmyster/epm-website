@@ -111,7 +111,7 @@ function Main({ data }) {
             </video>
           )}
         </div>
-        <div className="banner text-center bg-epm-yellow opacity-75 absolute top-[62px] lg:top-[81px] lg:left-0 w-full z-10">
+        {/*<div className="banner text-center bg-epm-yellow opacity-75 absolute top-[62px] lg:top-[81px] lg:left-0 w-full z-10">
           <div className="container mx-auto py-4 xl:py-8 2xl:py-[33px] px-8">
             <div className="font-title text-2xl 2xl:text-3xl font-bold mb-2 2xl:leading-10">
               {router.locale === "en" && (
@@ -129,17 +129,6 @@ function Main({ data }) {
                 </span>
               )}
             </div>
-            {/*<div className="text-epm-base leading-normal 2xl:text-lg">
-              {router.locale === "en" && (
-                <span>
-                  Click on this link, read the prospectus an make an educated
-                  decision.
-                </span>
-              )}
-              {router.locale === "he" && (
-                <span>לחצו על הלינק, קראו את התשקיף וקבלו החלטה מושכלת.</span>
-              )}
-              </div> */}
             <div className="button pt-4">
               <Button
                 href={
@@ -155,7 +144,7 @@ function Main({ data }) {
               </Button>
             </div>
           </div>
-        </div>
+        </div>*/}
         <div className="absolute bottom-0 w-full py-12">
           <div className="container mx-auto px-8 py-8 text-white ">
             <p className="main__text animate opacity-0 font-title lg:text-lg lg:w-sm-container lg:mx-auto mb-[30px] z-10lg:mb-[45px]">

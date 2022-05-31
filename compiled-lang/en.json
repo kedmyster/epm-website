@@ -317,6 +317,12 @@
       "value": "IPO & Media"
     }
   ],
+  "header.menu.media": [
+    {
+      "type": 0,
+      "value": "Media"
+    }
+  ],
   "header.menu.science": [
     {
       "type": 0,

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import IPOComponent from "../components/media/ipo";
+// import IPOComponent from "../components/media/ipo";
 import MediaComponent from "../components/media/media";
 import client from "../client";
 import { getSectionDataByName } from "../utils";
@@ -30,7 +30,7 @@ function Media({ data }) {
         )}
       </Head>
 
-      <IPOComponent data={getSectionDataByName(data, "media__ipo", lang)} />
+      {/*<IPOComponent data={getSectionDataByName(data, "media__ipo", lang)} />*/}
       <MediaComponent data={getSectionDataByName(data, "media__media", lang)} />
     </>
   );
